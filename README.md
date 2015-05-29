@@ -32,7 +32,7 @@ Throughout the docs we often use _OGIT_ as a shortcut for both _Open Graph of IT
 
 2. [Concepts](../../wiki/Basic-Concepts) behind OGIT ontology
 
-3. [Ontology documentation](https://graphit.co/docs) - updated on daily basis
+3. [Ontology documentation](https://graphit.co/ogit_docs/1.0) - updated on daily basis
 
 4. [Ontology visualization](https://ogit.graphit.co/ogit/graph.php?dataset=ontology) - updated on daily basis
 

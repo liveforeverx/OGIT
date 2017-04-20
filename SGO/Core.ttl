@@ -21,10 +21,53 @@
 #
 # Entities
 #
+ogit:Attribute
+	rdfs:subClassOf owl:DatatypeProperty;
+	rdfs:subClassOf ogit:Entity;
+	rdfs:label "Attribute";
+	dcterms:description "Represents the class of all Attributes"@en;
+	# For ranges, see http://dublincore.org/documents/dcmi-period/
+	dcterms:valid "start=2015-05-21;";
+	dcterms:creator "Peter Larem";
+	dcterms:created "2015-05-21";
+	dcterms:modified "2015-05-21";
+	ogit:admin-contact "arago GmbH";
+	ogit:tech-contact "arago GmbH";
+	ogit:scope "SGO";
+	ogit:hide "true";
+	ogit:mandatory-attributes (
+		rdfs:label
+		dcterms:description
+		dcterms:valid
+		dcterms:creator
+		dcterms:created
+		dcterms:modified
+		ogit:admin-contact
+		ogit:tech-contact
+	);
+	ogit:optional-attributes (
+		ogit:deleter
+		ogit:hide
+		ogit:validation-type
+		ogit:validation-parameter
+	);
+	ogit:indexed-attributes (
+		
+	);
+	ogit:history (
+		[
+			dcterms:identifier "1";
+			dcterms:date "2015-05-21";
+			dcterms:description "initial";
+			dcterms:creator "Peter Larem";
+		]
+	);
+.
+
 ogit:Entity
-	a ogit:Entity;
 	a rdfs:Class;
 	rdfs:subClassOf rdfs:Class;
+	rdfs:subClassOf ogit:Entity;
 	rdfs:label "Entity";
 	dcterms:description """Represents the class of all Entities"""@en;
 	# For ranges, see http://dublincore.org/documents/dcmi-period/
@@ -66,52 +109,9 @@ ogit:Entity
 	);
 .
 
-ogit:Attribute
-	a ogit:Entity;
-	rdfs:subClassOf owl:DatatypeProperty;
-	rdfs:label "Attribute";
-	dcterms:description "Represents the class of all Attributes"@en;
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "SGO";
-	ogit:hide "true";
-	ogit:mandatory-attributes (
-		rdfs:label
-		dcterms:description
-		dcterms:valid
-		dcterms:creator
-		dcterms:created
-		dcterms:modified
-		ogit:admin-contact
-		ogit:tech-contact
-	);
-	ogit:optional-attributes (
-		ogit:deleter
-		ogit:hide
-		ogit:validation-type
-		ogit:validation-parameter
-	);
-	ogit:indexed-attributes (
-		
-	);
-	ogit:history (
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
-	);
-.
-
 ogit:Verb
-	a ogit:Entity;
 	rdfs:subClassOf owl:ObjectProperty;
+	rdfs:subClassOf ogit:Entity;
 	rdfs:label "Verb";
 	dcterms:description "Represents the class of all Verbs"@en;
 	# For ranges, see http://dublincore.org/documents/dcmi-period/
@@ -159,21 +159,6 @@ ogit:any-attributes
 	rdfs:label "any-attributes";
 	dcterms:description "The list of any Attributes for an Entity"@en .
 
-ogit:mandatory-attributes
-	a ogit:Verb;
-	rdfs:label "mandatory-attributes";
-	dcterms:description "The list of mandatory Attributes for an Entity"@en .
-
-ogit:optional-attributes
-	a ogit:Verb;
-	rdfs:label "optional-attributes";
-	dcterms:description "The list of optional Attributes for an Entity"@en .
-
-ogit:indexed-attributes
-	a ogit:Verb;
-	rdfs:label "indexed-attributes";
-	dcterms:description "The list of indexed Attributes for an Entity"@en .
-
 ogit:allowed
 	a ogit:Verb;
 	rdfs:label "allowed";
@@ -184,30 +169,49 @@ ogit:from
 	rdfs:label "from";
 	dcterms:description "Constrains domains for Verbs"@en .
 
-ogit:to
-	a ogit:Verb;
-	rdfs:label "to";
-	dcterms:description "Constrains ranges for Verbs"@en .
-
 ogit:history
 	a ogit:Verb;
 	rdfs:label "history";
 	dcterms:description "This represents the change history of an Entity, Attribute or Verb"@en .
 
+ogit:indexed-attributes
+	a ogit:Verb;
+	rdfs:label "indexed-attributes";
+	dcterms:description "The list of indexed Attributes for an Entity"@en .
+
+ogit:mandatory-attributes
+	a ogit:Verb;
+	rdfs:label "mandatory-attributes";
+	dcterms:description "The list of mandatory Attributes for an Entity"@en .
+
+ogit:optional-attributes
+	a ogit:Verb;
+	rdfs:label "optional-attributes";
+	dcterms:description "The list of optional Attributes for an Entity"@en .
+
+ogit:to
+	a ogit:Verb;
+	rdfs:label "to";
+	dcterms:description "Constrains ranges for Verbs"@en .
+
 #
 # Attributes
 #
-ogit:deleter
-	a ogit:Attribute;
-	rdfs:label "deleter" .
-	
 ogit:admin-contact
 	a ogit:Attribute;
 	rdfs:label "admin-contact" .
 
-ogit:tech-contact
+ogit:cardinality
 	a ogit:Attribute;
-	rdfs:label "tech-contact" .
+	rdfs:label "cardinality" .
+
+ogit:deleter
+	a ogit:Attribute;
+	rdfs:label "deleter" .
+
+ogit:hide
+	a ogit:Attribute;
+	rdfs:label "hide" .
 
 ogit:parent
 	a ogit:Attribute;
@@ -217,21 +221,17 @@ ogit:scope
 	a ogit:Attribute;
 	rdfs:label "scope" .
 
-ogit:cardinality
+ogit:tech-contact
 	a ogit:Attribute;
-	rdfs:label "cardinality" .
-
-ogit:validation-type
-	a ogit:Attribute;
-	rdfs:label "validation-type" .
+	rdfs:label "tech-contact" .
 
 ogit:validation-parameter
 	a ogit:Attribute;
 	rdfs:label "validation-parameter" .
 
-ogit:hide
+ogit:validation-type
 	a ogit:Attribute;
-	rdfs:label "hide" .
+	rdfs:label "validation-type" .
 
 #
 # Annotations

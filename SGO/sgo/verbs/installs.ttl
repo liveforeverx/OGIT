@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:installs
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "installs";
 	dcterms:description "Indicates which entities are installed by other entities.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

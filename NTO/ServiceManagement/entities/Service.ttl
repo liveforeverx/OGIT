@@ -4,8 +4,7 @@
 @prefix ogit.ServiceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
 
 ogit.ServiceManagement:Service
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Service";
 	dcterms:description "A technology service item, which combined or not with other technology services can constitute a service offering (ogit/ServiceManagement/Offering).";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

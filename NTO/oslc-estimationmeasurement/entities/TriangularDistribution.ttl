@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:TriangularDistribution
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "TriangularDistribution";
 	ogit:original <http://open-services.net/ns/ems#TriangularDistribution>;
 	dcterms:description """

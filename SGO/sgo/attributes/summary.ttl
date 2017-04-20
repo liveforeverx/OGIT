@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:summary
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "summary";
 	dcterms:description "A summary/short description, for example of a ticket.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

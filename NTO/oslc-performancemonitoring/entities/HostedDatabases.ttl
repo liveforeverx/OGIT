@@ -7,8 +7,7 @@
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-perfmon:HostedDatabases
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "HostedDatabases";
 	ogit:original <http://open-services.net/ns/perfmon#HostedDatabases>;
 	dcterms:description "Databases hosted, either absolute or relative to some maximum";

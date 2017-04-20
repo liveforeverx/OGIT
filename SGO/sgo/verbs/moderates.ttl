@@ -5,8 +5,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit:moderates
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "moderates";
 	dcterms:description """Moderation as a verb, in the context of a forum, is a supervisory role. It implies that the
 entity takes a responsibility for the maintenance and upkeep of the connected entity.""";

@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:measureCell
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "measureCell";
 	ogit:original <http://open-services.net/ns/ems#measureCell>;
 	dcterms:description """

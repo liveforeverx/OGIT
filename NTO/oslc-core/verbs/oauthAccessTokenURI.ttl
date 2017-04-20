@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:oauthAccessTokenURI
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "oauthAccessTokenURI";
 	ogit:original <http://open-services.net/ns/core#oauthAccessTokenURI>;
 	dcterms:description "URI for obtaining OAuth access token.";

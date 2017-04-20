@@ -7,8 +7,7 @@
 @prefix rdf:             <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 ogit.OSCL-asset:artifactFactory
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "artifactFactory";
 	ogit:original <http://open-services.net/ns/asset#artifactFactory>;
 	dcterms:description "Resource URI used to post new artifacts to the asset.";

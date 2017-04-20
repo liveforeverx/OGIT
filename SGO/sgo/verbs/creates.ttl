@@ -9,8 +9,7 @@
 @prefix ogit.BusinessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
 
 ogit:creates
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "creates";
 	dcterms:description "Indicates if one entity creates another one.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

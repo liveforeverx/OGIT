@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-auto:producedByAutomationRequest
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "producedByAutomationRequest";
 	ogit:original <http://open-services.net/ns/auto#producedByAutomationRequest>;
 	dcterms:description "Automation Request which produced the Automation Result. It is likely that the target resource will be an oslc_auto:AutomationResult but that is not necessarily the case.";

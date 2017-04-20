@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:virtualMachineName
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "virtualMachineName";
 	dcterms:description "Contains the name of the virtual machine.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

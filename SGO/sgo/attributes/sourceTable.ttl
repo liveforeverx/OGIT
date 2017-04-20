@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:sourceTable
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "sourceTable";
 	dcterms:description "Contains the source table, that stores where the data are coming from.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

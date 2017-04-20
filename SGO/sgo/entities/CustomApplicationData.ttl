@@ -3,8 +3,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:CustomApplicationData
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "CustomApplicationData";
 	dcterms:description """Entity to store custom application data, a storage place not connected to any other entity and therefore isolated from 
 the global ontology. The storage of data through this entity is discouraged due to low performance.""";

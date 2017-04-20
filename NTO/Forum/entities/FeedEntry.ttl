@@ -4,8 +4,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:FeedEntry
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "FeedEntry";
 	dcterms:description """A single entry in a newsfeed or other stream of items. Unlikely to contain many attributes of
 its own, more likely to link users with items describing the event.""";

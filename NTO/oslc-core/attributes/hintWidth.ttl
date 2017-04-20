@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:hintWidth
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "hintWidth";
 	ogit:original <http://open-services.net/ns/core#hintWidth>;
 	dcterms:description "Values MUST be expressed in relative length units as defined in the W3C Cascading Style Sheets Specification (CSS 2.1) Em and ex units are interpreted relative to the default system font (at 100% size).";

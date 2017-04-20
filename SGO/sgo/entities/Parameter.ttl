@@ -4,8 +4,7 @@
 @prefix ogit.ServiceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
 
 ogit:Parameter
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Parameter";
 	dcterms:description "Defines a parameter of an entity, for example: service, action, ticket, sla, etc.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -7,8 +7,7 @@
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-perfmon:QueueFull
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "QueueFull";
 	ogit:original <http://open-services.net/ns/perfmon#QueueFull>;
 	dcterms:description "A queue filled to its maximum capacity";

@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:occursBefore
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "occursBefore";
 	ogit:original <http://open-services.net/ns/crtv#occursBefore>;
 	dcterms:description "If there is a temporal order between other Path or ServiceInstance Resource Definitions, the Resource Definition action that occur after this Resource Instance are listed here. ";

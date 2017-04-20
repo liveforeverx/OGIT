@@ -7,8 +7,7 @@
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-perfmon:BufferPoolMetrics
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "BufferPoolMetrics";
 	ogit:original <http://open-services.net/ns/perfmon#BufferPoolMetrics>;
 	dcterms:description "Metric category for buffer pool-related metrics.";

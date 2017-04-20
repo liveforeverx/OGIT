@@ -7,8 +7,7 @@
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-perfmon:monitoringAgent
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "monitoringAgent";
 	ogit:original <http://open-services.net/ns/perfmon#monitoringAgent>;
 	dcterms:description "Software that monitors a resource's availability, performance, capacity, or utilization. Typically refers to a resource with type foaf:Agent, but it may refer to other resource types.";

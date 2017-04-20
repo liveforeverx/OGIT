@@ -11,8 +11,7 @@
 @prefix ogit.BusinessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
 
 ogit:relates
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "relates";
 	dcterms:description "General relationship indicating that one entity is related to another one.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

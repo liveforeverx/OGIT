@@ -7,8 +7,7 @@
 @prefix ogit:         <http://www.purl.org/ogit/> .
 
 ogit.OSLC-cm:closeDate
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "closeDate";
 	ogit:original <http://open-services.net/ns/cm#closeDate>;
 	dcterms:description "The date at which no further activity or work is intended to be conducted.";

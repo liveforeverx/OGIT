@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:isSupported
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "isSupported";
 	dcterms:description """Indicates whether the service currently is supported.
 This filed contains a boolean value.""";

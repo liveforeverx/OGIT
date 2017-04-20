@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:CompensationEvent
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "CompensationEvent";
 	dcterms:description """Entity to store a compensation event. We execute tasks in our processes that sometimes have to be canceled later under certain circumstances.
 

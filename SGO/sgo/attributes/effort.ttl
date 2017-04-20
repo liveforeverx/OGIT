@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:effort
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "effort";
 	dcterms:description """Defines how much time was spent on the actual work for a change, task, or similar entity.
 The values is expected to be in format HH:MM, e.g. 1:00 for 1 hour effort.""";

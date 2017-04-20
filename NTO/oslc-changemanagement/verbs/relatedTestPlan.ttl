@@ -7,8 +7,7 @@
 @prefix ogit:         <http://www.purl.org/ogit/> .
 
 ogit.OSLC-cm:relatedTestPlan
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "relatedTestPlan";
 	ogit:original <http://open-services.net/ns/cm#relatedTestPlan>;
 	dcterms:description "Related QM test plan resource. It is likely that the target resource will be an oslc_qm:TestPlan but that is not necessarily the case.";

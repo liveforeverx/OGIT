@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:NetworkSetting
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "NetworkSetting";
 	dcterms:description "Network Policy is a generic definition that outlines rules for computer network access, determines how policies are enforced and lays out some of the basic architecture of the company security/ network security environment.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

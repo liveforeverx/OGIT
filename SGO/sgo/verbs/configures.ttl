@@ -5,8 +5,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit:configures
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "configures";
 	dcterms:description "The `from` entity, contains configuration data for the to `entity`";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

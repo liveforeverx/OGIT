@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:MACAddress
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "MACAddress";
 	dcterms:description "MAC-Adress is a globally unique identifier for Ethernet Adapters";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

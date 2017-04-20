@@ -8,8 +8,7 @@
 @prefix ogit.Knowledge:         <http://www.purl.org/ogit/Knowledge/> .
 
 ogit:defines
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "defines";
 	dcterms:description "General relationship indicating that some entitiy defines some other.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

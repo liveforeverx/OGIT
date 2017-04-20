@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:dependsOn
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "dependsOn";
 	ogit:original <http://open-services.net/ns/crtv#dependsOn>;
 	dcterms:description "A relationship denoting that the source of the relationship cannot function properly without an association with the target. The dependency is directional ( the source depends on the target but the reverse is not necessarily true ) and can represent any cause or type of dependency. For instance, this relationship can be used to denote that a device depends on its power supply(s) or that an IP path depends on a layer 2 connection.";

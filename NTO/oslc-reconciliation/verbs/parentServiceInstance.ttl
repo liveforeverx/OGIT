@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:parentServiceInstance
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "parentServiceInstance";
 	ogit:original <http://open-services.net/ns/crtv#parentServiceInstance>;
 	dcterms:description "When context is required, this is the containing Application for the set of Transactions. ";

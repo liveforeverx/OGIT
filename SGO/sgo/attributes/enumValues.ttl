@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:enumValues
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "enumValues";
 	dcterms:description "The enumeration values for the parameter types represented by a JSON array.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

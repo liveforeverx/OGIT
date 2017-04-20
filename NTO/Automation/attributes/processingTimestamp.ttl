@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:processingTimestamp
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "processingTimestamp";
 	dcterms:description "Contains the timestamp indicating last time an aumation issue was processed.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

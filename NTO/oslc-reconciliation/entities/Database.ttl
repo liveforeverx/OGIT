@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:Database
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Database";
 	ogit:original <http://open-services.net/ns/crtv#Database>;
 	dcterms:description "An organized collection of digital data that is managed by a database management system (DBMS). (A Database Management System, in turn, is represented as a SoftwareServer).";

@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:NetworkFabric
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "NetworkFabric";
 	dcterms:description "Networking Fabric is a virtual/physical Entity housing Networking Devices";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

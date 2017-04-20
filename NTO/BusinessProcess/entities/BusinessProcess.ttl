@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:BusinessProcess
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "BusinessProcess";
 	dcterms:description "Entity of a business process.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

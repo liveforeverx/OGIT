@@ -4,8 +4,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:Permission
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Permission";
 	dcterms:description "Permission is used to approve a Nodes interaction with another Node";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

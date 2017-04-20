@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:serviceStatus
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "serviceStatus";
 	dcterms:description "Contains the status of a service.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

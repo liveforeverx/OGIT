@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:tableSource
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "tableSource";
 	ogit:original <http://open-services.net/ns/ems#tableSource>;
 	dcterms:description """

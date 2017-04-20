@@ -3,8 +3,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:Notification
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Notification";
 	dcterms:description """A notification event""";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:osKey
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "osKey";
 	dcterms:description "Product key for the Operating System.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

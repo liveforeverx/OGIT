@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:lastUpdatedAt
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "lastUpdatedAt";
 	dcterms:description "Defines latest date and time when a ticket or it's comment was updated. The format of this value could be according to ISO 8601.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

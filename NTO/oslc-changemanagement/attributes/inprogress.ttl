@@ -7,8 +7,7 @@
 @prefix ogit:         <http://www.purl.org/ogit/> .
 
 ogit.OSLC-cm:inprogress
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "inprogress";
 	ogit:original <http://open-services.net/ns/cm#inprogress>;
 	dcterms:description "Whether or not the Change Request in a state indicating that active work is occurring.";

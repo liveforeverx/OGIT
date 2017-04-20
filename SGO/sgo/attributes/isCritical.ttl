@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:isCritical
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "isCritical";
 	dcterms:description """This field specifies if the CI is critical for day-to-day operation, such as an E-mail server or RDBMS server. 
 If you open an incident on a critical CI, the incident indicates that this is a critical CI. 

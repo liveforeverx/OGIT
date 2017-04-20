@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:impact
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "impact";
 	dcterms:description """Will contain the impact, for example of a ticket. In this case the actual semantics would depend on the ticket type, 
 which could correspond to an Incident, Service Request, etc.""";

@@ -7,8 +7,7 @@
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-perfmon:RequestMetrics
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "RequestMetrics";
 	ogit:original <http://open-services.net/ns/perfmon#RequestMetrics>;
 	dcterms:description "Metric category for requests on a resource, originating from an end user or a system component.";

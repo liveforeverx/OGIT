@@ -3,8 +3,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:Policy
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Policy";
 	dcterms:description "A policy is a deliberate system of principles to guide decisions and achieve rational outcomes. It is connected and applied to Organizations";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

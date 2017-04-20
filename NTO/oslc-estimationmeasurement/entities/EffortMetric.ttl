@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:EffortMetric
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "EffortMetric";
 	ogit:original <http://open-services.net/ns/ems#EffortMetric>;
 	dcterms:description """

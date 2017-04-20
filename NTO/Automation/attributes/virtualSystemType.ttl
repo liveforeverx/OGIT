@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:virtualSystemType
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "virtualSystemType";
 	dcterms:description "Contains the type of the virtual system.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

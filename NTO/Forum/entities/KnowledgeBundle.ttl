@@ -4,8 +4,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:KnowledgeBundle
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "KnowledgeBundle";
 	dcterms:description "A grouping of `ogit/Automation/KnowledgeItem`s into a package.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

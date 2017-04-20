@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:city
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "city";
 	dcterms:description "Name of a city.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

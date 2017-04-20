@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:prefixBase
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "prefixBase";
 	ogit:original <http://open-services.net/ns/core#prefixBase>;
 	dcterms:description "The base URI of the namespace.";

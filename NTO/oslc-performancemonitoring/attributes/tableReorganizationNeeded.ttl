@@ -7,8 +7,7 @@
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-perfmon:tableReorganizationNeeded
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "tableReorganizationNeeded";
 	ogit:original <http://open-services.net/ns/perfmon#tableReorganizationNeeded>;
 	dcterms:description "Indicates whether a database's tables need to be reorganized.";

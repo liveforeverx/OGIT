@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:mostLikely
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "mostLikely";
 	ogit:original <http://open-services.net/ns/ems#mostLikely>;
 	dcterms:description """

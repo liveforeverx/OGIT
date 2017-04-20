@@ -4,8 +4,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:Rating
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Rating";
 	dcterms:description "Rating is used to rank nodes based on an arbitrary integer `value`";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:results
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "results";
 	ogit:original <http://open-services.net/ns/core#results>;
 	dcterms:description """Used to hold the results of dialog action or JSON query results (default).

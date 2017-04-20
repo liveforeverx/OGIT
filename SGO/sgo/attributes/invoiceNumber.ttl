@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:invoiceNumber
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "invoiceNumber";
 	dcterms:description "Contains an invoice number. This number is used as identifier for security purposes.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

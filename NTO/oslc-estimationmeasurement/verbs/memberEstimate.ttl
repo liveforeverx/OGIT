@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:memberEstimate
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "memberEstimate";
 	ogit:original <http://open-services.net/ns/ems#memberEstimate>;
 	dcterms:description "This property links an estimate list to its member estimates.";

@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:affectedNodeId
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "affectedNodeId";
 	dcterms:description "Contains the ID of the node which is affected by this entity.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

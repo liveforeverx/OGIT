@@ -6,8 +6,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:rates
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "rates";
 	dcterms:description "This verb represents the `Rating` between two nodes";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

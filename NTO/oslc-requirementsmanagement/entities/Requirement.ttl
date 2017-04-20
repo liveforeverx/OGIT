@@ -8,8 +8,7 @@
 @prefix dcterms:          <http://purl.org/dc/terms/> .
 
 ogit.OSLC-reqman:Requirement
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Requirement";
 	ogit:original <http://open-services.net/ns/rm#Requirement>;
 	dcterms:description """Statement of

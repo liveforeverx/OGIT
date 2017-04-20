@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:risk
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "risk";
 	dcterms:description "Used to store the result of a risk analysis.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

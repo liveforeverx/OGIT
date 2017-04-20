@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:_owner
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "_owner";
 	dcterms:description "[internally generated] The id of the identity who owns the node";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -7,8 +7,7 @@
 @prefix rdf:             <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 ogit.OSCL-asset:manufacturer
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "manufacturer";
 	ogit:original <http://open-services.net/ns/asset#manufacturer>;
 	dcterms:description "The name of the asset manufacturer.";

@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-auto:AutomationPlan
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "AutomationPlan";
 	ogit:original <http://open-services.net/ns/auto#AutomationPlan>;
 	dcterms:description "The Automation Plan resource";

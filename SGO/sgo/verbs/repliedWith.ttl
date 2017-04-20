@@ -5,8 +5,7 @@
 @prefix ogit.BusinessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
 
 ogit:repliedWith
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "repliedWith";
 	dcterms:description "This relationship indicates that user replied with something.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

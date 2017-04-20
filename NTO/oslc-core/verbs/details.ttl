@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:details
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "details";
 	ogit:original <http://open-services.net/ns/core#details>;
 	dcterms:description "A URL that may be used to retrieve a web page to determine additional details about the service provider.";

@@ -6,8 +6,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit:transfers
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "transfers";
 	dcterms:description "Indicates if one entity transfers information to another.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

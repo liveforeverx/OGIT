@@ -7,8 +7,7 @@
 @prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.RDDL:id
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "id";
 	ogit:original <http://www.rddl.org/id>;
 	dcterms:description "The id attribute value may be used to give the resource description a unique identifier";

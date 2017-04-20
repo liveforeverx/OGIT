@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:serverAccessPoint
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "serverAccessPoint";
 	ogit:original <http://open-services.net/ns/crtv#serverAccessPoint>;
 	dcterms:description "The Server Access Point clients use for communications with this resource. ";

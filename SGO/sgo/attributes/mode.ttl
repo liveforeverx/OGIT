@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:mode
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "mode";
 	dcterms:description """Contains the type of filter for the value contained in the entity \"Attribute\" and corresponding to one of the following strings: 
 eq, ne, lt, le, gt, ge, exists, notexists, string, notstring, regex, notregex""";

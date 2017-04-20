@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:SurveyIteration
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "SurveyIteration";
 	dcterms:description """Iteration of the same survey""";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

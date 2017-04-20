@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:hidden
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "hidden";
 	ogit:original <http://open-services.net/ns/core#hidden>;
 	dcterms:description "A hint that indicates that property MAY be hidden when presented in a user interface.";

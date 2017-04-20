@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:discussionAbout
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "discussionAbout";
 	ogit:original <http://open-services.net/ns/core#discussionAbout>;
 	dcterms:description "Reference to associated resource.";

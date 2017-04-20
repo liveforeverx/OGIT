@@ -4,8 +4,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:Profile
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Profile";
 	dcterms:description """A User's persona within a forum. Linked to an `ogit/Identity` but separate, the Profile is
 the root node for most operations with a Forum.""";

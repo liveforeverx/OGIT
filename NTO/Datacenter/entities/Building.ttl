@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Datacenter:Building
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Building";
 	dcterms:description "A physical Building within a location";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

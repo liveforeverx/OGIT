@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:memberMeasurement
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "memberMeasurement";
 	ogit:original <http://open-services.net/ns/ems#memberMeasurement>;
 	dcterms:description "This property links a measurement list to its member measurements.";

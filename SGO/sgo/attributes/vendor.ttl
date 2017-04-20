@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:vendor
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "vendor";
 	dcterms:description "Contains the vendor of a device or software/hardware component.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

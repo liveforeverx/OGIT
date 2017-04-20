@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:moreInfo
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "moreInfo";
 	ogit:original <http://open-services.net/ns/core#moreInfo>;
 	dcterms:description "A resource giving more information on the error SHOULD be of an HTML content-type.";

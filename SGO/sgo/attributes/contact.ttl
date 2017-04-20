@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:contact
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "contact";
 	dcterms:description "This field displays the device/CI/component owner who is the person assigned to the device/CI/component and uses it on a day-to-day basis. Support contacts are secondary contacts who may have access to a CI for example.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

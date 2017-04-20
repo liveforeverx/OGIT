@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Software:Connector
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Connector";
 	dcterms:description "Represents any type of software connector";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

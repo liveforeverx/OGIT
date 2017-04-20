@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:subType
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "subType";
 	dcterms:description "A subtype of an an entity.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:isValid
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "isValid";
 	dcterms:description "Boolean value, true if the object is valid.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -4,8 +4,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:Award
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Award";
 	dcterms:description "Something which is won. A 'badge of merit' or an achievement, etc...";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

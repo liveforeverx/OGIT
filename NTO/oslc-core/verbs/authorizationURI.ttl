@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:authorizationURI
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "authorizationURI";
 	ogit:original <http://open-services.net/ns/core#authorizationURI>;
 	dcterms:description "URI for obtaining OAuth authorization.";

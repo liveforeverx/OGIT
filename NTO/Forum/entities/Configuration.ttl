@@ -4,8 +4,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:Configuration
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Configuration";
 	dcterms:description "Configuration Data. No Schema - all free attributes";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Datacenter:Sensor
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Sensor";
 	dcterms:description "A sensor is a device that measures a physical quantity and converts it into a 'signal' which can be read by an observer or by an instrument.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:osServicePack
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "osServicePack";
 	dcterms:description "Contains the service pack for the operating system.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

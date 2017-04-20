@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:KnowledgeItem
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "KnowledgeItem";
 	dcterms:description """Formalized Knowledge stored in XML format. Serves as the building block for automation solutions.
 

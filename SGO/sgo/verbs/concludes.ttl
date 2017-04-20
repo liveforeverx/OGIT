@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:concludes
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "concludes";
 	dcterms:description "Verb showing if a legal entity concludes something (e.g. Contract).";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

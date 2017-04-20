@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:DimensionMember
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "DimensionMember";
 	ogit:original <http://open-services.net/ns/ems#DimensionMember>;
 	dcterms:description """

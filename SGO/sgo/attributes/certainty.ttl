@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:certainty
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "certainty";
 	dcterms:description "Defines the certainty of an event";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

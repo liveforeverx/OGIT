@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:hosts
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "hosts";
 	dcterms:description "verb which shows that an entity is hosted in another entity.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

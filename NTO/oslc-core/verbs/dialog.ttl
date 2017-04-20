@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:dialog
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "dialog";
 	ogit:original <http://open-services.net/ns/core#dialog>;
 	dcterms:description "The URI of the dialog.";

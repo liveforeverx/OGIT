@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:numberOfQuantiles
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "numberOfQuantiles";
 	ogit:original <http://open-services.net/ns/ems#numberOfQuantiles>;
 	dcterms:description """

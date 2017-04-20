@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-auto:hasContribution
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "contribution";
 	ogit:original <http://open-services.net/ns/auto#hasContribution>;
 	dcterms:description "A result contribution associated with this automation result. It is recommended that the contribution be an inline resource which can be retrieved with the automation result. The recommended attributes beyond the contribution itself are dcterms:title, dcterms:description and dcterms:type to provide a description of the contribution which would be appropriate for display in a simple UI for an automation result.";

@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:ScenarioList
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "ScenarioList";
 	ogit:original <http://open-services.net/ns/ems#ScenarioList>;
 	dcterms:description "A scenario list is a container for scenario resources.";

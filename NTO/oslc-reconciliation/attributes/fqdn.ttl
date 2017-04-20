@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:fqdn
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "fqdn";
 	ogit:original <http://open-services.net/ns/crtv#fqdn>;
 	dcterms:description "The fully qualified domain name (FQDN). In Internet communications, the name of a host system that includes all of the subnames of the domain name. An example of a fully qualified domain name is es123126.lab.ibm.com .";

@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:ReceiveTask
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "ReceiveTask";
 	dcterms:description "Receiving a message can be modeled as a separate task. This task type is an alternative to the catching message event.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

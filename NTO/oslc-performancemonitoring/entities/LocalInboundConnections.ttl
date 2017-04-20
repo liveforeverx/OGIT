@@ -7,8 +7,7 @@
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-perfmon:LocalInboundConnections
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "LocalInboundConnections";
 	ogit:original <http://open-services.net/ns/perfmon#LocalInboundConnections>;
 	dcterms:description "Local inbound connections";

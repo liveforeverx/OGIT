@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:PrefixDefinition
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "PrefixDefinition";
 	ogit:original <http://open-services.net/ns/core#PrefixDefinition>;
 	dcterms:description "The PrefixDefinition definition included in ServiceProvider.";

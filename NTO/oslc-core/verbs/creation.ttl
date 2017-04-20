@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:creation
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "creation";
 	ogit:original <http://open-services.net/ns/core#creation>;
 	dcterms:description "To create a new resource via the factory, post it to this URI.";

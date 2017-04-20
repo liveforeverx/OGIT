@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:prefixDefinition
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "prefixDefinition";
 	ogit:original <http://open-services.net/ns/core#prefixDefinition>;
 	dcterms:description "Defines a namespace prefix for use in JSON representations and in forming OSLC Query Syntax strings.";

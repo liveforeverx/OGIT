@@ -8,8 +8,7 @@
 @prefix dcterms:          <http://purl.org/dc/terms/> .
 
 ogit.OSLC-reqman:trackedBy
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "trackedBy";
 	ogit:original <http://open-services.net/ns/rm#trackedBy>;
 	dcterms:description """Expresses a tracking relationship

@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:LinkEvent
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "LinkEvent";
 	dcterms:description "The link event is a special case. It has no significance related to content, but it facilitates the diagram-creation process.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

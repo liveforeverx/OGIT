@@ -7,8 +7,7 @@
 @prefix ogit:         <http://www.purl.org/ogit/> .
 
 ogit.OSLC-cm:testedByTestCase
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "testedByTestCase";
 	ogit:original <http://open-services.net/ns/cm#testedByTestCase>;
 	dcterms:description "Test case by which this change request is tested. It is likely that the target resource will be an oslc_qm:TestCase but that is not necessarily the case.";

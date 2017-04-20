@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:ontologyCardinality
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "ontologyCardinality";
 	dcterms:description """The \"cardinality\" attribute as defined in OGIT yaml files.""";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

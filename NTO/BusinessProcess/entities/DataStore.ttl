@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:DataStore
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "DataStore";
 	dcterms:description "A DataStore is a place where the process can read or write data, e.g., a database or filing cabinet. It persists beyond the lifetime of the process instance.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

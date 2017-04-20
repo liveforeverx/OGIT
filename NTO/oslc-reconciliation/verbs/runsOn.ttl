@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:runsOn
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "runsOn";
 	ogit:original <http://open-services.net/ns/crtv#runsOn>;
 	dcterms:description "The ComputerSystem this SoftwareServer instance is running on.";

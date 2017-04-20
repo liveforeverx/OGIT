@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:orderedAt
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "orderedAt";
 	dcterms:description """Defines a point in time when a component/device was actually ordered.
 The values must be combined date and time with time zone designator according to ISO 8601""";

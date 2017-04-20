@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:elementFrom
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "elementFrom";
 	ogit:original <http://open-services.net/ns/crtv#elementFrom>;
 	dcterms:description "The resource acting as the origination point in the ordered path.";

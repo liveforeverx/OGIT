@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:Loadbalancer
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Loadbalancer";
 	dcterms:description "A Loadbaancer distributes network loads between multiple endpoints/hosts.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

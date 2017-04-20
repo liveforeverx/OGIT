@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:instanceShape
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "instanceShape";
 	ogit:original <http://open-services.net/ns/core#instanceShape>;
 	dcterms:description "The URI of a Resource Shape that describes the possible properties.";

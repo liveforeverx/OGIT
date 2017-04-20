@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Price:priceTimeUnit
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "priceTimeUnit";
 	dcterms:description "Unit price of the service per time unit (attribute timeUnitSeconds).";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

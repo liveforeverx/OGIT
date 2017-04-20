@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:resource
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "resource";
 	dcterms:description "Defines the name of an resource on an instance e.g. disk or database.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

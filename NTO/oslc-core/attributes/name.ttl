@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:name
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "name";
 	ogit:original <http://open-services.net/ns/core#name>;
 	dcterms:description "Name of property being defined, i.e. second part of property's Prefixed Name.";

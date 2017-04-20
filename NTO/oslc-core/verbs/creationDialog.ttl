@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:creationDialog
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "creationDialog";
 	ogit:original <http://open-services.net/ns/core#creationDialog>;
 	dcterms:description "Enables clients to create a resource via UI.";

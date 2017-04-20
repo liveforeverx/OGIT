@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:timestamp
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "timestamp";
 	dcterms:description "Contains the timestamp in milliseconds.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

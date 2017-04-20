@@ -3,8 +3,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:Hyperlink
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Hyperlink";
 	dcterms:description "A representation of an (optionally) titled Hyperlink to some media. No protocol restrictions imposed.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

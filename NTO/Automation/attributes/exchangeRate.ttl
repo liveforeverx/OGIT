@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:exchangeRate
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "exchangeRate";
 	dcterms:description "Contains the data rate exchanged.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -7,8 +7,7 @@
 @prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.RDDL:nature
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "nature";
 	ogit:original <http://www.rddl.org/nature>;
 	dcterms:description "A machine-readable label provided by the value of the xlink:role attribute";

@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Datacenter:moveProductionDate
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "moveProductionDate";
 	dcterms:description "Date when an device is moved to production use.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

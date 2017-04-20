@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:Estimate
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Estimate";
 	ogit:original <http://open-services.net/ns/ems#Estimate>;
 	dcterms:description "An estimate is a probabilistic prediction, based on a scenario, for a set of measurements.";

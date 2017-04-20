@@ -4,8 +4,7 @@
 @prefix ogit.ServiceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
 
 ogit.ServiceManagement:Ticket
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Ticket";
 	dcterms:description "This entity defines any type of tickets. For specific behaviour of tickets, please check specific entities (e.g. ogit/ServiceManagement/Incident).";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

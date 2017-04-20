@@ -6,8 +6,7 @@
 @prefix ogit.BusinessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
 
 ogit:represents
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "represents";
 	dcterms:description "This relationship defines that one entity represents another entity.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

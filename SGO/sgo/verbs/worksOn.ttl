@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:worksOn
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "worksOn";
 	dcterms:description "Indicates if one entity is currently working on another entity.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

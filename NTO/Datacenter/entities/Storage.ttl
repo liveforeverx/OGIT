@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Datacenter:Storage
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Storage";
 	dcterms:description "A physical/logical Storage Unit";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

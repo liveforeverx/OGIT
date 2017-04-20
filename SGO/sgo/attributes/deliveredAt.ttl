@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:deliveredAt
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "deliveredAt";
 	dcterms:description """Defines a point in time when a component/device was actually delivered.
 The values must be combined date and time with time zone designator according to ISO 8601""";

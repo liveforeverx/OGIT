@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:ServerAccessPoint
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "ServerAccessPoint";
 	ogit:original <http://open-services.net/ns/crtv#ServerAccessPoint>;
 	dcterms:description "A network endpoint, i.e. the combination of IP address and port number that clients connect to when accessing a SoftwareServer.";

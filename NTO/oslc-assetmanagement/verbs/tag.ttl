@@ -7,8 +7,7 @@
 @prefix rdf:             <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 ogit.OSCL-asset:tag
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "tag";
 	ogit:original <http://open-services.net/ns/asset#tag>;
 	dcterms:description "Specifies the asset tag value for an Asset. Asset tags are typically human readable labels. For hardware assets, these tags are durable, securely attached to equipment, and may also be readable by barcode and/or RFID.";

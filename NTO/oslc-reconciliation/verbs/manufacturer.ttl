@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:manufacturer
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "manufacturer";
 	ogit:original <http://open-services.net/ns/crtv#manufacturer>;
 	dcterms:description "Name of the device manufacturer. This attribute SHOULD be a publicly available manufacturer name vocabulary. ";

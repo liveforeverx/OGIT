@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:totalCount
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "totalCount";
 	ogit:original <http://open-services.net/ns/core#totalCount>;
 	dcterms:description """This optional property indicates the total number of results across all pages,

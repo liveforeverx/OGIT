@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:SimpleDevice
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "SimpleDevice";
 	dcterms:description "Standalone networking device, which could be physical or virtual";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

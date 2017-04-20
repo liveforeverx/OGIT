@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:NIC
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "NIC";
 	dcterms:description "NIC, or Network Interface Card is a Physical/Virtual Circuit allowing an endpoint to connect to a network.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

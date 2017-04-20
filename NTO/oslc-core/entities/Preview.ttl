@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:Preview
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Preview";
 	ogit:original <http://open-services.net/ns/core#Preview>;
 	dcterms:description "The UI Preview representation.";

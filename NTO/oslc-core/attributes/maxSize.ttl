@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:maxSize
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "maxSize";
 	ogit:original <http://open-services.net/ns/core#maxSize>;
 	dcterms:description "For String properties only, specifies maximum characters allowed. If not set, then there is no maximum or maximum is specified elsewhere.";

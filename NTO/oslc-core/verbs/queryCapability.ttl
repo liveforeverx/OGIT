@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:queryCapability
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "queryCapability";
 	ogit:original <http://open-services.net/ns/core#queryCapability>;
 	dcterms:description "Enables clients query across a collection of resources.";

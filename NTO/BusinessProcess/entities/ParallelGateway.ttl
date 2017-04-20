@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:ParallelGateway
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "ParallelGateway";
 	dcterms:description """Gateways can be used to model concurrency in a process. The most straightforward gateway to introduce concurrency 
 in a process model is the Parallel Gateway, which allows forking into multiple paths of execution or joining multiple 

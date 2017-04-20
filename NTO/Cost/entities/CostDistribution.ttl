@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Cost:CostDistribution
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "CostDistribution";
 	dcterms:description "Auxiliary structure to express the influence of CostElements on one another. For more detailed explanation please check definition of the entity ogit/CostModel/CostElement and for a general overview: see the NTO description on github.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -7,8 +7,7 @@
 @prefix rdf:             <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 ogit.OSCL-asset:identifier
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "identifier";
 	ogit:original <http://open-services.net/ns/asset#identifier>;
 	dcterms:description "A unique identifier for a resource. Assigned by the service provider when a resource is created.";

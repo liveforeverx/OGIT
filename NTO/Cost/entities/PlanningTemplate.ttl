@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Cost:PlanningTemplate
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "PlanningTemplate";
 	dcterms:description "A Planning Template is an estimated planning of cost elements referring to an Implementation Template and a Planning Parameter. It will consist of a recursive set of sub-templates, connected through an edge, where each one of them will represent a service. For a general overview: see the NTO description on github.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

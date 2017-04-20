@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:QueryCapability
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "QueryCapability";
 	ogit:original <http://open-services.net/ns/core#QueryCapability>;
 	dcterms:description "The QueryCapability definition included in a ServiceProvider.";

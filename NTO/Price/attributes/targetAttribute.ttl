@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Price:targetAttribute
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "targetAttribute";
 	dcterms:description "Attribute to which the factor will be applied to (If target == Attribute)";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

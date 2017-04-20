@@ -3,8 +3,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:License
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "License";
 	dcterms:description "This entity type allows to store license information or actual licenses.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

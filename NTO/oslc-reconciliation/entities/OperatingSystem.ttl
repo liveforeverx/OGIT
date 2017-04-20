@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:OperatingSystem
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "OperatingSystem";
 	ogit:original <http://open-services.net/ns/crtv#OperatingSystem>;
 	dcterms:description "Represents the operating system or control software installed and running on a ComputerSystem";

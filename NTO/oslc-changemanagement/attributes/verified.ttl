@@ -7,8 +7,7 @@
 @prefix ogit:         <http://www.purl.org/ogit/> .
 
 ogit.OSLC-cm:verified
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "verified";
 	ogit:original <http://open-services.net/ns/cm#verified>;
 	dcterms:description "Whether or not the resolution or fix of the Change Request has been verified.";

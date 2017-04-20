@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:resourceType
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "resourceType";
 	ogit:original <http://open-services.net/ns/core#resourceType>;
 	dcterms:description "The expected resource type URI of the resource that will be created using this creation factory. These would be the URIs found in the result resource's rdf:type property.";

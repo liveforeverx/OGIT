@@ -7,8 +7,7 @@
 @prefix ogit:         <http://www.purl.org/ogit/> .
 
 ogit.OSLC-cm:reviewed
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "reviewed";
 	ogit:original <http://open-services.net/ns/cm#reviewed>;
 	dcterms:description "Whether or not the Change Request has been reviewed.";

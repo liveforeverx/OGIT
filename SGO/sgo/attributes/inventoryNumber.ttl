@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:inventoryNumber
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "inventoryNumber";
 	dcterms:description """This field specifies the inventory component number for the a device as defined by the company-defined  device inventory number in the model table.
 The system uses this number to provide data on the Manufacturer, Model, and Version fields if available.""";

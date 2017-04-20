@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:validTo
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "validTo";
 	dcterms:description "Defines a point in time when something stops being valid.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -5,8 +5,7 @@
 @prefix ogit.ServiceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
 
 ogit.ServiceManagement:taskStatus
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "taskStatus";
 	dcterms:description "Defines the status of a task.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

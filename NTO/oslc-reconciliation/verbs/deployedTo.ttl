@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:deployedTo
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "deployedTo";
 	ogit:original <http://open-services.net/ns/crtv#deployedTo>;
 	dcterms:description "The SoftwareServer on which this SoftwareModule is deployed.";

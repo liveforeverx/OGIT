@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:isMemberProperty
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "isMemberProperty";
 	ogit:original <http://open-services.net/ns/core#isMemberProperty>;
 	dcterms:description "Used to define when a property is a member of a container, useful for query.";

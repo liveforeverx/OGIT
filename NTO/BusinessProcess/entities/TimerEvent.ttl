@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:TimerEvent
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "TimerEvent";
 	dcterms:description "TimerEvent indicates the time, duration or periodical intervall of an event.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

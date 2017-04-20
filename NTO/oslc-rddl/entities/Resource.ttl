@@ -7,8 +7,7 @@
 @prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.RDDL:Resource
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Resource";
 	ogit:original <http://www.rddl.org/Resource>;
 	dcterms:description "RDF Schema for RDDL: 2001-01-29";

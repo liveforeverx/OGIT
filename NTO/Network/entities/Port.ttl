@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:Port
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Port";
 	dcterms:description "A physical or logical network port";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -7,8 +7,7 @@
 @prefix ogit:         <http://www.purl.org/ogit/> .
 
 ogit.OSLC-qm:TestExecutionRecord
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "TestExecutionRecord";
 	ogit:original <http://open-services.net/ns/qm#TestExecutionRecord>;
 	dcterms:description "The QM Test Execution Record resource";

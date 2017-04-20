@@ -5,8 +5,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit:extends
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "extends";
 	dcterms:description "Indicates if one entity extends another one";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

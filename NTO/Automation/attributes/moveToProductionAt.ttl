@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:moveToProductionAt
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "moveToProductionAt";
 	dcterms:description """Defines the time when something was actually moved to production.
 The values can combine date and time with time zone designator according to ISO 8601.""";

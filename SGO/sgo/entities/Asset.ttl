@@ -3,8 +3,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:Asset
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Asset";
 	dcterms:description """Assets represent a physical hold of a value and are situated in a location. Assets could correspond to one or more 
 ogit/Automation/MARSNode's and can be physical or virtual. Assets of a Service Provider include anything that could 

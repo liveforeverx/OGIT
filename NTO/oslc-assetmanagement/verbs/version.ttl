@@ -7,8 +7,7 @@
 @prefix rdf:             <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 ogit.OSCL-asset:version
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "version";
 	ogit:original <http://open-services.net/ns/asset#version>;
 	dcterms:description "The version of the asset. Possible values may include '1.0', '2.0', etc.";

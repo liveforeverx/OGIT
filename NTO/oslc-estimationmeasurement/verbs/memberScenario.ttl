@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:memberScenario
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "memberScenario";
 	ogit:original <http://open-services.net/ns/ems#memberScenario>;
 	dcterms:description "This property links a scenario list to its member scenarios.";

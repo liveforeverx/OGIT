@@ -6,8 +6,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:plans
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "plans";
 	dcterms:description "Verb showing how one entity plans/predicts on the content of another entity";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

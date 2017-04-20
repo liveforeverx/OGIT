@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:selectionDialog
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "selectionDialog";
 	ogit:original <http://open-services.net/ns/core#selectionDialog>;
 	dcterms:description "Enables clients to select a resource via UI.";

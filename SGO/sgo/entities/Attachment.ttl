@@ -3,8 +3,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:Attachment
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Attachment";
 	dcterms:description """This entity defines a file attachment that an IT service, issue, task or a ticket might have. The attachment itself is 
 not saved in GraphIT, instead it contains an external url link for it.""";

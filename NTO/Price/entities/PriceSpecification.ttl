@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Price:PriceSpecification
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "PriceSpecification";
 	dcterms:description "Models a price specification for any type of IT service, component or task";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

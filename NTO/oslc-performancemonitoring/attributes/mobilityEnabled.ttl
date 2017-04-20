@@ -7,8 +7,7 @@
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-perfmon:mobilityEnabled
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "mobilityEnabled";
 	ogit:original <http://open-services.net/ns/perfmon#mobilityEnabled>;
 	dcterms:description "An indication about whether the resource can move about dynamically.";

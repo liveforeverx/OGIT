@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:MARSNodeTemplate
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "MARSNodeTemplate";
 	dcterms:description """Entity similar to MARSNode but used to create ogit/Automation/MARSTemplate's, which are used to define a vendor implementation template of an ordered 
 service offering and to enable definition of cost elements (ogit/Cost/CostElement) attached to it. Automation/MarsNode can not be reused for template reasons.""";

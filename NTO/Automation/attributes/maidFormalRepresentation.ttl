@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:maidFormalRepresentation
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "maidFormalRepresentation";
 	dcterms:description "Contains a MAID in XML representation defined by MAIDSchema.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

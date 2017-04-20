@@ -7,8 +7,7 @@
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-perfmon:availabilityStatus
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "availabilityStatus";
 	ogit:original <http://open-services.net/ns/perfmon#availabilityStatus>;
 	dcterms:description "An indication of availability.";

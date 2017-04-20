@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:Property
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Property";
 	ogit:original <http://open-services.net/ns/core#Property>;
 	dcterms:description "A Property resource describes one allowed or required property of a resource.";

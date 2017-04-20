@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.DataProcessing:parameters
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "DataProcessingParameters";
 	dcterms:description "The query parameters";
 	dcterms:valid "start=2017-02-27;";

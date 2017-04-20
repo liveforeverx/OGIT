@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:shortTitle
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "shortTitle";
 	ogit:original <http://open-services.net/ns/core#shortTitle>;
 	dcterms:description "Shorter form of dcterms:title for the resource.";

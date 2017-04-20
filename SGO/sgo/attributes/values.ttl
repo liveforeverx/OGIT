@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:values
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "values";
 	dcterms:description "Represents a list of values. How to actually encode a list of values is left to the semantics of the entities using this attribute.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

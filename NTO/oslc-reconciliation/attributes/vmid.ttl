@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:vmid
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "vmid";
 	ogit:original <http://open-services.net/ns/crtv#vmid>;
 	dcterms:description "The VMID is a unique identifier for the virtual machine.";

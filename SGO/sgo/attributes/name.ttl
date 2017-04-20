@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:name
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "name";
 	dcterms:description "Contains a name.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:MAID
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "MAID";
 	dcterms:description """The Monitoring-Automation Interface Description (MAID) is an abstract definition of
 

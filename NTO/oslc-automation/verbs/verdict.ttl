@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-auto:verdict
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "verdict";
 	ogit:original <http://open-services.net/ns/auto#verdict>;
 	dcterms:description "Used to indicate the verdict of the automation result based on values defined by the automation specification and, optionally, by the service provider. Most often a read-only property. It is expected that this will be a resource reference to a definition of a valid automation result verdict on the service provider.";

@@ -7,8 +7,7 @@
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-perfmon:Metric
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Metric";
 	ogit:original <http://open-services.net/ns/perfmon#Metric>;
 	dcterms:description "Metric category for metrics defined in the Performance Monitoring vocabulary.";

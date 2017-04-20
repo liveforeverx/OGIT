@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:NetworkInterface
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "NetworkInterface";
 	dcterms:description "Logical or physical network interface.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

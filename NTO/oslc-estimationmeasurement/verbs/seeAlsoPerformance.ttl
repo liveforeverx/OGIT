@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:seeAlsoPerformance
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "seeAlsoPerformance";
 	ogit:original <http://open-services.net/ns/ems#seeAlsoPerformance>;
 	dcterms:description "This property links a project to a corresponding resource in a performance management application.";

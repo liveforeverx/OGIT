@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:validFor
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "validFor";
 	dcterms:description "This relationship indicates the something specifies validity for something else.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

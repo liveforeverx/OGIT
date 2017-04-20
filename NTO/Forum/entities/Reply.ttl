@@ -4,8 +4,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:Reply
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Reply";
 	dcterms:description "A response to a some other entity";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

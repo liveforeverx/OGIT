@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:contributes
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "contributes";
 	dcterms:description """Verb associates which entity contributes to another, for example could be used to express a distribution for the percentage 
 of a cost element, which contributes to another cost element.""";

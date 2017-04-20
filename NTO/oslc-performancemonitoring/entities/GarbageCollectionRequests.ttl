@@ -7,8 +7,7 @@
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-perfmon:GarbageCollectionRequests
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "GarbageCollectionRequests";
 	ogit:original <http://open-services.net/ns/perfmon#GarbageCollectionRequests>;
 	dcterms:description "Garbage collection requests";

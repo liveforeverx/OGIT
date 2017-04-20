@@ -5,8 +5,7 @@
 @prefix ogit.ServiceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
 
 ogit.ServiceManagement:incidentStatus
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "incidentStatus";
 	dcterms:description "Defines the status of an incident record/ticket.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

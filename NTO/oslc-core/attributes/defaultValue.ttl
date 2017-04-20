@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:defaultValue
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "defaultValue";
 	ogit:original <http://open-services.net/ns/core#defaultValue>;
 	dcterms:description "A default value for property, inlined into property definition.";

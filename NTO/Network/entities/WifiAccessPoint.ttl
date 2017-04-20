@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:WifiAccessPoint
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "WifiAccessPoint";
 	dcterms:description "Device offering wireless/radio networking services";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

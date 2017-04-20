@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:UndefinedTask
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "UndefinedTask";
 	dcterms:description "A Task is an atomic activity that is included within a Process. A undifined Task should be used if the type of a task is not clear yet.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

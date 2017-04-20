@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:weight
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "weight";
 	dcterms:description "Physical weight of an entity, e.g. device/component/rack";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -7,8 +7,7 @@
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-perfmon:RemoteInboundConnections
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "RemoteInboundConnections";
 	ogit:original <http://open-services.net/ns/perfmon#RemoteInboundConnections>;
 	dcterms:description "Remote inbound connections";

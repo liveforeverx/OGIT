@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:Process
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Process";
 	ogit:original <http://open-services.net/ns/crtv#Process>;
 	dcterms:description "This resource represents a process running under an operating system.";

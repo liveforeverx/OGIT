@@ -8,8 +8,7 @@
 @prefix dcterms:          <http://purl.org/dc/terms/> .
 
 ogit.OSLC-reqman:specifiedBy
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "specifiedBy";
 	ogit:original <http://open-services.net/ns/rm#specifiedBy>;
 	dcterms:description """Expresses a specification relationship

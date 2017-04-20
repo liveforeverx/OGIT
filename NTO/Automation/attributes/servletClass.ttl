@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:servletClass
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "servletClass";
 	dcterms:description "Contains the class of the servlet.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

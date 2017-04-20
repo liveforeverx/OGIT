@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:category
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "category";
 	dcterms:description "Used to categorize things.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

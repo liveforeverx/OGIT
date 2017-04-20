@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:leads
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "leads";
 	dcterms:description "This relationship defines that one entity leads another entity.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

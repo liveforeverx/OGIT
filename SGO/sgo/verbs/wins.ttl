@@ -5,8 +5,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit:wins
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "wins";
 	dcterms:description """Associates the entity that has won something with the thing that was won. Despite the present
 tense used in the verb, this almost always will refer to some that *was* won in the past.""";

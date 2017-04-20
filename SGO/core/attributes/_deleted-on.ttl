@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:_deleted-on
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "_deleted-on";
 	dcterms:description "[internally generated] Timestamp in ms when the node was deleted";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

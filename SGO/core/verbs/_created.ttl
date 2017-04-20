@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:_created
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "_created";
 	dcterms:description "The creator of a node. This verb is generated internally.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

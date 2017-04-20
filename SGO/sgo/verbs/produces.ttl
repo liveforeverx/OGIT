@@ -5,8 +5,7 @@
 @prefix ogit.BusinessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
 
 ogit:produces
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "produces";
 	dcterms:description "This relationship indicates that one produces some work for another.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -9,8 +9,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit:connects
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "connects";
 	dcterms:description "Verb showing that an entity is physically/virtually connecting to another entity.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

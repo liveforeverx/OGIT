@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:SoftwareModule
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "SoftwareModule";
 	ogit:original <http://open-services.net/ns/crtv#SoftwareModule>;
 	dcterms:description "Represents packaged components that are deployed to a SoftwareServer.";

@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:SignalEvent
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "SignalEvent";
 	dcterms:description """Signals are similar to messages, which is why you can model them in BPMN as events just as you can with messages. 
 The symbol for a signal is a triangle. The essential difference between a signal and a message is that that latter 

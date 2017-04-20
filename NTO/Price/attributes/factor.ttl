@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Price:factor
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "factor";
 	dcterms:description "Value of the factor.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

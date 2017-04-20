@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:OAuthConfiguration
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "OAuthConfiguration";
 	ogit:original <http://open-services.net/ns/core#OAuthConfiguration>;
 	dcterms:description "The OAuthConfiguration definition included in ServiceProvider.";

@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:NetworkFilter
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "NetworkFilter";
 	dcterms:description "A Network Filter is a security measure restricting usage.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:EstimateList
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "EstimateList";
 	ogit:original <http://open-services.net/ns/ems#EstimateList>;
 	dcterms:description "An estimate list is a container for estimate resources.";

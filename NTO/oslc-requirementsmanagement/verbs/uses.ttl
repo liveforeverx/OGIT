@@ -8,8 +8,7 @@
 @prefix dcterms:          <http://purl.org/dc/terms/> .
 
 ogit.OSLC-reqman:uses
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "uses";
 	ogit:original <http://open-services.net/ns/rm#uses>;
 	dcterms:description """Expresses a use relationship between

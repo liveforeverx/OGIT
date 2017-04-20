@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:Router
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Router";
 	dcterms:description "Networking Device for forwarding data packet between networks";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

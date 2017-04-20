@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:proves
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "proves";
 	dcterms:description """One entity can \"prove\" another.""";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

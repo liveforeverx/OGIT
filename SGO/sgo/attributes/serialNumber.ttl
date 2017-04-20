@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:serialNumber
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "serialNumber";
 	dcterms:description "A string representing a any kind of serial number. see http://purl.org/goodrelations/v1#serialNumber";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

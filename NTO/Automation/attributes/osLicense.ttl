@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:osLicense
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "osLicense";
 	dcterms:description "License of the Operating System.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

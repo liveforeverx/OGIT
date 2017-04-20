@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:dbInstance
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "dbInstance";
 	ogit:original <http://open-services.net/ns/crtv#dbInstance>;
 	dcterms:description "The Software Server representing the database instance that manages this database.";

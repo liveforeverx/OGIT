@@ -7,8 +7,7 @@
 @prefix ogit:         <http://www.purl.org/ogit/> .
 
 ogit.OSLC-cm:fixed
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "fixed";
 	ogit:original <http://open-services.net/ns/cm#fixed>;
 	dcterms:description "Whether or not the Change Request has been fixed.";

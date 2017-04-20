@@ -4,8 +4,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:Invite
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Invite";
 	dcterms:description "Invite is used to request participation with a node";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

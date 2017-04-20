@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:additionalMacAddress
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "additionalMacAddress";
 	dcterms:description "Contains an additional MAC address";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

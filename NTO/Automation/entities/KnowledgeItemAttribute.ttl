@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:KnowledgeItemAttribute
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "KnowledgeItemAttribute";
 	dcterms:description "Contains key-value pairs (together with mode) found inside Issue subitems.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

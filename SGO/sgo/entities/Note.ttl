@@ -3,8 +3,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:Note
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Note";
 	dcterms:description "Any type of note.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

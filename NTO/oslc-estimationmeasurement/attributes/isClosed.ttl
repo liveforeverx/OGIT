@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:isClosed
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "isClosed";
 	ogit:original <http://open-services.net/ns/ems#isClosed>;
 	dcterms:description """This boolean property indicates if the project is closed.

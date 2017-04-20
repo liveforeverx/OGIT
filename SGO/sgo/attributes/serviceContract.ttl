@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:serviceContract
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "serviceContract";
 	dcterms:description "This field specifies the contract covering a service.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

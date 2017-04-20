@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:patchNumber
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "patchNumber";
 	dcterms:description "Contains a patch number.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

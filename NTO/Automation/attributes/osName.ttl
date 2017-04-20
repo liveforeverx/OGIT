@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:osName
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "osName";
 	dcterms:description "Contains operating system name.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

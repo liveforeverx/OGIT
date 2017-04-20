@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:prefix
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "prefix";
 	ogit:original <http://open-services.net/ns/core#prefix>;
 	dcterms:description "Namespace prefix to be used for this namespace.";

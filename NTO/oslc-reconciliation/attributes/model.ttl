@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:model
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "model";
 	ogit:original <http://open-services.net/ns/crtv#model>;
 	dcterms:description "Value of the device model. The model number as provided by the device manufacturer.  ";

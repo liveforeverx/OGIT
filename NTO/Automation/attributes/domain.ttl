@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:domain
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "domain";
 	dcterms:description "Contains the domain name.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

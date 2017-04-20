@@ -3,8 +3,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:OntologyEntity
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "OntologyEntity";
 	dcterms:description """represents any Entity definition from OGIT
 whenever there is a Schema describing/restricting the entity's content there will be \"isUsedBy\" link from Schema to OntologyEntity""";

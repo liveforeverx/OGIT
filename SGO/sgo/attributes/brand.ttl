@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:brand
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "brand";
 	dcterms:description "Brand/Manufacturer of a component/device.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

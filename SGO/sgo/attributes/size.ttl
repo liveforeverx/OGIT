@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:size
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "size";
 	dcterms:description "The size, e.g. of a file.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Statistics:AutomationFamily
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "AutomationFamily";
 	dcterms:description "AutomationFamily defines the group of cases for automation of IT environment and its functionality.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -5,8 +5,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit:subscribes
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "subscribes";
 	dcterms:description """A subscription by an entity to another. Implies that one entity is interested in something
 the other can offer.""";

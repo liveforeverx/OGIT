@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:PortChannel
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "PortChannel";
 	dcterms:description "A Portchannel bundles two or more physical or logical network ports";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:webServer
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "webServer";
 	dcterms:description "Contains an webServer.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -7,8 +7,7 @@
 @prefix rdf:             <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 ogit.OSCL-asset:relationshipType
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "relationshipType";
 	ogit:original <http://open-services.net/ns/asset#relationshipType>;
 	dcterms:description "The type of this relationship from the perspective of the oslc_asset:relatedAsset resource based on values defined by the service provider. This specification does not define the resource for this property, however it should contain a dcterms:title property.";

@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:position
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "position";
 	dcterms:description """Indicates user's position. This field contains a string value.""";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

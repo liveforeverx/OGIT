@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:futureAction
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "futureAction";
 	ogit:original <http://open-services.net/ns/core#futureAction>;
 	dcterms:description """A predicate that links to an action that is not currently executable on the subject resource,

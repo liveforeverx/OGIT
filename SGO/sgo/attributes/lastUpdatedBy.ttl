@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:lastUpdatedBy
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "lastUpdatedBy";
 	dcterms:description "Defines the last person or process who updated an entity.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

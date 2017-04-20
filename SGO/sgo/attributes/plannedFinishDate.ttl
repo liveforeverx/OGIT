@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:plannedFinishDate
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "plannedFinishDate";
 	dcterms:description "Defines the date when something will be finished.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

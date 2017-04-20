@@ -7,8 +7,7 @@
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-perfmon:PerMinute
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "PerMinute";
 	ogit:original <http://open-services.net/ns/perfmon#PerMinute>;
 	dcterms:description "Units for a quantity where a value of one represents 60 seconds of time.";

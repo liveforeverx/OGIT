@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-auto:progress
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "progress";
 	ogit:original <http://open-services.net/ns/auto#progress>;
 	dcterms:description "Represents the progress that has been made towards completion (e.g. of an AutomationRequest or AutomationResult). The value of this property can either be an integer (showing percentage completion) or a resource (for implementation-specific details, or future extension).";

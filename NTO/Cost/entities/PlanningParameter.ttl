@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Cost:PlanningParameter
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "PlanningParameter";
 	dcterms:description "A Planning Parameter describes a Planning Template. It will contain a concrete value of a Parameter and the statistics derived from the expected distribution as attributes. For a general overview: see the NTO description on github.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

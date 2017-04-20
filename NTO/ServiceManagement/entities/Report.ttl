@@ -4,8 +4,7 @@
 @prefix ogit.ServiceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
 
 ogit.ServiceManagement:Report
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Report";
 	dcterms:description "Reporting about IT service delivery";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

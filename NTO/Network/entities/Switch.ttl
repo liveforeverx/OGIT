@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:Switch
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Switch";
 	dcterms:description "Networking device for packet switching";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

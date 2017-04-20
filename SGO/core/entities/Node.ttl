@@ -3,8 +3,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:Node
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Node";
 	dcterms:description """The root node, the 'Big Bang'. The nodes Global, Factual, Actionable and Situational build with this Node the
 top level of the SGO.""";

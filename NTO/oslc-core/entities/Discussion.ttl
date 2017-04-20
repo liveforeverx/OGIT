@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:Discussion
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Discussion";
 	ogit:original <http://open-services.net/ns/core#Discussion>;
 	dcterms:description "A Discussion resource is intended to represent a sequence of comments or notes regarding the associated resource";

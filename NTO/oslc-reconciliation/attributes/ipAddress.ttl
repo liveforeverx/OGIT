@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:ipAddress
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "ipAddress";
 	ogit:original <http://open-services.net/ns/crtv#ipAddress>;
 	dcterms:description "The IP address assigned to this system.";

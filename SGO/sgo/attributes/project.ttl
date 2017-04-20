@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:project
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "project";
 	dcterms:description "Project name, for which the entity is being used.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

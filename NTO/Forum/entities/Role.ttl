@@ -4,8 +4,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:Role
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Role";
 	dcterms:description "A Node to associate a profile with a particular Role within a Group";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

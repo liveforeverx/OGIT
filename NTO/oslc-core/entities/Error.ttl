@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:Error
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Error";
 	ogit:original <http://open-services.net/ns/core#Error>;
 	dcterms:description "Basis for forming an error response.";

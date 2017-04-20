@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:Publisher
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Publisher";
 	ogit:original <http://open-services.net/ns/core#Publisher>;
 	dcterms:description "The Publisher definition included in ServiceProvider.";

@@ -5,8 +5,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit:approves
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "approves";
 	dcterms:description "Indicates if an entity approves something else.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

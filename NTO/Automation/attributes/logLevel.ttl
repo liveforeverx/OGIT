@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:logLevel
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "logLevel";
 	dcterms:description "Contains the numeric log level of the history entry.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

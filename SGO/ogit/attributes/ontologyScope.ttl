@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:ontologyScope
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "ontologyScope";
 	dcterms:description """Indicates the ontology scope which could be either \"SGO\" or \"NTO\".""";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:name
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "name";
 	ogit:original <http://open-services.net/ns/crtv#name>;
 	dcterms:description "Typically used as an identity field, this property is used to represent a known name of a resource instance.";

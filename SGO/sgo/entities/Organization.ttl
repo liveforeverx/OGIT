@@ -3,8 +3,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:Organization
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Organization";
 	dcterms:description """An identity that represents an organization, company, or some other grouping of Person objects.
 Entities of this type should be created with a predefined ID. Those IDs should be named like a domain name, i.e.

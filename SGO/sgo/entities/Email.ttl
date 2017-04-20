@@ -3,8 +3,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:Email
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Email";
 	dcterms:description "Any type of email adress.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

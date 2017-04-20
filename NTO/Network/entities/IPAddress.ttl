@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:IPAddress
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "IPAddress";
 	dcterms:description "A Network IPAddress is per network unique identifier for IP-Devices.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

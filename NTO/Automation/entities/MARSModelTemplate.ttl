@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:MARSModelTemplate
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "MARSModelTemplate";
 	dcterms:description """Represents a set of interconnected MARSNodes, which will be used to define a vendor implementation template of an ordered 
 service offering.""";

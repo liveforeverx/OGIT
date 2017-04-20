@@ -5,8 +5,7 @@
 @prefix ogit.ServiceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
 
 ogit.ServiceManagement:resolvedInTime
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "resolvedAt";
 	dcterms:description "Information about a ticket being solved in the time excepted.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

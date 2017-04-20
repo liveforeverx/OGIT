@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-auto:reportsOnAutomationPlan
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "reportsOnAutomationPlan";
 	ogit:original <http://open-services.net/ns/auto#reportsOnAutomationPlan>;
 	dcterms:description "Automation Plan which the Automation Result reports on. It is likely that the target resource will be an oslc_auto:AutomationPlan but that is not necessarily the case.";

@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:marsNodeFormalRepresentation
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "marsNodeFormalRepresentation";
 	dcterms:description "Contains MARS in XML representation defined by MARSSchema2013.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

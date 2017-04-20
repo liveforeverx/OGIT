@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:assetTag
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "assetTag";
 	ogit:original <http://open-services.net/ns/crtv#assetTag>;
 	dcterms:description "Specifies the asset tag for a physical piece of equipment. Asset tags are typically human readable labels that are durable and securely attached to equipment. Asset tags may also be readable by barcode and/or RFID. ";

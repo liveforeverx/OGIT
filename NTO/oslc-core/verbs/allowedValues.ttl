@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:allowedValues
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "allowedValues";
 	ogit:original <http://open-services.net/ns/core#allowedValues>;
 	dcterms:description "Resource with allowed values for the property being defined. Range of oslc:AllowedValues";

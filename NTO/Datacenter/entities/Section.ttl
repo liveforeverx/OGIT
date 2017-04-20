@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Datacenter:Section
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Section";
 	dcterms:description "A physical/logical Section within a Room";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

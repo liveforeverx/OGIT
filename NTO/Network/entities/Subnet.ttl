@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:Subnet
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Subnet";
 	dcterms:description "Subnet is a group of IDAddresses located in one place.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

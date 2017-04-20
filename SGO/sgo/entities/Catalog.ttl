@@ -3,8 +3,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:Catalog
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Catalog";
 	dcterms:description "Any kind of catalog which could be offered by an Organization (e.g. corresponding to a vendor). Might contain products, services, books, etc.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

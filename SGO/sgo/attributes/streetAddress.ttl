@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:streetAddress
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "streetAddress";
 	dcterms:description "The street address. For example, Eschersheimer Landstr. 526-532";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

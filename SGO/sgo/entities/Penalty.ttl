@@ -3,8 +3,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:Penalty
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Penalty";
 	dcterms:description "Defines the penalty that has to be paid in certain circumstances";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

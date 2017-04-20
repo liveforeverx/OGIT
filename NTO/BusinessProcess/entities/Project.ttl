@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:Project
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Project";
 	dcterms:description """An identity that represents a grouping of Person, Milestone objects.""";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:service
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "service";
 	ogit:original <http://open-services.net/ns/core#service>;
 	dcterms:description "Describes a service offered by the service provider.";

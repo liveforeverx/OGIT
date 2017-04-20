@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:nextPage
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "nextPage";
 	ogit:original <http://open-services.net/ns/core#nextPage>;
 	dcterms:description "Link to next page of response.";

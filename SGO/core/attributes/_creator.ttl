@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:_creator
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "_creator";
 	dcterms:description "[internally generated] The id of the identity who created the node or edge";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

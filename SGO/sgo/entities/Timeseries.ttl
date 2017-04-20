@@ -3,8 +3,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:Timeseries
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Timeseries";
 	dcterms:description "A time series is a sequence of data points, measured typically at successive points in time spaced at uniform time intervals.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -5,8 +5,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit:rejects
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "rejects";
 	dcterms:description "Indicates if an entity rejects something else.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

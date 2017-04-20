@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:firmwareVersion
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "firmWareVersion";
 	dcterms:description "Version of the firmware.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

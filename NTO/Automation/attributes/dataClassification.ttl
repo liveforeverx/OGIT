@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:dataClassification
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "dataClassification";
 	dcterms:description "Data classification of a component.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

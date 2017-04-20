@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:issueFormalRepresentation
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "issueFormalRepresentation";
 	dcterms:description "Contains an issue in XML representation defined by IssueSchema.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

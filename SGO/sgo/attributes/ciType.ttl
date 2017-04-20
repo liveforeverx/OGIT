@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:ciType
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "ciType";
 	dcterms:description "Type of a configuration item. For example: VM, Server or Device.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -5,8 +5,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:KnowledgeItemHistory
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "KnowledgeItemHistory";
 	dcterms:description "A data container of `ogit/Automation/KnowledgeItem`s changes.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

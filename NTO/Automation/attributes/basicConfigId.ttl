@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:basicConfigId
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "basicConfigId";
 	dcterms:description "Contains the internal identifier of the basic configuration of a component .";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

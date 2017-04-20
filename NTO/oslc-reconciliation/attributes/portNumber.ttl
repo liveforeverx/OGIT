@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:portNumber
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "portNumber";
 	ogit:original <http://open-services.net/ns/crtv#portNumber>;
 	dcterms:description "The port number as defined by IETF and IANA.";

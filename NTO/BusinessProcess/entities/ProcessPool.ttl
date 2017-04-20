@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:ProcessPool
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "ProcessPool";
 	dcterms:description "A Pool represents a Participant in a Process. It is also acts as a swimlane and a graphical container for partitioning a set of activities from other Pools, usually in the context of B2B situations.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

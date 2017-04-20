@@ -4,8 +4,7 @@
 @prefix ogit.ServiceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
 
 ogit.ServiceManagement:Order
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Order";
 	dcterms:description "Defines an order.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

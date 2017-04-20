@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:EscalationEvent
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "EscalationEvent";
 	dcterms:description """Entity to store an escalation event in BPMN 2.0. Mainly, it shows communication between parent and sub-processes. 
 We discuss it in here TODO with the help of an example.""";

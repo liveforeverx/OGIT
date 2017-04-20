@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:VLAN
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "VLAN";
 	dcterms:description "VLAN or Virtual LAN is a group of computers or network devices that appear to be on the same LAN, even if they are distributed. VLANs allow segregation of traffic within a network.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

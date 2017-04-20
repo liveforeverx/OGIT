@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:competes
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "competes";
 	dcterms:description "This relationship defines that one entity competes another entity.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

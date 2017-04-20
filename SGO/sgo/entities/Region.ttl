@@ -3,8 +3,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:Region
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Region";
 	dcterms:description "A region is always something that has a certain geographic extension (a country, a county,  ) whereas ogit/Location usually refers to specific place usually having an address";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

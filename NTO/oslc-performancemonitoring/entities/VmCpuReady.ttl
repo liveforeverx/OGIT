@@ -7,8 +7,7 @@
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-perfmon:VmCpuReady
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "VmCpuReady";
 	ogit:original <http://open-services.net/ns/perfmon#VmCpuReady>;
 	dcterms:description "Amount of CPU ready from a virtual machine's point of view";

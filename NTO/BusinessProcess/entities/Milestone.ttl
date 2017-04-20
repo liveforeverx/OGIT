@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:Milestone
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Milestone";
 	dcterms:description """An identity that represents an important event, achievement, ...""";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

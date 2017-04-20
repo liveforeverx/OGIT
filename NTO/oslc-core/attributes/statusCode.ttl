@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:statusCode
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "statusCode";
 	ogit:original <http://open-services.net/ns/core#statusCode>;
 	dcterms:description "The HTTP status code reported with the error.";

@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:cpuSpeed
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "cpuSpeed";
 	dcterms:description "An floating point number which shows the cpu speed in GHZ.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

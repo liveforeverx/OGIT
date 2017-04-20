@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:version
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "version";
 	ogit:original <http://open-services.net/ns/crtv#version>;
 	dcterms:description "The version string assigned to this entity.";

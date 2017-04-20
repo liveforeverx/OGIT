@@ -4,8 +4,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:Group
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Group";
 	dcterms:description "A Node to associate a profile to a particular group";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

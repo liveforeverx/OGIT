@@ -13,8 +13,7 @@
 @prefix ogit.Knowledge:         <http://www.purl.org/ogit/Knowledge/> .
 
 ogit:contains
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "contains";
 	dcterms:description """This relationship indicates that something is part of something else. see also \"includes\"""";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

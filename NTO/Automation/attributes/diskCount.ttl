@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:diskCount
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "diskCount";
 	dcterms:description "An integer which shows the number of disks of a component.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

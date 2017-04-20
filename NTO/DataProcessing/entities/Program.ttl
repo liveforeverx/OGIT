@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.DataProcessing:Program
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "DataProcessingProgram";
 	dcterms:description """The program is used for creating data streams,
 		and applying transformations to them.""";

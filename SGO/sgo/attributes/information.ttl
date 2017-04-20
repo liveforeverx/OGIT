@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:information
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "information";
 	dcterms:description "Contains some informative string. Alternative to description attribute.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:installPath
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "installPath";
 	dcterms:description "Contains the installation path of a component.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

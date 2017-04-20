@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:middleName
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "middleName";
 	dcterms:description "Middle name of a person.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

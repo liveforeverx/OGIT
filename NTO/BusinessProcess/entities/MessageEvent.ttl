@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:MessageEvent
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "MessageEvent";
 	dcterms:description """Entity to store an instantiated message event. Sooner or later, most processes require communication, which can be represented in BPMN by means of the message event. 
 In terms of BPMN2 modelling it can bel recognized as a small envelope. The meaning of \"message\" in BPMN is not restricted to letters, e-mails, or calls. 

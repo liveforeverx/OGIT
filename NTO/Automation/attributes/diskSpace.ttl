@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:diskSpace
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "diskSpace";
 	dcterms:description "An integer which contains the disk space in GB.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -4,8 +4,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:ShortId
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "ShortId";
 	dcterms:description """A Reference to another Entity, used to track access via a specific channel/referrer.
 For example in TabTab, a Post has many shortIds which relate to different sharing

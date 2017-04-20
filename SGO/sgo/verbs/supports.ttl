@@ -6,8 +6,7 @@
 @prefix ogit.BusinessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
 
 ogit:supports
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "supports";
 	dcterms:description "This relationship defines that one entity provides/supports another entity.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

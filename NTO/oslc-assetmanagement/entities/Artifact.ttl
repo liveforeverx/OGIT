@@ -7,8 +7,7 @@
 @prefix rdf:             <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 ogit.OSCL-asset:Artifact
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Artifact";
 	ogit:original <http://open-services.net/ns/asset#Artifact>;
 	dcterms:description "The Artifact fragment";

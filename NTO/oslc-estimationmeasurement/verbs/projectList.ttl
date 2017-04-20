@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:projectList
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "projectList";
 	ogit:original <http://open-services.net/ns/ems#projectList>;
 	dcterms:description "This property links a service to its project list.";

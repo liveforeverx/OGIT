@@ -7,8 +7,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit:associates
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "associates";
 	dcterms:description "";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

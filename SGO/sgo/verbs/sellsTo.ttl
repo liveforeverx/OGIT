@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:sellsTo
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "sellsTo";
 	dcterms:description "This relationship defines that one entity sells sth. to another entity.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

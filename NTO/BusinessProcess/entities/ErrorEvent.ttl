@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:ErrorEvent
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "ErrorEvent";
 	dcterms:description """Entitiy to store potential process errors as a step toward 
 eliminating them, or as part of modeling escalation processes. In BPMN, error events are represented by a flash symbol.

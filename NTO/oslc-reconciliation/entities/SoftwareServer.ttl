@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:SoftwareServer
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "SoftwareServer";
 	ogit:original <http://open-services.net/ns/crtv#SoftwareServer>;
 	dcterms:description "Represents an instance of software that participates in hosting a particular application.";

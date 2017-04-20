@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:AutomationIssue
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "AutomationIssue";
 	dcterms:description """Dynamic information exists within an automation engine in the form of Issues otherwise referred to as 
 Task or Situational Data. From the technical perspective an Issue is a number of attributes (Key/Value tuples) with 

@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:lastOccurredAt
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "lastOccurredAt";
 	dcterms:description "Defines the date of last occurrence of an event";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

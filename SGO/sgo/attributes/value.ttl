@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:value
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "value";
 	dcterms:description "Contains a value of a key / value pair.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

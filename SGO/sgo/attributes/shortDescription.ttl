@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:shortDescription
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "shortDescription";
 	dcterms:description "Contains a short description.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

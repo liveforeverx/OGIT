@@ -7,8 +7,7 @@
 @prefix ogit:         <http://www.purl.org/ogit/> .
 
 ogit.OSLC-cm:closed
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "closed";
 	ogit:original <http://open-services.net/ns/cm#closed>;
 	dcterms:description "Whether or not the Change Request is completely done, no further fixes or fix verification is needed.";

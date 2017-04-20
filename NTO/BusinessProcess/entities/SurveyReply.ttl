@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:SurveyReply
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "SurveyReply";
 	dcterms:description """User's reply on a survey""";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

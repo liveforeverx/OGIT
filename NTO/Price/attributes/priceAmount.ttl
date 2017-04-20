@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Price:priceAmount
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "priceAmount";
 	dcterms:description "Amount to pay for example for an invoice.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -7,8 +7,7 @@
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-perfmon:ResourceAvailabilityMetrics
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "ResourceAvailabilityMetrics";
 	ogit:original <http://open-services.net/ns/perfmon#ResourceAvailabilityMetrics>;
 	dcterms:description "Metric category for metrics that show resource availability.";

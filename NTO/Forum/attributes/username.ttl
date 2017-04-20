@@ -5,8 +5,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:username
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "username";
 	dcterms:description "A unique username for a member of a Forum";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

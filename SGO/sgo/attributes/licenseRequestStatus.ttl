@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:licenseRequestStatus
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "licenseRequestStatus";
 	dcterms:description "The list of valid status values a license request can have.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

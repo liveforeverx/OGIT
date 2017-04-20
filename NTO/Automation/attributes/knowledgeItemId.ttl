@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:knowledgeItemId
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "knowledgeItemId";
 	dcterms:description "Contains a KnowledgeItemID in string representation.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

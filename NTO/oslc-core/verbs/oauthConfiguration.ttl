@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:oauthConfiguration
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "oauthConfiguration";
 	ogit:original <http://open-services.net/ns/core#oauthConfiguration>;
 	dcterms:description "Defines the three OAuth URIs required for a client to act as an OAuth consumer.";

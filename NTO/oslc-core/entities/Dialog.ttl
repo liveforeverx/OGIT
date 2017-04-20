@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:Dialog
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Dialog";
 	ogit:original <http://open-services.net/ns/core#Dialog>;
 	dcterms:description "The Dialog definition included in ServiceProvider.";

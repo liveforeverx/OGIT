@@ -3,8 +3,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:Location
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Location";
 	dcterms:description """A place where some some service is offered or requested. In many cases this will be related to a an address of an 
 Organization. Similar to http://purl.org/goodrelations/v1#Location""";

@@ -4,8 +4,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:Topic
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Topic";
 	dcterms:description """A Topic is a SubForum with a specific topic associated. Use to divide forums into
 sub-forums. However the entity is general enough to be used for anything that has

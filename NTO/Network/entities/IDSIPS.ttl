@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:IDSIPS
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "IDSIPS";
 	dcterms:description "Intrution Detection and Intrusion Prevention System are network security appliances that monitor network and/or system activities for malicious activity.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

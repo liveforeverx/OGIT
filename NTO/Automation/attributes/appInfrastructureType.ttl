@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:appInfrastructureType
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "appInfrastructureType";
 	dcterms:description "Contains the application infrastructure type.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

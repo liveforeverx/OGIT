@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-auto:ParameterInstance
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "ParameterInstance";
 	ogit:original <http://open-services.net/ns/auto#ParameterInstance>;
 	dcterms:description "The Automation Parameter Instance resource";

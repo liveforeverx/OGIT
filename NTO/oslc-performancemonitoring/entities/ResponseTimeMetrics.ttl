@@ -7,8 +7,7 @@
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-perfmon:ResponseTimeMetrics
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "ResponseTimeMetrics";
 	ogit:original <http://open-services.net/ns/perfmon#ResponseTimeMetrics>;
 	dcterms:description "Metric category for metrics that show time it takes for a response to be returned to a request.";

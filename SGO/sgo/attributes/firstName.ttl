@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:firstName
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "firstName";
 	dcterms:description "First name of a person";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

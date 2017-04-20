@@ -4,8 +4,7 @@
 @prefix ogit.ServiceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
 
 ogit.ServiceManagement:ChangeRequest
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "ChangeRequest";
 	dcterms:description "This entity type defines a change request ticket";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:severity
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "severity";
 	dcterms:description "Stores a severity. E.g. Some event management systems might store a severity field.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -7,8 +7,7 @@
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-perfmon:SortOverflows
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "SortOverflows";
 	ogit:original <http://open-services.net/ns/perfmon#SortOverflows>;
 	dcterms:description "A sort's performance was impacted because the data to be sorted is large enough for it to overflow from (relatively) fast to (relatively) slow storage.";

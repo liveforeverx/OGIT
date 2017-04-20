@@ -7,8 +7,7 @@
 @prefix rdf:             <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 ogit.OSCL-asset:serialNumber
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "serialNumber";
 	ogit:original <http://open-services.net/ns/asset#serialNumber>;
 	dcterms:description "The serial number assigned by the asset manufacturer.";

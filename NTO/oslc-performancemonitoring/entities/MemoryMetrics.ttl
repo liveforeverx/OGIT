@@ -7,8 +7,7 @@
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-perfmon:MemoryMetrics
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "MemoryMetrics";
 	ogit:original <http://open-services.net/ns/perfmon#MemoryMetrics>;
 	dcterms:description "Metric category for memory-related metrics.";

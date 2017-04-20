@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:integrity
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "integrity";
 	dcterms:description "A security pricipale that ensures data and Configuration Items are only modified by authorized personnel and Activities";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

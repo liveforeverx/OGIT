@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:serialNumber
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "serialNumber";
 	ogit:original <http://open-services.net/ns/crtv#serialNumber>;
 	dcterms:description "Serial number assigned by the manufacturer. The value should be provided by the manufacturer of the resource.";

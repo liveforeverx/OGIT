@@ -5,8 +5,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit:responds
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "responds";
 	dcterms:description """This relationship indicates that one entity is a response to another. For example, parts of a
 conversation/fourm thread.""";

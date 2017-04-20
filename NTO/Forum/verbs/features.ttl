@@ -5,8 +5,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:features
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "features";
 	dcterms:description """This verb represents which KnowledgeBundles are featured (\"choosen\") for a given Group""";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

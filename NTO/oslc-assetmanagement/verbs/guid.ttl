@@ -7,8 +7,7 @@
 @prefix rdf:             <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 ogit.OSCL-asset:guid
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "guid";
 	ogit:original <http://open-services.net/ns/asset#guid>;
 	dcterms:description "An identifier for the asset. Assigned by the service provider when a resource is created. Different versions of the same asset will share the same identifier.";

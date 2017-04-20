@@ -5,8 +5,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:downloads
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "downloads";
 	dcterms:description """This verb represents that a \"User\" has downloaded a given Bundle""";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

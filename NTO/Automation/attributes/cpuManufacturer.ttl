@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:cpuManufacturer
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "cpuManufacturer";
 	dcterms:description "Contains the manufacturer of the cpu of a device.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

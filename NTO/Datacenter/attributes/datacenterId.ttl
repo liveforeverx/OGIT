@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Datacenter:datacenterId
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "datacenterId";
 	dcterms:description "ID of a Datacenter";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

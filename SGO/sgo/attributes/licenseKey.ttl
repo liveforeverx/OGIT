@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:licenseKey
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "licenseKey";
 	dcterms:description "A string containing a license key.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:Project
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Project";
 	ogit:original <http://open-services.net/ns/ems#Project>;
 	dcterms:description """Within the scope of EMS, a project is any activity, system, or thing that can be the subject of a set of measurements.

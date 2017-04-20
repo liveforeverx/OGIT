@@ -3,8 +3,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:Question
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Question";
 	dcterms:description """This structure allows an automation engine to create data requests for existing Issues which should be filled by human user. 
 Additionaly could be used to create new Issue from some form.""";

@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:UserTask
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "UserTask";
 	dcterms:description """User tasks are executed by people just like the manual tasks, but they are assigned by a process engine, which may, for example, place these tasks in each user's task list.
 After the human finishes a task, the engine expects confirmation, usually including data input or a button click. User tasks are part of the Human Workflow Management.

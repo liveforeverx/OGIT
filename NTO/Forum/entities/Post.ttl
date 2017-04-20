@@ -4,8 +4,7 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:Post
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Post";
 	dcterms:description "A Post is an online publication. Could be a blog post, or a posting on a forum/messageboard.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

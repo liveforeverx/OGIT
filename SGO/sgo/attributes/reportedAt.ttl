@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:reportedAt
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "reportedAt";
 	dcterms:description """Defineds the time when something was actually reported.
 The values can combin date and time with time zone designator according to ISO 8601.

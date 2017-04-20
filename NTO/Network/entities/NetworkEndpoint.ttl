@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:NetworkEndpoint
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "NetworkEndpoint";
 	dcterms:description "An endpoint device is an Internet-capable computer hardware device on a TCP/IP network. The term can refer to desktop computers, laptops, smart phones, tablets, thin clients, printers or other specialized hardware such POS terminals and smart meters.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

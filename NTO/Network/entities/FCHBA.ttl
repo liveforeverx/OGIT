@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:FCHBA
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "FCHBA";
 	dcterms:description "Fibre Channel Host Bus Adapter, Physical/Virtual Circuit allowing an endpoint to connect to a network.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

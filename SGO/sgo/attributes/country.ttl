@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:country
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "country";
 	dcterms:description "Name of a country.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

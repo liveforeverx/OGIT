@@ -4,8 +4,7 @@
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 ogit.Network:NetworkEnclosure
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "NetworkEnclosure";
 	dcterms:description "Networking Enclosure is a physical Entity hosing Physical Networking Devices";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:memberBaseline
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "memberBaseline";
 	ogit:original <http://open-services.net/ns/ems#memberBaseline>;
 	dcterms:description "This property links a baseline list to its member baselines.";

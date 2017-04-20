@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:accessControl
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "accessControl";
 	dcterms:description """The access control level of this Node. Value could mean different things to different
 applications / policies. Initial intent is that policies would treat \"public-read\"

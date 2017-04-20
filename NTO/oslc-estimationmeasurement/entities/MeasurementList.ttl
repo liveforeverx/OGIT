@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:MeasurementList
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "MeasurementList";
 	ogit:original <http://open-services.net/ns/ems#MeasurementList>;
 	dcterms:description "A measurement list is a container for measurement resources.";

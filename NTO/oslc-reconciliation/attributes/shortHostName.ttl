@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:shortHostName
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "shortHostName";
 	ogit:original <http://open-services.net/ns/crtv#shortHostName>;
 	dcterms:description "A label assigned to a machine and used for communications on the local network. For example, a Windows hostname is IBM-2JMUUEH6TEQ .";

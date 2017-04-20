@@ -7,8 +7,7 @@
 @prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
 
 ogit.OSLC-ems:realProjectId
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "realProjectId";
 	ogit:original <http://open-services.net/ns/ems#realProjectId>;
 	dcterms:description "This property links a project to an identifier of the project as a real-world object.";

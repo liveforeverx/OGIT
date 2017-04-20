@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSLC-crtv:observationTime
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "observationTime";
 	ogit:original <http://open-services.net/ns/crtv#observationTime>;
 	dcterms:description "The time that the resource was last observed by the provider.";

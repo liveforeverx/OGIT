@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-auto:usesExecutionEnvironment
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "usesExecutionEnvironment";
 	ogit:original <http://open-services.net/ns/auto#usesExecutionEnvironment>;
 	dcterms:description "A resource representing the environment(s) which this Automation Plan can be executed in. The execution environment resource could represent a grouping of environmental details such as operating system, database, browser, compiler, etc.";

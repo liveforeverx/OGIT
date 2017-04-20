@@ -3,8 +3,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:TaskList
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "TaskList";
 	dcterms:description "A task list consists of one or many tasks.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

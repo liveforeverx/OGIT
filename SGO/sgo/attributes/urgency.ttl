@@ -4,8 +4,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:urgency
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "urgency";
 	dcterms:description "Contains the urgency which could be appliead to a ticket, incident etc.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -5,8 +5,7 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:memory
-	a owl:DatatypeProperty;
-	rdfs:subPropertyOf ogit:Attribute;
+	a ogit:Attribute;
 	rdfs:label "memory";
 	dcterms:description "Contains a the total physical memory (RAM) in MB.";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/

@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-arch:LinkType
-	a rdfs:Class;
-	rdfs:subClassOf ogit:Entity;
+	a ogit:Entity;
 	rdfs:label "Link Type";
 	ogit:original <http://open-services.net/ns/am#LinkType>;
 	dcterms:description "A locally managed resource that describes a link type predicate that might otherwise not be directly resolvable.";

@@ -7,8 +7,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 
 ogit.OSCL-core:executes
-	a owl:ObjectProperty;
-	rdfs:subPropertyOf ogit:Verb;
+	a ogit:Verb;
 	rdfs:label "executes";
 	ogit:original <http://open-services.net/ns/core#executes>;
 	dcterms:description """Link from a currently available action to the future action it realizes.

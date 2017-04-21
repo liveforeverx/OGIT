@@ -22,18 +22,16 @@ The predicted value is a probability distribution.""";
 	ogit:tech-contact "arago GmbH";
 	ogit:hide "false";
 	ogit:cardinality "many2many";
-	ogit:history (
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2016-09-22";
 			dcterms:description "initial";
-			dcterms:creator "OGIT Importer";
-		]
-	);
-	ogit:allowed (
+			dcterms:creator "OGIT Importer"
+		];
+	ogit:allowed
 		[
 			ogit:from ogit.OSLC-ems:Estimate;
-			ogit:to ogit.OSLC-ems:MeasureDistribution;
-		]
-	);
+			ogit:to ogit.OSLC-ems:MeasureDistribution
+		];
 .

@@ -16,26 +16,23 @@ ogit.ServiceManagement:Service
 	ogit:tech-contact "arago GmbH";
 	ogit:scope "NTO";
 	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:mandatory-attributes (
-		ogit:id
-	);
-	ogit:optional-attributes (
-		ogit:description
-		ogit:name
-		ogit:uri
-	);
-	ogit:history (
+	ogit:mandatory-attributes
+		ogit:id;
+	ogit:optional-attributes
+		ogit:description,
+		ogit:name,
+		ogit:uri;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem#";
-		]
+			dcterms:creator "Peter Larem#"
+		],
 		[
 			dcterms:identifier "2";
 			dcterms:date "2015-09-01";
 			dcterms:description "updated";
-			dcterms:creator "Aymen Ayoub";
-		]
-	);
+			dcterms:creator "Aymen Ayoub"
+		];
 .

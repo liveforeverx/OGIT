@@ -35,30 +35,27 @@ ogit:Attribute
 	ogit:tech-contact "arago GmbH";
 	ogit:scope "SGO";
 	ogit:hide "true";
-	ogit:mandatory-attributes (
-		rdfs:label
-		dcterms:description
-		dcterms:valid
-		dcterms:creator
-		dcterms:created
-		dcterms:modified
-		ogit:admin-contact
-		ogit:tech-contact
-	);
-	ogit:optional-attributes (
-		ogit:deleter
-		ogit:hide
-		ogit:validation-type
-		ogit:validation-parameter
-	);
-	ogit:history (
+	ogit:mandatory-attributes
+		rdfs:label,
+		dcterms:description,
+		dcterms:valid,
+		dcterms:creator,
+		dcterms:created,
+		dcterms:modified,
+		ogit:admin-contact,
+		ogit:tech-contact;
+	ogit:optional-attributes
+		ogit:deleter,
+		ogit:hide,
+		ogit:validation-type,
+		ogit:validation-parameter;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
-	);
+			dcterms:creator "Peter Larem"
+		];
 .
 
 ogit:Entity
@@ -76,31 +73,28 @@ ogit:Entity
 	ogit:tech-contact "arago GmbH";
 	ogit:scope "SGO";
 	ogit:hide "true";
-	ogit:mandatory-attributes (
-		rdfs:label
-		ogit:scope
-		dcterms:description
-		dcterms:valid
-		dcterms:creator
-		dcterms:modified
-		ogit:admin-contact
-		ogit:tech-contact
-		dcterms:description
-		dcterms:created
-		ogit:parent
-	);
-	ogit:optional-attributes (
-		ogit:deleter
-		ogit:hide
-	);
-	ogit:history (
+	ogit:mandatory-attributes
+		rdfs:label,
+		ogit:scope,
+		dcterms:description,
+		dcterms:valid,
+		dcterms:creator,
+		dcterms:modified,
+		ogit:admin-contact,
+		ogit:tech-contact,
+		dcterms:description,
+		dcterms:created,
+		ogit:parent;
+	ogit:optional-attributes
+		ogit:deleter,
+		ogit:hide;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
-	);
+			dcterms:creator "Peter Larem"
+		];
 .
 
 ogit:Verb
@@ -117,29 +111,26 @@ ogit:Verb
 	ogit:tech-contact "arago GmbH";
 	ogit:scope "SGO";
 	ogit:hide "true";
-	ogit:mandatory-attributes (
-		dcterms:description
-		rdfs:label
-		dcterms:valid
-		dcterms:creator
-		dcterms:created
-		dcterms:modified
-		ogit:tech-contact
-		ogit:admin-contact
-	);
-	ogit:optional-attributes (
-		ogit:deleter
-		ogit:hide
-		ogit:cardinality
-	);
-	ogit:history (
+	ogit:mandatory-attributes
+		dcterms:description,
+		rdfs:label,
+		dcterms:valid,
+		dcterms:creator,
+		dcterms:created,
+		dcterms:modified,
+		ogit:tech-contact,
+		ogit:admin-contact;
+	ogit:optional-attributes
+		ogit:deleter,
+		ogit:hide,
+		ogit:cardinality;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
-	);
+			dcterms:creator "Peter Larem"
+		];
 .
 
 #

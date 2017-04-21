@@ -17,26 +17,24 @@ for example cross-references in documentation would also be a valid use-case."""
 	dcterms:modified "2015-04-27";
 	ogit:admin-contact "arago GmbH";
 	ogit:tech-contact "arago GmbH";
-	ogit:history (
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-04-27";
 			dcterms:description "intitial inception";
-			dcterms:creator "cwalker@arago.de";
-		]
-	);
-	ogit:allowed (
+			dcterms:creator "cwalker@arago.de"
+		];
+	ogit:allowed
 		[
 			ogit:from ogit:Comment;
-			ogit:to ogit.Forum:Profile;
-		]
+			ogit:to ogit.Forum:Profile
+		],
 		[
 			ogit:from ogit.Forum:Post;
-			ogit:to ogit.Forum:Profile;
-		]
+			ogit:to ogit.Forum:Profile
+		],
 		[
 			ogit:from ogit.Forum:Reply;
-			ogit:to ogit.Forum:Profile;
-		]
-	);
+			ogit:to ogit.Forum:Profile
+		];
 .

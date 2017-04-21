@@ -18,54 +18,52 @@ ogit:defines
 	dcterms:modified "2015-05-21";
 	ogit:admin-contact "arago GmbH";
 	ogit:tech-contact "arago GmbH";
-	ogit:history (
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
+			dcterms:creator "Peter Larem"
+		],
 		[
 			dcterms:identifier "2";
 			dcterms:date "2015-10-14";
 			dcterms:description "add connection";
-			dcterms:creator "stravlos@arago.de";
-		]
+			dcterms:creator "stravlos@arago.de"
+		],
 		[
 			dcterms:identifier "3";
 			dcterms:date "2017-03-23";
 			dcterms:description "add connections for Knowledge:AcuqisitionSession's";
-			dcterms:creator "cwalker@arago.de";
-		]
-	);
-	ogit:allowed (
+			dcterms:creator "cwalker@arago.de"
+		];
+	ogit:allowed
 		[
 			ogit:from ogit.Automation:MAID;
-			ogit:to ogit:Timeseries;
-		]
+			ogit:to ogit:Timeseries
+		],
 		[
 			ogit:from ogit:Contract;
-			ogit:to ogit:Penalty;
-		]
+			ogit:to ogit:Penalty
+		],
 		[
 			ogit:from ogit:Organization;
-			ogit:to ogit.ServiceManagement:Offering;
-		]
+			ogit:to ogit.ServiceManagement:Offering
+		],
 		[
 			ogit:from ogit:Organization;
-			ogit:to ogit:Role;
-		]
+			ogit:to ogit:Role
+		],
 		[
 			ogit:from ogit:Person;
-			ogit:to ogit.UserMeta:Filter;
-		]
+			ogit:to ogit.UserMeta:Filter
+		],
 		[
 			ogit:from ogit.Knowledge:AcquisitionSession;
-			ogit:to ogit.Knowledge:Step;
-		]
+			ogit:to ogit.Knowledge:Step
+		],
 		[
 			ogit:from ogit.Knowledge:AcquisitionSession;
-			ogit:to ogit.Automation:KnowledgeItem;
-		]
-	);
+			ogit:to ogit.Automation:KnowledgeItem
+		];
 .

@@ -19,253 +19,251 @@ ogit:belongs
 	dcterms:modified "2016-08-08";
 	ogit:admin-contact "arago GmbH";
 	ogit:tech-contact "arago GmbH";
-	ogit:history (
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
+			dcterms:creator "Peter Larem"
+		],
 		[
 			dcterms:identifier "2";
 			dcterms:date "2015-07-15";
 			dcterms:description "add connection Person -> Organization";
-			dcterms:creator "Peter Larem";
-		]
+			dcterms:creator "Peter Larem"
+		],
 		[
 			dcterms:identifier "3";
 			dcterms:date "2015-08-20";
 			dcterms:description "added Link";
-			dcterms:creator "Aymen Ayoub";
-		]
+			dcterms:creator "Aymen Ayoub"
+		],
 		[
 			dcterms:identifier "4";
 			dcterms:date "2015-09-03";
 			dcterms:description "add connection Attachment -> License, Contract";
-			dcterms:creator "Peter Larem";
-		]
+			dcterms:creator "Peter Larem"
+		],
 		[
 			dcterms:identifier "5";
 			dcterms:date "2015-09-04";
 			dcterms:description "add edge Profile -> Organization";
-			dcterms:creator "bmoore@arago.de";
-		]
+			dcterms:creator "bmoore@arago.de"
+		],
 		[
 			dcterms:identifier "6";
 			dcterms:date "2015-09-17";
 			dcterms:description "add connection Attachment -> Person, Organization";
-			dcterms:creator "Peter Larem";
-		]
+			dcterms:creator "Peter Larem"
+		],
 		[
 			dcterms:identifier "7";
 			dcterms:date "2015-10-02";
 			dcterms:description "add connection /Forum/Profile -> Person";
-			dcterms:creator "Peter Larem";
-		]
+			dcterms:creator "Peter Larem"
+		],
 		[
 			dcterms:identifier "8";
 			dcterms:date "2015-09-04";
 			dcterms:description "Modify edge /Forum/Profile -> Organization, to /Forum/Profile -> /Forum/Group";
-			dcterms:creator "bmoore@arago.de";
-		]
+			dcterms:creator "bmoore@arago.de"
+		],
 		[
 			dcterms:identifier "9";
 			dcterms:date "2015-12-10";
 			dcterms:description "change entity name from ogit/ServiceManagement/ChangeTask to ogit/ServiceManagement/SubTask";
-			dcterms:creator "Peter Larem";
-		]
+			dcterms:creator "Peter Larem"
+		],
 		[
 			dcterms:identifier "10";
 			dcterms:date "2015-12-14";
 			dcterms:description "add connection Attachment -> Comment";
-			dcterms:creator "Peter Larem";
-		]
+			dcterms:creator "Peter Larem"
+		],
 		[
 			dcterms:identifier "11";
 			dcterms:date "2016-07-12";
 			dcterms:description "Added edges for `Person` -> `BusinessProcess/Project`, `Person` -> `BusinessProcess/Milestone`, `BusinessProcess/Milestone` -> `BusinessProcess/Project`, `BusinessProcess/SurveyCycle` -> `BusinessProcess/Survey`, `BusinessProcess/Survey` -> `Person`, `BusinessProcess/SurveyCycle` -> `Person`";
-			dcterms:creator "Arthur Shoba";
-		]
+			dcterms:creator "Arthur Shoba"
+		],
 		[
 			dcterms:identifier "13";
 			dcterms:date "2016-08-03";
 			dcterms:description "Added comment -> event";
-			dcterms:creator "Philipp Pelchmann";
-		]
+			dcterms:creator "Philipp Pelchmann"
+		],
 
 		[
             dcterms:identifier "14";
             dcterms:date "2016-08-08";
             dcterms:description "Removed edges for `Person` -> `BusinessProcess/Project`, `Person` -> `BusinessProcess/Milestone`. Added edges for `BusinessProcess/Survey` -> `BusinessProcess/Milestone`, `BusinessProcess/Survey` -> `BusinessProcess/Project`, `BusinessProcess/Survey` -> `Organization`, `BusinessProcess/SurveyReply` -> `BusinessProcess/SurveyIteration`. Renamed `BusinessProcess/SurveyCycle` to `BusinessProcess/SurveyIteration`";
-            dcterms:creator "Alexander Ryabtsev";
-        ]
+            dcterms:creator "Alexander Ryabtsev"
+        ],
 		[
 			dcterms:identifier "15";
 			dcterms:date "2016-10-26";
 			dcterms:description "Added Organization -> Alert";
-			dcterms:creator "stravlos@arago.de";
-		]
-	);
-	ogit:allowed (
+			dcterms:creator "stravlos@arago.de"
+		];
+	ogit:allowed
 		[
 			ogit:from ogit:Contract;
-			ogit:to ogit:Organization;
-		]
+			ogit:to ogit:Organization
+		],
 		[
 			ogit:from ogit.Software:Application;
-			ogit:to ogit:Organization;
-		]
+			ogit:to ogit:Organization
+		],
 		[
 			ogit:from ogit.ServiceManagement:ApprovalTask;
-			ogit:to ogit.ServiceManagement:ChangeRequest;
-		]
+			ogit:to ogit.ServiceManagement:ChangeRequest
+		],
 		[
 			ogit:from ogit:Asset;
-			ogit:to ogit:Organization;
-		]
+			ogit:to ogit:Organization
+		],
 		[
 			ogit:from ogit:Attachment;
-			ogit:to ogit.ServiceManagement:Order;
-		]
+			ogit:to ogit.ServiceManagement:Order
+		],
 		[
 			ogit:from ogit:Attachment;
-			ogit:to ogit.ServiceManagement:ChangeRequest;
-		]
+			ogit:to ogit.ServiceManagement:ChangeRequest
+		],
 		[
 			ogit:from ogit:Attachment;
-			ogit:to ogit.ServiceManagement:Incident;
-		]
+			ogit:to ogit.ServiceManagement:Incident
+		],
 		[
 			ogit:from ogit:Attachment;
-			ogit:to ogit.ServiceManagement:Problem;
-		]
+			ogit:to ogit.ServiceManagement:Problem
+		],
 		[
 			ogit:from ogit:Attachment;
-			ogit:to ogit.ServiceManagement:Ticket;
-		]
+			ogit:to ogit.ServiceManagement:Ticket
+		],
 		[
 			ogit:from ogit.ServiceManagement:SubTask;
-			ogit:to ogit.ServiceManagement:Order;
-		]
+			ogit:to ogit.ServiceManagement:Order
+		],
 		[
 			ogit:from ogit.ServiceManagement:SubTask;
-			ogit:to ogit.ServiceManagement:ChangeRequest;
-		]
+			ogit:to ogit.ServiceManagement:ChangeRequest
+		],
 		[
 			ogit:from ogit.ServiceManagement:SubTask;
-			ogit:to ogit.ServiceManagement:Incident;
-		]
+			ogit:to ogit.ServiceManagement:Incident
+		],
 		[
 			ogit:from ogit.ServiceManagement:SubTask;
-			ogit:to ogit.ServiceManagement:Problem;
-		]
+			ogit:to ogit.ServiceManagement:Problem
+		],
 		[
 			ogit:from ogit.ServiceManagement:SubTask;
-			ogit:to ogit.ServiceManagement:Ticket;
-		]
+			ogit:to ogit.ServiceManagement:Ticket
+		],
 		[
 			ogit:from ogit:LicenseToken;
-			ogit:to ogit:Organization;
-		]
+			ogit:to ogit:Organization
+		],
 		[
 			ogit:from ogit.Network:IPAddress;
-			ogit:to ogit.Network:Subnet;
-		]
+			ogit:to ogit.Network:Subnet
+		],
 		[
 			ogit:from ogit.Network:Port;
-			ogit:to ogit.Network:VLAN;
-		]
+			ogit:to ogit.Network:VLAN
+		],
 		[
 			ogit:from ogit.Network:PortChannel;
-			ogit:to ogit.Network:Port;
-		]
+			ogit:to ogit.Network:Port
+		],
 		[
 			ogit:from ogit:Person;
-			ogit:to ogit:Organization;
-		]
+			ogit:to ogit:Organization
+		],
 		[
 			ogit:from ogit.Forum:Role;
-			ogit:to ogit.Forum:Profile;
-		]
+			ogit:to ogit.Forum:Profile
+		],
 		[
 			ogit:from ogit:Comment;
-			ogit:to ogit.ServiceManagement:Ticket;
-		]
+			ogit:to ogit.ServiceManagement:Ticket
+		],
 		[
 			ogit:from ogit:Attachment;
-			ogit:to ogit:License;
-		]
+			ogit:to ogit:License
+		],
 		[
 			ogit:from ogit:Attachment;
-			ogit:to ogit:Contract;
-		]
+			ogit:to ogit:Contract
+		],
 		[
 			ogit:from ogit.Forum:Profile;
-			ogit:to ogit.Forum:Group;
-		]
+			ogit:to ogit.Forum:Group
+		],
 		[
 			ogit:from ogit:Attachment;
-			ogit:to ogit:Person;
-		]
+			ogit:to ogit:Person
+		],
 		[
 			ogit:from ogit:Attachment;
-			ogit:to ogit:Organization;
-		]
+			ogit:to ogit:Organization
+		],
 		[
 			ogit:from ogit.Forum:Profile;
-			ogit:to ogit:Person;
-		]
+			ogit:to ogit:Person
+		],
 		[
 			ogit:from ogit:Attachment;
-			ogit:to ogit.ServiceManagement:SubTask;
-		]
+			ogit:to ogit.ServiceManagement:SubTask
+		],
 		[
 			ogit:from ogit:Comment;
-			ogit:to ogit.ServiceManagement:SubTask;
-		]
+			ogit:to ogit.ServiceManagement:SubTask
+		],
 		[
 			ogit:from ogit:Comment;
-			ogit:to ogit:Event;
-		]
+			ogit:to ogit:Event
+		],
 		[
 			ogit:from ogit:Attachment;
-			ogit:to ogit:Comment;
-		]
+			ogit:to ogit:Comment
+		],
 		[
 			ogit:from ogit.BusinessProcess:Milestone;
-			ogit:to ogit.BusinessProcess:Project;
-		]
+			ogit:to ogit.BusinessProcess:Project
+		],
 		[
 			ogit:from ogit.BusinessProcess:SurveyIteration;
-			ogit:to ogit.BusinessProcess:Survey;
-		]
+			ogit:to ogit.BusinessProcess:Survey
+		],
 		[
 			ogit:from ogit.BusinessProcess:SurveyIteration;
-			ogit:to ogit.BusinessProcess:Project;
-		]
+			ogit:to ogit.BusinessProcess:Project
+		],
 		[
 			ogit:from ogit.BusinessProcess:SurveyIteration;
-			ogit:to ogit.BusinessProcess:Milestone;
-		]
+			ogit:to ogit.BusinessProcess:Milestone
+		],
 		[
             ogit:from ogit.BusinessProcess:Survey;
-            ogit:to ogit.BusinessProcess:Project;
-        ]
+            ogit:to ogit.BusinessProcess:Project
+        ],
         [
             ogit:from ogit.BusinessProcess:Survey;
-            ogit:to ogit.BusinessProcess:Milestone;
-        ]
+            ogit:to ogit.BusinessProcess:Milestone
+        ],
         [
             ogit:from ogit.BusinessProcess:Survey;
-            ogit:to ogit:Organization;
-        ]
+            ogit:to ogit:Organization
+        ],
         [
             ogit:from ogit.BusinessProcess:SurveyReply;
-            ogit:to ogit.BusinessProcess:SurveyIteration;
-        ]
+            ogit:to ogit.BusinessProcess:SurveyIteration
+        ],
 		[
 			ogit:from ogit:Organization;
-			ogit:to ogit:Alert;
-		]
-	);
+			ogit:to ogit:Alert
+		];
 .

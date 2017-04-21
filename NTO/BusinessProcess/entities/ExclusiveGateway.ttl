@@ -18,16 +18,14 @@ If no sequence flow can be selected (no condition evaluates to 'true') this will
 	ogit:tech-contact "arago GmbH";
 	ogit:scope "NTO";
 	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:optional-attributes (
-		ogit:name
-		ogit:description
-	);
-	ogit:history (
+	ogit:optional-attributes
+		ogit:name,
+		ogit:description;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
-	);
+			dcterms:creator "Peter Larem"
+		];
 .

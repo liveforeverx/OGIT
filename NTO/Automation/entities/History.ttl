@@ -16,20 +16,18 @@ ogit.Automation:History
 	ogit:tech-contact "arago GmbH";
 	ogit:scope "NTO";
 	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:mandatory-attributes (
-		ogit.Automation:knowledgeItemId
-		ogit.Automation:affectedNodeId
-		ogit.Automation:command
-		ogit:message
-		ogit.Automation:logLevel
-		ogit:timestamp
-	);
-	ogit:history (
+	ogit:mandatory-attributes
+		ogit.Automation:knowledgeItemId,
+		ogit.Automation:affectedNodeId,
+		ogit.Automation:command,
+		ogit:message,
+		ogit.Automation:logLevel,
+		ogit:timestamp;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
-	);
+			dcterms:creator "Peter Larem"
+		];
 .

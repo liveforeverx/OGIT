@@ -20,190 +20,188 @@ ogit:corresponds
 	dcterms:modified "2015-05-21";
 	ogit:admin-contact "arago GmbH";
 	ogit:tech-contact "arago GmbH";
-	ogit:history (
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
+			dcterms:creator "Peter Larem"
+		],
 		[
 			dcterms:identifier "2";
 			dcterms:date "2015-05-26";
 			dcterms:description "change Issue to AutomationIssue";
-			dcterms:creator "Peter Larem";
-		]
+			dcterms:creator "Peter Larem"
+		],
 		[
 			dcterms:identifier "3";
 			dcterms:date "2015-05-26";
 			dcterms:description "change Issue to AutomationIssue";
-			dcterms:creator "";
-		]
+			dcterms:creator ""
+		],
 		[
 			dcterms:identifier "4";
 			dcterms:date "2015-06-11";
 			dcterms:description "edge added from /ogit/ConfigurationItem to /ogit/AutomationMARSNode.";
-			dcterms:creator "Aymen Ayoub";
-		]
+			dcterms:creator "Aymen Ayoub"
+		],
 		[
 			dcterms:identifier "5";
 			dcterms:date "2015-08-19";
 			dcterms:description "Two edges added";
-			dcterms:creator "Aymen Ayoub";
-		]
+			dcterms:creator "Aymen Ayoub"
+		],
 		[
 			dcterms:identifier "6";
 			dcterms:date "2015-09-04";
 			dcterms:description "Added edge Invite -> Topic";
-			dcterms:creator "bmoore@arago.de";
-		]
+			dcterms:creator "bmoore@arago.de"
+		],
 		[
 			dcterms:identifier "7";
 			dcterms:date "2015-12-10";
 			dcterms:description "change entity name from ogit/ServiceManagement/ChangeTask to ogit/ServiceManagement/SubTask";
-			dcterms:creator "Peter Larem";
-		]
+			dcterms:creator "Peter Larem"
+		],
 		[
 			dcterms:identifier "8";
 			dcterms:date "2016-04-04";
 			dcterms:description "Added edge Invite -> KnowledgeItemHistory|KnowledgeBundle";
-			dcterms:creator "bmoore@arago.de";
-		]
+			dcterms:creator "bmoore@arago.de"
+		],
 		[
 			dcterms:identifier "9";
 			dcterms:date "2016-08-09";
 			dcterms:description "Added Event->AutomationIssue";
-			dcterms:creator "Philipp Pelchmann";
-		]
-	);
-	ogit:allowed (
+			dcterms:creator "Philipp Pelchmann"
+		];
+	ogit:allowed
 		[
 			ogit:from ogit.Automation:MARSNode;
-			ogit:to ogit.Software:Application;
-		]
+			ogit:to ogit.Software:Application
+		],
 		[
 			ogit:from ogit.Datacenter:Server;
-			ogit:to ogit:Device;
-		]
+			ogit:to ogit:Device
+		],
 		[
 			ogit:from ogit.Datacenter:Storage;
-			ogit:to ogit:Device;
-		]
+			ogit:to ogit:Device
+		],
 		[
 			ogit:from ogit.Datacenter:UPS;
-			ogit:to ogit:Device;
-		]
+			ogit:to ogit:Device
+		],
 		[
 			ogit:from ogit.ServiceManagement:Action;
-			ogit:to ogit:CatalogItem;
-		]
+			ogit:to ogit:CatalogItem
+		],
 		[
 			ogit:from ogit.ServiceManagement:Order;
-			ogit:to ogit.ServiceManagement:Service;
-		]
+			ogit:to ogit.ServiceManagement:Service
+		],
 		[
 			ogit:from ogit:ParameterType;
-			ogit:to ogit:Parameter;
-		]
+			ogit:to ogit:Parameter
+		],
 		[
 			ogit:from ogit.ServiceManagement:Service;
-			ogit:to ogit:CatalogItem;
-		]
+			ogit:to ogit:CatalogItem
+		],
 		[
 			ogit:from ogit.ServiceManagement:ChangeRequest;
-			ogit:to ogit.Automation:AutomationIssue;
-		]
+			ogit:to ogit.Automation:AutomationIssue
+		],
 		[
 			ogit:from ogit.ServiceManagement:ChangeRequest;
-			ogit:to ogit.ServiceManagement:Ticket;
-		]
+			ogit:to ogit.ServiceManagement:Ticket
+		],
 		[
 			ogit:from ogit.ServiceManagement:Incident;
-			ogit:to ogit.Automation:AutomationIssue;
-		]
+			ogit:to ogit.Automation:AutomationIssue
+		],
 		[
 			ogit:from ogit.ServiceManagement:Incident;
-			ogit:to ogit.ServiceManagement:Ticket;
-		]
+			ogit:to ogit.ServiceManagement:Ticket
+		],
 		[
 			ogit:from ogit:Event;
-			ogit:to ogit.Automation:AutomationIssue;
-		]
+			ogit:to ogit.Automation:AutomationIssue
+		],
 		[
 			ogit:from ogit.ServiceManagement:Problem;
-			ogit:to ogit.Automation:AutomationIssue;
-		]
+			ogit:to ogit.Automation:AutomationIssue
+		],
 		[
 			ogit:from ogit.ServiceManagement:Problem;
-			ogit:to ogit.ServiceManagement:Ticket;
-		]
+			ogit:to ogit.ServiceManagement:Ticket
+		],
 		[
 			ogit:from ogit.ServiceManagement:Ticket;
-			ogit:to ogit.Automation:AutomationIssue;
-		]
+			ogit:to ogit.Automation:AutomationIssue
+		],
 		[
 			ogit:from ogit.Network:NetworkCard;
-			ogit:to ogit:Asset;
-		]
+			ogit:to ogit:Asset
+		],
 		[
 			ogit:from ogit.Network:NetworkEnclosure;
-			ogit:to ogit:Asset;
-		]
+			ogit:to ogit:Asset
+		],
 		[
 			ogit:from ogit.Network:NetworkEndpoint;
-			ogit:to ogit:Asset;
-		]
+			ogit:to ogit:Asset
+		],
 		[
 			ogit:from ogit.Network:NetworkFabric;
-			ogit:to ogit:Asset;
-		]
+			ogit:to ogit:Asset
+		],
 		[
 			ogit:from ogit.Network:FCHBA;
-			ogit:to ogit:Asset;
-		]
+			ogit:to ogit:Asset
+		],
 		[
 			ogit:from ogit.Network:NIC;
-			ogit:to ogit:Asset;
-		]
+			ogit:to ogit:Asset
+		],
 		[
 			ogit:from ogit.Network:Shelf;
-			ogit:to ogit:Asset;
-		]
+			ogit:to ogit:Asset
+		],
 		[
 			ogit:from ogit.Network:SimpleDevice;
-			ogit:to ogit:Asset;
-		]
+			ogit:to ogit:Asset
+		],
 		[
 			ogit:from ogit.ServiceManagement:ApprovalTask;
-			ogit:to ogit:Task;
-		]
+			ogit:to ogit:Task
+		],
 		[
 			ogit:from ogit.ServiceManagement:SubTask;
-			ogit:to ogit:Task;
-		]
+			ogit:to ogit:Task
+		],
 		[
 			ogit:from ogit:ConfigurationItem;
-			ogit:to ogit.Automation:MARSNode;
-		]
+			ogit:to ogit.Automation:MARSNode
+		],
 		[
 			ogit:from ogit:ConfigurationItem;
-			ogit:to ogit:Organization;
-		]
+			ogit:to ogit:Organization
+		],
 		[
 			ogit:from ogit:ConfigurationItem;
-			ogit:to ogit:Person;
-		]
+			ogit:to ogit:Person
+		],
 		[
 			ogit:from ogit.Forum:Invite;
-			ogit:to ogit.Forum:Topic;
-		]
+			ogit:to ogit.Forum:Topic
+		],
 		[
 			ogit:from ogit.Forum:Invite;
-			ogit:to ogit.Forum:KnowledgeItemHistory;
-		]
+			ogit:to ogit.Forum:KnowledgeItemHistory
+		],
 		[
 			ogit:from ogit.Forum:Invite;
-			ogit:to ogit.Forum:KnowledgeBundle;
-		]
-	);
+			ogit:to ogit.Forum:KnowledgeBundle
+		];
 .

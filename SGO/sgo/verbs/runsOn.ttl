@@ -15,28 +15,26 @@ ogit:runsOn
 	dcterms:modified "2015-07-27";
 	ogit:admin-contact "arago GmbH";
 	ogit:tech-contact "arago GmbH";
-	ogit:history (
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-07-27";
 			dcterms:description "initial";
-			dcterms:creator "Aymen Ayoub";
-		]
+			dcterms:creator "Aymen Ayoub"
+		],
 		[
 			dcterms:identifier "2";
 			dcterms:date "2015-10-15";
 			dcterms:description "added an edge from MARSNode to MARSNode";
-			dcterms:creator "Aymen Ayoub";
-		]
-	);
-	ogit:allowed (
+			dcterms:creator "Aymen Ayoub"
+		];
+	ogit:allowed
 		[
 			ogit:from ogit:ConfigurationItem;
-			ogit:to ogit:ConfigurationItem;
-		]
+			ogit:to ogit:ConfigurationItem
+		],
 		[
 			ogit:from ogit.Automation:MARSNode;
-			ogit:to ogit.Automation:MARSNode;
-		]
-	);
+			ogit:to ogit.Automation:MARSNode
+		];
 .

@@ -18,13 +18,13 @@ ogit:owns
 	dcterms:modified "2015-05-21";
 	ogit:admin-contact "arago GmbH";
 	ogit:tech-contact "arago GmbH";
-	ogit:history (
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
+			dcterms:creator "Peter Larem"
+		],
 		[
 			dcterms:identifier "2";
 			dcterms:date "2015-05-20";
@@ -33,14 +33,14 @@ Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/FeedEntry`
 Added Connection for `ogit/Forum/Profile` -> `ogit/Notification`
 Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/Topic`
 """;
-			dcterms:creator "";
-		]
+			dcterms:creator ""
+		],
 		[
 			dcterms:identifier "3";
 			dcterms:date "2015-07-27";
 			dcterms:description """Added Connection for `ogit/Organization` -> `ogit/Automation/MARSNode`""";
-			dcterms:creator "Aymen Ayoub";
-		]
+			dcterms:creator "Aymen Ayoub"
+		],
 		[
 			dcterms:identifier "4";
 			dcterms:date "2016-05-17";
@@ -48,67 +48,65 @@ Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/Topic`
 Added Connection for `ogit/Forum/Group` -> `ogit/Forum/KnowledgeItemHistory`
 Added Connection for `ogit/Forum/Group` -> `ogit/Forum/Topic`
 """;
-			dcterms:creator "Ben Neal";
-		]
+			dcterms:creator "Ben Neal"
+		],
 		[
 			dcterms:identifier "5";
 			dcterms:date "2016-08-03";
 			dcterms:description "Added person -> event";
-			dcterms:creator "Philipp Pelchmann";
-		]
-	);
-	ogit:allowed (
+			dcterms:creator "Philipp Pelchmann"
+		];
+	ogit:allowed
 		[
 			ogit:from ogit:Organization;
-			ogit:to ogit:Asset;
-		]
+			ogit:to ogit:Asset
+		],
 		[
 			ogit:from ogit:Organization;
-			ogit:to ogit.Automation:MARSNode;
-		]
+			ogit:to ogit.Automation:MARSNode
+		],
 		[
 			ogit:from ogit:Person;
-			ogit:to ogit:Vcard;
-		]
+			ogit:to ogit:Vcard
+		],
 		[
 			ogit:from ogit:Person;
-			ogit:to ogit:Event;
-		]
+			ogit:to ogit:Event
+		],
 		[
 			ogit:from ogit:Person;
-			ogit:to ogit.ServiceManagement:Service;
-		]
+			ogit:to ogit.ServiceManagement:Service
+		],
 		[
 			ogit:from ogit:Person;
-			ogit:to ogit.Software:Application;
-		]
+			ogit:to ogit.Software:Application
+		],
 		[
 			ogit:from ogit.Forum:Profile;
-			ogit:to ogit.Forum:KnowledgeBundle;
-		]
+			ogit:to ogit.Forum:KnowledgeBundle
+		],
 		[
 			ogit:from ogit.Forum:Profile;
-			ogit:to ogit.Forum:FeedEntry;
-		]
+			ogit:to ogit.Forum:FeedEntry
+		],
 		[
 			ogit:from ogit.Forum:Profile;
-			ogit:to ogit:Notification;
-		]
+			ogit:to ogit:Notification
+		],
 		[
 			ogit:from ogit.Forum:Profile;
-			ogit:to ogit.Forum:Topic;
-		]
+			ogit:to ogit.Forum:Topic
+		],
 		[
 			ogit:from ogit.Forum:Group;
-			ogit:to ogit.Forum:KnowledgeBundle;
-		]
+			ogit:to ogit.Forum:KnowledgeBundle
+		],
 		[
 			ogit:from ogit.Forum:Group;
-			ogit:to ogit.Forum:KnowledgeItemHistory;
-		]
+			ogit:to ogit.Forum:KnowledgeItemHistory
+		],
 		[
 			ogit:from ogit.Forum:Group;
-			ogit:to ogit.Forum:Topic;
-		]
-	);
+			ogit:to ogit.Forum:Topic
+		];
 .

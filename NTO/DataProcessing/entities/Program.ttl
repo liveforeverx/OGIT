@@ -16,29 +16,25 @@ ogit.DataProcessing:Program
 	ogit:tech-contact "arago GmbH";
 	ogit:scope "NTO";
 	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:mandatory-attributes (
-		ogit.DataProcessing:queryType
-		ogit.DataProcessing:query
-		ogit.DataProcessing:parameters
-		ogit.DataProcessing:outputType
-		ogit:content
-	);
-	ogit:optional-attributes (
-		ogit:name
-		ogit:description
-		ogit.DataProcessing:internalJobId
-		ogit.DataProcessing:state
-	);
-	ogit:indexed-attributes (
-		ogit:name
-		ogit:description
-	);
-	ogit:history (
+	ogit:mandatory-attributes
+		ogit.DataProcessing:queryType,
+		ogit.DataProcessing:query,
+		ogit.DataProcessing:parameters,
+		ogit.DataProcessing:outputType,
+		ogit:content;
+	ogit:optional-attributes
+		ogit:name,
+		ogit:description,
+		ogit.DataProcessing:internalJobId,
+		ogit.DataProcessing:state;
+	ogit:indexed-attributes
+		ogit:name,
+		ogit:description;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2017-02-28";
 			dcterms:description "initial";
-			dcterms:creator "Oday Jubran";
-		]
-	);
+			dcterms:creator "Oday Jubran"
+		];
 .

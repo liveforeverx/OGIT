@@ -14,18 +14,16 @@ ogit:alerts
 	dcterms:modified "2016-10-26";
 	ogit:admin-contact "arago GmbH";
 	ogit:tech-contact "arago GmbH";
-	ogit:history (
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2016-10-26";
 			dcterms:description "initial";
-			dcterms:creator "stravlos@arago.co";
-		]
-	);
-	ogit:allowed (
+			dcterms:creator "stravlos@arago.co"
+		];
+	ogit:allowed
 		[
 			ogit:from ogit:Alert;
-			ogit:to ogit:Person;
-		]
-	);
+			ogit:to ogit:Person
+		];
 .

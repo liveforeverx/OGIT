@@ -17,22 +17,20 @@ entity takes a responsibility for the maintenance and upkeep of the connected en
 	ogit:admin-contact "arago GmbH";
 	ogit:tech-contact "arago GmbH";
 	ogit:cardinality "many2many";
-	ogit:history (
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-04-23";
 			dcterms:description "Initial Creation";
-			dcterms:creator "cwalker@arago.de";
-		]
-	);
-	ogit:allowed (
+			dcterms:creator "cwalker@arago.de"
+		];
+	ogit:allowed
 		[
 			ogit:from ogit.Forum:Profile;
-			ogit:to ogit.Forum:Topic;
-		]
+			ogit:to ogit.Forum:Topic
+		],
 		[
 			ogit:from ogit.Forum:Profile;
-			ogit:to ogit.Forum:KnowledgeBundle;
-		]
-	);
+			ogit:to ogit.Forum:KnowledgeBundle
+		];
 .

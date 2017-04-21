@@ -18,19 +18,16 @@ a given subject.""";
 	ogit:tech-contact "arago GmbH";
 	ogit:scope "NTO";
 	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:mandatory-attributes (
-		ogit:title
-		ogit:description
-	);
-	ogit:optional-attributes (
-		ogit:accessControl
-	);
-	ogit:history (
+	ogit:mandatory-attributes
+		ogit:title,
+		ogit:description;
+	ogit:optional-attributes
+		ogit:accessControl;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-04-27";
 			dcterms:description "Initial Creation";
-			dcterms:creator "cwalker@arago.de";
-		]
-	);
+			dcterms:creator "cwalker@arago.de"
+		];
 .

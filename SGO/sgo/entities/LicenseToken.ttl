@@ -17,23 +17,20 @@ This will created by a license admin and communicated to potential licence reque
 	ogit:tech-contact "arago GmbH";
 	ogit:scope "SGO";
 	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:mandatory-attributes (
-		ogit:id
-	);
-	ogit:optional-attributes (
-		ogit:description
-		ogit:validFrom
-		ogit:expirationDate
-		ogit:licenseType
-		ogit:token
-		ogit.ServiceManagement:licenseTokenStatus
-	);
-	ogit:history (
+	ogit:mandatory-attributes
+		ogit:id;
+	ogit:optional-attributes
+		ogit:description,
+		ogit:validFrom,
+		ogit:expirationDate,
+		ogit:licenseType,
+		ogit:token,
+		ogit.ServiceManagement:licenseTokenStatus;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
-	);
+			dcterms:creator "Peter Larem"
+		];
 .

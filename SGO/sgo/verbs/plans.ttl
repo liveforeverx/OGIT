@@ -16,26 +16,24 @@ ogit:plans
 	dcterms:modified "2015-05-21";
 	ogit:admin-contact "arago GmbH";
 	ogit:tech-contact "arago GmbH";
-	ogit:history (
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
-	);
-	ogit:allowed (
+			dcterms:creator "Peter Larem"
+		];
+	ogit:allowed
 		[
 			ogit:from ogit.Cost:PlanningTemplate;
-			ogit:to ogit.Cost:CostElement;
-		]
+			ogit:to ogit.Cost:CostElement
+		],
 		[
 			ogit:from ogit.Cost:PlanningTemplate;
-			ogit:to ogit.Automation:MARSModelTemplate;
-		]
+			ogit:to ogit.Automation:MARSModelTemplate
+		],
 		[
 			ogit:from ogit:Organization;
-			ogit:to ogit.Cost:Budget;
-		]
-	);
+			ogit:to ogit.Cost:Budget
+		];
 .

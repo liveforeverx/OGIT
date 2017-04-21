@@ -16,24 +16,22 @@ Additionaly could be used to create new Issue from some form.""";
 	ogit:tech-contact "arago GmbH";
 	ogit:scope "SGO";
 	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:optional-attributes (
-		ogit:status
-		ogit:question
-		ogit:response
-		ogit:capacity
-	);
-	ogit:history (
+	ogit:optional-attributes
+		ogit:status,
+		ogit:question,
+		ogit:response,
+		ogit:capacity;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
+			dcterms:creator "Peter Larem"
+		],
 		[
             dcterms:identifier "2";
             dcterms:date "2016-07-12";
             dcterms:description "Added new attribute `capacity`";
-            dcterms:creator "Arthur Shoba";
-        ]
-	);
+            dcterms:creator "Arthur Shoba"
+        ];
 .

@@ -16,24 +16,21 @@ ogit.Forum:Rating
 	ogit:tech-contact "arago GmbH";
 	ogit:scope "NTO";
 	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:mandatory-attributes (
-		ogit:value
-	);
-	ogit:optional-attributes (
-		ogit:content
-	);
-	ogit:history (
+	ogit:mandatory-attributes
+		ogit:value;
+	ogit:optional-attributes
+		ogit:content;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-08-12";
 			dcterms:description "Initial Creation";
-			dcterms:creator "bneal@arago.de";
-		]
+			dcterms:creator "bneal@arago.de"
+		],
 		[
 			dcterms:identifier "2";
 			dcterms:date "2016-05-17";
 			dcterms:description "Added ogit/content Field";
-			dcterms:creator "bneal@arago.de";
-		]
-	);
+			dcterms:creator "bneal@arago.de"
+		];
 .

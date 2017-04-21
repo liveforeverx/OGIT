@@ -16,18 +16,15 @@ ogit:Hyperlink
 	ogit:scope "SGO";
 	ogit:parent "http://www.purl.org/ogit/Node";
 	ogit:any-attributes "true";
-	ogit:mandatory-attributes (
-		ogit:url
-	);
-	ogit:optional-attributes (
-		ogit:title
-	);
-	ogit:history (
+	ogit:mandatory-attributes
+		ogit:url;
+	ogit:optional-attributes
+		ogit:title;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "cwalker@arago.de";
-		]
-	);
+			dcterms:creator "cwalker@arago.de"
+		];
 .

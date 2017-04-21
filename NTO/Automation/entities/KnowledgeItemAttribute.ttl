@@ -16,19 +16,16 @@ ogit.Automation:KnowledgeItemAttribute
 	ogit:tech-contact "arago GmbH";
 	ogit:scope "NTO";
 	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:mandatory-attributes (
-		ogit:name
-		ogit:value
-	);
-	ogit:optional-attributes (
-		ogit:mode
-	);
-	ogit:history (
+	ogit:mandatory-attributes
+		ogit:name,
+		ogit:value;
+	ogit:optional-attributes
+		ogit:mode;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
-	);
+			dcterms:creator "Peter Larem"
+		];
 .

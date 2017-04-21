@@ -15,58 +15,56 @@ ogit:extends
 	dcterms:modified "2015-05-21";
 	ogit:admin-contact "arago GmbH";
 	ogit:tech-contact "arago GmbH";
-	ogit:history (
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
-	);
-	ogit:allowed (
+			dcterms:creator "Peter Larem"
+		];
+	ogit:allowed
 		[
 			ogit:from ogit.Network:NetworkCard;
-			ogit:to ogit.Network:IDSIPS;
-		]
+			ogit:to ogit.Network:IDSIPS
+		],
 		[
 			ogit:from ogit.Network:NetworkCard;
-			ogit:to ogit.Network:Loadbalancer;
-		]
+			ogit:to ogit.Network:Loadbalancer
+		],
 		[
 			ogit:from ogit.Network:NetworkCard;
-			ogit:to ogit.Network:Router;
-		]
+			ogit:to ogit.Network:Router
+		],
 		[
 			ogit:from ogit.Network:NetworkCard;
-			ogit:to ogit.Network:Switch;
-		]
+			ogit:to ogit.Network:Switch
+		],
 		[
 			ogit:from ogit.Network:NetworkCard;
-			ogit:to ogit.Network:WifiAccessPoint;
-		]
+			ogit:to ogit.Network:WifiAccessPoint
+		],
 		[
 			ogit:from ogit.Network:NetworkCard;
-			ogit:to ogit.Network:Slot;
-		]
+			ogit:to ogit.Network:Slot
+		],
 		[
 			ogit:from ogit.Network:SimpleDevice;
-			ogit:to ogit.Network:IDSIPS;
-		]
+			ogit:to ogit.Network:IDSIPS
+		],
 		[
 			ogit:from ogit.Network:SimpleDevice;
-			ogit:to ogit.Network:Loadbalancer;
-		]
+			ogit:to ogit.Network:Loadbalancer
+		],
 		[
 			ogit:from ogit.Network:SimpleDevice;
-			ogit:to ogit.Network:Router;
-		]
+			ogit:to ogit.Network:Router
+		],
 		[
 			ogit:from ogit.Network:SimpleDevice;
-			ogit:to ogit.Network:Switch;
-		]
+			ogit:to ogit.Network:Switch
+		],
 		[
 			ogit:from ogit.Network:SimpleDevice;
-			ogit:to ogit.Network:WifiAccessPoint;
-		]
-	);
+			ogit:to ogit.Network:WifiAccessPoint
+		];
 .

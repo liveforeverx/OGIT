@@ -16,37 +16,34 @@ ogit.ServiceManagement:Order
 	ogit:tech-contact "arago GmbH";
 	ogit:scope "NTO";
 	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:mandatory-attributes (
-		ogit:id
-	);
-	ogit:optional-attributes (
-		ogit:description
-		ogit.ServiceManagement:sourceStatus
-		ogit:impact
-		ogit:urgency
-		ogit:priority
-		ogit:createdAt
-		ogit:openedAt
-		ogit:closedAt
-		ogit:lastUpdatedAt
-		ogit.ServiceManagement:externalTicketSource
-		ogit.ServiceManagement:externalTicketId
-		ogit.ServiceManagement:reportedSource
-		ogit:project
-		ogit:summary
-	);
-	ogit:history (
+	ogit:mandatory-attributes
+		ogit:id;
+	ogit:optional-attributes
+		ogit:description,
+		ogit.ServiceManagement:sourceStatus,
+		ogit:impact,
+		ogit:urgency,
+		ogit:priority,
+		ogit:createdAt,
+		ogit:openedAt,
+		ogit:closedAt,
+		ogit:lastUpdatedAt,
+		ogit.ServiceManagement:externalTicketSource,
+		ogit.ServiceManagement:externalTicketId,
+		ogit.ServiceManagement:reportedSource,
+		ogit:project,
+		ogit:summary;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
+			dcterms:creator "Peter Larem"
+		],
 		[
 			dcterms:identifier "2";
 			dcterms:date "2015-05-22";
 			dcterms:description "change attribute subStatus to sourceStatus";
-			dcterms:creator "Peter Larem";
-		]
-	);
+			dcterms:creator "Peter Larem"
+		];
 .

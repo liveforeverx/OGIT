@@ -16,16 +16,14 @@ by the \"uses\" relationship. Each Parameter can have only one those connection.
 	ogit:tech-contact "arago GmbH";
 	ogit:scope "SGO";
 	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:mandatory-attributes (
-		ogit:name
-		ogit:enumValues
-	);
-	ogit:history (
+	ogit:mandatory-attributes
+		ogit:name,
+		ogit:enumValues;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
-	);
+			dcterms:creator "Peter Larem"
+		];
 .

@@ -15,18 +15,16 @@ ogit:repliedWith
 	dcterms:modified "2016-08-08";
 	ogit:admin-contact "arago GmbH";
 	ogit:tech-contact "arago GmbH";
-	ogit:history (
+	ogit:history
 		[
             dcterms:identifier "1";
             dcterms:date "2016-08-08";
             dcterms:description "initial";
-            dcterms:creator "Alexander Ryabtsev";
-        ]
-	);
-	ogit:allowed (
+            dcterms:creator "Alexander Ryabtsev"
+        ];
+	ogit:allowed
 		[
 			ogit:from ogit:Person;
-			ogit:to ogit.BusinessProcess:SurveyReply;
-		]
-	);
+			ogit:to ogit.BusinessProcess:SurveyReply
+		];
 .

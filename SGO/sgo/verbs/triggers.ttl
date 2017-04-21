@@ -15,28 +15,26 @@ ogit:triggers
 	dcterms:modified "2015-05-21";
 	ogit:admin-contact "arago GmbH";
 	ogit:tech-contact "arago GmbH";
-	ogit:history (
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
+			dcterms:creator "Peter Larem"
+		],
                 [
 			dcterms:identifier "2";
 			dcterms:date "2016-11-02";
 			dcterms:description "alert -> triggers -> event";
-			dcterms:creator "stravlos@arago.de";
-		]
-	);
-	ogit:allowed (
+			dcterms:creator "stravlos@arago.de"
+		];
+	ogit:allowed
 		[
 			ogit:from ogit.ServiceManagement:SLA;
-			ogit:to ogit:Penalty;
-		]
+			ogit:to ogit:Penalty
+		],
                 [
 			ogit:from ogit:Alert;
-			ogit:to ogit:Event;
-		]
-	);
+			ogit:to ogit:Event
+		];
 .

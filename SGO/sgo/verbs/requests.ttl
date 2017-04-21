@@ -19,36 +19,34 @@ of the ticket.""";
 	dcterms:modified "2015-05-21";
 	ogit:admin-contact "arago GmbH";
 	ogit:tech-contact "arago GmbH";
-	ogit:history (
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
+			dcterms:creator "Peter Larem"
+		],
 		[
 			dcterms:identifier "2";
 			dcterms:date "2015-04-09";
 			dcterms:description "Added edge Invite -> Profile";
-			dcterms:creator "bmoore@arago.de";
-		]
-	);
-	ogit:allowed (
+			dcterms:creator "bmoore@arago.de"
+		];
+	ogit:allowed
 		[
 			ogit:from ogit:Person;
-			ogit:to ogit:LicenseRequest;
-		]
+			ogit:to ogit:LicenseRequest
+		],
 		[
 			ogit:from ogit:Person;
-			ogit:to ogit.ServiceManagement:ChangeRequest;
-		]
+			ogit:to ogit.ServiceManagement:ChangeRequest
+		],
 		[
 			ogit:from ogit.Forum:Invite;
-			ogit:to ogit.Forum:Profile;
-		]
+			ogit:to ogit.Forum:Profile
+		],
 		[
 			ogit:from ogit:Person;
-			ogit:to ogit.ServiceManagement:SubTask;
-		]
-	);
+			ogit:to ogit.ServiceManagement:SubTask
+		];
 .

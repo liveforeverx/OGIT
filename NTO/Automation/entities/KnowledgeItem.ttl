@@ -21,47 +21,43 @@ In that case, the KnowledgeItem executes operations, which serves the exploitati
 	ogit:scope "NTO";
 	ogit:parent "http://www.purl.org/ogit/Node";
 	ogit:any-attributes "true";
-	ogit:mandatory-attributes (
-		ogit.Automation:knowledgeItemFormalRepresentation
-		ogit.Automation:deployToEngine
-	);
-	ogit:optional-attributes (
-		ogit:modificationTime
-		ogit:isValid
-		ogit.Automation:knowledgeItemTier
-		ogit:creationTime
-		ogit:name
-		ogit:description
-		ogit:changeLog
-		ogit:accessControl
-		ogit.Automation:isDeployed
-		ogit.Automation:deployStatus
-	);
-	ogit:indexed-attributes (
-		ogit:name
-		ogit:description
-		ogit:_creator
-		ogit:_modified-by
-		ogit:_owner
-	);
-	ogit:history (
+	ogit:mandatory-attributes
+		ogit.Automation:knowledgeItemFormalRepresentation,
+		ogit.Automation:deployToEngine;
+	ogit:optional-attributes
+		ogit:modificationTime,
+		ogit:isValid,
+		ogit.Automation:knowledgeItemTier,
+		ogit:creationTime,
+		ogit:name,
+		ogit:description,
+		ogit:changeLog,
+		ogit:accessControl,
+		ogit.Automation:isDeployed,
+		ogit.Automation:deployStatus;
+	ogit:indexed-attributes
+		ogit:name,
+		ogit:description,
+		ogit:_creator,
+		ogit:_modified-by,
+		ogit:_owner;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
+			dcterms:creator "Peter Larem"
+		],
 		[
 			dcterms:identifier "2";
 			dcterms:date "2016-01-25";
 			dcterms:description "add attributes isDeployed and deployStatus";
-			dcterms:creator "Peter Larem";
-		]
+			dcterms:creator "Peter Larem"
+		],
 		[
 			dcterms:identifier "3";
 			dcterms:date "2016-04-18";
 			dcterms:description "added indexes for creator/modifier/owner";
-			dcterms:creator "Markus Napp";
-		]
-	);
+			dcterms:creator "Markus Napp"
+		];
 .

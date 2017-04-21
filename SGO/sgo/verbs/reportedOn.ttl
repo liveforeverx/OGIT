@@ -17,34 +17,32 @@ We call it \"reportedOn\" instead of \"observedOn\" to account for the close rel
 	dcterms:modified "2015-05-21";
 	ogit:admin-contact "arago GmbH";
 	ogit:tech-contact "arago GmbH";
-	ogit:history (
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
-	);
-	ogit:allowed (
+			dcterms:creator "Peter Larem"
+		];
+	ogit:allowed
 		[
 			ogit:from ogit.ServiceManagement:Order;
-			ogit:to ogit.Automation:MARSNode;
-		]
+			ogit:to ogit.Automation:MARSNode
+		],
 		[
 			ogit:from ogit.ServiceManagement:ChangeRequest;
-			ogit:to ogit.Automation:MARSNode;
-		]
+			ogit:to ogit.Automation:MARSNode
+		],
 		[
 			ogit:from ogit.ServiceManagement:Incident;
-			ogit:to ogit.Automation:MARSNode;
-		]
+			ogit:to ogit.Automation:MARSNode
+		],
 		[
 			ogit:from ogit.ServiceManagement:Problem;
-			ogit:to ogit.Automation:MARSNode;
-		]
+			ogit:to ogit.Automation:MARSNode
+		],
 		[
 			ogit:from ogit.ServiceManagement:Ticket;
-			ogit:to ogit.Automation:MARSNode;
-		]
-	);
+			ogit:to ogit.Automation:MARSNode
+		];
 .

@@ -18,30 +18,26 @@ ogit.Forum:KnowledgeItemHistory
 	ogit:scope "NTO";
 	ogit:parent "http://www.purl.org/ogit/Node";
 	ogit:any-attributes "true";
-	ogit:mandatory-attributes (
-		ogit.Automation:knowledgeItemFormalRepresentation
-		ogit.Automation:deployToEngine
-	);
-	ogit:optional-attributes (
-		ogit:modificationTime
-		ogit:isValid
-		ogit.Automation:knowledgeItemTier
-		ogit:creationTime
-		ogit:name
-		ogit:description
-		ogit:changeLog
-		ogit:accessControl
-	);
-	ogit:indexed-attributes (
-		ogit:name
-		ogit:description
-	);
-	ogit:history (
+	ogit:mandatory-attributes
+		ogit.Automation:knowledgeItemFormalRepresentation,
+		ogit.Automation:deployToEngine;
+	ogit:optional-attributes
+		ogit:modificationTime,
+		ogit:isValid,
+		ogit.Automation:knowledgeItemTier,
+		ogit:creationTime,
+		ogit:name,
+		ogit:description,
+		ogit:changeLog,
+		ogit:accessControl;
+	ogit:indexed-attributes
+		ogit:name,
+		ogit:description;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-11-13";
 			dcterms:description "Initial Creation";
-			dcterms:creator "bmoore@arago.de";
-		]
-	);
+			dcterms:creator "bmoore@arago.de"
+		];
 .

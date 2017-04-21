@@ -15,16 +15,14 @@ ogit:Note
 	ogit:tech-contact "arago GmbH";
 	ogit:scope "SGO";
 	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:optional-attributes (
-		ogit:name
-		ogit:content
-	);
-	ogit:history (
+	ogit:optional-attributes
+		ogit:name,
+		ogit:content;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-04-29";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
-	);
+			dcterms:creator "Peter Larem"
+		];
 .

@@ -16,19 +16,16 @@ ogit:Role
 	ogit:scope "SGO";
 	ogit:parent "http://www.purl.org/ogit/Node";
 	ogit:any-attributes "true";
-	ogit:mandatory-attributes (
-		ogit:name
-	);
-	ogit:optional-attributes (
-		ogit:description
-		ogit:status
-	);
-	ogit:history (
+	ogit:mandatory-attributes
+		ogit:name;
+	ogit:optional-attributes
+		ogit:description,
+		ogit:status;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-05-21";
 			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]
-	);
+			dcterms:creator "Peter Larem"
+		];
 .

@@ -24,18 +24,15 @@ The `ogit/id` attribute in this instance would be a short URL safe string.""";
 	ogit:tech-contact "arago GmbH";
 	ogit:scope "NTO";
 	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:mandatory-attributes (
-		ogit:id
-	);
-	ogit:optional-attributes (
-		ogit:function
-	);
-	ogit:history (
+	ogit:mandatory-attributes
+		ogit:id;
+	ogit:optional-attributes
+		ogit:function;
+	ogit:history
 		[
 			dcterms:identifier "1";
 			dcterms:date "2015-04-25";
 			dcterms:description "Initial Creation";
-			dcterms:creator "cwalker@arago.de";
-		]
-	);
+			dcterms:creator "cwalker@arago.de"
+		];
 .

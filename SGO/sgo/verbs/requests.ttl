@@ -1,5 +1,6 @@
 @prefix ogit:                   <http://www.purl.org/ogit/> .
-@prefix owl:                    <http://www.w3.org/2002/07/owl#> .
+@prefix ogit.license:           <http://www.purl.org/ogit/> .
+@prefix ogit.person:            <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
@@ -8,9 +9,9 @@
 ogit:requests
 	a ogit:Verb;
 	rdfs:label "requests";
-	dcterms:description """Indicates if one entity requests another, e.g. Person requests a ChangeRequest. This might be different from the person 
-who created the ticket (ogit/ITSM/opendBy) in case the reporter is calling a service desk and the ticket will be opened 
-by help desk staff. Sometimes also named as \"caller\". This Person or entity must be kept informed about relevant updates 
+	dcterms:description """Indicates if one entity requests another, e.g. Person requests a ChangeRequest. This might be different from the person
+who created the ticket (ogit/ITSM/opendBy) in case the reporter is calling a service desk and the ticket will be opened
+by help desk staff. Sometimes also named as \"caller\". This Person or entity must be kept informed about relevant updates
 of the ticket.""";
 	# For ranges, see http://dublincore.org/documents/dcmi-period/
 	dcterms:valid "start=2015-05-21;";
@@ -34,11 +35,11 @@ of the ticket.""";
 		];
 	ogit:allowed
 		[
-			ogit:from ogit:Person;
-			ogit:to ogit:LicenseRequest
+			ogit:from ogit.person:Person;
+			ogit:to ogit.license:LicenseRequest
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.ServiceManagement:ChangeRequest
 		],
 		[
@@ -46,7 +47,7 @@ of the ticket.""";
 			ogit:to ogit.Forum:Profile
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.ServiceManagement:SubTask
 		];
 .

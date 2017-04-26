@@ -1,0 +1,92 @@
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:         <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix vann:           <http://purl.org/vocab/vann/> .
+@prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.contract:  <http://www.purl.org/ogit/> .
+
+#
+# Ontology
+#
+<http://www.purl.org/ogit/contract>
+	a owl:Ontology;
+	rdfs:label "OGIT Contract Vocabulary";
+	dcterms:description """This ontology contains terms regarding contracts."""@en;
+	dcterms:creator "arago GmbH";
+	dcterms:contributor "Fabian Meyer";
+	vann:preferredNamespaceUri "http://www.purl.org/ogit/";
+	vann:preferredNamespacePrefix "ogit.contract";
+	owl:versionInfo "__OGIT_VERSION__";
+  owl:imports <http://www.purl.org/ogit>
+.
+
+#
+# Entities
+#
+ogit.contract:Contract
+	a ogit:Entity;
+	rdfs:label "Contract";
+	dcterms:description "General definition of a contract. Usually used for IT service related contracts but at this level of detail it is not restricted to those.";
+	# For ranges, see http://dublincore.org/documents/dcmi-period/
+	dcterms:valid "start=2015-05-21;";
+	dcterms:creator "Peter Larem";
+	dcterms:created "2015-05-21";
+	dcterms:modified "2015-05-21";
+	ogit:admin-contact "arago GmbH";
+	ogit:tech-contact "arago GmbH";
+	ogit:scope "SGO";
+	ogit:parent "http://www.purl.org/ogit/Node";
+	ogit:mandatory-attributes
+		ogit:name;
+	ogit:optional-attributes
+		ogit:description,
+		ogit:type,
+		ogit:validFrom,
+		ogit:expirationDate,
+		ogit:status,
+                ogit:deadline,
+                ogit:validTo;
+	ogit:history
+		[
+			dcterms:identifier "1";
+			dcterms:date "2015-05-21";
+			dcterms:description "initial";
+			dcterms:creator "Peter Larem"
+		],
+                [
+			dcterms:identifier "2";
+			dcterms:date "2016-12-19";
+			dcterms:description "add attribute ogit/deadline";
+			dcterms:creator "stravlos@arago.co"
+		],
+                [
+			dcterms:identifier "3";
+			dcterms:date "2017-01-06";
+			dcterms:description "add attribute ogit/validTo";
+			dcterms:creator "stravlos@arago.co"
+		];
+.
+
+ogit.contract:Penalty
+	a ogit:Entity;
+	rdfs:label "Penalty";
+	dcterms:description "Defines the penalty that has to be paid in certain circumstances";
+	# For ranges, see http://dublincore.org/documents/dcmi-period/
+	dcterms:valid "start=2015-05-21;";
+	dcterms:creator "Peter Larem";
+	dcterms:created "2015-05-21";
+	dcterms:modified "2015-05-21";
+	ogit:admin-contact "arago GmbH";
+	ogit:tech-contact "arago GmbH";
+	ogit:scope "SGO";
+	ogit:parent "http://www.purl.org/ogit/Node";
+	ogit:optional-attributes
+		ogit:description;
+	ogit:history
+		[
+			dcterms:identifier "1";
+			dcterms:date "2015-05-21";
+			dcterms:description "initial";
+			dcterms:creator "Peter Larem"
+		];
+.

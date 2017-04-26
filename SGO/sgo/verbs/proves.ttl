@@ -1,5 +1,5 @@
 @prefix ogit:                   <http://www.purl.org/ogit/> .
-@prefix owl:                    <http://www.w3.org/2002/07/owl#> .
+@prefix ogit.config:            <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
@@ -23,7 +23,7 @@ ogit:proves
 		];
 	ogit:allowed
 		[
-			ogit:from ogit:Parameter;
-			ogit:to ogit:Parameter
+			ogit:from ogit.config:Parameter;
+			ogit:to ogit.config:Parameter
 		];
 .

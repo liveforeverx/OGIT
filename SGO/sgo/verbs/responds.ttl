@@ -1,5 +1,5 @@
 @prefix ogit:                   <http://www.purl.org/ogit/> .
-@prefix owl:                    <http://www.w3.org/2002/07/owl#> .
+@prefix ogit.data:              <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
@@ -37,7 +37,7 @@ conversation/fourm thread.""";
 		];
 	ogit:allowed
 		[
-			ogit:from ogit:Comment;
+			ogit:from ogit.data:Comment;
 			ogit:to ogit.Forum:Reply
 		],
 		[
@@ -53,7 +53,7 @@ conversation/fourm thread.""";
 			ogit:to ogit.Forum:KnowledgeBundle
 		],
 		[
-			ogit:from ogit:Comment;
+			ogit:from ogit.data:Comment;
 			ogit:to ogit.Forum:Rating
 		];
 .

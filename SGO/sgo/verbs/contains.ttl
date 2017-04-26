@@ -1,7 +1,16 @@
 @prefix ogit.BusinessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
 @prefix ogit.Automation:        <http://www.purl.org/ogit/Automation/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
-@prefix owl:                    <http://www.w3.org/2002/07/owl#> .
+@prefix ogit.asset:             <http://www.purl.org/ogit/> .
+@prefix ogit.data:              <http://www.purl.org/ogit/> .
+@prefix ogit.catalog:           <http://www.purl.org/ogit/> .
+@prefix ogit.config:            <http://www.purl.org/ogit/> .
+@prefix ogit.contract:          <http://www.purl.org/ogit/> .
+@prefix ogit.device:            <http://www.purl.org/ogit/> .
+@prefix ogit.event:             <http://www.purl.org/ogit/> .
+@prefix ogit.license:           <http://www.purl.org/ogit/> .
+@prefix ogit.org:               <http://www.purl.org/ogit/> .
+@prefix ogit.task:              <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ogit.Datacenter:        <http://www.purl.org/ogit/Datacenter/> .
 @prefix ogit.Software:          <http://www.purl.org/ogit/Software/> .
@@ -108,8 +117,8 @@ Added a connection from `ogit/Forum/KnowledgeBundle` -> `ogit/Automation/Knowled
 			ogit:to ogit.Automation:KnowledgeItemAttribute
 		],
 		[
-			ogit:from ogit:TaskList;
-			ogit:to ogit:Task
+			ogit:from ogit.task:TaskList;
+			ogit:to ogit.task:Task
 		],
 		[
 			ogit:from ogit.Automation:Trigger;
@@ -360,12 +369,12 @@ Added a connection from `ogit/Forum/KnowledgeBundle` -> `ogit/Automation/Knowled
 			ogit:to ogit.Software:SoftwareComponent
 		],
 		[
-			ogit:from ogit:Contract;
+			ogit:from ogit.contract:Contract;
 			ogit:to ogit.ServiceManagement:SLA
 		],
 		[
-			ogit:from ogit:Contract;
-			ogit:to ogit:License
+			ogit:from ogit.contract:Contract;
+			ogit:to ogit.license:License
 		],
 		[
 			ogit:from ogit.Datacenter:Building;
@@ -376,12 +385,12 @@ Added a connection from `ogit/Forum/KnowledgeBundle` -> `ogit/Automation/Knowled
 			ogit:to ogit.Datacenter:Datacenter
 		],
 		[
-			ogit:from ogit:Device;
+			ogit:from ogit.device:Device;
 			ogit:to ogit.Datacenter:Sensor
 		],
 		[
 			ogit:from ogit.Datacenter:Rack;
-			ogit:to ogit:Device
+			ogit:to ogit.device:Device
 		],
 		[
 			ogit:from ogit.Datacenter:Rack;
@@ -416,8 +425,8 @@ Added a connection from `ogit/Forum/KnowledgeBundle` -> `ogit/Automation/Knowled
 			ogit:to ogit.Datacenter:Sensor
 		],
 		[
-			ogit:from ogit:Catalog;
-			ogit:to ogit:CatalogItem
+			ogit:from ogit.catalog:Catalog;
+			ogit:to ogit.catalog:CatalogItem
 		],
 		[
 			ogit:from ogit.ServiceManagement:Offering;
@@ -425,7 +434,7 @@ Added a connection from `ogit/Forum/KnowledgeBundle` -> `ogit/Automation/Knowled
 		],
 		[
 			ogit:from ogit.ServiceManagement:Offering;
-			ogit:to ogit:CatalogItem
+			ogit:to ogit.catalog:CatalogItem
 		],
 		[
 			ogit:from ogit.ServiceManagement:Offering;
@@ -472,8 +481,8 @@ Added a connection from `ogit/Forum/KnowledgeBundle` -> `ogit/Automation/Knowled
 			ogit:to ogit.Network:Port
 		],
 		[
-			ogit:from ogit:Organization;
-			ogit:to ogit:Organization
+			ogit:from ogit.org:Organization;
+			ogit:to ogit.org:Organization
 		],
 		[
 			ogit:from ogit.Software:Application;
@@ -488,8 +497,8 @@ Added a connection from `ogit/Forum/KnowledgeBundle` -> `ogit/Automation/Knowled
 			ogit:to ogit.ServiceManagement:Order
 		],
 		[
-			ogit:from ogit:Asset;
-			ogit:to ogit:Contract
+			ogit:from ogit.asset:Asset;
+			ogit:to ogit.contract:Contract
 		],
 		[
 			ogit:from ogit.Forum:Topic;
@@ -513,11 +522,11 @@ Added a connection from `ogit/Forum/KnowledgeBundle` -> `ogit/Automation/Knowled
 		],
 		[
 			ogit:from ogit.Automation:AutomationIssue;
-			ogit:to ogit:Task
+			ogit:to ogit.task:Task
 		],
 		[
-			ogit:from ogit:ConfigurationItem;
-			ogit:to ogit:ConfigurationItem
+			ogit:from ogit.config:ConfigurationItem;
+			ogit:to ogit.config:ConfigurationItem
 		],
 		[
 			ogit:from ogit.Automation:MARSNode;
@@ -532,15 +541,15 @@ Added a connection from `ogit/Forum/KnowledgeBundle` -> `ogit/Automation/Knowled
 			ogit:to ogit.Network:NetworkInterface
 		],
 		[
-			ogit:from ogit:Alert;
-			ogit:to ogit:License
+			ogit:from ogit.event:Alert;
+			ogit:to ogit.license:License
 		],
                 [
-			ogit:from ogit:Alert;
-			ogit:to ogit:Contract
+			ogit:from ogit.event:Alert;
+			ogit:to ogit.contract:Contract
 		],
 		[
 			ogit:from ogit.Knowledge:AcquisitionSession;
-			ogit:to ogit:Comment
+			ogit:to ogit.data:Comment
 		];
 .

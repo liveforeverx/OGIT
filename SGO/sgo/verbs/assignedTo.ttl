@@ -1,7 +1,8 @@
 @prefix ogit.BusinessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
 @prefix ogit.Automation:        <http://www.purl.org/ogit/Automation/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
-@prefix owl:                    <http://www.w3.org/2002/07/owl#> .
+@prefix ogit.org:               <http://www.purl.org/ogit/> .
+@prefix ogit.person:            <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
@@ -61,19 +62,19 @@ Added Connection for `ogit/Forum/Tag` -> `ogit/Automation/KnowledgeItem`
 	ogit:allowed
 		[
 			ogit:from ogit.ServiceManagement:Order;
-			ogit:to ogit:Organization
+			ogit:to ogit.org:Organization
 		],
 		[
 			ogit:from ogit.ServiceManagement:Order;
-			ogit:to ogit:Person
+			ogit:to ogit.person:Person
 		],
 		[
 			ogit:from ogit.ServiceManagement:ApprovalTask;
-			ogit:to ogit:Organization
+			ogit:to ogit.org:Organization
 		],
 		[
 			ogit:from ogit.ServiceManagement:ApprovalTask;
-			ogit:to ogit:Person
+			ogit:to ogit.person:Person
 		],
 		[
 			ogit:from ogit.ServiceManagement:ChangeRequest;
@@ -81,19 +82,19 @@ Added Connection for `ogit/Forum/Tag` -> `ogit/Automation/KnowledgeItem`
 		],
 		[
 			ogit:from ogit.ServiceManagement:ChangeRequest;
-			ogit:to ogit:Organization
+			ogit:to ogit.org:Organization
 		],
 		[
 			ogit:from ogit.ServiceManagement:ChangeRequest;
-			ogit:to ogit:Person
+			ogit:to ogit.person:Person
 		],
 		[
 			ogit:from ogit.ServiceManagement:SubTask;
-			ogit:to ogit:Organization
+			ogit:to ogit.org:Organization
 		],
 		[
 			ogit:from ogit.ServiceManagement:SubTask;
-			ogit:to ogit:Person
+			ogit:to ogit.person:Person
 		],
 		[
 			ogit:from ogit.ServiceManagement:Incident;
@@ -101,11 +102,11 @@ Added Connection for `ogit/Forum/Tag` -> `ogit/Automation/KnowledgeItem`
 		],
 		[
 			ogit:from ogit.ServiceManagement:Incident;
-			ogit:to ogit:Organization
+			ogit:to ogit.org:Organization
 		],
 		[
 			ogit:from ogit.ServiceManagement:Incident;
-			ogit:to ogit:Person
+			ogit:to ogit.person:Person
 		],
 		[
 			ogit:from ogit.ServiceManagement:Problem;
@@ -113,11 +114,11 @@ Added Connection for `ogit/Forum/Tag` -> `ogit/Automation/KnowledgeItem`
 		],
 		[
 			ogit:from ogit.ServiceManagement:Problem;
-			ogit:to ogit:Organization
+			ogit:to ogit.org:Organization
 		],
 		[
 			ogit:from ogit.ServiceManagement:Problem;
-			ogit:to ogit:Person
+			ogit:to ogit.person:Person
 		],
 		[
 			ogit:from ogit.ServiceManagement:Ticket;
@@ -125,131 +126,131 @@ Added Connection for `ogit/Forum/Tag` -> `ogit/Automation/KnowledgeItem`
 		],
 		[
 			ogit:from ogit.ServiceManagement:Ticket;
-			ogit:to ogit:Organization
+			ogit:to ogit.org:Organization
 		],
 		[
 			ogit:from ogit.ServiceManagement:Ticket;
-			ogit:to ogit:Person
+			ogit:to ogit.person:Person
 		],
 		[
 			ogit:from ogit.Automation:MARSNode;
-			ogit:to ogit:Person
+			ogit:to ogit.person:Person
 		],
 		[
 			ogit:from ogit.BusinessProcess:BusinessRuleTask;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:CancelEvent;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:CompensationEvent;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:ConditionalEvent;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:DataObject;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:DataStore;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:ErrorEvent;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:EscalationEvent;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:EventBasedGateway;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:ExclusiveGateway;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:InclusiveGateway;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:InstantiatedReceiveTask;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:LinkEvent;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:ManualTask;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:MessageEvent;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:MultipleEvent;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:NoneEvent;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:ParallelGateway;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:ProcessLane;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:ProcessPool;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:ReceiveTask;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:ScriptTask;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:SendTask;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:ServiceTask;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:SignalEvent;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:TerminationEvent;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:TimerEvent;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:UndefinedTask;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.BusinessProcess:UserTask;
-			ogit:to ogit:Role
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.Forum:Tag;

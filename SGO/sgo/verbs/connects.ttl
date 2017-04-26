@@ -1,6 +1,11 @@
 @prefix ogit.Automation:        <http://www.purl.org/ogit/Automation/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
-@prefix owl:                    <http://www.w3.org/2002/07/owl#> .
+@prefix ogit.contract:          <http://www.purl.org/ogit/> .
+@prefix ogit.data:              <http://www.purl.org/ogit/> .
+@prefix ogit.device:            <http://www.purl.org/ogit/> .
+@prefix ogit.license:           <http://www.purl.org/ogit/> .
+@prefix ogit.org:               <http://www.purl.org/ogit/> .
+@prefix ogit.person:            <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ogit.Datacenter:        <http://www.purl.org/ogit/Datacenter/> .
 @prefix ogit.Software:          <http://www.purl.org/ogit/Software/> .
@@ -70,11 +75,11 @@ ogit:connects
 		];
 	ogit:allowed
 		[
-			ogit:from ogit:Device;
+			ogit:from ogit.device:Device;
 			ogit:to ogit.Datacenter:UPS
 		],
 		[
-			ogit:from ogit:Device;
+			ogit:from ogit.device:Device;
 			ogit:to ogit.Datacenter:PowerDistributionUnit
 		],
 		[
@@ -95,7 +100,7 @@ ogit:connects
 		],
 		[
 			ogit:from ogit.Forum:Post;
-			ogit:to ogit:Hyperlink
+			ogit:to ogit.data:Hyperlink
 		],
 		[
 			ogit:from ogit.Forum:Post;
@@ -115,7 +120,7 @@ ogit:connects
 		],
 		[
 			ogit:from ogit.Forum:Post;
-			ogit:to ogit:Comment
+			ogit:to ogit.data:Comment
 		],
 		[
 			ogit:from ogit.Forum:Post;
@@ -127,7 +132,7 @@ ogit:connects
 		],
 		[
 			ogit:from ogit.Automation:KnowledgeItem;
-			ogit:to ogit:Hyperlink
+			ogit:to ogit.data:Hyperlink
 		],
 		[
 			ogit:from ogit.Automation:KnowledgeItem;
@@ -147,7 +152,7 @@ ogit:connects
 		],
 		[
 			ogit:from ogit.Automation:KnowledgeItem;
-			ogit:to ogit:Comment
+			ogit:to ogit.data:Comment
 		],
 		[
 			ogit:from ogit.Automation:KnowledgeItem;
@@ -159,7 +164,7 @@ ogit:connects
 		],
 		[
 			ogit:from ogit.Forum:KnowledgeBundle;
-			ogit:to ogit:Hyperlink
+			ogit:to ogit.data:Hyperlink
 		],
 		[
 			ogit:from ogit.Forum:KnowledgeBundle;
@@ -179,7 +184,7 @@ ogit:connects
 		],
 		[
 			ogit:from ogit.Forum:KnowledgeBundle;
-			ogit:to ogit:Comment
+			ogit:to ogit.data:Comment
 		],
 		[
 			ogit:from ogit.Forum:KnowledgeBundle;
@@ -191,7 +196,7 @@ ogit:connects
 		],
 		[
 			ogit:from ogit.Forum:Reply;
-			ogit:to ogit:Hyperlink
+			ogit:to ogit.data:Hyperlink
 		],
 		[
 			ogit:from ogit.Forum:Reply;
@@ -211,7 +216,7 @@ ogit:connects
 		],
 		[
 			ogit:from ogit.Forum:Reply;
-			ogit:to ogit:Comment
+			ogit:to ogit.data:Comment
 		],
 		[
 			ogit:from ogit.Forum:Reply;
@@ -222,52 +227,52 @@ ogit:connects
 			ogit:to ogit.Forum:Profile
 		],
 		[
-			ogit:from ogit:Comment;
-			ogit:to ogit:Hyperlink
+			ogit:from ogit.data:Comment;
+			ogit:to ogit.data:Hyperlink
 		],
 		[
-			ogit:from ogit:Comment;
+			ogit:from ogit.data:Comment;
 			ogit:to ogit.Forum:Post
 		],
 		[
-			ogit:from ogit:Comment;
+			ogit:from ogit.data:Comment;
 			ogit:to ogit.Automation:KnowledgeItem
 		],
 		[
-			ogit:from ogit:Comment;
+			ogit:from ogit.data:Comment;
 			ogit:to ogit.Forum:KnowledgeBundle
 		],
 		[
-			ogit:from ogit:Comment;
+			ogit:from ogit.data:Comment;
 			ogit:to ogit.Forum:Reply
 		],
 		[
-			ogit:from ogit:Comment;
-			ogit:to ogit:Comment
+			ogit:from ogit.data:Comment;
+			ogit:to ogit.data:Comment
 		],
 		[
-			ogit:from ogit:Comment;
+			ogit:from ogit.data:Comment;
 			ogit:to ogit.Forum:Topic
 		],
 		[
-			ogit:from ogit:Comment;
+			ogit:from ogit.data:Comment;
 			ogit:to ogit.Forum:Profile
 		],
 		[
-			ogit:from ogit:Account;
-			ogit:to ogit:Person
+			ogit:from ogit.person:Account;
+			ogit:to ogit.person:Person
 		],
 		[
-			ogit:from ogit:Comment;
-			ogit:to ogit:Contract
+			ogit:from ogit.data:Comment;
+			ogit:to ogit.contract:Contract
 		],
 		[
-			ogit:from ogit:Comment;
-			ogit:to ogit:License
+			ogit:from ogit.data:Comment;
+			ogit:to ogit.license:License
 		],
 		[
 			ogit:from ogit.Forum:KnowledgeItemHistory;
-			ogit:to ogit:Hyperlink
+			ogit:to ogit.data:Hyperlink
 		],
 		[
 			ogit:from ogit.Forum:KnowledgeItemHistory;
@@ -295,7 +300,7 @@ ogit:connects
 		],
 		[
 			ogit:from ogit.Forum:KnowledgeItemHistory;
-			ogit:to ogit:Comment
+			ogit:to ogit.data:Comment
 		],
 		[
 			ogit:from ogit.Forum:KnowledgeItemHistory;
@@ -306,15 +311,15 @@ ogit:connects
 			ogit:to ogit.Forum:Profile
 		],
 		[
-			ogit:from ogit:Email;
-			ogit:to ogit:Person
+			ogit:from ogit.person:Email;
+			ogit:to ogit.person:Person
 		],
 		[
-			ogit:from ogit:Comment;
-			ogit:to ogit:Organization
+			ogit:from ogit.data:Comment;
+			ogit:to ogit.org:Organization
 		],
 		[
-			ogit:from ogit:Comment;
-			ogit:to ogit:Person
+			ogit:from ogit.data:Comment;
+			ogit:to ogit.person:Person
 		];
 .

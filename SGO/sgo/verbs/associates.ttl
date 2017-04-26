@@ -1,6 +1,8 @@
 @prefix ogit.Automation:        <http://www.purl.org/ogit/Automation/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
-@prefix owl:                    <http://www.w3.org/2002/07/owl#> .
+@prefix ogit.asset:             <http://www.purl.org/ogit/> .
+@prefix ogit.org:               <http://www.purl.org/ogit/> .
+@prefix ogit.task:              <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ogit.Cost:              <http://www.purl.org/ogit/Cost/> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
@@ -39,14 +41,14 @@ ogit:associates
 	ogit:allowed
 		[
 			ogit:from ogit.Automation:AutomationIssue;
-			ogit:to ogit:Question
+			ogit:to ogit.task:Question
 		],
 		[
 			ogit:from ogit.Automation:MARSNode;
 			ogit:to ogit.Cost:CostElement
 		],
 		[
-			ogit:from ogit:Asset;
+			ogit:from ogit.asset:Asset;
 			ogit:to ogit.Cost:CostElement
 		],
 		[
@@ -54,8 +56,8 @@ ogit:associates
 			ogit:to ogit.Cost:CostElement
 		],
 		[
-			ogit:from ogit:Organization;
-			ogit:to ogit:Role
+			ogit:from ogit.org:Organization;
+			ogit:to ogit.org:Role
 		],
 		[
 			ogit:from ogit.Forum:KnowledgeItemHistory;

@@ -1,7 +1,10 @@
 @prefix ogit.BusinessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
 @prefix ogit.Automation:        <http://www.purl.org/ogit/Automation/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
-@prefix owl:                    <http://www.w3.org/2002/07/owl#> .
+@prefix ogit.config:            <http://www.purl.org/ogit/> .
+@prefix ogit.event:             <http://www.purl.org/ogit/> .
+@prefix ogit.location:          <http://www.purl.org/ogit/> .
+@prefix ogit.person:            <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 @prefix ogit.ServiceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
@@ -67,7 +70,7 @@ ogit:affects
 		],
 		[
 			ogit:from ogit.ServiceManagement:Order;
-			ogit:to ogit:Person
+			ogit:to ogit.person:Person
 		],
 		[
 			ogit:from ogit.ServiceManagement:ChangeRequest;
@@ -75,14 +78,14 @@ ogit:affects
 		],
 		[
 			ogit:from ogit.ServiceManagement:ChangeRequest;
-			ogit:to ogit:Person
+			ogit:to ogit.person:Person
 		],
 		[
 			ogit:from ogit.ServiceManagement:Service;
-			ogit:to ogit:Person
+			ogit:to ogit.person:Person
 		],
 		[
-			ogit:from ogit:Event;
+			ogit:from ogit.event:Event;
 			ogit:to ogit.Automation:MARSNode
 		],
 		[
@@ -91,19 +94,19 @@ ogit:affects
 		],
 		[
 			ogit:from ogit.ServiceManagement:Incident;
-			ogit:to ogit:Person
+			ogit:to ogit.person:Person
 		],
 		[
-			ogit:from ogit:Event;
-			ogit:to ogit:ConfigurationItem
+			ogit:from ogit.event:Event;
+			ogit:to ogit.config:ConfigurationItem
 		],
 		[
-			ogit:from ogit:Event;
-			ogit:to ogit:Person
+			ogit:from ogit.event:Event;
+			ogit:to ogit.person:Person
 		],
 		[
 			ogit:from ogit.ServiceManagement:Incident;
-			ogit:to ogit:ConfigurationItem
+			ogit:to ogit.config:ConfigurationItem
 		],
 		[
 			ogit:from ogit.ServiceManagement:Problem;
@@ -111,7 +114,7 @@ ogit:affects
 		],
 		[
 			ogit:from ogit.ServiceManagement:Problem;
-			ogit:to ogit:Person
+			ogit:to ogit.person:Person
 		],
 		[
 			ogit:from ogit.ServiceManagement:Ticket;
@@ -119,7 +122,7 @@ ogit:affects
 		],
 		[
 			ogit:from ogit.ServiceManagement:Ticket;
-			ogit:to ogit:Person
+			ogit:to ogit.person:Person
 		],
 		[
 			ogit:from ogit.ServiceManagement:Incident;
@@ -131,14 +134,14 @@ ogit:affects
 		],
 		[
 			ogit:from ogit.ServiceManagement:ChangeRequest;
-			ogit:to ogit:ConfigurationItem
+			ogit:to ogit.config:ConfigurationItem
 		],
 		[
 			ogit:from ogit.ServiceManagement:ChangeRequest;
-			ogit:to ogit:Location
+			ogit:to ogit.location:Location
 		],
 		[
 			ogit:from ogit.ServiceManagement:SubTask;
-			ogit:to ogit:ConfigurationItem
+			ogit:to ogit.config:ConfigurationItem
 		];
 .

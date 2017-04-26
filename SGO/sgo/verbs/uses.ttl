@@ -1,7 +1,13 @@
 @prefix ogit.BusinessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
 @prefix ogit.Automation:        <http://www.purl.org/ogit/Automation/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
-@prefix owl:                    <http://www.w3.org/2002/07/owl#> .
+@prefix ogit.asset:             <http://www.purl.org/ogit/> .
+@prefix ogit.contract:          <http://www.purl.org/ogit/> .
+@prefix ogit.data:              <http://www.purl.org/ogit/> .
+@prefix ogit.license:           <http://www.purl.org/ogit/> .
+@prefix ogit.org:               <http://www.purl.org/ogit/> .
+@prefix ogit.person:            <http://www.purl.org/ogit/> .
+@prefix ogit.ontology:   		<http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ogit.Software:          <http://www.purl.org/ogit/Software/> .
 @prefix ogit.Cost:              <http://www.purl.org/ogit/Cost/> .
@@ -44,7 +50,7 @@ ogit:uses
 		],
 		[
 			ogit:from ogit.BusinessProcess:BusinessRuleTask;
-			ogit:to ogit:Contract
+			ogit:to ogit.contract:Contract
 		],
 		[
 			ogit:from ogit.BusinessProcess:BusinessRuleTask;
@@ -68,11 +74,11 @@ ogit:uses
 		],
 		[
 			ogit:from ogit.BusinessProcess:BusinessRuleTask;
-			ogit:to ogit:Asset
+			ogit:to ogit.asset:Asset
 		],
 		[
 			ogit:from ogit.BusinessProcess:BusinessRuleTask;
-			ogit:to ogit:License
+			ogit:to ogit.license:License
 		],
 		[
 			ogit:from ogit.BusinessProcess:BusinessRuleTask;
@@ -176,7 +182,7 @@ ogit:uses
 		],
 		[
 			ogit:from ogit.BusinessProcess:InstantiatedReceiveTask;
-			ogit:to ogit:Contract
+			ogit:to ogit.contract:Contract
 		],
 		[
 			ogit:from ogit.BusinessProcess:InstantiatedReceiveTask;
@@ -200,11 +206,11 @@ ogit:uses
 		],
 		[
 			ogit:from ogit.BusinessProcess:InstantiatedReceiveTask;
-			ogit:to ogit:Asset
+			ogit:to ogit.asset:Asset
 		],
 		[
 			ogit:from ogit.BusinessProcess:InstantiatedReceiveTask;
-			ogit:to ogit:License
+			ogit:to ogit.license:License
 		],
 		[
 			ogit:from ogit.BusinessProcess:InstantiatedReceiveTask;
@@ -240,7 +246,7 @@ ogit:uses
 		],
 		[
 			ogit:from ogit.BusinessProcess:ManualTask;
-			ogit:to ogit:Contract
+			ogit:to ogit.contract:Contract
 		],
 		[
 			ogit:from ogit.BusinessProcess:ManualTask;
@@ -264,11 +270,11 @@ ogit:uses
 		],
 		[
 			ogit:from ogit.BusinessProcess:ManualTask;
-			ogit:to ogit:Asset
+			ogit:to ogit.asset:Asset
 		],
 		[
 			ogit:from ogit.BusinessProcess:ManualTask;
-			ogit:to ogit:License
+			ogit:to ogit.license:License
 		],
 		[
 			ogit:from ogit.BusinessProcess:ManualTask;
@@ -344,7 +350,7 @@ ogit:uses
 		],
 		[
 			ogit:from ogit.BusinessProcess:ReceiveTask;
-			ogit:to ogit:Contract
+			ogit:to ogit.contract:Contract
 		],
 		[
 			ogit:from ogit.BusinessProcess:ReceiveTask;
@@ -368,11 +374,11 @@ ogit:uses
 		],
 		[
 			ogit:from ogit.BusinessProcess:ReceiveTask;
-			ogit:to ogit:Asset
+			ogit:to ogit.asset:Asset
 		],
 		[
 			ogit:from ogit.BusinessProcess:ReceiveTask;
-			ogit:to ogit:License
+			ogit:to ogit.license:License
 		],
 		[
 			ogit:from ogit.BusinessProcess:ReceiveTask;
@@ -400,7 +406,7 @@ ogit:uses
 		],
 		[
 			ogit:from ogit.BusinessProcess:ScriptTask;
-			ogit:to ogit:Contract
+			ogit:to ogit.contract:Contract
 		],
 		[
 			ogit:from ogit.BusinessProcess:ScriptTask;
@@ -424,11 +430,11 @@ ogit:uses
 		],
 		[
 			ogit:from ogit.BusinessProcess:ScriptTask;
-			ogit:to ogit:Asset
+			ogit:to ogit.asset:Asset
 		],
 		[
 			ogit:from ogit.BusinessProcess:ScriptTask;
-			ogit:to ogit:License
+			ogit:to ogit.license:License
 		],
 		[
 			ogit:from ogit.BusinessProcess:ScriptTask;
@@ -456,7 +462,7 @@ ogit:uses
 		],
 		[
 			ogit:from ogit.BusinessProcess:SendTask;
-			ogit:to ogit:Contract
+			ogit:to ogit.contract:Contract
 		],
 		[
 			ogit:from ogit.BusinessProcess:SendTask;
@@ -480,11 +486,11 @@ ogit:uses
 		],
 		[
 			ogit:from ogit.BusinessProcess:SendTask;
-			ogit:to ogit:Asset
+			ogit:to ogit.asset:Asset
 		],
 		[
 			ogit:from ogit.BusinessProcess:SendTask;
-			ogit:to ogit:License
+			ogit:to ogit.license:License
 		],
 		[
 			ogit:from ogit.BusinessProcess:SendTask;
@@ -512,7 +518,7 @@ ogit:uses
 		],
 		[
 			ogit:from ogit.BusinessProcess:ServiceTask;
-			ogit:to ogit:Contract
+			ogit:to ogit.contract:Contract
 		],
 		[
 			ogit:from ogit.BusinessProcess:ServiceTask;
@@ -536,11 +542,11 @@ ogit:uses
 		],
 		[
 			ogit:from ogit.BusinessProcess:ServiceTask;
-			ogit:to ogit:Asset
+			ogit:to ogit.asset:Asset
 		],
 		[
 			ogit:from ogit.BusinessProcess:ServiceTask;
-			ogit:to ogit:License
+			ogit:to ogit.license:License
 		],
 		[
 			ogit:from ogit.BusinessProcess:ServiceTask;
@@ -592,7 +598,7 @@ ogit:uses
 		],
 		[
 			ogit:from ogit.BusinessProcess:UndefinedTask;
-			ogit:to ogit:Contract
+			ogit:to ogit.contract:Contract
 		],
 		[
 			ogit:from ogit.BusinessProcess:UndefinedTask;
@@ -616,11 +622,11 @@ ogit:uses
 		],
 		[
 			ogit:from ogit.BusinessProcess:UndefinedTask;
-			ogit:to ogit:Asset
+			ogit:to ogit.asset:Asset
 		],
 		[
 			ogit:from ogit.BusinessProcess:UndefinedTask;
-			ogit:to ogit:License
+			ogit:to ogit.license:License
 		],
 		[
 			ogit:from ogit.BusinessProcess:UndefinedTask;
@@ -648,7 +654,7 @@ ogit:uses
 		],
 		[
 			ogit:from ogit.BusinessProcess:UserTask;
-			ogit:to ogit:Contract
+			ogit:to ogit.contract:Contract
 		],
 		[
 			ogit:from ogit.BusinessProcess:UserTask;
@@ -672,11 +678,11 @@ ogit:uses
 		],
 		[
 			ogit:from ogit.BusinessProcess:UserTask;
-			ogit:to ogit:Asset
+			ogit:to ogit.asset:Asset
 		],
 		[
 			ogit:from ogit.BusinessProcess:UserTask;
-			ogit:to ogit:License
+			ogit:to ogit.license:License
 		],
 		[
 			ogit:from ogit.BusinessProcess:UserTask;
@@ -695,27 +701,27 @@ ogit:uses
 			ogit:to ogit.Software:SoftwareComponent
 		],
 		[
-			ogit:from ogit:CustomApplicationData;
-			ogit:to ogit:CustomApplicationData
+			ogit:from ogit.data:CustomApplicationData;
+			ogit:to ogit.data:CustomApplicationData
 		],
 		[
 			ogit:from ogit.ServiceManagement:Report;
-			ogit:to ogit:Timeseries
+			ogit:to ogit.data:Timeseries
 		],
 		[
 			ogit:from ogit.ServiceManagement:ChangeRequest;
 			ogit:to ogit.ServiceManagement:ChangeRequest
 		],
 		[
-			ogit:from ogit:OntologyEntity;
-			ogit:to ogit:Schema
+			ogit:from ogit.ontology:OntologyEntity;
+			ogit:to ogit.ontology:Schema
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.Cost:Budget
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.Software:Application
 		],
 		[
@@ -727,11 +733,11 @@ ogit:uses
 			ogit:to ogit.Software:SoftwareComponent
 		],
 		[
-			ogit:from ogit:Organization;
-			ogit:to ogit:License
+			ogit:from ogit.org:Organization;
+			ogit:to ogit.license:License
 		],
 		[
-			ogit:from ogit:Person;
-			ogit:to ogit:License
+			ogit:from ogit.person:Person;
+			ogit:to ogit.license:License
 		];
 .

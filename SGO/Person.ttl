@@ -1,0 +1,161 @@
+@prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:         <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:     <http://purl.org/dc/terms/> .
+@prefix vann:        <http://purl.org/vocab/vann/> .
+@prefix ogit:        <http://www.purl.org/ogit/> .
+@prefix ogit.person: <http://www.purl.org/ogit/> .
+
+#
+# Ontology
+#
+<http://www.purl.org/ogit/person>
+	a owl:Ontology;
+	rdfs:label "OGIT Person Vocabulary";
+	dcterms:description """This ontology contains terms regarding persons."""@en;
+	dcterms:creator "arago GmbH";
+	dcterms:contributor "Fabian Meyer";
+	vann:preferredNamespaceUri "http://www.purl.org/ogit/";
+	vann:preferredNamespacePrefix "ogit.person";
+	owl:versionInfo "__OGIT_VERSION__";
+	owl:imports <http://www.purl.org/ogit>
+.
+
+#
+# Entities
+#
+ogit.person:Account
+	a ogit:Entity;
+	rdfs:label "Account";
+	dcterms:description "A account can be e.g. an facebook-account.";
+	# For ranges, see http://dublincore.org/documents/dcmi-period/
+	dcterms:valid "start=2015-05-21;";
+	dcterms:creator "Peter Larem";
+	dcterms:created "2015-05-21";
+	dcterms:modified "2015-05-21";
+	ogit:admin-contact "arago GmbH";
+	ogit:tech-contact "arago GmbH";
+	ogit:scope "SGO";
+	ogit:parent "http://www.purl.org/ogit/Node";
+	ogit:optional-attributes
+		ogit:id,
+		ogit:name,
+		ogit:description,
+		ogit:email;
+	ogit:history
+		[
+			dcterms:identifier "1";
+			dcterms:date "2015-09-15";
+			dcterms:description "initial";
+			dcterms:creator "Peter Larem"
+		];
+.
+
+
+ogit.person:Person
+	a ogit:Entity;
+	rdfs:label "Person";
+	dcterms:description "A Person represents a human identity.";
+	# For ranges, see http://dublincore.org/documents/dcmi-period/
+	dcterms:valid "start=2015-05-21;";
+	dcterms:creator "Peter Larem";
+	dcterms:created "2015-05-21";
+	dcterms:modified "2015-07-27";
+	ogit:admin-contact "arago GmbH";
+	ogit:tech-contact "arago GmbH";
+	ogit:scope "SGO";
+	ogit:parent "http://www.purl.org/ogit/Node";
+	ogit:optional-attributes
+		ogit:firstName,
+		ogit:lastName,
+		ogit:middleName,
+		ogit:title,
+		ogit:alternativeName,
+		ogit:email,
+		ogit:officePhone,
+		ogit:otherPhone,
+		ogit:mobilePhone,
+		ogit:fax,
+		ogit:notification,
+		ogit:webPage,
+		ogit:sourceId,
+		ogit:status,
+		ogit:position;
+	ogit:indexed-attributes
+		ogit:firstName,
+		ogit:lastName,
+		ogit:email,
+		ogit:alternativeName;
+	ogit:history
+		[
+			dcterms:identifier "1";
+			dcterms:date "2015-05-21";
+			dcterms:description "initial";
+			dcterms:creator "Peter Larem"
+		],
+		[
+			dcterms:identifier "2";
+			dcterms:date "2015-06-11";
+			dcterms:description "added optional attribute /ogit/sourceId";
+			dcterms:creator "Peter Larem"
+		],
+		[
+			dcterms:identifier "3";
+			dcterms:date "2015-07-27";
+			dcterms:description "added optional attribute ogit/middleName, ogit/officePhone, ogit/otherPhone, ogit/mobilePhone, ogit/fax, ogit/webPage, ogit/notification, ogit/status";
+			dcterms:creator "Philipp Pelchmann"
+		];
+.
+
+ogit.person:Vcard
+	a ogit:Entity;
+	rdfs:label "Vcard";
+	dcterms:description """vCard is a specification developed by the IETF for the description of people and organisations. Recently, vCard has been
+significantly updated to Version 4 as documented in [RFC6350]. Typically, vCard objects are encoded in its own defined
+text-based syntax or XML renderings.""";
+	# For ranges, see http://dublincore.org/documents/dcmi-period/
+	dcterms:valid "start=2015-05-21;";
+	dcterms:creator "Peter Larem";
+	dcterms:created "2015-05-21";
+	dcterms:modified "2015-05-21";
+	ogit:admin-contact "arago GmbH";
+	ogit:tech-contact "arago GmbH";
+	ogit:scope "SGO";
+	ogit:parent "http://www.purl.org/ogit/Node";
+	ogit:optional-attributes
+		ogit:phone,
+		ogit:mobilePhone,
+		ogit:streetAddress,
+		ogit:addressLocality,
+		ogit:postalCode;
+	ogit:history
+		[
+			dcterms:identifier "1";
+			dcterms:date "2015-05-21";
+			dcterms:description "initial";
+			dcterms:creator "Peter Larem"
+		];
+.
+
+ogit.person:Email
+	a ogit:Entity;
+	rdfs:label "Email";
+	dcterms:description "Any type of email adress.";
+	# For ranges, see http://dublincore.org/documents/dcmi-period/
+	dcterms:valid "start=2016-01-22;";
+	dcterms:creator "Peter Larem";
+	dcterms:created "2016-01-22";
+	dcterms:modified "2016-01-22";
+	ogit:admin-contact "arago GmbH";
+	ogit:tech-contact "arago GmbH";
+	ogit:scope "SGO";
+	ogit:parent "http://www.purl.org/ogit/Node";
+	ogit:mandatory-attributes
+		ogit:status;
+	ogit:history
+		[
+			dcterms:identifier "1";
+			dcterms:date "2016-01-22";
+			dcterms:description "initial";
+			dcterms:creator "Peter Larem"
+		];
+.

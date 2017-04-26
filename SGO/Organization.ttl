@@ -1,0 +1,133 @@
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:         <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix vann:     <http://purl.org/vocab/vann/> .
+@prefix ogit:     <http://www.purl.org/ogit/> .
+@prefix ogit.org: <http://www.purl.org/ogit/> .
+
+#
+# Ontology
+#
+<http://www.purl.org/ogit/location>
+	a owl:Ontology;
+	rdfs:label "OGIT Organization Vocabulary";
+	dcterms:description """This ontology contains terms regarding organizations."""@en;
+	dcterms:creator "arago GmbH";
+	dcterms:contributor "Fabian Meyer";
+	vann:preferredNamespaceUri "http://www.purl.org/ogit/";
+	vann:preferredNamespacePrefix "ogit.org";
+	owl:versionInfo "__OGIT_VERSION__";
+	owl:imports <http://www.purl.org/ogit>
+.
+
+#
+# Entities
+#
+ogit.org:Organization
+	a ogit:Entity;
+	rdfs:label "Organization";
+	dcterms:description """An identity that represents an organization, company, or some other grouping of Person objects.
+Entities of this type should be created with a predefined ID. Those IDs should be named like a domain name, i.e.
+a concatention of some strings separated with a dot. if organization data is created from a LDAP then a mapping
+like \"cn=John Doe,dc=example,dc=com\" => \"john_doe.example.com\" should be employed.
+The ogit/function attribute should be used to tell what kind of grouping an entity of type Organization is: company, department, group, ...""";
+	# For ranges, see http://dublincore.org/documents/dcmi-period/
+	dcterms:valid "start=2015-05-21;";
+	dcterms:creator "Peter Larem";
+	dcterms:created "2015-05-21";
+	dcterms:modified "2015-07-27";
+	ogit:admin-contact "arago GmbH";
+	ogit:tech-contact "arago GmbH";
+	ogit:scope "SGO";
+	ogit:parent "http://www.purl.org/ogit/Node";
+	ogit:any-attributes "true";
+	ogit:mandatory-attributes
+		ogit:name;
+	ogit:optional-attributes
+		ogit:description,
+		ogit:function,
+		ogit:status,
+		ogit:email,
+		ogit:streetAddress,
+		ogit:city,
+		ogit:country,
+		ogit:postalCode,
+		ogit:businessCategory,
+		ogit:webPage,
+		ogit:sourceId,
+		ogit:phone;
+	ogit:indexed-attributes
+		ogit:name,
+		ogit:description;
+	ogit:history
+		[
+			dcterms:identifier "1";
+			dcterms:date "2015-05-21";
+			dcterms:description "initial";
+			dcterms:creator "Peter Larem"
+		],
+		[
+			dcterms:identifier "2";
+			dcterms:date "2015-07-27";
+			dcterms:description "added optional attributes ogit/streetAddress, ogit/city, ogit/country, ogit/postalCode, ogit/businessCategory";
+			dcterms:creator "Philipp Pelchmann"
+		],
+		[
+			dcterms:identifier "3";
+			dcterms:date "2015-10-15";
+			dcterms:description "added optional attribute ogit/webPage";
+			dcterms:creator "Aymen Ayoub"
+		];
+.
+
+ogit.org:Policy
+	a ogit:Entity;
+	rdfs:label "Policy";
+	dcterms:description "A policy is a deliberate system of principles to guide decisions and achieve rational outcomes. It is connected and applied to Organizations";
+	# For ranges, see http://dublincore.org/documents/dcmi-period/
+	dcterms:valid "start=2015-05-21;";
+	dcterms:creator "Peter Larem";
+	dcterms:created "2015-05-21";
+	dcterms:modified "2015-05-21";
+	ogit:admin-contact "arago GmbH";
+	ogit:tech-contact "arago GmbH";
+	ogit:scope "SGO";
+	ogit:parent "http://www.purl.org/ogit/Node";
+	ogit:mandatory-attributes
+		ogit:content;
+	ogit:history
+		[
+			dcterms:identifier "1";
+			dcterms:date "2015-05-21";
+			dcterms:description "initial";
+			dcterms:creator "Peter Larem"
+		];
+.
+
+ogit.org:Role
+	a ogit:Entity;
+	rdfs:label "Role";
+	dcterms:description "In contrast to ogit/Organization, which is mainly a collection of persons and/or other organziations, ogit/Role defines behavior of an actor along with necessary privileges.";
+	# For ranges, see http://dublincore.org/documents/dcmi-period/
+	dcterms:valid "start=2015-05-21;";
+	dcterms:creator "Peter Larem";
+	dcterms:created "2015-05-21";
+	dcterms:modified "2015-05-21";
+	ogit:admin-contact "arago GmbH";
+	ogit:tech-contact "arago GmbH";
+	ogit:scope "SGO";
+	ogit:parent "http://www.purl.org/ogit/Node";
+	ogit:any-attributes "true";
+	ogit:mandatory-attributes
+		ogit:name;
+	ogit:optional-attributes
+		ogit:description,
+		ogit:status;
+	ogit:history
+		[
+			dcterms:identifier "1";
+			dcterms:date "2015-05-21";
+			dcterms:description "initial";
+			dcterms:creator "Peter Larem"
+		];
+.

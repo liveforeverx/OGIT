@@ -1,6 +1,13 @@
 @prefix ogit.Automation:        <http://www.purl.org/ogit/Automation/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
-@prefix owl:                    <http://www.w3.org/2002/07/owl#> .
+@prefix ogit.asset:             <http://www.purl.org/ogit/> .
+@prefix ogit.config:            <http://www.purl.org/ogit/> .
+@prefix ogit.contract:          <http://www.purl.org/ogit/> .
+@prefix ogit.device:            <http://www.purl.org/ogit/> .
+@prefix ogit.event:             <http://www.purl.org/ogit/> .
+@prefix ogit.license:           <http://www.purl.org/ogit/> .
+@prefix ogit.org:               <http://www.purl.org/ogit/> .
+@prefix ogit.person:            <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ogit.Datacenter:        <http://www.purl.org/ogit/Datacenter/> .
 @prefix ogit.Software:          <http://www.purl.org/ogit/Software/> .
@@ -91,22 +98,22 @@ ogit:relates
 		],
 		[
 			ogit:from ogit.Automation:MARSNode;
-			ogit:to ogit:License
+			ogit:to ogit.license:License
 		],
 		[
 			ogit:from ogit.Software:Application;
-			ogit:to ogit:License
+			ogit:to ogit.license:License
 		],
 		[
 			ogit:from ogit.Automation:MARSNode;
 			ogit:to ogit.Automation:MARSNode
 		],
 		[
-			ogit:from ogit:Event;
-			ogit:to ogit:Event
+			ogit:from ogit.event:Event;
+			ogit:to ogit.event:Event
 		],
 		[
-			ogit:from ogit:Event;
+			ogit:from ogit.event:Event;
 			ogit:to ogit.ServiceManagement:Incident
 		],
 		[
@@ -115,7 +122,7 @@ ogit:relates
 		],
 		[
 			ogit:from ogit.ServiceManagement:Order;
-			ogit:to ogit:Contract
+			ogit:to ogit.contract:Contract
 		],
 		[
 			ogit:from ogit.ServiceManagement:Order;
@@ -162,11 +169,11 @@ ogit:relates
 			ogit:to ogit.ServiceManagement:Problem
 		],
 		[
-			ogit:from ogit:Event;
+			ogit:from ogit.event:Event;
 			ogit:to ogit.Automation:MARSNode
 		],
 		[
-			ogit:from ogit:Event;
+			ogit:from ogit.event:Event;
 			ogit:to ogit.ServiceManagement:Order
 		],
 		[
@@ -198,19 +205,19 @@ ogit:relates
 			ogit:to ogit.ServiceManagement:Problem
 		],
 		[
-			ogit:from ogit:ConfigurationItem;
-			ogit:to ogit:ConfigurationItem
+			ogit:from ogit.config:ConfigurationItem;
+			ogit:to ogit.config:ConfigurationItem
 		],
 		[
-			ogit:from ogit:ConfigurationItem;
+			ogit:from ogit.config:ConfigurationItem;
 			ogit:to ogit.Datacenter:Server
 		],
 		[
-			ogit:from ogit:ConfigurationItem;
-			ogit:to ogit:Attachment
+			ogit:from ogit.config:ConfigurationItem;
+			ogit:to ogit.config:Attachment
 		],
 		[
-			ogit:from ogit:ConfigurationItem;
+			ogit:from ogit.config:ConfigurationItem;
 			ogit:to ogit.Automation:MARSNode
 		],
 		[
@@ -242,27 +249,27 @@ ogit:relates
 			ogit:to ogit.Network:NetworkInterface
 		],
 		[
-			ogit:from ogit:Organization;
-			ogit:to ogit:Organization
+			ogit:from ogit.org:Organization;
+			ogit:to ogit.org:Organization
 		],
 		[
 			ogit:from ogit.Forum:FeedEntry;
 			ogit:to ogit:Node
 		],
 		[
-			ogit:from ogit:ConfigurationItem;
-			ogit:to ogit:Asset
+			ogit:from ogit.config:ConfigurationItem;
+			ogit:to ogit.asset:Asset
 		],
 		[
-			ogit:from ogit:ConfigurationItem;
-			ogit:to ogit:Device
+			ogit:from ogit.config:ConfigurationItem;
+			ogit:to ogit.device:Device
 		],
 		[
 			ogit:from ogit.Forum:KnowledgeItemHistory;
 			ogit:to ogit.Automation:KnowledgeItem
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.BusinessProcess:SurveyIteration
 		];
 .

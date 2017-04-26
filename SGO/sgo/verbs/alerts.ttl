@@ -1,5 +1,6 @@
 @prefix ogit:                   <http://www.purl.org/ogit/> .
-@prefix owl:                    <http://www.w3.org/2002/07/owl#> .
+@prefix ogit.event:                   <http://www.purl.org/ogit/> .
+@prefix ogit.person:                   <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
@@ -21,9 +22,9 @@ ogit:alerts
 			dcterms:description "initial";
 			dcterms:creator "stravlos@arago.co"
 		];
-	ogit:allowed
+  ogit:allowed
 		[
-			ogit:from ogit:Alert;
-			ogit:to ogit:Person
+			ogit:from ogit.event:Alert;
+			ogit:to ogit.person:Person
 		];
 .

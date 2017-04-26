@@ -1,5 +1,12 @@
 @prefix ogit:                   <http://www.purl.org/ogit/> .
-@prefix owl:                    <http://www.w3.org/2002/07/owl#> .
+@prefix ogit.asset:             <http://www.purl.org/ogit/> .
+@prefix ogit.config:            <http://www.purl.org/ogit/> .
+@prefix ogit.contract:          <http://www.purl.org/ogit/> .
+@prefix ogit.data:              <http://www.purl.org/ogit/> .
+@prefix ogit.event:             <http://www.purl.org/ogit/> .
+@prefix ogit.license:           <http://www.purl.org/ogit/> .
+@prefix ogit.org:               <http://www.purl.org/ogit/> .
+@prefix ogit.person:            <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ogit.Software:          <http://www.purl.org/ogit/Software/> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
@@ -107,39 +114,39 @@ ogit:belongs
 		];
 	ogit:allowed
 		[
-			ogit:from ogit:Contract;
-			ogit:to ogit:Organization
+			ogit:from ogit.contract:Contract;
+			ogit:to ogit.org:Organization
 		],
 		[
 			ogit:from ogit.Software:Application;
-			ogit:to ogit:Organization
+			ogit:to ogit.org:Organization
 		],
 		[
 			ogit:from ogit.ServiceManagement:ApprovalTask;
 			ogit:to ogit.ServiceManagement:ChangeRequest
 		],
 		[
-			ogit:from ogit:Asset;
-			ogit:to ogit:Organization
+			ogit:from ogit.asset:Asset;
+			ogit:to ogit.org:Organization
 		],
 		[
-			ogit:from ogit:Attachment;
+			ogit:from ogit.config:Attachment;
 			ogit:to ogit.ServiceManagement:Order
 		],
 		[
-			ogit:from ogit:Attachment;
+			ogit:from ogit.config:Attachment;
 			ogit:to ogit.ServiceManagement:ChangeRequest
 		],
 		[
-			ogit:from ogit:Attachment;
+			ogit:from ogit.config:Attachment;
 			ogit:to ogit.ServiceManagement:Incident
 		],
 		[
-			ogit:from ogit:Attachment;
+			ogit:from ogit.config:Attachment;
 			ogit:to ogit.ServiceManagement:Problem
 		],
 		[
-			ogit:from ogit:Attachment;
+			ogit:from ogit.config:Attachment;
 			ogit:to ogit.ServiceManagement:Ticket
 		],
 		[
@@ -163,8 +170,8 @@ ogit:belongs
 			ogit:to ogit.ServiceManagement:Ticket
 		],
 		[
-			ogit:from ogit:LicenseToken;
-			ogit:to ogit:Organization
+			ogit:from ogit.license:LicenseToken;
+			ogit:to ogit.org:Organization
 		],
 		[
 			ogit:from ogit.Network:IPAddress;
@@ -179,56 +186,56 @@ ogit:belongs
 			ogit:to ogit.Network:Port
 		],
 		[
-			ogit:from ogit:Person;
-			ogit:to ogit:Organization
+			ogit:from ogit.person:Person;
+			ogit:to ogit.org:Organization
 		],
 		[
 			ogit:from ogit.Forum:Role;
 			ogit:to ogit.Forum:Profile
 		],
 		[
-			ogit:from ogit:Comment;
+			ogit:from ogit.data:Comment;
 			ogit:to ogit.ServiceManagement:Ticket
 		],
 		[
-			ogit:from ogit:Attachment;
-			ogit:to ogit:License
+			ogit:from ogit.config:Attachment;
+			ogit:to ogit.license:License
 		],
 		[
-			ogit:from ogit:Attachment;
-			ogit:to ogit:Contract
+			ogit:from ogit.config:Attachment;
+			ogit:to ogit.contract:Contract
 		],
 		[
 			ogit:from ogit.Forum:Profile;
 			ogit:to ogit.Forum:Group
 		],
 		[
-			ogit:from ogit:Attachment;
-			ogit:to ogit:Person
+			ogit:from ogit.config:Attachment;
+			ogit:to ogit.person:Person
 		],
 		[
-			ogit:from ogit:Attachment;
-			ogit:to ogit:Organization
+			ogit:from ogit.config:Attachment;
+			ogit:to ogit.org:Organization
 		],
 		[
 			ogit:from ogit.Forum:Profile;
-			ogit:to ogit:Person
+			ogit:to ogit.person:Person
 		],
 		[
-			ogit:from ogit:Attachment;
+			ogit:from ogit.config:Attachment;
 			ogit:to ogit.ServiceManagement:SubTask
 		],
 		[
-			ogit:from ogit:Comment;
+			ogit:from ogit.data:Comment;
 			ogit:to ogit.ServiceManagement:SubTask
 		],
 		[
-			ogit:from ogit:Comment;
-			ogit:to ogit:Event
+			ogit:from ogit.data:Comment;
+			ogit:to ogit.event:Event
 		],
 		[
-			ogit:from ogit:Attachment;
-			ogit:to ogit:Comment
+			ogit:from ogit.config:Attachment;
+			ogit:to ogit.data:Comment
 		],
 		[
 			ogit:from ogit.BusinessProcess:Milestone;
@@ -256,14 +263,14 @@ ogit:belongs
         ],
         [
             ogit:from ogit.BusinessProcess:Survey;
-            ogit:to ogit:Organization
+            ogit:to ogit.org:Organization
         ],
         [
             ogit:from ogit.BusinessProcess:SurveyReply;
             ogit:to ogit.BusinessProcess:SurveyIteration
         ],
 		[
-			ogit:from ogit:Organization;
-			ogit:to ogit:Alert
+			ogit:from ogit.org:Organization;
+			ogit:to ogit.event:Alert
 		];
 .

@@ -1,5 +1,8 @@
 @prefix ogit:                   <http://www.purl.org/ogit/> .
-@prefix owl:                    <http://www.w3.org/2002/07/owl#> .
+@prefix ogit.config:            <http://www.purl.org/ogit/> .
+@prefix ogit.device:            <http://www.purl.org/ogit/> .
+@prefix ogit.org:               <http://www.purl.org/ogit/> .
+@prefix ogit.person:            <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ogit.Datacenter:        <http://www.purl.org/ogit/Datacenter/> .
 @prefix ogit.Software:          <http://www.purl.org/ogit/Software/> .
@@ -58,119 +61,119 @@ ogit:manages
 		];
 	ogit:allowed
 		[
-			ogit:from ogit:Organization;
+			ogit:from ogit.org:Organization;
 			ogit:to ogit.Datacenter:Building
 		],
 		[
-			ogit:from ogit:Organization;
+			ogit:from ogit.org:Organization;
 			ogit:to ogit.Datacenter:Cooling
 		],
 		[
-			ogit:from ogit:Organization;
+			ogit:from ogit.org:Organization;
 			ogit:to ogit.Datacenter:Datacenter
 		],
 		[
-			ogit:from ogit:Organization;
-			ogit:to ogit:Device
+			ogit:from ogit.org:Organization;
+			ogit:to ogit.device:Device
 		],
 		[
-			ogit:from ogit:Organization;
+			ogit:from ogit.org:Organization;
 			ogit:to ogit.Datacenter:Rack
 		],
 		[
-			ogit:from ogit:Organization;
+			ogit:from ogit.org:Organization;
 			ogit:to ogit.Datacenter:Room
 		],
 		[
-			ogit:from ogit:Organization;
+			ogit:from ogit.org:Organization;
 			ogit:to ogit.Software:Application
 		],
 		[
-			ogit:from ogit:Person;
-			ogit:to ogit:Organization
+			ogit:from ogit.person:Person;
+			ogit:to ogit.org:Organization
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.Software:Application
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.Datacenter:Building
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.Datacenter:Cooling
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.Datacenter:Datacenter
 		],
 		[
-			ogit:from ogit:Person;
-			ogit:to ogit:Device
+			ogit:from ogit.person:Person;
+			ogit:to ogit.device:Device
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.Datacenter:Rack
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.Datacenter:Room
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.Network:Port
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.Network:PortChannel
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.Network:Router
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.Network:Shelf
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.Network:Slot
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.Network:Subnet
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.Network:Switch
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.Network:VLAN
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.BusinessProcess:Project
 		],
 		[
-			ogit:from ogit:Person;
+			ogit:from ogit.person:Person;
 			ogit:to ogit.Network:WifiAccessPoint
 		],
 		[
-			ogit:from ogit:Role;
+			ogit:from ogit.org:Role;
 			ogit:to ogit.ServiceManagement:Service
 		],
 		[
-			ogit:from ogit:Organization;
-			ogit:to ogit:ConfigurationItem
+			ogit:from ogit.org:Organization;
+			ogit:to ogit.config:ConfigurationItem
 		],
 		[
-			ogit:from ogit:ConfigurationItem;
-			ogit:to ogit:ConfigurationItem
+			ogit:from ogit.config:ConfigurationItem;
+			ogit:to ogit.config:ConfigurationItem
 		],
 		[
-			ogit:from ogit:Organization;
-			ogit:to ogit:Organization
+			ogit:from ogit.org:Organization;
+			ogit:to ogit.org:Organization
 		];
 .

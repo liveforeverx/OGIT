@@ -1,6 +1,13 @@
 @prefix ogit.Automation:        <http://www.purl.org/ogit/Automation/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
-@prefix owl:                    <http://www.w3.org/2002/07/owl#> .
+@prefix ogit.catalog:           <http://www.purl.org/ogit/> .
+@prefix ogit.contract:          <http://www.purl.org/ogit/> .
+@prefix ogit.data:              <http://www.purl.org/ogit/> .
+@prefix ogit.device:            <http://www.purl.org/ogit/> .
+@prefix ogit.license:           <http://www.purl.org/ogit/> .
+@prefix ogit.location:          <http://www.purl.org/ogit/> .
+@prefix ogit.org:               <http://www.purl.org/ogit/> .
+@prefix ogit.task:              <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ogit.Datacenter:        <http://www.purl.org/ogit/Datacenter/> .
 @prefix ogit.Software:          <http://www.purl.org/ogit/Software/> .
@@ -64,55 +71,55 @@ ogit:generates
 		],
 		[
 			ogit:from ogit.Automation:AutomationIssue;
-			ogit:to ogit:Timeseries
+			ogit:to ogit.data:Timeseries
 		],
 		[
-			ogit:from ogit:Question;
-			ogit:to ogit:Timeseries
+			ogit:from ogit.task:Question;
+			ogit:to ogit.data:Timeseries
 		],
 		[
 			ogit:from ogit.Automation:History;
-			ogit:to ogit:Timeseries
+			ogit:to ogit.data:Timeseries
 		],
 		[
 			ogit:from ogit.Automation:KnowledgeItem;
-			ogit:to ogit:Timeseries
+			ogit:to ogit.data:Timeseries
 		],
 		[
 			ogit:from ogit.Automation:MAID;
-			ogit:to ogit:Timeseries
+			ogit:to ogit.data:Timeseries
 		],
 		[
 			ogit:from ogit.Automation:MARSModel;
-			ogit:to ogit:Timeseries
+			ogit:to ogit.data:Timeseries
 		],
 		[
 			ogit:from ogit.Automation:MARSNode;
-			ogit:to ogit:Timeseries
+			ogit:to ogit.data:Timeseries
 		],
 		[
-			ogit:from ogit:Task;
-			ogit:to ogit:Timeseries
+			ogit:from ogit.task:Task;
+			ogit:to ogit.data:Timeseries
 		],
 		[
-			ogit:from ogit:TaskList;
-			ogit:to ogit:Timeseries
+			ogit:from ogit.task:TaskList;
+			ogit:to ogit.data:Timeseries
 		],
 		[
-			ogit:from ogit:Device;
-			ogit:to ogit:Timeseries
+			ogit:from ogit.device:Device;
+			ogit:to ogit.data:Timeseries
 		],
 		[
 			ogit:from ogit.Datacenter:Server;
-			ogit:to ogit:Timeseries
+			ogit:to ogit.data:Timeseries
 		],
 		[
-			ogit:from ogit:Organization;
-			ogit:to ogit:Catalog
+			ogit:from ogit.org:Organization;
+			ogit:to ogit.catalog:Catalog
 		],
 		[
-			ogit:from ogit:Location;
-			ogit:to ogit:Timeseries
+			ogit:from ogit.location:Location;
+			ogit:to ogit.data:Timeseries
 		],
 		[
 			ogit:from ogit.ServiceManagement:Report;
@@ -124,22 +131,22 @@ ogit:generates
 		],
 		[
 			ogit:from ogit.Network:SimpleDevice;
-			ogit:to ogit:Timeseries
+			ogit:to ogit.data:Timeseries
 		],
 		[
 			ogit:from ogit.Software:Application;
-			ogit:to ogit:Timeseries
+			ogit:to ogit.data:Timeseries
 		],
 		[
-			ogit:from ogit:License;
-			ogit:to ogit:Timeseries
+			ogit:from ogit.license:License;
+			ogit:to ogit.data:Timeseries
 		],
                 [
-			ogit:from ogit:Organization;
-			ogit:to ogit:Timeseries
+			ogit:from ogit.org:Organization;
+			ogit:to ogit.data:Timeseries
 		],
                 [
-			ogit:from ogit:Contract;
-			ogit:to ogit:Timeseries
+			ogit:from ogit.contract:Contract;
+			ogit:to ogit.data:Timeseries
 		];
 .

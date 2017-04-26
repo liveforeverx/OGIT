@@ -1,5 +1,5 @@
 @prefix ogit:                   <http://www.purl.org/ogit/> .
-@prefix owl:                    <http://www.w3.org/2002/07/owl#> .
+@prefix ogit.license:           <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
@@ -53,8 +53,8 @@ The application managing such dependency graphs is responsible to prevent cyclic
 			ogit:to ogit.ServiceManagement:SubTask
 		],
 		[
-			ogit:from ogit:License;
-			ogit:to ogit:License
+			ogit:from ogit.license:License;
+			ogit:to ogit.license:License
 		],
 		[
 			ogit:from ogit.Forum:FeedEntry;

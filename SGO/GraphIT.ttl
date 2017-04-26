@@ -2,6 +2,7 @@
 @prefix owl:         <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms:      <http://purl.org/dc/terms/> .
 @prefix vann:         <http://purl.org/vocab/vann/> .
+@prefix purl:           <http://www.purl.org/> .
 @prefix ogit:         <http://www.purl.org/ogit/> .
 @prefix ogit.person:  <http://www.purl.org/ogit/> .
 @prefix ogit.graphit: <http://www.purl.org/ogit/> .
@@ -11,16 +12,16 @@
 #
 # Ontology
 #
-<http://www.purl.org/ogit/graphit>
+ogit:graphit
     a owl:Ontology;
-    rdfs:label "OGIT GraphIT Vocabulary";
+    rdfs:label "OGIT GraphIT";
     dcterms:description """This ontology contains terms, internally used by GraphIT."""@en;
     dcterms:creator "arago GmbH";
     dcterms:contributor "Fabian Meyer";
     vann:preferredNamespaceUri "http://www.purl.org/ogit/";
     vann:preferredNamespacePrefix "ogit.graphit";
     owl:versionInfo "__OGIT_VERSION__";
-    owl:imports <http://www.purl.org/ogit>
+    owl:imports purl:ogit
 .
 
 #

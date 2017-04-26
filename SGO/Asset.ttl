@@ -2,21 +2,22 @@
 @prefix owl:            <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms:        <http://purl.org/dc/terms/> .
 @prefix vann:           <http://purl.org/vocab/vann/> .
+@prefix purl:           <http://www.purl.org/> .
 @prefix ogit:           <http://www.purl.org/ogit/> .
 @prefix ogit.asset:     <http://www.purl.org/ogit/> .
 
 #
 # Ontology
 #
-<http://www.purl.org/ogit/asset>
+ogit:asset
     a owl:Ontology;
-    rdfs:label "OGIT Asset Vocabulary";
+    rdfs:label "OGIT Asset";
     dcterms:creator "arago GmbH";
     dcterms:contributor "Fabian Meyer";
     vann:preferredNamespaceUri "http://www.purl.org/ogit/";
     vann:preferredNamespacePrefix "ogit.asset";
     owl:versionInfo "__OGIT_VERSION__";
-    owl:imports <http://www.purl.org/ogit>
+    owl:imports purl:ogit
 .
 
 #

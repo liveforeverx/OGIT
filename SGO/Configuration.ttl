@@ -2,6 +2,7 @@
 @prefix owl:         <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms:      <http://purl.org/dc/terms/> .
 @prefix vann:         <http://purl.org/vocab/vann/> .
+@prefix purl:           <http://www.purl.org/> .
 @prefix ogit:         <http://www.purl.org/ogit/> .
 @prefix ogit.config:  <http://www.purl.org/ogit/> .
 @prefix ogit.ServiceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
@@ -9,15 +10,15 @@
 #
 # Ontology
 #
-<http://www.purl.org/ogit/configuration>
+ogit:configuration
     a owl:Ontology;
-    rdfs:label "OGIT Configuration Vocabulary";
+    rdfs:label "OGIT Configuration";
     dcterms:creator "arago GmbH";
     dcterms:contributor "Fabian Meyer";
     vann:preferredNamespaceUri "http://www.purl.org/ogit/";
     vann:preferredNamespacePrefix "ogit.config";
     owl:versionInfo "__OGIT_VERSION__";
-    owl:imports <http://www.purl.org/ogit>
+    owl:imports purl:ogit
 .
 
 #

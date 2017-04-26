@@ -1,22 +1,21 @@
-@prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:         <http://www.w3.org/2002/07/owl#> .
-@prefix dcterms:       <http://purl.org/dc/terms/> .
-@prefix vann:          <http://purl.org/vocab/vann/> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix vann:           <http://purl.org/vocab/vann/> .
 @prefix purl:           <http://www.purl.org/> .
-@prefix ogit:          <http://www.purl.org/ogit/> .
-@prefix ogit.ontology: <http://www.purl.org/ogit/> .
+@prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 #
 # Ontology
 #
-ogit:ontology
+ogit:Network
     a owl:Ontology;
-    rdfs:label "OGIT Ontology";
-    dcterms:description """This ontology contains terms that are used to describe OGIT entities, attributes and verbs."""@en;
+    rdfs:label "OGIT Network";
     dcterms:creator "arago GmbH";
     dcterms:contributor "Fabian Meyer";
-    vann:preferredNamespaceUri "http://www.purl.org/ogit/";
-    vann:preferredNamespacePrefix "ogit.meta";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/Network/";
+    vann:preferredNamespacePrefix "ogit.Network";
     owl:versionInfo "__OGIT_VERSION__";
     owl:imports purl:ogit
 .
@@ -24,34 +23,20 @@ ogit:ontology
 #
 # Entities
 #
-ogit.ontology:OntologyAttribute
+ogit.Network:AccessControlList
     a ogit:Entity;
-    rdfs:label "OntologyAttribute";
-    dcterms:description "represents any Attribute definition from OGIT";
+    rdfs:label "AccessControlList";
+    dcterms:description "An access control list (ACL), with respect to a computer file system, is a list of permissions attached to an object. An ACL specifies which users or system processes are granted access to objects, as well as what operations are allowed on given objects.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
     ogit:admin-contact "arago GmbH";
     ogit:tech-contact "arago GmbH";
-    ogit:scope "SGO";
+    ogit:scope "NTO";
     ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:hide "true";
-    ogit:mandatory-attributes
-        ogit.ontology:ontologyId,
-        ogit.ontology:ontologyDescription,
-        ogit.ontology:ontologyName,
-        ogit.ontology:ontologyValidFrom,
-        ogit.ontology:ontologyCreator,
-        ogit.ontology:ontologyCreated,
-        ogit.ontology:ontologyModified,
-        ogit.ontology:ontologyAdminContact,
-        ogit.ontology:ontologyTechContact;
     ogit:optional-attributes
-        ogit.ontology:ontologyDeleter,
-        ogit.ontology:ontologyHide,
-        ogit.ontology:ontologyValidationType,
-        ogit.ontology:ontologyValidationParameter;
+        ogit:id;
     ogit:history
         [
             dcterms:identifier "1";
@@ -61,37 +46,20 @@ ogit.ontology:OntologyAttribute
         ];
 .
 
-ogit.ontology:OntologyEntity
+ogit.Network:FCHBA
     a ogit:Entity;
-    rdfs:label "OntologyEntity";
-    dcterms:description """represents any Entity definition from OGIT
-whenever there is a Schema describing/restricting the entity's content there will be \"isUsedBy\" link from Schema to OntologyEntity""";
+    rdfs:label "FCHBA";
+    dcterms:description "Fibre Channel Host Bus Adapter, Physical/Virtual Circuit allowing an endpoint to connect to a network.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
     ogit:admin-contact "arago GmbH";
     ogit:tech-contact "arago GmbH";
-    ogit:scope "SGO";
+    ogit:scope "NTO";
     ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:hide "true";
-    ogit:mandatory-attributes
-        ogit.ontology:ontologyScope,
-        ogit.ontology:ontologyId,
-        ogit:description,
-        ogit.ontology:ontologyName,
-        ogit.ontology:ontologyValidFrom,
-        ogit.ontology:ontologyCreator,
-        ogit.ontology:ontologyModified,
-        ogit.ontology:ontologyAdminContact,
-        ogit.ontology:ontologyTechContact,
-        ogit.ontology:ontologyDescription,
-        ogit.ontology:ontologyCreated,
-        ogit.ontology:ontologyParent;
     ogit:optional-attributes
-        ogit.ontology:ontologyDeleter,
-        ogit.ontology:ontologyHide,
-        ogit.ontology:ontologyValidUntil;
+        ogit:id;
     ogit:history
         [
             dcterms:identifier "1";
@@ -101,33 +69,20 @@ whenever there is a Schema describing/restricting the entity's content there wil
         ];
 .
 
-ogit.ontology:OntologyVerb
+ogit.Network:IDSIPS
     a ogit:Entity;
-    rdfs:label "OntologyVerb";
-    dcterms:description "represents any Verb definition from OGIT";
+    rdfs:label "IDSIPS";
+    dcterms:description "Intrution Detection and Intrusion Prevention System are network security appliances that monitor network and/or system activities for malicious activity.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
     ogit:admin-contact "arago GmbH";
     ogit:tech-contact "arago GmbH";
-    ogit:scope "SGO";
+    ogit:scope "NTO";
     ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:hide "true";
-    ogit:mandatory-attributes
-        ogit.ontology:ontologyId,
-        ogit.ontology:ontologyDescription,
-        ogit.ontology:ontologyName,
-        ogit.ontology:ontologyValidFrom,
-        ogit.ontology:ontologyCreator,
-        ogit.ontology:ontologyCreated,
-        ogit.ontology:ontologyModified,
-        ogit.ontology:ontologyAdminContact,
-        ogit.ontology:ontologyTechContact;
     ogit:optional-attributes
-        ogit.ontology:ontologyDeleter,
-        ogit.ontology:ontologyHide,
-        ogit.ontology:ontologyCardinality;
+        ogit:id;
     ogit:history
         [
             dcterms:identifier "1";
@@ -137,23 +92,20 @@ ogit.ontology:OntologyVerb
         ];
 .
 
-ogit.ontology:Schema
+ogit.Network:IPAddress
     a ogit:Entity;
-    rdfs:label "Schema";
-    dcterms:description "Any type of schema, could be defined in XSD, YAML, etc.";
+    rdfs:label "IPAddress";
+    dcterms:description "A Network IPAddress is per network unique identifier for IP-Devices.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
     ogit:admin-contact "arago GmbH";
     ogit:tech-contact "arago GmbH";
-    ogit:scope "SGO";
+    ogit:scope "NTO";
     ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:content;
     ogit:optional-attributes
-        ogit:uri,
-        ogit:name;
+        ogit:id;
     ogit:history
         [
             dcterms:identifier "1";
@@ -162,387 +114,505 @@ ogit.ontology:Schema
             dcterms:creator "Peter Larem"
         ];
 .
+
+ogit.Network:Loadbalancer
+    a ogit:Entity;
+    rdfs:label "Loadbalancer";
+    dcterms:description "A Loadbaancer distributes network loads between multiple endpoints/hosts.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:MACAddress
+    a ogit:Entity;
+    rdfs:label "MACAddress";
+    dcterms:description "MAC-Adress is a globally unique identifier for Ethernet Adapters";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:NIC
+    a ogit:Entity;
+    rdfs:label "NIC";
+    dcterms:description "NIC, or Network Interface Card is a Physical/Virtual Circuit allowing an endpoint to connect to a network.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:NetworkCard
+    a ogit:Entity;
+    rdfs:label "NetworkCard";
+    dcterms:description "Physical Networking Module to be fitted into an enclosure.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:NetworkEnclosure
+    a ogit:Entity;
+    rdfs:label "NetworkEnclosure";
+    dcterms:description "Networking Enclosure is a physical Entity hosing Physical Networking Devices";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:NetworkEndpoint
+    a ogit:Entity;
+    rdfs:label "NetworkEndpoint";
+    dcterms:description "An endpoint device is an Internet-capable computer hardware device on a TCP/IP network. The term can refer to desktop computers, laptops, smart phones, tablets, thin clients, printers or other specialized hardware such POS terminals and smart meters.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:NetworkFabric
+    a ogit:Entity;
+    rdfs:label "NetworkFabric";
+    dcterms:description "Networking Fabric is a virtual/physical Entity housing Networking Devices";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:NetworkFilter
+    a ogit:Entity;
+    rdfs:label "NetworkFilter";
+    dcterms:description "A Network Filter is a security measure restricting usage.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:NetworkInterface
+    a ogit:Entity;
+    rdfs:label "NetworkInterface";
+    dcterms:description "Logical or physical network interface.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:NetworkLink
+    a ogit:Entity;
+    rdfs:label "NetworkLink";
+    dcterms:description "A Network Link represents a logical connection between interfaces";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:NetworkSetting
+    a ogit:Entity;
+    rdfs:label "NetworkSetting";
+    dcterms:description "Network Policy is a generic definition that outlines rules for computer network access, determines how policies are enforced and lays out some of the basic architecture of the company security/ network security environment.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:Port
+    a ogit:Entity;
+    rdfs:label "Port";
+    dcterms:description "A physical or logical network port";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:name,
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:PortChannel
+    a ogit:Entity;
+    rdfs:label "PortChannel";
+    dcterms:description "A Portchannel bundles two or more physical or logical network ports";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:name,
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:Router
+    a ogit:Entity;
+    rdfs:label "Router";
+    dcterms:description "Networking Device for forwarding data packet between networks";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:name,
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:Shelf
+    a ogit:Entity;
+    rdfs:label "Shelf";
+    dcterms:description "Shelf is a physical entity inside a enclosure, each enclosure can house one to many shelfs";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:name,
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:SimpleDevice
+    a ogit:Entity;
+    rdfs:label "SimpleDevice";
+    dcterms:description "Standalone networking device, which could be physical or virtual";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:name,
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:Slot
+    a ogit:Entity;
+    rdfs:label "Slot";
+    dcterms:description "Slot is a physical entity inside a shelf allowing to plug in extension moduls, e. g. network interface moduls oder CPU modules.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:name,
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:Subnet
+    a ogit:Entity;
+    rdfs:label "Subnet";
+    dcterms:description "Subnet is a group of IDAddresses located in one place.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:name,
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:Switch
+    a ogit:Entity;
+    rdfs:label "Switch";
+    dcterms:description "Networking device for packet switching";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:name,
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:VLAN
+    a ogit:Entity;
+    rdfs:label "VLAN";
+    dcterms:description "VLAN or Virtual LAN is a group of computers or network devices that appear to be on the same LAN, even if they are distributed. VLANs allow segregation of traffic within a network.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:name,
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Network:WifiAccessPoint
+    a ogit:Entity;
+    rdfs:label "WifiAccessPoint";
+    dcterms:description "Device offering wireless/radio networking services";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:name,
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
 
 #
 # Attributes
 #
-ogit.ontology:ontologyAdminContact
-    a ogit:Attribute;
-    rdfs:label "ontologyAdminContact";
-    dcterms:description """The \"admin-contact\" attribute as defined in OGIT yaml files.""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
 
-ogit.ontology:ontologyAnyAttributes
-    a ogit:Attribute;
-    rdfs:label "ontologyAnyAttributes";
-    dcterms:description """The \"any-attributes\" attribute as defined in OGIT yaml files.""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-ogit.ontology:ontologyCardinality
-    a ogit:Attribute;
-    rdfs:label "ontologyCardinality";
-    dcterms:description """The \"cardinality\" attribute as defined in OGIT yaml files.""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-ogit.ontology:ontologyCreated
-    a ogit:Attribute;
-    rdfs:label "ontologyCreated";
-    dcterms:description """The \"created\" attribute as defined in OGIT yaml files.""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-ogit.ontology:ontologyCreator
-    a ogit:Attribute;
-    rdfs:label "ontologyCreator";
-    dcterms:description """the \"creator\" attribute as defined in OGIT yaml files""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-ogit.ontology:ontologyDeleter
-    a ogit:Attribute;
-    rdfs:label "ontologyDeleter";
-    dcterms:description """The \"deleter\" attribute as defined in OGIT yaml files.""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-ogit.ontology:ontologyDescription
-    a ogit:Attribute;
-    rdfs:label "ontologyDescription";
-    dcterms:description """the \"description\" attribute as defined in OGIT yaml files""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-ogit.ontology:ontologyHide
-    a ogit:Attribute;
-    rdfs:label "ontologyHide";
-    dcterms:description "Indicates if this part of ontology should hidden from the documentation";
-    dcterms:valid "start=2015-06-01;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-06-01";
-    dcterms:modified "2015-06-01";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-06-01";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-ogit.ontology:ontologyId
-    a ogit:Attribute;
-    rdfs:label "ontologyId";
-    dcterms:description """The \"id\" attribute as defined in OGIT yaml files""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-ogit.ontology:ontologyModified
-    a ogit:Attribute;
-    rdfs:label "ontologyModified";
-    dcterms:description """the \"modified\" attribute as defined in OGIT yaml files""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-ogit.ontology:ontologyName
-    a ogit:Attribute;
-    rdfs:label "ontologyName";
-    dcterms:description """the \"name\" attribute as defined in OGIT yaml files""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-ogit.ontology:ontologyParent
-    a ogit:Attribute;
-    rdfs:label "ontologyParent";
-    dcterms:description """The \"parent\" attribute as defined in OGIT yaml files.""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-ogit.ontology:ontologyScope
-    a ogit:Attribute;
-    rdfs:label "ontologyScope";
-    dcterms:description """Indicates the ontology scope which could be either \"SGO\" or \"NTO\".""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-ogit.ontology:ontologyTechContact
-    a ogit:Attribute;
-    rdfs:label "ontologyTechContact";
-    dcterms:description """the \"tech-contact\" attribute as defined in OGIT yaml files""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-ogit.ontology:ontologyType
-    a ogit:Attribute;
-    rdfs:label "ontologyType";
-    dcterms:description """Indicates the ontology type, which could be one of: \"entity\", \"attribute\", \"verb\"""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-ogit.ontology:ontologyValidationParameter
-    a ogit:Attribute;
-    rdfs:label "ontologyValidationParameter";
-    dcterms:description """The \"validation parameter\" attribute as defined in OGIT yaml files""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-ogit.ontology:ontologyValidationType
-    a ogit:Attribute;
-    rdfs:label "ontologyValidationType";
-    dcterms:description """the \"validation-type\" attribute as defined in OGIT yaml files""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-ogit.ontology:ontologyValidFrom
-    a ogit:Attribute;
-    rdfs:label "ontologyValidFrom";
-    dcterms:description """The \"valid-from\" attribute as defined in OGIT yaml files.""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-ogit.ontology:ontologyValidUntil
-    a ogit:Attribute;
-    rdfs:label "ontologyValidUntil";
-    dcterms:description """The \"valid-until\" attribute as defined in OGIT yaml files.""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
+#
+# Verbs
+#

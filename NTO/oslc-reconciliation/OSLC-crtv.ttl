@@ -1,0 +1,930 @@
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix vann:           <http://purl.org/vocab/vann/> .
+@prefix purl:           <http://www.purl.org/> .
+@prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.OSLC-crtv:           <http://www.purl.org/ogit/OSLC-crtv/> .
+
+#
+# Ontology
+#
+ogit:OSLC-crtv
+    a owl:Ontology;
+    rdfs:label "OGIT oslc-reconciliation Vocabulary";
+    dcterms:creator "arago GmbH";
+    dcterms:contributor "Fabian Meyer";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/OSLC-crtv/";
+    vann:preferredNamespacePrefix "ogit.OSLC-crtv";
+    owl:versionInfo "__OGIT_VERSION__";
+    owl:imports purl:ogit
+.
+
+#
+# Entities
+#
+ogit.OSLC-crtv:ComputerSystem
+    a ogit:Entity;
+    rdfs:label "ComputerSystem";
+    ogit:original <http://open-services.net/ns/crtv#ComputerSystem>;
+    dcterms:description "An intelligent device, such as a computer, that can perform computing, data collection, and/or communication operations. This category includes general purpose computers, such as laptops, servers, and virtual machines; computers with specific functions, such as Networking and Storage hardware, Voice over IP Telephony devices, HVAC systems; monitoring data collection devices in buildings, automobiles, or electronic grids.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:Database
+    a ogit:Entity;
+    rdfs:label "Database";
+    ogit:original <http://open-services.net/ns/crtv#Database>;
+    dcterms:description "An organized collection of digital data that is managed by a database management system (DBMS). (A Database Management System, in turn, is represented as a SoftwareServer).";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:IPAddress
+    a ogit:Entity;
+    rdfs:label "IPAddress";
+    ogit:original <http://open-services.net/ns/crtv#IPAddress>;
+    dcterms:description "Represents an IP address, either IPv4-based or IPv6-based.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:OperatingSystem
+    a ogit:Entity;
+    rdfs:label "OperatingSystem";
+    ogit:original <http://open-services.net/ns/crtv#OperatingSystem>;
+    dcterms:description "Represents the operating system or control software installed and running on a ComputerSystem";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:Path
+    a ogit:Entity;
+    rdfs:label "Path";
+    ogit:original <http://open-services.net/ns/crtv#Path>;
+    dcterms:description "Path represents individual components of a directed graph of resources, where specific ordering is necessary to preserve a graph. Examples of such directed graphs are the representation of workflows or processes.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:Process
+    a ogit:Entity;
+    rdfs:label "Process";
+    ogit:original <http://open-services.net/ns/crtv#Process>;
+    dcterms:description "This resource represents a process running under an operating system.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:ServerAccessPoint
+    a ogit:Entity;
+    rdfs:label "ServerAccessPoint";
+    ogit:original <http://open-services.net/ns/crtv#ServerAccessPoint>;
+    dcterms:description "A network endpoint, i.e. the combination of IP address and port number that clients connect to when accessing a SoftwareServer.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:ServiceInstance
+    a ogit:Entity;
+    rdfs:label "ServiceInstance";
+    ogit:original <http://open-services.net/ns/crtv#ServiceInstance>;
+    dcterms:description "A Service Instance is the representation of a service offering that was selected by the customer and then instantiated for that specific customer. Service Instances are supported by definite and measurable warranties or guarantees that the expected level of service/value will be met. Instances of the resource carry exposure from the group that is responsible for supporting the offering externally to the group that is utilizing the offering. It is common to group or nest instances together to form a service instance hierarchy. This resource definition does not represent the individual processes and/or activities that comprise an overall service except in the case where such processes are viewed as an independent service. In this condition, an instance of ServiceInstance would be created to represent the ServiceInstance of the process, then creating a hierarchy of ServiceInstances (to the containing ServiceInstance).";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:SoftwareModule
+    a ogit:Entity;
+    rdfs:label "SoftwareModule";
+    ogit:original <http://open-services.net/ns/crtv#SoftwareModule>;
+    dcterms:description "Represents packaged components that are deployed to a SoftwareServer.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:SoftwareServer
+    a ogit:Entity;
+    rdfs:label "SoftwareServer";
+    ogit:original <http://open-services.net/ns/crtv#SoftwareServer>;
+    dcterms:description "Represents an instance of software that participates in hosting a particular application.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:StorageVolume
+    a ogit:Entity;
+    rdfs:label "StorageVolume";
+    ogit:original <http://open-services.net/ns/crtv#StorageVolume>;
+    dcterms:description "Represents an identifiable unit of data storage. A StorageVolume can be a physical device ( e.g. a removable hard drive ) or a logical unit created by combining one or more other storage volumes.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:Tablespace
+    a ogit:Entity;
+    rdfs:label "Tablespace";
+    ogit:original <http://open-services.net/ns/crtv#Tablespace>;
+    dcterms:description "the storage area used by an Database to store its data. Database administrators define how Tablespaces maps to actual system storage. A Tablespace can be a physical device ( e.g. a removable hard drive ) or a logical unit (e.g. a file or a virtual disk).";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+
+#
+# Attributes
+#
+ogit.OSLC-crtv:address
+    a ogit:Attribute;
+    rdfs:label "address";
+    ogit:original <http://open-services.net/ns/crtv#address>;
+    dcterms:description "The canonical string representation of the IP address. ";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:fileName
+    a ogit:Attribute;
+    rdfs:label "fileName";
+    ogit:original <http://open-services.net/ns/crtv#fileName>;
+    dcterms:description "The file name of the package containing the SoftwareModule.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:fqdn
+    a ogit:Attribute;
+    rdfs:label "fqdn";
+    ogit:original <http://open-services.net/ns/crtv#fqdn>;
+    dcterms:description "The fully qualified domain name (FQDN). In Internet communications, the name of a host system that includes all of the subnames of the domain name. An example of a fully qualified domain name is es123126.lab.ibm.com .";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:hostid
+    a ogit:Attribute;
+    rdfs:label "hostid";
+    ogit:original <http://open-services.net/ns/crtv#hostid>;
+    dcterms:description "A globally unique ID assigned to their machines by some manufacturers (.e.g Sun Solaris) .";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:instancePath
+    a ogit:Attribute;
+    rdfs:label "instancePath";
+    ogit:original <http://open-services.net/ns/crtv#instancePath>;
+    dcterms:description "The directory where the files for this SoftwareServer are stored.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:ipAddress
+    a ogit:Attribute;
+    rdfs:label "ipAddress";
+    ogit:original <http://open-services.net/ns/crtv#ipAddress>;
+    dcterms:description "The IP address assigned to this system.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:model
+    a ogit:Attribute;
+    rdfs:label "model";
+    ogit:original <http://open-services.net/ns/crtv#model>;
+    dcterms:description "Value of the device model. The model number as provided by the device manufacturer.  ";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:name
+    a ogit:Attribute;
+    rdfs:label "name";
+    ogit:original <http://open-services.net/ns/crtv#name>;
+    dcterms:description "Typically used as an identity field, this property is used to represent a known name of a resource instance.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:observationTime
+    a ogit:Attribute;
+    rdfs:label "observationTime";
+    ogit:original <http://open-services.net/ns/crtv#observationTime>;
+    dcterms:description "The time that the resource was last observed by the provider.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:occursBefore
+    a ogit:Attribute;
+    rdfs:label "occursBefore";
+    ogit:original <http://open-services.net/ns/crtv#occursBefore>;
+    dcterms:description "If there is a temporal order between other Path or ServiceInstance Resource Definitions, the Resource Definition action that occur after this Resource Instance are listed here. ";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:portNumber
+    a ogit:Attribute;
+    rdfs:label "portNumber";
+    ogit:original <http://open-services.net/ns/crtv#portNumber>;
+    dcterms:description "The port number as defined by IETF and IANA.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:processId
+    a ogit:Attribute;
+    rdfs:label "processId";
+    ogit:original <http://open-services.net/ns/crtv#processId>;
+    dcterms:description "The process id number assigned to the Process by the operating system.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:serialNumber
+    a ogit:Attribute;
+    rdfs:label "serialNumber";
+    ogit:original <http://open-services.net/ns/crtv#serialNumber>;
+    dcterms:description "Serial number assigned by the manufacturer. The value should be provided by the manufacturer of the resource.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:shortHostName
+    a ogit:Attribute;
+    rdfs:label "shortHostName";
+    ogit:original <http://open-services.net/ns/crtv#shortHostName>;
+    dcterms:description "A label assigned to a machine and used for communications on the local network. For example, a Windows hostname is IBM-2JMUUEH6TEQ .";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:systemBoardUUID
+    a ogit:Attribute;
+    rdfs:label "systemBoardUUID";
+    ogit:original <http://open-services.net/ns/crtv#systemBoardUUID>;
+    dcterms:description "The unique identifier of the system board.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:version
+    a ogit:Attribute;
+    rdfs:label "version";
+    ogit:original <http://open-services.net/ns/crtv#version>;
+    dcterms:description "The version string assigned to this entity.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:vmid
+    a ogit:Attribute;
+    rdfs:label "vmid";
+    ogit:original <http://open-services.net/ns/crtv#vmid>;
+    dcterms:description "The VMID is a unique identifier for the virtual machine.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+
+#
+# Verbs
+#
+ogit.OSLC-crtv:assetTag
+    a ogit:Verb;
+    rdfs:label "assetTag";
+    ogit:original <http://open-services.net/ns/crtv#assetTag>;
+    dcterms:description "Specifies the asset tag for a physical piece of equipment. Asset tags are typically human readable labels that are durable and securely attached to equipment. Asset tags may also be readable by barcode and/or RFID. ";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:contextAddressSpace
+    a ogit:Verb;
+    rdfs:label "contextAddressSpace";
+    ogit:original <http://open-services.net/ns/crtv#contextAddressSpace>;
+    dcterms:description "";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:dbInstance
+    a ogit:Verb;
+    rdfs:label "dbInstance";
+    ogit:original <http://open-services.net/ns/crtv#dbInstance>;
+    dcterms:description "The Software Server representing the database instance that manages this database.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:dependsOn
+    a ogit:Verb;
+    rdfs:label "dependsOn";
+    ogit:original <http://open-services.net/ns/crtv#dependsOn>;
+    dcterms:description "A relationship denoting that the source of the relationship cannot function properly without an association with the target. The dependency is directional ( the source depends on the target but the reverse is not necessarily true ) and can represent any cause or type of dependency. For instance, this relationship can be used to denote that a device depends on its power supply(s) or that an IP path depends on a layer 2 connection.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:deployedTo
+    a ogit:Verb;
+    rdfs:label "deployedTo";
+    ogit:original <http://open-services.net/ns/crtv#deployedTo>;
+    dcterms:description "The SoftwareServer on which this SoftwareModule is deployed.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:elementFrom
+    a ogit:Verb;
+    rdfs:label "elementFrom";
+    ogit:original <http://open-services.net/ns/crtv#elementFrom>;
+    dcterms:description "The resource acting as the origination point in the ordered path.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:elementTo
+    a ogit:Verb;
+    rdfs:label "elementTo";
+    ogit:original <http://open-services.net/ns/crtv#elementTo>;
+    dcterms:description "The resource acting as the destination point in the ordered path.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:manufacturer
+    a ogit:Verb;
+    rdfs:label "manufacturer";
+    ogit:original <http://open-services.net/ns/crtv#manufacturer>;
+    dcterms:description "Name of the device manufacturer. This attribute SHOULD be a publicly available manufacturer name vocabulary. ";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:parentServiceInstance
+    a ogit:Verb;
+    rdfs:label "parentServiceInstance";
+    ogit:original <http://open-services.net/ns/crtv#parentServiceInstance>;
+    dcterms:description "When context is required, this is the containing Application for the set of Transactions. ";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:runsOn
+    a ogit:Verb;
+    rdfs:label "runsOn";
+    ogit:original <http://open-services.net/ns/crtv#runsOn>;
+    dcterms:description "The ComputerSystem this SoftwareServer instance is running on.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-crtv:serverAccessPoint
+    a ogit:Verb;
+    rdfs:label "serverAccessPoint";
+    ogit:original <http://open-services.net/ns/crtv#serverAccessPoint>;
+    dcterms:description "The Server Access Point clients use for communications with this resource. ";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+

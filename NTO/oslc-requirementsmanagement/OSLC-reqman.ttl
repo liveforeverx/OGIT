@@ -1,0 +1,270 @@
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix vann:           <http://purl.org/vocab/vann/> .
+@prefix purl:           <http://www.purl.org/> .
+@prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.OSCL-core:           <http://www.purl.org/ogit/OSLC-core/> .
+@prefix ogit.OSLC-reqman:           <http://www.purl.org/ogit/OSLC-reqman/> .
+
+#
+# Ontology
+#
+ogit:OSLC-reqman
+    a owl:Ontology;
+    rdfs:label "OGIT oslc-requirementsmanagement Vocabulary";
+    dcterms:creator "arago GmbH";
+    dcterms:contributor "Fabian Meyer";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/OSLC-reqman/";
+    vann:preferredNamespacePrefix "ogit.OSLC-reqman";
+    owl:versionInfo "__OGIT_VERSION__";
+    owl:imports purl:ogit
+.
+
+#
+# Entities
+#
+ogit.OSLC-reqman:Requirement
+    a ogit:Entity;
+    rdfs:label "Requirement";
+    ogit:original <http://open-services.net/ns/rm#Requirement>;
+    dcterms:description """Statement of
+            need.""";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-reqman:RequirementCollection
+    a ogit:Entity;
+    rdfs:label "RequirementCollection";
+    ogit:original <http://open-services.net/ns/rm#RequirementCollection>;
+    dcterms:description """Collection of requirements. A
+            collection uses zero or more requirements.""";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+
+#
+# Attributes
+#
+
+#
+# Verbs
+#
+ogit.OSLC-reqman:affectedBy
+    a ogit:Verb;
+    rdfs:label "affectedBy";
+    ogit:original <http://open-services.net/ns/rm#affectedBy>;
+    dcterms:description """Expresses an affects relationship
+            between entities. For example, a defect may be said to affect a
+            requirement.""";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-reqman:elaboratedBy
+    a ogit:Verb;
+    rdfs:label "elaboratedBy";
+    ogit:original <http://open-services.net/ns/rm#elaboratedBy>;
+    dcterms:description """Expresses an elaboration relationship
+            between entities. For example, a model element can elaborate a
+            requirement.""";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSCL-core:hasBasicShape
+    a ogit:Verb;
+    rdfs:label "hasBasicShape";
+    ogit:original <http://open-services.net/ns/core#hasBasicShape>;
+    dcterms:description "";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-reqman:implementedBy
+    a ogit:Verb;
+    rdfs:label "implementedBy";
+    ogit:original <http://open-services.net/ns/rm#implementedBy>;
+    dcterms:description """Expresses an implementation
+            relationship between entities.""";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-reqman:specifiedBy
+    a ogit:Verb;
+    rdfs:label "specifiedBy";
+    ogit:original <http://open-services.net/ns/rm#specifiedBy>;
+    dcterms:description """Expresses a specification relationship
+            between entities. For example, a model element can specifiy a
+            requirement.""";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-reqman:trackedBy
+    a ogit:Verb;
+    rdfs:label "trackedBy";
+    ogit:original <http://open-services.net/ns/rm#trackedBy>;
+    dcterms:description """Expresses a tracking relationship
+            between entities. For example, a change request may be said to track a
+            requirement, in that it governs the changes to a requirement according to some
+            process machinery.""";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-reqman:uses
+    a ogit:Verb;
+    rdfs:label "uses";
+    ogit:original <http://open-services.net/ns/rm#uses>;
+    dcterms:description """Expresses a use relationship between
+            entities. For example, a requirement collection may use a
+            requirement.""";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-reqman:validatedBy
+    a ogit:Verb;
+    rdfs:label "validatedBy";
+    ogit:original <http://open-services.net/ns/rm#validatedBy>;
+    dcterms:description """Expresses a validation relationship
+            between entities. For example, a test plan may be said to validated a requirement
+            collection.""";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+

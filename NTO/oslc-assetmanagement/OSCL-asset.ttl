@@ -1,0 +1,385 @@
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix vann:           <http://purl.org/vocab/vann/> .
+@prefix purl:           <http://www.purl.org/> .
+@prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.OSCL-asset: <http://www.purl.org/ogit/OSLC-asset/> .
+
+#
+# Ontology
+#
+ogit:OSCL-asset
+    a owl:Ontology;
+    rdfs:label "OGIT oslc-assetmanagement Vocabulary";
+    dcterms:creator "arago GmbH";
+    dcterms:contributor "Fabian Meyer";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/OSCL-asset/";
+    vann:preferredNamespacePrefix "ogit.OSCL-asset";
+    owl:versionInfo "__OGIT_VERSION__";
+    owl:imports purl:ogit
+.
+
+#
+# Entities
+#
+ogit.OSCL-asset:Artifact
+    a ogit:Entity;
+    rdfs:label "Artifact";
+    ogit:original <http://open-services.net/ns/asset#Artifact>;
+    dcterms:description "The Artifact fragment";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSCL-asset:Asset
+    a ogit:Entity;
+    rdfs:label "Asset";
+    ogit:original <http://open-services.net/ns/asset#Asset>;
+    dcterms:description "The Asset resource";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+
+#
+# Attributes
+#
+
+#
+# Verbs
+#
+ogit.OSCL-asset:artifact
+    a ogit:Verb;
+    rdfs:label "artifact";
+    ogit:original <http://open-services.net/ns/asset#artifact>;
+    dcterms:description "The multi valued list of artifacts.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSCL-asset:artifactFactory
+    a ogit:Verb;
+    rdfs:label "artifactFactory";
+    ogit:original <http://open-services.net/ns/asset#artifactFactory>;
+    dcterms:description "Resource URI used to post new artifacts to the asset.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSCL-asset:categorization
+    a ogit:Verb;
+    rdfs:label "categorization";
+    ogit:original <http://open-services.net/ns/asset#categorization>;
+    dcterms:description "A categorization to classify an asset. The category schema values are defined by the service provider. This specification does not define the resource for this property, however it should contain a dcterms:title property.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSCL-asset:content
+    a ogit:Verb;
+    rdfs:label "content";
+    ogit:original <http://open-services.net/ns/asset#content>;
+    dcterms:description "The media resource reference URI (the artifact bytes).";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSCL-asset:guid
+    a ogit:Verb;
+    rdfs:label "guid";
+    ogit:original <http://open-services.net/ns/asset#guid>;
+    dcterms:description "An identifier for the asset. Assigned by the service provider when a resource is created. Different versions of the same asset will share the same identifier.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSCL-asset:identifier
+    a ogit:Verb;
+    rdfs:label "identifier";
+    ogit:original <http://open-services.net/ns/asset#identifier>;
+    dcterms:description "A unique identifier for a resource. Assigned by the service provider when a resource is created.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSCL-asset:manufacturer
+    a ogit:Verb;
+    rdfs:label "manufacturer";
+    ogit:original <http://open-services.net/ns/asset#manufacturer>;
+    dcterms:description "The name of the asset manufacturer.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSCL-asset:model
+    a ogit:Verb;
+    rdfs:label "model";
+    ogit:original <http://open-services.net/ns/asset#model>;
+    dcterms:description "The value of the asset model.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSCL-asset:relationshipType
+    a ogit:Verb;
+    rdfs:label "relationshipType";
+    ogit:original <http://open-services.net/ns/asset#relationshipType>;
+    dcterms:description "The type of this relationship from the perspective of the oslc_asset:relatedAsset resource based on values defined by the service provider. This specification does not define the resource for this property, however it should contain a dcterms:title property.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSCL-asset:serialNumber
+    a ogit:Verb;
+    rdfs:label "serialNumber";
+    ogit:original <http://open-services.net/ns/asset#serialNumber>;
+    dcterms:description "The serial number assigned by the asset manufacturer.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSCL-asset:size
+    a ogit:Verb;
+    rdfs:label "size";
+    ogit:original <http://open-services.net/ns/asset#size>;
+    dcterms:description "The size of the artifact media resource in bytes.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSCL-asset:state
+    a ogit:Verb;
+    rdfs:label "state";
+    ogit:original <http://open-services.net/ns/asset#state>;
+    dcterms:description "Used to indicate the state of the asset based on values defined by the service provider. This specification does not define the resource for this property, however it should contain a dcterms:title property.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSCL-asset:tag
+    a ogit:Verb;
+    rdfs:label "tag";
+    ogit:original <http://open-services.net/ns/asset#tag>;
+    dcterms:description "Specifies the asset tag value for an Asset. Asset tags are typically human readable labels. For hardware assets, these tags are durable, securely attached to equipment, and may also be readable by barcode and/or RFID.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSCL-asset:version
+    a ogit:Verb;
+    rdfs:label "version";
+    ogit:original <http://open-services.net/ns/asset#version>;
+    dcterms:description "The version of the asset. Possible values may include '1.0', '2.0', etc.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+

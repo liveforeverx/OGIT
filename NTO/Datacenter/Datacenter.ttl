@@ -1,0 +1,431 @@
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix vann:           <http://purl.org/vocab/vann/> .
+@prefix purl:           <http://www.purl.org/> .
+@prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.Datacenter:           <http://www.purl.org/ogit/Datacenter/> .
+
+#
+# Ontology
+#
+ogit:Datacenter
+    a owl:Ontology;
+    rdfs:label "OGIT Datacenter";
+    dcterms:creator "arago GmbH";
+    dcterms:contributor "Fabian Meyer";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/Datacenter/";
+    vann:preferredNamespacePrefix "ogit.Datacenter";
+    owl:versionInfo "__OGIT_VERSION__";
+    owl:imports purl:ogit
+.
+
+#
+# Entities
+#
+ogit.Datacenter:Building
+    a ogit:Entity;
+    rdfs:label "Building";
+    dcterms:description "A physical Building within a location";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id,
+        ogit:capacity,
+        ogit.Datacenter:datacenterId;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Datacenter:Cooling
+    a ogit:Entity;
+    rdfs:label "Cooling";
+    dcterms:description "A physical Cooling Unit used for data centers and computer rooms";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id,
+        ogit.Datacenter:roomId,
+        ogit:capacity,
+        ogit:powerConsumption;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Datacenter:Datacenter
+    a ogit:Entity;
+    rdfs:label "Datacenter";
+    dcterms:description "Represents a datacenter";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id,
+        ogit:capacity;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Datacenter:PowerDistributionUnit
+    a ogit:Entity;
+    rdfs:label "PowerDistributionUnit";
+    dcterms:description "A PDU is a physical device for connecting datacenter devices with power sources";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id,
+        ogit.Datacenter:rackId,
+        ogit:capacity;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Datacenter:Rack
+    a ogit:Entity;
+    rdfs:label "Rack";
+    dcterms:description "A physical rack housing datacenter equipment";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id,
+        ogit:capacity,
+        ogit:brand,
+        ogit:model,
+        ogit:purchaseDate,
+        ogit.Datacenter:moveProductionDate,
+        ogit:endOfWarranty,
+        ogit.Datacenter:roomId,
+        ogit:weight,
+        ogit:powerConsumption;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Datacenter:Room
+    a ogit:Entity;
+    rdfs:label "Room";
+    dcterms:description "A physical Room within a Building";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id,
+        ogit:capacity,
+        ogit:buildingId;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Datacenter:Section
+    a ogit:Entity;
+    rdfs:label "Section";
+    dcterms:description "A physical/logical Section within a Room";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id,
+        ogit:capacity;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Datacenter:Sensor
+    a ogit:Entity;
+    rdfs:label "Sensor";
+    dcterms:description "A sensor is a device that measures a physical quantity and converts it into a 'signal' which can be read by an observer or by an instrument.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id,
+        ogit.Datacenter:sectionId;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Datacenter:Server
+    a ogit:Entity;
+    rdfs:label "Server";
+    dcterms:description "A physical/logical Server";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id,
+        ogit:brand,
+        ogit:model,
+        ogit:purchaseDate,
+        ogit.Datacenter:moveProductionDate,
+        ogit:endOfWarranty;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Datacenter:Storage
+    a ogit:Entity;
+    rdfs:label "Storage";
+    dcterms:description "A physical/logical Storage Unit";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id,
+        ogit:brand,
+        ogit:model,
+        ogit:purchaseDate,
+        ogit.Datacenter:moveProductionDate,
+        ogit:endOfWarranty;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Datacenter:UPS
+    a ogit:Entity;
+    rdfs:label "UPS";
+    dcterms:description "A physical UPS device (Uninterruptible power supply)";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+
+#
+# Attributes
+#
+ogit.Datacenter:datacenterId
+    a ogit:Attribute;
+    rdfs:label "datacenterId";
+    dcterms:description "ID of a Datacenter";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Datacenter:moveProductionDate
+    a ogit:Attribute;
+    rdfs:label "moveProductionDate";
+    dcterms:description "Date when an device is moved to production use.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Datacenter:rackId
+    a ogit:Attribute;
+    rdfs:label "rackId";
+    dcterms:description "ID of a rack within a datacenter.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Datacenter:rackUnit
+    a ogit:Attribute;
+    rdfs:label "rackUnit";
+    dcterms:description "The name of the RackUnit within a datacenter.";
+    dcterms:valid "start=2015-10-15;";
+    dcterms:creator "Aymen Ayoub";
+    dcterms:created "1970-01-01";
+    dcterms:modified "2015-10-15";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-10-15";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ];
+.
+
+ogit.Datacenter:roomId
+    a ogit:Attribute;
+    rdfs:label "roomId";
+    dcterms:description "ID of a Room in a Datacenter.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.Datacenter:sectionId
+    a ogit:Attribute;
+    rdfs:label "sectionId";
+    dcterms:description "ID of a datacenter section.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+
+#
+# Verbs
+#

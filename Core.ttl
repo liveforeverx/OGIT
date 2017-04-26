@@ -2,14 +2,15 @@
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix vann:    <http://purl.org/vocab/vann/> .
+@prefix purl:    <http://www.purl.org/> .
 @prefix ogit:    <http://www.purl.org/ogit/> .
 
 #
 # Ontology
 #
-<http://www.purl.org/ogit>
+purl:ogit
     a owl:Ontology;
-    rdfs:label "OGIT Base Vocabulary";
+    rdfs:label "OGIT Base";
     dcterms:description """This ontology contains basic terms that are used to define Entities, Attributes and Verbs, but are not Verbs or Attributes themselves."""@en;
     dcterms:creator "arago GmbH";
     dcterms:contributor "Andreas Textor";

@@ -1,0 +1,1286 @@
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix vann:           <http://purl.org/vocab/vann/> .
+@prefix purl:           <http://www.purl.org/> .
+@prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.ServiceManagement:           <http://www.purl.org/ogit/ServiceManagement/> .
+
+#
+# Ontology
+#
+ogit:ServiceManagement
+    a owl:Ontology;
+    rdfs:label "OGIT ServiceManagement";
+    dcterms:creator "arago GmbH";
+    dcterms:contributor "Fabian Meyer";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/ServiceManagement/";
+    vann:preferredNamespacePrefix "ogit.ServiceManagement";
+    owl:versionInfo "__OGIT_VERSION__";
+    owl:imports purl:ogit
+.
+
+#
+# Entities
+#
+ogit.ServiceManagement:Action
+    a ogit:Entity;
+    rdfs:label "Action";
+    dcterms:description """Defines Actions on it Services. A Service is connected to the available Actions by the \"supports\" relationship.""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:mandatory-attributes
+        ogit:name;
+    ogit:optional-attributes
+        ogit:id,
+        ogit:description;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:ApprovalTask
+    a ogit:Entity;
+    rdfs:label "ApprovalTask";
+    dcterms:description "This entity type defines approval tasks for a ticket. Used for example at ogit/ServiceManagement/ChangeRequest.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id,
+        ogit:name,
+        ogit.ServiceManagement:approvalStatus,
+        ogit.ServiceManagement:sourceStatus,
+        ogit:reason,
+        ogit:lastUpdatedAt;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-05-22";
+            dcterms:description """Attribute name changed from subStatus to sourceStatus
+""";
+            dcterms:creator "Catarina Onofre"
+        ];
+.
+
+ogit.ServiceManagement:ChangeRequest
+    a ogit:Entity;
+    rdfs:label "ChangeRequest";
+    dcterms:description "This entity type defines a change request ticket";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:mandatory-attributes
+        ogit:id;
+    ogit:optional-attributes
+        ogit:risk,
+        ogit:justification,
+        ogit:category,
+        ogit:startedAt,
+        ogit:finishedAt,
+        ogit:effort,
+        ogit:reportedAt,
+        ogit:reviewedAt,
+        ogit:assignedGroup,
+        ogit.ServiceManagement:changeStatus,
+        ogit.ServiceManagement:targetStartAt,
+        ogit.ServiceManagement:targetFinishAt,
+        ogit.ServiceManagement:scheduledStartAt,
+        ogit.ServiceManagement:scheduledFinishAt,
+        ogit.ServiceManagement:sourceStatus,
+        ogit.ServiceManagement:fallbackPlan,
+        ogit.ServiceManagement:testPlan,
+        ogit.ServiceManagement:implementationPlan,
+        ogit.ServiceManagement:solution,
+        ogit.ServiceManagement:resolutionCode,
+        ogit.ServiceManagement:customer;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-07-01";
+            dcterms:description "updated";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-07-03";
+            dcterms:description "updated";
+            dcterms:creator "Aymen Ayoub"
+        ];
+.
+
+ogit.ServiceManagement:Incident
+    a ogit:Entity;
+    rdfs:label "Incident";
+    dcterms:description "This entity type defines an incident ticket.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id,
+        ogit.ServiceManagement:incidentStatus,
+        ogit.ServiceManagement:solution,
+        ogit.ServiceManagement:resolutionCode,
+        ogit.ServiceManagement:resolvedAt,
+        ogit.ServiceManagement:sourceStatus,
+        ogit.ServiceManagement:reportedSource,
+        ogit.ServiceManagement:customer,
+        ogit.ServiceManagement:task,
+        ogit:assignedGroup,
+        ogit:category,
+        ogit:reportedAt;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-05-22";
+            dcterms:description "change attribute subStatus to sourceStatus";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-06-12";
+            dcterms:description "attribute category added";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2015-07-06";
+            dcterms:description "attribute assignedGroup added";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "5";
+            dcterms:date "2015-09-04";
+            dcterms:description "attribute ogit/id moved to be optional";
+            dcterms:creator "Aymen Ayoub"
+        ];
+.
+
+ogit.ServiceManagement:Offering
+    a ogit:Entity;
+    rdfs:label "Offering";
+    dcterms:description "This is a concrete offering from a vendor including one or more combined services from a catalog/collection/offering book.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:mandatory-attributes
+        ogit:name,
+        ogit:id;
+    ogit:optional-attributes
+        ogit.ServiceManagement:allowedForNewBusiness,
+        ogit:capacityAvailable,
+        ogit:currency,
+        ogit:serialNumber,
+        ogit:validFrom,
+        ogit:expirationDate,
+        ogit:category,
+        ogit:description,
+        ogit:market;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:Order
+    a ogit:Entity;
+    rdfs:label "Order";
+    dcterms:description "Defines an order.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:mandatory-attributes
+        ogit:id;
+    ogit:optional-attributes
+        ogit:description,
+        ogit.ServiceManagement:sourceStatus,
+        ogit:impact,
+        ogit:urgency,
+        ogit:priority,
+        ogit:createdAt,
+        ogit:openedAt,
+        ogit:closedAt,
+        ogit:lastUpdatedAt,
+        ogit.ServiceManagement:externalTicketSource,
+        ogit.ServiceManagement:externalTicketId,
+        ogit.ServiceManagement:reportedSource,
+        ogit:project,
+        ogit:summary;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-05-22";
+            dcterms:description "change attribute subStatus to sourceStatus";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:Problem
+    a ogit:Entity;
+    rdfs:label "Problem";
+    dcterms:description "This entity type defines a problem ticket.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:mandatory-attributes
+        ogit:id;
+    ogit:optional-attributes
+        ogit.ServiceManagement:problemStatus,
+        ogit:reportedAt,
+        ogit.ServiceManagement:solution,
+        ogit.ServiceManagement:resolutionCode,
+        ogit.ServiceManagement:rootCause,
+        ogit.ServiceManagement:workAround;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-09-07";
+            dcterms:description "updated problemStatus as optional attribute.";
+            dcterms:creator "Aymen Ayoub"
+        ];
+.
+
+ogit.ServiceManagement:Report
+    a ogit:Entity;
+    rdfs:label "Report";
+    dcterms:description "Reporting about IT service delivery";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:version,
+        ogit:id,
+        ogit:name;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:SLA
+    a ogit:Entity;
+    rdfs:label "SLA";
+    dcterms:description "A service level agreement.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-08-11";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:name,
+        ogit:startedAt,
+        ogit.ServiceManagement:scheduledFinishAt,
+        ogit.ServiceManagement:leftTime,
+        ogit.ServiceManagement:elapsedTime,
+        ogit.ServiceManagement:slaStage,
+        ogit.ServiceManagement:resolvedInTime;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-06-08";
+            dcterms:description "Added ogit/startAt ogit/ServiceManagement/scheduledFinishAt ogit/slaStage ogit/ServiceManagement/elapsedTime ogit/ServiceManagement/leftTime attributes to ogit/ServiceManagement/SLA";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-07-09";
+            dcterms:description "change attribute ogit/startAt to ogit/startedAt";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2015-08-11";
+            dcterms:description "add resolvedInTime";
+            dcterms:creator "Philipp Pelchmann"
+        ];
+.
+
+ogit.ServiceManagement:Service
+    a ogit:Entity;
+    rdfs:label "Service";
+    dcterms:description "A technology service item, which combined or not with other technology services can constitute a service offering (ogit/ServiceManagement/Offering).";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:mandatory-attributes
+        ogit:id;
+    ogit:optional-attributes
+        ogit:description,
+        ogit:name,
+        ogit:uri;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem#"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-09-01";
+            dcterms:description "updated";
+            dcterms:creator "Aymen Ayoub"
+        ];
+.
+
+ogit.ServiceManagement:SubTask
+    a ogit:Entity;
+    rdfs:label "SubTask";
+    dcterms:description """This entity type defines sub-tasks for a ticket. Mostly used for ChangeRequest.
+Comman alternative names with same meaning are: task, activity, work order.""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:mandatory-attributes
+        ogit:id;
+    ogit:optional-attributes
+        ogit.ServiceManagement:taskStatus,
+        ogit.ServiceManagement:sourceStatus,
+        ogit:description,
+        ogit:taskLog,
+        ogit:startedAt,
+        ogit:finishedAt,
+        ogit.ServiceManagement:targetStartAt,
+        ogit.ServiceManagement:targetFinishAt,
+        ogit.ServiceManagement:scheduledStartAt,
+        ogit.ServiceManagement:scheduledFinishAt,
+        ogit:effort,
+        ogit:lastUpdatedAt,
+        ogit.ServiceManagement:resolutionCode,
+        ogit:name,
+        ogit:assignedGroup,
+        ogit.ServiceManagement:customer,
+        ogit:type;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-05-22";
+            dcterms:description """Attribute name changed from subStatus to sourceStatus
+""";
+            dcterms:creator "Catarina Onofre"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-07-09";
+            dcterms:description "change attribute ogit/startAt to ogit/startedAt and ogit/finishAt to ogit/finishedAt";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2015-12-10";
+            dcterms:description "change entity name to ogit/ServiceManagement/SubTask and add some attributes";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:Ticket
+    a ogit:Entity;
+    rdfs:label "Ticket";
+    dcterms:description "This entity defines any type of tickets. For specific behaviour of tickets, please check specific entities (e.g. ogit/ServiceManagement/Incident).";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:mandatory-attributes
+        ogit:id;
+    ogit:optional-attributes
+        ogit:summary,
+        ogit:description,
+        ogit:project,
+        ogit:impact,
+        ogit:urgency,
+        ogit:priority,
+        ogit:createdAt,
+        ogit:openedAt,
+        ogit:closedAt,
+        ogit:lastUpdatedAt,
+        ogit.ServiceManagement:sourceStatus,
+        ogit.ServiceManagement:externalTicketId,
+        ogit.ServiceManagement:reportedSource,
+        ogit.ServiceManagement:ticketId;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-05-22";
+            dcterms:description "Attribute name changed from subStatus to sourceStatus";
+            dcterms:creator "Catarina Onofre"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-05-26";
+            dcterms:description "add new optional attribute ogit/ServiceManagement/ticketId";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2015-06-11";
+            dcterms:description "deleted the optional attribute ogit/ServiceManagement/externalTicketSource";
+            dcterms:creator "Aymen Ayoub"
+        ];
+.
+
+
+#
+# Attributes
+#
+ogit.ServiceManagement:allowedForNewBusiness
+    a ogit:Attribute;
+    rdfs:label "allowedForNewBusiness";
+    dcterms:description "If the value of this flag is true, the service could be offered in a store to new users for order. If flag is false, the service will only be available to users with already existing instances/entities of a specific service.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:approvalStatus
+    a ogit:Attribute;
+    rdfs:label "approvalStatus";
+    dcterms:description "Status of an ApprovalTask containing one of the following values: New|PendingApproval|Approved|Rejected|Cancelled|Closed.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:validation-type "regex";
+    ogit:validation-parameter "^(New|PendingApproval|Approved|Rejected|Cancelled|Closed)$";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:changeStatus
+    a ogit:Attribute;
+    rdfs:label "changeStatus";
+    dcterms:description "Defines the status of a change record within the service management.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:validation-type "regex";
+    ogit:validation-parameter "^(New|Assigned|Pending|Resolved|Closed|Escalated)$";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-05-16";
+            dcterms:description "added a new status Escalated in the validation";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-12-17";
+            dcterms:description "change validation parameter";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:customer
+    a ogit:Attribute;
+    rdfs:label "customer";
+    dcterms:description "The customer related to a Service Management process.";
+    dcterms:valid "start=2015-07-03;";
+    dcterms:creator "Aymen Ayoub";
+    dcterms:created "2015-07-03";
+    dcterms:modified "2015-07-03";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-07-03";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ];
+.
+
+ogit.ServiceManagement:elapsedTime
+    a ogit:Attribute;
+    rdfs:label "elapsedTime";
+    dcterms:description "Time between start time and now (minus pause duration).";
+    dcterms:valid "start=2015-06-08;";
+    dcterms:creator "Aymen Ayoub";
+    dcterms:created "2015-06-08";
+    dcterms:modified "2015-06-08";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-06-08";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ];
+.
+
+ogit.ServiceManagement:eventMessage
+    a ogit:Attribute;
+    rdfs:label "eventMessage";
+    dcterms:description "Defines the event message/summary/logstring.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:eventNodeId
+    a ogit:Attribute;
+    rdfs:label "eventNodeId";
+    dcterms:description """Identifies the source of an event, i.e. identifies the monitoring endpoint which caused the event creation.
+This could be an artifical identifier or some \"natural\" ID like hostname or IP address.""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:externalTicketId
+    a ogit:Attribute;
+    rdfs:label "externalTicketId";
+    dcterms:description "If a ticket was imported/duplicated from another system this attribute will define the ticket ID from the source system.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:externalTicketSource
+    a ogit:Attribute;
+    rdfs:label "externalTicketSource";
+    dcterms:description "If a ticket was imported/duplicated from another system this will contain a string indentifying the source system.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:fallbackPlan
+    a ogit:Attribute;
+    rdfs:label "fallbackPlan";
+    dcterms:description "Defines instructions of how to revert in case a change fails.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:granularity
+    a ogit:Attribute;
+    rdfs:label "granularity";
+    dcterms:description "Smallest value increment of a Parameter";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:implementationPlan
+    a ogit:Attribute;
+    rdfs:label "implementationPlan";
+    dcterms:description "Used to define detail implementation instructions.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:incidentStatus
+    a ogit:Attribute;
+    rdfs:label "incidentStatus";
+    dcterms:description "Defines the status of an incident record/ticket.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:validation-type "regex";
+    ogit:validation-parameter "^(New|Assigned|Pending|Resolved|Closed|Escalated)$";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-10-16";
+            dcterms:description "added a new State Escalated in the Validation.";
+            dcterms:creator "Aymen Ayoub"
+        ];
+.
+
+ogit.ServiceManagement:isRequired
+    a ogit:Attribute;
+    rdfs:label "isRequired";
+    dcterms:description "True if the value has to be specified for the Service to be provisioned. False otherwise.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:leftTime
+    a ogit:Attribute;
+    rdfs:label "leftTime";
+    dcterms:description "Time remaining until SLA breach.";
+    dcterms:valid "start=2015-06-08;";
+    dcterms:creator "Aymen Ayoub";
+    dcterms:created "2015-06-08";
+    dcterms:modified "2015-06-08";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-06-08";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ];
+.
+
+ogit.ServiceManagement:licenseTokenStatus
+    a ogit:Attribute;
+    rdfs:label "licenseTokenStatus";
+    dcterms:description "The list of valid status values a license token can have";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:validation-type "regex";
+    ogit:validation-parameter "^(open|used|disabled)$";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:problemStatus
+    a ogit:Attribute;
+    rdfs:label "problemStatus";
+    dcterms:description "defines the status of a problem record";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:validation-type "regex";
+    ogit:validation-parameter "^(New|Assigned|Pending|Resolved|Closed)$";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:reportedSource
+    a ogit:Attribute;
+    rdfs:label "reportedSource";
+    dcterms:description """Can be used to define how a ticket was communicated. It could define some kind of communication channel (\"ServiceDesk\", \"Email\") or, e.g. for Incident records, it might define that the ticket was produced automatically from an event management system.""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:requirementId
+    a ogit:Attribute;
+    rdfs:label "requirementId";
+    dcterms:description "IDs of the corresponding requirements that lead to the entity creation.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:resolutionCode
+    a ogit:Attribute;
+    rdfs:label "resolutionCode";
+    dcterms:description "Optional resolution code that may be provied during an incident or problem along with the solution description.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:resolvedAt
+    a ogit:Attribute;
+    rdfs:label "resolvedAt";
+    dcterms:description """Datetime indicating when a ticket was resolved. Can be used for incident or problem tickets when it is necessary to distinguish between the ticket resolving and ticket closure (closedAt).
+The values must be combined date and time with time zone designator according to ISO 8601""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:resolvedInTime
+    a ogit:Attribute;
+    rdfs:label "resolvedAt";
+    dcterms:description "Information about a ticket being solved in the time excepted.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Philipp Pelchmann";
+    dcterms:created "2015-08-11";
+    dcterms:modified "2015-08-11";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-08-11";
+            dcterms:description "initial";
+            dcterms:creator "Philipp Pelchmann"
+        ];
+.
+
+ogit.ServiceManagement:rootCause
+    a ogit:Attribute;
+    rdfs:label "rootCause";
+    dcterms:description "Root cause for example of a problem ticket.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:scheduledFinishAt
+    a ogit:Attribute;
+    rdfs:label "scheduledFinishAt";
+    dcterms:description """Defines a point in time when the work on a change is planned/scheduled to be finished. This date time is usually defined during change planning and/or approval.
+The values must be combined date and time with time zone designator according to ISO 8601""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:scheduledStartAt
+    a ogit:Attribute;
+    rdfs:label "scheduledStartAt";
+    dcterms:description """Defines a point in time when the work on a change is planned/scheduled to start. This date time is usually defined during change planning and/or approval. This datetime is set by change coordinater (e.g it  is planned to be done at 7:30PM)
+The values must be combined date and time with time zone designator according to ISO 8601.""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:slaStage
+    a ogit:Attribute;
+    rdfs:label "slaStage";
+    dcterms:description "Stage of an SLA.";
+    dcterms:valid "start=2015-06-08;";
+    dcterms:creator "Aymen Ayoub";
+    dcterms:created "2015-06-08";
+    dcterms:modified "2015-06-08";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-06-08";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-09-01";
+            dcterms:description "validation deleted";
+            dcterms:creator "Aymen Ayoub"
+        ];
+.
+
+ogit.ServiceManagement:solution
+    a ogit:Attribute;
+    rdfs:label "solution";
+    dcterms:description """Solution description, for example that is usually provided during incident resolving.
+This field is also use for problem tickets. There is defines the permanent solution desription for a problem.""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:sourceStatus
+    a ogit:Attribute;
+    rdfs:label "sourceStatus";
+    dcterms:description "It can be used to define application specific status values, which are not allowed by a normalized status, e.g. incidentStatus, changeStatus etc.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-05-22";
+            dcterms:description """Attribute name changed from subStatus to sourceStatus
+- Description edited
+""";
+            dcterms:creator "Catarina Onofre"
+        ];
+.
+
+ogit.ServiceManagement:targetFinishAt
+    a ogit:Attribute;
+    rdfs:label "targetFinishAt";
+    dcterms:description """Defines a point in time when the work on a change should be finished. This date time is defined by the requester.
+The values must be combined date and time with time zone designator according to ISO 8601""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:targetStartAt
+    a ogit:Attribute;
+    rdfs:label "targetStartAt";
+    dcterms:description """Defines a point in time when the work on a change should start. This date time is defined by the requester.
+The values must be combined date and time with time zone designator according to ISO 8601""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:task
+    a ogit:Attribute;
+    rdfs:label "task";
+    dcterms:description "A task related to a Service Management process.";
+    dcterms:valid "start=2015-07-06;";
+    dcterms:creator "Aymen Ayoub";
+    dcterms:created "2015-07-06";
+    dcterms:modified "2015-07-06";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-07-06";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ];
+.
+
+ogit.ServiceManagement:taskName
+    a ogit:Attribute;
+    rdfs:label "taskName";
+    dcterms:description "Contains the task name. It some cases it might be equal to taskID or to some short description (summary) of the task.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:taskStatus
+    a ogit:Attribute;
+    rdfs:label "taskStatus";
+    dcterms:description "Defines the status of a task.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:validation-type "regex";
+    ogit:validation-parameter "^(New|Assigned|Pending|Resolved|Closed|Escalated)$";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-12-17";
+            dcterms:description "change validation parameter";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:testPlan
+    a ogit:Attribute;
+    rdfs:label "testPlan";
+    dcterms:description "Contains a test plan used in change management to define how a successful change implementation can be verified.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:ticketId
+    a ogit:Attribute;
+    rdfs:label "ticketId";
+    dcterms:description "ID of the ticket in the source system, e.g. the ID of the ticket in BMC.";
+    dcterms:valid "start=2015-05-26;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-26";
+    dcterms:modified "2015-05-26";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-26";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.ServiceManagement:workAround
+    a ogit:Attribute;
+    rdfs:label "workAround";
+    dcterms:description "Defines a work around for a known problem until a permanent solution is defined.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+
+#
+# Verbs
+#

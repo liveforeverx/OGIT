@@ -1,0 +1,1268 @@
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix vann:           <http://purl.org/vocab/vann/> .
+@prefix purl:           <http://www.purl.org/> .
+@prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.OSLC-perfmon:           <http://www.purl.org/ogit/OSLC-perfmon/> .
+
+#
+# Ontology
+#
+ogit:OSLC-perfmon
+    a owl:Ontology;
+    rdfs:label "OGIT oslc-performancemonitoring Vocabulary";
+    dcterms:creator "arago GmbH";
+    dcterms:contributor "Fabian Meyer";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/OSLC-perfmon/";
+    vann:preferredNamespacePrefix "ogit.OSLC-perfmon";
+    owl:versionInfo "__OGIT_VERSION__";
+    owl:imports purl:ogit
+.
+
+#
+# Entities
+#
+ogit.OSLC-perfmon:AvgJmsGetTime
+    a ogit:Entity;
+    rdfs:label "AvgJmsGetTime";
+    ogit:original <http://open-services.net/ns/perfmon#AvgJmsGetTime>;
+    dcterms:description "Average time required for a system to respond to a Java Messaging Service GET request";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:AvgLoginRequestFailures
+    a ogit:Entity;
+    rdfs:label "AvgLoginRequestFailures";
+    ogit:original <http://open-services.net/ns/perfmon#AvgLoginRequestFailures>;
+    dcterms:description "Average login request failures";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:AvgRequestFailures
+    a ogit:Entity;
+    rdfs:label "AvgRequestFailures";
+    ogit:original <http://open-services.net/ns/perfmon#AvgRequestFailures>;
+    dcterms:description "Average request failures";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:BufferPoolHits
+    a ogit:Entity;
+    rdfs:label "BufferPoolHits";
+    ogit:original <http://open-services.net/ns/perfmon#BufferPoolHits>;
+    dcterms:description "Buffer pool hits, e.g. hit ratio or count";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:BufferPoolMetrics
+    a ogit:Entity;
+    rdfs:label "BufferPoolMetrics";
+    ogit:original <http://open-services.net/ns/perfmon#BufferPoolMetrics>;
+    dcterms:description "Metric category for buffer pool-related metrics.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:CpuMetrics
+    a ogit:Entity;
+    rdfs:label "CpuMetrics";
+    ogit:original <http://open-services.net/ns/perfmon#CpuMetrics>;
+    dcterms:description "Metric category for CPU-related metrics.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:CpuSpeed
+    a ogit:Entity;
+    rdfs:label "CpuSpeed";
+    ogit:original <http://open-services.net/ns/perfmon#CpuSpeed>;
+    dcterms:description "Speed of the CPU";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:CpuUsed
+    a ogit:Entity;
+    rdfs:label "CpuUsed";
+    ogit:original <http://open-services.net/ns/perfmon#CpuUsed>;
+    dcterms:description "CPU used.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:DiskMetrics
+    a ogit:Entity;
+    rdfs:label "DiskMetrics";
+    ogit:original <http://open-services.net/ns/perfmon#DiskMetrics>;
+    dcterms:description "Metric category for disk-related metrics.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:DiskSpaceOverCommitAmount
+    a ogit:Entity;
+    rdfs:label "DiskSpaceOverCommitAmount";
+    ogit:original <http://open-services.net/ns/perfmon#DiskSpaceOverCommitAmount>;
+    dcterms:description "Amount of disk space committed beyond the disk's capacity.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:DiskSpaceUsed
+    a ogit:Entity;
+    rdfs:label "DiskSpaceUsed";
+    ogit:original <http://open-services.net/ns/perfmon#DiskSpaceUsed>;
+    dcterms:description "Disk space used.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:FailureMetrics
+    a ogit:Entity;
+    rdfs:label "FailureMetrics";
+    ogit:original <http://open-services.net/ns/perfmon#FailureMetrics>;
+    dcterms:description "Metric category for requests that fail.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:GarbageCollectionRequests
+    a ogit:Entity;
+    rdfs:label "GarbageCollectionRequests";
+    ogit:original <http://open-services.net/ns/perfmon#GarbageCollectionRequests>;
+    dcterms:description "Garbage collection requests";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:HeapMemoryUsed
+    a ogit:Entity;
+    rdfs:label "HeapMemoryUsed";
+    ogit:original <http://open-services.net/ns/perfmon#HeapMemoryUsed>;
+    dcterms:description "Heap memory used.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:HighDepthQueueCount
+    a ogit:Entity;
+    rdfs:label "HighDepthQueueCount";
+    ogit:original <http://open-services.net/ns/perfmon#HighDepthQueueCount>;
+    dcterms:description "";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:HostedDatabases
+    a ogit:Entity;
+    rdfs:label "HostedDatabases";
+    ogit:original <http://open-services.net/ns/perfmon#HostedDatabases>;
+    dcterms:description "Databases hosted, either absolute or relative to some maximum";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:LocalInboundConnections
+    a ogit:Entity;
+    rdfs:label "LocalInboundConnections";
+    ogit:original <http://open-services.net/ns/perfmon#LocalInboundConnections>;
+    dcterms:description "Local inbound connections";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:LockListUsed
+    a ogit:Entity;
+    rdfs:label "LockListUsed";
+    ogit:original <http://open-services.net/ns/perfmon#LockListUsed>;
+    dcterms:description "Lock usage";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:LogUsed
+    a ogit:Entity;
+    rdfs:label "LogUsed";
+    ogit:original <http://open-services.net/ns/perfmon#LogUsed>;
+    dcterms:description "Amount of log used, either absolute or relative to some maximum";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:LoginRequestFailures
+    a ogit:Entity;
+    rdfs:label "LoginRequestFailures";
+    ogit:original <http://open-services.net/ns/perfmon#LoginRequestFailures>;
+    dcterms:description "Failed login requests";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:MemoryAvailableAfterGarbageCollection
+    a ogit:Entity;
+    rdfs:label "MemoryAvailableAfterGarbageCollection";
+    ogit:original <http://open-services.net/ns/perfmon#MemoryAvailableAfterGarbageCollection>;
+    dcterms:description "Memory available following completion of a garbage collection request.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:MemoryMetrics
+    a ogit:Entity;
+    rdfs:label "MemoryMetrics";
+    ogit:original <http://open-services.net/ns/perfmon#MemoryMetrics>;
+    dcterms:description "Metric category for memory-related metrics.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:MessageCount
+    a ogit:Entity;
+    rdfs:label "MessageCount";
+    ogit:original <http://open-services.net/ns/perfmon#MessageCount>;
+    dcterms:description "";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:Metric
+    a ogit:Entity;
+    rdfs:label "Metric";
+    ogit:original <http://open-services.net/ns/perfmon#Metric>;
+    dcterms:description "Metric category for metrics defined in the Performance Monitoring vocabulary.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:NetworkIOErrors
+    a ogit:Entity;
+    rdfs:label "NetworkIOErrors";
+    ogit:original <http://open-services.net/ns/perfmon#NetworkIOErrors>;
+    dcterms:description "Network packets sent or received that did not complete successfully.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:NetworkMetrics
+    a ogit:Entity;
+    rdfs:label "NetworkMetrics";
+    ogit:original <http://open-services.net/ns/perfmon#NetworkMetrics>;
+    dcterms:description "Metric category for network-related metrics.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:PerMinute
+    a ogit:Entity;
+    rdfs:label "PerMinute";
+    ogit:original <http://open-services.net/ns/perfmon#PerMinute>;
+    dcterms:description "Units for a quantity where a value of one represents 60 seconds of time.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:PerformanceMonitoringRecord
+    a ogit:Entity;
+    rdfs:label "PerformanceMonitoringRecord";
+    ogit:original <http://open-services.net/ns/perfmon#PerformanceMonitoringRecord>;
+    dcterms:description "A resource representing performance monitoring information";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:QueueDepth
+    a ogit:Entity;
+    rdfs:label "QueueDepth";
+    ogit:original <http://open-services.net/ns/perfmon#QueueDepth>;
+    dcterms:description "Size/lenght/depth of a queue";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:QueueFull
+    a ogit:Entity;
+    rdfs:label "QueueFull";
+    ogit:original <http://open-services.net/ns/perfmon#QueueFull>;
+    dcterms:description "A queue filled to its maximum capacity";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:RealMemoryUsed
+    a ogit:Entity;
+    rdfs:label "RealMemoryUsed";
+    ogit:original <http://open-services.net/ns/perfmon#RealMemoryUsed>;
+    dcterms:description "Real memory used.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:RemoteInboundConnections
+    a ogit:Entity;
+    rdfs:label "RemoteInboundConnections";
+    ogit:original <http://open-services.net/ns/perfmon#RemoteInboundConnections>;
+    dcterms:description "Remote inbound connections";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:RequestFailures
+    a ogit:Entity;
+    rdfs:label "RequestFailures";
+    ogit:original <http://open-services.net/ns/perfmon#RequestFailures>;
+    dcterms:description "Request failures";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:RequestMetrics
+    a ogit:Entity;
+    rdfs:label "RequestMetrics";
+    ogit:original <http://open-services.net/ns/perfmon#RequestMetrics>;
+    dcterms:description "Metric category for requests on a resource, originating from an end user or a system component.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:ResourceAvailabilityMetrics
+    a ogit:Entity;
+    rdfs:label "ResourceAvailabilityMetrics";
+    ogit:original <http://open-services.net/ns/perfmon#ResourceAvailabilityMetrics>;
+    dcterms:description "Metric category for metrics that show resource availability.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:ResourceExhaustionMetrics
+    a ogit:Entity;
+    rdfs:label "ResourceExhaustionMetrics";
+    ogit:original <http://open-services.net/ns/perfmon#ResourceExhaustionMetrics>;
+    dcterms:description "Metric category for metrics that show resource consumption in excess of capacity.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:ResourceUsageMetrics
+    a ogit:Entity;
+    rdfs:label "ResourceUsageMetrics";
+    ogit:original <http://open-services.net/ns/perfmon#ResourceUsageMetrics>;
+    dcterms:description "Metric category for metrics that show resource usage.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:ResponseTime
+    a ogit:Entity;
+    rdfs:label "ResponseTime";
+    ogit:original <http://open-services.net/ns/perfmon#ResponseTime>;
+    dcterms:description "Time required for some system to respond to a request";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:ResponseTimeMetrics
+    a ogit:Entity;
+    rdfs:label "ResponseTimeMetrics";
+    ogit:original <http://open-services.net/ns/perfmon#ResponseTimeMetrics>;
+    dcterms:description "Metric category for metrics that show time it takes for a response to be returned to a request.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:SortOverflows
+    a ogit:Entity;
+    rdfs:label "SortOverflows";
+    ogit:original <http://open-services.net/ns/perfmon#SortOverflows>;
+    dcterms:description "A sort's performance was impacted because the data to be sorted is large enough for it to overflow from (relatively) fast to (relatively) slow storage.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:SqlStatmentFailures
+    a ogit:Entity;
+    rdfs:label "SqlStatmentFailures";
+    ogit:original <http://open-services.net/ns/perfmon#SqlStatmentFailures>;
+    dcterms:description "SQL statements that failed";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:TableSpaceFree
+    a ogit:Entity;
+    rdfs:label "TableSpaceFree";
+    ogit:original <http://open-services.net/ns/perfmon#TableSpaceFree>;
+    dcterms:description "Table space free.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:TableSpaceUsed
+    a ogit:Entity;
+    rdfs:label "TableSpaceUsed";
+    ogit:original <http://open-services.net/ns/perfmon#TableSpaceUsed>;
+    dcterms:description "Table space used.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:ThreadPoolMetrics
+    a ogit:Entity;
+    rdfs:label "ThreadPoolMetrics";
+    ogit:original <http://open-services.net/ns/perfmon#ThreadPoolMetrics>;
+    dcterms:description "Metric category for thread pool-related metrics.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:TimeDatabaseThreadPoolExhausted
+    a ogit:Entity;
+    rdfs:label "TimeDatabaseThreadPoolExhausted";
+    ogit:original <http://open-services.net/ns/perfmon#TimeDatabaseThreadPoolExhausted>;
+    dcterms:description "";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:TimeJCAThreadPoolExhausted
+    a ogit:Entity;
+    rdfs:label "TimeJCAThreadPoolExhausted";
+    ogit:original <http://open-services.net/ns/perfmon#TimeJCAThreadPoolExhausted>;
+    dcterms:description "Time during which a Java Connection Architecture thread pool was fully utilized (no threads were free)";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:TimeThreadPoolExhausted
+    a ogit:Entity;
+    rdfs:label "TimeThreadPoolExhausted";
+    ogit:original <http://open-services.net/ns/perfmon#TimeThreadPoolExhausted>;
+    dcterms:description "Time during which a thread pool was fully utilized (no threads were free)";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:VirtualMemoryUsed
+    a ogit:Entity;
+    rdfs:label "VirtualMemoryUsed";
+    ogit:original <http://open-services.net/ns/perfmon#VirtualMemoryUsed>;
+    dcterms:description "Virtual memory used.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:VirtualizationMetrics
+    a ogit:Entity;
+    rdfs:label "VirtualizationMetrics";
+    ogit:original <http://open-services.net/ns/perfmon#VirtualizationMetrics>;
+    dcterms:description "Metric category for virtualization-related resource metrics.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:VmCpuReady
+    a ogit:Entity;
+    rdfs:label "VmCpuReady";
+    ogit:original <http://open-services.net/ns/perfmon#VmCpuReady>;
+    dcterms:description "Amount of CPU ready from a virtual machine's point of view";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+
+#
+# Attributes
+#
+ogit.OSLC-perfmon:availabilityStatus
+    a ogit:Attribute;
+    rdfs:label "availabilityStatus";
+    ogit:original <http://open-services.net/ns/perfmon#availabilityStatus>;
+    dcterms:description "An indication of availability.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:mobilityEnabled
+    a ogit:Attribute;
+    rdfs:label "mobilityEnabled";
+    ogit:original <http://open-services.net/ns/perfmon#mobilityEnabled>;
+    dcterms:description "An indication about whether the resource can move about dynamically.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:tableReorganizationNeeded
+    a ogit:Attribute;
+    rdfs:label "tableReorganizationNeeded";
+    ogit:original <http://open-services.net/ns/perfmon#tableReorganizationNeeded>;
+    dcterms:description "Indicates whether a database's tables need to be reorganized.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+
+#
+# Verbs
+#
+ogit.OSLC-perfmon:disk
+    a ogit:Verb;
+    rdfs:label "disk";
+    ogit:original <http://open-services.net/ns/perfmon#disk>;
+    dcterms:description "A disk attached, for example, to a computer system. Typically refers to a resource with type crtv:ComputerSystem, but it may refer to other resource types.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:monitoringAgent
+    a ogit:Verb;
+    rdfs:label "monitoringAgent";
+    ogit:original <http://open-services.net/ns/perfmon#monitoringAgent>;
+    dcterms:description "Software that monitors a resource's availability, performance, capacity, or utilization. Typically refers to a resource with type foaf:Agent, but it may refer to other resource types.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+
+ogit.OSLC-perfmon:process
+    a ogit:Verb;
+    rdfs:label "process";
+    ogit:original <http://open-services.net/ns/perfmon#process>;
+    dcterms:description "A process running, for example, in a computer system. Typically refers to a resource with type crtv:ComputerSystem, but it may refer to other resource types.";
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+.
+

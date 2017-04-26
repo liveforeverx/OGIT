@@ -1,0 +1,76 @@
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix vann:           <http://purl.org/vocab/vann/> .
+@prefix purl:           <http://www.purl.org/> .
+@prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.Knowledge:           <http://www.purl.org/ogit/Knowledge/> .
+
+#
+# Ontology
+#
+ogit:Knowledge
+    a owl:Ontology;
+    rdfs:label "OGIT Knowledge";
+    dcterms:creator "arago GmbH";
+    dcterms:contributor "Fabian Meyer";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/Knowledge/";
+    vann:preferredNamespacePrefix "ogit.Knowledge";
+    owl:versionInfo "__OGIT_VERSION__";
+    owl:imports purl:ogit
+.
+
+#
+# Entities
+#
+ogit.Knowledge:AcquisitionSession
+    a rdfs:Class;
+    rdfs:subClassOf ogit:Entity;
+    rdfs:label "AcquisitionSession";
+    dcterms:description "Entity to describe a Knowledge Acquisition Session, linking to Conversation, Structured Task Steps and the Knowledge";
+    dcterms:valid "start=2017-03-14;";
+    dcterms:creator "cwalker@arago.de";
+    dcterms:created "2017-03-14";
+    dcterms:modified "2017-03-14";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2017-03-14";
+            dcterms:description "initial";
+            dcterms:creator "cwalker@arago.de"
+        ];
+.
+
+ogit.Knowledge:Step
+    a ogit:Entity;
+    rdfs:label "Step";
+    dcterms:description "this is the description of a single - hopefully atomic - step in (potentially multi-step) process";
+    dcterms:valid "start=2017-03-14;";
+    dcterms:creator "cwalker@arago.de";
+    dcterms:created "2017-03-14";
+    dcterms:modified "2017-03-14";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2017-03-14";
+            dcterms:description "initial";
+            dcterms:creator "cwalker@arago.de"
+        ];
+.
+
+
+#
+# Attributes
+#
+
+#
+# Verbs
+#

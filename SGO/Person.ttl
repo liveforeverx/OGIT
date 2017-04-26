@@ -2,21 +2,22 @@
 @prefix owl:         <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms:     <http://purl.org/dc/terms/> .
 @prefix vann:        <http://purl.org/vocab/vann/> .
+@prefix purl:           <http://www.purl.org/> .
 @prefix ogit:        <http://www.purl.org/ogit/> .
 @prefix ogit.person: <http://www.purl.org/ogit/> .
 
 #
 # Ontology
 #
-<http://www.purl.org/ogit/person>
+ogit:person
     a owl:Ontology;
-    rdfs:label "OGIT Person Vocabulary";
+    rdfs:label "OGIT Person";
     dcterms:creator "arago GmbH";
     dcterms:contributor "Fabian Meyer";
     vann:preferredNamespaceUri "http://www.purl.org/ogit/";
     vann:preferredNamespacePrefix "ogit.person";
     owl:versionInfo "__OGIT_VERSION__";
-    owl:imports <http://www.purl.org/ogit>
+    owl:imports purl:ogit
 .
 
 #

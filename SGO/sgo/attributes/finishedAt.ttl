@@ -3,28 +3,28 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:finishedAt
-	a ogit:Attribute;
-	rdfs:label "finishedAt";
-	dcterms:description """Defines a point in time when the work on a change, task, or similar entity was actually finished.
+    a ogit:Attribute;
+    rdfs:label "finishedAt";
+    dcterms:description """Defines a point in time when the work on a change, task, or similar entity was actually finished.
 The values must be combined date and time with time zone designator according to ISO 8601""";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		],
-		[
-			dcterms:identifier "2";
-			dcterms:date "2015-07-06";
-			dcterms:description "updated";
-			dcterms:creator "Peter Larem"
-		];
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-07-06";
+            dcterms:description "updated";
+            dcterms:creator "Peter Larem"
+        ];
 .

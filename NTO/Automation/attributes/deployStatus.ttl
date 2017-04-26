@@ -4,21 +4,21 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:deployStatus
-	a ogit:Attribute;
-	rdfs:label "deployStatus";
-	dcterms:description "String value, represents the status if an automation Knowledge Item is not deployed into an Automation Engine.";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2016-01-25;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2016-01-25";
-	dcterms:modified "2016-01-25";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2016-01-25";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		];
+    a ogit:Attribute;
+    rdfs:label "deployStatus";
+    dcterms:description "String value, represents the status if an automation Knowledge Item is not deployed into an Automation Engine.";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2016-01-25;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2016-01-25";
+    dcterms:modified "2016-01-25";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-01-25";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
 .

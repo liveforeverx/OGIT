@@ -9,71 +9,71 @@
 # Ontology
 #
 <http://www.purl.org/ogit/catalog>
-	a owl:Ontology;
-	rdfs:label "OGIT Catalog Vocabulary";
-	dcterms:description """This ontology contains terms regarding catalogs."""@en;
-	dcterms:creator "arago GmbH";
-	dcterms:contributor "Fabian Meyer";
-	vann:preferredNamespaceUri "http://www.purl.org/ogit/";
-	vann:preferredNamespacePrefix "ogit.catalog";
-	owl:versionInfo "__OGIT_VERSION__";
-  owl:imports <http://www.purl.org/ogit>
+    a owl:Ontology;
+    rdfs:label "OGIT Catalog Vocabulary";
+    dcterms:description """This ontology contains terms regarding catalogs."""@en;
+    dcterms:creator "arago GmbH";
+    dcterms:contributor "Fabian Meyer";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/";
+    vann:preferredNamespacePrefix "ogit.catalog";
+    owl:versionInfo "__OGIT_VERSION__";
+    owl:imports <http://www.purl.org/ogit>
 .
 
 #
 # Entities
 #
 ogit.catalog:Catalog
-	a ogit:Entity;
-	rdfs:label "Catalog";
-	dcterms:description "Any kind of catalog which could be offered by an Organization (e.g. corresponding to a vendor). Might contain products, services, books, etc.";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "SGO";
-	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:mandatory-attributes
-		ogit:name;
-	ogit:optional-attributes
-		ogit:description,
-		ogit:id,
-		ogit:version,
-		ogit:type;
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		];
+    a ogit:Entity;
+    rdfs:label "Catalog";
+    dcterms:description "Any kind of catalog which could be offered by an Organization (e.g. corresponding to a vendor). Might contain products, services, books, etc.";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "SGO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:mandatory-attributes
+        ogit:name;
+    ogit:optional-attributes
+        ogit:description,
+        ogit:id,
+        ogit:version,
+        ogit:type;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
 .
 
 ogit.catalog:CatalogItem
-	a ogit:Entity;
-	rdfs:label "CatalogItem";
-	dcterms:description "An entry within a Catalog. the semantics of Item is more general than that of http://purl.org/goodrelations/v1#ProductOrService";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "SGO";
-	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:mandatory-attributes
-		ogit:name;
-	ogit:optional-attributes
-		ogit:description;
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		];
+    a ogit:Entity;
+    rdfs:label "CatalogItem";
+    dcterms:description "An entry within a Catalog. the semantics of Item is more general than that of http://purl.org/goodrelations/v1#ProductOrService";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "SGO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:mandatory-attributes
+        ogit:name;
+    ogit:optional-attributes
+        ogit:description;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
 .

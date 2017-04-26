@@ -6,36 +6,36 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit:rejects
-	a ogit:Verb;
-	rdfs:label "rejects";
-	dcterms:description "Indicates if an entity rejects something else.";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-09-02;";
-	dcterms:creator "bmoore@arago.de";
-	dcterms:created "2015-09-02";
-	dcterms:modified "2017-03-01";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-09-02";
-			dcterms:description "initial";
-			dcterms:creator "bmoore@arago.de"
-		],
-		[
-			dcterms:identifier "2";
-			dcterms:date "2017-03-01";
-			dcterms:description "Added allowed";
-			dcterms:creator "stravlos@arago.de"
-		];
-	ogit:allowed
-		[
-			ogit:from ogit.Forum:Profile;
-			ogit:to ogit.Forum:Invite
-		],
-		[
-			ogit:from ogit.person:Person;
-			ogit:to ogit.event:Alert
-		];
+    a ogit:Verb;
+    rdfs:label "rejects";
+    dcterms:description "Indicates if an entity rejects something else.";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-09-02;";
+    dcterms:creator "bmoore@arago.de";
+    dcterms:created "2015-09-02";
+    dcterms:modified "2017-03-01";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-09-02";
+            dcterms:description "initial";
+            dcterms:creator "bmoore@arago.de"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2017-03-01";
+            dcterms:description "Added allowed";
+            dcterms:creator "stravlos@arago.de"
+        ];
+    ogit:allowed
+        [
+            ogit:from ogit.Forum:Profile;
+            ogit:to ogit.Forum:Invite
+        ],
+        [
+            ogit:from ogit.person:Person;
+            ogit:to ogit.event:Alert
+        ];
 .

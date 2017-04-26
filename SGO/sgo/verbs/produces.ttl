@@ -6,18 +6,18 @@
 @prefix ogit.BusinessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
 
 ogit:produces
-	a ogit:Verb;
-	rdfs:label "produces";
-	dcterms:description "This relationship indicates that one produces some work for another.";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2016-08-08;";
-	dcterms:creator "Alexander Ryabtsev";
-	dcterms:created "2016-08-08";
-	dcterms:modified "2016-08-08";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:history
-		[
+    a ogit:Verb;
+    rdfs:label "produces";
+    dcterms:description "This relationship indicates that one produces some work for another.";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2016-08-08;";
+    dcterms:creator "Alexander Ryabtsev";
+    dcterms:created "2016-08-08";
+    dcterms:modified "2016-08-08";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
             dcterms:identifier "1";
             dcterms:date "2016-08-08";
             dcterms:description "initial";
@@ -29,12 +29,12 @@ ogit:produces
             dcterms:description "Add edge from person to milestone.";
             dcterms:creator "Alexander Ryabtsev"
         ];
-	ogit:allowed
-		[
-			ogit:from ogit.person:Person;
-			ogit:to ogit.BusinessProcess:Project
-		],
-		[
+    ogit:allowed
+        [
+            ogit:from ogit.person:Person;
+            ogit:to ogit.BusinessProcess:Project
+        ],
+        [
             ogit:from ogit.org:Organization;
             ogit:to ogit.BusinessProcess:Project
         ],

@@ -4,28 +4,28 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:Banner
-	a ogit:Entity;
-	rdfs:label "Banner";
-	dcterms:description """Standout content, i.e. a header, hero-unit or part of a carousel.
+    a ogit:Entity;
+    rdfs:label "Banner";
+    dcterms:description """Standout content, i.e. a header, hero-unit or part of a carousel.
 Examples:
     http://getbootstrap.com/examples/carousel/ (a carousel of banners)
     http://getbootstrap.com/examples/jumbotron/ (the content at the top is a banner)""";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-04-27;";
-	dcterms:creator "cwalker@arago.de";
-	dcterms:created "2015-04-27";
-	dcterms:modified "2015-04-27";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "NTO";
-	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:mandatory-attributes
-		ogit:content;
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-04-27";
-			dcterms:description "Initial Creation";
-			dcterms:creator "cwalker@arago.de"
-		];
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-04-27;";
+    dcterms:creator "cwalker@arago.de";
+    dcterms:created "2015-04-27";
+    dcterms:modified "2015-04-27";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:mandatory-attributes
+        ogit:content;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-04-27";
+            dcterms:description "Initial Creation";
+            dcterms:creator "cwalker@arago.de"
+        ];
 .

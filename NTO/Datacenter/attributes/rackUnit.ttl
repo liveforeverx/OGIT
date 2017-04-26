@@ -4,21 +4,21 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Datacenter:rackUnit
-	a ogit:Attribute;
-	rdfs:label "rackUnit";
-	dcterms:description "The name of the RackUnit within a datacenter.";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-10-15;";
-	dcterms:creator "Aymen Ayoub";
-	dcterms:created "1970-01-01";
-	dcterms:modified "2015-10-15";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-10-15";
-			dcterms:description "initial";
-			dcterms:creator "Aymen Ayoub"
-		];
+    a ogit:Attribute;
+    rdfs:label "rackUnit";
+    dcterms:description "The name of the RackUnit within a datacenter.";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-10-15;";
+    dcterms:creator "Aymen Ayoub";
+    dcterms:created "1970-01-01";
+    dcterms:modified "2015-10-15";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-10-15";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ];
 .

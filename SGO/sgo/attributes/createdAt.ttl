@@ -3,27 +3,27 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:createdAt
-	a ogit:Attribute;
-	rdfs:label "createdAt";
-	dcterms:description "Defines a point in time when a ticket/incident/event etc was created or recorded.";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		],
-		[
-			dcterms:identifier "2";
-			dcterms:date "2015-10-07";
-			dcterms:description "delete regex";
-			dcterms:creator "Peter Larem"
-		];
+    a ogit:Attribute;
+    rdfs:label "createdAt";
+    dcterms:description "Defines a point in time when a ticket/incident/event etc was created or recorded.";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-10-07";
+            dcterms:description "delete regex";
+            dcterms:creator "Peter Larem"
+        ];
 .

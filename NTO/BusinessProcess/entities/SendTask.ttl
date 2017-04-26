@@ -4,26 +4,26 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:SendTask
-	a ogit:Entity;
-	rdfs:label "SendTask";
-	dcterms:description "The Send Tasks from BPMN2 are technical, and the process engine executes them. Therefore, they mainly are used for calling web services asynchronously through message queues.";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "NTO";
-	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:optional-attributes
-		ogit:name,
-		ogit:description;
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		];
+    a ogit:Entity;
+    rdfs:label "SendTask";
+    dcterms:description "The Send Tasks from BPMN2 are technical, and the process engine executes them. Therefore, they mainly are used for calling web services asynchronously through message queues.";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:name,
+        ogit:description;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
 .

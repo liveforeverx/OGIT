@@ -9,166 +9,166 @@
 # Ontology
 #
 <http://www.purl.org/ogit/data>
-	a owl:Ontology;
-	rdfs:label "OGIT Data Vocabulary";
-	dcterms:description """This ontology contains terms regarding data."""@en;
-	dcterms:creator "arago GmbH";
-	dcterms:contributor "Fabian Meyer";
-	vann:preferredNamespaceUri "http://www.purl.org/ogit/";
-	vann:preferredNamespacePrefix "ogit.data";
-	owl:versionInfo "__OGIT_VERSION__";
-  owl:imports <http://www.purl.org/ogit>
+    a owl:Ontology;
+    rdfs:label "OGIT Data Vocabulary";
+    dcterms:description """This ontology contains terms regarding data."""@en;
+    dcterms:creator "arago GmbH";
+    dcterms:contributor "Fabian Meyer";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/";
+    vann:preferredNamespacePrefix "ogit.data";
+    owl:versionInfo "__OGIT_VERSION__";
+    owl:imports <http://www.purl.org/ogit>
 .
 
 #
 # Entities
 #
 ogit.data:Comment
-	a ogit:Entity;
-	rdfs:label "Comment";
-	dcterms:description "Defines comments for a ticket, issue or another type of entity. Also known as WorkLog, ChangeLog or HistoryEntry.";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "SGO";
-	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:optional-attributes
-		ogit:id,
-		ogit:content,
-		ogit:creator;
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		],
-		[
-			dcterms:identifier "2";
-			dcterms:date "2015-08-20";
-			dcterms:description "updated Attribute ogit/id and ogit/content added.";
-			dcterms:creator "Aymen Ayoub"
-		],
-		[
-			dcterms:identifier "3";
-			dcterms:date "2015-09-01";
-			dcterms:description "updated Attribute ogit/id to be optional.";
-			dcterms:creator "Aymen Ayoub"
-		],
-		[
-			dcterms:identifier "4";
-			dcterms:date "2015-10-16";
-			dcterms:description "added ogit/creater as optional.";
-			dcterms:creator "Peter Larem"
-		];
+    a ogit:Entity;
+    rdfs:label "Comment";
+    dcterms:description "Defines comments for a ticket, issue or another type of entity. Also known as WorkLog, ChangeLog or HistoryEntry.";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "SGO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:id,
+        ogit:content,
+        ogit:creator;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-08-20";
+            dcterms:description "updated Attribute ogit/id and ogit/content added.";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-09-01";
+            dcterms:description "updated Attribute ogit/id to be optional.";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2015-10-16";
+            dcterms:description "added ogit/creater as optional.";
+            dcterms:creator "Peter Larem"
+        ];
 .
 
 ogit.data:CustomApplicationData
-	a ogit:Entity;
-	rdfs:label "CustomApplicationData";
-	dcterms:description """Entity to store custom application data, a storage place not connected to any other entity and therefore isolated from
+    a ogit:Entity;
+    rdfs:label "CustomApplicationData";
+    dcterms:description """Entity to store custom application data, a storage place not connected to any other entity and therefore isolated from
 the global ontology. The storage of data through this entity is discouraged due to low performance.""";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "SGO";
-	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		];
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "SGO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
 .
 
 ogit.data:Hyperlink
-	a ogit:Entity;
-	rdfs:label "Hyperlink";
-	dcterms:description "A representation of an (optionally) titled Hyperlink to some media. No protocol restrictions imposed.";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-06-09;";
-	dcterms:creator "cwalker@arago.de";
-	dcterms:created "2015-06-09";
-	dcterms:modified "2015-06-09";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "SGO";
-	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:any-attributes "true";
-	ogit:mandatory-attributes
-		ogit:url;
-	ogit:optional-attributes
-		ogit:title;
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "cwalker@arago.de"
-		];
+    a ogit:Entity;
+    rdfs:label "Hyperlink";
+    dcterms:description "A representation of an (optionally) titled Hyperlink to some media. No protocol restrictions imposed.";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-06-09;";
+    dcterms:creator "cwalker@arago.de";
+    dcterms:created "2015-06-09";
+    dcterms:modified "2015-06-09";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "SGO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:any-attributes "true";
+    ogit:mandatory-attributes
+        ogit:url;
+    ogit:optional-attributes
+        ogit:title;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "cwalker@arago.de"
+        ];
 .
 
 ogit.data:Note
-	a ogit:Entity;
-	rdfs:label "Note";
-	dcterms:description "Any type of note.";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-04-29;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-04-29";
-	dcterms:modified "2013-04-29";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "SGO";
-	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:optional-attributes
-		ogit:name,
-		ogit:content;
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-04-29";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		];
+    a ogit:Entity;
+    rdfs:label "Note";
+    dcterms:description "Any type of note.";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-04-29;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-04-29";
+    dcterms:modified "2013-04-29";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "SGO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:name,
+        ogit:content;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-04-29";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
 .
 
 ogit.data:Timeseries
-	a ogit:Entity;
-	rdfs:label "Timeseries";
-	dcterms:description "A time series is a sequence of data points, measured typically at successive points in time spaced at uniform time intervals.";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "SGO";
-	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:optional-attributes
-		ogit:unit,
-		ogit:name,
-		ogit:description,
-		ogit:instance;
-	ogit:indexed-attributes
-		ogit:name,
-		ogit:description,
-		ogit:instance;
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		];
+    a ogit:Entity;
+    rdfs:label "Timeseries";
+    dcterms:description "A time series is a sequence of data points, measured typically at successive points in time spaced at uniform time intervals.";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "SGO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:unit,
+        ogit:name,
+        ogit:description,
+        ogit:instance;
+    ogit:indexed-attributes
+        ogit:name,
+        ogit:description,
+        ogit:instance;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
 .

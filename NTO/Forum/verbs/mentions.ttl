@@ -4,36 +4,36 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:mentions
-	a ogit:Verb;
-	rdfs:label "mentions";
-	dcterms:description """This verb was envisaged to represent the *Social Media* menaing of the word mention (or
+    a ogit:Verb;
+    rdfs:label "mentions";
+    dcterms:description """This verb was envisaged to represent the *Social Media* menaing of the word mention (or
 the Twitter-ism *at-mention*). However it simple represents that one entity mentions another,
 for example cross-references in documentation would also be a valid use-case.""";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-04-27;";
-	dcterms:creator "cwalker@arago.de";
-	dcterms:created "2015-04-27";
-	dcterms:modified "2015-04-27";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-04-27";
-			dcterms:description "intitial inception";
-			dcterms:creator "cwalker@arago.de"
-		];
-	ogit:allowed
-		[
-			ogit:from ogit:Comment;
-			ogit:to ogit.Forum:Profile
-		],
-		[
-			ogit:from ogit.Forum:Post;
-			ogit:to ogit.Forum:Profile
-		],
-		[
-			ogit:from ogit.Forum:Reply;
-			ogit:to ogit.Forum:Profile
-		];
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-04-27;";
+    dcterms:creator "cwalker@arago.de";
+    dcterms:created "2015-04-27";
+    dcterms:modified "2015-04-27";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-04-27";
+            dcterms:description "intitial inception";
+            dcterms:creator "cwalker@arago.de"
+        ];
+    ogit:allowed
+        [
+            ogit:from ogit:Comment;
+            ogit:to ogit.Forum:Profile
+        ],
+        [
+            ogit:from ogit.Forum:Post;
+            ogit:to ogit.Forum:Profile
+        ],
+        [
+            ogit:from ogit.Forum:Reply;
+            ogit:to ogit.Forum:Profile
+        ];
 .

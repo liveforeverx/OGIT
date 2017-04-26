@@ -9,62 +9,62 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit:associates
-	a ogit:Verb;
-	rdfs:label "associates";
-	dcterms:description "";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		],
-		[
-			dcterms:identifier "2";
-			dcterms:date "2015-05-26";
-			dcterms:description "change Issue to AutomationIssue";
-			dcterms:creator "Peter Larem"
-		],
-		[
-			dcterms:identifier "3";
-			dcterms:date "2015-12-04";
-			dcterms:description "Added Forum/Group -> Forum/Role";
-			dcterms:creator "bmoore@arago.de"
-		];
-	ogit:allowed
-		[
-			ogit:from ogit.Automation:AutomationIssue;
-			ogit:to ogit.task:Question
-		],
-		[
-			ogit:from ogit.Automation:MARSNode;
-			ogit:to ogit.Cost:CostElement
-		],
-		[
-			ogit:from ogit.asset:Asset;
-			ogit:to ogit.Cost:CostElement
-		],
-		[
-			ogit:from ogit.Automation:MARSNodeTemplate;
-			ogit:to ogit.Cost:CostElement
-		],
-		[
-			ogit:from ogit.org:Organization;
-			ogit:to ogit.org:Role
-		],
-		[
-			ogit:from ogit.Forum:KnowledgeItemHistory;
-			ogit:to ogit.Forum:KnowledgeItemHistory
-		],
-		[
-			ogit:from ogit.Forum:Group;
-			ogit:to ogit.Forum:Role
-		];
+    a ogit:Verb;
+    rdfs:label "associates";
+    dcterms:description "";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-05-26";
+            dcterms:description "change Issue to AutomationIssue";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-12-04";
+            dcterms:description "Added Forum/Group -> Forum/Role";
+            dcterms:creator "bmoore@arago.de"
+        ];
+    ogit:allowed
+        [
+            ogit:from ogit.Automation:AutomationIssue;
+            ogit:to ogit.task:Question
+        ],
+        [
+            ogit:from ogit.Automation:MARSNode;
+            ogit:to ogit.Cost:CostElement
+        ],
+        [
+            ogit:from ogit.asset:Asset;
+            ogit:to ogit.Cost:CostElement
+        ],
+        [
+            ogit:from ogit.Automation:MARSNodeTemplate;
+            ogit:to ogit.Cost:CostElement
+        ],
+        [
+            ogit:from ogit.org:Organization;
+            ogit:to ogit.org:Role
+        ],
+        [
+            ogit:from ogit.Forum:KnowledgeItemHistory;
+            ogit:to ogit.Forum:KnowledgeItemHistory
+        ],
+        [
+            ogit:from ogit.Forum:Group;
+            ogit:to ogit.Forum:Role
+        ];
 .

@@ -3,22 +3,22 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:installStatus
-	a ogit:Attribute;
-	rdfs:label "installStatus";
-	dcterms:description """An installation status for an entity.
+    a ogit:Attribute;
+    rdfs:label "installStatus";
+    dcterms:description """An installation status for an entity.
 At this level of specification no list of values is specified. However, applications using this attribute are expected to allow only a fixed list of values that seems usefual in the application's semantic context.""";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-07-27;";
-	dcterms:creator "Aymen Ayoub";
-	dcterms:created "2015-07-27";
-	dcterms:modified "2015-07-27";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-07-27";
-			dcterms:description "initial";
-			dcterms:creator "Aymen Ayoub"
-		];
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-07-27;";
+    dcterms:creator "Aymen Ayoub";
+    dcterms:created "2015-07-27";
+    dcterms:modified "2015-07-27";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-07-27";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ];
 .

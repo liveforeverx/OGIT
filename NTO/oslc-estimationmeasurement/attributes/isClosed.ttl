@@ -4,29 +4,29 @@
 @prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-ems:isClosed
-	a ogit:Attribute;
-	rdfs:label "isClosed";
-	ogit:original <http://open-services.net/ns/ems#isClosed>;
-	dcterms:description """This boolean property indicates if the project is closed.
+    a ogit:Attribute;
+    rdfs:label "isClosed";
+    ogit:original <http://open-services.net/ns/ems#isClosed>;
+    dcterms:description """This boolean property indicates if the project is closed.
 No further activities or measurements are done on closed projects.
 The measurements of closed projects can be used to calibrate the estimates for new projects.
 When a project is completed and all measurements on it have been performed,
 it is marked as closed by setting this property to <code>true</code>.""";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2016-09-22;";
-	dcterms:creator "OGIT Importer";
-	dcterms:created "2016-09-22";
-	dcterms:modified "2016-09-22";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:hide "false";
-	ogit:validation-type "";
-	ogit:validation-parameter "";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2016-09-22";
-			dcterms:description "initial";
-			dcterms:creator "OGIT Importer"
-		];
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:validation-type "";
+    ogit:validation-parameter "";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
 .

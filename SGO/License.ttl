@@ -10,124 +10,124 @@
 # Ontology
 #
 <http://www.purl.org/ogit/license>
-	a owl:Ontology;
-	rdfs:label "OGIT License Vocabulary";
-	dcterms:description """This ontology contains terms regarding licenses."""@en;
-	dcterms:creator "arago GmbH";
-	dcterms:contributor "Fabian Meyer";
-	vann:preferredNamespaceUri "http://www.purl.org/ogit/";
-	vann:preferredNamespacePrefix "ogit.license";
-	owl:versionInfo "__OGIT_VERSION__";
-  owl:imports <http://www.purl.org/ogit>
+    a owl:Ontology;
+    rdfs:label "OGIT License Vocabulary";
+    dcterms:description """This ontology contains terms regarding licenses."""@en;
+    dcterms:creator "arago GmbH";
+    dcterms:contributor "Fabian Meyer";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/";
+    vann:preferredNamespacePrefix "ogit.license";
+    owl:versionInfo "__OGIT_VERSION__";
+    owl:imports <http://www.purl.org/ogit>
 .
 
 #
 # Entities
 #
 ogit.license:License
-	a ogit:Entity;
-	rdfs:label "License";
-	dcterms:description "This entity type allows to store license information or actual licenses.";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "SGO";
-	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:mandatory-attributes
-		ogit:id;
-	ogit:optional-attributes
-		ogit:validFrom,
-		ogit:expirationDate,
-		ogit:subject,
-		ogit:licenseKey,
-		ogit:createdAt,
-		ogit:licenseType,
+    a ogit:Entity;
+    rdfs:label "License";
+    dcterms:description "This entity type allows to store license information or actual licenses.";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "SGO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:mandatory-attributes
+        ogit:id;
+    ogit:optional-attributes
+        ogit:validFrom,
+        ogit:expirationDate,
+        ogit:subject,
+        ogit:licenseKey,
+        ogit:createdAt,
+        ogit:licenseType,
                 ogit:creator,
                 ogit:validTo,
                 ogit:deadline;
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		],
-		[
-			dcterms:identifier "2";
-			dcterms:date "2016-11-29";
-			dcterms:description "add attribute validTo";
-			dcterms:creator "stravlos@arago.co"
-		],
-		[
-			dcterms:identifier "3";
-			dcterms:date "2016-12-19";
-			dcterms:description "add attribute deadlie";
-			dcterms:creator "stravlos@arago.co"
-		];
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2016-11-29";
+            dcterms:description "add attribute validTo";
+            dcterms:creator "stravlos@arago.co"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2016-12-19";
+            dcterms:description "add attribute deadlie";
+            dcterms:creator "stravlos@arago.co"
+        ];
 .
 
 ogit.license:LicenseRequest
-	a ogit:Entity;
-	rdfs:label "LicenseRequest";
-	dcterms:description """This allows clients to place a request for a license.
+    a ogit:Entity;
+    rdfs:label "LicenseRequest";
+    dcterms:description """This allows clients to place a request for a license.
 Usually some license admin personnel will use the information from such a request to create the actual license.
 A request might contain a valid LicenseToken to indicate that this request is pre-approved.""";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "SGO";
-	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:mandatory-attributes
-		ogit:id;
-	ogit:optional-attributes
-		ogit:description,
-		ogit:token,
-		ogit:licenseRequestStatus;
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		];
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "SGO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:mandatory-attributes
+        ogit:id;
+    ogit:optional-attributes
+        ogit:description,
+        ogit:token,
+        ogit:licenseRequestStatus;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
 .
 
 ogit.license:LicenseToken
-	a ogit:Entity;
-	rdfs:label "LicenseToken";
-	dcterms:description """This serves as a placeholder for pre-approved license request it will be subsituted by a real license throughout the licence request process.
+    a ogit:Entity;
+    rdfs:label "LicenseToken";
+    dcterms:description """This serves as a placeholder for pre-approved license request it will be subsituted by a real license throughout the licence request process.
 This will created by a license admin and communicated to potential licence requesters.""";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "SGO";
-	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:mandatory-attributes
-		ogit:id;
-	ogit:optional-attributes
-		ogit:description,
-		ogit:validFrom,
-		ogit:expirationDate,
-		ogit:licenseType,
-		ogit:token,
-		ogit.ServiceManagement:licenseTokenStatus;
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		];
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "SGO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:mandatory-attributes
+        ogit:id;
+    ogit:optional-attributes
+        ogit:description,
+        ogit:validFrom,
+        ogit:expirationDate,
+        ogit:licenseType,
+        ogit:token,
+        ogit.ServiceManagement:licenseTokenStatus;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
 .

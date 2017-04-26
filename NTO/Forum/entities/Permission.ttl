@@ -4,23 +4,23 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit.Forum:Permission
-	a ogit:Entity;
-	rdfs:label "Permission";
-	dcterms:description "Permission is used to approve a Nodes interaction with another Node";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-09-04;";
-	dcterms:creator "bmoore@arago.de";
-	dcterms:created "2015-09-04";
-	dcterms:modified "2015-09-04";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "NTO";
-	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-09-04";
-			dcterms:description "Initial Creation";
-			dcterms:creator "bmoore@arago.de"
-		];
+    a ogit:Entity;
+    rdfs:label "Permission";
+    dcterms:description "Permission is used to approve a Nodes interaction with another Node";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-09-04;";
+    dcterms:creator "bmoore@arago.de";
+    dcterms:created "2015-09-04";
+    dcterms:modified "2015-09-04";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-09-04";
+            dcterms:description "Initial Creation";
+            dcterms:creator "bmoore@arago.de"
+        ];
 .

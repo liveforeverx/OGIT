@@ -4,29 +4,29 @@
 @prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-ems:PoissonDistribution
-	a ogit:Entity;
-	rdfs:label "PoissonDistribution";
-	ogit:original <http://open-services.net/ns/ems#PoissonDistribution>;
-	dcterms:description """
+    a ogit:Entity;
+    rdfs:label "PoissonDistribution";
+    ogit:original <http://open-services.net/ns/ems#PoissonDistribution>;
+    dcterms:description """
 A <em>Poisson distribution</em> is a probability distribution that gives the probability
 that a given number of events will occur in a fixed time period.
 This distribution is completely specified by a single parameter often denoted by the
 Greek letter <em>lambda</em>.
 Lambda is given by <a href=\"#lambda\"><code>ems:lambda</code>.""";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2016-09-22;";
-	dcterms:creator "OGIT Importer";
-	dcterms:created "2016-09-22";
-	dcterms:modified "2016-09-22";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "NTO";
-	ogit:parent ogit:Node;
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2016-09-22";
-			dcterms:description "initial";
-			dcterms:creator "OGIT Importer"
-		];
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
 .

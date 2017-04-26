@@ -4,10 +4,10 @@
 @prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-ems:MeasureDistribution
-	a ogit:Entity;
-	rdfs:label "MeasureDistribution";
-	ogit:original <http://open-services.net/ns/ems#MeasureDistribution>;
-	dcterms:description """
+    a ogit:Entity;
+    rdfs:label "MeasureDistribution";
+    ogit:original <http://open-services.net/ns/ems#MeasureDistribution>;
+    dcterms:description """
 A <em>measure distribution</em> is like a measure
 (see <a href=\"#Measure\"><code>ems:Measure</code></a>)
 except that it gives a probability distribution for the numeric value of a measure instead of a precise numeric value.
@@ -17,20 +17,20 @@ Measure distributions are used in scenario assumptions
 estimate predications
 (see <a href=\"#predicts\"><code>ems:predicts</code></a> and
 <a href=\"#predictsTable\"><code>ems:predictsTable</code></a>).""";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2016-09-22;";
-	dcterms:creator "OGIT Importer";
-	dcterms:created "2016-09-22";
-	dcterms:modified "2016-09-22";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "NTO";
-	ogit:parent ogit:Node;
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2016-09-22";
-			dcterms:description "initial";
-			dcterms:creator "OGIT Importer"
-		];
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
 .

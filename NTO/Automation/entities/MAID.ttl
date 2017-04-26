@@ -4,9 +4,9 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Automation:MAID
-	a ogit:Entity;
-	rdfs:label "MAID";
-	dcterms:description """The Monitoring-Automation Interface Description (MAID) is an abstract definition of
+    a ogit:Entity;
+    rdfs:label "MAID";
+    dcterms:description """The Monitoring-Automation Interface Description (MAID) is an abstract definition of
 
 
 1. a timeseries to be monitored
@@ -28,22 +28,22 @@ The abstract MAID definitions are then mapped to the MARS model within the engin
 Thus MAID ensures that the arago Automation Engine is compatible to any monitoring system and can fully interact 
 with them. By formalizing the interface the information verification process and definition of required add-ons 
 to the monitoring systems becomes possible.""";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "NTO";
-	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:mandatory-attributes
-		ogit.Automation:maidFormalRepresentation;
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		];
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:mandatory-attributes
+        ogit.Automation:maidFormalRepresentation;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
 .

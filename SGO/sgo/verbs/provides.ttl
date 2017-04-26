@@ -6,46 +6,46 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:provides
-	a ogit:Verb;
-	rdfs:label "provides";
-	dcterms:description "Verb showing if one entity provides something to another.";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-07-24;";
-	dcterms:creator "Aymen Ayoub";
-	dcterms:created "2015-07-24";
-	dcterms:modified "2015-07-24";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-07-24";
-			dcterms:description "initial";
-			dcterms:creator "Aymen Ayoub"
-		],
-		[
-			dcterms:identifier "2";
-			dcterms:date "2015-07-27";
-			dcterms:description "updated edge from ogit/ConfigurationItem -> ogit/ConfigurationItem added";
-			dcterms:creator "Aymen Ayoub"
-		],
-		[
-			dcterms:identifier "3";
-			dcterms:date "2015-10-15";
-			dcterms:description "updated edge from ogit/Automation/MARSNode -> ogit/Automation/MARSNode added";
-			dcterms:creator "Aymen Ayoub"
-		];
-	ogit:allowed
-		[
-			ogit:from ogit.org:Organization;
-			ogit:to ogit.config:ConfigurationItem
-		],
-		[
-			ogit:from ogit.config:ConfigurationItem;
-			ogit:to ogit.config:ConfigurationItem
-		],
-		[
-			ogit:from ogit.Automation:MARSNode;
-			ogit:to ogit.Automation:MARSNode
-		];
+    a ogit:Verb;
+    rdfs:label "provides";
+    dcterms:description "Verb showing if one entity provides something to another.";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-07-24;";
+    dcterms:creator "Aymen Ayoub";
+    dcterms:created "2015-07-24";
+    dcterms:modified "2015-07-24";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-07-24";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-07-27";
+            dcterms:description "updated edge from ogit/ConfigurationItem -> ogit/ConfigurationItem added";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-10-15";
+            dcterms:description "updated edge from ogit/Automation/MARSNode -> ogit/Automation/MARSNode added";
+            dcterms:creator "Aymen Ayoub"
+        ];
+    ogit:allowed
+        [
+            ogit:from ogit.org:Organization;
+            ogit:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit:from ogit.config:ConfigurationItem;
+            ogit:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit:from ogit.Automation:MARSNode;
+            ogit:to ogit.Automation:MARSNode
+        ];
 .

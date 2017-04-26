@@ -4,10 +4,10 @@
 @prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-ems:DimensionMember
-	a ogit:Entity;
-	rdfs:label "DimensionMember";
-	ogit:original <http://open-services.net/ns/ems#DimensionMember>;
-	dcterms:description """
+    a ogit:Entity;
+    rdfs:label "DimensionMember";
+    ogit:original <http://open-services.net/ns/ems#DimensionMember>;
+    dcterms:description """
 A <em>dimension member</em> is some subset of a dimension.
 For example, work on a project is performed by people in various roles.
 It is often of interest to break down an effort estimate or measurement by role.
@@ -17,20 +17,20 @@ include <em>manager</em>
 (<a href=\"http://open-services.net/ns/ems/dimension-member#Manager\"><code>dimension-member:Manager</code></a>
 and <em>programmer</em>
 (<a href=\"http://open-services.net/ns/ems/dimension-member#Programmer\"><code>dimension-member:Programmer</code></a>).""";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2016-09-22;";
-	dcterms:creator "OGIT Importer";
-	dcterms:created "2016-09-22";
-	dcterms:modified "2016-09-22";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "NTO";
-	ogit:parent ogit:Node;
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2016-09-22";
-			dcterms:description "initial";
-			dcterms:creator "OGIT Importer"
-		];
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent ogit:Node;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
 .

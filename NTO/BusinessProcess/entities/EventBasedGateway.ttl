@@ -4,9 +4,9 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:EventBasedGateway
-	a ogit:Entity;
-	rdfs:label "EventBasedGateway";
-	dcterms:description """The event-based Gateway allows you to make a decision based on events. Each outgoing sequence flow of the gateway needs 
+    a ogit:Entity;
+    rdfs:label "EventBasedGateway";
+    dcterms:description """The event-based Gateway allows you to make a decision based on events. Each outgoing sequence flow of the gateway needs
 to be connected to an intermediate catching event. When process execution reaches an event-based Gateway, the gateway 
 acts like a wait state: execution is suspended. In addition, for each outgoing sequence flow, an event subscription is 
 created.
@@ -21,23 +21,23 @@ An event-based Gateway may only be connected to elements of the type intermediat
 event-based Gateway are not supported by the engine yet.)
 
 An intermediateCatchEvent connected to an event-based Gateway must have a single incoming sequence flow.""";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "NTO";
-	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:optional-attributes
-		ogit:name,
-		ogit:description;
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		];
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:name,
+        ogit:description;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
 .

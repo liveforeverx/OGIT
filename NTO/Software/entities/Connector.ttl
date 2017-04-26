@@ -4,32 +4,32 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.Software:Connector
-	a ogit:Entity;
-	rdfs:label "Connector";
-	dcterms:description "Represents any type of software connector";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-06-11;";
-	dcterms:creator "Aymen Ayoub";
-	dcterms:created "2015-06-11";
-	dcterms:modified "2015-06-11";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "NTO";
-	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:optional-attributes
-		ogit:connectorId,
-		ogit:name;
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-06-11";
-			dcterms:description "initial";
-			dcterms:creator "Aymen Ayoub"
-		],
-		[
-			dcterms:identifier "2";
-			dcterms:date "2015-06-29";
-			dcterms:description "updated";
-			dcterms:creator "Aymen Ayoub"
-		];
+    a ogit:Entity;
+    rdfs:label "Connector";
+    dcterms:description "Represents any type of software connector";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-06-11;";
+    dcterms:creator "Aymen Ayoub";
+    dcterms:created "2015-06-11";
+    dcterms:modified "2015-06-11";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:optional-attributes
+        ogit:connectorId,
+        ogit:name;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-06-11";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-06-29";
+            dcterms:description "updated";
+            dcterms:creator "Aymen Ayoub"
+        ];
 .

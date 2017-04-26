@@ -6,62 +6,62 @@
 @prefix ogit.ServiceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
 
 ogit:updates
-	a ogit:Verb;
-	rdfs:label "updates";
-	dcterms:description "Indicates which entity (e.g. Person) updated each another entity (e.g. Ticket).";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-07-27";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		],
-		[
-			dcterms:identifier "2";
-			dcterms:date "2015-07-27";
-			dcterms:description "updated";
-			dcterms:creator "Aymen Ayoub"
-		],
-		[
-			dcterms:identifier "3";
-			dcterms:date "2015-12-10";
-			dcterms:description "change entity name from ogit/ServiceManagement/ChangeTask to ogit/ServiceManagement/SubTask";
-			dcterms:creator "Peter Larem"
-		];
-	ogit:allowed
-		[
-			ogit:from ogit.person:Person;
-			ogit:to ogit.ServiceManagement:SubTask
-		],
-		[
-			ogit:from ogit.person:Person;
-			ogit:to ogit.ServiceManagement:Incident
-		],
-		[
-			ogit:from ogit.person:Person;
-			ogit:to ogit.ServiceManagement:Problem
-		],
-		[
-			ogit:from ogit.person:Person;
-			ogit:to ogit.ServiceManagement:Ticket
-		],
-		[
-			ogit:from ogit.person:Person;
-			ogit:to ogit.ServiceManagement:Order
-		],
-		[
-			ogit:from ogit.person:Person;
-			ogit:to ogit.ServiceManagement:ChangeRequest
-		],
-		[
-			ogit:from ogit.person:Person;
-			ogit:to ogit.config:ConfigurationItem
-		];
+    a ogit:Verb;
+    rdfs:label "updates";
+    dcterms:description "Indicates which entity (e.g. Person) updated each another entity (e.g. Ticket).";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-07-27";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-07-27";
+            dcterms:description "updated";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-12-10";
+            dcterms:description "change entity name from ogit/ServiceManagement/ChangeTask to ogit/ServiceManagement/SubTask";
+            dcterms:creator "Peter Larem"
+        ];
+    ogit:allowed
+        [
+            ogit:from ogit.person:Person;
+            ogit:to ogit.ServiceManagement:SubTask
+        ],
+        [
+            ogit:from ogit.person:Person;
+            ogit:to ogit.ServiceManagement:Incident
+        ],
+        [
+            ogit:from ogit.person:Person;
+            ogit:to ogit.ServiceManagement:Problem
+        ],
+        [
+            ogit:from ogit.person:Person;
+            ogit:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit:from ogit.person:Person;
+            ogit:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit:from ogit.person:Person;
+            ogit:to ogit.ServiceManagement:ChangeRequest
+        ],
+        [
+            ogit:from ogit.person:Person;
+            ogit:to ogit.config:ConfigurationItem
+        ];
 .

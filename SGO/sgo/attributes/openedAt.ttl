@@ -3,23 +3,23 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:openedAt
-	a ogit:Attribute;
-	rdfs:label "openedAt";
-	dcterms:description """Time when a ticket or task was created/opened.
+    a ogit:Attribute;
+    rdfs:label "openedAt";
+    dcterms:description """Time when a ticket or task was created/opened.
 The values could combine date and time with time zone designator according to ISO 8601 for service management tickets.
 For most tickets there is no real difference between creation and opened time. In case such a distinction is relevant the \"createdAt\" attribute can be used.""";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		];
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
 .

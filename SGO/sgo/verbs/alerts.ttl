@@ -5,26 +5,26 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:alerts
-	a ogit:Verb;
-	rdfs:label "alerts";
-	dcterms:description "Verb showing if one entity alerts another.";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2016-10-26;";
-	dcterms:creator "stravlos@arago.co";
-	dcterms:created "2016-10-26";
-	dcterms:modified "2016-10-26";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2016-10-26";
-			dcterms:description "initial";
-			dcterms:creator "stravlos@arago.co"
-		];
+    a ogit:Verb;
+    rdfs:label "alerts";
+    dcterms:description "Verb showing if one entity alerts another.";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2016-10-26;";
+    dcterms:creator "stravlos@arago.co";
+    dcterms:created "2016-10-26";
+    dcterms:modified "2016-10-26";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-10-26";
+            dcterms:description "initial";
+            dcterms:creator "stravlos@arago.co"
+        ];
   ogit:allowed
-		[
-			ogit:from ogit.event:Alert;
-			ogit:to ogit.person:Person
-		];
+        [
+            ogit:from ogit.event:Alert;
+            ogit:to ogit.person:Person
+        ];
 .

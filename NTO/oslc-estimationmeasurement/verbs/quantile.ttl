@@ -4,30 +4,30 @@
 @prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
 
 ogit.OSLC-ems:quantile
-	a ogit:Verb;
-	rdfs:label "quantile";
-	ogit:original <http://open-services.net/ns/ems#quantile>;
-	dcterms:description """
+    a ogit:Verb;
+    rdfs:label "quantile";
+    ogit:original <http://open-services.net/ns/ems#quantile>;
+    dcterms:description """
 This property links a quantile function resource to one or more quantiles.""";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2016-09-22;";
-	dcterms:creator "OGIT Importer";
-	dcterms:created "2016-09-22";
-	dcterms:modified "2016-09-22";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:hide "false";
-	ogit:cardinality "many2many";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2016-09-22";
-			dcterms:description "initial";
-			dcterms:creator "OGIT Importer"
-		];
-	ogit:allowed
-		[
-			ogit:from ogit.OSLC-ems:QuantileFunction;
-			ogit:to ogit.OSLC-ems:Quantile
-		];
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2016-09-22;";
+    dcterms:creator "OGIT Importer";
+    dcterms:created "2016-09-22";
+    dcterms:modified "2016-09-22";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:hide "false";
+    ogit:cardinality "many2many";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-09-22";
+            dcterms:description "initial";
+            dcterms:creator "OGIT Importer"
+        ];
+    ogit:allowed
+        [
+            ogit:from ogit.OSLC-ems:QuantileFunction;
+            ogit:to ogit.OSLC-ems:Quantile
+        ];
 .

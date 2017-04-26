@@ -3,22 +3,22 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:deliveredAt
-	a ogit:Attribute;
-	rdfs:label "deliveredAt";
-	dcterms:description """Defines a point in time when a component/device was actually delivered.
+    a ogit:Attribute;
+    rdfs:label "deliveredAt";
+    dcterms:description """Defines a point in time when a component/device was actually delivered.
 The values must be combined date and time with time zone designator according to ISO 8601""";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-07-27;";
-	dcterms:creator "Aymen Ayoub";
-	dcterms:created "2015-07-27";
-	dcterms:modified "2015-07-27";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-07-27";
-			dcterms:description "initial";
-			dcterms:creator "Aymen Ayoub"
-		];
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-07-27;";
+    dcterms:creator "Aymen Ayoub";
+    dcterms:created "2015-07-27";
+    dcterms:modified "2015-07-27";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-07-27";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ];
 .

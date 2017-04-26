@@ -4,30 +4,30 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:SurveyIteration
-	a ogit:Entity;
-	rdfs:label "SurveyIteration";
-	dcterms:description """Iteration of the same survey""";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2016-08-08;";
-	dcterms:creator "Alexander Ryabtsev";
-	dcterms:created "2016-08-08";
-	dcterms:modified "2016-08-08";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "NTO";
-	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:any-attributes "true";
-	ogit:optional-attributes
-		ogit:startedAt,
-		ogit:status;
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2016-07-12";
-			dcterms:description "initial";
-			dcterms:creator "Arthur Shoba"
-		],
-		[
+    a ogit:Entity;
+    rdfs:label "SurveyIteration";
+    dcterms:description """Iteration of the same survey""";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2016-08-08;";
+    dcterms:creator "Alexander Ryabtsev";
+    dcterms:created "2016-08-08";
+    dcterms:modified "2016-08-08";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:any-attributes "true";
+    ogit:optional-attributes
+        ogit:startedAt,
+        ogit:status;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-07-12";
+            dcterms:description "initial";
+            dcterms:creator "Arthur Shoba"
+        ],
+        [
             dcterms:identifier "2";
             dcterms:date "2016-08-08";
             dcterms:description "Attributes rework";

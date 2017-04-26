@@ -17,136 +17,136 @@
 @prefix ogit.ServiceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
 
 ogit:generates
-	a ogit:Verb;
-	rdfs:label "generates";
-	dcterms:description "";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2016-06-09";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		],
-		[
-			dcterms:identifier "2";
-			dcterms:date "2015-05-26";
-			dcterms:description "change Issue to AutomationIssue";
-			dcterms:creator "Peter Larem"
-		],
-		[
-			dcterms:identifier "3";
-			dcterms:date "2015-08-04";
-			dcterms:description "some connections addded";
-			dcterms:creator "FCO"
-		],
-		[
-			dcterms:identifier "4";
-			dcterms:date "2016-06-09";
-			dcterms:description "connection added";
-			dcterms:creator "stravlos"
-		],
+    a ogit:Verb;
+    rdfs:label "generates";
+    dcterms:description "";
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2016-06-09";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-05-26";
+            dcterms:description "change Issue to AutomationIssue";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-08-04";
+            dcterms:description "some connections addded";
+            dcterms:creator "FCO"
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2016-06-09";
+            dcterms:description "connection added";
+            dcterms:creator "stravlos"
+        ],
                 [
-			dcterms:identifier "5";
-			dcterms:date "2016-10-11";
-			dcterms:description "connection added";
-			dcterms:creator "stravlos"
-		],
+            dcterms:identifier "5";
+            dcterms:date "2016-10-11";
+            dcterms:description "connection added";
+            dcterms:creator "stravlos"
+        ],
                 [
-			dcterms:identifier "6";
-			dcterms:date "2017-01-20";
-			dcterms:description "connection added";
-			dcterms:creator "stravlos"
-		];
-	ogit:allowed
-		[
-			ogit:from ogit.Automation:AutomationIssue;
-			ogit:to ogit.Automation:History
-		],
-		[
-			ogit:from ogit.Automation:AutomationIssue;
-			ogit:to ogit.data:Timeseries
-		],
-		[
-			ogit:from ogit.task:Question;
-			ogit:to ogit.data:Timeseries
-		],
-		[
-			ogit:from ogit.Automation:History;
-			ogit:to ogit.data:Timeseries
-		],
-		[
-			ogit:from ogit.Automation:KnowledgeItem;
-			ogit:to ogit.data:Timeseries
-		],
-		[
-			ogit:from ogit.Automation:MAID;
-			ogit:to ogit.data:Timeseries
-		],
-		[
-			ogit:from ogit.Automation:MARSModel;
-			ogit:to ogit.data:Timeseries
-		],
-		[
-			ogit:from ogit.Automation:MARSNode;
-			ogit:to ogit.data:Timeseries
-		],
-		[
-			ogit:from ogit.task:Task;
-			ogit:to ogit.data:Timeseries
-		],
-		[
-			ogit:from ogit.task:TaskList;
-			ogit:to ogit.data:Timeseries
-		],
-		[
-			ogit:from ogit.device:Device;
-			ogit:to ogit.data:Timeseries
-		],
-		[
-			ogit:from ogit.Datacenter:Server;
-			ogit:to ogit.data:Timeseries
-		],
-		[
-			ogit:from ogit.org:Organization;
-			ogit:to ogit.catalog:Catalog
-		],
-		[
-			ogit:from ogit.location:Location;
-			ogit:to ogit.data:Timeseries
-		],
-		[
-			ogit:from ogit.ServiceManagement:Report;
-			ogit:to ogit.Price:Invoice
-		],
-		[
-			ogit:from ogit.ServiceManagement:Service;
-			ogit:to ogit.ServiceManagement:Report
-		],
-		[
-			ogit:from ogit.Network:SimpleDevice;
-			ogit:to ogit.data:Timeseries
-		],
-		[
-			ogit:from ogit.Software:Application;
-			ogit:to ogit.data:Timeseries
-		],
-		[
-			ogit:from ogit.license:License;
-			ogit:to ogit.data:Timeseries
-		],
+            dcterms:identifier "6";
+            dcterms:date "2017-01-20";
+            dcterms:description "connection added";
+            dcterms:creator "stravlos"
+        ];
+    ogit:allowed
+        [
+            ogit:from ogit.Automation:AutomationIssue;
+            ogit:to ogit.Automation:History
+        ],
+        [
+            ogit:from ogit.Automation:AutomationIssue;
+            ogit:to ogit.data:Timeseries
+        ],
+        [
+            ogit:from ogit.task:Question;
+            ogit:to ogit.data:Timeseries
+        ],
+        [
+            ogit:from ogit.Automation:History;
+            ogit:to ogit.data:Timeseries
+        ],
+        [
+            ogit:from ogit.Automation:KnowledgeItem;
+            ogit:to ogit.data:Timeseries
+        ],
+        [
+            ogit:from ogit.Automation:MAID;
+            ogit:to ogit.data:Timeseries
+        ],
+        [
+            ogit:from ogit.Automation:MARSModel;
+            ogit:to ogit.data:Timeseries
+        ],
+        [
+            ogit:from ogit.Automation:MARSNode;
+            ogit:to ogit.data:Timeseries
+        ],
+        [
+            ogit:from ogit.task:Task;
+            ogit:to ogit.data:Timeseries
+        ],
+        [
+            ogit:from ogit.task:TaskList;
+            ogit:to ogit.data:Timeseries
+        ],
+        [
+            ogit:from ogit.device:Device;
+            ogit:to ogit.data:Timeseries
+        ],
+        [
+            ogit:from ogit.Datacenter:Server;
+            ogit:to ogit.data:Timeseries
+        ],
+        [
+            ogit:from ogit.org:Organization;
+            ogit:to ogit.catalog:Catalog
+        ],
+        [
+            ogit:from ogit.location:Location;
+            ogit:to ogit.data:Timeseries
+        ],
+        [
+            ogit:from ogit.ServiceManagement:Report;
+            ogit:to ogit.Price:Invoice
+        ],
+        [
+            ogit:from ogit.ServiceManagement:Service;
+            ogit:to ogit.ServiceManagement:Report
+        ],
+        [
+            ogit:from ogit.Network:SimpleDevice;
+            ogit:to ogit.data:Timeseries
+        ],
+        [
+            ogit:from ogit.Software:Application;
+            ogit:to ogit.data:Timeseries
+        ],
+        [
+            ogit:from ogit.license:License;
+            ogit:to ogit.data:Timeseries
+        ],
                 [
-			ogit:from ogit.org:Organization;
-			ogit:to ogit.data:Timeseries
-		],
+            ogit:from ogit.org:Organization;
+            ogit:to ogit.data:Timeseries
+        ],
                 [
-			ogit:from ogit.contract:Contract;
-			ogit:to ogit.data:Timeseries
-		];
+            ogit:from ogit.contract:Contract;
+            ogit:to ogit.data:Timeseries
+        ];
 .

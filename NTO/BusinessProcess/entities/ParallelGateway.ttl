@@ -4,9 +4,9 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit.BusinessProcess:ParallelGateway
-	a ogit:Entity;
-	rdfs:label "ParallelGateway";
-	dcterms:description """Gateways can be used to model concurrency in a process. The most straightforward gateway to introduce concurrency 
+    a ogit:Entity;
+    rdfs:label "ParallelGateway";
+    dcterms:description """Gateways can be used to model concurrency in a process. The most straightforward gateway to introduce concurrency
 in a process model is the Parallel Gateway, which allows forking into multiple paths of execution or joining multiple 
 incoming paths of execution.
 
@@ -22,25 +22,25 @@ before splitting into multiple concurrent paths of executions.
 
 An important difference with other gateway types is that the parallel gateway does not evaluate conditions. If conditions 
 are defined on the sequence flow connected with the parallel gateway, they are simply ignored.""";
-	# For ranges, see http://dublincore.org/documents/dcmi-period/
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:scope "NTO";
-	ogit:parent "http://www.purl.org/ogit/Node";
-	ogit:mandatory-attributes
-		ogit.BusinessProcess:gatewayFunctionality;
-	ogit:optional-attributes
-		ogit:name,
-		ogit:description;
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem"
-		];
+    # For ranges, see http://dublincore.org/documents/dcmi-period/
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit:admin-contact "arago GmbH";
+    ogit:tech-contact "arago GmbH";
+    ogit:scope "NTO";
+    ogit:parent "http://www.purl.org/ogit/Node";
+    ogit:mandatory-attributes
+        ogit.BusinessProcess:gatewayFunctionality;
+    ogit:optional-attributes
+        ogit:name,
+        ogit:description;
+    ogit:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
 .

@@ -5,7 +5,7 @@
 @prefix ogit.config:            <http://www.purl.org/ogit/> .
 @prefix ogit.device:            <http://www.purl.org/ogit/> .
 @prefix ogit.event:             <http://www.purl.org/ogit/> .
-@prefix ogit.org:               <http://www.purl.org/ogit/> .
+@prefix ogit.organization:               <http://www.purl.org/ogit/> .
 @prefix ogit.person:            <http://www.purl.org/ogit/> .
 @prefix ogit.task:              <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
@@ -193,7 +193,7 @@ ogit:corresponds
         ],
         [
             ogit:from ogit.config:ConfigurationItem;
-            ogit:to ogit.org:Organization
+            ogit:to ogit.organization:Organization
         ],
         [
             ogit:from ogit.config:ConfigurationItem;

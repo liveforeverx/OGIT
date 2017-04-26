@@ -1,7 +1,7 @@
 @prefix ogit.Automation:        <http://www.purl.org/ogit/Automation/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
 @prefix ogit.asset:             <http://www.purl.org/ogit/> .
-@prefix ogit.org:               <http://www.purl.org/ogit/> .
+@prefix ogit.organization:               <http://www.purl.org/ogit/> .
 @prefix ogit.task:              <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ogit.Cost:              <http://www.purl.org/ogit/Cost/> .
@@ -56,8 +56,8 @@ ogit:associates
             ogit:to ogit.Cost:CostElement
         ],
         [
-            ogit:from ogit.org:Organization;
-            ogit:to ogit.org:Role
+            ogit:from ogit.organization:Organization;
+            ogit:to ogit.organization:Role
         ],
         [
             ogit:from ogit.Forum:KnowledgeItemHistory;

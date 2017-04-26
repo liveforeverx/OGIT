@@ -3,7 +3,7 @@
 @prefix dcterms:  <http://purl.org/dc/terms/> .
 @prefix vann:     <http://purl.org/vocab/vann/> .
 @prefix ogit:     <http://www.purl.org/ogit/> .
-@prefix ogit.org: <http://www.purl.org/ogit/> .
+@prefix ogit.organization: <http://www.purl.org/ogit/> .
 
 #
 # Ontology
@@ -11,7 +11,6 @@
 <http://www.purl.org/ogit/location>
     a owl:Ontology;
     rdfs:label "OGIT Organization Vocabulary";
-    dcterms:description """This ontology contains terms regarding organizations."""@en;
     dcterms:creator "arago GmbH";
     dcterms:contributor "Fabian Meyer";
     vann:preferredNamespaceUri "http://www.purl.org/ogit/";
@@ -23,7 +22,7 @@
 #
 # Entities
 #
-ogit.org:Organization
+ogit.organization:Organization
     a ogit:Entity;
     rdfs:label "Organization";
     dcterms:description """An identity that represents an organization, company, or some other grouping of Person objects.
@@ -80,7 +79,7 @@ The ogit/function attribute should be used to tell what kind of grouping an enti
         ];
 .
 
-ogit.org:Policy
+ogit.organization:Policy
     a ogit:Entity;
     rdfs:label "Policy";
     dcterms:description "A policy is a deliberate system of principles to guide decisions and achieve rational outcomes. It is connected and applied to Organizations";
@@ -104,7 +103,7 @@ ogit.org:Policy
         ];
 .
 
-ogit.org:Role
+ogit.organization:Role
     a ogit:Entity;
     rdfs:label "Role";
     dcterms:description "In contrast to ogit/Organization, which is mainly a collection of persons and/or other organziations, ogit/Role defines behavior of an actor along with necessary privileges.";

@@ -5,7 +5,7 @@
 @prefix ogit.contract:          <http://www.purl.org/ogit/> .
 @prefix ogit.data:              <http://www.purl.org/ogit/> .
 @prefix ogit.license:           <http://www.purl.org/ogit/> .
-@prefix ogit.org:               <http://www.purl.org/ogit/> .
+@prefix ogit.organization:               <http://www.purl.org/ogit/> .
 @prefix ogit.person:            <http://www.purl.org/ogit/> .
 @prefix ogit.ontology:           <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
@@ -733,7 +733,7 @@ ogit:uses
             ogit:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.org:Organization;
+            ogit:from ogit.organization:Organization;
             ogit:to ogit.license:License
         ],
         [

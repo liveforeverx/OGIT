@@ -5,7 +5,7 @@
 @prefix ogit.data:              <http://www.purl.org/ogit/> .
 @prefix ogit.event:             <http://www.purl.org/ogit/> .
 @prefix ogit.license:           <http://www.purl.org/ogit/> .
-@prefix ogit.org:               <http://www.purl.org/ogit/> .
+@prefix ogit.organization:               <http://www.purl.org/ogit/> .
 @prefix ogit.person:            <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ogit.Software:          <http://www.purl.org/ogit/Software/> .
@@ -115,11 +115,11 @@ ogit:belongs
     ogit:allowed
         [
             ogit:from ogit.contract:Contract;
-            ogit:to ogit.org:Organization
+            ogit:to ogit.organization:Organization
         ],
         [
             ogit:from ogit.Software:Application;
-            ogit:to ogit.org:Organization
+            ogit:to ogit.organization:Organization
         ],
         [
             ogit:from ogit.ServiceManagement:ApprovalTask;
@@ -127,7 +127,7 @@ ogit:belongs
         ],
         [
             ogit:from ogit.asset:Asset;
-            ogit:to ogit.org:Organization
+            ogit:to ogit.organization:Organization
         ],
         [
             ogit:from ogit.config:Attachment;
@@ -171,7 +171,7 @@ ogit:belongs
         ],
         [
             ogit:from ogit.license:LicenseToken;
-            ogit:to ogit.org:Organization
+            ogit:to ogit.organization:Organization
         ],
         [
             ogit:from ogit.Network:IPAddress;
@@ -187,7 +187,7 @@ ogit:belongs
         ],
         [
             ogit:from ogit.person:Person;
-            ogit:to ogit.org:Organization
+            ogit:to ogit.organization:Organization
         ],
         [
             ogit:from ogit.Forum:Role;
@@ -215,7 +215,7 @@ ogit:belongs
         ],
         [
             ogit:from ogit.config:Attachment;
-            ogit:to ogit.org:Organization
+            ogit:to ogit.organization:Organization
         ],
         [
             ogit:from ogit.Forum:Profile;
@@ -263,14 +263,14 @@ ogit:belongs
         ],
         [
             ogit:from ogit.BusinessProcess:Survey;
-            ogit:to ogit.org:Organization
+            ogit:to ogit.organization:Organization
         ],
         [
             ogit:from ogit.BusinessProcess:SurveyReply;
             ogit:to ogit.BusinessProcess:SurveyIteration
         ],
         [
-            ogit:from ogit.org:Organization;
+            ogit:from ogit.organization:Organization;
             ogit:to ogit.event:Alert
         ];
 .

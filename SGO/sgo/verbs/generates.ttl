@@ -6,7 +6,7 @@
 @prefix ogit.device:            <http://www.purl.org/ogit/> .
 @prefix ogit.license:           <http://www.purl.org/ogit/> .
 @prefix ogit.location:          <http://www.purl.org/ogit/> .
-@prefix ogit.org:               <http://www.purl.org/ogit/> .
+@prefix ogit.organization:               <http://www.purl.org/ogit/> .
 @prefix ogit.task:              <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ogit.Datacenter:        <http://www.purl.org/ogit/Datacenter/> .
@@ -114,7 +114,7 @@ ogit:generates
             ogit:to ogit.data:Timeseries
         ],
         [
-            ogit:from ogit.org:Organization;
+            ogit:from ogit.organization:Organization;
             ogit:to ogit.catalog:Catalog
         ],
         [
@@ -142,7 +142,7 @@ ogit:generates
             ogit:to ogit.data:Timeseries
         ],
                 [
-            ogit:from ogit.org:Organization;
+            ogit:from ogit.organization:Organization;
             ogit:to ogit.data:Timeseries
         ],
                 [

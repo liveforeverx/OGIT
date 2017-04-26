@@ -1,7 +1,7 @@
 @prefix ogit:                   <http://www.purl.org/ogit/> .
 @prefix ogit.config:            <http://www.purl.org/ogit/> .
 @prefix ogit.person:            <http://www.purl.org/ogit/> .
-@prefix ogit.org:               <http://www.purl.org/ogit/> .
+@prefix ogit.organization:               <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 @prefix ogit.ServiceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
@@ -44,8 +44,8 @@ ogit:reports
             ogit:to ogit.ServiceManagement:Problem
         ],
         [
-            ogit:from ogit.org:Role;
-            ogit:to ogit.org:Role
+            ogit:from ogit.organization:Role;
+            ogit:to ogit.organization:Role
         ],
         [
             ogit:from ogit.person:Person;

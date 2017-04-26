@@ -1,7 +1,7 @@
 @prefix ogit.BusinessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
 @prefix ogit.catalog:           <http://www.purl.org/ogit/> .
-@prefix ogit.org:               <http://www.purl.org/ogit/> .
+@prefix ogit.organization:               <http://www.purl.org/ogit/> .
 @prefix ogit.person:            <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
@@ -41,7 +41,7 @@ ogit:requires
     ogit:allowed
         [
             ogit:from ogit.BusinessProcess:ProcessLane;
-            ogit:to ogit.org:Organization
+            ogit:to ogit.organization:Organization
         ],
         [
             ogit:from ogit.BusinessProcess:ProcessLane;
@@ -49,7 +49,7 @@ ogit:requires
         ],
         [
             ogit:from ogit.BusinessProcess:ProcessPool;
-            ogit:to ogit.org:Organization
+            ogit:to ogit.organization:Organization
         ],
         [
             ogit:from ogit.BusinessProcess:ProcessPool;

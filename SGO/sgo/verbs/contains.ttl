@@ -9,7 +9,7 @@
 @prefix ogit.device:            <http://www.purl.org/ogit/> .
 @prefix ogit.event:             <http://www.purl.org/ogit/> .
 @prefix ogit.license:           <http://www.purl.org/ogit/> .
-@prefix ogit.org:               <http://www.purl.org/ogit/> .
+@prefix ogit.organization:               <http://www.purl.org/ogit/> .
 @prefix ogit.task:              <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ogit.Datacenter:        <http://www.purl.org/ogit/Datacenter/> .
@@ -481,8 +481,8 @@ Added a connection from `ogit/Forum/KnowledgeBundle` -> `ogit/Automation/Knowled
             ogit:to ogit.Network:Port
         ],
         [
-            ogit:from ogit.org:Organization;
-            ogit:to ogit.org:Organization
+            ogit:from ogit.organization:Organization;
+            ogit:to ogit.organization:Organization
         ],
         [
             ogit:from ogit.Software:Application;

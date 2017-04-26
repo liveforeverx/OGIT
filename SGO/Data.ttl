@@ -26,7 +26,6 @@ ogit.data:Comment
     a ogit:Entity;
     rdfs:label "Comment";
     dcterms:description "Defines comments for a ticket, issue or another type of entity. Also known as WorkLog, ChangeLog or HistoryEntry.";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -71,7 +70,6 @@ ogit.data:CustomApplicationData
     rdfs:label "CustomApplicationData";
     dcterms:description """Entity to store custom application data, a storage place not connected to any other entity and therefore isolated from
 the global ontology. The storage of data through this entity is discouraged due to low performance.""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -93,7 +91,6 @@ ogit.data:Hyperlink
     a ogit:Entity;
     rdfs:label "Hyperlink";
     dcterms:description "A representation of an (optionally) titled Hyperlink to some media. No protocol restrictions imposed.";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-06-09;";
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-06-09";
@@ -120,7 +117,6 @@ ogit.data:Note
     a ogit:Entity;
     rdfs:label "Note";
     dcterms:description "Any type of note.";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-04-29;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-04-29";
@@ -145,7 +141,6 @@ ogit.data:Timeseries
     a ogit:Entity;
     rdfs:label "Timeseries";
     dcterms:description "A time series is a sequence of data points, measured typically at successive points in time spaced at uniform time intervals.";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";

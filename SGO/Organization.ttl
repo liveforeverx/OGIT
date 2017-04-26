@@ -30,7 +30,6 @@ Entities of this type should be created with a predefined ID. Those IDs should b
 a concatention of some strings separated with a dot. if organization data is created from a LDAP then a mapping
 like \"cn=John Doe,dc=example,dc=com\" => \"john_doe.example.com\" should be employed.
 The ogit/function attribute should be used to tell what kind of grouping an entity of type Organization is: company, department, group, ...""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -83,7 +82,6 @@ ogit.organization:Policy
     a ogit:Entity;
     rdfs:label "Policy";
     dcterms:description "A policy is a deliberate system of principles to guide decisions and achieve rational outcomes. It is connected and applied to Organizations";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -107,7 +105,6 @@ ogit.organization:Role
     a ogit:Entity;
     rdfs:label "Role";
     dcterms:description "In contrast to ogit/Organization, which is mainly a collection of persons and/or other organziations, ogit/Role defines behavior of an actor along with necessary privileges.";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";

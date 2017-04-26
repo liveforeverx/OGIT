@@ -27,7 +27,6 @@ ogit.task:Question
     rdfs:label "Question";
     dcterms:description """This structure allows an automation engine to create data requests for existing Issues which should be filled by human user.
 Additionaly could be used to create new Issue from some form.""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -60,7 +59,6 @@ ogit.task:Task
     a ogit:Entity;
     rdfs:label "Task";
     dcterms:description "A task is a unit of execution.";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -96,7 +94,6 @@ ogit.task:TaskList
     a ogit:Entity;
     rdfs:label "TaskList";
     dcterms:description "A task list consists of one or many tasks.";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";

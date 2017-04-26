@@ -28,7 +28,6 @@ ogit.config:Attachment
     rdfs:label "Attachment";
     dcterms:description """This entity defines a file attachment that an IT service, issue, task or a ticket might have. The attachment itself is
 not saved in GraphIT, instead it contains an external url link for it.""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -87,7 +86,6 @@ ogit.config:ConfigurationItem
     a ogit:Entity;
     rdfs:label "ConfigurationItem";
     dcterms:description "A configuration item.";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-06-11;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-06-11";
@@ -195,7 +193,6 @@ ogit.config:Parameter
     a ogit:Entity;
     rdfs:label "Parameter";
     dcterms:description "Defines a parameter of an entity, for example: service, action, ticket, sla, etc.";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -231,7 +228,6 @@ ogit.config:ParameterType
     rdfs:label "ParameterType";
     dcterms:description """Allows to define more details about the values of a Parameter the Parameter will be linked to a ParameterType
 by the \"uses\" relationship. Each Parameter can have only one those connection.""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";

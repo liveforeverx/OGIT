@@ -27,7 +27,6 @@ ogit.license:License
     a ogit:Entity;
     rdfs:label "License";
     dcterms:description "This entity type allows to store license information or actual licenses.";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -75,7 +74,6 @@ ogit.license:LicenseRequest
     dcterms:description """This allows clients to place a request for a license.
 Usually some license admin personnel will use the information from such a request to create the actual license.
 A request might contain a valid LicenseToken to indicate that this request is pre-approved.""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -104,7 +102,6 @@ ogit.license:LicenseToken
     rdfs:label "LicenseToken";
     dcterms:description """This serves as a placeholder for pre-approved license request it will be subsituted by a real license throughout the licence request process.
 This will created by a license admin and communicated to potential licence requesters.""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";

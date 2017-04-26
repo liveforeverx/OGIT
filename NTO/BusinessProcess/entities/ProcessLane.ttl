@@ -7,7 +7,6 @@ ogit.BusinessProcess:ProcessLane
     a ogit:Entity;
     rdfs:label "ProcessLane";
     dcterms:description "Entity to represent a ProcessLane of a business process. There must be one or more Lanes within a Pool. If there is only one Lane, then that Lane shares the name of the Pool and only the Pool name is displayed. If there is more than one Lane, then each Lane has to have its own name and all names are displayed.";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";

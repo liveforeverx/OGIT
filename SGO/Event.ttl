@@ -27,7 +27,6 @@ ogit.event:Alert
     a ogit:Entity;
     rdfs:label "Alert";
     dcterms:description "Alerts are used to notify users if certain events happen.";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2016-10-26;";
     dcterms:creator "stravlos@arago.de";
     dcterms:created "2016-10-26";
@@ -62,7 +61,6 @@ ogit.event:Event
     a ogit:Entity;
     rdfs:label "Event";
     dcterms:description "This entity defines any type of event records, e.g. ITSM/produced by event management systems, Business Process etc.";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -116,7 +114,6 @@ ogit.event:Notification
     a ogit:Entity;
     rdfs:label "Notification";
     dcterms:description """A notification event""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-04-27;";
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-27";

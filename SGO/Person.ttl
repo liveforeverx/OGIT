@@ -26,7 +26,6 @@ ogit.person:Account
     a ogit:Entity;
     rdfs:label "Account";
     dcterms:description "A account can be e.g. an facebook-account.";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -54,7 +53,6 @@ ogit.person:Person
     a ogit:Entity;
     rdfs:label "Person";
     dcterms:description "A Person represents a human identity.";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -111,7 +109,6 @@ ogit.person:Vcard
     dcterms:description """vCard is a specification developed by the IETF for the description of people and organisations. Recently, vCard has been
 significantly updated to Version 4 as documented in [RFC6350]. Typically, vCard objects are encoded in its own defined
 text-based syntax or XML renderings.""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -139,7 +136,6 @@ ogit.person:Email
     a ogit:Entity;
     rdfs:label "Email";
     dcterms:description "Any type of email adress.";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2016-01-22;";
     dcterms:creator "Peter Larem";
     dcterms:created "2016-01-22";

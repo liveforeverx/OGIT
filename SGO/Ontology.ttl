@@ -27,7 +27,6 @@ ogit.ontology:OntologyAttribute
     a ogit:Entity;
     rdfs:label "OntologyAttribute";
     dcterms:description "represents any Attribute definition from OGIT";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -66,7 +65,6 @@ ogit.ontology:OntologyEntity
     rdfs:label "OntologyEntity";
     dcterms:description """represents any Entity definition from OGIT
 whenever there is a Schema describing/restricting the entity's content there will be \"isUsedBy\" link from Schema to OntologyEntity""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -106,7 +104,6 @@ ogit.ontology:OntologyVerb
     a ogit:Entity;
     rdfs:label "OntologyVerb";
     dcterms:description "represents any Verb definition from OGIT";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -143,7 +140,6 @@ ogit.ontology:Schema
     a ogit:Entity;
     rdfs:label "Schema";
     dcterms:description "Any type of schema, could be defined in XSD, YAML, etc.";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -173,7 +169,6 @@ ogit.ontology:ontologyAdminContact
     a ogit:Attribute;
     rdfs:label "ontologyAdminContact";
     dcterms:description """The \"admin-contact\" attribute as defined in OGIT yaml files.""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -194,7 +189,6 @@ ogit.ontology:ontologyAnyAttributes
     a ogit:Attribute;
     rdfs:label "ontologyAnyAttributes";
     dcterms:description """The \"any-attributes\" attribute as defined in OGIT yaml files.""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -215,7 +209,6 @@ ogit.ontology:ontologyCardinality
     a ogit:Attribute;
     rdfs:label "ontologyCardinality";
     dcterms:description """The \"cardinality\" attribute as defined in OGIT yaml files.""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -236,7 +229,6 @@ ogit.ontology:ontologyCreated
     a ogit:Attribute;
     rdfs:label "ontologyCreated";
     dcterms:description """The \"created\" attribute as defined in OGIT yaml files.""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -257,7 +249,6 @@ ogit.ontology:ontologyCreator
     a ogit:Attribute;
     rdfs:label "ontologyCreator";
     dcterms:description """the \"creator\" attribute as defined in OGIT yaml files""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -278,7 +269,6 @@ ogit.ontology:ontologyDeleter
     a ogit:Attribute;
     rdfs:label "ontologyDeleter";
     dcterms:description """The \"deleter\" attribute as defined in OGIT yaml files.""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -299,7 +289,6 @@ ogit.ontology:ontologyDescription
     a ogit:Attribute;
     rdfs:label "ontologyDescription";
     dcterms:description """the \"description\" attribute as defined in OGIT yaml files""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -320,7 +309,6 @@ ogit.ontology:ontologyHide
     a ogit:Attribute;
     rdfs:label "ontologyHide";
     dcterms:description "Indicates if this part of ontology should hidden from the documentation";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-06-01;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-06-01";
@@ -341,7 +329,6 @@ ogit.ontology:ontologyId
     a ogit:Attribute;
     rdfs:label "ontologyId";
     dcterms:description """The \"id\" attribute as defined in OGIT yaml files""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -362,7 +349,6 @@ ogit.ontology:ontologyModified
     a ogit:Attribute;
     rdfs:label "ontologyModified";
     dcterms:description """the \"modified\" attribute as defined in OGIT yaml files""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -383,7 +369,6 @@ ogit.ontology:ontologyName
     a ogit:Attribute;
     rdfs:label "ontologyName";
     dcterms:description """the \"name\" attribute as defined in OGIT yaml files""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -404,7 +389,6 @@ ogit.ontology:ontologyParent
     a ogit:Attribute;
     rdfs:label "ontologyParent";
     dcterms:description """The \"parent\" attribute as defined in OGIT yaml files.""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -425,7 +409,6 @@ ogit.ontology:ontologyScope
     a ogit:Attribute;
     rdfs:label "ontologyScope";
     dcterms:description """Indicates the ontology scope which could be either \"SGO\" or \"NTO\".""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -446,7 +429,6 @@ ogit.ontology:ontologyTechContact
     a ogit:Attribute;
     rdfs:label "ontologyTechContact";
     dcterms:description """the \"tech-contact\" attribute as defined in OGIT yaml files""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -467,7 +449,6 @@ ogit.ontology:ontologyType
     a ogit:Attribute;
     rdfs:label "ontologyType";
     dcterms:description """Indicates the ontology type, which could be one of: \"entity\", \"attribute\", \"verb\"""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -488,7 +469,6 @@ ogit.ontology:ontologyValidationParameter
     a ogit:Attribute;
     rdfs:label "ontologyValidationParameter";
     dcterms:description """The \"validation parameter\" attribute as defined in OGIT yaml files""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -509,7 +489,6 @@ ogit.ontology:ontologyValidationType
     a ogit:Attribute;
     rdfs:label "ontologyValidationType";
     dcterms:description """the \"validation-type\" attribute as defined in OGIT yaml files""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -530,7 +509,6 @@ ogit.ontology:ontologyValidFrom
     a ogit:Attribute;
     rdfs:label "ontologyValidFrom";
     dcterms:description """The \"valid-from\" attribute as defined in OGIT yaml files.""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -551,7 +529,6 @@ ogit.ontology:ontologyValidUntil
     a ogit:Attribute;
     rdfs:label "ontologyValidUntil";
     dcterms:description """The \"valid-until\" attribute as defined in OGIT yaml files.""";
-    # For ranges, see http://dublincore.org/documents/dcmi-period/
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";

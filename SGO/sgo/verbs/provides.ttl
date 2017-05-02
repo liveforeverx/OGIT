@@ -1,21 +1,22 @@
 @prefix ogit.Automation:        <http://www.purl.org/ogit/Automation/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.core:                   <http://www.purl.org/ogit/> .
 @prefix ogit.config:            <http://www.purl.org/ogit/> .
 @prefix ogit.organization:               <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:provides
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "provides";
     dcterms:description "Verb showing if one entity provides something to another.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -34,17 +35,17 @@ ogit:provides
             dcterms:description "updated edge from ogit/Automation/MARSNode -> ogit/Automation/MARSNode added";
             dcterms:creator "Aymen Ayoub"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.config:ConfigurationItem
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.config:ConfigurationItem
         ],
         [
-            ogit:from ogit.config:ConfigurationItem;
-            ogit:to ogit.config:ConfigurationItem
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.config:ConfigurationItem
         ],
         [
-            ogit:from ogit.Automation:MARSNode;
-            ogit:to ogit.Automation:MARSNode
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Automation:MARSNode
         ];
 .

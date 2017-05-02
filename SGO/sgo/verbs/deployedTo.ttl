@@ -1,20 +1,21 @@
 @prefix ogit.Automation:        <http://www.purl.org/ogit/Automation/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.core:                   <http://www.purl.org/ogit/> .
 @prefix ogit.config:            <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:deployedTo
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "deployedTo";
     dcterms:description "Verb associates if something was deployed to another entity/component.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-27";
@@ -27,13 +28,13 @@ ogit:deployedTo
             dcterms:description "added a new edge from a MARSNode to a MARSNode";
             dcterms:creator "Aymen Ayoub"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.config:ConfigurationItem;
-            ogit:to ogit.config:ConfigurationItem
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.config:ConfigurationItem
         ],
         [
-            ogit:from ogit.Automation:MARSNode;
-            ogit:to ogit.Automation:MARSNode
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Automation:MARSNode
         ];
 .

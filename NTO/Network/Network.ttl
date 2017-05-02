@@ -4,6 +4,8 @@
 @prefix vann:           <http://purl.org/vocab/vann/> .
 @prefix purl:           <http://www.purl.org/> .
 @prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.core:           <http://www.purl.org/ogit/> .
+@prefix ogit.foundation:           <http://www.purl.org/ogit/> .
 @prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
 
 #
@@ -24,20 +26,20 @@ ogit:Network
 # Entities
 #
 ogit.Network:AccessControlList
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "AccessControlList";
     dcterms:description "An access control list (ACL), with respect to a computer file system, is a list of permissions attached to an object. An ACL specifies which users or system processes are granted access to objects, as well as what operations are allowed on given objects.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -47,20 +49,20 @@ ogit.Network:AccessControlList
 .
 
 ogit.Network:FCHBA
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "FCHBA";
     dcterms:description "Fibre Channel Host Bus Adapter, Physical/Virtual Circuit allowing an endpoint to connect to a network.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -70,20 +72,20 @@ ogit.Network:FCHBA
 .
 
 ogit.Network:IDSIPS
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "IDSIPS";
     dcterms:description "Intrution Detection and Intrusion Prevention System are network security appliances that monitor network and/or system activities for malicious activity.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -93,20 +95,20 @@ ogit.Network:IDSIPS
 .
 
 ogit.Network:IPAddress
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "IPAddress";
     dcterms:description "A Network IPAddress is per network unique identifier for IP-Devices.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -116,20 +118,20 @@ ogit.Network:IPAddress
 .
 
 ogit.Network:Loadbalancer
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Loadbalancer";
     dcterms:description "A Loadbaancer distributes network loads between multiple endpoints/hosts.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -139,20 +141,20 @@ ogit.Network:Loadbalancer
 .
 
 ogit.Network:MACAddress
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "MACAddress";
     dcterms:description "MAC-Adress is a globally unique identifier for Ethernet Adapters";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -162,20 +164,20 @@ ogit.Network:MACAddress
 .
 
 ogit.Network:NIC
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "NIC";
     dcterms:description "NIC, or Network Interface Card is a Physical/Virtual Circuit allowing an endpoint to connect to a network.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -185,20 +187,20 @@ ogit.Network:NIC
 .
 
 ogit.Network:NetworkCard
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "NetworkCard";
     dcterms:description "Physical Networking Module to be fitted into an enclosure.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -208,20 +210,20 @@ ogit.Network:NetworkCard
 .
 
 ogit.Network:NetworkEnclosure
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "NetworkEnclosure";
     dcterms:description "Networking Enclosure is a physical Entity hosing Physical Networking Devices";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -231,20 +233,20 @@ ogit.Network:NetworkEnclosure
 .
 
 ogit.Network:NetworkEndpoint
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "NetworkEndpoint";
     dcterms:description "An endpoint device is an Internet-capable computer hardware device on a TCP/IP network. The term can refer to desktop computers, laptops, smart phones, tablets, thin clients, printers or other specialized hardware such POS terminals and smart meters.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -254,20 +256,20 @@ ogit.Network:NetworkEndpoint
 .
 
 ogit.Network:NetworkFabric
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "NetworkFabric";
     dcterms:description "Networking Fabric is a virtual/physical Entity housing Networking Devices";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -277,20 +279,20 @@ ogit.Network:NetworkFabric
 .
 
 ogit.Network:NetworkFilter
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "NetworkFilter";
     dcterms:description "A Network Filter is a security measure restricting usage.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -300,20 +302,20 @@ ogit.Network:NetworkFilter
 .
 
 ogit.Network:NetworkInterface
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "NetworkInterface";
     dcterms:description "Logical or physical network interface.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -323,20 +325,20 @@ ogit.Network:NetworkInterface
 .
 
 ogit.Network:NetworkLink
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "NetworkLink";
     dcterms:description "A Network Link represents a logical connection between interfaces";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -346,20 +348,20 @@ ogit.Network:NetworkLink
 .
 
 ogit.Network:NetworkSetting
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "NetworkSetting";
     dcterms:description "Network Policy is a generic definition that outlines rules for computer network access, determines how policies are enforced and lays out some of the basic architecture of the company security/ network security environment.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -369,21 +371,21 @@ ogit.Network:NetworkSetting
 .
 
 ogit.Network:Port
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Port";
     dcterms:description "A physical or logical network port";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:name,
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:name,
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -393,21 +395,21 @@ ogit.Network:Port
 .
 
 ogit.Network:PortChannel
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "PortChannel";
     dcterms:description "A Portchannel bundles two or more physical or logical network ports";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:name,
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:name,
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -417,21 +419,21 @@ ogit.Network:PortChannel
 .
 
 ogit.Network:Router
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Router";
     dcterms:description "Networking Device for forwarding data packet between networks";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:name,
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:name,
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -441,21 +443,21 @@ ogit.Network:Router
 .
 
 ogit.Network:Shelf
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Shelf";
     dcterms:description "Shelf is a physical entity inside a enclosure, each enclosure can house one to many shelfs";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:name,
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:name,
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -465,21 +467,21 @@ ogit.Network:Shelf
 .
 
 ogit.Network:SimpleDevice
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "SimpleDevice";
     dcterms:description "Standalone networking device, which could be physical or virtual";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:name,
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:name,
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -489,21 +491,21 @@ ogit.Network:SimpleDevice
 .
 
 ogit.Network:Slot
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Slot";
     dcterms:description "Slot is a physical entity inside a shelf allowing to plug in extension moduls, e. g. network interface moduls oder CPU modules.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:name,
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:name,
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -513,21 +515,21 @@ ogit.Network:Slot
 .
 
 ogit.Network:Subnet
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Subnet";
     dcterms:description "Subnet is a group of IDAddresses located in one place.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:name,
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:name,
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -537,21 +539,21 @@ ogit.Network:Subnet
 .
 
 ogit.Network:Switch
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Switch";
     dcterms:description "Networking device for packet switching";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:name,
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:name,
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -561,21 +563,21 @@ ogit.Network:Switch
 .
 
 ogit.Network:VLAN
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "VLAN";
     dcterms:description "VLAN or Virtual LAN is a group of computers or network devices that appear to be on the same LAN, even if they are distributed. VLANs allow segregation of traffic within a network.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:name,
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:name,
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -585,21 +587,21 @@ ogit.Network:VLAN
 .
 
 ogit.Network:WifiAccessPoint
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "WifiAccessPoint";
     dcterms:description "Device offering wireless/radio networking services";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:name,
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:name,
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";

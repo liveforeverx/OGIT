@@ -4,6 +4,7 @@
 @prefix vann:           <http://purl.org/vocab/vann/> .
 @prefix purl:           <http://www.purl.org/> .
 @prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.core:           <http://www.purl.org/ogit/> .
 @prefix ogit.Knowledge:           <http://www.purl.org/ogit/Knowledge/> .
 
 #
@@ -25,18 +26,18 @@ ogit:Knowledge
 #
 ogit.Knowledge:AcquisitionSession
     a rdfs:Class;
-    rdfs:subClassOf ogit:Entity;
+    rdfs:subClassOf ogit.core:Entity;
     rdfs:label "AcquisitionSession";
     dcterms:description "Entity to describe a Knowledge Acquisition Session, linking to Conversation, Structured Task Steps and the Knowledge";
     dcterms:valid "start=2017-03-14;";
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2017-03-14";
     dcterms:modified "2017-03-14";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2017-03-14";
@@ -46,18 +47,18 @@ ogit.Knowledge:AcquisitionSession
 .
 
 ogit.Knowledge:Step
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Step";
     dcterms:description "this is the description of a single - hopefully atomic - step in (potentially multi-step) process";
     dcterms:valid "start=2017-03-14;";
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2017-03-14";
     dcterms:modified "2017-03-14";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2017-03-14";

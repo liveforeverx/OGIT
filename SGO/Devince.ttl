@@ -4,8 +4,10 @@
 @prefix vann:           <http://purl.org/vocab/vann/> .
 @prefix purl:           <http://www.purl.org/> .
 @prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.core:           <http://www.purl.org/ogit/> .
 @prefix ogit.device:    <http://www.purl.org/ogit/> .
 @prefix ogit.Datacenter: <http://www.purl.org/ogit/Datacenter/> .
+@prefix ogit.foundation:     <http://www.purl.org/ogit/> .
 
 #
 # Ontology
@@ -25,25 +27,25 @@ ogit:device
 # Entities
 #
 ogit.device:Device
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Device";
     dcterms:description "Any type of device";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "SGO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:id,
-        ogit:name,
-        ogit:purchaseDate,
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "SGO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:id,
+        ogit.foundation:name,
+        ogit.foundation:purchaseDate,
         ogit.Datacenter:moveProductionDate,
-        ogit:endOfWarranty,
-        ogit:powerConsumption;
-    ogit:history
+        ogit.foundation:endOfWarranty,
+        ogit.foundation:powerConsumption;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";

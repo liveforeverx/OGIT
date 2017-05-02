@@ -4,6 +4,8 @@
 @prefix vann:           <http://purl.org/vocab/vann/> .
 @prefix purl:           <http://www.purl.org/> .
 @prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.core:           <http://www.purl.org/ogit/> .
+@prefix ogit.foundation:           <http://www.purl.org/ogit/> .
 @prefix ogit.Automation:           <http://www.purl.org/ogit/Automation/> .
 @prefix ogit.Statistics:           <http://www.purl.org/ogit/Statistics/> .
 
@@ -25,27 +27,27 @@ ogit:Statistics
 # Entities
 #
 ogit.Statistics:AutomationFamily
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "AutomationFamily";
     dcterms:description "AutomationFamily defines the group of cases for automation of IT environment and its functionality.";
     dcterms:valid "start=2016-03-07;";
     dcterms:creator "Liudmyla Nechepurenko";
     dcterms:created "2016-03-07";
     dcterms:modified "2016-03-07";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:name;
-    ogit:optional-attributes
-        ogit:description,
-        ogit:category,
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
+        ogit.foundation:name;
+    ogit.core:optional-attributes
+        ogit.foundation:description,
+        ogit.foundation:category,
         ogit.Automation:marsNodeType;
-    ogit:indexed-attributes
-        ogit:name,
-        ogit:description;
-    ogit:history
+    ogit.core:indexed-attributes
+        ogit.foundation:name,
+        ogit.foundation:description;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-03-07";

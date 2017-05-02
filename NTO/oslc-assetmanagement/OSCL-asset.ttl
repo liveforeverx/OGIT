@@ -4,6 +4,7 @@
 @prefix vann:           <http://purl.org/vocab/vann/> .
 @prefix purl:           <http://www.purl.org/> .
 @prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.core:           <http://www.purl.org/ogit/> .
 @prefix ogit.OSCL-asset: <http://www.purl.org/ogit/OSLC-asset/> .
 
 #
@@ -24,19 +25,19 @@ ogit:OSCL-asset
 # Entities
 #
 ogit.OSCL-asset:Artifact
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Artifact";
-    ogit:original <http://open-services.net/ns/asset#Artifact>;
+    ogit.core:original <http://open-services.net/ns/asset#Artifact>;
     dcterms:description "The Artifact fragment";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent ogit:Node;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent ogit:Node;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -46,19 +47,19 @@ ogit.OSCL-asset:Artifact
 .
 
 ogit.OSCL-asset:Asset
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Asset";
-    ogit:original <http://open-services.net/ns/asset#Asset>;
+    ogit.core:original <http://open-services.net/ns/asset#Asset>;
     dcterms:description "The Asset resource";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent ogit:Node;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent ogit:Node;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -76,19 +77,19 @@ ogit.OSCL-asset:Asset
 # Verbs
 #
 ogit.OSCL-asset:artifact
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "artifact";
-    ogit:original <http://open-services.net/ns/asset#artifact>;
+    ogit.core:original <http://open-services.net/ns/asset#artifact>;
     dcterms:description "The multi valued list of artifacts.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -98,19 +99,19 @@ ogit.OSCL-asset:artifact
 .
 
 ogit.OSCL-asset:artifactFactory
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "artifactFactory";
-    ogit:original <http://open-services.net/ns/asset#artifactFactory>;
+    ogit.core:original <http://open-services.net/ns/asset#artifactFactory>;
     dcterms:description "Resource URI used to post new artifacts to the asset.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -120,19 +121,19 @@ ogit.OSCL-asset:artifactFactory
 .
 
 ogit.OSCL-asset:categorization
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "categorization";
-    ogit:original <http://open-services.net/ns/asset#categorization>;
+    ogit.core:original <http://open-services.net/ns/asset#categorization>;
     dcterms:description "A categorization to classify an asset. The category schema values are defined by the service provider. This specification does not define the resource for this property, however it should contain a dcterms:title property.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -142,19 +143,19 @@ ogit.OSCL-asset:categorization
 .
 
 ogit.OSCL-asset:content
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "content";
-    ogit:original <http://open-services.net/ns/asset#content>;
+    ogit.core:original <http://open-services.net/ns/asset#content>;
     dcterms:description "The media resource reference URI (the artifact bytes).";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -164,19 +165,19 @@ ogit.OSCL-asset:content
 .
 
 ogit.OSCL-asset:guid
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "guid";
-    ogit:original <http://open-services.net/ns/asset#guid>;
+    ogit.core:original <http://open-services.net/ns/asset#guid>;
     dcterms:description "An identifier for the asset. Assigned by the service provider when a resource is created. Different versions of the same asset will share the same identifier.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -186,19 +187,19 @@ ogit.OSCL-asset:guid
 .
 
 ogit.OSCL-asset:identifier
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "identifier";
-    ogit:original <http://open-services.net/ns/asset#identifier>;
+    ogit.core:original <http://open-services.net/ns/asset#identifier>;
     dcterms:description "A unique identifier for a resource. Assigned by the service provider when a resource is created.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -208,19 +209,19 @@ ogit.OSCL-asset:identifier
 .
 
 ogit.OSCL-asset:manufacturer
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "manufacturer";
-    ogit:original <http://open-services.net/ns/asset#manufacturer>;
+    ogit.core:original <http://open-services.net/ns/asset#manufacturer>;
     dcterms:description "The name of the asset manufacturer.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -230,19 +231,19 @@ ogit.OSCL-asset:manufacturer
 .
 
 ogit.OSCL-asset:model
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "model";
-    ogit:original <http://open-services.net/ns/asset#model>;
+    ogit.core:original <http://open-services.net/ns/asset#model>;
     dcterms:description "The value of the asset model.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -252,19 +253,19 @@ ogit.OSCL-asset:model
 .
 
 ogit.OSCL-asset:relationshipType
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "relationshipType";
-    ogit:original <http://open-services.net/ns/asset#relationshipType>;
+    ogit.core:original <http://open-services.net/ns/asset#relationshipType>;
     dcterms:description "The type of this relationship from the perspective of the oslc_asset:relatedAsset resource based on values defined by the service provider. This specification does not define the resource for this property, however it should contain a dcterms:title property.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -274,19 +275,19 @@ ogit.OSCL-asset:relationshipType
 .
 
 ogit.OSCL-asset:serialNumber
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "serialNumber";
-    ogit:original <http://open-services.net/ns/asset#serialNumber>;
+    ogit.core:original <http://open-services.net/ns/asset#serialNumber>;
     dcterms:description "The serial number assigned by the asset manufacturer.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -296,19 +297,19 @@ ogit.OSCL-asset:serialNumber
 .
 
 ogit.OSCL-asset:size
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "size";
-    ogit:original <http://open-services.net/ns/asset#size>;
+    ogit.core:original <http://open-services.net/ns/asset#size>;
     dcterms:description "The size of the artifact media resource in bytes.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -318,19 +319,19 @@ ogit.OSCL-asset:size
 .
 
 ogit.OSCL-asset:state
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "state";
-    ogit:original <http://open-services.net/ns/asset#state>;
+    ogit.core:original <http://open-services.net/ns/asset#state>;
     dcterms:description "Used to indicate the state of the asset based on values defined by the service provider. This specification does not define the resource for this property, however it should contain a dcterms:title property.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -340,19 +341,19 @@ ogit.OSCL-asset:state
 .
 
 ogit.OSCL-asset:tag
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "tag";
-    ogit:original <http://open-services.net/ns/asset#tag>;
+    ogit.core:original <http://open-services.net/ns/asset#tag>;
     dcterms:description "Specifies the asset tag value for an Asset. Asset tags are typically human readable labels. For hardware assets, these tags are durable, securely attached to equipment, and may also be readable by barcode and/or RFID.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -362,19 +363,19 @@ ogit.OSCL-asset:tag
 .
 
 ogit.OSCL-asset:version
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "version";
-    ogit:original <http://open-services.net/ns/asset#version>;
+    ogit.core:original <http://open-services.net/ns/asset#version>;
     dcterms:description "The version of the asset. Possible values may include '1.0', '2.0', etc.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";

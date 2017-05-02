@@ -1,10 +1,11 @@
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.core:                   <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ogit.Cost:              <http://www.purl.org/ogit/Cost/> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:contributes
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "contributes";
     dcterms:description """Verb associates which entity contributes to another, for example could be used to express a distribution for the percentage
 of a cost element, which contributes to another cost element.""";
@@ -12,18 +13,18 @@ of a cost element, which contributes to another cost element.""";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
             dcterms:description "initial";
             dcterms:creator "Peter Larem"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.Cost:CostElement;
-            ogit:to ogit.Cost:CostDistribution
+            ogit.core:from ogit.Cost:CostElement;
+            ogit.core:to ogit.Cost:CostDistribution
         ];
 .

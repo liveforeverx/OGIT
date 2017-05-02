@@ -1,11 +1,12 @@
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.core:                   <http://www.purl.org/ogit/> .
 @prefix ogit.data:              <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit:responds
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "responds";
     dcterms:description """This relationship indicates that one entity is a response to another. For example, parts of a
 conversation/fourm thread.""";
@@ -13,9 +14,9 @@ conversation/fourm thread.""";
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-27";
     dcterms:modified "2015-04-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-04-27";
@@ -34,25 +35,25 @@ conversation/fourm thread.""";
             dcterms:description "Added edge for `ogit/Comment` -> `ogit/Forum/Rating`";
             dcterms:creator "Ben Neal"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.data:Comment;
-            ogit:to ogit.Forum:Reply
+            ogit.core:from ogit.data:Comment;
+            ogit.core:to ogit.Forum:Reply
         ],
         [
-            ogit:from ogit.Forum:Reply;
-            ogit:to ogit.Forum:KnowledgeItemHistory
+            ogit.core:from ogit.Forum:Reply;
+            ogit.core:to ogit.Forum:KnowledgeItemHistory
         ],
         [
-            ogit:from ogit.Forum:Reply;
-            ogit:to ogit.Forum:Post
+            ogit.core:from ogit.Forum:Reply;
+            ogit.core:to ogit.Forum:Post
         ],
         [
-            ogit:from ogit.Forum:Reply;
-            ogit:to ogit.Forum:KnowledgeBundle
+            ogit.core:from ogit.Forum:Reply;
+            ogit.core:to ogit.Forum:KnowledgeBundle
         ],
         [
-            ogit:from ogit.data:Comment;
-            ogit:to ogit.Forum:Rating
+            ogit.core:from ogit.data:Comment;
+            ogit.core:to ogit.Forum:Rating
         ];
 .

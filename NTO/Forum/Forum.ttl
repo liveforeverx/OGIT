@@ -4,6 +4,8 @@
 @prefix vann:           <http://purl.org/vocab/vann/> .
 @prefix purl:           <http://www.purl.org/> .
 @prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.core:           <http://www.purl.org/ogit/> .
+@prefix ogit.foundation:           <http://www.purl.org/ogit/> .
 @prefix ogit.Automation:           <http://www.purl.org/ogit/Automation/> . 
 @prefix ogit.Forum:           <http://www.purl.org/ogit/Forum/> .
 
@@ -25,20 +27,20 @@ ogit:Forum
 # Entities
 #
 ogit.Forum:Award
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Award";
     dcterms:description "Something which is won. A 'badge of merit' or an achievement, etc...";
     dcterms:valid "start=2015-04-23;";
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-23";
     dcterms:modified "2015-04-23";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:title;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
+        ogit.foundation:title;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-04-25";
@@ -48,7 +50,7 @@ ogit.Forum:Award
 .
 
 ogit.Forum:Banner
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Banner";
     dcterms:description """Standout content, i.e. a header, hero-unit or part of a carousel.
 Examples:
@@ -58,13 +60,13 @@ Examples:
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-27";
     dcterms:modified "2015-04-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:content;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
+        ogit.foundation:content;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-04-27";
@@ -74,18 +76,18 @@ Examples:
 .
 
 ogit.Forum:Configuration
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Configuration";
     dcterms:description "Configuration Data. No Schema - all free attributes";
     dcterms:valid "start=2015-04-23;";
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-23";
     dcterms:modified "2015-04-23";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-04-25";
@@ -95,7 +97,7 @@ ogit.Forum:Configuration
 .
 
 ogit.Forum:FeedEntry
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "FeedEntry";
     dcterms:description """A single entry in a newsfeed or other stream of items. Unlikely to contain many attributes of
 its own, more likely to link users with items describing the event.""";
@@ -103,11 +105,11 @@ its own, more likely to link users with items describing the event.""";
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-27";
     dcterms:modified "2015-04-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-04-27";
@@ -117,18 +119,18 @@ its own, more likely to link users with items describing the event.""";
 .
 
 ogit.Forum:Group
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Group";
     dcterms:description "A Node to associate a profile to a particular group";
     dcterms:valid "start=2015-12-03;";
     dcterms:creator "bmoore@arago.de";
     dcterms:created "2015-12-03";
     dcterms:modified "2015-12-03";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-12-03";
@@ -138,20 +140,20 @@ ogit.Forum:Group
 .
 
 ogit.Forum:Invite
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Invite";
     dcterms:description "Invite is used to request participation with a node";
     dcterms:valid "start=2015-09-02;";
     dcterms:creator "bmoore@arago.de";
     dcterms:created "2015-09-02";
     dcterms:modified "2015-09-02";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:token;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
+        ogit.foundation:token;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-09-02";
@@ -161,22 +163,22 @@ ogit.Forum:Invite
 .
 
 ogit.Forum:KnowledgeBundle
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "KnowledgeBundle";
     dcterms:description "A grouping of `ogit/Automation/KnowledgeItem`s into a package.";
     dcterms:valid "start=2015-04-27;";
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-27";
     dcterms:modified "2015-04-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:name;
-    ogit:optional-attributes
-        ogit:accessControl;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
+        ogit.foundation:name;
+    ogit.core:optional-attributes
+        ogit.foundation:accessControl;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-04-27";
@@ -186,34 +188,34 @@ ogit.Forum:KnowledgeBundle
 .
 
 ogit.Forum:KnowledgeItemHistory
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "KnowledgeItemHistory";
     dcterms:description "A data container of `ogit/Automation/KnowledgeItem`s changes.";
     dcterms:valid "start=2015-11-13;";
     dcterms:creator "bmmore@arago.de";
     dcterms:created "2015-04-27";
     dcterms:modified "2015-04-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:any-attributes "true";
-    ogit:mandatory-attributes
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:any-attributes "true";
+    ogit.core:mandatory-attributes
         ogit.Automation:knowledgeItemFormalRepresentation,
         ogit.Automation:deployToEngine;
-    ogit:optional-attributes
-        ogit:modificationTime, 
-        ogit:isValid,
+    ogit.core:optional-attributes
+        ogit.foundation:modificationTime,
+        ogit.foundation:isValid,
         ogit.Automation:knowledgeItemTier,
-        ogit:creationTime,
-        ogit:name,
-        ogit:description,
-        ogit:changeLog,
-        ogit:accessControl;
-    ogit:indexed-attributes
-        ogit:name,
-        ogit:description;
-    ogit:history
+        ogit.foundation:creationTime,
+        ogit.foundation:name,
+        ogit.foundation:description,
+        ogit.foundation:changeLog,
+        ogit.foundation:accessControl;
+    ogit.core:indexed-attributes
+        ogit.foundation:name,
+        ogit.foundation:description;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-11-13";
@@ -223,18 +225,18 @@ ogit.Forum:KnowledgeItemHistory
 .
 
 ogit.Forum:Permission
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Permission";
     dcterms:description "Permission is used to approve a Nodes interaction with another Node";
     dcterms:valid "start=2015-09-04;";
     dcterms:creator "bmoore@arago.de";
     dcterms:created "2015-09-04";
     dcterms:modified "2015-09-04";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-09-04";
@@ -244,20 +246,20 @@ ogit.Forum:Permission
 .
 
 ogit.Forum:Post
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Post";
     dcterms:description "A Post is an online publication. Could be a blog post, or a posting on a forum/messageboard.";
     dcterms:valid "start=2015-04-27;";
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-27";
     dcterms:modified "2015-04-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:content;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
+        ogit.foundation:content;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-04-27";
@@ -267,7 +269,7 @@ ogit.Forum:Post
 .
 
 ogit.Forum:Profile
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Profile";
     dcterms:description """A User's persona within a forum. Linked to an `ogit/Identity` but separate, the Profile is
 the root node for most operations with a Forum.""";
@@ -275,14 +277,14 @@ the root node for most operations with a Forum.""";
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-27";
     dcterms:modified "2015-04-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
         ogit.Forum:username,
-        ogit:name;
-    ogit:history
+        ogit.foundation:name;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-04-27";
@@ -292,22 +294,22 @@ the root node for most operations with a Forum.""";
 .
 
 ogit.Forum:Rating
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Rating";
     dcterms:description "Rating is used to rank nodes based on an arbitrary integer `value`";
     dcterms:valid "start=2015-08-12;";
     dcterms:creator "bneal@arago.de";
     dcterms:created "2015-08-12";
     dcterms:modified "2015-08-12";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:value;
-    ogit:optional-attributes
-        ogit:content;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
+        ogit.foundation:value;
+    ogit.core:optional-attributes
+        ogit.foundation:content;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-08-12";
@@ -323,20 +325,20 @@ ogit.Forum:Rating
 .
 
 ogit.Forum:Reply
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Reply";
     dcterms:description "A response to a some other entity";
     dcterms:valid "start=2015-04-27;";
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-27";
     dcterms:modified "2015-04-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:content;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
+        ogit.foundation:content;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-04-27";
@@ -346,18 +348,18 @@ ogit.Forum:Reply
 .
 
 ogit.Forum:Role
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Role";
     dcterms:description "A Node to associate a profile with a particular Role within a Group";
     dcterms:valid "start=2015-12-03;";
     dcterms:creator "bmoore@arago.de";
     dcterms:created "2015-12-03";
     dcterms:modified "2015-12-03";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-12-03";
@@ -367,7 +369,7 @@ ogit.Forum:Role
 .
 
 ogit.Forum:ShortId
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "ShortId";
     dcterms:description """A Reference to another Entity, used to track access via a specific channel/referrer.
 For example in TabTab, a Post has many shortIds which relate to different sharing
@@ -382,15 +384,15 @@ The `ogit/id` attribute in this instance would be a short URL safe string.""";
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-23";
     dcterms:modified "2015-04-23";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:id;
-    ogit:optional-attributes
-        ogit:function;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
+        ogit.foundation:id;
+    ogit.core:optional-attributes
+        ogit.foundation:function;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-04-25";
@@ -400,7 +402,7 @@ The `ogit/id` attribute in this instance would be a short URL safe string.""";
 .
 
 ogit.Forum:Tag
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Tag";
     dcterms:description """A Tag used to categorise content. The required `key` attribute should be used
 as the unique identifier, and the `name` considered a display name.""";
@@ -408,13 +410,13 @@ as the unique identifier, and the `name` considered a display name.""";
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-27";
     dcterms:modified "2015-04-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:name;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
+        ogit.foundation:name;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-04-27";
@@ -424,7 +426,7 @@ as the unique identifier, and the `name` considered a display name.""";
 .
 
 ogit.Forum:Topic
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Topic";
     dcterms:description """A Topic is a SubForum with a specific topic associated. Use to divide forums into
 sub-forums. However the entity is general enough to be used for anything that has
@@ -433,16 +435,16 @@ a given subject.""";
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-27";
     dcterms:modified "2015-04-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:title,
-        ogit:description;
-    ogit:optional-attributes
-        ogit:accessControl;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
+        ogit.foundation:title,
+        ogit.foundation:description;
+    ogit.core:optional-attributes
+        ogit.foundation:accessControl;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-04-27";
@@ -456,16 +458,16 @@ a given subject.""";
 # Attributes
 #
 ogit.Forum:username
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "username";
     dcterms:description "A unique username for a member of a Forum";
     dcterms:valid "start=2015-04-27;";
     dcterms:creator "Chris Walker";
     dcterms:created "2015-03-26";
     dcterms:modified "2015-03-26";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-04-27";
@@ -479,55 +481,55 @@ ogit.Forum:username
 # Verbs
 #
 ogit.Forum:downloads
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "downloads";
     dcterms:description """This verb represents that a \"User\" has downloaded a given Bundle""";
     dcterms:valid "start=2016-02-25;";
     dcterms:creator "bneal@arago.de";
     dcterms:created "2016-02-25";
     dcterms:modified "2016-02-25";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-02-25";
             dcterms:description "intitial inception";
             dcterms:creator "bneal@arago.de"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.Forum:Profile;
-            ogit:to ogit.Forum:KnowledgeBundle
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:KnowledgeBundle
         ];
 .
 
 ogit.Forum:features
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "features";
     dcterms:description """This verb represents which KnowledgeBundles are featured (\"choosen\") for a given Group""";
     dcterms:valid "start=2016-02-25;";
     dcterms:creator "bneal@arago.de";
     dcterms:created "2016-02-25";
     dcterms:modified "2016-02-25";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-02-25";
             dcterms:description "intitial inception";
             dcterms:creator "bneal@arago.de"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.Forum:Group;
-            ogit:to ogit.Forum:KnowledgeBundle
+            ogit.core:from ogit.Forum:Group;
+            ogit.core:to ogit.Forum:KnowledgeBundle
         ];
 .
 
 ogit.Forum:mentions
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "mentions";
     dcterms:description """This verb was envisaged to represent the *Social Media* menaing of the word mention (or
 the Twitter-ism *at-mention*). However it simple represents that one entity mentions another,
@@ -536,41 +538,41 @@ for example cross-references in documentation would also be a valid use-case."""
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-27";
     dcterms:modified "2015-04-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-04-27";
             dcterms:description "intitial inception";
             dcterms:creator "cwalker@arago.de"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit:Comment;
-            ogit:to ogit.Forum:Profile
+            ogit.core:from ogit.foundation:Comment;
+            ogit.core:to ogit.Forum:Profile
         ],
         [
-            ogit:from ogit.Forum:Post;
-            ogit:to ogit.Forum:Profile
+            ogit.core:from ogit.Forum:Post;
+            ogit.core:to ogit.Forum:Profile
         ],
         [
-            ogit:from ogit.Forum:Reply;
-            ogit:to ogit.Forum:Profile
+            ogit.core:from ogit.Forum:Reply;
+            ogit.core:to ogit.Forum:Profile
         ];
 .
 
 ogit.Forum:rates
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "rates";
     dcterms:description "This verb represents the `Rating` between two nodes";
     dcterms:valid "start=2015-08-12;";
     dcterms:creator "bneal@arago.de";
     dcterms:created "2015-08-12";
     dcterms:modified "2016-03-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-08-12";
@@ -583,22 +585,22 @@ ogit.Forum:rates
             dcterms:description "Added Allowed Edges";
             dcterms:creator "bneal@arago.de"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.Forum:Profile;
-            ogit:to ogit.Forum:Rating
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:Rating
         ],
         [
-            ogit:from ogit.Forum:Rating;
-            ogit:to ogit.Forum:KnowledgeBundle
+            ogit.core:from ogit.Forum:Rating;
+            ogit.core:to ogit.Forum:KnowledgeBundle
         ],
         [
-            ogit:from ogit.Forum:Rating;
-            ogit:to ogit.Forum:KnowledgeItemHistory
+            ogit.core:from ogit.Forum:Rating;
+            ogit.core:to ogit.Forum:KnowledgeItemHistory
         ],
         [
-            ogit:from ogit.Forum:Rating;
-            ogit:to ogit.Automation:KnowledgeItem
+            ogit.core:from ogit.Forum:Rating;
+            ogit.core:to ogit.Automation:KnowledgeItem
         ];
 .
 

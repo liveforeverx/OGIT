@@ -1,0 +1,120 @@
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix vann:           <http://purl.org/vocab/vann/> .
+@prefix purl:           <http://www.purl.org/> .
+@prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.core:           <http://www.purl.org/ogit/> .
+@prefix ogit._BusinessProcess:           <http://www.purl.org/ogit/> .
+
+#
+# Ontology
+#
+ogit:_BusinessProcess
+    a owl:Ontology;
+    rdfs:label "OGIT _BusinessProcess";
+    dcterms:creator "arago GmbH";
+    dcterms:contributor "Fabian Meyer";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/";
+    vann:preferredNamespacePrefix "ogit._BusinessProcess";
+    owl:versionInfo "__OGIT_VERSION__";
+    owl:imports purl:ogit
+.
+
+#
+# Attributes
+#
+ogit._BusinessProcess:placement
+    a ogit.core:Attribute;
+    rdfs:label "placement";
+    dcterms:description "A place where the object is placed.";
+    dcterms:valid "start=2016-08-08;";
+    dcterms:creator "Alexander Ryabtsev";
+    dcterms:created "2016-08-08";
+    dcterms:modified "2016-08-08";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-08-08";
+            dcterms:description "initial";
+            dcterms:creator "Alexander Ryabtsev"
+        ];
+.
+
+ogit._BusinessProcess:plannedFinishDate
+    a ogit.core:Attribute;
+    rdfs:label "plannedFinishDate";
+    dcterms:description "Defines the date when something will be finished.";
+    dcterms:valid "start=2016-08-08;";
+    dcterms:creator "Alexander Ryabtsev";
+    dcterms:created "2016-08-08";
+    dcterms:modified "2016-08-08";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-08-08";
+            dcterms:description "initial";
+            dcterms:creator "Alexander Ryabtsev"
+        ];
+.
+
+ogit._BusinessProcess:plannedStartDate
+    a ogit.core:Attribute;
+    rdfs:label "plannedStartDate";
+    dcterms:description "Defines the date when something will be started.";
+    dcterms:valid "start=2016-08-08;";
+    dcterms:creator "Alexander Ryabtsev";
+    dcterms:created "2016-08-08";
+    dcterms:modified "2016-08-08";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-08-08";
+            dcterms:description "initial";
+            dcterms:creator "Alexander Ryabtsev"
+        ];
+.
+
+ogit._BusinessProcess:schedule
+    a ogit.core:Attribute;
+    rdfs:label "schedule";
+    dcterms:description "Schedule represented by a string in cron format.";
+    dcterms:valid "start=2016-08-08;";
+    dcterms:creator "Alexander Ryabtsev";
+    dcterms:created "2016-08-08";
+    dcterms:modified "2016-08-08";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-08-08";
+            dcterms:description "initial";
+            dcterms:creator "Alexander Ryabtsev"
+        ];
+.
+
+ogit._BusinessProcess:surveyQuestions
+    a ogit.core:Attribute;
+    rdfs:label "surveyQuestions";
+    dcterms:description "Questions from a survey or survey reply represented by a JSON array.";
+    dcterms:valid "start=2016-08-08;";
+    dcterms:creator "Alexander Ryabtsev";
+    dcterms:created "2016-08-08";
+    dcterms:modified "2016-08-08";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-08-08";
+            dcterms:description "initial";
+            dcterms:creator "Alexander Ryabtsev"
+        ];
+.

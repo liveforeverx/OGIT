@@ -4,6 +4,8 @@
 @prefix vann:           <http://purl.org/vocab/vann/> .
 @prefix purl:           <http://www.purl.org/> .
 @prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.core:           <http://www.purl.org/ogit/> .
+@prefix ogit.foundation:           <http://www.purl.org/ogit/> .
 @prefix ogit.Software:           <http://www.purl.org/ogit/Software/> .
 
 #
@@ -24,24 +26,24 @@ ogit:Software
 # Entities
 #
 ogit.Software:Application
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Application";
     dcterms:description "Represents any type of software application";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:name;
-    ogit:optional-attributes
-        ogit:url,
-        ogit:description,
-        ogit:version;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
+        ogit.foundation:name;
+    ogit.core:optional-attributes
+        ogit.foundation:url,
+        ogit.foundation:description,
+        ogit.foundation:version;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -51,21 +53,21 @@ ogit.Software:Application
 .
 
 ogit.Software:Connector
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Connector";
     dcterms:description "Represents any type of software connector";
     dcterms:valid "start=2015-06-11;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-06-11";
     dcterms:modified "2015-06-11";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:connectorId,
-        ogit:name;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:connectorId,
+        ogit.foundation:name;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-06-11";
@@ -81,20 +83,20 @@ ogit.Software:Connector
 .
 
 ogit.Software:Data
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Data";
     dcterms:description "Data transmitted between two components via connection.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:type;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:type;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -104,20 +106,20 @@ ogit.Software:Data
 .
 
 ogit.Software:SoftwareComponent
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "SoftwareComponent";
     dcterms:description "Any type of Software Component";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:id;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:id;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -127,20 +129,20 @@ ogit.Software:SoftwareComponent
 .
 
 ogit.Software:SoftwareConnection
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "SoftwareConnection";
     dcterms:description "Represents the connection between two components, which allows data transmission through a network link.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:type;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:type;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";

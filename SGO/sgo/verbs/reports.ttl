@@ -1,4 +1,5 @@
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.core:                   <http://www.purl.org/ogit/> .
 @prefix ogit.config:            <http://www.purl.org/ogit/> .
 @prefix ogit.person:            <http://www.purl.org/ogit/> .
 @prefix ogit.organization:               <http://www.purl.org/ogit/> .
@@ -7,16 +8,16 @@
 @prefix ogit.ServiceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
 
 ogit:reports
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "reports";
     dcterms:description "Verb showing which entity reports to which another entity.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -29,25 +30,25 @@ ogit:reports
             dcterms:description "add connection ogit/Person to ogit/Person";
             dcterms:creator "Peter Larem"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.config:Parameter;
-            ogit:to ogit.config:Parameter
+            ogit.core:from ogit.config:Parameter;
+            ogit.core:to ogit.config:Parameter
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.ServiceManagement:Incident
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.ServiceManagement:Incident
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.ServiceManagement:Problem
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.ServiceManagement:Problem
         ],
         [
-            ogit:from ogit.organization:Role;
-            ogit:to ogit.organization:Role
+            ogit.core:from ogit.organization:Role;
+            ogit.core:to ogit.organization:Role
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.person:Person
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.person:Person
         ];
 .

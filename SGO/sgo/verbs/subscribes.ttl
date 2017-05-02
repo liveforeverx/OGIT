@@ -1,10 +1,11 @@
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.core:                   <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit:subscribes
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "subscribes";
     dcterms:description """A subscription by an entity to another. Implies that one entity is interested in something
 the other can offer.""";
@@ -12,9 +13,9 @@ the other can offer.""";
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-27";
     dcterms:modified "2015-04-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-04-27";
@@ -33,29 +34,29 @@ the other can offer.""";
             dcterms:description "Edit for KnowledgeItemHistory";
             dcterms:creator "bmoore@arago.de"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.Forum:Profile;
-            ogit:to ogit.Forum:KnowledgeItemHistory
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:KnowledgeItemHistory
         ],
         [
-            ogit:from ogit.Forum:Profile;
-            ogit:to ogit.Forum:Topic
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:Topic
         ],
         [
-            ogit:from ogit.Forum:Profile;
-            ogit:to ogit.Forum:Post
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:Post
         ],
         [
-            ogit:from ogit.Forum:Profile;
-            ogit:to ogit.Forum:KnowledgeBundle
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:KnowledgeBundle
         ],
         [
-            ogit:from ogit.Forum:Profile;
-            ogit:to ogit.Forum:Profile
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:Profile
         ],
         [
-            ogit:from ogit.Forum:Profile;
-            ogit:to ogit.Forum:FeedEntry
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:FeedEntry
         ];
 .

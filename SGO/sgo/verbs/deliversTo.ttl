@@ -1,28 +1,29 @@
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.core:                   <http://www.purl.org/ogit/> .
 @prefix ogit.organization:               <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:deliversTo
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "deliversTo";
     dcterms:description "This relationship defines that one entity delivers sth. to another entity.";
     dcterms:valid "start=2015-10-22;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-10-22";
     dcterms:modified "2015-10-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-10-22";
             dcterms:description "initial";
             dcterms:creator "Peter Larem"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.organization:Organization
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.organization:Organization
         ];
 .

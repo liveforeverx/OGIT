@@ -1,5 +1,6 @@
 @prefix ogit.Automation:        <http://www.purl.org/ogit/Automation/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.core:                   <http://www.purl.org/ogit/> .
 @prefix ogit.catalog:           <http://www.purl.org/ogit/> .
 @prefix ogit.contract:          <http://www.purl.org/ogit/> .
 @prefix ogit.data:              <http://www.purl.org/ogit/> .
@@ -17,16 +18,16 @@
 @prefix ogit.ServiceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
 
 ogit:generates
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "generates";
     dcterms:description "";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2016-06-09";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -63,89 +64,89 @@ ogit:generates
             dcterms:description "connection added";
             dcterms:creator "stravlos"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.Automation:AutomationIssue;
-            ogit:to ogit.Automation:History
+            ogit.core:from ogit.Automation:AutomationIssue;
+            ogit.core:to ogit.Automation:History
         ],
         [
-            ogit:from ogit.Automation:AutomationIssue;
-            ogit:to ogit.data:Timeseries
+            ogit.core:from ogit.Automation:AutomationIssue;
+            ogit.core:to ogit.data:Timeseries
         ],
         [
-            ogit:from ogit.task:Question;
-            ogit:to ogit.data:Timeseries
+            ogit.core:from ogit.task:Question;
+            ogit.core:to ogit.data:Timeseries
         ],
         [
-            ogit:from ogit.Automation:History;
-            ogit:to ogit.data:Timeseries
+            ogit.core:from ogit.Automation:History;
+            ogit.core:to ogit.data:Timeseries
         ],
         [
-            ogit:from ogit.Automation:KnowledgeItem;
-            ogit:to ogit.data:Timeseries
+            ogit.core:from ogit.Automation:KnowledgeItem;
+            ogit.core:to ogit.data:Timeseries
         ],
         [
-            ogit:from ogit.Automation:MAID;
-            ogit:to ogit.data:Timeseries
+            ogit.core:from ogit.Automation:MAID;
+            ogit.core:to ogit.data:Timeseries
         ],
         [
-            ogit:from ogit.Automation:MARSModel;
-            ogit:to ogit.data:Timeseries
+            ogit.core:from ogit.Automation:MARSModel;
+            ogit.core:to ogit.data:Timeseries
         ],
         [
-            ogit:from ogit.Automation:MARSNode;
-            ogit:to ogit.data:Timeseries
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.data:Timeseries
         ],
         [
-            ogit:from ogit.task:Task;
-            ogit:to ogit.data:Timeseries
+            ogit.core:from ogit.task:Task;
+            ogit.core:to ogit.data:Timeseries
         ],
         [
-            ogit:from ogit.task:TaskList;
-            ogit:to ogit.data:Timeseries
+            ogit.core:from ogit.task:TaskList;
+            ogit.core:to ogit.data:Timeseries
         ],
         [
-            ogit:from ogit.device:Device;
-            ogit:to ogit.data:Timeseries
+            ogit.core:from ogit.device:Device;
+            ogit.core:to ogit.data:Timeseries
         ],
         [
-            ogit:from ogit.Datacenter:Server;
-            ogit:to ogit.data:Timeseries
+            ogit.core:from ogit.Datacenter:Server;
+            ogit.core:to ogit.data:Timeseries
         ],
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.catalog:Catalog
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.catalog:Catalog
         ],
         [
-            ogit:from ogit.location:Location;
-            ogit:to ogit.data:Timeseries
+            ogit.core:from ogit.location:Location;
+            ogit.core:to ogit.data:Timeseries
         ],
         [
-            ogit:from ogit.ServiceManagement:Report;
-            ogit:to ogit.Price:Invoice
+            ogit.core:from ogit.ServiceManagement:Report;
+            ogit.core:to ogit.Price:Invoice
         ],
         [
-            ogit:from ogit.ServiceManagement:Service;
-            ogit:to ogit.ServiceManagement:Report
+            ogit.core:from ogit.ServiceManagement:Service;
+            ogit.core:to ogit.ServiceManagement:Report
         ],
         [
-            ogit:from ogit.Network:SimpleDevice;
-            ogit:to ogit.data:Timeseries
+            ogit.core:from ogit.Network:SimpleDevice;
+            ogit.core:to ogit.data:Timeseries
         ],
         [
-            ogit:from ogit.Software:Application;
-            ogit:to ogit.data:Timeseries
+            ogit.core:from ogit.Software:Application;
+            ogit.core:to ogit.data:Timeseries
         ],
         [
-            ogit:from ogit.license:License;
-            ogit:to ogit.data:Timeseries
+            ogit.core:from ogit.license:License;
+            ogit.core:to ogit.data:Timeseries
         ],
                 [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.data:Timeseries
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.data:Timeseries
         ],
                 [
-            ogit:from ogit.contract:Contract;
-            ogit:to ogit.data:Timeseries
+            ogit.core:from ogit.contract:Contract;
+            ogit.core:to ogit.data:Timeseries
         ];
 .

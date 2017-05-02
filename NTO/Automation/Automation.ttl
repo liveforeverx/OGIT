@@ -4,7 +4,10 @@
 @prefix vann:           <http://purl.org/vocab/vann/> .
 @prefix purl:           <http://www.purl.org/> .
 @prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.core:           <http://www.purl.org/ogit/> .
+@prefix ogit.foundation:           <http://www.purl.org/ogit/> .
 @prefix ogit.Automation:           <http://www.purl.org/ogit/Automation/> .
+@prefix ogit._Automation:           <http://www.purl.org/ogit/> .
 @prefix ogit.Datacenter: <http://www.purl.org/ogit/Datacenter/> .
 
 #
@@ -25,7 +28,7 @@ ogit:Automation
 # Entities
 #
 ogit.Automation:AutomationIssue
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "AutomationIssue";
     dcterms:description """Dynamic information exists within an automation engine in the form of Issues otherwise referred to as
 Task or Situational Data. From the technical perspective an Issue is a number of attributes (Key/Value tuples) with 
@@ -38,24 +41,24 @@ IssueCondition is processed first.""";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
         ogit.Automation:issueFormalRepresentation;
-    ogit:optional-attributes
-        ogit:status,
-        ogit:subject,
+    ogit.core:optional-attributes
+        ogit.foundation:status,
+        ogit.foundation:subject,
         ogit.Automation:processingTimestamp,
-        ogit:modificationTime,
-        ogit:creationTime,
+        ogit.foundation:modificationTime,
+        ogit.foundation:creationTime,
         ogit.Automation:isDeployed,
         ogit.Automation:deployStatus;
-    ogit:indexed-attributes
-        ogit:subject,
+    ogit.core:indexed-attributes
+        ogit.foundation:subject,
         ogit.Automation:issueFormalRepresentation;
-    ogit:history
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -83,22 +86,22 @@ IssueCondition is processed first.""";
 .
 
 ogit.Automation:DynamicEngineData
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "DynamicEngineData";
     dcterms:description "Dynamic information exists within the arago Automation Engine (aAE) used to store volatile data about current state of MARSNode or AutomationIssue.";
     dcterms:valid "start=2015-06-25;";
     dcterms:creator "Miroslaw Glusiuk";
     dcterms:created "2015-06-25";
     dcterms:modified "2015-06-25";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:creationTime,
-        ogit:modificationTime,
-        ogit:name;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:creationTime,
+        ogit.foundation:modificationTime,
+        ogit.foundation:name;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-06-25";
@@ -108,25 +111,25 @@ ogit.Automation:DynamicEngineData
 .
 
 ogit.Automation:History
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "History";
     dcterms:description "IssueHistoryEntry corresponds to element <HistoryEntry> from IssueOutputSchema.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
         ogit.Automation:knowledgeItemId,
         ogit.Automation:affectedNodeId,
         ogit.Automation:command,
-        ogit:message,
+        ogit._Automation:message,
         ogit.Automation:logLevel,
-        ogit:timestamp;
-    ogit:history
+        ogit._Automation:timestamp;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -136,7 +139,7 @@ ogit.Automation:History
 .
 
 ogit.Automation:Item
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Item";
     dcterms:description """Item describing a condition for an automation issue (e.g. Request) that would correspond to a technical characteristic,
 which would activate the automation Trigger.""";
@@ -144,13 +147,13 @@ which would activate the automation Trigger.""";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:name;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
+        ogit.foundation:name;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -160,7 +163,7 @@ which would activate the automation Trigger.""";
 .
 
 ogit.Automation:KnowledgeItem
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "KnowledgeItem";
     dcterms:description """Formalized Knowledge stored in XML format. Serves as the building block for automation solutions.
 A KnowledgeItem is a knowledge module, which is applied for execution of an issue.
@@ -170,32 +173,32 @@ In that case, the KnowledgeItem executes operations, which serves the exploitati
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2016-04-18";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:any-attributes "true";
-    ogit:mandatory-attributes
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:any-attributes "true";
+    ogit.core:mandatory-attributes
         ogit.Automation:knowledgeItemFormalRepresentation,
         ogit.Automation:deployToEngine;
-    ogit:optional-attributes
-        ogit:modificationTime,
-        ogit:isValid,
+    ogit.core:optional-attributes
+        ogit.foundation:modificationTime,
+        ogit.foundation:isValid,
         ogit.Automation:knowledgeItemTier,
-        ogit:creationTime,
-        ogit:name,
-        ogit:description,
-        ogit:changeLog,
-        ogit:accessControl,
+        ogit.foundation:creationTime,
+        ogit.foundation:name,
+        ogit.foundation:description,
+        ogit.foundation:changeLog,
+        ogit.foundation:accessControl,
         ogit.Automation:isDeployed,
         ogit.Automation:deployStatus;
-    ogit:indexed-attributes
-        ogit:name,
-        ogit:description,
+    ogit.core:indexed-attributes
+        ogit.foundation:name,
+        ogit.foundation:description,
         ogit:_creator,
         ogit:_modified-by,
         ogit:_owner;
-    ogit:history
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -217,23 +220,23 @@ In that case, the KnowledgeItem executes operations, which serves the exploitati
 .
 
 ogit.Automation:KnowledgeItemAttribute
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "KnowledgeItemAttribute";
     dcterms:description "Contains key-value pairs (together with mode) found inside Issue subitems.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:name,
-        ogit:value;
-    ogit:optional-attributes
-        ogit:mode;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
+        ogit.foundation:name,
+        ogit.foundation:value;
+    ogit.core:optional-attributes
+        ogit._Automation:mode;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -243,7 +246,7 @@ ogit.Automation:KnowledgeItemAttribute
 .
 
 ogit.Automation:MAID
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "MAID";
     dcterms:description """The Monitoring-Automation Interface Description (MAID) is an abstract definition of
 1. a timeseries to be monitored
@@ -261,13 +264,13 @@ to the monitoring systems becomes possible.""";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
         ogit.Automation:maidFormalRepresentation;
-    ogit:history
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -277,7 +280,7 @@ to the monitoring systems becomes possible.""";
 .
 
 ogit.Automation:MARSModel
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "MARSModel";
     dcterms:description """A collection of MARSNodes allows to address all MARS nodes belonging together in a certain way at once the relationship
 from MARSModel to MARSNode is 'ogit/contains'.
@@ -288,14 +291,14 @@ to any MARSNode being part of that model.""";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:name,
-        ogit:description;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:name,
+        ogit.foundation:description;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -305,7 +308,7 @@ to any MARSNode being part of that model.""";
 .
 
 ogit.Automation:MARSModelTemplate
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "MARSModelTemplate";
     dcterms:description """Represents a set of interconnected MARSNodes, which will be used to define a vendor implementation template of an ordered
 service offering.""";
@@ -313,15 +316,15 @@ service offering.""";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:name;
-    ogit:optional-attributes
-        ogit:description;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
+        ogit.foundation:name;
+    ogit.core:optional-attributes
+        ogit.foundation:description;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -331,7 +334,7 @@ service offering.""";
 .
 
 ogit.Automation:MARSNode
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "MARSNode";
     dcterms:description """IT Objects will be representated in MARS Modell with MARS nodes.
 The MARS model builds upon four basic types of objects with a single type of relationship. Basically the objects 
@@ -342,19 +345,19 @@ describe the business view of the IT environment.""";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
         ogit.Automation:marsNodeFormalRepresentation,
         ogit.Automation:marsNodeType,
-        ogit:name,
-        ogit:serialNumber,
-        ogit:macAddress,
-        ogit:ipAddress,
-        ogit:manufacturer,
-        ogit:endOfWarranty,
+        ogit.foundation:name,
+        ogit.foundation:serialNumber,
+        ogit._Automation:macAddress,
+        ogit._Automation:ipAddress,
+        ogit._Automation:manufacturer,
+        ogit.foundation:endOfWarranty,
         ogit.Automation:software,
         ogit.Automation:softwareKey,
         ogit.Automation:adminUrl,
@@ -418,18 +421,18 @@ describe the business view of the IT environment.""";
         ogit.Automation:systemClass,
         ogit.Automation:patchNumber,
         ogit.Datacenter:rackUnit,
-        ogit:modificationTime,
-        ogit:creationTime,
-        ogit:connectorId,
-        ogit:id,
+        ogit.foundation:modificationTime,
+        ogit.foundation:creationTime,
+        ogit.foundation:connectorId,
+        ogit.foundation:id,
         ogit.Automation:companyName,
         ogit.Automation:projectName,
         ogit.Automation:isDeployed,
         ogit.Automation:deployStatus;
-    ogit:indexed-attributes
-        ogit:name,
+    ogit.core:indexed-attributes
+        ogit.foundation:name,
         ogit.Automation:marsNodeFormalRepresentation;
-    ogit:history
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -505,7 +508,7 @@ describe the business view of the IT environment.""";
 .
 
 ogit.Automation:MARSNodeTemplate
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "MARSNodeTemplate";
     dcterms:description """Entity similar to MARSNode but used to create ogit/Automation/MARSTemplate's, which are used to define a vendor implementation template of an ordered
 service offering and to enable definition of cost elements (ogit/Cost/CostElement) attached to it. Automation/MarsNode can not be reused for template reasons.""";
@@ -513,16 +516,16 @@ service offering and to enable definition of cost elements (ogit/Cost/CostElemen
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
         ogit.Automation:marsNodeFormalRepresentation;
-    ogit:optional-attributes
+    ogit.core:optional-attributes
         ogit.Automation:marsNodeType,
-        ogit:status;
-    ogit:history
+        ogit.foundation:status;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -532,20 +535,20 @@ service offering and to enable definition of cost elements (ogit/Cost/CostElemen
 .
 
 ogit.Automation:Trigger
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Trigger";
     dcterms:description "Trigger of a KI having a set of Subitems.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:description;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
+        ogit.foundation:description;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -559,16 +562,16 @@ ogit.Automation:Trigger
 # Attributes
 #
 ogit.Automation:additionalMacAddress
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "additionalMacAddress";
     dcterms:description "Contains an additional MAC address";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -578,16 +581,16 @@ ogit.Automation:additionalMacAddress
 .
 
 ogit.Automation:adminUrl
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "adminUrl";
     dcterms:description "Contains an URL (unified resource locator)";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -597,16 +600,16 @@ ogit.Automation:adminUrl
 .
 
 ogit.Automation:affectedNodeId
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "affectedNodeId";
     dcterms:description "Contains the ID of the node which is affected by this entity.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -616,16 +619,16 @@ ogit.Automation:affectedNodeId
 .
 
 ogit.Automation:appInfrastructureType
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "appInfrastructureType";
     dcterms:description "Contains the application infrastructure type.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -635,16 +638,16 @@ ogit.Automation:appInfrastructureType
 .
 
 ogit.Automation:appInstanceType
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "appInstanceType";
     dcterms:description "Contains the instance type.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -654,16 +657,16 @@ ogit.Automation:appInstanceType
 .
 
 ogit.Automation:appServer
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "appServer";
     dcterms:description "Contains application server.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -673,16 +676,16 @@ ogit.Automation:appServer
 .
 
 ogit.Automation:basicConfigId
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "basicConfigId";
     dcterms:description "Contains the internal identifier of the basic configuration of a component .";
     dcterms:valid "start=2015-05-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-27";
@@ -692,16 +695,16 @@ ogit.Automation:basicConfigId
 .
 
 ogit.Automation:brand
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "brand";
     dcterms:description "Contains the brand of a component/device.";
     dcterms:valid "";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -711,16 +714,16 @@ ogit.Automation:brand
 .
 
 ogit.Automation:buildName
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "buildName";
     dcterms:description "Contains the build name of a component.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -730,16 +733,16 @@ ogit.Automation:buildName
 .
 
 ogit.Automation:buildType
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "buildType";
     dcterms:description "Contains the build type of a component.";
     dcterms:valid "start=2015-08-19;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-08-19";
     dcterms:modified "2015-08-19";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-08-19";
@@ -749,16 +752,16 @@ ogit.Automation:buildType
 .
 
 ogit.Automation:command
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "command";
     dcterms:description "Contains an automation command.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -768,16 +771,16 @@ ogit.Automation:command
 .
 
 ogit.Automation:companyName
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "companyName";
     dcterms:description "Contains the company name of a component.";
     dcterms:valid "start=2015-11-02;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-11-02";
     dcterms:modified "2015-11-02";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-11-02";
@@ -787,16 +790,16 @@ ogit.Automation:companyName
 .
 
 ogit.Automation:contextPath
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "contextPath";
     dcterms:description "Contains the context path of a component.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -806,16 +809,16 @@ ogit.Automation:contextPath
 .
 
 ogit.Automation:cpuCoreCount
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "cpuCoreCount";
     dcterms:description "Contains the number of cpu cores.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -825,16 +828,16 @@ ogit.Automation:cpuCoreCount
 .
 
 ogit.Automation:cpuCount
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "cpuCount";
     dcterms:description "An integer which shows the number of cps of a component.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -844,16 +847,16 @@ ogit.Automation:cpuCount
 .
 
 ogit.Automation:cpuManufacturer
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "cpuManufacturer";
     dcterms:description "Contains the manufacturer of the cpu of a device.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -863,16 +866,16 @@ ogit.Automation:cpuManufacturer
 .
 
 ogit.Automation:cpuModel
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "cpuModel";
     dcterms:description "Contains the model of the cpu.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -882,16 +885,16 @@ ogit.Automation:cpuModel
 .
 
 ogit.Automation:cpuSpeed
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "cpuSpeed";
     dcterms:description "An floating point number which shows the cpu speed in GHZ.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -901,16 +904,16 @@ ogit.Automation:cpuSpeed
 .
 
 ogit.Automation:cpuType
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "cpuType";
     dcterms:description "Contains the cpu type of a device.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -920,16 +923,16 @@ ogit.Automation:cpuType
 .
 
 ogit.Automation:dataClassification
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "dataClassification";
     dcterms:description "Data classification of a component.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -939,16 +942,16 @@ ogit.Automation:dataClassification
 .
 
 ogit.Automation:dataPrivacy
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "dataPrivacy";
     dcterms:description "Data privacy of a component.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -958,16 +961,16 @@ ogit.Automation:dataPrivacy
 .
 
 ogit.Automation:databaseSchema
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "databaseSchema";
     dcterms:description "Contains information about the database schema. The schema is the skeleton structure that represents the logical view of the entire database";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -977,16 +980,16 @@ ogit.Automation:databaseSchema
 .
 
 ogit.Automation:databaseServer
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "databaseServer";
     dcterms:description "Contains information about the database server.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -996,16 +999,16 @@ ogit.Automation:databaseServer
 .
 
 ogit.Automation:deployStatus
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "deployStatus";
     dcterms:description "String value, represents the status if an automation Knowledge Item is not deployed into an Automation Engine.";
     dcterms:valid "start=2016-01-25;";
     dcterms:creator "Peter Larem";
     dcterms:created "2016-01-25";
     dcterms:modified "2016-01-25";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-01-25";
@@ -1015,16 +1018,16 @@ ogit.Automation:deployStatus
 .
 
 ogit.Automation:deployToEngine
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "deployToEngine";
     dcterms:description "Boolean value, true if an automation Knowledge Item can deploy into an Automation Engine.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -1034,16 +1037,16 @@ ogit.Automation:deployToEngine
 .
 
 ogit.Automation:diskCount
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "diskCount";
     dcterms:description "An integer which shows the number of disks of a component.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1053,16 +1056,16 @@ ogit.Automation:diskCount
 .
 
 ogit.Automation:diskSpace
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "diskSpace";
     dcterms:description "An integer which contains the disk space in GB.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1072,16 +1075,16 @@ ogit.Automation:diskSpace
 .
 
 ogit.Automation:domain
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "domain";
     dcterms:description "Contains the domain name.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1091,16 +1094,16 @@ ogit.Automation:domain
 .
 
 ogit.Automation:exchangeRate
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "exchangeRate";
     dcterms:description "Contains the data rate exchanged.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1110,16 +1113,16 @@ ogit.Automation:exchangeRate
 .
 
 ogit.Automation:firewallStatus
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "firewallStatus";
     dcterms:description "Contains information about the firewall status.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1129,16 +1132,16 @@ ogit.Automation:firewallStatus
 .
 
 ogit.Automation:firmwareVersion
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "firmWareVersion";
     dcterms:description "Version of the firmware.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1148,16 +1151,16 @@ ogit.Automation:firmwareVersion
 .
 
 ogit.Automation:fqdn
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "fqdn";
     dcterms:description "Contains a fully qualified domain name.";
     dcterms:valid "";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1167,16 +1170,16 @@ ogit.Automation:fqdn
 .
 
 ogit.Automation:governingContract
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "governingContract";
     dcterms:description "Contains information about the governing contract.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1186,16 +1189,16 @@ ogit.Automation:governingContract
 .
 
 ogit.Automation:host
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "host";
     dcterms:description "Contains the host name.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1205,16 +1208,16 @@ ogit.Automation:host
 .
 
 ogit.Automation:installCount
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "installCount";
     dcterms:description "Contains an integer. This integer can be adjust automatically when software is added to or deleted from configuration items (CIs).";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1224,16 +1227,16 @@ ogit.Automation:installCount
 .
 
 ogit.Automation:installPath
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "installPath";
     dcterms:description "Contains the installation path of a component.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1243,16 +1246,16 @@ ogit.Automation:installPath
 .
 
 ogit.Automation:isDeployed
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "isDeployed";
     dcterms:description "Boolean value, true if an automation Knowledge Item is deployed into an Automation Engine.";
     dcterms:valid "start=2016-01-25;";
     dcterms:creator "Peter Larem";
     dcterms:created "2016-01-25";
     dcterms:modified "2016-01-25";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-01-25";
@@ -1262,16 +1265,16 @@ ogit.Automation:isDeployed
 .
 
 ogit.Automation:issueFormalRepresentation
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "issueFormalRepresentation";
     dcterms:description "Contains an issue in XML representation defined by IssueSchema.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -1281,16 +1284,16 @@ ogit.Automation:issueFormalRepresentation
 .
 
 ogit.Automation:knowledgeItemFormalRepresentation
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "knowledgeItemFormalRepresentation";
     dcterms:description "Contains an automation Knowledge Item (KI) in XML representation defined by KiSchema.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -1300,16 +1303,16 @@ ogit.Automation:knowledgeItemFormalRepresentation
 .
 
 ogit.Automation:knowledgeItemId
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "knowledgeItemId";
     dcterms:description "Contains a KnowledgeItemID in string representation.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -1319,16 +1322,16 @@ ogit.Automation:knowledgeItemId
 .
 
 ogit.Automation:knowledgeItemTier
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "knowledgeItemTier";
     dcterms:description "Numeric value describing KnowledgeItem Tier.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -1338,16 +1341,16 @@ ogit.Automation:knowledgeItemTier
 .
 
 ogit.Automation:licenseAvailability
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "licenseAvailability";
     dcterms:description "The availability of the license of a component.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -1357,16 +1360,16 @@ ogit.Automation:licenseAvailability
 .
 
 ogit.Automation:licenseName
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "licenseName";
     dcterms:description "Contains the license name of a component.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -1376,16 +1379,16 @@ ogit.Automation:licenseName
 .
 
 ogit.Automation:licenseType
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "licenseType";
     dcterms:description "Contains the license type of a component.";
     dcterms:valid "start=2015-05-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -1395,16 +1398,16 @@ ogit.Automation:licenseType
 .
 
 ogit.Automation:logLevel
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "logLevel";
     dcterms:description "Contains the numeric log level of the history entry.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -1414,16 +1417,16 @@ ogit.Automation:logLevel
 .
 
 ogit.Automation:maidFormalRepresentation
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "maidFormalRepresentation";
     dcterms:description "Contains a MAID in XML representation defined by MAIDSchema.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -1433,16 +1436,16 @@ ogit.Automation:maidFormalRepresentation
 .
 
 ogit.Automation:marsNodeFormalRepresentation
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "marsNodeFormalRepresentation";
     dcterms:description "Contains MARS in XML representation defined by MARSSchema2013.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -1452,16 +1455,16 @@ ogit.Automation:marsNodeFormalRepresentation
 .
 
 ogit.Automation:marsNodeType
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "marsNodeType";
     dcterms:description "Contains The Type of the Mars Node. Should be one of Application, Machine, Software, Resource.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -1471,16 +1474,16 @@ ogit.Automation:marsNodeType
 .
 
 ogit.Automation:memory
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "memory";
     dcterms:description "Contains a the total physical memory (RAM) in MB.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1490,16 +1493,16 @@ ogit.Automation:memory
 .
 
 ogit.Automation:middlewareType
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "middlewareType";
     dcterms:description "Contains information about the type of middleware. For example it  database middleware, application server middleware or a message-oriented middleware.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1509,7 +1512,7 @@ ogit.Automation:middlewareType
 .
 
 ogit.Automation:moveToProductionAt
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "moveToProductionAt";
     dcterms:description """Defines the time when something was actually moved to production.
 The values can combine date and time with time zone designator according to ISO 8601.""";
@@ -1517,9 +1520,9 @@ The values can combine date and time with time zone designator according to ISO 
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1529,16 +1532,16 @@ The values can combine date and time with time zone designator according to ISO 
 .
 
 ogit.Automation:objectIdentifier
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "objectIdentifier";
     dcterms:description "Contains a system object identifier.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1548,16 +1551,16 @@ ogit.Automation:objectIdentifier
 .
 
 ogit.Automation:osKey
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "osKey";
     dcterms:description "Product key for the Operating System.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Philipp Pelchmann";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1567,16 +1570,16 @@ ogit.Automation:osKey
 .
 
 ogit.Automation:osLicense
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "osLicense";
     dcterms:description "License of the Operating System.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Philipp Pelchmann";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1586,16 +1589,16 @@ ogit.Automation:osLicense
 .
 
 ogit.Automation:osManufacturer
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "osManufacturer";
     dcterms:description "Contains the manufacturer of the operating system.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1605,16 +1608,16 @@ ogit.Automation:osManufacturer
 .
 
 ogit.Automation:osName
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "osName";
     dcterms:description "Contains operating system name.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Philipp Pelchmann";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1624,16 +1627,16 @@ ogit.Automation:osName
 .
 
 ogit.Automation:osServicePack
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "osServicePack";
     dcterms:description "Contains the service pack for the operating system.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Philipp Pelchmann";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1643,16 +1646,16 @@ ogit.Automation:osServicePack
 .
 
 ogit.Automation:osVersion
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "osVersion";
     dcterms:description "Version of the Operating System.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Philipp Pelchmann";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1662,16 +1665,16 @@ ogit.Automation:osVersion
 .
 
 ogit.Automation:patchNumber
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "patchNumber";
     dcterms:description "Contains a patch number.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -1681,16 +1684,16 @@ ogit.Automation:patchNumber
 .
 
 ogit.Automation:portNumber
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "portNumber";
     dcterms:description "Contains a port number.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -1700,16 +1703,16 @@ ogit.Automation:portNumber
 .
 
 ogit.Automation:portNumberListener
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "portNumberListener";
     dcterms:description "Contains a port number listener.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -1719,16 +1722,16 @@ ogit.Automation:portNumberListener
 .
 
 ogit.Automation:processingTimestamp
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "processingTimestamp";
     dcterms:description "Contains the timestamp indicating last time an aumation issue was processed.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -1738,16 +1741,16 @@ ogit.Automation:processingTimestamp
 .
 
 ogit.Automation:projectName
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "projectName";
     dcterms:description "Contains the project name of a component.";
     dcterms:valid "start=2015-11-02;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-11-02";
     dcterms:modified "2015-11-02";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-11-02";
@@ -1757,16 +1760,16 @@ ogit.Automation:projectName
 .
 
 ogit.Automation:serialNumber
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "serialNumber";
     dcterms:description "Contains a the serial number of a device/component.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -1776,16 +1779,16 @@ ogit.Automation:serialNumber
 .
 
 ogit.Automation:serviceClass
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "serviceClass";
     dcterms:description "Contains the class of the service.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -1795,16 +1798,16 @@ ogit.Automation:serviceClass
 .
 
 ogit.Automation:serviceId
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "serviceId";
     dcterms:description "Contains the Id of the service.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -1814,16 +1817,16 @@ ogit.Automation:serviceId
 .
 
 ogit.Automation:serviceName
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "serviceName";
     dcterms:description "Contains the name of a service.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -1833,16 +1836,16 @@ ogit.Automation:serviceName
 .
 
 ogit.Automation:serviceStatus
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "serviceStatus";
     dcterms:description "Contains the status of a service.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -1852,16 +1855,16 @@ ogit.Automation:serviceStatus
 .
 
 ogit.Automation:serviceType
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "serviceType";
     dcterms:description "Contains the Type of a service.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -1871,16 +1874,16 @@ ogit.Automation:serviceType
 .
 
 ogit.Automation:servletClass
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "servletClass";
     dcterms:description "Contains the class of the servlet.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1890,16 +1893,16 @@ ogit.Automation:servletClass
 .
 
 ogit.Automation:servletName
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "servletName";
     dcterms:description "Contains the name if the servlet.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -1909,16 +1912,16 @@ ogit.Automation:servletName
 .
 
 ogit.Automation:software
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "software";
     dcterms:description "A software component.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -1928,16 +1931,16 @@ ogit.Automation:software
 .
 
 ogit.Automation:softwareKey
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "softwareKey";
     dcterms:description "Contains the key of a software.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -1947,16 +1950,16 @@ ogit.Automation:softwareKey
 .
 
 ogit.Automation:systemClass
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "systemClass";
     dcterms:description "Contains the class of the system.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1966,16 +1969,16 @@ ogit.Automation:systemClass
 .
 
 ogit.Automation:systemType
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "systemType";
     dcterms:description "Contains the type of the system.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -1985,16 +1988,16 @@ ogit.Automation:systemType
 .
 
 ogit.Automation:tcpPort
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "tcpPort";
     dcterms:description "The tcp port.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";
@@ -2004,16 +2007,16 @@ ogit.Automation:tcpPort
 .
 
 ogit.Automation:virtualMachineName
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "virtualMachineName";
     dcterms:description "Contains the name of the virtual machine.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -2023,16 +2026,16 @@ ogit.Automation:virtualMachineName
 .
 
 ogit.Automation:virtualSystemName
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "virtualSystemName";
     dcterms:description "Contains the name of the virtual system.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -2042,16 +2045,16 @@ ogit.Automation:virtualSystemName
 .
 
 ogit.Automation:virtualSystemType
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "virtualSystemType";
     dcterms:description "Contains the type of the virtual system.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -2061,16 +2064,16 @@ ogit.Automation:virtualSystemType
 .
 
 ogit.Automation:webServer
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "webServer";
     dcterms:description "Contains an webServer.";
     dcterms:valid "start=2015-07-24;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-24";
     dcterms:modified "2015-07-24";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-24";

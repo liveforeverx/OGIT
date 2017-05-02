@@ -1,29 +1,30 @@
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.core:                   <http://www.purl.org/ogit/> .
 @prefix ogit.event:                   <http://www.purl.org/ogit/> .
 @prefix ogit.person:                   <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:alerts
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "alerts";
     dcterms:description "Verb showing if one entity alerts another.";
     dcterms:valid "start=2016-10-26;";
     dcterms:creator "stravlos@arago.co";
     dcterms:created "2016-10-26";
     dcterms:modified "2016-10-26";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-10-26";
             dcterms:description "initial";
             dcterms:creator "stravlos@arago.co"
         ];
-  ogit:allowed
+  ogit.core:allowed
         [
-            ogit:from ogit.event:Alert;
-            ogit:to ogit.person:Person
+            ogit.core:from ogit.event:Alert;
+            ogit.core:to ogit.person:Person
         ];
 .

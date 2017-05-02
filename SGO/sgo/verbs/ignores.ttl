@@ -1,29 +1,30 @@
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.core:                   <http://www.purl.org/ogit/> .
 @prefix ogit.person:            <http://www.purl.org/ogit/> .
 @prefix ogit.data:              <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 
 ogit:ignores
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "ignores";
     dcterms:description "Verb showing that one entity ignores another - (useful as a mark-as-read flag)";
     dcterms:valid "start=2016-10-14;";
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2016-10-14";
     dcterms:modified "2016-10-14";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-10-14";
             dcterms:description "initial";
             dcterms:creator "cwalker@arago.de"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.data:Comment
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.data:Comment
         ];
 .

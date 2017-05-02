@@ -4,6 +4,7 @@
 @prefix vann:         <http://purl.org/vocab/vann/> .
 @prefix purl:           <http://www.purl.org/> .
 @prefix ogit:         <http://www.purl.org/ogit/> .
+@prefix ogit.core:         <http://www.purl.org/ogit/> .
 @prefix ogit.person:  <http://www.purl.org/ogit/> .
 @prefix ogit.graphit: <http://www.purl.org/ogit/> .
 @prefix ogit.organization:     <http://www.purl.org/ogit/> .
@@ -28,7 +29,7 @@ ogit:graphit
 # Entities
 #
 ogit.graphit:Node
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Node";
     dcterms:description """The root node, the 'Big Bang'. The nodes Global, Factual, Actionable and Situational build with this Node the
 top level of the SGO.""";
@@ -36,11 +37,11 @@ top level of the SGO.""";
     dcterms:creator "Peter Larem";
     dcterms:created "2013-09-01";
     dcterms:modified "2013-09-01";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "SGO";
-    ogit:hide "true";
-    ogit:mandatory-attributes
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "SGO";
+    ogit.core:hide "true";
+    ogit.core:mandatory-attributes
         ogit.graphit:_id,
         ogit.graphit:_type,
         ogit.graphit:_owner,
@@ -55,7 +56,7 @@ top level of the SGO.""";
         ogit.graphit:_content,
         ogit.graphit:_tags,
         ogit.graphit:_edge_id;
-    ogit:history
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2013-09-01";
@@ -68,16 +69,16 @@ top level of the SGO.""";
 # Attributes
 #
 ogit.graphit:_content
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "_content";
     dcterms:description "[internally generated] Used for the elastic search.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -87,16 +88,16 @@ ogit.graphit:_content
 .
 
 ogit.graphit:_created-on
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "_created-on";
     dcterms:description "[internally generated] Timestamp in ms when the node was created";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -106,16 +107,16 @@ ogit.graphit:_created-on
 .
 
 ogit.graphit:_creator-app
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "_creator-app";
     dcterms:description "[internally generated] App that creates nodes and edges.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -125,16 +126,16 @@ ogit.graphit:_creator-app
 .
 
 ogit.graphit:_creator
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "_creator";
     dcterms:description "[internally generated] The id of the identity who created the node or edge";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -144,16 +145,16 @@ ogit.graphit:_creator
 .
 
 ogit.graphit:_deleted-on
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "_deleted-on";
     dcterms:description "[internally generated] Timestamp in ms when the node was deleted";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -163,16 +164,16 @@ ogit.graphit:_deleted-on
 .
 
 ogit.graphit:_edge_id
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "_content";
     dcterms:description "[internally generated] contains the edge-id";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -182,16 +183,16 @@ ogit.graphit:_edge_id
 .
 
 ogit.graphit:_graphtype
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "_graphtype";
     dcterms:description """[internally generated] A virtual property which helps differentiating between graph objects. Values are \"edge\" or \"vertex\".""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -201,16 +202,16 @@ ogit.graphit:_graphtype
 .
 
 ogit.graphit:_id
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "_id";
     dcterms:description "[internally generated] The unique identifier. The id is automatically generated by GraphIT.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -220,16 +221,16 @@ ogit.graphit:_id
 .
 
 ogit.graphit:_is-deleted
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "_is-deleted";
     dcterms:description "[internally generated] whether a node is deleted";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -239,16 +240,16 @@ ogit.graphit:_is-deleted
 .
 
 ogit.graphit:_modified-by-app
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "_modified-by-app";
     dcterms:description "[internally generated] App that modified nodes and edges.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -258,16 +259,16 @@ ogit.graphit:_modified-by-app
 .
 
 ogit.graphit:_modified-by
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "_modified-by";
     dcterms:description "[internally generated] The id of the identity who did the modification";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -277,16 +278,16 @@ ogit.graphit:_modified-by
 .
 
 ogit.graphit:_modified-on
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "_modified-on";
     dcterms:description "[internally generated] A timestamp in ms when the node was modified.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -296,16 +297,16 @@ ogit.graphit:_modified-on
 .
 
 ogit.graphit:_owner
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "_owner";
     dcterms:description "[internally generated] The id of the identity who owns the node";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -315,16 +316,16 @@ ogit.graphit:_owner
 .
 
 ogit.graphit:_tags
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "_tags";
     dcterms:description "[internally generated] Used for individual search.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -334,16 +335,16 @@ ogit.graphit:_tags
 .
 
 ogit.graphit:_type
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "_type";
     dcterms:description "[internally generated] The id of the type of the entity.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -353,16 +354,16 @@ ogit.graphit:_type
 .
 
 ogit.graphit:_version
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "_version";
     dcterms:description "[internally generated] The ontology version number";
     dcterms:valid "start=2015-05-27;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-27";
     dcterms:modified "2015-05-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-27";
@@ -375,88 +376,88 @@ ogit.graphit:_version
 # Verbs
 #
 ogit.graphit:_created
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "_created";
     dcterms:description "The creator of a node. This verb is generated internally.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
             dcterms:description "initial";
             dcterms:creator "Peter Larem"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.graphit:Node
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.graphit:Node
         ],
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.graphit:Node
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.graphit:Node
         ];
 .
 
 ogit.graphit:_deleted
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "_deleted";
     dcterms:description "The deleter of a node. This verb is generated internally.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
             dcterms:description "initial";
             dcterms:creator "Peter Larem"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.graphit:Node
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.graphit:Node
         ],
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.graphit:Node
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.graphit:Node
         ];
 .
 
 ogit.graphit:_owns
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "_owns";
     dcterms:description "The owner of a node. This verb is generated internally.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
             dcterms:description "initial";
             dcterms:creator "Peter Larem"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.graphit:Node
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.graphit:Node
         ],
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.graphit:Node
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.graphit:Node
         ];
 .

@@ -4,7 +4,9 @@
 @prefix vann:          <http://purl.org/vocab/vann/> .
 @prefix purl:           <http://www.purl.org/> .
 @prefix ogit:          <http://www.purl.org/ogit/> .
+@prefix ogit.core:          <http://www.purl.org/ogit/> .
 @prefix ogit.location: <http://www.purl.org/ogit/> .
+@prefix ogit.foundation:     <http://www.purl.org/ogit/> .
 
 #
 # Ontology
@@ -24,7 +26,7 @@ ogit:location
 # Entities
 #
 ogit.location:Location
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Location";
     dcterms:description """A place where some some service is offered or requested. In many cases this will be related to a an address of an
 Organization. Similar to http://purl.org/goodrelations/v1#Location""";
@@ -32,15 +34,15 @@ Organization. Similar to http://purl.org/goodrelations/v1#Location""";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "SGO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:name;
-    ogit:optional-attributes
-        ogit:description;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "SGO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
+        ogit.foundation:name;
+    ogit.core:optional-attributes
+        ogit.foundation:description;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -50,21 +52,21 @@ Organization. Similar to http://purl.org/goodrelations/v1#Location""";
 .
 
 ogit.location:Region
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Region";
     dcterms:description "A region is always something that has a certain geographic extension (a country, a county,  ) whereas ogit/Location usually refers to specific place usually having an address";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "SGO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:name,
-        ogit:description;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "SGO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:name,
+        ogit.foundation:description;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";

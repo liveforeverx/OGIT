@@ -4,6 +4,7 @@
 @prefix vann:           <http://purl.org/vocab/vann/> .
 @prefix purl:           <http://www.purl.org/> .
 @prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.core:           <http://www.purl.org/ogit/> .
 @prefix ogit.OSLC-qm:           <http://www.purl.org/ogit/OSLC-qm/> .
 
 #
@@ -24,19 +25,19 @@ ogit:OSLC-qm
 # Entities
 #
 ogit.OSLC-qm:TestCase
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "TestCase";
-    ogit:original <http://open-services.net/ns/qm#TestCase>;
+    ogit.core:original <http://open-services.net/ns/qm#TestCase>;
     dcterms:description "The QM Test Case resource";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent ogit:Node;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent ogit:Node;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -46,19 +47,19 @@ ogit.OSLC-qm:TestCase
 .
 
 ogit.OSLC-qm:TestExecutionRecord
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "TestExecutionRecord";
-    ogit:original <http://open-services.net/ns/qm#TestExecutionRecord>;
+    ogit.core:original <http://open-services.net/ns/qm#TestExecutionRecord>;
     dcterms:description "The QM Test Execution Record resource";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent ogit:Node;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent ogit:Node;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -68,19 +69,19 @@ ogit.OSLC-qm:TestExecutionRecord
 .
 
 ogit.OSLC-qm:TestPlan
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "TestPlan";
-    ogit:original <http://open-services.net/ns/qm#TestPlan>;
+    ogit.core:original <http://open-services.net/ns/qm#TestPlan>;
     dcterms:description "The QM Test Plan resource";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent ogit:Node;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent ogit:Node;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -90,19 +91,19 @@ ogit.OSLC-qm:TestPlan
 .
 
 ogit.OSLC-qm:TestResult
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "TestResult";
-    ogit:original <http://open-services.net/ns/qm#TestResult>;
+    ogit.core:original <http://open-services.net/ns/qm#TestResult>;
     dcterms:description "The QM Test Result resource";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent ogit:Node;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent ogit:Node;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -112,19 +113,19 @@ ogit.OSLC-qm:TestResult
 .
 
 ogit.OSLC-qm:TestScript
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "TestScript";
-    ogit:original <http://open-services.net/ns/qm#TestScript>;
+    ogit.core:original <http://open-services.net/ns/qm#TestScript>;
     dcterms:description "The QM Test Script resource";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent ogit:Node;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent ogit:Node;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -142,19 +143,19 @@ ogit.OSLC-qm:TestScript
 # Verbs
 #
 ogit.OSLC-qm:affectedByChangeRequest
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "affectedByChangeRequest";
-    ogit:original <http://open-services.net/ns/qm#affectedByChangeRequest>;
+    ogit.core:original <http://open-services.net/ns/qm#affectedByChangeRequest>;
     dcterms:description "Change request that affects the Test Result. It is likely that the target resource will be an oslc_cm:ChangeRequest but that is not necessarily the case.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -164,19 +165,19 @@ ogit.OSLC-qm:affectedByChangeRequest
 .
 
 ogit.OSLC-qm:blockedByChangeRequest
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "blockedByChangeRequest";
-    ogit:original <http://open-services.net/ns/qm#blockedByChangeRequest>;
+    ogit.core:original <http://open-services.net/ns/qm#blockedByChangeRequest>;
     dcterms:description "Change Request that prevents execution of the Test Execution Record. It is likely that the target resource will be an oslc_cm:ChangeRequest but that is not necessarily the case.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -186,19 +187,19 @@ ogit.OSLC-qm:blockedByChangeRequest
 .
 
 ogit.OSLC-qm:executesTestScript
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "executesTestScript";
-    ogit:original <http://open-services.net/ns/qm#executesTestScript>;
+    ogit.core:original <http://open-services.net/ns/qm#executesTestScript>;
     dcterms:description "Test Script executed to produce the Test Result. It is likely that the target resource will be an oslc_qm:TestScript but that is not necessarily the case.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -208,19 +209,19 @@ ogit.OSLC-qm:executesTestScript
 .
 
 ogit.OSLC-qm:executionInstructions
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "executionInstructions";
-    ogit:original <http://open-services.net/ns/qm#executionInstructions>;
+    ogit.core:original <http://open-services.net/ns/qm#executionInstructions>;
     dcterms:description "Instructions for executing the test script. Note that the value of Occurs is undefined. The resource shape document provided by the QM service provider may be consulted for its value.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -230,19 +231,19 @@ ogit.OSLC-qm:executionInstructions
 .
 
 ogit.OSLC-qm:producedByTestExecutionRecord
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "producedByTestExecutionRecord";
-    ogit:original <http://open-services.net/ns/qm#producedByTestExecutionRecord>;
+    ogit.core:original <http://open-services.net/ns/qm#producedByTestExecutionRecord>;
     dcterms:description "Test Execution Record that the Test Result was produced by. It is likely that the target resource will be an oslc_qm:TestExecutionRecord but that is not necessarily the case.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -252,19 +253,19 @@ ogit.OSLC-qm:producedByTestExecutionRecord
 .
 
 ogit.OSLC-qm:relatedChangeRequest
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "relatedChangeRequest";
-    ogit:original <http://open-services.net/ns/qm#relatedChangeRequest>;
+    ogit.core:original <http://open-services.net/ns/qm#relatedChangeRequest>;
     dcterms:description "A related change request. It is likely that the target resource will be an oslc_cm:ChangeRequest but that is not necessarily the case. ";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -274,19 +275,19 @@ ogit.OSLC-qm:relatedChangeRequest
 .
 
 ogit.OSLC-qm:reportsOnTestCase
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "reportsOnTestCase";
-    ogit:original <http://open-services.net/ns/qm#reportsOnTestCase>;
+    ogit.core:original <http://open-services.net/ns/qm#reportsOnTestCase>;
     dcterms:description "Test Case that the Test Result reports on. It is likely that the target resource will be an oslc_qm:TestCase but that is not necessarily the case.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -296,19 +297,19 @@ ogit.OSLC-qm:reportsOnTestCase
 .
 
 ogit.OSLC-qm:reportsOnTestPlan
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "reportsOnTestPlan";
-    ogit:original <http://open-services.net/ns/qm#reportsOnTestPlan>;
+    ogit.core:original <http://open-services.net/ns/qm#reportsOnTestPlan>;
     dcterms:description "Test Plan that the Test Execution Record reports on. It is likely that the target resource will be an oslc_qm:TestPlan but that is not necessarily the case.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -318,19 +319,19 @@ ogit.OSLC-qm:reportsOnTestPlan
 .
 
 ogit.OSLC-qm:runsOnTestEnvironment
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "runsOnTestEnvironment";
-    ogit:original <http://open-services.net/ns/qm#runsOnTestEnvironment>;
+    ogit.core:original <http://open-services.net/ns/qm#runsOnTestEnvironment>;
     dcterms:description "Indicates the environment details of the test case for this execution record.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -340,19 +341,19 @@ ogit.OSLC-qm:runsOnTestEnvironment
 .
 
 ogit.OSLC-qm:runsTestCase
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "runsTestCase";
-    ogit:original <http://open-services.net/ns/qm#runsTestCase>;
+    ogit.core:original <http://open-services.net/ns/qm#runsTestCase>;
     dcterms:description "Test Case run by the Test Execution Record. It is likely that the target resource will be an oslc_qm:TestCase but that is not necessarily the case.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -362,19 +363,19 @@ ogit.OSLC-qm:runsTestCase
 .
 
 ogit.OSLC-qm:testsChangeRequest
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "testsChangeRequest";
-    ogit:original <http://open-services.net/ns/qm#testsChangeRequest>;
+    ogit.core:original <http://open-services.net/ns/qm#testsChangeRequest>;
     dcterms:description "Change Request tested by the Test Case. It is likely that the target resource will be an oslc_cm:ChangeRequest but that is not necessarily the case.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -384,19 +385,19 @@ ogit.OSLC-qm:testsChangeRequest
 .
 
 ogit.OSLC-qm:usesTestCase
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "usesTestCase";
-    ogit:original <http://open-services.net/ns/qm#usesTestCase>;
+    ogit.core:original <http://open-services.net/ns/qm#usesTestCase>;
     dcterms:description "Test Case used by the Test Plan. It is likely that the target resource will be an oslc_qm:TestCase but that is not necessarily the case.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -406,19 +407,19 @@ ogit.OSLC-qm:usesTestCase
 .
 
 ogit.OSLC-qm:usesTestScript
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "usesTestScript";
-    ogit:original <http://open-services.net/ns/qm#usesTestScript>;
+    ogit.core:original <http://open-services.net/ns/qm#usesTestScript>;
     dcterms:description "Test Script used by the Test Case. It is likely that the target resource will be an oslc_qm:TestScript but that is not necessarily the case.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -428,19 +429,19 @@ ogit.OSLC-qm:usesTestScript
 .
 
 ogit.OSLC-qm:validatesRequirement
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "validatesRequirement";
-    ogit:original <http://open-services.net/ns/qm#validatesRequirement>;
+    ogit.core:original <http://open-services.net/ns/qm#validatesRequirement>;
     dcterms:description "Requirement that is validated by the Test Case. It is likely that the target resource will be an oslc_rm:Requirement but that is not necessarily the case.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -450,19 +451,19 @@ ogit.OSLC-qm:validatesRequirement
 .
 
 ogit.OSLC-qm:validatesRequirementCollection
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "validatesRequirementCollection";
-    ogit:original <http://open-services.net/ns/qm#validatesRequirementCollection>;
+    ogit.core:original <http://open-services.net/ns/qm#validatesRequirementCollection>;
     dcterms:description "Requirement Collection that is validated by the Test Plan. It is likely that the target resource will be an oslc_rm:RequirementCollection but that is not necessarily the case.";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";

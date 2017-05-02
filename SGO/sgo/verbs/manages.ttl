@@ -1,4 +1,5 @@
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.core:                   <http://www.purl.org/ogit/> .
 @prefix ogit.config:            <http://www.purl.org/ogit/> .
 @prefix ogit.device:            <http://www.purl.org/ogit/> .
 @prefix ogit.organization:               <http://www.purl.org/ogit/> .
@@ -12,16 +13,16 @@
 @prefix ogit.BusinessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
 
 ogit:manages
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "manages";
     dcterms:description "This relationship indicates that one entity manages some other.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2017-03-28";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -58,121 +59,121 @@ ogit:manages
             dcterms:description "Added edges `Person` -> `BusinessProcess/Project`, `Person` -> `BusinessProcess/Milestone`";
             dcterms:creator "Vitaly Teremasov"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.Datacenter:Building
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.Datacenter:Building
         ],
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.Datacenter:Cooling
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.Datacenter:Cooling
         ],
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.Datacenter:Datacenter
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.Datacenter:Datacenter
         ],
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.device:Device
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.device:Device
         ],
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.Datacenter:Rack
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.Datacenter:Rack
         ],
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.Datacenter:Room
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.Datacenter:Room
         ],
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.organization:Organization
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.organization:Organization
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.Datacenter:Building
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Datacenter:Building
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.Datacenter:Cooling
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Datacenter:Cooling
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.Datacenter:Datacenter
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Datacenter:Datacenter
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.device:Device
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.device:Device
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.Datacenter:Rack
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Datacenter:Rack
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.Datacenter:Room
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Datacenter:Room
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.Network:Port
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Network:Port
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.Network:PortChannel
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Network:PortChannel
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.Network:Router
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Network:Router
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.Network:Shelf
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Network:Shelf
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.Network:Slot
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Network:Slot
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.Network:Subnet
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Network:Subnet
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.Network:Switch
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Network:Switch
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.Network:VLAN
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Network:VLAN
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.BusinessProcess:Project
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.BusinessProcess:Project
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.Network:WifiAccessPoint
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Network:WifiAccessPoint
         ],
         [
-            ogit:from ogit.organization:Role;
-            ogit:to ogit.ServiceManagement:Service
+            ogit.core:from ogit.organization:Role;
+            ogit.core:to ogit.ServiceManagement:Service
         ],
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.config:ConfigurationItem
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.config:ConfigurationItem
         ],
         [
-            ogit:from ogit.config:ConfigurationItem;
-            ogit:to ogit.config:ConfigurationItem
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.config:ConfigurationItem
         ],
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.organization:Organization
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.organization:Organization
         ];
 .

@@ -4,6 +4,8 @@
 @prefix vann:           <http://purl.org/vocab/vann/> .
 @prefix purl:           <http://www.purl.org/> .
 @prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.core:           <http://www.purl.org/ogit/> .
+@prefix ogit.foundation:           <http://www.purl.org/ogit/> .
 @prefix ogit.DataProcessing:           <http://www.purl.org/ogit/DataProcessing/> .
 
 #
@@ -24,7 +26,7 @@ ogit:DataProcessing
 # Entities
 #
 ogit.DataProcessing:Program
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "DataProcessingProgram";
     dcterms:description """The program is used for creating data streams,
         and applying transformations to them.""";
@@ -32,25 +34,25 @@ ogit.DataProcessing:Program
     dcterms:creator "Oday Jubran";
     dcterms:created "2017-02-28";
     dcterms:modified "2017-02-28";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
         ogit.DataProcessing:queryType,
         ogit.DataProcessing:query,
         ogit.DataProcessing:parameters,
         ogit.DataProcessing:outputType,
-        ogit:content;
-    ogit:optional-attributes
-        ogit:name,
-        ogit:description,
+        ogit.foundation:content;
+    ogit.core:optional-attributes
+        ogit.foundation:name,
+        ogit.foundation:description,
         ogit.DataProcessing:internalJobId,
         ogit.DataProcessing:state;
-    ogit:indexed-attributes
-        ogit:name,
-        ogit:description;
-    ogit:history
+    ogit.core:indexed-attributes
+        ogit.foundation:name,
+        ogit.foundation:description;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2017-02-28";
@@ -64,16 +66,16 @@ ogit.DataProcessing:Program
 # Attributes
 #
 ogit.DataProcessing:internalJobId
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "DataProcessingInternalJobId";
     dcterms:description "The job id of the running program";
     dcterms:valid "start=2017-02-28;";
     dcterms:creator "Oday Jubran";
     dcterms:created "2017-02-28";
     dcterms:modified "2017-02-28";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2017-02-28";
@@ -83,16 +85,16 @@ ogit.DataProcessing:internalJobId
 .
 
 ogit.DataProcessing:outputType
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "DataProcessingOutputType";
     dcterms:description "The type of the output data stream";
     dcterms:valid "start=2017-02-27;";
     dcterms:creator "Oday Jubran";
     dcterms:created "2017-02-27";
     dcterms:modified "2017-02-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2017-02-27";
@@ -102,16 +104,16 @@ ogit.DataProcessing:outputType
 .
 
 ogit.DataProcessing:parameters
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "DataProcessingParameters";
     dcterms:description "The query parameters";
     dcterms:valid "start=2017-02-27;";
     dcterms:creator "Oday Jubran";
     dcterms:created "2017-02-27";
     dcterms:modified "2017-02-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2017-02-27";
@@ -121,16 +123,16 @@ ogit.DataProcessing:parameters
 .
 
 ogit.DataProcessing:query
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "DataProcessingQuery";
     dcterms:description "The query of the input data stream";
     dcterms:valid "start=2017-02-27;";
     dcterms:creator "Oday Jubran";
     dcterms:created "2017-02-27";
     dcterms:modified "2017-02-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2017-02-27";
@@ -140,16 +142,16 @@ ogit.DataProcessing:query
 .
 
 ogit.DataProcessing:queryType
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "DataProcessingQueryType";
     dcterms:description "Type of the query of the input data stream";
     dcterms:valid "start=2017-02-27;";
     dcterms:creator "Oday Jubran";
     dcterms:created "2017-02-27";
     dcterms:modified "2017-02-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2017-02-27";
@@ -159,16 +161,16 @@ ogit.DataProcessing:queryType
 .
 
 ogit.DataProcessing:state
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "DataProcessingState";
     dcterms:description "The state of the program: idle, started, stopped";
     dcterms:valid "start=2017-02-28;";
     dcterms:creator "Oday Jubran";
     dcterms:created "2017-02-28";
     dcterms:modified "2017-02-28";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2017-02-28";

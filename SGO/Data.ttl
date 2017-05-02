@@ -4,7 +4,9 @@
 @prefix vann:          <http://purl.org/vocab/vann/> .
 @prefix purl:           <http://www.purl.org/> .
 @prefix ogit:          <http://www.purl.org/ogit/> .
+@prefix ogit.core:          <http://www.purl.org/ogit/> .
 @prefix ogit.data:     <http://www.purl.org/ogit/> .
+@prefix ogit.foundation:     <http://www.purl.org/ogit/> .
 
 #
 # Ontology
@@ -24,22 +26,22 @@ ogit:data
 # Entities
 #
 ogit.data:Comment
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Comment";
     dcterms:description "Defines comments for a ticket, issue or another type of entity. Also known as WorkLog, ChangeLog or HistoryEntry.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "SGO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:id,
-        ogit:content,
-        ogit:creator;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "SGO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:id,
+        ogit.foundation:content,
+        ogit.foundation:creator;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -67,7 +69,7 @@ ogit.data:Comment
 .
 
 ogit.data:CustomApplicationData
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "CustomApplicationData";
     dcterms:description """Entity to store custom application data, a storage place not connected to any other entity and therefore isolated from
 the global ontology. The storage of data through this entity is discouraged due to low performance.""";
@@ -75,11 +77,11 @@ the global ontology. The storage of data through this entity is discouraged due 
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "SGO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "SGO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -89,23 +91,23 @@ the global ontology. The storage of data through this entity is discouraged due 
 .
 
 ogit.data:Hyperlink
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Hyperlink";
     dcterms:description "A representation of an (optionally) titled Hyperlink to some media. No protocol restrictions imposed.";
     dcterms:valid "start=2015-06-09;";
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-06-09";
     dcterms:modified "2015-06-09";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "SGO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:any-attributes "true";
-    ogit:mandatory-attributes
-        ogit:url;
-    ogit:optional-attributes
-        ogit:title;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "SGO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:any-attributes "true";
+    ogit.core:mandatory-attributes
+        ogit.foundation:url;
+    ogit.core:optional-attributes
+        ogit.foundation:title;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -115,21 +117,21 @@ ogit.data:Hyperlink
 .
 
 ogit.data:Note
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Note";
     dcterms:description "Any type of note.";
     dcterms:valid "start=2015-04-29;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-04-29";
     dcterms:modified "2013-04-29";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "SGO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:name,
-        ogit:content;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "SGO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:name,
+        ogit.foundation:content;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-04-29";
@@ -139,27 +141,27 @@ ogit.data:Note
 .
 
 ogit.data:Timeseries
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Timeseries";
     dcterms:description "A time series is a sequence of data points, measured typically at successive points in time spaced at uniform time intervals.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "SGO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:unit,
-        ogit:name,
-        ogit:description,
-        ogit:instance;
-    ogit:indexed-attributes
-        ogit:name,
-        ogit:description,
-        ogit:instance;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "SGO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:unit,
+        ogit.foundation:name,
+        ogit.foundation:description,
+        ogit.foundation:instance;
+    ogit.core:indexed-attributes
+        ogit.foundation:name,
+        ogit.foundation:description,
+        ogit.foundation:instance;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";

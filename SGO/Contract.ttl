@@ -4,7 +4,9 @@
 @prefix vann:           <http://purl.org/vocab/vann/> .
 @prefix purl:           <http://www.purl.org/> .
 @prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.core:           <http://www.purl.org/ogit/> .
 @prefix ogit.contract:  <http://www.purl.org/ogit/> .
+@prefix ogit.foundation:     <http://www.purl.org/ogit/> .
 
 #
 # Ontology
@@ -24,28 +26,28 @@ ogit:contract
 # Entities
 #
 ogit.contract:Contract
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Contract";
     dcterms:description "General definition of a contract. Usually used for IT service related contracts but at this level of detail it is not restricted to those.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "SGO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:name;
-    ogit:optional-attributes
-        ogit:description,
-        ogit:type,
-        ogit:validFrom,
-        ogit:expirationDate,
-        ogit:status,
-                ogit:deadline,
-                ogit:validTo;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "SGO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
+        ogit.foundation:name;
+    ogit.core:optional-attributes
+        ogit.foundation:description,
+        ogit.foundation:type,
+        ogit.foundation:validFrom,
+        ogit.foundation:expirationDate,
+        ogit.foundation:status,
+                ogit.foundation:deadline,
+                ogit.foundation:validTo;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -67,20 +69,20 @@ ogit.contract:Contract
 .
 
 ogit.contract:Penalty
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Penalty";
     dcterms:description "Defines the penalty that has to be paid in certain circumstances";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "SGO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:optional-attributes
-        ogit:description;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "SGO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:optional-attributes
+        ogit.foundation:description;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";

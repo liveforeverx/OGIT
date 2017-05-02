@@ -1,0 +1,1069 @@
+@prefix rdfs:         <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:         <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:      <http://purl.org/dc/terms/> .
+@prefix vann:         <http://purl.org/vocab/vann/> .
+@prefix purl:           <http://www.purl.org/> .
+@prefix ogit:         <http://www.purl.org/ogit/> .
+@prefix ogit.core:         <http://www.purl.org/ogit/> .
+@prefix ogit.foundation:  <http://www.purl.org/ogit/> .
+
+
+#
+# Ontology
+#
+ogit:foundation
+    a owl:Ontology;
+    rdfs:label "OGIT Foundation";
+    dcterms:description """This ontology contains domain spannung foundation terms."""@en;
+    dcterms:creator "arago GmbH";
+    dcterms:contributor "Fabian Meyer";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/";
+    vann:preferredNamespacePrefix "ogit.foundation";
+    owl:versionInfo "__OGIT_VERSION__";
+    owl:imports purl:ogit
+.
+
+#
+# Attributes
+#
+ogit.foundation:accessControl
+    a ogit.core:Attribute;
+    rdfs:label "accessControl";
+    dcterms:description """The access control level of this Node. Value could mean different things to different
+applications / policies. Initial intent is that policies would treat \"public-read\"
+(inspired by Amazon AWS S3 ACLs) to mean anyone would have read-only access to this
+node.""";
+    dcterms:valid "start=2015-03-26;";
+    dcterms:creator "Chris Walker";
+    dcterms:created "2015-03-26";
+    dcterms:modified "2015-03-26";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-03-26";
+            dcterms:description "initial inception";
+            dcterms:creator "Chris Walker"
+        ];
+.
+
+ogit.foundation:category
+    a ogit.core:Attribute;
+    rdfs:label "category";
+    dcterms:description "Used to categorize things.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:capacity
+    a ogit.core:Attribute;
+    rdfs:label "capacity";
+    dcterms:description "General Capacity";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:capacityAvailable
+    a ogit.core:Attribute;
+    rdfs:label "capacityAvailable";
+    dcterms:description "If the flag is true, then service can be ordered by new instance. If the flag is false, the service cannot temporarily be ordered due to capacity reasons.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:changeLog
+    a ogit.core:Attribute;
+    rdfs:label "changeLog";
+    dcterms:description "String value describing a changelog of an entity.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:comment
+    a ogit.core:Attribute;
+    rdfs:label "comment";
+    dcterms:description "Contains a comment.";
+    dcterms:valid "start=2015-07-27;";
+    dcterms:creator "Aymen Ayoub";
+    dcterms:created "2015-07-27";
+    dcterms:modified "2015-07-27";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-27";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ];
+.
+
+ogit.foundation:connectorId
+    a ogit.core:Attribute;
+    rdfs:label "connectorId";
+    dcterms:description "The Id of the connector.";
+    dcterms:valid "start=2015-06-11;";
+    dcterms:creator "Aymen Ayoub";
+    dcterms:created "2015-06-11";
+    dcterms:modified "2015-06-11";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-06-11";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-06-29";
+            dcterms:description "updated";
+            dcterms:creator "Aymen Ayoub"
+        ];
+.
+
+ogit.foundation:content
+    a ogit.core:Attribute;
+    rdfs:label "content";
+    dcterms:description "A string holding any type of content: plain string, XML fragments, RDF documents, ...";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:createdAt
+    a ogit.core:Attribute;
+    rdfs:label "createdAt";
+    dcterms:description "Defines a point in time when a ticket/incident/event etc was created or recorded.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-10-07";
+            dcterms:description "delete regex";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:creationTime
+    a ogit.core:Attribute;
+    rdfs:label "creationTime";
+    dcterms:description "Creation time of an entity.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:creator
+    a ogit.core:Attribute;
+    rdfs:label "creator";
+    dcterms:description "Creator of an entity.";
+    dcterms:valid "start=2015-08-20;";
+    dcterms:creator "Aymen Ayoub";
+    dcterms:created "2015-08-20";
+    dcterms:modified "2015-08-20";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-08-20";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ];
+.
+
+ogit.foundation:currency
+    a ogit.core:Attribute;
+    rdfs:label "currency";
+    dcterms:description "A currency code, possibly according to ISO 4217.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:deadline
+    a ogit.core:Attribute;
+    rdfs:label "deadline";
+    dcterms:description "Defines a point in time when a deadline is reached.";
+    dcterms:valid "start=2016-12-19;";
+    dcterms:creator "stravlos@arago.co";
+    dcterms:created "2016-12-19";
+    dcterms:modified "2016-12-19";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-12-19";
+            dcterms:description "initial";
+            dcterms:creator "stravlos@arago.co"
+        ];
+.
+
+ogit.foundation:description
+    a ogit.core:Attribute;
+    rdfs:label "description";
+    dcterms:description "Contains a description.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:email
+    a ogit.core:Attribute;
+    rdfs:label "email";
+    dcterms:description "An email address.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:endOfWarranty
+    a ogit.core:Attribute;
+    rdfs:label "endOfWarranty";
+    dcterms:description "End of warranty phase of a component";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:expirationDate
+    a ogit.core:Attribute;
+    rdfs:label "expirationDate";
+    dcterms:description "Defines a point in time when something becomes invalid the format is described at http://purl.org/goodrelations/v1#validThrough";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:finishedAt
+    a ogit.core:Attribute;
+    rdfs:label "finishedAt";
+    dcterms:description """Defines a point in time when the work on a change, task, or similar entity was actually finished.
+The values must be combined date and time with time zone designator according to ISO 8601""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-07-06";
+            dcterms:description "updated";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:function
+    a ogit.core:Attribute;
+    rdfs:label "function";
+    dcterms:description """Attibute used to specify a function that some entity does/provides.This is more specific then 'description'.
+Should contain a short string. At this level of specification it is still a free from string.
+However, unlike 'description', it is expected to contain some list of fixed values.""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:id
+    a ogit.core:Attribute;
+    rdfs:label "id";
+    dcterms:description "General id.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:impact
+    a ogit.core:Attribute;
+    rdfs:label "impact";
+    dcterms:description """Will contain the impact, for example of a ticket. In this case the actual semantics would depend on the ticket type,
+which could correspond to an Incident, Service Request, etc.""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:information
+    a ogit.core:Attribute;
+    rdfs:label "information";
+    dcterms:description "Contains some informative string. Alternative to description attribute.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:instance
+    a ogit.core:Attribute;
+    rdfs:label "instance";
+    dcterms:description "Defines the name of an instance.";
+    dcterms:valid "start=2016-08-03;";
+    dcterms:creator "Philipp Pelchmann";
+    dcterms:created "2016-08-03";
+    dcterms:modified "2016-08-03";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-08-03";
+            dcterms:description "initial";
+            dcterms:creator "Philipp Pelchmann"
+        ];
+.
+
+ogit.foundation:isValid
+    a ogit.core:Attribute;
+    rdfs:label "isValid";
+    dcterms:description "Boolean value, true if the object is valid.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:lastUpdatedAt
+    a ogit.core:Attribute;
+    rdfs:label "lastUpdatedAt";
+    dcterms:description "Defines latest date and time when a ticket or it's comment was updated. The format of this value could be according to ISO 8601.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:model
+    a ogit.core:Attribute;
+    rdfs:label "model";
+    dcterms:description "Model of a device.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:modificationTime
+    a ogit.core:Attribute;
+    rdfs:label "modificationTime";
+    dcterms:description "Modification time.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:name
+    a ogit.core:Attribute;
+    rdfs:label "name";
+    dcterms:description "Contains a name.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:openedAt
+    a ogit.core:Attribute;
+    rdfs:label "openedAt";
+    dcterms:description """Time when a ticket or task was created/opened.
+The values could combine date and time with time zone designator according to ISO 8601 for service management tickets.
+For most tickets there is no real difference between creation and opened time. In case such a distinction is relevant the \"createdAt\" attribute can be used.""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:phone
+    a ogit.core:Attribute;
+    rdfs:label "phone";
+    dcterms:description "a phone number";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:postalCode
+    a ogit.core:Attribute;
+    rdfs:label "postalCode";
+    dcterms:description "The postal code. For example, 60433.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:powerConsumption
+    a ogit.core:Attribute;
+    rdfs:label "powerConsumption";
+    dcterms:description "Power consumption of a device.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:priority
+    a ogit.core:Attribute;
+    rdfs:label "priority";
+    dcterms:description "Priority of a ticket. The actual semantics might depend on the ticket type (Incident, Service Request, ...)";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:purchaseDate
+    a ogit.core:Attribute;
+    rdfs:label "purchaseDate";
+    dcterms:description "Date of purchase of a device.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:range
+    a ogit.core:Attribute;
+    rdfs:label "range";
+    dcterms:description "A range of numbers (a number in the range).";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:serialNumber
+    a ogit.core:Attribute;
+    rdfs:label "serialNumber";
+    dcterms:description "A string representing a any kind of serial number. see http://purl.org/goodrelations/v1#serialNumber";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:sourceId
+    a ogit.core:Attribute;
+    rdfs:label "sourceId";
+    dcterms:description "The Id of the source system.";
+    dcterms:valid "start=2015-06-11;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-06-11";
+    dcterms:modified "2015-06-11";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-06-11";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ];
+.
+
+ogit.foundation:startedAt
+    a ogit.core:Attribute;
+    rdfs:label "startedAt";
+    dcterms:description """Defines a point in time when the work on a change, task, or similar entity was actually started.
+The values must be combined date and time with time zone designator according to ISO 8601""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-07-06";
+            dcterms:description "updated";
+            dcterms:creator "Aymen Ayoub"
+        ];
+.
+
+ogit.foundation:status
+    a ogit.core:Attribute;
+    rdfs:label "status";
+    dcterms:description """A status for an entity.
+At this level of specification no list of values is specified. However, applications using this attribute are expected to allow only a fixed list of values that seems usefual in the application's semantic context.""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:streetAddress
+    a ogit.core:Attribute;
+    rdfs:label "streetAddress";
+    dcterms:description "The street address. For example, Eschersheimer Landstr. 526-532";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:subject
+    a ogit.core:Attribute;
+    rdfs:label "subject";
+    dcterms:description "Contains the subject.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:summary
+    a ogit.core:Attribute;
+    rdfs:label "summary";
+    dcterms:description "A summary/short description, for example of a ticket.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:title
+    a ogit.core:Attribute;
+    rdfs:label "title";
+    dcterms:description "Title of any kind. In the context of a Person this can be a courtesy title, an academic title, or a job tilte.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:token
+    a ogit.core:Attribute;
+    rdfs:label "token";
+    dcterms:description "A unique randomly created ID to make communication between client and vendor possible during the process of requesting a license";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:type
+    a ogit.core:Attribute;
+    rdfs:label "type";
+    dcterms:description "Type of an an entity.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:unit
+    a ogit.core:Attribute;
+    rdfs:label "unit";
+    dcterms:description "Unit of measurement of some value.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:uri
+    a ogit.core:Attribute;
+    rdfs:label "uri";
+    dcterms:description "Unified resource identifier";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:url
+    a ogit.core:Attribute;
+    rdfs:label "url";
+    dcterms:description "Contains an URL (unified resource locator)";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:validFrom
+    a ogit.core:Attribute;
+    rdfs:label "validFrom";
+    dcterms:description "Defines a point in time when something becomes valid.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:validTo
+    a ogit.core:Attribute;
+    rdfs:label "validTo";
+    dcterms:description "Defines a point in time when something stops being valid.";
+    dcterms:valid "start=2016-11-29;";
+    dcterms:creator "stravlos@arago.co";
+    dcterms:created "2016-11-29";
+    dcterms:modified "2016-11-29";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-11-29";
+            dcterms:description "initial";
+            dcterms:creator "stravlos@arago.co"
+        ];
+.
+
+ogit.foundation:value
+    a ogit.core:Attribute;
+    rdfs:label "value";
+    dcterms:description "Contains a value of a key / value pair.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:version
+    a ogit.core:Attribute;
+    rdfs:label "version";
+    dcterms:description "Any string representation of version information. no restrictions are imposed on that base attribute";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:webPage
+    a ogit.core:Attribute;
+    rdfs:label "webPage";
+    dcterms:description "A web page.";
+    dcterms:valid "start=2015-07-27;";
+    dcterms:creator "Philipp Pelchmann";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-07-27";
+            dcterms:description "initial";
+            dcterms:creator "Philipp Pelchmann"
+        ];
+.

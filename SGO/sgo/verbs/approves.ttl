@@ -1,4 +1,5 @@
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.core:                   <http://www.purl.org/ogit/> .
 @prefix ogit.config:            <http://www.purl.org/ogit/> .
 @prefix ogit.contract:          <http://www.purl.org/ogit/> .
 @prefix ogit.organization:               <http://www.purl.org/ogit/> .
@@ -8,16 +9,16 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit:approves
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "approves";
     dcterms:description "Indicates if an entity approves something else.";
     dcterms:valid "start=2015-07-27;";
     dcterms:creator "Aymen Ayoub";
     dcterms:created "2015-07-27";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-07-27";
@@ -42,25 +43,25 @@ ogit:approves
             dcterms:description "connection added";
             dcterms:creator "Spyridon Travlos"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.config:ConfigurationItem
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.config:ConfigurationItem
         ],
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.config:ConfigurationItem
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.config:ConfigurationItem
         ],
         [
-            ogit:from ogit.Forum:Permission;
-            ogit:to ogit.Forum:Group
+            ogit.core:from ogit.Forum:Permission;
+            ogit.core:to ogit.Forum:Group
         ],
         [
-            ogit:from ogit.Forum:Permission;
-            ogit:to ogit.Forum:Profile
+            ogit.core:from ogit.Forum:Permission;
+            ogit.core:to ogit.Forum:Profile
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.contract:Contract
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.contract:Contract
         ];
 .

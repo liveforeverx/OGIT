@@ -4,7 +4,9 @@
 @prefix vann:          <http://purl.org/vocab/vann/> .
 @prefix purl:           <http://www.purl.org/> .
 @prefix ogit:          <http://www.purl.org/ogit/> .
+@prefix ogit.core:          <http://www.purl.org/ogit/> .
 @prefix ogit.ontology: <http://www.purl.org/ogit/> .
+@prefix ogit.foundation:     <http://www.purl.org/ogit/> .
 
 #
 # Ontology
@@ -25,19 +27,19 @@ ogit:ontology
 # Entities
 #
 ogit.ontology:OntologyAttribute
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "OntologyAttribute";
     dcterms:description "represents any Attribute definition from OGIT";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "SGO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:hide "true";
-    ogit:mandatory-attributes
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "SGO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:hide "true";
+    ogit.core:mandatory-attributes
         ogit.ontology:ontologyId,
         ogit.ontology:ontologyDescription,
         ogit.ontology:ontologyName,
@@ -47,12 +49,12 @@ ogit.ontology:OntologyAttribute
         ogit.ontology:ontologyModified,
         ogit.ontology:ontologyAdminContact,
         ogit.ontology:ontologyTechContact;
-    ogit:optional-attributes
+    ogit.core:optional-attributes
         ogit.ontology:ontologyDeleter,
         ogit.ontology:ontologyHide,
         ogit.ontology:ontologyValidationType,
         ogit.ontology:ontologyValidationParameter;
-    ogit:history
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -62,7 +64,7 @@ ogit.ontology:OntologyAttribute
 .
 
 ogit.ontology:OntologyEntity
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "OntologyEntity";
     dcterms:description """represents any Entity definition from OGIT
 whenever there is a Schema describing/restricting the entity's content there will be \"isUsedBy\" link from Schema to OntologyEntity""";
@@ -70,15 +72,15 @@ whenever there is a Schema describing/restricting the entity's content there wil
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "SGO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:hide "true";
-    ogit:mandatory-attributes
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "SGO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:hide "true";
+    ogit.core:mandatory-attributes
         ogit.ontology:ontologyScope,
         ogit.ontology:ontologyId,
-        ogit:description,
+        ogit.foundation:description,
         ogit.ontology:ontologyName,
         ogit.ontology:ontologyValidFrom,
         ogit.ontology:ontologyCreator,
@@ -88,11 +90,11 @@ whenever there is a Schema describing/restricting the entity's content there wil
         ogit.ontology:ontologyDescription,
         ogit.ontology:ontologyCreated,
         ogit.ontology:ontologyParent;
-    ogit:optional-attributes
+    ogit.core:optional-attributes
         ogit.ontology:ontologyDeleter,
         ogit.ontology:ontologyHide,
         ogit.ontology:ontologyValidUntil;
-    ogit:history
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -102,19 +104,19 @@ whenever there is a Schema describing/restricting the entity's content there wil
 .
 
 ogit.ontology:OntologyVerb
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "OntologyVerb";
     dcterms:description "represents any Verb definition from OGIT";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "SGO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:hide "true";
-    ogit:mandatory-attributes
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "SGO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:hide "true";
+    ogit.core:mandatory-attributes
         ogit.ontology:ontologyId,
         ogit.ontology:ontologyDescription,
         ogit.ontology:ontologyName,
@@ -124,11 +126,11 @@ ogit.ontology:OntologyVerb
         ogit.ontology:ontologyModified,
         ogit.ontology:ontologyAdminContact,
         ogit.ontology:ontologyTechContact;
-    ogit:optional-attributes
+    ogit.core:optional-attributes
         ogit.ontology:ontologyDeleter,
         ogit.ontology:ontologyHide,
         ogit.ontology:ontologyCardinality;
-    ogit:history
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -138,23 +140,23 @@ ogit.ontology:OntologyVerb
 .
 
 ogit.ontology:Schema
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Schema";
     dcterms:description "Any type of schema, could be defined in XSD, YAML, etc.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "SGO";
-    ogit:parent "http://www.purl.org/ogit/Node";
-    ogit:mandatory-attributes
-        ogit:content;
-    ogit:optional-attributes
-        ogit:uri,
-        ogit:name;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "SGO";
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:mandatory-attributes
+        ogit.foundation:content;
+    ogit.core:optional-attributes
+        ogit.foundation:uri,
+        ogit.foundation:name;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -167,17 +169,17 @@ ogit.ontology:Schema
 # Attributes
 #
 ogit.ontology:ontologyAdminContact
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "ontologyAdminContact";
     dcterms:description """The \"admin-contact\" attribute as defined in OGIT yaml files.""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -187,17 +189,17 @@ ogit.ontology:ontologyAdminContact
 .
 
 ogit.ontology:ontologyAnyAttributes
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "ontologyAnyAttributes";
     dcterms:description """The \"any-attributes\" attribute as defined in OGIT yaml files.""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -207,17 +209,17 @@ ogit.ontology:ontologyAnyAttributes
 .
 
 ogit.ontology:ontologyCardinality
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "ontologyCardinality";
     dcterms:description """The \"cardinality\" attribute as defined in OGIT yaml files.""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -227,17 +229,17 @@ ogit.ontology:ontologyCardinality
 .
 
 ogit.ontology:ontologyCreated
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "ontologyCreated";
     dcterms:description """The \"created\" attribute as defined in OGIT yaml files.""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -247,17 +249,17 @@ ogit.ontology:ontologyCreated
 .
 
 ogit.ontology:ontologyCreator
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "ontologyCreator";
     dcterms:description """the \"creator\" attribute as defined in OGIT yaml files""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -267,17 +269,17 @@ ogit.ontology:ontologyCreator
 .
 
 ogit.ontology:ontologyDeleter
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "ontologyDeleter";
     dcterms:description """The \"deleter\" attribute as defined in OGIT yaml files.""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -287,17 +289,17 @@ ogit.ontology:ontologyDeleter
 .
 
 ogit.ontology:ontologyDescription
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "ontologyDescription";
     dcterms:description """the \"description\" attribute as defined in OGIT yaml files""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -307,17 +309,17 @@ ogit.ontology:ontologyDescription
 .
 
 ogit.ontology:ontologyHide
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "ontologyHide";
     dcterms:description "Indicates if this part of ontology should hidden from the documentation";
     dcterms:valid "start=2015-06-01;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-06-01";
     dcterms:modified "2015-06-01";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-06-01";
@@ -327,17 +329,17 @@ ogit.ontology:ontologyHide
 .
 
 ogit.ontology:ontologyId
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "ontologyId";
     dcterms:description """The \"id\" attribute as defined in OGIT yaml files""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -347,17 +349,17 @@ ogit.ontology:ontologyId
 .
 
 ogit.ontology:ontologyModified
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "ontologyModified";
     dcterms:description """the \"modified\" attribute as defined in OGIT yaml files""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -367,17 +369,17 @@ ogit.ontology:ontologyModified
 .
 
 ogit.ontology:ontologyName
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "ontologyName";
     dcterms:description """the \"name\" attribute as defined in OGIT yaml files""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -387,17 +389,17 @@ ogit.ontology:ontologyName
 .
 
 ogit.ontology:ontologyParent
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "ontologyParent";
     dcterms:description """The \"parent\" attribute as defined in OGIT yaml files.""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -407,17 +409,17 @@ ogit.ontology:ontologyParent
 .
 
 ogit.ontology:ontologyScope
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "ontologyScope";
     dcterms:description """Indicates the ontology scope which could be either \"SGO\" or \"NTO\".""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -427,17 +429,17 @@ ogit.ontology:ontologyScope
 .
 
 ogit.ontology:ontologyTechContact
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "ontologyTechContact";
     dcterms:description """the \"tech-contact\" attribute as defined in OGIT yaml files""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -447,17 +449,17 @@ ogit.ontology:ontologyTechContact
 .
 
 ogit.ontology:ontologyType
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "ontologyType";
     dcterms:description """Indicates the ontology type, which could be one of: \"entity\", \"attribute\", \"verb\"""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -467,17 +469,17 @@ ogit.ontology:ontologyType
 .
 
 ogit.ontology:ontologyValidationParameter
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "ontologyValidationParameter";
     dcterms:description """The \"validation parameter\" attribute as defined in OGIT yaml files""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -487,17 +489,17 @@ ogit.ontology:ontologyValidationParameter
 .
 
 ogit.ontology:ontologyValidationType
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "ontologyValidationType";
     dcterms:description """the \"validation-type\" attribute as defined in OGIT yaml files""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -507,17 +509,17 @@ ogit.ontology:ontologyValidationType
 .
 
 ogit.ontology:ontologyValidFrom
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "ontologyValidFrom";
     dcterms:description """The \"valid-from\" attribute as defined in OGIT yaml files.""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -527,17 +529,17 @@ ogit.ontology:ontologyValidFrom
 .
 
 ogit.ontology:ontologyValidUntil
-    a ogit:Attribute;
+    a ogit.core:Attribute;
     rdfs:label "ontologyValidUntil";
     dcterms:description """The \"valid-until\" attribute as defined in OGIT yaml files.""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "true";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "true";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";

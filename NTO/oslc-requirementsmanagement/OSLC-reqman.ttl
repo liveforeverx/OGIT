@@ -4,6 +4,7 @@
 @prefix vann:           <http://purl.org/vocab/vann/> .
 @prefix purl:           <http://www.purl.org/> .
 @prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.core:           <http://www.purl.org/ogit/> .
 @prefix ogit.OSCL-core:           <http://www.purl.org/ogit/OSLC-core/> .
 @prefix ogit.OSLC-reqman:           <http://www.purl.org/ogit/OSLC-reqman/> .
 
@@ -25,20 +26,20 @@ ogit:OSLC-reqman
 # Entities
 #
 ogit.OSLC-reqman:Requirement
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "Requirement";
-    ogit:original <http://open-services.net/ns/rm#Requirement>;
+    ogit.core:original <http://open-services.net/ns/rm#Requirement>;
     dcterms:description """Statement of
             need.""";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent ogit:Node;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent ogit:Node;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -48,20 +49,20 @@ ogit.OSLC-reqman:Requirement
 .
 
 ogit.OSLC-reqman:RequirementCollection
-    a ogit:Entity;
+    a ogit.core:Entity;
     rdfs:label "RequirementCollection";
-    ogit:original <http://open-services.net/ns/rm#RequirementCollection>;
+    ogit.core:original <http://open-services.net/ns/rm#RequirementCollection>;
     dcterms:description """Collection of requirements. A
             collection uses zero or more requirements.""";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:scope "NTO";
-    ogit:parent ogit:Node;
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:scope "NTO";
+    ogit.core:parent ogit:Node;
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -79,9 +80,9 @@ ogit.OSLC-reqman:RequirementCollection
 # Verbs
 #
 ogit.OSLC-reqman:affectedBy
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "affectedBy";
-    ogit:original <http://open-services.net/ns/rm#affectedBy>;
+    ogit.core:original <http://open-services.net/ns/rm#affectedBy>;
     dcterms:description """Expresses an affects relationship
             between entities. For example, a defect may be said to affect a
             requirement.""";
@@ -89,11 +90,11 @@ ogit.OSLC-reqman:affectedBy
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -103,9 +104,9 @@ ogit.OSLC-reqman:affectedBy
 .
 
 ogit.OSLC-reqman:elaboratedBy
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "elaboratedBy";
-    ogit:original <http://open-services.net/ns/rm#elaboratedBy>;
+    ogit.core:original <http://open-services.net/ns/rm#elaboratedBy>;
     dcterms:description """Expresses an elaboration relationship
             between entities. For example, a model element can elaborate a
             requirement.""";
@@ -113,11 +114,11 @@ ogit.OSLC-reqman:elaboratedBy
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -127,19 +128,19 @@ ogit.OSLC-reqman:elaboratedBy
 .
 
 ogit.OSCL-core:hasBasicShape
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "hasBasicShape";
-    ogit:original <http://open-services.net/ns/core#hasBasicShape>;
+    ogit.core:original <http://open-services.net/ns/core#hasBasicShape>;
     dcterms:description "";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -149,20 +150,20 @@ ogit.OSCL-core:hasBasicShape
 .
 
 ogit.OSLC-reqman:implementedBy
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "implementedBy";
-    ogit:original <http://open-services.net/ns/rm#implementedBy>;
+    ogit.core:original <http://open-services.net/ns/rm#implementedBy>;
     dcterms:description """Expresses an implementation
             relationship between entities.""";
     dcterms:valid "start=2016-09-22;";
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -172,9 +173,9 @@ ogit.OSLC-reqman:implementedBy
 .
 
 ogit.OSLC-reqman:specifiedBy
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "specifiedBy";
-    ogit:original <http://open-services.net/ns/rm#specifiedBy>;
+    ogit.core:original <http://open-services.net/ns/rm#specifiedBy>;
     dcterms:description """Expresses a specification relationship
             between entities. For example, a model element can specifiy a
             requirement.""";
@@ -182,11 +183,11 @@ ogit.OSLC-reqman:specifiedBy
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -196,9 +197,9 @@ ogit.OSLC-reqman:specifiedBy
 .
 
 ogit.OSLC-reqman:trackedBy
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "trackedBy";
-    ogit:original <http://open-services.net/ns/rm#trackedBy>;
+    ogit.core:original <http://open-services.net/ns/rm#trackedBy>;
     dcterms:description """Expresses a tracking relationship
             between entities. For example, a change request may be said to track a
             requirement, in that it governs the changes to a requirement according to some
@@ -207,11 +208,11 @@ ogit.OSLC-reqman:trackedBy
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -221,9 +222,9 @@ ogit.OSLC-reqman:trackedBy
 .
 
 ogit.OSLC-reqman:uses
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "uses";
-    ogit:original <http://open-services.net/ns/rm#uses>;
+    ogit.core:original <http://open-services.net/ns/rm#uses>;
     dcterms:description """Expresses a use relationship between
             entities. For example, a requirement collection may use a
             requirement.""";
@@ -231,11 +232,11 @@ ogit.OSLC-reqman:uses
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";
@@ -245,9 +246,9 @@ ogit.OSLC-reqman:uses
 .
 
 ogit.OSLC-reqman:validatedBy
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "validatedBy";
-    ogit:original <http://open-services.net/ns/rm#validatedBy>;
+    ogit.core:original <http://open-services.net/ns/rm#validatedBy>;
     dcterms:description """Expresses a validation relationship
             between entities. For example, a test plan may be said to validated a requirement
             collection.""";
@@ -255,11 +256,11 @@ ogit.OSLC-reqman:validatedBy
     dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
     dcterms:modified "2016-09-22";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:hide "false";
-    ogit:cardinality "many2many";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:hide "false";
+    ogit.core:cardinality "many2many";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2016-09-22";

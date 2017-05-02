@@ -1,4 +1,5 @@
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.core:                   <http://www.purl.org/ogit/> .
 @prefix ogit.event:             <http://www.purl.org/ogit/> .
 @prefix ogit.person:            <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
@@ -6,16 +7,16 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit:rejects
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "rejects";
     dcterms:description "Indicates if an entity rejects something else.";
     dcterms:valid "start=2015-09-02;";
     dcterms:creator "bmoore@arago.de";
     dcterms:created "2015-09-02";
     dcterms:modified "2017-03-01";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-09-02";
@@ -28,13 +29,13 @@ ogit:rejects
             dcterms:description "Added allowed";
             dcterms:creator "stravlos@arago.de"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.Forum:Profile;
-            ogit:to ogit.Forum:Invite
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:Invite
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.event:Alert
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.event:Alert
         ];
 .

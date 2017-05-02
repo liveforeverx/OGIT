@@ -1,28 +1,29 @@
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.core:                   <http://www.purl.org/ogit/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit:configures
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "configures";
     dcterms:description "The `from` entity, contains configuration data for the to `entity`";
     dcterms:valid "start=2015-04-27;";
     dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-27";
     dcterms:modified "2015-04-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-04-27";
             dcterms:description "intitial inception";
             dcterms:creator "cwalker@arago.de"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.Forum:Configuration;
-            ogit:to ogit.Forum:Profile
+            ogit.core:from ogit.Forum:Configuration;
+            ogit.core:to ogit.Forum:Profile
         ];
 .

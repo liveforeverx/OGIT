@@ -1,5 +1,6 @@
 @prefix ogit.Automation:        <http://www.purl.org/ogit/Automation/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.core:                   <http://www.purl.org/ogit/> .
 @prefix ogit.asset:             <http://www.purl.org/ogit/> .
 @prefix ogit.organization:               <http://www.purl.org/ogit/> .
 @prefix ogit.task:              <http://www.purl.org/ogit/> .
@@ -9,16 +10,16 @@
 @prefix ogit.Forum:             <http://www.purl.org/ogit/Forum/> .
 
 ogit:associates
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "associates";
     dcterms:description "";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -37,33 +38,33 @@ ogit:associates
             dcterms:description "Added Forum/Group -> Forum/Role";
             dcterms:creator "bmoore@arago.de"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.Automation:AutomationIssue;
-            ogit:to ogit.task:Question
+            ogit.core:from ogit.Automation:AutomationIssue;
+            ogit.core:to ogit.task:Question
         ],
         [
-            ogit:from ogit.Automation:MARSNode;
-            ogit:to ogit.Cost:CostElement
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Cost:CostElement
         ],
         [
-            ogit:from ogit.asset:Asset;
-            ogit:to ogit.Cost:CostElement
+            ogit.core:from ogit.asset:Asset;
+            ogit.core:to ogit.Cost:CostElement
         ],
         [
-            ogit:from ogit.Automation:MARSNodeTemplate;
-            ogit:to ogit.Cost:CostElement
+            ogit.core:from ogit.Automation:MARSNodeTemplate;
+            ogit.core:to ogit.Cost:CostElement
         ],
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.organization:Role
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.organization:Role
         ],
         [
-            ogit:from ogit.Forum:KnowledgeItemHistory;
-            ogit:to ogit.Forum:KnowledgeItemHistory
+            ogit.core:from ogit.Forum:KnowledgeItemHistory;
+            ogit.core:to ogit.Forum:KnowledgeItemHistory
         ],
         [
-            ogit:from ogit.Forum:Group;
-            ogit:to ogit.Forum:Role
+            ogit.core:from ogit.Forum:Group;
+            ogit.core:to ogit.Forum:Role
         ];
 .

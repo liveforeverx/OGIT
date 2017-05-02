@@ -1,5 +1,6 @@
 @prefix ogit.Automation:        <http://www.purl.org/ogit/Automation/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.core:                   <http://www.purl.org/ogit/> .
 @prefix ogit.asset:             <http://www.purl.org/ogit/> .
 @prefix ogit.config:            <http://www.purl.org/ogit/> .
 @prefix ogit.contract:          <http://www.purl.org/ogit/> .
@@ -18,16 +19,16 @@
 @prefix ogit.BusinessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
 
 ogit:relates
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "relates";
     dcterms:description "General relationship indicating that one entity is related to another one.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2015-07-27";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -82,193 +83,193 @@ ogit:relates
             dcterms:description "added from ogit/Person to ogit/BusinessProcess/SurveyIteration";
             dcterms:creator "Alexander Ryabtsev"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.Automation:AutomationIssue;
-            ogit:to ogit.Automation:MARSNode
+            ogit.core:from ogit.Automation:AutomationIssue;
+            ogit.core:to ogit.Automation:MARSNode
         ],
         [
-            ogit:from ogit.Automation:KnowledgeItem;
-            ogit:to ogit.Automation:MARSNodeTemplate
+            ogit.core:from ogit.Automation:KnowledgeItem;
+            ogit.core:to ogit.Automation:MARSNodeTemplate
         ],
         [
-            ogit:from ogit.Automation:MARSNode;
-            ogit:to ogit.Automation:KnowledgeItem
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Automation:KnowledgeItem
         ],
         [
-            ogit:from ogit.Automation:MARSNode;
-            ogit:to ogit.license:License
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.license:License
         ],
         [
-            ogit:from ogit.Software:Application;
-            ogit:to ogit.license:License
+            ogit.core:from ogit.Software:Application;
+            ogit.core:to ogit.license:License
         ],
         [
-            ogit:from ogit.Automation:MARSNode;
-            ogit:to ogit.Automation:MARSNode
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Automation:MARSNode
         ],
         [
-            ogit:from ogit.event:Event;
-            ogit:to ogit.event:Event
+            ogit.core:from ogit.event:Event;
+            ogit.core:to ogit.event:Event
         ],
         [
-            ogit:from ogit.event:Event;
-            ogit:to ogit.ServiceManagement:Incident
+            ogit.core:from ogit.event:Event;
+            ogit.core:to ogit.ServiceManagement:Incident
         ],
         [
-            ogit:from ogit.Automation:MARSNode;
-            ogit:to ogit.Automation:MARSNodeTemplate
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Automation:MARSNodeTemplate
         ],
         [
-            ogit:from ogit.ServiceManagement:Order;
-            ogit:to ogit.contract:Contract
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.contract:Contract
         ],
         [
-            ogit:from ogit.ServiceManagement:Order;
-            ogit:to ogit.ServiceManagement:Order
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.ServiceManagement:Order
         ],
         [
-            ogit:from ogit.ServiceManagement:Order;
-            ogit:to ogit.ServiceManagement:ChangeRequest
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
         ],
         [
-            ogit:from ogit.ServiceManagement:Order;
-            ogit:to ogit.ServiceManagement:Incident
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.ServiceManagement:Incident
         ],
         [
-            ogit:from ogit.ServiceManagement:Order;
-            ogit:to ogit.ServiceManagement:Problem
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.ServiceManagement:Problem
         ],
         [
-            ogit:from ogit.ServiceManagement:Order;
-            ogit:to ogit.ServiceManagement:Ticket
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.ServiceManagement:Ticket
         ],
         [
-            ogit:from ogit.ServiceManagement:Report;
-            ogit:to ogit.Automation:MARSNode
+            ogit.core:from ogit.ServiceManagement:Report;
+            ogit.core:to ogit.Automation:MARSNode
         ],
         [
-            ogit:from ogit.ServiceManagement:ChangeRequest;
-            ogit:to ogit.Automation:MARSNode
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.Automation:MARSNode
         ],
         [
-            ogit:from ogit.ServiceManagement:ChangeRequest;
-            ogit:to ogit.ServiceManagement:Order
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.ServiceManagement:Order
         ],
         [
-            ogit:from ogit.ServiceManagement:ChangeRequest;
-            ogit:to ogit.ServiceManagement:ChangeRequest
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
         ],
         [
-            ogit:from ogit.ServiceManagement:ChangeRequest;
-            ogit:to ogit.ServiceManagement:Incident
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.ServiceManagement:Incident
         ],
         [
-            ogit:from ogit.ServiceManagement:ChangeRequest;
-            ogit:to ogit.ServiceManagement:Problem
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.ServiceManagement:Problem
         ],
         [
-            ogit:from ogit.event:Event;
-            ogit:to ogit.Automation:MARSNode
+            ogit.core:from ogit.event:Event;
+            ogit.core:to ogit.Automation:MARSNode
         ],
         [
-            ogit:from ogit.event:Event;
-            ogit:to ogit.ServiceManagement:Order
+            ogit.core:from ogit.event:Event;
+            ogit.core:to ogit.ServiceManagement:Order
         ],
         [
-            ogit:from ogit.ServiceManagement:Incident;
-            ogit:to ogit.ServiceManagement:ChangeRequest
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
         ],
         [
-            ogit:from ogit.ServiceManagement:Incident;
-            ogit:to ogit.ServiceManagement:Incident
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.ServiceManagement:Incident
         ],
         [
-            ogit:from ogit.ServiceManagement:Incident;
-            ogit:to ogit.ServiceManagement:Problem
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.ServiceManagement:Problem
         ],
         [
-            ogit:from ogit.ServiceManagement:Problem;
-            ogit:to ogit.ServiceManagement:Order
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.ServiceManagement:Order
         ],
         [
-            ogit:from ogit.ServiceManagement:Problem;
-            ogit:to ogit.ServiceManagement:ChangeRequest
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
         ],
         [
-            ogit:from ogit.ServiceManagement:Problem;
-            ogit:to ogit.ServiceManagement:Incident
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.ServiceManagement:Incident
         ],
         [
-            ogit:from ogit.ServiceManagement:Problem;
-            ogit:to ogit.ServiceManagement:Problem
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.ServiceManagement:Problem
         ],
         [
-            ogit:from ogit.config:ConfigurationItem;
-            ogit:to ogit.config:ConfigurationItem
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.config:ConfigurationItem
         ],
         [
-            ogit:from ogit.config:ConfigurationItem;
-            ogit:to ogit.Datacenter:Server
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.Datacenter:Server
         ],
         [
-            ogit:from ogit.config:ConfigurationItem;
-            ogit:to ogit.config:Attachment
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.config:Attachment
         ],
         [
-            ogit:from ogit.config:ConfigurationItem;
-            ogit:to ogit.Automation:MARSNode
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.Automation:MARSNode
         ],
         [
-            ogit:from ogit.ServiceManagement:Ticket;
-            ogit:to ogit.ServiceManagement:Ticket
+            ogit.core:from ogit.ServiceManagement:Ticket;
+            ogit.core:to ogit.ServiceManagement:Ticket
         ],
         [
-            ogit:from ogit.Automation:MARSNodeTemplate;
-            ogit:to ogit.Automation:MARSNode
+            ogit.core:from ogit.Automation:MARSNodeTemplate;
+            ogit.core:to ogit.Automation:MARSNode
         ],
         [
-            ogit:from ogit.Automation:MARSNodeTemplate;
-            ogit:to ogit.Automation:MARSNodeTemplate
+            ogit.core:from ogit.Automation:MARSNodeTemplate;
+            ogit.core:to ogit.Automation:MARSNodeTemplate
         ],
         [
-            ogit:from ogit.Automation:MARSNodeTemplate;
-            ogit:to ogit.Automation:MARSNodeTemplate
+            ogit.core:from ogit.Automation:MARSNodeTemplate;
+            ogit.core:to ogit.Automation:MARSNodeTemplate
         ],
         [
-            ogit:from ogit.Network:IPAddress;
-            ogit:to ogit.Network:NetworkInterface
+            ogit.core:from ogit.Network:IPAddress;
+            ogit.core:to ogit.Network:NetworkInterface
         ],
         [
-            ogit:from ogit.Network:Port;
-            ogit:to ogit.Network:NetworkInterface
+            ogit.core:from ogit.Network:Port;
+            ogit.core:to ogit.Network:NetworkInterface
         ],
         [
-            ogit:from ogit.Network:PortChannel;
-            ogit:to ogit.Network:NetworkInterface
+            ogit.core:from ogit.Network:PortChannel;
+            ogit.core:to ogit.Network:NetworkInterface
         ],
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.organization:Organization
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.organization:Organization
         ],
         [
-            ogit:from ogit.Forum:FeedEntry;
-            ogit:to ogit:Node
+            ogit.core:from ogit.Forum:FeedEntry;
+            ogit.core:to ogit:Node
         ],
         [
-            ogit:from ogit.config:ConfigurationItem;
-            ogit:to ogit.asset:Asset
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.asset:Asset
         ],
         [
-            ogit:from ogit.config:ConfigurationItem;
-            ogit:to ogit.device:Device
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.device:Device
         ],
         [
-            ogit:from ogit.Forum:KnowledgeItemHistory;
-            ogit:to ogit.Automation:KnowledgeItem
+            ogit.core:from ogit.Forum:KnowledgeItemHistory;
+            ogit.core:to ogit.Automation:KnowledgeItem
         ],
         [
-            ogit:from ogit.person:Person;
-            ogit:to ogit.BusinessProcess:SurveyIteration
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.BusinessProcess:SurveyIteration
         ];
 .

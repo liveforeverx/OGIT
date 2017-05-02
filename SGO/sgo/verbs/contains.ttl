@@ -1,6 +1,7 @@
 @prefix ogit.BusinessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
 @prefix ogit.Automation:        <http://www.purl.org/ogit/Automation/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.core:                   <http://www.purl.org/ogit/> .
 @prefix ogit.asset:             <http://www.purl.org/ogit/> .
 @prefix ogit.data:              <http://www.purl.org/ogit/> .
 @prefix ogit.catalog:           <http://www.purl.org/ogit/> .
@@ -22,16 +23,16 @@
 @prefix ogit.Knowledge:         <http://www.purl.org/ogit/Knowledge/> .
 
 ogit:contains
-    a ogit:Verb;
+    a ogit.core:Verb;
     rdfs:label "contains";
     dcterms:description """This relationship indicates that something is part of something else. see also \"includes\"""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
     dcterms:modified "2016-07-12";
-    ogit:admin-contact "arago GmbH";
-    ogit:tech-contact "arago GmbH";
-    ogit:history
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
@@ -94,461 +95,461 @@ Added a connection from `ogit/Forum/KnowledgeBundle` -> `ogit/Automation/Knowled
             dcterms:description "Added a connection from `ogit/Alert` -> `ogit/Contract`";
             dcterms:creator "stravlos@arago.co"
         ];
-    ogit:allowed
+    ogit.core:allowed
         [
-            ogit:from ogit.Automation:AutomationIssue;
-            ogit:to ogit.Automation:Item
+            ogit.core:from ogit.Automation:AutomationIssue;
+            ogit.core:to ogit.Automation:Item
         ],
         [
-            ogit:from ogit.Automation:KnowledgeItem;
-            ogit:to ogit.Automation:Trigger
+            ogit.core:from ogit.Automation:KnowledgeItem;
+            ogit.core:to ogit.Automation:Trigger
         ],
         [
-            ogit:from ogit.Automation:MARSModel;
-            ogit:to ogit.Automation:MARSNode
+            ogit.core:from ogit.Automation:MARSModel;
+            ogit.core:to ogit.Automation:MARSNode
         ],
         [
-            ogit:from ogit.Automation:Item;
-            ogit:to ogit.Automation:Item
+            ogit.core:from ogit.Automation:Item;
+            ogit.core:to ogit.Automation:Item
         ],
         [
-            ogit:from ogit.Automation:Item;
-            ogit:to ogit.Automation:KnowledgeItemAttribute
+            ogit.core:from ogit.Automation:Item;
+            ogit.core:to ogit.Automation:KnowledgeItemAttribute
         ],
         [
-            ogit:from ogit.task:TaskList;
-            ogit:to ogit.task:Task
+            ogit.core:from ogit.task:TaskList;
+            ogit.core:to ogit.task:Task
         ],
         [
-            ogit:from ogit.Automation:Trigger;
-            ogit:to ogit.Automation:Item
+            ogit.core:from ogit.Automation:Trigger;
+            ogit.core:to ogit.Automation:Item
         ],
         [
-            ogit:from ogit.Cost:CostDistribution;
-            ogit:to ogit.Cost:CostElement
+            ogit.core:from ogit.Cost:CostDistribution;
+            ogit.core:to ogit.Cost:CostElement
         ],
         [
-            ogit:from ogit.Cost:PlanningTemplate;
-            ogit:to ogit.Cost:PlanningTemplate
+            ogit.core:from ogit.Cost:PlanningTemplate;
+            ogit.core:to ogit.Cost:PlanningTemplate
         ],
         [
-            ogit:from ogit.BusinessProcess:BusinessRuleTask;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:BusinessRuleTask;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:CancelEvent;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:CancelEvent;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:CancelEvent;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:CancelEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:CompensationEvent;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:CompensationEvent;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:CompensationEvent;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:CompensationEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:ConditionalEvent;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:ConditionalEvent;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:ConditionalEvent;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:ConditionalEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:DataObject;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:DataObject;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:DataObject;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:DataObject;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:DataStore;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:DataStore;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:DataStore;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:DataStore;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:ErrorEvent;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:ErrorEvent;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:ErrorEvent;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:ErrorEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:EscalationEvent;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:EscalationEvent;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:EscalationEvent;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:EscalationEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:EventBasedGateway;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:EventBasedGateway;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:EventBasedGateway;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:EventBasedGateway;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:ExclusiveGateway;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:ExclusiveGateway;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:ExclusiveGateway;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:ExclusiveGateway;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:InclusiveGateway;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:InclusiveGateway;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:InclusiveGateway;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:InclusiveGateway;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:InstantiatedReceiveTask;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:InstantiatedReceiveTask;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:LinkEvent;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:LinkEvent;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:LinkEvent;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:LinkEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:ManualTask;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:ManualTask;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:MessageEvent;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:MessageEvent;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:MessageEvent;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:MessageEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:MultipleEvent;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:MultipleEvent;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:MultipleEvent;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:MultipleEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:NoneEvent;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:NoneEvent;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:NoneEvent;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:NoneEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:ParallelGateway;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:ParallelGateway;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:ParallelGateway;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:ParallelGateway;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:ProcessLane;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:ProcessLane;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:ProcessLane;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:ProcessLane;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:ProcessPool;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:ProcessPool;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:ProcessPool;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:ProcessPool;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:ProcessPool;
-            ogit:to ogit.BusinessProcess:ProcessLane
+            ogit.core:from ogit.BusinessProcess:ProcessPool;
+            ogit.core:to ogit.BusinessProcess:ProcessLane
         ],
         [
-            ogit:from ogit.BusinessProcess:ReceiveTask;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:ReceiveTask;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:ScriptTask;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:ScriptTask;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:SendTask;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:SendTask;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:ServiceTask;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:ServiceTask;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:SignalEvent;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:SignalEvent;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:SignalEvent;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:SignalEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:TerminationEvent;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:TerminationEvent;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:TerminationEvent;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:TerminationEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:TimerEvent;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:TimerEvent;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:TimerEvent;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:TimerEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:UndefinedTask;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:UndefinedTask;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.BusinessProcess:UserTask;
-            ogit:to ogit.Software:Application
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.Software:Application
         ],
         [
-            ogit:from ogit.BusinessProcess:UserTask;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.contract:Contract;
-            ogit:to ogit.ServiceManagement:SLA
+            ogit.core:from ogit.contract:Contract;
+            ogit.core:to ogit.ServiceManagement:SLA
         ],
         [
-            ogit:from ogit.contract:Contract;
-            ogit:to ogit.license:License
+            ogit.core:from ogit.contract:Contract;
+            ogit.core:to ogit.license:License
         ],
         [
-            ogit:from ogit.Datacenter:Building;
-            ogit:to ogit.Datacenter:Room
+            ogit.core:from ogit.Datacenter:Building;
+            ogit.core:to ogit.Datacenter:Room
         ],
         [
-            ogit:from ogit.Datacenter:Building;
-            ogit:to ogit.Datacenter:Datacenter
+            ogit.core:from ogit.Datacenter:Building;
+            ogit.core:to ogit.Datacenter:Datacenter
         ],
         [
-            ogit:from ogit.device:Device;
-            ogit:to ogit.Datacenter:Sensor
+            ogit.core:from ogit.device:Device;
+            ogit.core:to ogit.Datacenter:Sensor
         ],
         [
-            ogit:from ogit.Datacenter:Rack;
-            ogit:to ogit.device:Device
+            ogit.core:from ogit.Datacenter:Rack;
+            ogit.core:to ogit.device:Device
         ],
         [
-            ogit:from ogit.Datacenter:Rack;
-            ogit:to ogit.Datacenter:PowerDistributionUnit
+            ogit.core:from ogit.Datacenter:Rack;
+            ogit.core:to ogit.Datacenter:PowerDistributionUnit
         ],
         [
-            ogit:from ogit.Datacenter:Rack;
-            ogit:to ogit.Datacenter:Sensor
+            ogit.core:from ogit.Datacenter:Rack;
+            ogit.core:to ogit.Datacenter:Sensor
         ],
         [
-            ogit:from ogit.Datacenter:Room;
-            ogit:to ogit.Datacenter:Section
+            ogit.core:from ogit.Datacenter:Room;
+            ogit.core:to ogit.Datacenter:Section
         ],
         [
-            ogit:from ogit.Datacenter:Room;
-            ogit:to ogit.Datacenter:Sensor
+            ogit.core:from ogit.Datacenter:Room;
+            ogit.core:to ogit.Datacenter:Sensor
         ],
         [
-            ogit:from ogit.Datacenter:Room;
-            ogit:to ogit.Datacenter:Cooling
+            ogit.core:from ogit.Datacenter:Room;
+            ogit.core:to ogit.Datacenter:Cooling
         ],
         [
-            ogit:from ogit.Datacenter:Room;
-            ogit:to ogit.Datacenter:Rack
+            ogit.core:from ogit.Datacenter:Room;
+            ogit.core:to ogit.Datacenter:Rack
         ],
         [
-            ogit:from ogit.Datacenter:Section;
-            ogit:to ogit.Datacenter:Rack
+            ogit.core:from ogit.Datacenter:Section;
+            ogit.core:to ogit.Datacenter:Rack
         ],
         [
-            ogit:from ogit.Datacenter:Section;
-            ogit:to ogit.Datacenter:Sensor
+            ogit.core:from ogit.Datacenter:Section;
+            ogit.core:to ogit.Datacenter:Sensor
         ],
         [
-            ogit:from ogit.catalog:Catalog;
-            ogit:to ogit.catalog:CatalogItem
+            ogit.core:from ogit.catalog:Catalog;
+            ogit.core:to ogit.catalog:CatalogItem
         ],
         [
-            ogit:from ogit.ServiceManagement:Offering;
-            ogit:to ogit.Cost:CostElement
+            ogit.core:from ogit.ServiceManagement:Offering;
+            ogit.core:to ogit.Cost:CostElement
         ],
         [
-            ogit:from ogit.ServiceManagement:Offering;
-            ogit:to ogit.catalog:CatalogItem
+            ogit.core:from ogit.ServiceManagement:Offering;
+            ogit.core:to ogit.catalog:CatalogItem
         ],
         [
-            ogit:from ogit.ServiceManagement:Offering;
-            ogit:to ogit.ServiceManagement:Service
+            ogit.core:from ogit.ServiceManagement:Offering;
+            ogit.core:to ogit.ServiceManagement:Service
         ],
         [
-            ogit:from ogit.Automation:MARSModelTemplate;
-            ogit:to ogit.Automation:MARSNodeTemplate
+            ogit.core:from ogit.Automation:MARSModelTemplate;
+            ogit.core:to ogit.Automation:MARSNodeTemplate
         ],
         [
-            ogit:from ogit.Network:NetworkCard;
-            ogit:to ogit.Network:Port
+            ogit.core:from ogit.Network:NetworkCard;
+            ogit.core:to ogit.Network:Port
         ],
         [
-            ogit:from ogit.Network:NetworkEnclosure;
-            ogit:to ogit.Network:Shelf
+            ogit.core:from ogit.Network:NetworkEnclosure;
+            ogit.core:to ogit.Network:Shelf
         ],
         [
-            ogit:from ogit.Network:NetworkEndpoint;
-            ogit:to ogit.Network:FCHBA
+            ogit.core:from ogit.Network:NetworkEndpoint;
+            ogit.core:to ogit.Network:FCHBA
         ],
         [
-            ogit:from ogit.Network:NetworkEndpoint;
-            ogit:to ogit.Network:NetworkInterface
+            ogit.core:from ogit.Network:NetworkEndpoint;
+            ogit.core:to ogit.Network:NetworkInterface
         ],
         [
-            ogit:from ogit.Network:NetworkFabric;
-            ogit:to ogit.Network:NetworkCard
+            ogit.core:from ogit.Network:NetworkFabric;
+            ogit.core:to ogit.Network:NetworkCard
         ],
         [
-            ogit:from ogit.Network:NetworkFabric;
-            ogit:to ogit.Network:SimpleDevice
+            ogit.core:from ogit.Network:NetworkFabric;
+            ogit.core:to ogit.Network:SimpleDevice
         ],
         [
-            ogit:from ogit.Network:NIC;
-            ogit:to ogit.Network:MACAddress
+            ogit.core:from ogit.Network:NIC;
+            ogit.core:to ogit.Network:MACAddress
         ],
         [
-            ogit:from ogit.Network:Shelf;
-            ogit:to ogit.Network:Slot
+            ogit.core:from ogit.Network:Shelf;
+            ogit.core:to ogit.Network:Slot
         ],
         [
-            ogit:from ogit.Network:SimpleDevice;
-            ogit:to ogit.Network:Port
+            ogit.core:from ogit.Network:SimpleDevice;
+            ogit.core:to ogit.Network:Port
         ],
         [
-            ogit:from ogit.organization:Organization;
-            ogit:to ogit.organization:Organization
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.organization:Organization
         ],
         [
-            ogit:from ogit.Software:Application;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.Software:Application;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.Software:SoftwareComponent;
-            ogit:to ogit.Software:SoftwareComponent
+            ogit.core:from ogit.Software:SoftwareComponent;
+            ogit.core:to ogit.Software:SoftwareComponent
         ],
         [
-            ogit:from ogit.ServiceManagement:Offering;
-            ogit:to ogit.ServiceManagement:Order
+            ogit.core:from ogit.ServiceManagement:Offering;
+            ogit.core:to ogit.ServiceManagement:Order
         ],
         [
-            ogit:from ogit.asset:Asset;
-            ogit:to ogit.contract:Contract
+            ogit.core:from ogit.asset:Asset;
+            ogit.core:to ogit.contract:Contract
         ],
         [
-            ogit:from ogit.Forum:Topic;
-            ogit:to ogit.Forum:Post
+            ogit.core:from ogit.Forum:Topic;
+            ogit.core:to ogit.Forum:Post
         ],
         [
-            ogit:from ogit.Forum:KnowledgeBundle;
-            ogit:to ogit.Automation:KnowledgeItem
+            ogit.core:from ogit.Forum:KnowledgeBundle;
+            ogit.core:to ogit.Automation:KnowledgeItem
         ],
         [
-            ogit:from ogit.Automation:AutomationIssue;
-            ogit:to ogit.Automation:DynamicEngineData
+            ogit.core:from ogit.Automation:AutomationIssue;
+            ogit.core:to ogit.Automation:DynamicEngineData
         ],
         [
-            ogit:from ogit.Automation:MARSNode;
-            ogit:to ogit.Automation:DynamicEngineData
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Automation:DynamicEngineData
         ],
         [
-            ogit:from ogit.Automation:DynamicEngineData;
-            ogit:to ogit.Automation:DynamicEngineData
+            ogit.core:from ogit.Automation:DynamicEngineData;
+            ogit.core:to ogit.Automation:DynamicEngineData
         ],
         [
-            ogit:from ogit.Automation:AutomationIssue;
-            ogit:to ogit.task:Task
+            ogit.core:from ogit.Automation:AutomationIssue;
+            ogit.core:to ogit.task:Task
         ],
         [
-            ogit:from ogit.config:ConfigurationItem;
-            ogit:to ogit.config:ConfigurationItem
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.config:ConfigurationItem
         ],
         [
-            ogit:from ogit.Automation:MARSNode;
-            ogit:to ogit.Automation:MARSNode
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Automation:MARSNode
         ],
         [
-            ogit:from ogit.Forum:KnowledgeBundle;
-            ogit:to ogit.Automation:AutomationIssue
+            ogit.core:from ogit.Forum:KnowledgeBundle;
+            ogit.core:to ogit.Automation:AutomationIssue
         ],
         [
-            ogit:from ogit.Automation:MARSNode;
-            ogit:to ogit.Network:NetworkInterface
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Network:NetworkInterface
         ],
         [
-            ogit:from ogit.event:Alert;
-            ogit:to ogit.license:License
+            ogit.core:from ogit.event:Alert;
+            ogit.core:to ogit.license:License
         ],
                 [
-            ogit:from ogit.event:Alert;
-            ogit:to ogit.contract:Contract
+            ogit.core:from ogit.event:Alert;
+            ogit.core:to ogit.contract:Contract
         ],
         [
-            ogit:from ogit.Knowledge:AcquisitionSession;
-            ogit:to ogit.data:Comment
+            ogit.core:from ogit.Knowledge:AcquisitionSession;
+            ogit.core:to ogit.data:Comment
         ];
 .

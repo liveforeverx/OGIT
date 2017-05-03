@@ -1,7 +1,7 @@
 @prefix dcterms:               <http://purl.org/dc/terms/> .
 @prefix ogit:                  <http://www.purl.org/ogit/> .
-@prefix ogit.BusinessProcess:  <http://www.purl.org/ogit/BusinessProcess/> .
-@prefix ogit._BusinessProcess: <http://www.purl.org/ogit/> .
+@prefix ogit._businessProcess: <http://www.purl.org/ogit/> .
+@prefix ogit.businessProcess:  <http://www.purl.org/ogit/BusinessProcess/> .
 @prefix ogit.core:             <http://www.purl.org/ogit/> .
 @prefix ogit.foundation:       <http://www.purl.org/ogit/> .
 @prefix owl:                   <http://www.w3.org/2002/07/owl#> .
@@ -12,9 +12,9 @@
 #
 # Ontology
 #
-ogit:BusinessProcess
+ogit:businessProcess
     a owl:Ontology;
-    rdfs:label "OGIT BusinessProcess";
+    rdfs:label "OGIT Business Process";
     dcterms:creator "arago GmbH";
     dcterms:contributor "Fabian Meyer";
     vann:preferredNamespaceUri "http://www.purl.org/ogit/BusinessProcess/";
@@ -26,7 +26,7 @@ ogit:BusinessProcess
 #
 # Entities
 #
-ogit.BusinessProcess:BusinessProcess
+ogit.businessProcess:BusinessProcess
     a ogit.core:Entity;
     rdfs:label "BusinessProcess";
     dcterms:description "Entity of a business process.";
@@ -50,7 +50,7 @@ ogit.BusinessProcess:BusinessProcess
         ];
 .
 
-ogit.BusinessProcess:BusinessRuleTask
+ogit.businessProcess:BusinessRuleTask
     a ogit.core:Entity;
     rdfs:label "BusinessRuleTask";
     dcterms:description "Entity to store another task type: the business rule. This task type is used solely to apply business rules.";
@@ -74,7 +74,7 @@ ogit.BusinessProcess:BusinessRuleTask
         ];
 .
 
-ogit.BusinessProcess:CancelEvent
+ogit.businessProcess:CancelEvent
     a ogit.core:Entity;
     rdfs:label "CancelEvent";
     dcterms:description "Entity to store a cancel event. You can use the cancel event only in the context of the transactions.";
@@ -87,7 +87,7 @@ ogit.BusinessProcess:CancelEvent
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:mandatory-attributes
-        ogit.BusinessProcess:businessProcessEventType;
+        ogit.businessProcess:businessProcessEventType;
     ogit.core:optional-attributes
         ogit.foundation:name,
         ogit.foundation:description;
@@ -100,7 +100,7 @@ ogit.BusinessProcess:CancelEvent
         ];
 .
 
-ogit.BusinessProcess:CompensationEvent
+ogit.businessProcess:CompensationEvent
     a ogit.core:Entity;
     rdfs:label "CompensationEvent";
     dcterms:description """Entity to store a compensation event. We execute tasks in our processes that sometimes have to be canceled later under certain circumstances.
@@ -118,7 +118,7 @@ Commissioning a service provider""";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:mandatory-attributes
-        ogit.BusinessProcess:businessProcessEventType;
+        ogit.businessProcess:businessProcessEventType;
     ogit.core:optional-attributes
         ogit.foundation:name,
         ogit.foundation:description;
@@ -131,11 +131,11 @@ Commissioning a service provider""";
         ];
 .
 
-ogit.BusinessProcess:ConditionalEvent
+ogit.businessProcess:ConditionalEvent
     a ogit.core:Entity;
     rdfs:label "ConditionalEvent";
     dcterms:description """Entity to store a condition event, which will determine wether a process should start or continue. Anything can be a condition, and
-conditions are independent of processes, which is why the condition (like the timer event) can only exist as a catching 
+conditions are independent of processes, which is why the condition (like the timer event) can only exist as a catching
 event. A process cannot therefore conditional event trigger a conditional event.""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
@@ -146,7 +146,7 @@ event. A process cannot therefore conditional event trigger a conditional event.
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:mandatory-attributes
-        ogit.BusinessProcess:businessProcessEventType;
+        ogit.businessProcess:businessProcessEventType;
     ogit.core:optional-attributes
         ogit.foundation:name,
         ogit.foundation:description;
@@ -159,7 +159,7 @@ event. A process cannot therefore conditional event trigger a conditional event.
         ];
 .
 
-ogit.BusinessProcess:DataObject
+ogit.businessProcess:DataObject
     a ogit.core:Entity;
     rdfs:label "DataObject";
     dcterms:description "Entity to store a Data Object. Data Objects are considered Artifacts because they do not have any direct effect on the Sequence Flow or Message Flow of the Process, but they do provide information about what activities require to be performed and/or what they produce.";
@@ -180,7 +180,7 @@ ogit.BusinessProcess:DataObject
         ];
 .
 
-ogit.BusinessProcess:DataStore
+ogit.businessProcess:DataStore
     a ogit.core:Entity;
     rdfs:label "DataStore";
     dcterms:description "A DataStore is a place where the process can read or write data, e.g., a database or filing cabinet. It persists beyond the lifetime of the process instance.";
@@ -201,15 +201,15 @@ ogit.BusinessProcess:DataStore
         ];
 .
 
-ogit.BusinessProcess:ErrorEvent
+ogit.businessProcess:ErrorEvent
     a ogit.core:Entity;
     rdfs:label "ErrorEvent";
     dcterms:description """Entitiy to store potential process errors as a step toward
 eliminating them, or as part of modeling escalation processes. In BPMN, error events are represented by a flash symbol.
 The BPMN specification does not specify what an error may be, the modeler has to decide that.
-An error is a serious event in BPMN, so if catching, it can be modeled only as an attached intermediate event. 
-This means that an error during task execution must be handled in a specific way: As a throwing event, it can be modeled 
-only at the end of a process path so that the participant knows the process has failed. The parent process should likewise 
+An error is a serious event in BPMN, so if catching, it can be modeled only as an attached intermediate event.
+This means that an error during task execution must be handled in a specific way: As a throwing event, it can be modeled
+only at the end of a process path so that the participant knows the process has failed. The parent process should likewise
 recognize the failure.""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
@@ -220,7 +220,7 @@ recognize the failure.""";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:mandatory-attributes
-        ogit.BusinessProcess:businessProcessEventType;
+        ogit.businessProcess:businessProcessEventType;
     ogit.core:optional-attributes
         ogit.foundation:name,
         ogit.foundation:description;
@@ -233,7 +233,7 @@ recognize the failure.""";
         ];
 .
 
-ogit.BusinessProcess:EscalationEvent
+ogit.businessProcess:EscalationEvent
     a ogit.core:Entity;
     rdfs:label "EscalationEvent";
     dcterms:description """Entity to store an escalation event in BPMN 2.0. Mainly, it shows communication between parent and sub-processes.
@@ -247,7 +247,7 @@ We discuss it in here TODO with the help of an example.""";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:mandatory-attributes
-        ogit.BusinessProcess:businessProcessEventType;
+        ogit.businessProcess:businessProcessEventType;
     ogit.core:optional-attributes
         ogit.foundation:name,
         ogit.foundation:description;
@@ -260,18 +260,18 @@ We discuss it in here TODO with the help of an example.""";
         ];
 .
 
-ogit.BusinessProcess:EventBasedGateway
+ogit.businessProcess:EventBasedGateway
     a ogit.core:Entity;
     rdfs:label "EventBasedGateway";
     dcterms:description """The event-based Gateway allows you to make a decision based on events. Each outgoing sequence flow of the gateway needs
-to be connected to an intermediate catching event. When process execution reaches an event-based Gateway, the gateway 
-acts like a wait state: execution is suspended. In addition, for each outgoing sequence flow, an event subscription is 
+to be connected to an intermediate catching event. When process execution reaches an event-based Gateway, the gateway
+acts like a wait state: execution is suspended. In addition, for each outgoing sequence flow, an event subscription is
 created.
-Note the sequence flows running out of an event-based Gateway are different than ordinary sequence flows. These sequence 
-flows are never actually \"executed\". On the contrary, they allow the process engine to determine which events an execution 
+Note the sequence flows running out of an event-based Gateway are different than ordinary sequence flows. These sequence
+flows are never actually \"executed\". On the contrary, they allow the process engine to determine which events an execution
 arriving at an event-based Gateway needs to subscribe to. The following restrictions apply:
 An event-based Gateway must have two or more outgoing sequence flows.
-An event-based Gateway may only be connected to elements of the type intermediateCatchEvent. (Receive Tasks after an 
+An event-based Gateway may only be connected to elements of the type intermediateCatchEvent. (Receive Tasks after an
 event-based Gateway are not supported by the engine yet.)
 An intermediateCatchEvent connected to an event-based Gateway must have a single incoming sequence flow.""";
     dcterms:valid "start=2015-05-21;";
@@ -294,7 +294,7 @@ An intermediateCatchEvent connected to an event-based Gateway must have a single
         ];
 .
 
-ogit.BusinessProcess:ExclusiveGateway
+ogit.businessProcess:ExclusiveGateway
     a ogit.core:Entity;
     rdfs:label "ExclusiveGateway";
     dcterms:description """An exclusive gateway (also called the XOR gateway or, in more technical terms, the exclusive data-based gateway), is used to model a decision in the process. When the execution arrives at this gateway, all outgoing sequence flows are evaluated in the order in which they have been defined. The sequence flow which condition evaluates to 'true' (or which doesn't have a condition set, conceptually having a 'true' value defined on the sequence flow) is selected for continuing the process.
@@ -320,22 +320,22 @@ If no sequence flow can be selected (no condition evaluates to 'true') this will
         ];
 .
 
-ogit.BusinessProcess:InclusiveGateway
+ogit.businessProcess:InclusiveGateway
     a ogit.core:Entity;
     rdfs:label "InclusiveGateway";
     dcterms:description """The Inclusive Gateway can be seen as a combination of an exclusive and a parallel gateway.
-Like an exclusive gateway you can define conditions on outgoing sequence flows and the inclusive gateway will evaluate them. 
+Like an exclusive gateway you can define conditions on outgoing sequence flows and the inclusive gateway will evaluate them.
 However, the main difference is that the inclusive gateway can receive more than one sequence flow, like a parallel gateway.
 The functionality of the inclusive gateway is based on the incoming and outgoing sequence flow:
-fork: all outgoing sequence flow conditions are evaluated and for the sequence flow conditions that evaluate to 'true' the 
+fork: all outgoing sequence flow conditions are evaluated and for the sequence flow conditions that evaluate to 'true' the
 flows are followed in parallel, creating one concurrent execution for each sequence flow.
 join: all concurrent executions arriving at the inclusive gateway wait at the gateway until an execution has arrived for
-each of the incoming sequence flows that have a process token. This is an important difference to the parallel gateway. 
-So in other words, the inclusive gateway will only wait for the incoming sequence flows that will be executed. After the 
+each of the incoming sequence flows that have a process token. This is an important difference to the parallel gateway.
+So in other words, the inclusive gateway will only wait for the incoming sequence flows that will be executed. After the
 join, the process continues past the joining inclusive gateway.
-Note that an inclusive gateway can have both fork and join behavior, if there are multiple incoming and outgoing sequence 
-flows for the same inclusive gateway. In that case, the gateway will first join all incoming sequence flows that have a 
-process token, before splitting into multiple concurrent paths of executions for the outgoing sequence flows that have a 
+Note that an inclusive gateway can have both fork and join behavior, if there are multiple incoming and outgoing sequence
+flows for the same inclusive gateway. In that case, the gateway will first join all incoming sequence flows that have a
+process token, before splitting into multiple concurrent paths of executions for the outgoing sequence flows that have a
 condition that evaluates to 'true'.""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
@@ -346,7 +346,7 @@ condition that evaluates to 'true'.""";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:mandatory-attributes
-        ogit.BusinessProcess:gatewayFunctionality;
+        ogit.businessProcess:gatewayFunctionality;
     ogit.core:optional-attributes
         ogit.foundation:name,
         ogit.foundation:description;
@@ -359,7 +359,7 @@ condition that evaluates to 'true'.""";
         ];
 .
 
-ogit.BusinessProcess:InstantiatedReceiveTask
+ogit.businessProcess:InstantiatedReceiveTask
     a ogit.core:Entity;
     rdfs:label "InstantiatedReceiveTask";
     dcterms:description "Entity to store an instantiated received task. If a receive task is to instantiate a process, that is, the receive tasks replaces the message start event, this is shown by a small event symbol in the top left corner.";
@@ -383,7 +383,7 @@ ogit.BusinessProcess:InstantiatedReceiveTask
         ];
 .
 
-ogit.BusinessProcess:LinkEvent
+ogit.businessProcess:LinkEvent
     a ogit.core:Entity;
     rdfs:label "LinkEvent";
     dcterms:description "The link event is a special case. It has no significance related to content, but it facilitates the diagram-creation process.";
@@ -396,7 +396,7 @@ ogit.BusinessProcess:LinkEvent
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:mandatory-attributes
-        ogit.BusinessProcess:businessProcessEventType;
+        ogit.businessProcess:businessProcessEventType;
     ogit.core:optional-attributes
         ogit.foundation:name,
         ogit.foundation:description;
@@ -409,7 +409,7 @@ ogit.BusinessProcess:LinkEvent
         ];
 .
 
-ogit.BusinessProcess:ManualTask
+ogit.businessProcess:ManualTask
     a ogit.core:Entity;
     rdfs:label "ManualTask";
     dcterms:description "Tasks executed by a human beeing that do not affect the completion of a task assigned by the process engine. All the task from our various pizza processes are manual types. Other examples: File a document in a folder; Clarify an incorrect invoice by phone; Talk with customers at the counter.";
@@ -433,11 +433,11 @@ ogit.BusinessProcess:ManualTask
         ];
 .
 
-ogit.BusinessProcess:MessageEvent
+ogit.businessProcess:MessageEvent
     a ogit.core:Entity;
     rdfs:label "MessageEvent";
     dcterms:description """Entity to store an instantiated message event. Sooner or later, most processes require communication, which can be represented in BPMN by means of the message event.
-In terms of BPMN2 modelling it can bel recognized as a small envelope. The meaning of \"message\" in BPMN is not restricted to letters, e-mails, or calls. 
+In terms of BPMN2 modelling it can bel recognized as a small envelope. The meaning of \"message\" in BPMN is not restricted to letters, e-mails, or calls.
 Any action that refers to a specific addressee and represents or contains information for the addressee is a message.""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
@@ -448,7 +448,7 @@ Any action that refers to a specific addressee and represents or contains inform
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:mandatory-attributes
-        ogit.BusinessProcess:businessProcessEventType;
+        ogit.businessProcess:businessProcessEventType;
     ogit.core:optional-attributes
         ogit.foundation:name,
         ogit.foundation:description;
@@ -461,7 +461,7 @@ Any action that refers to a specific addressee and represents or contains inform
         ];
 .
 
-ogit.BusinessProcess:Milestone
+ogit.businessProcess:Milestone
     a ogit.core:Entity;
     rdfs:label "Milestone";
     dcterms:description """An identity that represents an important event, achievement, ...""";
@@ -478,8 +478,8 @@ ogit.BusinessProcess:Milestone
         ogit.foundation:title,
         ogit.foundation:category,
         ogit.foundation:status,
-        ogit._BusinessProcess:plannedStartDate,
-        ogit._BusinessProcess:plannedFinishDate,
+        ogit._businessProcess:plannedStartDate,
+        ogit._businessProcess:plannedFinishDate,
         ogit.foundation:startedAt,
         ogit.foundation:finishedAt;
     ogit.core:indexed-attributes
@@ -499,7 +499,7 @@ ogit.BusinessProcess:Milestone
         ];
 .
 
-ogit.BusinessProcess:MultipleEvent
+ogit.businessProcess:MultipleEvent
     a ogit.core:Entity;
     rdfs:label "MultipleEvent";
     dcterms:description "We can use the multiple event to summarize several events with a single symbol.";
@@ -512,7 +512,7 @@ ogit.BusinessProcess:MultipleEvent
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:mandatory-attributes
-        ogit.BusinessProcess:businessProcessEventType;
+        ogit.businessProcess:businessProcessEventType;
     ogit.core:optional-attributes
         ogit.foundation:name,
         ogit.foundation:description;
@@ -525,7 +525,7 @@ ogit.BusinessProcess:MultipleEvent
         ];
 .
 
-ogit.BusinessProcess:NoneEvent
+ogit.businessProcess:NoneEvent
     a ogit.core:Entity;
     rdfs:label "NoneEvent";
     dcterms:description "A NoneEvent is an event without any catching or throwing activity, which could be used for a waiting mechanism in BPMN2.";
@@ -538,7 +538,7 @@ ogit.BusinessProcess:NoneEvent
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:mandatory-attributes
-        ogit.BusinessProcess:businessProcessEventType;
+        ogit.businessProcess:businessProcessEventType;
     ogit.core:optional-attributes
         ogit.foundation:name,
         ogit.foundation:description;
@@ -551,20 +551,20 @@ ogit.BusinessProcess:NoneEvent
         ];
 .
 
-ogit.BusinessProcess:ParallelGateway
+ogit.businessProcess:ParallelGateway
     a ogit.core:Entity;
     rdfs:label "ParallelGateway";
     dcterms:description """Gateways can be used to model concurrency in a process. The most straightforward gateway to introduce concurrency
-in a process model is the Parallel Gateway, which allows forking into multiple paths of execution or joining multiple 
+in a process model is the Parallel Gateway, which allows forking into multiple paths of execution or joining multiple
 incoming paths of execution.
 The functionality of the parallel gateway is based on the incoming and outgoing sequence flow(s):
 fork: all outgoing sequence flows are followed in parallel, creating one concurrent execution for each sequence flow.
-join: all concurrent executions arriving at the parallel gateway wait at the gateway until an execution has arrived 
+join: all concurrent executions arriving at the parallel gateway wait at the gateway until an execution has arrived
 for each of the incoming sequence flows. Then the process continues past the joining gateway.
-Note that a parallel gateway can have both fork and join behaviors, if there are multiple incoming and outgoing 
-sequence flows for the same parallel gateway. In that case, the gateway will first join all incoming sequence flows, 
+Note that a parallel gateway can have both fork and join behaviors, if there are multiple incoming and outgoing
+sequence flows for the same parallel gateway. In that case, the gateway will first join all incoming sequence flows,
 before splitting into multiple concurrent paths of executions.
-An important difference with other gateway types is that the parallel gateway does not evaluate conditions. If conditions 
+An important difference with other gateway types is that the parallel gateway does not evaluate conditions. If conditions
 are defined on the sequence flow connected with the parallel gateway, they are simply ignored.""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
@@ -575,7 +575,7 @@ are defined on the sequence flow connected with the parallel gateway, they are s
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:mandatory-attributes
-        ogit.BusinessProcess:gatewayFunctionality;
+        ogit.businessProcess:gatewayFunctionality;
     ogit.core:optional-attributes
         ogit.foundation:name,
         ogit.foundation:description;
@@ -588,7 +588,7 @@ are defined on the sequence flow connected with the parallel gateway, they are s
         ];
 .
 
-ogit.BusinessProcess:ProcessLane
+ogit.businessProcess:ProcessLane
     a ogit.core:Entity;
     rdfs:label "ProcessLane";
     dcterms:description "Entity to represent a ProcessLane of a business process. There must be one or more Lanes within a Pool. If there is only one Lane, then that Lane shares the name of the Pool and only the Pool name is displayed. If there is more than one Lane, then each Lane has to have its own name and all names are displayed.";
@@ -612,7 +612,7 @@ ogit.BusinessProcess:ProcessLane
         ];
 .
 
-ogit.BusinessProcess:ProcessPool
+ogit.businessProcess:ProcessPool
     a ogit.core:Entity;
     rdfs:label "ProcessPool";
     dcterms:description "A Pool represents a Participant in a Process. It is also acts as a swimlane and a graphical container for partitioning a set of activities from other Pools, usually in the context of B2B situations.";
@@ -636,7 +636,7 @@ ogit.BusinessProcess:ProcessPool
         ];
 .
 
-ogit.BusinessProcess:Project
+ogit.businessProcess:Project
     a ogit.core:Entity;
     rdfs:label "Project";
     dcterms:description """An identity that represents a grouping of Person, Milestone objects.""";
@@ -652,10 +652,10 @@ ogit.BusinessProcess:Project
     ogit.core:optional-attributes
         ogit.foundation:title,
         ogit.foundation:category,
-        ogit._BusinessProcess:placement,
+        ogit._businessProcess:placement,
         ogit.foundation:status,
-        ogit._BusinessProcess:plannedStartDate,
-        ogit._BusinessProcess:plannedFinishDate,
+        ogit._businessProcess:plannedStartDate,
+        ogit._businessProcess:plannedFinishDate,
         ogit.foundation:startedAt,
         ogit.foundation:finishedAt;
     ogit.core:indexed-attributes
@@ -675,7 +675,7 @@ ogit.BusinessProcess:Project
         ];
 .
 
-ogit.BusinessProcess:ReceiveTask
+ogit.businessProcess:ReceiveTask
     a ogit.core:Entity;
     rdfs:label "ReceiveTask";
     dcterms:description "Receiving a message can be modeled as a separate task. This task type is an alternative to the catching message event.";
@@ -699,7 +699,7 @@ ogit.BusinessProcess:ReceiveTask
         ];
 .
 
-ogit.BusinessProcess:ScriptTask
+ogit.businessProcess:ScriptTask
     a ogit.core:Entity;
     rdfs:label "ScriptTask";
     dcterms:description """A script that can be run when the a task is performed. If a script is not included, then the task will act equivalent to a not yet defined Task with \"nothing to do\".""";
@@ -723,7 +723,7 @@ ogit.BusinessProcess:ScriptTask
         ];
 .
 
-ogit.BusinessProcess:SendTask
+ogit.businessProcess:SendTask
     a ogit.core:Entity;
     rdfs:label "SendTask";
     dcterms:description "The Send Tasks from BPMN2 are technical, and the process engine executes them. Therefore, they mainly are used for calling web services asynchronously through message queues.";
@@ -747,7 +747,7 @@ ogit.BusinessProcess:SendTask
         ];
 .
 
-ogit.BusinessProcess:ServiceTask
+ogit.businessProcess:ServiceTask
     a ogit.core:Entity;
     rdfs:label "ServiceTask";
     dcterms:description "Service tasks are those done by software. These are program functions applied automatically as a process executes. BPMN normally assumes that this function is provided as web service, though it can be another implementation. The service task is a component of process-oriented implementation integration, which explains why it is so similar in concept to Service-OrientedArchitecture (SOA). Typical examples from the world of implementation integration are: The credit rating provided by a rating agency, obtained as XML through HTTP during a credit check.";
@@ -771,13 +771,13 @@ ogit.BusinessProcess:ServiceTask
         ];
 .
 
-ogit.BusinessProcess:SignalEvent
+ogit.businessProcess:SignalEvent
     a ogit.core:Entity;
     rdfs:label "SignalEvent";
     dcterms:description """Signals are similar to messages, which is why you can model them in BPMN as events just as you can with messages.
-The symbol for a signal is a triangle. The essential difference between a signal and a message is that that latter 
-is always addressed to a specific recipient. (An e-mail contains the e-mail address of the recipient, a call starts 
-with dialing the telephone number, and so on.) In contrast, a signal is more like a newspaper advertisement or a television 
+The symbol for a signal is a triangle. The essential difference between a signal and a message is that that latter
+is always addressed to a specific recipient. (An e-mail contains the e-mail address of the recipient, a call starts
+with dialing the telephone number, and so on.) In contrast, a signal is more like a newspaper advertisement or a television
 commercial. It is relatively undirected. Anyone who receives the signal and wants to react may do so.""";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
@@ -788,7 +788,7 @@ commercial. It is relatively undirected. Anyone who receives the signal and want
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:mandatory-attributes
-        ogit.BusinessProcess:businessProcessEventType;
+        ogit.businessProcess:businessProcessEventType;
     ogit.core:optional-attributes
         ogit.foundation:name,
         ogit.foundation:description;
@@ -801,7 +801,7 @@ commercial. It is relatively undirected. Anyone who receives the signal and want
         ];
 .
 
-ogit.BusinessProcess:Survey
+ogit.businessProcess:Survey
     a ogit.core:Entity;
     rdfs:label "Survey";
     dcterms:description """List with questions""";
@@ -818,8 +818,8 @@ ogit.BusinessProcess:Survey
         ogit.foundation:title,
         ogit.foundation:category,
         ogit.foundation:description,
-        ogit._BusinessProcess:surveyQuestions,
-        ogit._BusinessProcess:schedule,
+        ogit._businessProcess:surveyQuestions,
+        ogit._businessProcess:schedule,
         ogit.foundation:type,
         ogit.foundation:status;
     ogit.core:indexed-attributes
@@ -840,7 +840,7 @@ ogit.BusinessProcess:Survey
         ];
 .
 
-ogit.BusinessProcess:SurveyIteration
+ogit.businessProcess:SurveyIteration
     a ogit.core:Entity;
     rdfs:label "SurveyIteration";
     dcterms:description """Iteration of the same survey""";
@@ -871,7 +871,7 @@ ogit.BusinessProcess:SurveyIteration
         ];
 .
 
-ogit.BusinessProcess:SurveyReply
+ogit.businessProcess:SurveyReply
     a ogit.core:Entity;
     rdfs:label "SurveyReply";
     dcterms:description """User's reply on a survey""";
@@ -885,7 +885,7 @@ ogit.BusinessProcess:SurveyReply
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:any-attributes "true";
     ogit.core:optional-attributes
-        ogit._BusinessProcess:surveyQuestions,
+        ogit._businessProcess:surveyQuestions,
         ogit.foundation:comment;
     ogit.core:history
         [
@@ -896,7 +896,7 @@ ogit.BusinessProcess:SurveyReply
         ];
 .
 
-ogit.BusinessProcess:TerminationEvent
+ogit.businessProcess:TerminationEvent
     a ogit.core:Entity;
     rdfs:label "TerminationEvent";
     dcterms:description "Entity to represent a termination event, which indicates the termination of a process.";
@@ -909,7 +909,7 @@ ogit.BusinessProcess:TerminationEvent
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:mandatory-attributes
-        ogit.BusinessProcess:businessProcessEventType;
+        ogit.businessProcess:businessProcessEventType;
     ogit.core:optional-attributes
         ogit.foundation:name,
         ogit.foundation:description;
@@ -922,7 +922,7 @@ ogit.BusinessProcess:TerminationEvent
         ];
 .
 
-ogit.BusinessProcess:TimerEvent
+ogit.businessProcess:TimerEvent
     a ogit.core:Entity;
     rdfs:label "TimerEvent";
     dcterms:description "TimerEvent indicates the time, duration or periodical intervall of an event.";
@@ -935,7 +935,7 @@ ogit.BusinessProcess:TimerEvent
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:mandatory-attributes
-        ogit.BusinessProcess:businessProcessEventType;
+        ogit.businessProcess:businessProcessEventType;
     ogit.core:optional-attributes
         ogit.foundation:name,
         ogit.foundation:description;
@@ -948,7 +948,7 @@ ogit.BusinessProcess:TimerEvent
         ];
 .
 
-ogit.BusinessProcess:UndefinedTask
+ogit.businessProcess:UndefinedTask
     a ogit.core:Entity;
     rdfs:label "UndefinedTask";
     dcterms:description "A Task is an atomic activity that is included within a Process. A undifined Task should be used if the type of a task is not clear yet.";
@@ -972,7 +972,7 @@ ogit.BusinessProcess:UndefinedTask
         ];
 .
 
-ogit.BusinessProcess:UserTask
+ogit.businessProcess:UserTask
     a ogit.core:Entity;
     rdfs:label "UserTask";
     dcterms:description """User tasks are executed by people just like the manual tasks, but they are assigned by a process engine, which may, for example, place these tasks in each user's task list.
@@ -1002,7 +1002,7 @@ Typical task examples from the world of Human Workflow Management are: Check an 
 #
 # Attributes
 #
-ogit.BusinessProcess:businessProcessEventType
+ogit.businessProcess:businessProcessEventType
     a ogit.core:Attribute;
     rdfs:label "businessProcessEventType";
     dcterms:description "Defines the type of a business process event which should take one of the following values: Start, End, Intermediate.";
@@ -1023,7 +1023,7 @@ ogit.BusinessProcess:businessProcessEventType
         ];
 .
 
-ogit.BusinessProcess:gatewayFunctionality
+ogit.businessProcess:gatewayFunctionality
     a ogit.core:Attribute;
     rdfs:label "gatewayFunctionality";
     dcterms:description "Defines the functionality of the gateway within a BusinessProcess.";

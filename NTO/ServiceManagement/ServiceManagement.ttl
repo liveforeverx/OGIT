@@ -1,9 +1,9 @@
 @prefix dcterms:                 <http://purl.org/dc/terms/> .
 @prefix ogit:                    <http://www.purl.org/ogit/> .
-@prefix ogit.ServiceManagement:  <http://www.purl.org/ogit/ServiceManagement/> .
-@prefix ogit._ServiceManagement: <http://www.purl.org/ogit/> .
+@prefix ogit._serviceManagement: <http://www.purl.org/ogit/> .
 @prefix ogit.core:               <http://www.purl.org/ogit/> .
 @prefix ogit.foundation:         <http://www.purl.org/ogit/> .
+@prefix ogit.serviceManagement:  <http://www.purl.org/ogit/ServiceManagement/> .
 @prefix owl:                     <http://www.w3.org/2002/07/owl#> .
 @prefix purl:                    <http://www.purl.org/> .
 @prefix rdfs:                    <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,9 +12,9 @@
 #
 # Ontology
 #
-ogit:ServiceManagement
+ogit:serviceManagement
     a owl:Ontology;
-    rdfs:label "OGIT ServiceManagement";
+    rdfs:label "OGIT Service Management";
     dcterms:creator "arago GmbH";
     dcterms:contributor "Fabian Meyer";
     vann:preferredNamespaceUri "http://www.purl.org/ogit/ServiceManagement/";
@@ -26,7 +26,7 @@ ogit:ServiceManagement
 #
 # Entities
 #
-ogit.ServiceManagement:Action
+ogit.serviceManagement:Action
     a ogit.core:Entity;
     rdfs:label "Action";
     dcterms:description """Defines Actions on it Services. A Service is connected to the available Actions by the \"supports\" relationship.""";
@@ -52,7 +52,7 @@ ogit.ServiceManagement:Action
         ];
 .
 
-ogit.ServiceManagement:ApprovalTask
+ogit.serviceManagement:ApprovalTask
     a ogit.core:Entity;
     rdfs:label "ApprovalTask";
     dcterms:description "This entity type defines approval tasks for a ticket. Used for example at ogit/ServiceManagement/ChangeRequest.";
@@ -67,9 +67,9 @@ ogit.ServiceManagement:ApprovalTask
     ogit.core:optional-attributes
         ogit.foundation:id,
         ogit.foundation:name,
-        ogit.ServiceManagement:approvalStatus,
-        ogit.ServiceManagement:sourceStatus,
-        ogit._ServiceManagement:reason,
+        ogit.serviceManagement:approvalStatus,
+        ogit.serviceManagement:sourceStatus,
+        ogit._serviceManagement:reason,
         ogit.foundation:lastUpdatedAt;
     ogit.core:history
         [
@@ -87,7 +87,7 @@ ogit.ServiceManagement:ApprovalTask
         ];
 .
 
-ogit.ServiceManagement:ChangeRequest
+ogit.serviceManagement:ChangeRequest
     a ogit.core:Entity;
     rdfs:label "ChangeRequest";
     dcterms:description "This entity type defines a change request ticket";
@@ -102,27 +102,27 @@ ogit.ServiceManagement:ChangeRequest
     ogit.core:mandatory-attributes
         ogit.foundation:id;
     ogit.core:optional-attributes
-        ogit._ServiceManagement:risk,
-        ogit._ServiceManagement:justification,
+        ogit._serviceManagement:risk,
+        ogit._serviceManagement:justification,
         ogit.foundation:category,
         ogit.foundation:startedAt,
         ogit.foundation:finishedAt,
-        ogit._ServiceManagement:effort,
-        ogit._ServiceManagement:reportedAt,
-        ogit._ServiceManagement:reviewedAt,
-        ogit._ServiceManagement:assignedGroup,
-        ogit.ServiceManagement:changeStatus,
-        ogit.ServiceManagement:targetStartAt,
-        ogit.ServiceManagement:targetFinishAt,
-        ogit.ServiceManagement:scheduledStartAt,
-        ogit.ServiceManagement:scheduledFinishAt,
-        ogit.ServiceManagement:sourceStatus,
-        ogit.ServiceManagement:fallbackPlan,
-        ogit.ServiceManagement:testPlan,
-        ogit.ServiceManagement:implementationPlan,
-        ogit.ServiceManagement:solution,
-        ogit.ServiceManagement:resolutionCode,
-        ogit.ServiceManagement:customer;
+        ogit._serviceManagement:effort,
+        ogit._serviceManagement:reportedAt,
+        ogit._serviceManagement:reviewedAt,
+        ogit._serviceManagement:assignedGroup,
+        ogit.serviceManagement:changeStatus,
+        ogit.serviceManagement:targetStartAt,
+        ogit.serviceManagement:targetFinishAt,
+        ogit.serviceManagement:scheduledStartAt,
+        ogit.serviceManagement:scheduledFinishAt,
+        ogit.serviceManagement:sourceStatus,
+        ogit.serviceManagement:fallbackPlan,
+        ogit.serviceManagement:testPlan,
+        ogit.serviceManagement:implementationPlan,
+        ogit.serviceManagement:solution,
+        ogit.serviceManagement:resolutionCode,
+        ogit.serviceManagement:customer;
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -144,7 +144,7 @@ ogit.ServiceManagement:ChangeRequest
         ];
 .
 
-ogit.ServiceManagement:Incident
+ogit.serviceManagement:Incident
     a ogit.core:Entity;
     rdfs:label "Incident";
     dcterms:description "This entity type defines an incident ticket.";
@@ -158,17 +158,17 @@ ogit.ServiceManagement:Incident
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:optional-attributes
         ogit.foundation:id,
-        ogit.ServiceManagement:incidentStatus,
-        ogit.ServiceManagement:solution,
-        ogit.ServiceManagement:resolutionCode,
-        ogit.ServiceManagement:resolvedAt,
-        ogit.ServiceManagement:sourceStatus,
-        ogit.ServiceManagement:reportedSource,
-        ogit.ServiceManagement:customer,
-        ogit.ServiceManagement:task,
-        ogit._ServiceManagement:assignedGroup,
+        ogit.serviceManagement:incidentStatus,
+        ogit.serviceManagement:solution,
+        ogit.serviceManagement:resolutionCode,
+        ogit.serviceManagement:resolvedAt,
+        ogit.serviceManagement:sourceStatus,
+        ogit.serviceManagement:reportedSource,
+        ogit.serviceManagement:customer,
+        ogit.serviceManagement:task,
+        ogit._serviceManagement:assignedGroup,
         ogit.foundation:category,
-        ogit._ServiceManagement:reportedAt;
+        ogit._serviceManagement:reportedAt;
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -202,7 +202,7 @@ ogit.ServiceManagement:Incident
         ];
 .
 
-ogit.ServiceManagement:Offering
+ogit.serviceManagement:Offering
     a ogit.core:Entity;
     rdfs:label "Offering";
     dcterms:description "This is a concrete offering from a vendor including one or more combined services from a catalog/collection/offering book.";
@@ -218,15 +218,15 @@ ogit.ServiceManagement:Offering
         ogit.foundation:name,
         ogit.foundation:id;
     ogit.core:optional-attributes
-        ogit.ServiceManagement:allowedForNewBusiness,
-        ogit._ServiceManagement:capacityAvailable,
+        ogit.serviceManagement:allowedForNewBusiness,
+        ogit._serviceManagement:capacityAvailable,
         ogit.foundation:currency,
         ogit.foundation:serialNumber,
         ogit.foundation:validFrom,
         ogit.foundation:expirationDate,
         ogit.foundation:category,
         ogit.foundation:description,
-        ogit._ServiceManagement:market;
+        ogit._serviceManagement:market;
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -236,7 +236,7 @@ ogit.ServiceManagement:Offering
         ];
 .
 
-ogit.ServiceManagement:Order
+ogit.serviceManagement:Order
     a ogit.core:Entity;
     rdfs:label "Order";
     dcterms:description "Defines an order.";
@@ -252,18 +252,18 @@ ogit.ServiceManagement:Order
         ogit.foundation:id;
     ogit.core:optional-attributes
         ogit.foundation:description,
-        ogit.ServiceManagement:sourceStatus,
+        ogit.serviceManagement:sourceStatus,
         ogit.foundation:impact,
-        ogit._ServiceManagement:urgency,
+        ogit._serviceManagement:urgency,
         ogit.foundation:priority,
         ogit.foundation:createdAt,
         ogit.foundation:openedAt,
-        ogit._ServiceManagement:closedAt,
+        ogit._serviceManagement:closedAt,
         ogit.foundation:lastUpdatedAt,
-        ogit.ServiceManagement:externalTicketSource,
-        ogit.ServiceManagement:externalTicketId,
-        ogit.ServiceManagement:reportedSource,
-        ogit._ServiceManagement:project,
+        ogit.serviceManagement:externalTicketSource,
+        ogit.serviceManagement:externalTicketId,
+        ogit.serviceManagement:reportedSource,
+        ogit._serviceManagement:project,
         ogit.foundation:summary;
     ogit.core:history
         [
@@ -280,7 +280,7 @@ ogit.ServiceManagement:Order
         ];
 .
 
-ogit.ServiceManagement:Problem
+ogit.serviceManagement:Problem
     a ogit.core:Entity;
     rdfs:label "Problem";
     dcterms:description "This entity type defines a problem ticket.";
@@ -295,12 +295,12 @@ ogit.ServiceManagement:Problem
     ogit.core:mandatory-attributes
         ogit.foundation:id;
     ogit.core:optional-attributes
-        ogit.ServiceManagement:problemStatus,
-        ogit._ServiceManagement:reportedAt,
-        ogit.ServiceManagement:solution,
-        ogit.ServiceManagement:resolutionCode,
-        ogit.ServiceManagement:rootCause,
-        ogit.ServiceManagement:workAround;
+        ogit.serviceManagement:problemStatus,
+        ogit._serviceManagement:reportedAt,
+        ogit.serviceManagement:solution,
+        ogit.serviceManagement:resolutionCode,
+        ogit.serviceManagement:rootCause,
+        ogit.serviceManagement:workAround;
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -316,7 +316,7 @@ ogit.ServiceManagement:Problem
         ];
 .
 
-ogit.ServiceManagement:Report
+ogit.serviceManagement:Report
     a ogit.core:Entity;
     rdfs:label "Report";
     dcterms:description "Reporting about IT service delivery";
@@ -341,7 +341,7 @@ ogit.ServiceManagement:Report
         ];
 .
 
-ogit.ServiceManagement:SLA
+ogit.serviceManagement:SLA
     a ogit.core:Entity;
     rdfs:label "SLA";
     dcterms:description "A service level agreement.";
@@ -356,11 +356,11 @@ ogit.ServiceManagement:SLA
     ogit.core:optional-attributes
         ogit.foundation:name,
         ogit.foundation:startedAt,
-        ogit.ServiceManagement:scheduledFinishAt,
-        ogit.ServiceManagement:leftTime,
-        ogit.ServiceManagement:elapsedTime,
-        ogit.ServiceManagement:slaStage,
-        ogit.ServiceManagement:resolvedInTime;
+        ogit.serviceManagement:scheduledFinishAt,
+        ogit.serviceManagement:leftTime,
+        ogit.serviceManagement:elapsedTime,
+        ogit.serviceManagement:slaStage,
+        ogit.serviceManagement:resolvedInTime;
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -388,7 +388,7 @@ ogit.ServiceManagement:SLA
         ];
 .
 
-ogit.ServiceManagement:Service
+ogit.serviceManagement:Service
     a ogit.core:Entity;
     rdfs:label "Service";
     dcterms:description "A technology service item, which combined or not with other technology services can constitute a service offering (ogit/ServiceManagement/Offering).";
@@ -421,7 +421,7 @@ ogit.ServiceManagement:Service
         ];
 .
 
-ogit.ServiceManagement:SubTask
+ogit.serviceManagement:SubTask
     a ogit.core:Entity;
     rdfs:label "SubTask";
     dcterms:description """This entity type defines sub-tasks for a ticket. Mostly used for ChangeRequest.
@@ -437,22 +437,22 @@ Comman alternative names with same meaning are: task, activity, work order.""";
     ogit.core:mandatory-attributes
         ogit.foundation:id;
     ogit.core:optional-attributes
-        ogit.ServiceManagement:taskStatus,
-        ogit.ServiceManagement:sourceStatus,
+        ogit.serviceManagement:taskStatus,
+        ogit.serviceManagement:sourceStatus,
         ogit.foundation:description,
-        ogit._ServiceManagement:taskLog,
+        ogit._serviceManagement:taskLog,
         ogit.foundation:startedAt,
         ogit.foundation:finishedAt,
-        ogit.ServiceManagement:targetStartAt,
-        ogit.ServiceManagement:targetFinishAt,
-        ogit.ServiceManagement:scheduledStartAt,
-        ogit.ServiceManagement:scheduledFinishAt,
-        ogit._ServiceManagement:effort,
+        ogit.serviceManagement:targetStartAt,
+        ogit.serviceManagement:targetFinishAt,
+        ogit.serviceManagement:scheduledStartAt,
+        ogit.serviceManagement:scheduledFinishAt,
+        ogit._serviceManagement:effort,
         ogit.foundation:lastUpdatedAt,
-        ogit.ServiceManagement:resolutionCode,
+        ogit.serviceManagement:resolutionCode,
         ogit.foundation:name,
-        ogit._ServiceManagement:assignedGroup,
-        ogit.ServiceManagement:customer,
+        ogit._serviceManagement:assignedGroup,
+        ogit.serviceManagement:customer,
         ogit.foundation:type;
     ogit.core:history
         [
@@ -482,7 +482,7 @@ Comman alternative names with same meaning are: task, activity, work order.""";
         ];
 .
 
-ogit.ServiceManagement:Ticket
+ogit.serviceManagement:Ticket
     a ogit.core:Entity;
     rdfs:label "Ticket";
     dcterms:description "This entity defines any type of tickets. For specific behaviour of tickets, please check specific entities (e.g. ogit/ServiceManagement/Incident).";
@@ -499,18 +499,18 @@ ogit.ServiceManagement:Ticket
     ogit.core:optional-attributes
         ogit.foundation:summary,
         ogit.foundation:description,
-        ogit._ServiceManagement:project,
+        ogit._serviceManagement:project,
         ogit.foundation:impact,
-        ogit._ServiceManagement:urgency,
+        ogit._serviceManagement:urgency,
         ogit.foundation:priority,
         ogit.foundation:createdAt,
         ogit.foundation:openedAt,
-        ogit._ServiceManagement:closedAt,
+        ogit._serviceManagement:closedAt,
         ogit.foundation:lastUpdatedAt,
-        ogit.ServiceManagement:sourceStatus,
-        ogit.ServiceManagement:externalTicketId,
-        ogit.ServiceManagement:reportedSource,
-        ogit.ServiceManagement:ticketId;
+        ogit.serviceManagement:sourceStatus,
+        ogit.serviceManagement:externalTicketId,
+        ogit.serviceManagement:reportedSource,
+        ogit.serviceManagement:ticketId;
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -542,7 +542,7 @@ ogit.ServiceManagement:Ticket
 #
 # Attributes
 #
-ogit.ServiceManagement:allowedForNewBusiness
+ogit.serviceManagement:allowedForNewBusiness
     a ogit.core:Attribute;
     rdfs:label "allowedForNewBusiness";
     dcterms:description "If the value of this flag is true, the service could be offered in a store to new users for order. If flag is false, the service will only be available to users with already existing instances/entities of a specific service.";
@@ -561,7 +561,7 @@ ogit.ServiceManagement:allowedForNewBusiness
         ];
 .
 
-ogit.ServiceManagement:approvalStatus
+ogit.serviceManagement:approvalStatus
     a ogit.core:Attribute;
     rdfs:label "approvalStatus";
     dcterms:description "Status of an ApprovalTask containing one of the following values: New|PendingApproval|Approved|Rejected|Cancelled|Closed.";
@@ -582,7 +582,7 @@ ogit.ServiceManagement:approvalStatus
         ];
 .
 
-ogit.ServiceManagement:changeStatus
+ogit.serviceManagement:changeStatus
     a ogit.core:Attribute;
     rdfs:label "changeStatus";
     dcterms:description "Defines the status of a change record within the service management.";
@@ -615,7 +615,7 @@ ogit.ServiceManagement:changeStatus
         ];
 .
 
-ogit.ServiceManagement:customer
+ogit.serviceManagement:customer
     a ogit.core:Attribute;
     rdfs:label "customer";
     dcterms:description "The customer related to a Service Management process.";
@@ -634,7 +634,7 @@ ogit.ServiceManagement:customer
         ];
 .
 
-ogit.ServiceManagement:elapsedTime
+ogit.serviceManagement:elapsedTime
     a ogit.core:Attribute;
     rdfs:label "elapsedTime";
     dcterms:description "Time between start time and now (minus pause duration).";
@@ -653,7 +653,7 @@ ogit.ServiceManagement:elapsedTime
         ];
 .
 
-ogit.ServiceManagement:eventMessage
+ogit.serviceManagement:eventMessage
     a ogit.core:Attribute;
     rdfs:label "eventMessage";
     dcterms:description "Defines the event message/summary/logstring.";
@@ -672,7 +672,7 @@ ogit.ServiceManagement:eventMessage
         ];
 .
 
-ogit.ServiceManagement:eventNodeId
+ogit.serviceManagement:eventNodeId
     a ogit.core:Attribute;
     rdfs:label "eventNodeId";
     dcterms:description """Identifies the source of an event, i.e. identifies the monitoring endpoint which caused the event creation.
@@ -692,7 +692,7 @@ This could be an artifical identifier or some \"natural\" ID like hostname or IP
         ];
 .
 
-ogit.ServiceManagement:externalTicketId
+ogit.serviceManagement:externalTicketId
     a ogit.core:Attribute;
     rdfs:label "externalTicketId";
     dcterms:description "If a ticket was imported/duplicated from another system this attribute will define the ticket ID from the source system.";
@@ -711,7 +711,7 @@ ogit.ServiceManagement:externalTicketId
         ];
 .
 
-ogit.ServiceManagement:externalTicketSource
+ogit.serviceManagement:externalTicketSource
     a ogit.core:Attribute;
     rdfs:label "externalTicketSource";
     dcterms:description "If a ticket was imported/duplicated from another system this will contain a string indentifying the source system.";
@@ -730,7 +730,7 @@ ogit.ServiceManagement:externalTicketSource
         ];
 .
 
-ogit.ServiceManagement:fallbackPlan
+ogit.serviceManagement:fallbackPlan
     a ogit.core:Attribute;
     rdfs:label "fallbackPlan";
     dcterms:description "Defines instructions of how to revert in case a change fails.";
@@ -749,7 +749,7 @@ ogit.ServiceManagement:fallbackPlan
         ];
 .
 
-ogit.ServiceManagement:granularity
+ogit.serviceManagement:granularity
     a ogit.core:Attribute;
     rdfs:label "granularity";
     dcterms:description "Smallest value increment of a Parameter";
@@ -768,7 +768,7 @@ ogit.ServiceManagement:granularity
         ];
 .
 
-ogit.ServiceManagement:implementationPlan
+ogit.serviceManagement:implementationPlan
     a ogit.core:Attribute;
     rdfs:label "implementationPlan";
     dcterms:description "Used to define detail implementation instructions.";
@@ -787,7 +787,7 @@ ogit.ServiceManagement:implementationPlan
         ];
 .
 
-ogit.ServiceManagement:incidentStatus
+ogit.serviceManagement:incidentStatus
     a ogit.core:Attribute;
     rdfs:label "incidentStatus";
     dcterms:description "Defines the status of an incident record/ticket.";
@@ -814,7 +814,7 @@ ogit.ServiceManagement:incidentStatus
         ];
 .
 
-ogit.ServiceManagement:isRequired
+ogit.serviceManagement:isRequired
     a ogit.core:Attribute;
     rdfs:label "isRequired";
     dcterms:description "True if the value has to be specified for the Service to be provisioned. False otherwise.";
@@ -833,7 +833,7 @@ ogit.ServiceManagement:isRequired
         ];
 .
 
-ogit.ServiceManagement:leftTime
+ogit.serviceManagement:leftTime
     a ogit.core:Attribute;
     rdfs:label "leftTime";
     dcterms:description "Time remaining until SLA breach.";
@@ -852,7 +852,7 @@ ogit.ServiceManagement:leftTime
         ];
 .
 
-ogit.ServiceManagement:licenseTokenStatus
+ogit.serviceManagement:licenseTokenStatus
     a ogit.core:Attribute;
     rdfs:label "licenseTokenStatus";
     dcterms:description "The list of valid status values a license token can have";
@@ -873,7 +873,7 @@ ogit.ServiceManagement:licenseTokenStatus
         ];
 .
 
-ogit.ServiceManagement:problemStatus
+ogit.serviceManagement:problemStatus
     a ogit.core:Attribute;
     rdfs:label "problemStatus";
     dcterms:description "defines the status of a problem record";
@@ -894,7 +894,7 @@ ogit.ServiceManagement:problemStatus
         ];
 .
 
-ogit.ServiceManagement:reportedSource
+ogit.serviceManagement:reportedSource
     a ogit.core:Attribute;
     rdfs:label "reportedSource";
     dcterms:description """Can be used to define how a ticket was communicated. It could define some kind of communication channel (\"ServiceDesk\", \"Email\") or, e.g. for Incident records, it might define that the ticket was produced automatically from an event management system.""";
@@ -913,7 +913,7 @@ ogit.ServiceManagement:reportedSource
         ];
 .
 
-ogit.ServiceManagement:requirementId
+ogit.serviceManagement:requirementId
     a ogit.core:Attribute;
     rdfs:label "requirementId";
     dcterms:description "IDs of the corresponding requirements that lead to the entity creation.";
@@ -932,7 +932,7 @@ ogit.ServiceManagement:requirementId
         ];
 .
 
-ogit.ServiceManagement:resolutionCode
+ogit.serviceManagement:resolutionCode
     a ogit.core:Attribute;
     rdfs:label "resolutionCode";
     dcterms:description "Optional resolution code that may be provied during an incident or problem along with the solution description.";
@@ -951,7 +951,7 @@ ogit.ServiceManagement:resolutionCode
         ];
 .
 
-ogit.ServiceManagement:resolvedAt
+ogit.serviceManagement:resolvedAt
     a ogit.core:Attribute;
     rdfs:label "resolvedAt";
     dcterms:description """Datetime indicating when a ticket was resolved. Can be used for incident or problem tickets when it is necessary to distinguish between the ticket resolving and ticket closure (closedAt).
@@ -971,7 +971,7 @@ The values must be combined date and time with time zone designator according to
         ];
 .
 
-ogit.ServiceManagement:resolvedInTime
+ogit.serviceManagement:resolvedInTime
     a ogit.core:Attribute;
     rdfs:label "resolvedAt";
     dcterms:description "Information about a ticket being solved in the time excepted.";
@@ -990,7 +990,7 @@ ogit.ServiceManagement:resolvedInTime
         ];
 .
 
-ogit.ServiceManagement:rootCause
+ogit.serviceManagement:rootCause
     a ogit.core:Attribute;
     rdfs:label "rootCause";
     dcterms:description "Root cause for example of a problem ticket.";
@@ -1009,7 +1009,7 @@ ogit.ServiceManagement:rootCause
         ];
 .
 
-ogit.ServiceManagement:scheduledFinishAt
+ogit.serviceManagement:scheduledFinishAt
     a ogit.core:Attribute;
     rdfs:label "scheduledFinishAt";
     dcterms:description """Defines a point in time when the work on a change is planned/scheduled to be finished. This date time is usually defined during change planning and/or approval.
@@ -1029,7 +1029,7 @@ The values must be combined date and time with time zone designator according to
         ];
 .
 
-ogit.ServiceManagement:scheduledStartAt
+ogit.serviceManagement:scheduledStartAt
     a ogit.core:Attribute;
     rdfs:label "scheduledStartAt";
     dcterms:description """Defines a point in time when the work on a change is planned/scheduled to start. This date time is usually defined during change planning and/or approval. This datetime is set by change coordinater (e.g it  is planned to be done at 7:30PM)
@@ -1049,7 +1049,7 @@ The values must be combined date and time with time zone designator according to
         ];
 .
 
-ogit.ServiceManagement:slaStage
+ogit.serviceManagement:slaStage
     a ogit.core:Attribute;
     rdfs:label "slaStage";
     dcterms:description "Stage of an SLA.";
@@ -1074,7 +1074,7 @@ ogit.ServiceManagement:slaStage
         ];
 .
 
-ogit.ServiceManagement:solution
+ogit.serviceManagement:solution
     a ogit.core:Attribute;
     rdfs:label "solution";
     dcterms:description """Solution description, for example that is usually provided during incident resolving.
@@ -1094,7 +1094,7 @@ This field is also use for problem tickets. There is defines the permanent solut
         ];
 .
 
-ogit.ServiceManagement:sourceStatus
+ogit.serviceManagement:sourceStatus
     a ogit.core:Attribute;
     rdfs:label "sourceStatus";
     dcterms:description "It can be used to define application specific status values, which are not allowed by a normalized status, e.g. incidentStatus, changeStatus etc.";
@@ -1121,7 +1121,7 @@ ogit.ServiceManagement:sourceStatus
         ];
 .
 
-ogit.ServiceManagement:targetFinishAt
+ogit.serviceManagement:targetFinishAt
     a ogit.core:Attribute;
     rdfs:label "targetFinishAt";
     dcterms:description """Defines a point in time when the work on a change should be finished. This date time is defined by the requester.
@@ -1141,7 +1141,7 @@ The values must be combined date and time with time zone designator according to
         ];
 .
 
-ogit.ServiceManagement:targetStartAt
+ogit.serviceManagement:targetStartAt
     a ogit.core:Attribute;
     rdfs:label "targetStartAt";
     dcterms:description """Defines a point in time when the work on a change should start. This date time is defined by the requester.
@@ -1161,7 +1161,7 @@ The values must be combined date and time with time zone designator according to
         ];
 .
 
-ogit.ServiceManagement:task
+ogit.serviceManagement:task
     a ogit.core:Attribute;
     rdfs:label "task";
     dcterms:description "A task related to a Service Management process.";
@@ -1180,7 +1180,7 @@ ogit.ServiceManagement:task
         ];
 .
 
-ogit.ServiceManagement:taskName
+ogit.serviceManagement:taskName
     a ogit.core:Attribute;
     rdfs:label "taskName";
     dcterms:description "Contains the task name. It some cases it might be equal to taskID or to some short description (summary) of the task.";
@@ -1199,7 +1199,7 @@ ogit.ServiceManagement:taskName
         ];
 .
 
-ogit.ServiceManagement:taskStatus
+ogit.serviceManagement:taskStatus
     a ogit.core:Attribute;
     rdfs:label "taskStatus";
     dcterms:description "Defines the status of a task.";
@@ -1226,7 +1226,7 @@ ogit.ServiceManagement:taskStatus
         ];
 .
 
-ogit.ServiceManagement:testPlan
+ogit.serviceManagement:testPlan
     a ogit.core:Attribute;
     rdfs:label "testPlan";
     dcterms:description "Contains a test plan used in change management to define how a successful change implementation can be verified.";
@@ -1245,7 +1245,7 @@ ogit.ServiceManagement:testPlan
         ];
 .
 
-ogit.ServiceManagement:ticketId
+ogit.serviceManagement:ticketId
     a ogit.core:Attribute;
     rdfs:label "ticketId";
     dcterms:description "ID of the ticket in the source system, e.g. the ID of the ticket in BMC.";
@@ -1264,7 +1264,7 @@ ogit.ServiceManagement:ticketId
         ];
 .
 
-ogit.ServiceManagement:workAround
+ogit.serviceManagement:workAround
     a ogit.core:Attribute;
     rdfs:label "workAround";
     dcterms:description "Defines a work around for a known problem until a permanent solution is defined.";

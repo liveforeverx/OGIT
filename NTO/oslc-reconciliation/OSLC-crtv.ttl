@@ -1,7 +1,7 @@
 @prefix dcterms:        <http://purl.org/dc/terms/> .
 @prefix ogit:           <http://www.purl.org/ogit/> .
-@prefix ogit.OSLC-crtv: <http://www.purl.org/ogit/OSLC-crtv/> .
 @prefix ogit.core:      <http://www.purl.org/ogit/> .
+@prefix ogit.oslc-crtv: <http://www.purl.org/ogit/OSLC-crtv/> .
 @prefix owl:            <http://www.w3.org/2002/07/owl#> .
 @prefix purl:           <http://www.purl.org/> .
 @prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
@@ -10,13 +10,13 @@
 #
 # Ontology
 #
-ogit:OSLC-crtv
+ogit:oslc-crtv
     a owl:Ontology;
-    rdfs:label "OGIT oslc-reconciliation Vocabulary";
+    rdfs:label "OGIT OSLC Reconciliation";
     dcterms:creator "arago GmbH";
     dcterms:contributor "Fabian Meyer";
     vann:preferredNamespaceUri "http://www.purl.org/ogit/OSLC-crtv/";
-    vann:preferredNamespacePrefix "ogit.OSLC-crtv";
+    vann:preferredNamespacePrefix "ogit.oslc-crtv";
     owl:versionInfo "__OGIT_VERSION__";
     owl:imports purl:ogit
 .
@@ -24,7 +24,7 @@ ogit:OSLC-crtv
 #
 # Entities
 #
-ogit.OSLC-crtv:ComputerSystem
+ogit.oslc-crtv:ComputerSystem
     a ogit.core:Entity;
     rdfs:label "ComputerSystem";
     ogit.core:original <http://open-services.net/ns/crtv#ComputerSystem>;
@@ -46,7 +46,7 @@ ogit.OSLC-crtv:ComputerSystem
         ];
 .
 
-ogit.OSLC-crtv:Database
+ogit.oslc-crtv:Database
     a ogit.core:Entity;
     rdfs:label "Database";
     ogit.core:original <http://open-services.net/ns/crtv#Database>;
@@ -68,7 +68,7 @@ ogit.OSLC-crtv:Database
         ];
 .
 
-ogit.OSLC-crtv:IPAddress
+ogit.oslc-crtv:IPAddress
     a ogit.core:Entity;
     rdfs:label "IPAddress";
     ogit.core:original <http://open-services.net/ns/crtv#IPAddress>;
@@ -90,7 +90,7 @@ ogit.OSLC-crtv:IPAddress
         ];
 .
 
-ogit.OSLC-crtv:OperatingSystem
+ogit.oslc-crtv:OperatingSystem
     a ogit.core:Entity;
     rdfs:label "OperatingSystem";
     ogit.core:original <http://open-services.net/ns/crtv#OperatingSystem>;
@@ -112,7 +112,7 @@ ogit.OSLC-crtv:OperatingSystem
         ];
 .
 
-ogit.OSLC-crtv:Path
+ogit.oslc-crtv:Path
     a ogit.core:Entity;
     rdfs:label "Path";
     ogit.core:original <http://open-services.net/ns/crtv#Path>;
@@ -134,7 +134,7 @@ ogit.OSLC-crtv:Path
         ];
 .
 
-ogit.OSLC-crtv:Process
+ogit.oslc-crtv:Process
     a ogit.core:Entity;
     rdfs:label "Process";
     ogit.core:original <http://open-services.net/ns/crtv#Process>;
@@ -156,7 +156,7 @@ ogit.OSLC-crtv:Process
         ];
 .
 
-ogit.OSLC-crtv:ServerAccessPoint
+ogit.oslc-crtv:ServerAccessPoint
     a ogit.core:Entity;
     rdfs:label "ServerAccessPoint";
     ogit.core:original <http://open-services.net/ns/crtv#ServerAccessPoint>;
@@ -178,7 +178,7 @@ ogit.OSLC-crtv:ServerAccessPoint
         ];
 .
 
-ogit.OSLC-crtv:ServiceInstance
+ogit.oslc-crtv:ServiceInstance
     a ogit.core:Entity;
     rdfs:label "ServiceInstance";
     ogit.core:original <http://open-services.net/ns/crtv#ServiceInstance>;
@@ -200,7 +200,7 @@ ogit.OSLC-crtv:ServiceInstance
         ];
 .
 
-ogit.OSLC-crtv:SoftwareModule
+ogit.oslc-crtv:SoftwareModule
     a ogit.core:Entity;
     rdfs:label "SoftwareModule";
     ogit.core:original <http://open-services.net/ns/crtv#SoftwareModule>;
@@ -222,7 +222,7 @@ ogit.OSLC-crtv:SoftwareModule
         ];
 .
 
-ogit.OSLC-crtv:SoftwareServer
+ogit.oslc-crtv:SoftwareServer
     a ogit.core:Entity;
     rdfs:label "SoftwareServer";
     ogit.core:original <http://open-services.net/ns/crtv#SoftwareServer>;
@@ -244,7 +244,7 @@ ogit.OSLC-crtv:SoftwareServer
         ];
 .
 
-ogit.OSLC-crtv:StorageVolume
+ogit.oslc-crtv:StorageVolume
     a ogit.core:Entity;
     rdfs:label "StorageVolume";
     ogit.core:original <http://open-services.net/ns/crtv#StorageVolume>;
@@ -266,7 +266,7 @@ ogit.OSLC-crtv:StorageVolume
         ];
 .
 
-ogit.OSLC-crtv:Tablespace
+ogit.oslc-crtv:Tablespace
     a ogit.core:Entity;
     rdfs:label "Tablespace";
     ogit.core:original <http://open-services.net/ns/crtv#Tablespace>;
@@ -292,7 +292,7 @@ ogit.OSLC-crtv:Tablespace
 #
 # Attributes
 #
-ogit.OSLC-crtv:address
+ogit.oslc-crtv:address
     a ogit.core:Attribute;
     rdfs:label "address";
     ogit.core:original <http://open-services.net/ns/crtv#address>;
@@ -315,7 +315,7 @@ ogit.OSLC-crtv:address
         ];
 .
 
-ogit.OSLC-crtv:fileName
+ogit.oslc-crtv:fileName
     a ogit.core:Attribute;
     rdfs:label "fileName";
     ogit.core:original <http://open-services.net/ns/crtv#fileName>;
@@ -338,7 +338,7 @@ ogit.OSLC-crtv:fileName
         ];
 .
 
-ogit.OSLC-crtv:fqdn
+ogit.oslc-crtv:fqdn
     a ogit.core:Attribute;
     rdfs:label "fqdn";
     ogit.core:original <http://open-services.net/ns/crtv#fqdn>;
@@ -361,7 +361,7 @@ ogit.OSLC-crtv:fqdn
         ];
 .
 
-ogit.OSLC-crtv:hostid
+ogit.oslc-crtv:hostid
     a ogit.core:Attribute;
     rdfs:label "hostid";
     ogit.core:original <http://open-services.net/ns/crtv#hostid>;
@@ -384,7 +384,7 @@ ogit.OSLC-crtv:hostid
         ];
 .
 
-ogit.OSLC-crtv:instancePath
+ogit.oslc-crtv:instancePath
     a ogit.core:Attribute;
     rdfs:label "instancePath";
     ogit.core:original <http://open-services.net/ns/crtv#instancePath>;
@@ -407,7 +407,7 @@ ogit.OSLC-crtv:instancePath
         ];
 .
 
-ogit.OSLC-crtv:ipAddress
+ogit.oslc-crtv:ipAddress
     a ogit.core:Attribute;
     rdfs:label "ipAddress";
     ogit.core:original <http://open-services.net/ns/crtv#ipAddress>;
@@ -430,7 +430,7 @@ ogit.OSLC-crtv:ipAddress
         ];
 .
 
-ogit.OSLC-crtv:model
+ogit.oslc-crtv:model
     a ogit.core:Attribute;
     rdfs:label "model";
     ogit.core:original <http://open-services.net/ns/crtv#model>;
@@ -453,7 +453,7 @@ ogit.OSLC-crtv:model
         ];
 .
 
-ogit.OSLC-crtv:name
+ogit.oslc-crtv:name
     a ogit.core:Attribute;
     rdfs:label "name";
     ogit.core:original <http://open-services.net/ns/crtv#name>;
@@ -476,7 +476,7 @@ ogit.OSLC-crtv:name
         ];
 .
 
-ogit.OSLC-crtv:observationTime
+ogit.oslc-crtv:observationTime
     a ogit.core:Attribute;
     rdfs:label "observationTime";
     ogit.core:original <http://open-services.net/ns/crtv#observationTime>;
@@ -499,7 +499,7 @@ ogit.OSLC-crtv:observationTime
         ];
 .
 
-ogit.OSLC-crtv:occursBefore
+ogit.oslc-crtv:occursBefore
     a ogit.core:Attribute;
     rdfs:label "occursBefore";
     ogit.core:original <http://open-services.net/ns/crtv#occursBefore>;
@@ -522,7 +522,7 @@ ogit.OSLC-crtv:occursBefore
         ];
 .
 
-ogit.OSLC-crtv:portNumber
+ogit.oslc-crtv:portNumber
     a ogit.core:Attribute;
     rdfs:label "portNumber";
     ogit.core:original <http://open-services.net/ns/crtv#portNumber>;
@@ -545,7 +545,7 @@ ogit.OSLC-crtv:portNumber
         ];
 .
 
-ogit.OSLC-crtv:processId
+ogit.oslc-crtv:processId
     a ogit.core:Attribute;
     rdfs:label "processId";
     ogit.core:original <http://open-services.net/ns/crtv#processId>;
@@ -568,7 +568,7 @@ ogit.OSLC-crtv:processId
         ];
 .
 
-ogit.OSLC-crtv:serialNumber
+ogit.oslc-crtv:serialNumber
     a ogit.core:Attribute;
     rdfs:label "serialNumber";
     ogit.core:original <http://open-services.net/ns/crtv#serialNumber>;
@@ -591,7 +591,7 @@ ogit.OSLC-crtv:serialNumber
         ];
 .
 
-ogit.OSLC-crtv:shortHostName
+ogit.oslc-crtv:shortHostName
     a ogit.core:Attribute;
     rdfs:label "shortHostName";
     ogit.core:original <http://open-services.net/ns/crtv#shortHostName>;
@@ -614,7 +614,7 @@ ogit.OSLC-crtv:shortHostName
         ];
 .
 
-ogit.OSLC-crtv:systemBoardUUID
+ogit.oslc-crtv:systemBoardUUID
     a ogit.core:Attribute;
     rdfs:label "systemBoardUUID";
     ogit.core:original <http://open-services.net/ns/crtv#systemBoardUUID>;
@@ -637,7 +637,7 @@ ogit.OSLC-crtv:systemBoardUUID
         ];
 .
 
-ogit.OSLC-crtv:version
+ogit.oslc-crtv:version
     a ogit.core:Attribute;
     rdfs:label "version";
     ogit.core:original <http://open-services.net/ns/crtv#version>;
@@ -660,7 +660,7 @@ ogit.OSLC-crtv:version
         ];
 .
 
-ogit.OSLC-crtv:vmid
+ogit.oslc-crtv:vmid
     a ogit.core:Attribute;
     rdfs:label "vmid";
     ogit.core:original <http://open-services.net/ns/crtv#vmid>;
@@ -687,7 +687,7 @@ ogit.OSLC-crtv:vmid
 #
 # Verbs
 #
-ogit.OSLC-crtv:assetTag
+ogit.oslc-crtv:assetTag
     a ogit.core:Verb;
     rdfs:label "assetTag";
     ogit.core:original <http://open-services.net/ns/crtv#assetTag>;
@@ -709,7 +709,7 @@ ogit.OSLC-crtv:assetTag
         ];
 .
 
-ogit.OSLC-crtv:contextAddressSpace
+ogit.oslc-crtv:contextAddressSpace
     a ogit.core:Verb;
     rdfs:label "contextAddressSpace";
     ogit.core:original <http://open-services.net/ns/crtv#contextAddressSpace>;
@@ -731,7 +731,7 @@ ogit.OSLC-crtv:contextAddressSpace
         ];
 .
 
-ogit.OSLC-crtv:dbInstance
+ogit.oslc-crtv:dbInstance
     a ogit.core:Verb;
     rdfs:label "dbInstance";
     ogit.core:original <http://open-services.net/ns/crtv#dbInstance>;
@@ -753,7 +753,7 @@ ogit.OSLC-crtv:dbInstance
         ];
 .
 
-ogit.OSLC-crtv:dependsOn
+ogit.oslc-crtv:dependsOn
     a ogit.core:Verb;
     rdfs:label "dependsOn";
     ogit.core:original <http://open-services.net/ns/crtv#dependsOn>;
@@ -775,7 +775,7 @@ ogit.OSLC-crtv:dependsOn
         ];
 .
 
-ogit.OSLC-crtv:deployedTo
+ogit.oslc-crtv:deployedTo
     a ogit.core:Verb;
     rdfs:label "deployedTo";
     ogit.core:original <http://open-services.net/ns/crtv#deployedTo>;
@@ -797,7 +797,7 @@ ogit.OSLC-crtv:deployedTo
         ];
 .
 
-ogit.OSLC-crtv:elementFrom
+ogit.oslc-crtv:elementFrom
     a ogit.core:Verb;
     rdfs:label "elementFrom";
     ogit.core:original <http://open-services.net/ns/crtv#elementFrom>;
@@ -819,7 +819,7 @@ ogit.OSLC-crtv:elementFrom
         ];
 .
 
-ogit.OSLC-crtv:elementTo
+ogit.oslc-crtv:elementTo
     a ogit.core:Verb;
     rdfs:label "elementTo";
     ogit.core:original <http://open-services.net/ns/crtv#elementTo>;
@@ -841,7 +841,7 @@ ogit.OSLC-crtv:elementTo
         ];
 .
 
-ogit.OSLC-crtv:manufacturer
+ogit.oslc-crtv:manufacturer
     a ogit.core:Verb;
     rdfs:label "manufacturer";
     ogit.core:original <http://open-services.net/ns/crtv#manufacturer>;
@@ -863,7 +863,7 @@ ogit.OSLC-crtv:manufacturer
         ];
 .
 
-ogit.OSLC-crtv:parentServiceInstance
+ogit.oslc-crtv:parentServiceInstance
     a ogit.core:Verb;
     rdfs:label "parentServiceInstance";
     ogit.core:original <http://open-services.net/ns/crtv#parentServiceInstance>;
@@ -885,7 +885,7 @@ ogit.OSLC-crtv:parentServiceInstance
         ];
 .
 
-ogit.OSLC-crtv:runsOn
+ogit.oslc-crtv:runsOn
     a ogit.core:Verb;
     rdfs:label "runsOn";
     ogit.core:original <http://open-services.net/ns/crtv#runsOn>;
@@ -907,7 +907,7 @@ ogit.OSLC-crtv:runsOn
         ];
 .
 
-ogit.OSLC-crtv:serverAccessPoint
+ogit.oslc-crtv:serverAccessPoint
     a ogit.core:Verb;
     rdfs:label "serverAccessPoint";
     ogit.core:original <http://open-services.net/ns/crtv#serverAccessPoint>;
@@ -928,4 +928,3 @@ ogit.OSLC-crtv:serverAccessPoint
             dcterms:creator "OGIT Importer"
         ];
 .
-

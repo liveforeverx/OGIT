@@ -1,7 +1,7 @@
 @prefix dcterms:      <http://purl.org/dc/terms/> .
 @prefix ogit:         <http://www.purl.org/ogit/> .
-@prefix ogit.OSLC-qm: <http://www.purl.org/ogit/OSLC-qm/> .
 @prefix ogit.core:    <http://www.purl.org/ogit/> .
+@prefix ogit.oslc-qm: <http://www.purl.org/ogit/OSLC-qm/> .
 @prefix owl:          <http://www.w3.org/2002/07/owl#> .
 @prefix purl:         <http://www.purl.org/> .
 @prefix rdfs:         <http://www.w3.org/2000/01/rdf-schema#> .
@@ -10,13 +10,13 @@
 #
 # Ontology
 #
-ogit:OSLC-qm
+ogit:oslc-qm
     a owl:Ontology;
-    rdfs:label "OGIT oslc-qualitymanagement Vocabulary";
+    rdfs:label "OGIT OSLC Quality Management";
     dcterms:creator "arago GmbH";
     dcterms:contributor "Fabian Meyer";
     vann:preferredNamespaceUri "http://www.purl.org/ogit/OSLC-qm/";
-    vann:preferredNamespacePrefix "ogit.OSLC-qm";
+    vann:preferredNamespacePrefix "ogit.oslc-qm";
     owl:versionInfo "__OGIT_VERSION__";
     owl:imports purl:ogit
 .
@@ -24,7 +24,7 @@ ogit:OSLC-qm
 #
 # Entities
 #
-ogit.OSLC-qm:TestCase
+ogit.oslc-qm:TestCase
     a ogit.core:Entity;
     rdfs:label "TestCase";
     ogit.core:original <http://open-services.net/ns/qm#TestCase>;
@@ -46,7 +46,7 @@ ogit.OSLC-qm:TestCase
         ];
 .
 
-ogit.OSLC-qm:TestExecutionRecord
+ogit.oslc-qm:TestExecutionRecord
     a ogit.core:Entity;
     rdfs:label "TestExecutionRecord";
     ogit.core:original <http://open-services.net/ns/qm#TestExecutionRecord>;
@@ -68,7 +68,7 @@ ogit.OSLC-qm:TestExecutionRecord
         ];
 .
 
-ogit.OSLC-qm:TestPlan
+ogit.oslc-qm:TestPlan
     a ogit.core:Entity;
     rdfs:label "TestPlan";
     ogit.core:original <http://open-services.net/ns/qm#TestPlan>;
@@ -90,7 +90,7 @@ ogit.OSLC-qm:TestPlan
         ];
 .
 
-ogit.OSLC-qm:TestResult
+ogit.oslc-qm:TestResult
     a ogit.core:Entity;
     rdfs:label "TestResult";
     ogit.core:original <http://open-services.net/ns/qm#TestResult>;
@@ -112,7 +112,7 @@ ogit.OSLC-qm:TestResult
         ];
 .
 
-ogit.OSLC-qm:TestScript
+ogit.oslc-qm:TestScript
     a ogit.core:Entity;
     rdfs:label "TestScript";
     ogit.core:original <http://open-services.net/ns/qm#TestScript>;
@@ -142,7 +142,7 @@ ogit.OSLC-qm:TestScript
 #
 # Verbs
 #
-ogit.OSLC-qm:affectedByChangeRequest
+ogit.oslc-qm:affectedByChangeRequest
     a ogit.core:Verb;
     rdfs:label "affectedByChangeRequest";
     ogit.core:original <http://open-services.net/ns/qm#affectedByChangeRequest>;
@@ -164,7 +164,7 @@ ogit.OSLC-qm:affectedByChangeRequest
         ];
 .
 
-ogit.OSLC-qm:blockedByChangeRequest
+ogit.oslc-qm:blockedByChangeRequest
     a ogit.core:Verb;
     rdfs:label "blockedByChangeRequest";
     ogit.core:original <http://open-services.net/ns/qm#blockedByChangeRequest>;
@@ -186,7 +186,7 @@ ogit.OSLC-qm:blockedByChangeRequest
         ];
 .
 
-ogit.OSLC-qm:executesTestScript
+ogit.oslc-qm:executesTestScript
     a ogit.core:Verb;
     rdfs:label "executesTestScript";
     ogit.core:original <http://open-services.net/ns/qm#executesTestScript>;
@@ -208,7 +208,7 @@ ogit.OSLC-qm:executesTestScript
         ];
 .
 
-ogit.OSLC-qm:executionInstructions
+ogit.oslc-qm:executionInstructions
     a ogit.core:Verb;
     rdfs:label "executionInstructions";
     ogit.core:original <http://open-services.net/ns/qm#executionInstructions>;
@@ -230,7 +230,7 @@ ogit.OSLC-qm:executionInstructions
         ];
 .
 
-ogit.OSLC-qm:producedByTestExecutionRecord
+ogit.oslc-qm:producedByTestExecutionRecord
     a ogit.core:Verb;
     rdfs:label "producedByTestExecutionRecord";
     ogit.core:original <http://open-services.net/ns/qm#producedByTestExecutionRecord>;
@@ -252,7 +252,7 @@ ogit.OSLC-qm:producedByTestExecutionRecord
         ];
 .
 
-ogit.OSLC-qm:relatedChangeRequest
+ogit.oslc-qm:relatedChangeRequest
     a ogit.core:Verb;
     rdfs:label "relatedChangeRequest";
     ogit.core:original <http://open-services.net/ns/qm#relatedChangeRequest>;
@@ -274,7 +274,7 @@ ogit.OSLC-qm:relatedChangeRequest
         ];
 .
 
-ogit.OSLC-qm:reportsOnTestCase
+ogit.oslc-qm:reportsOnTestCase
     a ogit.core:Verb;
     rdfs:label "reportsOnTestCase";
     ogit.core:original <http://open-services.net/ns/qm#reportsOnTestCase>;
@@ -296,7 +296,7 @@ ogit.OSLC-qm:reportsOnTestCase
         ];
 .
 
-ogit.OSLC-qm:reportsOnTestPlan
+ogit.oslc-qm:reportsOnTestPlan
     a ogit.core:Verb;
     rdfs:label "reportsOnTestPlan";
     ogit.core:original <http://open-services.net/ns/qm#reportsOnTestPlan>;
@@ -318,7 +318,7 @@ ogit.OSLC-qm:reportsOnTestPlan
         ];
 .
 
-ogit.OSLC-qm:runsOnTestEnvironment
+ogit.oslc-qm:runsOnTestEnvironment
     a ogit.core:Verb;
     rdfs:label "runsOnTestEnvironment";
     ogit.core:original <http://open-services.net/ns/qm#runsOnTestEnvironment>;
@@ -340,7 +340,7 @@ ogit.OSLC-qm:runsOnTestEnvironment
         ];
 .
 
-ogit.OSLC-qm:runsTestCase
+ogit.oslc-qm:runsTestCase
     a ogit.core:Verb;
     rdfs:label "runsTestCase";
     ogit.core:original <http://open-services.net/ns/qm#runsTestCase>;
@@ -362,7 +362,7 @@ ogit.OSLC-qm:runsTestCase
         ];
 .
 
-ogit.OSLC-qm:testsChangeRequest
+ogit.oslc-qm:testsChangeRequest
     a ogit.core:Verb;
     rdfs:label "testsChangeRequest";
     ogit.core:original <http://open-services.net/ns/qm#testsChangeRequest>;
@@ -384,7 +384,7 @@ ogit.OSLC-qm:testsChangeRequest
         ];
 .
 
-ogit.OSLC-qm:usesTestCase
+ogit.oslc-qm:usesTestCase
     a ogit.core:Verb;
     rdfs:label "usesTestCase";
     ogit.core:original <http://open-services.net/ns/qm#usesTestCase>;
@@ -406,7 +406,7 @@ ogit.OSLC-qm:usesTestCase
         ];
 .
 
-ogit.OSLC-qm:usesTestScript
+ogit.oslc-qm:usesTestScript
     a ogit.core:Verb;
     rdfs:label "usesTestScript";
     ogit.core:original <http://open-services.net/ns/qm#usesTestScript>;
@@ -428,7 +428,7 @@ ogit.OSLC-qm:usesTestScript
         ];
 .
 
-ogit.OSLC-qm:validatesRequirement
+ogit.oslc-qm:validatesRequirement
     a ogit.core:Verb;
     rdfs:label "validatesRequirement";
     ogit.core:original <http://open-services.net/ns/qm#validatesRequirement>;
@@ -450,7 +450,7 @@ ogit.OSLC-qm:validatesRequirement
         ];
 .
 
-ogit.OSLC-qm:validatesRequirementCollection
+ogit.oslc-qm:validatesRequirementCollection
     a ogit.core:Verb;
     rdfs:label "validatesRequirementCollection";
     ogit.core:original <http://open-services.net/ns/qm#validatesRequirementCollection>;
@@ -471,4 +471,3 @@ ogit.OSLC-qm:validatesRequirementCollection
             dcterms:creator "OGIT Importer"
         ];
 .
-

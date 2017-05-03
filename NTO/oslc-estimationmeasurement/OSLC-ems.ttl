@@ -1,7 +1,7 @@
 @prefix dcterms:       <http://purl.org/dc/terms/> .
 @prefix ogit:          <http://www.purl.org/ogit/> .
-@prefix ogit.OSLC-ems: <http://www.purl.org/ogit/OSLC-ems/> .
 @prefix ogit.core:     <http://www.purl.org/ogit/> .
+@prefix ogit.oslc-ems: <http://www.purl.org/ogit/OSLC-ems/> .
 @prefix owl:           <http://www.w3.org/2002/07/owl#> .
 @prefix purl:          <http://www.purl.org/> .
 @prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
@@ -10,13 +10,13 @@
 #
 # Ontology
 #
-ogit:OSLC-ems
+ogit:oslc-ems
     a owl:Ontology;
-    rdfs:label "OGIT oslc-estimationmeasurement Vocabulary";
+    rdfs:label "OGIT OSLC Estimation Measurement";
     dcterms:creator "arago GmbH";
     dcterms:contributor "Fabian Meyer";
     vann:preferredNamespaceUri "http://www.purl.org/ogit/OSLC-ems/";
-    vann:preferredNamespacePrefix "ogit.OSLC-ems";
+    vann:preferredNamespacePrefix "ogit.oslc-ems";
     owl:versionInfo "__OGIT_VERSION__";
     owl:imports purl:ogit
 .
@@ -24,7 +24,7 @@ ogit:OSLC-ems
 #
 # Entities
 #
-ogit.OSLC-ems:Baseline
+ogit.oslc-ems:Baseline
     a ogit.core:Entity;
     rdfs:label "Baseline";
     ogit.core:original <http://open-services.net/ns/ems#Baseline>;
@@ -47,7 +47,7 @@ A baseline is a set of estimates, based on some scenario, that are used to track
         ];
 .
 
-ogit.OSLC-ems:BaselineList
+ogit.oslc-ems:BaselineList
     a ogit.core:Entity;
     rdfs:label "BaselineList";
     ogit.core:original <http://open-services.net/ns/ems#BaselineList>;
@@ -69,7 +69,7 @@ ogit.OSLC-ems:BaselineList
         ];
 .
 
-ogit.OSLC-ems:CdfPoint
+ogit.oslc-ems:CdfPoint
     a ogit.core:Entity;
     rdfs:label "CdfPoint";
     ogit.core:original <http://open-services.net/ns/ems#CdfPoint>;
@@ -99,7 +99,7 @@ the numeric value is equal to the cumulative probability.</p>""";
         ];
 .
 
-ogit.OSLC-ems:CumulativeDistributionFunction
+ogit.oslc-ems:CumulativeDistributionFunction
     a ogit.core:Entity;
     rdfs:label "CumulativeDistributionFunction";
     ogit.core:original <http://open-services.net/ns/ems#CumulativeDistributionFunction>;
@@ -130,7 +130,7 @@ The cumulative probability values are given by one or more
         ];
 .
 
-ogit.OSLC-ems:Dimension
+ogit.oslc-ems:Dimension
     a ogit.core:Entity;
     rdfs:label "Dimension";
     ogit.core:original <http://open-services.net/ns/ems#Dimension>;
@@ -158,7 +158,7 @@ is a dimension of effort
         ];
 .
 
-ogit.OSLC-ems:DimensionCell
+ogit.oslc-ems:DimensionCell
     a ogit.core:Entity;
     rdfs:label "DimensionCell";
     ogit.core:original <http://open-services.net/ns/ems#DimensionCell>;
@@ -185,7 +185,7 @@ and has a dimension member
         ];
 .
 
-ogit.OSLC-ems:DimensionColumn
+ogit.oslc-ems:DimensionColumn
     a ogit.core:Entity;
     rdfs:label "DimensionColumn";
     ogit.core:original <http://open-services.net/ns/ems#DimensionColumn>;
@@ -212,7 +212,7 @@ A dimension column has a dimension
         ];
 .
 
-ogit.OSLC-ems:DimensionMember
+ogit.oslc-ems:DimensionMember
     a ogit.core:Entity;
     rdfs:label "DimensionMember";
     ogit.core:original <http://open-services.net/ns/ems#DimensionMember>;
@@ -243,7 +243,7 @@ and <em>programmer</em>
         ];
 .
 
-ogit.OSLC-ems:EffortMetric
+ogit.oslc-ems:EffortMetric
     a ogit.core:Entity;
     rdfs:label "EffortMetric";
     ogit.core:original <http://open-services.net/ns/ems#EffortMetric>;
@@ -276,7 +276,7 @@ are effort metrics.""";
         ];
 .
 
-ogit.OSLC-ems:Estimate
+ogit.oslc-ems:Estimate
     a ogit.core:Entity;
     rdfs:label "Estimate";
     ogit.core:original <http://open-services.net/ns/ems#Estimate>;
@@ -298,7 +298,7 @@ ogit.OSLC-ems:Estimate
         ];
 .
 
-ogit.OSLC-ems:EstimateList
+ogit.oslc-ems:EstimateList
     a ogit.core:Entity;
     rdfs:label "EstimateList";
     ogit.core:original <http://open-services.net/ns/ems#EstimateList>;
@@ -320,7 +320,7 @@ ogit.OSLC-ems:EstimateList
         ];
 .
 
-ogit.OSLC-ems:Fact
+ogit.oslc-ems:Fact
     a ogit.core:Entity;
     rdfs:label "Fact";
     ogit.core:original <http://open-services.net/ns/ems#Fact>;
@@ -350,7 +350,7 @@ These MUST match the description of the columns given in the head of the fact ta
         ];
 .
 
-ogit.OSLC-ems:FactDistribution
+ogit.oslc-ems:FactDistribution
     a ogit.core:Entity;
     rdfs:label "FactDistribution";
     ogit.core:original <http://open-services.net/ns/ems#FactDistribution>;
@@ -377,7 +377,7 @@ It contains one or more dimension cells
         ];
 .
 
-ogit.OSLC-ems:FactDistributionTable
+ogit.oslc-ems:FactDistributionTable
     a ogit.core:Entity;
     rdfs:label "FactDistributionTable";
     ogit.core:original <http://open-services.net/ns/ems#FactDistributionTable>;
@@ -411,7 +411,7 @@ except that it has <em>fact distribution</em> rows
         ];
 .
 
-ogit.OSLC-ems:FactTable
+ogit.oslc-ems:FactTable
     a ogit.core:Entity;
     rdfs:label "FactTable";
     ogit.core:original <http://open-services.net/ns/ems#FactTable>;
@@ -455,7 +455,7 @@ or contain both a link to the source and a copy of the actual measurements obtai
         ];
 .
 
-ogit.OSLC-ems:FinancialMetric
+ogit.oslc-ems:FinancialMetric
     a ogit.core:Entity;
     rdfs:label "FinancialMetric";
     ogit.core:original <http://open-services.net/ns/ems#FinancialMetric>;
@@ -484,7 +484,7 @@ are financial metrics.""";
         ];
 .
 
-ogit.OSLC-ems:Format
+ogit.oslc-ems:Format
     a ogit.core:Entity;
     rdfs:label "Format";
     ogit.core:original <http://open-services.net/ns/ems#Format>;
@@ -507,7 +507,7 @@ A <em>format</em> is a specification of the syntax of an artifact.""";
         ];
 .
 
-ogit.OSLC-ems:Grain
+ogit.oslc-ems:Grain
     a ogit.core:Entity;
     rdfs:label "Grain";
     ogit.core:original <http://open-services.net/ns/ems#Grain>;
@@ -535,7 +535,7 @@ For example, <em>month</em>
         ];
 .
 
-ogit.OSLC-ems:Head
+ogit.oslc-ems:Head
     a ogit.core:Entity;
     rdfs:label "Head";
     ogit.core:original <http://open-services.net/ns/ems#Head>;
@@ -564,7 +564,7 @@ record how these custom values are mapped to the standard values.""";
         ];
 .
 
-ogit.OSLC-ems:Map
+ogit.oslc-ems:Map
     a ogit.core:Entity;
     rdfs:label "Map";
     ogit.core:original <http://open-services.net/ns/ems#Map>;
@@ -596,7 +596,7 @@ exactly one standard dimension value.</p>""";
         ];
 .
 
-ogit.OSLC-ems:Mapping
+ogit.oslc-ems:Mapping
     a ogit.core:Entity;
     rdfs:label "Mapping";
     ogit.core:original <http://open-services.net/ns/ems#Mapping>;
@@ -623,7 +623,7 @@ value defined in some vocabulary.
         ];
 .
 
-ogit.OSLC-ems:Measure
+ogit.oslc-ems:Measure
     a ogit.core:Entity;
     rdfs:label "Measure";
     ogit.core:original <http://open-services.net/ns/ems#Measure>;
@@ -654,7 +654,7 @@ The numeric value of an observation, e.g. 12 or 10, is given by the property
         ];
 .
 
-ogit.OSLC-ems:MeasureCell
+ogit.oslc-ems:MeasureCell
     a ogit.core:Entity;
     rdfs:label "MeasureCell";
     ogit.core:original <http://open-services.net/ns/ems#MeasureCell>;
@@ -681,7 +681,7 @@ and has a numeric value
         ];
 .
 
-ogit.OSLC-ems:MeasureColumn
+ogit.oslc-ems:MeasureColumn
     a ogit.core:Entity;
     rdfs:label "MeasureColumn";
     ogit.core:original <http://open-services.net/ns/ems#MeasureColumn>;
@@ -708,7 +708,7 @@ and a unit of measure
         ];
 .
 
-ogit.OSLC-ems:MeasureDistribution
+ogit.oslc-ems:MeasureDistribution
     a ogit.core:Entity;
     rdfs:label "MeasureDistribution";
     ogit.core:original <http://open-services.net/ns/ems#MeasureDistribution>;
@@ -739,7 +739,7 @@ estimate predications
         ];
 .
 
-ogit.OSLC-ems:MeasureDistributionCell
+ogit.oslc-ems:MeasureDistributionCell
     a ogit.core:Entity;
     rdfs:label "MeasureDistributionCell";
     ogit.core:original <http://open-services.net/ns/ems#MeasureDistributionCell>;
@@ -765,7 +765,7 @@ It refers to its column
         ];
 .
 
-ogit.OSLC-ems:Measurement
+ogit.oslc-ems:Measurement
     a ogit.core:Entity;
     rdfs:label "Measurement";
     ogit.core:original <http://open-services.net/ns/ems#Measurement>;
@@ -787,7 +787,7 @@ ogit.OSLC-ems:Measurement
         ];
 .
 
-ogit.OSLC-ems:MeasurementList
+ogit.oslc-ems:MeasurementList
     a ogit.core:Entity;
     rdfs:label "MeasurementList";
     ogit.core:original <http://open-services.net/ns/ems#MeasurementList>;
@@ -809,7 +809,7 @@ ogit.OSLC-ems:MeasurementList
         ];
 .
 
-ogit.OSLC-ems:Metric
+ogit.oslc-ems:Metric
     a ogit.core:Entity;
     rdfs:label "Metric";
     ogit.core:original <http://open-services.net/ns/ems#Metric>;
@@ -833,7 +833,7 @@ For example <em>duration</em> is a metric that measures the amount of time an ac
         ];
 .
 
-ogit.OSLC-ems:NormalDistribution
+ogit.oslc-ems:NormalDistribution
     a ogit.core:Entity;
     rdfs:label "NormalDistribution";
     ogit.core:original <http://open-services.net/ns/ems#NormalDistribution>;
@@ -861,7 +861,7 @@ Its scale (also known as its standard deviation) is given by
         ];
 .
 
-ogit.OSLC-ems:PointEstimate
+ogit.oslc-ems:PointEstimate
     a ogit.core:Entity;
     rdfs:label "PointEstimate";
     ogit.core:original <http://open-services.net/ns/ems#PointEstimate>;
@@ -885,7 +885,7 @@ The single value is given by <a href=\"#numericValue\"><code>ems:numericValue</c
         ];
 .
 
-ogit.OSLC-ems:PoissonDistribution
+ogit.oslc-ems:PoissonDistribution
     a ogit.core:Entity;
     rdfs:label "PoissonDistribution";
     ogit.core:original <http://open-services.net/ns/ems#PoissonDistribution>;
@@ -912,7 +912,7 @@ Lambda is given by <a href=\"#lambda\"><code>ems:lambda</code>.""";
         ];
 .
 
-ogit.OSLC-ems:ProbabilityDistribution
+ogit.oslc-ems:ProbabilityDistribution
     a ogit.core:Entity;
     rdfs:label "ProbabilityDistribution";
     ogit.core:original <http://open-services.net/ns/ems#ProbabilityDistribution>;
@@ -941,7 +941,7 @@ Probability distributions are used in scenario assumptions
         ];
 .
 
-ogit.OSLC-ems:ProcessMetric
+ogit.oslc-ems:ProcessMetric
     a ogit.core:Entity;
     rdfs:label "ProcessMetric";
     ogit.core:original <http://open-services.net/ns/ems#ProcessMetric>;
@@ -970,7 +970,7 @@ are process metrics.""";
         ];
 .
 
-ogit.OSLC-ems:ProductivityMetric
+ogit.oslc-ems:ProductivityMetric
     a ogit.core:Entity;
     rdfs:label "ProductivityMetric";
     ogit.core:original <http://open-services.net/ns/ems#ProductivityMetric>;
@@ -999,7 +999,7 @@ are productivity metrics.""";
         ];
 .
 
-ogit.OSLC-ems:Project
+ogit.oslc-ems:Project
     a ogit.core:Entity;
     rdfs:label "Project";
     ogit.core:original <http://open-services.net/ns/ems#Project>;
@@ -1022,7 +1022,7 @@ In practice, a project is often a time-bounded work effort that produces a uniqu
         ];
 .
 
-ogit.OSLC-ems:ProjectList
+ogit.oslc-ems:ProjectList
     a ogit.core:Entity;
     rdfs:label "ProjectList";
     ogit.core:original <http://open-services.net/ns/ems#ProjectList>;
@@ -1044,7 +1044,7 @@ ogit.OSLC-ems:ProjectList
         ];
 .
 
-ogit.OSLC-ems:Quantile
+ogit.oslc-ems:Quantile
     a ogit.core:Entity;
     rdfs:label "Quantile";
     ogit.core:original <http://open-services.net/ns/ems#Quantile>;
@@ -1076,7 +1076,7 @@ the numeric value is equal to the cumulative probability.</p>""";
         ];
 .
 
-ogit.OSLC-ems:QuantileFunction
+ogit.oslc-ems:QuantileFunction
     a ogit.core:Entity;
     rdfs:label "QuantileDistribution";
     ogit.core:original <http://open-services.net/ns/ems#QuantileFunction>;
@@ -1114,7 +1114,7 @@ The cumulative probability values are given by one or more
         ];
 .
 
-ogit.OSLC-ems:ReliabilityMetric
+ogit.oslc-ems:ReliabilityMetric
     a ogit.core:Entity;
     rdfs:label "ReliabilityMetric";
     ogit.core:original <http://open-services.net/ns/ems#ReliabilityMetric>;
@@ -1145,7 +1145,7 @@ are reliability metrics.""";
         ];
 .
 
-ogit.OSLC-ems:Scenario
+ogit.oslc-ems:Scenario
     a ogit.core:Entity;
     rdfs:label "Scenario";
     ogit.core:original <http://open-services.net/ns/ems#Scenario>;
@@ -1169,7 +1169,7 @@ These assumptions are used as inputs to estimates.""";
         ];
 .
 
-ogit.OSLC-ems:ScenarioList
+ogit.oslc-ems:ScenarioList
     a ogit.core:Entity;
     rdfs:label "ScenarioList";
     ogit.core:original <http://open-services.net/ns/ems#ScenarioList>;
@@ -1191,7 +1191,7 @@ ogit.OSLC-ems:ScenarioList
         ];
 .
 
-ogit.OSLC-ems:Service
+ogit.oslc-ems:Service
     a ogit.core:Entity;
     rdfs:label "Service";
     ogit.core:original <http://open-services.net/ns/ems#Service>;
@@ -1215,7 +1215,7 @@ Each instance of an service has a set of resource containers that contain resour
         ];
 .
 
-ogit.OSLC-ems:SizeMetric
+ogit.oslc-ems:SizeMetric
     a ogit.core:Entity;
     rdfs:label "SizeMetric";
     ogit.core:original <http://open-services.net/ns/ems#SizeMetric>;
@@ -1244,7 +1244,7 @@ are size metrics.""";
         ];
 .
 
-ogit.OSLC-ems:TimeMetric
+ogit.oslc-ems:TimeMetric
     a ogit.core:Entity;
     rdfs:label "TimeMetric";
     ogit.core:original <http://open-services.net/ns/ems#TimeMetric>;
@@ -1271,7 +1271,7 @@ For example,
         ];
 .
 
-ogit.OSLC-ems:TriangularDistribution
+ogit.oslc-ems:TriangularDistribution
     a ogit.core:Entity;
     rdfs:label "TriangularDistribution";
     ogit.core:original <http://open-services.net/ns/ems#TriangularDistribution>;
@@ -1299,7 +1299,7 @@ The high value is given by <a href=\"#high\"><code>ems:high</code></a>.""";
         ];
 .
 
-ogit.OSLC-ems:UniformDistribution
+ogit.oslc-ems:UniformDistribution
     a ogit.core:Entity;
     rdfs:label "UniformDistribution";
     ogit.core:original <http://open-services.net/ns/ems#UniformDistribution>;
@@ -1325,7 +1325,7 @@ The low value is given by <a href=\"#low\"><code>ems:low</code></a>.""";
         ];
 .
 
-ogit.OSLC-ems:UnitOfMeasure
+ogit.oslc-ems:UnitOfMeasure
     a ogit.core:Entity;
     rdfs:label "UnitOfMeasure";
     ogit.core:original <http://open-services.net/ns/ems#UnitOfMeasure>;
@@ -1352,7 +1352,7 @@ is a unit of measure for <em>duration</em>
         ];
 .
 
-ogit.OSLC-ems:WbsFormat
+ogit.oslc-ems:WbsFormat
     a ogit.core:Entity;
     rdfs:label "WbsFormat";
     ogit.core:original <http://open-services.net/ns/ems#WbsFormat>;
@@ -1379,7 +1379,7 @@ Microsoft Office Project 2007 XML Data Interchange Schema.""";
         ];
 .
 
-ogit.OSLC-ems:WorkBreakdownStructure
+ogit.oslc-ems:WorkBreakdownStructure
     a ogit.core:Entity;
     rdfs:label "WorkBreakdownStructure";
     ogit.core:original <http://open-services.net/ns/ems#WorkBreakdownStructure>;
@@ -1414,7 +1414,7 @@ The included or linked WBS content MUST be in the specified format.</p>""";
 #
 # Attributes
 #
-ogit.OSLC-ems:from
+ogit.oslc-ems:from
     a ogit.core:Attribute;
     rdfs:label "from";
     ogit.core:original <http://open-services.net/ns/ems#from>;
@@ -1439,7 +1439,7 @@ The value MUST be unique within its enclosing map resource.""";
         ];
 .
 
-ogit.OSLC-ems:high
+ogit.oslc-ems:high
     a ogit.core:Attribute;
     rdfs:label "high";
     ogit.core:original <http://open-services.net/ns/ems#high>;
@@ -1463,7 +1463,7 @@ This property gives the <em>high</em> parameter value of a probability distribut
         ];
 .
 
-ogit.OSLC-ems:isActive
+ogit.oslc-ems:isActive
     a ogit.core:Attribute;
     rdfs:label "isActive";
     ogit.core:original <http://open-services.net/ns/ems#isActive>;
@@ -1488,7 +1488,7 @@ When a scenario has been ruled out, it is marked as inactive by setting this pro
         ];
 .
 
-ogit.OSLC-ems:isClosed
+ogit.oslc-ems:isClosed
     a ogit.core:Attribute;
     rdfs:label "isClosed";
     ogit.core:original <http://open-services.net/ns/ems#isClosed>;
@@ -1515,7 +1515,7 @@ it is marked as closed by setting this property to <code>true</code>.""";
         ];
 .
 
-ogit.OSLC-ems:lambda
+ogit.oslc-ems:lambda
     a ogit.core:Attribute;
     rdfs:label "lambda";
     ogit.core:original <http://open-services.net/ns/ems#lambda>;
@@ -1539,7 +1539,7 @@ This property gives the <em>lambda</em> parameter value of a Poission distributi
         ];
 .
 
-ogit.OSLC-ems:low
+ogit.oslc-ems:low
     a ogit.core:Attribute;
     rdfs:label "low";
     ogit.core:original <http://open-services.net/ns/ems#low>;
@@ -1563,7 +1563,7 @@ This property gives the <em>low</em> parameter value of a probability distributi
         ];
 .
 
-ogit.OSLC-ems:mostLikely
+ogit.oslc-ems:mostLikely
     a ogit.core:Attribute;
     rdfs:label "mostLikely";
     ogit.core:original <http://open-services.net/ns/ems#mostLikely>;
@@ -1587,7 +1587,7 @@ This property gives the <em>most likely</em> parameter value of a probability di
         ];
 .
 
-ogit.OSLC-ems:mu
+ogit.oslc-ems:mu
     a ogit.core:Attribute;
     rdfs:label "mu";
     ogit.core:original <http://open-services.net/ns/ems#mu>;
@@ -1611,7 +1611,7 @@ This property gives the <em>mu</em> parameter value of a probability distributio
         ];
 .
 
-ogit.OSLC-ems:numberOfQuantiles
+ogit.oslc-ems:numberOfQuantiles
     a ogit.core:Attribute;
     rdfs:label "numberOfQuantiles";
     ogit.core:original <http://open-services.net/ns/ems#numberOfQuantiles>;
@@ -1635,7 +1635,7 @@ This property gives the <em>number of quantiles</em> parameter value of a probab
         ];
 .
 
-ogit.OSLC-ems:numericValue
+ogit.oslc-ems:numericValue
     a ogit.core:Attribute;
     rdfs:label "numericValue";
     ogit.core:original <http://open-services.net/ns/ems#numericValue>;
@@ -1660,7 +1660,7 @@ The datatype of this property is typically <code>xsd:double</code>.""";
         ];
 .
 
-ogit.OSLC-ems:probability
+ogit.oslc-ems:probability
     a ogit.core:Attribute;
     rdfs:label "probability";
     ogit.core:original <http://open-services.net/ns/ems#probability>;
@@ -1685,7 +1685,7 @@ For example, the cumulative probability of the third quartile is 75%.""";
         ];
 .
 
-ogit.OSLC-ems:realProjectId
+ogit.oslc-ems:realProjectId
     a ogit.core:Attribute;
     rdfs:label "realProjectId";
     ogit.core:original <http://open-services.net/ns/ems#realProjectId>;
@@ -1708,7 +1708,7 @@ ogit.OSLC-ems:realProjectId
         ];
 .
 
-ogit.OSLC-ems:scale
+ogit.oslc-ems:scale
     a ogit.core:Attribute;
     rdfs:label "scale";
     ogit.core:original <http://open-services.net/ns/ems#scale>;
@@ -1738,7 +1738,7 @@ the Greek letter sigma.""";
 #
 # Verbs
 #
-ogit.OSLC-ems:assumes
+ogit.oslc-ems:assumes
     a ogit.core:Verb;
     rdfs:label "assumes";
     ogit.core:original <http://open-services.net/ns/ems#assumes>;
@@ -1762,12 +1762,12 @@ The assumed value is a probability distribution.""";
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:Scenario;
-            ogit.core:to ogit.OSLC-ems:MeasureDistribution
+            ogit.core:from ogit.oslc-ems:Scenario;
+            ogit.core:to ogit.oslc-ems:MeasureDistribution
         ];
 .
 
-ogit.OSLC-ems:assumesTable
+ogit.oslc-ems:assumesTable
     a ogit.core:Verb;
     rdfs:label "assumesTable";
     ogit.core:original <http://open-services.net/ns/ems#assumesTable>;
@@ -1791,12 +1791,12 @@ The assumed fact table contains probability distributions.""";
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:Scenario;
-            ogit.core:to ogit.OSLC-ems:FactDistributionTable
+            ogit.core:from ogit.oslc-ems:Scenario;
+            ogit.core:to ogit.oslc-ems:FactDistributionTable
         ];
 .
 
-ogit.OSLC-ems:assumesWbs
+ogit.oslc-ems:assumesWbs
     a ogit.core:Verb;
     rdfs:label "assumesWbs";
     ogit.core:original <http://open-services.net/ns/ems#assumesWbs>;
@@ -1819,12 +1819,12 @@ This property links a scenario to the assumed work breakdown structure.""";
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:Scenario;
-            ogit.core:to ogit.OSLC-ems:WorkBreakdownStructure
+            ogit.core:from ogit.oslc-ems:Scenario;
+            ogit.core:to ogit.oslc-ems:WorkBreakdownStructure
         ];
 .
 
-ogit.OSLC-ems:baselineList
+ogit.oslc-ems:baselineList
     a ogit.core:Verb;
     rdfs:label "baselineList";
     ogit.core:original <http://open-services.net/ns/ems#baselineList>;
@@ -1846,12 +1846,12 @@ ogit.OSLC-ems:baselineList
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:Service;
-            ogit.core:to ogit.OSLC-ems:BaselineList
+            ogit.core:from ogit.oslc-ems:Service;
+            ogit.core:to ogit.oslc-ems:BaselineList
         ];
 .
 
-ogit.OSLC-ems:cdfPoint
+ogit.oslc-ems:cdfPoint
     a ogit.core:Verb;
     rdfs:label "cdfPoint";
     ogit.core:original <http://open-services.net/ns/ems#cdfPoint>;
@@ -1874,12 +1874,12 @@ This property links a cumulative probability function resource to one or more po
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:CumulativeDistributionFunction;
-            ogit.core:to ogit.OSLC-ems:CdfPoint
+            ogit.core:from ogit.oslc-ems:CumulativeDistributionFunction;
+            ogit.core:to ogit.oslc-ems:CdfPoint
         ];
 .
 
-ogit.OSLC-ems:currentBaseline
+ogit.oslc-ems:currentBaseline
     a ogit.core:Verb;
     rdfs:label "currentBaseline";
     ogit.core:original <http://open-services.net/ns/ems#currentBaseline>;
@@ -1901,12 +1901,12 @@ ogit.OSLC-ems:currentBaseline
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:Project;
-            ogit.core:to ogit.OSLC-ems:Baseline
+            ogit.core:from ogit.oslc-ems:Project;
+            ogit.core:to ogit.oslc-ems:Baseline
         ];
 .
 
-ogit.OSLC-ems:dimension
+ogit.oslc-ems:dimension
     a ogit.core:Verb;
     rdfs:label "dimension";
     ogit.core:original <http://open-services.net/ns/ems#dimension>;
@@ -1929,7 +1929,7 @@ This property links a resource to a dimension.""";
         ];
 .
 
-ogit.OSLC-ems:dimensionCell
+ogit.oslc-ems:dimensionCell
     a ogit.core:Verb;
     rdfs:label "dimensionCell";
     ogit.core:original <http://open-services.net/ns/ems#dimensionCell>;
@@ -1952,7 +1952,7 @@ This property links a fact row to one or more of its dimension cells.""";
         ];
 .
 
-ogit.OSLC-ems:dimensionColumn
+ogit.oslc-ems:dimensionColumn
     a ogit.core:Verb;
     rdfs:label "dimensionColumn";
     ogit.core:original <http://open-services.net/ns/ems#dimensionColumn>;
@@ -1978,7 +1978,7 @@ Every fact table MUST have at least one dimension column.""";
         ];
 .
 
-ogit.OSLC-ems:dimensionMember
+ogit.oslc-ems:dimensionMember
     a ogit.core:Verb;
     rdfs:label "dimensionMember";
     ogit.core:original <http://open-services.net/ns/ems#dimensionMember>;
@@ -2001,7 +2001,7 @@ This property links a dimension cell to its dimension member.""";
         ];
 .
 
-ogit.OSLC-ems:distribution
+ogit.oslc-ems:distribution
     a ogit.core:Verb;
     rdfs:label "distribution";
     ogit.core:original <http://open-services.net/ns/ems#distribution>;
@@ -2025,7 +2025,7 @@ to a probability distribution.""";
         ];
 .
 
-ogit.OSLC-ems:estimate
+ogit.oslc-ems:estimate
     a ogit.core:Verb;
     rdfs:label "estimate";
     ogit.core:original <http://open-services.net/ns/ems#estimate>;
@@ -2047,7 +2047,7 @@ ogit.OSLC-ems:estimate
         ];
 .
 
-ogit.OSLC-ems:estimateList
+ogit.oslc-ems:estimateList
     a ogit.core:Verb;
     rdfs:label "estimateList";
     ogit.core:original <http://open-services.net/ns/ems#estimateList>;
@@ -2069,12 +2069,12 @@ ogit.OSLC-ems:estimateList
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:Service;
-            ogit.core:to ogit.OSLC-ems:EstimateList
+            ogit.core:from ogit.oslc-ems:Service;
+            ogit.core:to ogit.oslc-ems:EstimateList
         ];
 .
 
-ogit.OSLC-ems:extendsScenario
+ogit.oslc-ems:extendsScenario
     a ogit.core:Verb;
     rdfs:label "extendsScenario";
     ogit.core:original <http://open-services.net/ns/ems#extendsScenario>;
@@ -2098,12 +2098,12 @@ The base scenario contains assumptions that can be included in several other ext
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:Scenario;
-            ogit.core:to ogit.OSLC-ems:Scenario
+            ogit.core:from ogit.oslc-ems:Scenario;
+            ogit.core:to ogit.oslc-ems:Scenario
         ];
 .
 
-ogit.OSLC-ems:fact
+ogit.oslc-ems:fact
     a ogit.core:Verb;
     rdfs:label "fact";
     ogit.core:original <http://open-services.net/ns/ems#fact>;
@@ -2131,7 +2131,7 @@ an HTTP GET request of the URL of the remote table source.""";
         ];
 .
 
-ogit.OSLC-ems:grain
+ogit.oslc-ems:grain
     a ogit.core:Verb;
     rdfs:label "grain";
     ogit.core:original <http://open-services.net/ns/ems#grain>;
@@ -2154,7 +2154,7 @@ This property links a resource to a grain.""";
         ];
 .
 
-ogit.OSLC-ems:head
+ogit.oslc-ems:head
     a ogit.core:Verb;
     rdfs:label "head";
     ogit.core:original <http://open-services.net/ns/ems#head>;
@@ -2179,7 +2179,7 @@ describes the columns of the table.""";
         ];
 .
 
-ogit.OSLC-ems:inColumn
+ogit.oslc-ems:inColumn
     a ogit.core:Verb;
     rdfs:label "inColumn";
     ogit.core:original <http://open-services.net/ns/ems#inColumn>;
@@ -2210,7 +2210,7 @@ are linked to measure columns
         ];
 .
 
-ogit.OSLC-ems:map
+ogit.oslc-ems:map
     a ogit.core:Verb;
     rdfs:label "map";
     ogit.core:original <http://open-services.net/ns/ems#map>;
@@ -2236,7 +2236,7 @@ The scope of this mapping is local to the fact table.""";
         ];
 .
 
-ogit.OSLC-ems:mapping
+ogit.oslc-ems:mapping
     a ogit.core:Verb;
     rdfs:label "mapping";
     ogit.core:original <http://open-services.net/ns/ems#mapping>;
@@ -2260,12 +2260,12 @@ A map may have one or more mappings.""";
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:Map;
-            ogit.core:to ogit.OSLC-ems:Mapping
+            ogit.core:from ogit.oslc-ems:Map;
+            ogit.core:to ogit.oslc-ems:Mapping
         ];
 .
 
-ogit.OSLC-ems:measureCell
+ogit.oslc-ems:measureCell
     a ogit.core:Verb;
     rdfs:label "measureCell";
     ogit.core:original <http://open-services.net/ns/ems#measureCell>;
@@ -2288,7 +2288,7 @@ This property links a fact row to one or more of its measure cells.""";
         ];
 .
 
-ogit.OSLC-ems:measureColumn
+ogit.oslc-ems:measureColumn
     a ogit.core:Verb;
     rdfs:label "measureColumn";
     ogit.core:original <http://open-services.net/ns/ems#measureColumn>;
@@ -2313,7 +2313,7 @@ Every fact table MUST have at least one measure column.""";
         ];
 .
 
-ogit.OSLC-ems:measureDistributionCell
+ogit.oslc-ems:measureDistributionCell
     a ogit.core:Verb;
     rdfs:label "measureDistributionCell";
     ogit.core:original <http://open-services.net/ns/ems#measureDistributionCell>;
@@ -2336,7 +2336,7 @@ This property links a fact distribution row to a measure distribution cell.""";
         ];
 .
 
-ogit.OSLC-ems:measurementList
+ogit.oslc-ems:measurementList
     a ogit.core:Verb;
     rdfs:label "measurementList";
     ogit.core:original <http://open-services.net/ns/ems#measurementList>;
@@ -2358,12 +2358,12 @@ ogit.OSLC-ems:measurementList
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:Service;
-            ogit.core:to ogit.OSLC-ems:MeasurementList
+            ogit.core:from ogit.oslc-ems:Service;
+            ogit.core:to ogit.oslc-ems:MeasurementList
         ];
 .
 
-ogit.OSLC-ems:memberBaseline
+ogit.oslc-ems:memberBaseline
     a ogit.core:Verb;
     rdfs:label "memberBaseline";
     ogit.core:original <http://open-services.net/ns/ems#memberBaseline>;
@@ -2385,12 +2385,12 @@ ogit.OSLC-ems:memberBaseline
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:BaselineList;
-            ogit.core:to ogit.OSLC-ems:Baseline
+            ogit.core:from ogit.oslc-ems:BaselineList;
+            ogit.core:to ogit.oslc-ems:Baseline
         ];
 .
 
-ogit.OSLC-ems:memberEstimate
+ogit.oslc-ems:memberEstimate
     a ogit.core:Verb;
     rdfs:label "memberEstimate";
     ogit.core:original <http://open-services.net/ns/ems#memberEstimate>;
@@ -2412,7 +2412,7 @@ ogit.OSLC-ems:memberEstimate
         ];
 .
 
-ogit.OSLC-ems:memberMeasurement
+ogit.oslc-ems:memberMeasurement
     a ogit.core:Verb;
     rdfs:label "memberMeasurement";
     ogit.core:original <http://open-services.net/ns/ems#memberMeasurement>;
@@ -2434,12 +2434,12 @@ ogit.OSLC-ems:memberMeasurement
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:MeasurementList;
-            ogit.core:to ogit.OSLC-ems:Measurement
+            ogit.core:from ogit.oslc-ems:MeasurementList;
+            ogit.core:to ogit.oslc-ems:Measurement
         ];
 .
 
-ogit.OSLC-ems:memberProject
+ogit.oslc-ems:memberProject
     a ogit.core:Verb;
     rdfs:label "memberProject";
     ogit.core:original <http://open-services.net/ns/ems#memberProject>;
@@ -2461,12 +2461,12 @@ ogit.OSLC-ems:memberProject
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:ProjectList;
-            ogit.core:to ogit.OSLC-ems:Project
+            ogit.core:from ogit.oslc-ems:ProjectList;
+            ogit.core:to ogit.oslc-ems:Project
         ];
 .
 
-ogit.OSLC-ems:memberScenario
+ogit.oslc-ems:memberScenario
     a ogit.core:Verb;
     rdfs:label "memberScenario";
     ogit.core:original <http://open-services.net/ns/ems#memberScenario>;
@@ -2488,12 +2488,12 @@ ogit.OSLC-ems:memberScenario
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:ScenarioList;
-            ogit.core:to ogit.OSLC-ems:Scenario
+            ogit.core:from ogit.oslc-ems:ScenarioList;
+            ogit.core:to ogit.oslc-ems:Scenario
         ];
 .
 
-ogit.OSLC-ems:metric
+ogit.oslc-ems:metric
     a ogit.core:Verb;
     rdfs:label "metric";
     ogit.core:original <http://open-services.net/ns/ems#metric>;
@@ -2517,7 +2517,7 @@ For example, the measure <em>duration of 12 months</em> has the metric <em>durat
         ];
 .
 
-ogit.OSLC-ems:observes
+ogit.oslc-ems:observes
     a ogit.core:Verb;
     rdfs:label "observes";
     ogit.core:original <http://open-services.net/ns/ems#observes>;
@@ -2544,7 +2544,7 @@ For example, a measurement at the end of a project may observe a <em>duration of
         ];
 .
 
-ogit.OSLC-ems:observesTable
+ogit.oslc-ems:observesTable
     a ogit.core:Verb;
     rdfs:label "observesTable";
     ogit.core:original <http://open-services.net/ns/ems#observesTable>;
@@ -2568,7 +2568,7 @@ The fact table analyzes the measurement along one or more dimensions.""";
         ];
 .
 
-ogit.OSLC-ems:observesWbs
+ogit.oslc-ems:observesWbs
     a ogit.core:Verb;
     rdfs:label "observesWbs";
     ogit.core:original <http://open-services.net/ns/ems#observesWbs>;
@@ -2591,7 +2591,7 @@ This property links a measurement to the observed work breakdown structure.""";
         ];
 .
 
-ogit.OSLC-ems:predicts
+ogit.oslc-ems:predicts
     a ogit.core:Verb;
     rdfs:label "predicts";
     ogit.core:original <http://open-services.net/ns/ems#predicts>;
@@ -2615,12 +2615,12 @@ The predicted value is a probability distribution.""";
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:Estimate;
-            ogit.core:to ogit.OSLC-ems:MeasureDistribution
+            ogit.core:from ogit.oslc-ems:Estimate;
+            ogit.core:to ogit.oslc-ems:MeasureDistribution
         ];
 .
 
-ogit.OSLC-ems:predictsTable
+ogit.oslc-ems:predictsTable
     a ogit.core:Verb;
     rdfs:label "predictsTable";
     ogit.core:original <http://open-services.net/ns/ems#predictsTable>;
@@ -2644,12 +2644,12 @@ The predicted fact table contains probability distributions.""";
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:Estimate;
-            ogit.core:to ogit.OSLC-ems:FactDistributionTable
+            ogit.core:from ogit.oslc-ems:Estimate;
+            ogit.core:to ogit.oslc-ems:FactDistributionTable
         ];
 .
 
-ogit.OSLC-ems:predictsWbs
+ogit.oslc-ems:predictsWbs
     a ogit.core:Verb;
     rdfs:label "predictsWbs";
     ogit.core:original <http://open-services.net/ns/ems#predictsWbs>;
@@ -2672,12 +2672,12 @@ This property links an estimate to the predicted work breakdown structure.""";
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:Estimate;
-            ogit.core:to ogit.OSLC-ems:WorkBreakdownStructure
+            ogit.core:from ogit.oslc-ems:Estimate;
+            ogit.core:to ogit.oslc-ems:WorkBreakdownStructure
         ];
 .
 
-ogit.OSLC-ems:project
+ogit.oslc-ems:project
     a ogit.core:Verb;
     rdfs:label "project";
     ogit.core:original <http://open-services.net/ns/ems#project>;
@@ -2699,7 +2699,7 @@ ogit.OSLC-ems:project
         ];
 .
 
-ogit.OSLC-ems:projectList
+ogit.oslc-ems:projectList
     a ogit.core:Verb;
     rdfs:label "projectList";
     ogit.core:original <http://open-services.net/ns/ems#projectList>;
@@ -2721,12 +2721,12 @@ ogit.OSLC-ems:projectList
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:Service;
-            ogit.core:to ogit.OSLC-ems:ProjectList
+            ogit.core:from ogit.oslc-ems:Service;
+            ogit.core:to ogit.oslc-ems:ProjectList
         ];
 .
 
-ogit.OSLC-ems:quantile
+ogit.oslc-ems:quantile
     a ogit.core:Verb;
     rdfs:label "quantile";
     ogit.core:original <http://open-services.net/ns/ems#quantile>;
@@ -2749,12 +2749,12 @@ This property links a quantile function resource to one or more quantiles.""";
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:QuantileFunction;
-            ogit.core:to ogit.OSLC-ems:Quantile
+            ogit.core:from ogit.oslc-ems:QuantileFunction;
+            ogit.core:to ogit.oslc-ems:Quantile
         ];
 .
 
-ogit.OSLC-ems:scenario
+ogit.oslc-ems:scenario
     a ogit.core:Verb;
     rdfs:label "scenario";
     ogit.core:original <http://open-services.net/ns/ems#scenario>;
@@ -2776,7 +2776,7 @@ ogit.OSLC-ems:scenario
         ];
 .
 
-ogit.OSLC-ems:scenarioList
+ogit.oslc-ems:scenarioList
     a ogit.core:Verb;
     rdfs:label "scenarioList";
     ogit.core:original <http://open-services.net/ns/ems#scenarioList>;
@@ -2798,12 +2798,12 @@ ogit.OSLC-ems:scenarioList
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:Service;
-            ogit.core:to ogit.OSLC-ems:ScenarioList
+            ogit.core:from ogit.oslc-ems:Service;
+            ogit.core:to ogit.oslc-ems:ScenarioList
         ];
 .
 
-ogit.OSLC-ems:seeAlsoEstimation
+ogit.oslc-ems:seeAlsoEstimation
     a ogit.core:Verb;
     rdfs:label "seeAlsoEstimation";
     ogit.core:original <http://open-services.net/ns/ems#seeAlsoEstimation>;
@@ -2825,7 +2825,7 @@ ogit.OSLC-ems:seeAlsoEstimation
         ];
 .
 
-ogit.OSLC-ems:seeAlsoPerformance
+ogit.oslc-ems:seeAlsoPerformance
     a ogit.core:Verb;
     rdfs:label "seeAlsoPerformance";
     ogit.core:original <http://open-services.net/ns/ems#seeAlsoPerformance>;
@@ -2847,7 +2847,7 @@ ogit.OSLC-ems:seeAlsoPerformance
         ];
 .
 
-ogit.OSLC-ems:seeAlsoPortfolio
+ogit.oslc-ems:seeAlsoPortfolio
     a ogit.core:Verb;
     rdfs:label "seeAlsoPortfolio";
     ogit.core:original <http://open-services.net/ns/ems#seeAlsoPortfolio>;
@@ -2869,7 +2869,7 @@ ogit.OSLC-ems:seeAlsoPortfolio
         ];
 .
 
-ogit.OSLC-ems:seeAlsoProject
+ogit.oslc-ems:seeAlsoProject
     a ogit.core:Verb;
     rdfs:label "seeAlsoProject";
     ogit.core:original <http://open-services.net/ns/ems#seeAlsoProject>;
@@ -2891,7 +2891,7 @@ ogit.OSLC-ems:seeAlsoProject
         ];
 .
 
-ogit.OSLC-ems:service
+ogit.oslc-ems:service
     a ogit.core:Verb;
     rdfs:label "service";
     ogit.core:original <http://open-services.net/ns/ems#service>;
@@ -2914,7 +2914,7 @@ This property is used to link a resource to the EMS service instance that hosts 
         ];
 .
 
-ogit.OSLC-ems:tableSource
+ogit.oslc-ems:tableSource
     a ogit.core:Verb;
     rdfs:label "tableSource";
     ogit.core:original <http://open-services.net/ns/ems#tableSource>;
@@ -2951,7 +2951,7 @@ An HTTP GET request on this URL MUST return an
         ];
 .
 
-ogit.OSLC-ems:to
+ogit.oslc-ems:to
     a ogit.core:Verb;
     rdfs:label "to";
     ogit.core:original <http://open-services.net/ns/ems#to>;
@@ -2975,12 +2975,12 @@ Many mappings MAY map to the same dimension member URI.""";
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:Mapping;
-            ogit.core:to ogit.OSLC-ems:DimensionMember
+            ogit.core:from ogit.oslc-ems:Mapping;
+            ogit.core:to ogit.oslc-ems:DimensionMember
         ];
 .
 
-ogit.OSLC-ems:unitOfMeasure
+ogit.oslc-ems:unitOfMeasure
     a ogit.core:Verb;
     rdfs:label "unitOfMeasure";
     ogit.core:original <http://open-services.net/ns/ems#unitOfMeasure>;
@@ -3003,12 +3003,12 @@ This property gives the unit of measure. For example, the measure <em>duration o
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:Measure;
-            ogit.core:to ogit.OSLC-ems:UnitOfMeasure
+            ogit.core:from ogit.oslc-ems:Measure;
+            ogit.core:to ogit.oslc-ems:UnitOfMeasure
         ];
 .
 
-ogit.OSLC-ems:useMap
+ogit.oslc-ems:useMap
     a ogit.core:Verb;
     rdfs:label "useMap";
     ogit.core:original <http://open-services.net/ns/ems#useMap>;
@@ -3031,7 +3031,7 @@ This property links a resource to a map.""";
         ];
 .
 
-ogit.OSLC-ems:wbsContent
+ogit.oslc-ems:wbsContent
     a ogit.core:Verb;
     rdfs:label "wbsContent";
     ogit.core:original <http://open-services.net/ns/ems#wbsContent>;
@@ -3059,7 +3059,7 @@ HTTP GET response for the link given in <code>ems:wbsSource</code>.""";
         ];
 .
 
-ogit.OSLC-ems:wbsFormat
+ogit.oslc-ems:wbsFormat
     a ogit.core:Verb;
     rdfs:label "wbsFormat";
     ogit.core:original <http://open-services.net/ns/ems#wbsFormat>;
@@ -3084,12 +3084,12 @@ Instead, this property identifies the specification that defines the XML format 
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.OSLC-ems:WorkBreakdownStructure;
-            ogit.core:to ogit.OSLC-ems:WbsFormat
+            ogit.core:from ogit.oslc-ems:WorkBreakdownStructure;
+            ogit.core:to ogit.oslc-ems:WbsFormat
         ];
 .
 
-ogit.OSLC-ems:wbsSource
+ogit.oslc-ems:wbsSource
     a ogit.core:Verb;
     rdfs:label "wbsSource";
     ogit.core:original <http://open-services.net/ns/ems#wbsSource>;
@@ -3115,4 +3115,3 @@ If this property is absent, then the WBS resource MUST have a
             dcterms:creator "OGIT Importer"
         ];
 .
-

@@ -1,20 +1,20 @@
 @prefix dcterms:       <http://purl.org/dc/terms/> .
 @prefix ogit:          <http://www.purl.org/ogit/> .
-@prefix ogit.Network:  <http://www.purl.org/ogit/Network/> .
-@prefix ogit._Network: <http://www.purl.org/ogit/> .
+@prefix ogit._network: <http://www.purl.org/ogit/> .
 @prefix ogit.core:     <http://www.purl.org/ogit/> .
+@prefix ogit.network:  <http://www.purl.org/ogit/Network/> .
 @prefix owl:           <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
 
 #
 # Ontology
 #
-ogit:Network a owl:Ontology .
+ogit:network a owl:Ontology .
 
 #
 # Verbs
 #
-ogit._Network:extends
+ogit._network:extends
     a ogit.core:Verb;
     rdfs:label "extends";
     dcterms:description "Indicates if one entity extends another one";
@@ -33,47 +33,47 @@ ogit._Network:extends
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.Network:NetworkCard;
-            ogit.core:to ogit.Network:IDSIPS
+            ogit.core:from ogit.network:NetworkCard;
+            ogit.core:to ogit.network:IDSIPS
         ],
         [
-            ogit.core:from ogit.Network:NetworkCard;
-            ogit.core:to ogit.Network:Loadbalancer
+            ogit.core:from ogit.network:NetworkCard;
+            ogit.core:to ogit.network:Loadbalancer
         ],
         [
-            ogit.core:from ogit.Network:NetworkCard;
-            ogit.core:to ogit.Network:Router
+            ogit.core:from ogit.network:NetworkCard;
+            ogit.core:to ogit.network:Router
         ],
         [
-            ogit.core:from ogit.Network:NetworkCard;
-            ogit.core:to ogit.Network:Switch
+            ogit.core:from ogit.network:NetworkCard;
+            ogit.core:to ogit.network:Switch
         ],
         [
-            ogit.core:from ogit.Network:NetworkCard;
-            ogit.core:to ogit.Network:WifiAccessPoint
+            ogit.core:from ogit.network:NetworkCard;
+            ogit.core:to ogit.network:WifiAccessPoint
         ],
         [
-            ogit.core:from ogit.Network:NetworkCard;
-            ogit.core:to ogit.Network:Slot
+            ogit.core:from ogit.network:NetworkCard;
+            ogit.core:to ogit.network:Slot
         ],
         [
-            ogit.core:from ogit.Network:SimpleDevice;
-            ogit.core:to ogit.Network:IDSIPS
+            ogit.core:from ogit.network:SimpleDevice;
+            ogit.core:to ogit.network:IDSIPS
         ],
         [
-            ogit.core:from ogit.Network:SimpleDevice;
-            ogit.core:to ogit.Network:Loadbalancer
+            ogit.core:from ogit.network:SimpleDevice;
+            ogit.core:to ogit.network:Loadbalancer
         ],
         [
-            ogit.core:from ogit.Network:SimpleDevice;
-            ogit.core:to ogit.Network:Router
+            ogit.core:from ogit.network:SimpleDevice;
+            ogit.core:to ogit.network:Router
         ],
         [
-            ogit.core:from ogit.Network:SimpleDevice;
-            ogit.core:to ogit.Network:Switch
+            ogit.core:from ogit.network:SimpleDevice;
+            ogit.core:to ogit.network:Switch
         ],
         [
-            ogit.core:from ogit.Network:SimpleDevice;
-            ogit.core:to ogit.Network:WifiAccessPoint
+            ogit.core:from ogit.network:SimpleDevice;
+            ogit.core:to ogit.network:WifiAccessPoint
         ];
 .

@@ -1,7 +1,7 @@
 @prefix dcterms:        <http://purl.org/dc/terms/> .
 @prefix ogit:           <http://www.purl.org/ogit/> .
-@prefix ogit.OSCL-core: <http://www.purl.org/ogit/OSCL-core/> .
 @prefix ogit.core:      <http://www.purl.org/ogit/> .
+@prefix ogit.oslc-core: <http://www.purl.org/ogit.oslc-core/> .
 @prefix owl:            <http://www.w3.org/2002/07/owl#> .
 @prefix purl:           <http://www.purl.org/> .
 @prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
@@ -10,13 +10,13 @@
 #
 # Ontology
 #
-ogit:OSCL-core
+ogit:oslc-core
     a owl:Ontology;
-    rdfs:label "OGIT oslc-core Vocabulary";
+    rdfs:label "OGIT OSLC Core";
     dcterms:creator "arago GmbH";
     dcterms:contributor "Fabian Meyer";
-    vann:preferredNamespaceUri "http://www.purl.org/ogit/OSCL-core/";
-    vann:preferredNamespacePrefix "ogit.OSCL-core";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit.oslc-core/";
+    vann:preferredNamespacePrefix "ogit.oslc-core";
     owl:versionInfo "__OGIT_VERSION__";
     owl:imports purl:ogit
 .
@@ -24,7 +24,7 @@ ogit:OSCL-core
 #
 # Entities
 #
-ogit.OSCL-core:AllowedValues
+ogit.oslc-core:AllowedValues
     a ogit.core:Entity;
     rdfs:label "AllowedValues";
     ogit.core:original <http://open-services.net/ns/core#AllowedValues>;
@@ -46,7 +46,7 @@ ogit.OSCL-core:AllowedValues
         ];
 .
 
-ogit.OSCL-core:Comment
+ogit.oslc-core:Comment
     a ogit.core:Entity;
     rdfs:label "Comment";
     ogit.core:original <http://open-services.net/ns/core#Comment>;
@@ -68,7 +68,7 @@ ogit.OSCL-core:Comment
         ];
 .
 
-ogit.OSCL-core:Compact
+ogit.oslc-core:Compact
     a ogit.core:Entity;
     rdfs:label "Compact";
     ogit.core:original <http://open-services.net/ns/core#Compact>;
@@ -90,7 +90,7 @@ ogit.OSCL-core:Compact
         ];
 .
 
-ogit.OSCL-core:CreationFactory
+ogit.oslc-core:CreationFactory
     a ogit.core:Entity;
     rdfs:label "CreationFactory";
     ogit.core:original <http://open-services.net/ns/core#CreationFactory>;
@@ -112,7 +112,7 @@ ogit.OSCL-core:CreationFactory
         ];
 .
 
-ogit.OSCL-core:Dialog
+ogit.oslc-core:Dialog
     a ogit.core:Entity;
     rdfs:label "Dialog";
     ogit.core:original <http://open-services.net/ns/core#Dialog>;
@@ -134,7 +134,7 @@ ogit.OSCL-core:Dialog
         ];
 .
 
-ogit.OSCL-core:Discussion
+ogit.oslc-core:Discussion
     a ogit.core:Entity;
     rdfs:label "Discussion";
     ogit.core:original <http://open-services.net/ns/core#Discussion>;
@@ -156,7 +156,7 @@ ogit.OSCL-core:Discussion
         ];
 .
 
-ogit.OSCL-core:Error
+ogit.oslc-core:Error
     a ogit.core:Entity;
     rdfs:label "Error";
     ogit.core:original <http://open-services.net/ns/core#Error>;
@@ -178,7 +178,7 @@ ogit.OSCL-core:Error
         ];
 .
 
-ogit.OSCL-core:ExtendedError
+ogit.oslc-core:ExtendedError
     a ogit.core:Entity;
     rdfs:label "ExtendedError";
     ogit.core:original <http://open-services.net/ns/core#ExtendedError>;
@@ -200,7 +200,7 @@ ogit.OSCL-core:ExtendedError
         ];
 .
 
-ogit.OSCL-core:OAuthConfiguration
+ogit.oslc-core:OAuthConfiguration
     a ogit.core:Entity;
     rdfs:label "OAuthConfiguration";
     ogit.core:original <http://open-services.net/ns/core#OAuthConfiguration>;
@@ -222,7 +222,7 @@ ogit.OSCL-core:OAuthConfiguration
         ];
 .
 
-ogit.OSCL-core:PrefixDefinition
+ogit.oslc-core:PrefixDefinition
     a ogit.core:Entity;
     rdfs:label "PrefixDefinition";
     ogit.core:original <http://open-services.net/ns/core#PrefixDefinition>;
@@ -244,7 +244,7 @@ ogit.OSCL-core:PrefixDefinition
         ];
 .
 
-ogit.OSCL-core:Preview
+ogit.oslc-core:Preview
     a ogit.core:Entity;
     rdfs:label "Preview";
     ogit.core:original <http://open-services.net/ns/core#Preview>;
@@ -266,7 +266,7 @@ ogit.OSCL-core:Preview
         ];
 .
 
-ogit.OSCL-core:Property
+ogit.oslc-core:Property
     a ogit.core:Entity;
     rdfs:label "Property";
     ogit.core:original <http://open-services.net/ns/core#Property>;
@@ -288,7 +288,7 @@ ogit.OSCL-core:Property
         ];
 .
 
-ogit.OSCL-core:Publisher
+ogit.oslc-core:Publisher
     a ogit.core:Entity;
     rdfs:label "Publisher";
     ogit.core:original <http://open-services.net/ns/core#Publisher>;
@@ -310,7 +310,7 @@ ogit.OSCL-core:Publisher
         ];
 .
 
-ogit.OSCL-core:QueryCapability
+ogit.oslc-core:QueryCapability
     a ogit.core:Entity;
     rdfs:label "QueryCapability";
     ogit.core:original <http://open-services.net/ns/core#QueryCapability>;
@@ -332,7 +332,7 @@ ogit.OSCL-core:QueryCapability
         ];
 .
 
-ogit.OSCL-core:ResourceShape
+ogit.oslc-core:ResourceShape
     a ogit.core:Entity;
     rdfs:label "ResourceShape";
     ogit.core:original <http://open-services.net/ns/core#ResourceShape>;
@@ -354,7 +354,7 @@ ogit.OSCL-core:ResourceShape
         ];
 .
 
-ogit.OSCL-core:ResponseInfo
+ogit.oslc-core:ResponseInfo
     a ogit.core:Entity;
     rdfs:label "ResponseInfo";
     ogit.core:original <http://open-services.net/ns/core#ResponseInfo>;
@@ -376,7 +376,7 @@ ogit.OSCL-core:ResponseInfo
         ];
 .
 
-ogit.OSCL-core:Service
+ogit.oslc-core:Service
     a ogit.core:Entity;
     rdfs:label "Service";
     ogit.core:original <http://open-services.net/ns/core#Service>;
@@ -398,7 +398,7 @@ ogit.OSCL-core:Service
         ];
 .
 
-ogit.OSCL-core:ServiceProvider
+ogit.oslc-core:ServiceProvider
     a ogit.core:Entity;
     rdfs:label "ServiceProvider";
     ogit.core:original <http://open-services.net/ns/core#ServiceProvider>;
@@ -420,7 +420,7 @@ ogit.OSCL-core:ServiceProvider
         ];
 .
 
-ogit.OSCL-core:ServiceProviderCatalog
+ogit.oslc-core:ServiceProviderCatalog
     a ogit.core:Entity;
     rdfs:label "ServiceProviderCatalog";
     ogit.core:original <http://open-services.net/ns/core#ServiceProviderCatalog>;
@@ -446,7 +446,7 @@ ogit.OSCL-core:ServiceProviderCatalog
 #
 # Attributes
 #
-ogit.OSCL-core:allowedValue
+ogit.oslc-core:allowedValue
     a ogit.core:Attribute;
     rdfs:label "allowedValue";
     ogit.core:original <http://open-services.net/ns/core#allowedValue>;
@@ -469,7 +469,7 @@ ogit.OSCL-core:allowedValue
         ];
 .
 
-ogit.OSCL-core:defaultValue
+ogit.oslc-core:defaultValue
     a ogit.core:Attribute;
     rdfs:label "defaultValue";
     ogit.core:original <http://open-services.net/ns/core#defaultValue>;
@@ -492,7 +492,7 @@ ogit.OSCL-core:defaultValue
         ];
 .
 
-ogit.OSCL-core:hidden
+ogit.oslc-core:hidden
     a ogit.core:Attribute;
     rdfs:label "hidden";
     ogit.core:original <http://open-services.net/ns/core#hidden>;
@@ -515,7 +515,7 @@ ogit.OSCL-core:hidden
         ];
 .
 
-ogit.OSCL-core:hintHeight
+ogit.oslc-core:hintHeight
     a ogit.core:Attribute;
     rdfs:label "hintHeight";
     ogit.core:original <http://open-services.net/ns/core#hintHeight>;
@@ -538,7 +538,7 @@ ogit.OSCL-core:hintHeight
         ];
 .
 
-ogit.OSCL-core:hintWidth
+ogit.oslc-core:hintWidth
     a ogit.core:Attribute;
     rdfs:label "hintWidth";
     ogit.core:original <http://open-services.net/ns/core#hintWidth>;
@@ -561,7 +561,7 @@ ogit.OSCL-core:hintWidth
         ];
 .
 
-ogit.OSCL-core:isMemberProperty
+ogit.oslc-core:isMemberProperty
     a ogit.core:Attribute;
     rdfs:label "isMemberProperty";
     ogit.core:original <http://open-services.net/ns/core#isMemberProperty>;
@@ -584,7 +584,7 @@ ogit.OSCL-core:isMemberProperty
         ];
 .
 
-ogit.OSCL-core:label
+ogit.oslc-core:label
     a ogit.core:Attribute;
     rdfs:label "label";
     ogit.core:original <http://open-services.net/ns/core#label>;
@@ -607,7 +607,7 @@ ogit.OSCL-core:label
         ];
 .
 
-ogit.OSCL-core:maxSize
+ogit.oslc-core:maxSize
     a ogit.core:Attribute;
     rdfs:label "maxSize";
     ogit.core:original <http://open-services.net/ns/core#maxSize>;
@@ -630,7 +630,7 @@ ogit.OSCL-core:maxSize
         ];
 .
 
-ogit.OSCL-core:message
+ogit.oslc-core:message
     a ogit.core:Attribute;
     rdfs:label "message";
     ogit.core:original <http://open-services.net/ns/core#message>;
@@ -653,7 +653,7 @@ ogit.OSCL-core:message
         ];
 .
 
-ogit.OSCL-core:name
+ogit.oslc-core:name
     a ogit.core:Attribute;
     rdfs:label "name";
     ogit.core:original <http://open-services.net/ns/core#name>;
@@ -676,7 +676,7 @@ ogit.OSCL-core:name
         ];
 .
 
-ogit.OSCL-core:prefix
+ogit.oslc-core:prefix
     a ogit.core:Attribute;
     rdfs:label "prefix";
     ogit.core:original <http://open-services.net/ns/core#prefix>;
@@ -699,7 +699,7 @@ ogit.OSCL-core:prefix
         ];
 .
 
-ogit.OSCL-core:prefixBase
+ogit.oslc-core:prefixBase
     a ogit.core:Attribute;
     rdfs:label "prefixBase";
     ogit.core:original <http://open-services.net/ns/core#prefixBase>;
@@ -722,7 +722,7 @@ ogit.OSCL-core:prefixBase
         ];
 .
 
-ogit.OSCL-core:prefixDefinition
+ogit.oslc-core:prefixDefinition
     a ogit.core:Attribute;
     rdfs:label "prefixDefinition";
     ogit.core:original <http://open-services.net/ns/core#prefixDefinition>;
@@ -745,7 +745,7 @@ ogit.OSCL-core:prefixDefinition
         ];
 .
 
-ogit.OSCL-core:readOnly
+ogit.oslc-core:readOnly
     a ogit.core:Attribute;
     rdfs:label "readOnly";
     ogit.core:original <http://open-services.net/ns/core#readOnly>;
@@ -768,7 +768,7 @@ ogit.OSCL-core:readOnly
         ];
 .
 
-ogit.OSCL-core:rel
+ogit.oslc-core:rel
     a ogit.core:Attribute;
     rdfs:label "rel";
     ogit.core:original <http://open-services.net/ns/core#rel>;
@@ -791,7 +791,7 @@ ogit.OSCL-core:rel
         ];
 .
 
-ogit.OSCL-core:shortId
+ogit.oslc-core:shortId
     a ogit.core:Attribute;
     rdfs:label "shortId";
     ogit.core:original <http://open-services.net/ns/core#shortId>;
@@ -814,7 +814,7 @@ ogit.OSCL-core:shortId
         ];
 .
 
-ogit.OSCL-core:shortTitle
+ogit.oslc-core:shortTitle
     a ogit.core:Attribute;
     rdfs:label "shortTitle";
     ogit.core:original <http://open-services.net/ns/core#shortTitle>;
@@ -837,7 +837,7 @@ ogit.OSCL-core:shortTitle
         ];
 .
 
-ogit.OSCL-core:statusCode
+ogit.oslc-core:statusCode
     a ogit.core:Attribute;
     rdfs:label "statusCode";
     ogit.core:original <http://open-services.net/ns/core#statusCode>;
@@ -860,7 +860,7 @@ ogit.OSCL-core:statusCode
         ];
 .
 
-ogit.OSCL-core:totalCount
+ogit.oslc-core:totalCount
     a ogit.core:Attribute;
     rdfs:label "totalCount";
     ogit.core:original <http://open-services.net/ns/core#totalCount>;
@@ -892,7 +892,7 @@ ogit.OSCL-core:totalCount
 #
 # Verbs
 #
-ogit.OSCL-core:allowedValues
+ogit.oslc-core:allowedValues
     a ogit.core:Verb;
     rdfs:label "allowedValues";
     ogit.core:original <http://open-services.net/ns/core#allowedValues>;
@@ -914,7 +914,7 @@ ogit.OSCL-core:allowedValues
         ];
 .
 
-ogit.OSCL-core:authorizationURI
+ogit.oslc-core:authorizationURI
     a ogit.core:Verb;
     rdfs:label "authorizationURI";
     ogit.core:original <http://open-services.net/ns/core#authorizationURI>;
@@ -936,7 +936,7 @@ ogit.OSCL-core:authorizationURI
         ];
 .
 
-ogit.OSCL-core:comment
+ogit.oslc-core:comment
     a ogit.core:Verb;
     rdfs:label "comment";
     ogit.core:original <http://open-services.net/ns/core#comment>;
@@ -958,7 +958,7 @@ ogit.OSCL-core:comment
         ];
 .
 
-ogit.OSCL-core:creation
+ogit.oslc-core:creation
     a ogit.core:Verb;
     rdfs:label "creation";
     ogit.core:original <http://open-services.net/ns/core#creation>;
@@ -980,7 +980,7 @@ ogit.OSCL-core:creation
         ];
 .
 
-ogit.OSCL-core:creationDialog
+ogit.oslc-core:creationDialog
     a ogit.core:Verb;
     rdfs:label "creationDialog";
     ogit.core:original <http://open-services.net/ns/core#creationDialog>;
@@ -1002,7 +1002,7 @@ ogit.OSCL-core:creationDialog
         ];
 .
 
-ogit.OSCL-core:creationFactory
+ogit.oslc-core:creationFactory
     a ogit.core:Verb;
     rdfs:label "creationFactory";
     ogit.core:original <http://open-services.net/ns/core#creationFactory>;
@@ -1024,7 +1024,7 @@ ogit.OSCL-core:creationFactory
         ];
 .
 
-ogit.OSCL-core:describes
+ogit.oslc-core:describes
     a ogit.core:Verb;
     rdfs:label "describes";
     ogit.core:original <http://open-services.net/ns/core#describes>;
@@ -1046,7 +1046,7 @@ ogit.OSCL-core:describes
         ];
 .
 
-ogit.OSCL-core:details
+ogit.oslc-core:details
     a ogit.core:Verb;
     rdfs:label "details";
     ogit.core:original <http://open-services.net/ns/core#details>;
@@ -1068,7 +1068,7 @@ ogit.OSCL-core:details
         ];
 .
 
-ogit.OSCL-core:dialog
+ogit.oslc-core:dialog
     a ogit.core:Verb;
     rdfs:label "dialog";
     ogit.core:original <http://open-services.net/ns/core#dialog>;
@@ -1090,7 +1090,7 @@ ogit.OSCL-core:dialog
         ];
 .
 
-ogit.OSCL-core:discussedBy
+ogit.oslc-core:discussedBy
     a ogit.core:Verb;
     rdfs:label "discussedBy";
     ogit.core:original <http://open-services.net/ns/core#discussedBy>;
@@ -1112,7 +1112,7 @@ ogit.OSCL-core:discussedBy
         ];
 .
 
-ogit.OSCL-core:discussionAbout
+ogit.oslc-core:discussionAbout
     a ogit.core:Verb;
     rdfs:label "discussionAbout";
     ogit.core:original <http://open-services.net/ns/core#discussionAbout>;
@@ -1134,7 +1134,7 @@ ogit.OSCL-core:discussionAbout
         ];
 .
 
-ogit.OSCL-core:domain
+ogit.oslc-core:domain
     a ogit.core:Verb;
     rdfs:label "domain";
     ogit.core:original <http://open-services.net/ns/core#domain>;
@@ -1156,7 +1156,7 @@ ogit.OSCL-core:domain
         ];
 .
 
-ogit.OSCL-core:executes
+ogit.oslc-core:executes
     a ogit.core:Verb;
     rdfs:label "executes";
     ogit.core:original <http://open-services.net/ns/core#executes>;
@@ -1179,7 +1179,7 @@ ogit.OSCL-core:executes
         ];
 .
 
-ogit.OSCL-core:extendedError
+ogit.oslc-core:extendedError
     a ogit.core:Verb;
     rdfs:label "extendedError";
     ogit.core:original <http://open-services.net/ns/core#extendedError>;
@@ -1201,7 +1201,7 @@ ogit.OSCL-core:extendedError
         ];
 .
 
-ogit.OSCL-core:futureAction
+ogit.oslc-core:futureAction
     a ogit.core:Verb;
     rdfs:label "futureAction";
     ogit.core:original <http://open-services.net/ns/core#futureAction>;
@@ -1230,7 +1230,7 @@ ogit.OSCL-core:futureAction
         ];
 .
 
-ogit.OSCL-core:icon
+ogit.oslc-core:icon
     a ogit.core:Verb;
     rdfs:label "icon";
     ogit.core:original <http://open-services.net/ns/core#icon>;
@@ -1252,7 +1252,7 @@ ogit.OSCL-core:icon
         ];
 .
 
-ogit.OSCL-core:inReplyTo
+ogit.oslc-core:inReplyTo
     a ogit.core:Verb;
     rdfs:label "inReplyTo";
     ogit.core:original <http://open-services.net/ns/core#inReplyTo>;
@@ -1274,7 +1274,7 @@ ogit.OSCL-core:inReplyTo
         ];
 .
 
-ogit.OSCL-core:instanceShape
+ogit.oslc-core:instanceShape
     a ogit.core:Verb;
     rdfs:label "instanceShape";
     ogit.core:original <http://open-services.net/ns/core#instanceShape>;
@@ -1296,7 +1296,7 @@ ogit.OSCL-core:instanceShape
         ];
 .
 
-ogit.OSCL-core:modifiedBy
+ogit.oslc-core:modifiedBy
     a ogit.core:Verb;
     rdfs:label "modifiedBy";
     ogit.core:original <http://open-services.net/ns/core#modifiedBy>;
@@ -1318,7 +1318,7 @@ ogit.OSCL-core:modifiedBy
         ];
 .
 
-ogit.OSCL-core:moreInfo
+ogit.oslc-core:moreInfo
     a ogit.core:Verb;
     rdfs:label "moreInfo";
     ogit.core:original <http://open-services.net/ns/core#moreInfo>;
@@ -1340,7 +1340,7 @@ ogit.OSCL-core:moreInfo
         ];
 .
 
-ogit.OSCL-core:nextPage
+ogit.oslc-core:nextPage
     a ogit.core:Verb;
     rdfs:label "nextPage";
     ogit.core:original <http://open-services.net/ns/core#nextPage>;
@@ -1362,7 +1362,7 @@ ogit.OSCL-core:nextPage
         ];
 .
 
-ogit.OSCL-core:oauthAccessTokenURI
+ogit.oslc-core:oauthAccessTokenURI
     a ogit.core:Verb;
     rdfs:label "oauthAccessTokenURI";
     ogit.core:original <http://open-services.net/ns/core#oauthAccessTokenURI>;
@@ -1384,7 +1384,7 @@ ogit.OSCL-core:oauthAccessTokenURI
         ];
 .
 
-ogit.OSCL-core:oauthConfiguration
+ogit.oslc-core:oauthConfiguration
     a ogit.core:Verb;
     rdfs:label "oauthConfiguration";
     ogit.core:original <http://open-services.net/ns/core#oauthConfiguration>;
@@ -1406,7 +1406,7 @@ ogit.OSCL-core:oauthConfiguration
         ];
 .
 
-ogit.OSCL-core:oauthRequestTokenURI
+ogit.oslc-core:oauthRequestTokenURI
     a ogit.core:Verb;
     rdfs:label "oauthRequestTokenURI";
     ogit.core:original <http://open-services.net/ns/core#oauthRequestTokenURI>;
@@ -1428,7 +1428,7 @@ ogit.OSCL-core:oauthRequestTokenURI
         ];
 .
 
-ogit.OSCL-core:occurs
+ogit.oslc-core:occurs
     a ogit.core:Verb;
     rdfs:label "occurs";
     ogit.core:original <http://open-services.net/ns/core#occurs>;
@@ -1450,7 +1450,7 @@ ogit.OSCL-core:occurs
         ];
 .
 
-ogit.OSCL-core:partOfDiscussion
+ogit.oslc-core:partOfDiscussion
     a ogit.core:Verb;
     rdfs:label "partOfDiscussion";
     ogit.core:original <http://open-services.net/ns/core#partOfDiscussion>;
@@ -1472,7 +1472,7 @@ ogit.OSCL-core:partOfDiscussion
         ];
 .
 
-ogit.OSCL-core:property
+ogit.oslc-core:property
     a ogit.core:Verb;
     rdfs:label "property";
     ogit.core:original <http://open-services.net/ns/core#property>;
@@ -1494,7 +1494,7 @@ ogit.OSCL-core:property
         ];
 .
 
-ogit.OSCL-core:propertyDefinition
+ogit.oslc-core:propertyDefinition
     a ogit.core:Verb;
     rdfs:label "propertyDefinition";
     ogit.core:original <http://open-services.net/ns/core#propertyDefinition>;
@@ -1516,7 +1516,7 @@ ogit.OSCL-core:propertyDefinition
         ];
 .
 
-ogit.OSCL-core:queryBase
+ogit.oslc-core:queryBase
     a ogit.core:Verb;
     rdfs:label "queryBase";
     ogit.core:original <http://open-services.net/ns/core#queryBase>;
@@ -1538,7 +1538,7 @@ ogit.OSCL-core:queryBase
         ];
 .
 
-ogit.OSCL-core:queryCapability
+ogit.oslc-core:queryCapability
     a ogit.core:Verb;
     rdfs:label "queryCapability";
     ogit.core:original <http://open-services.net/ns/core#queryCapability>;
@@ -1560,7 +1560,7 @@ ogit.OSCL-core:queryCapability
         ];
 .
 
-ogit.OSCL-core:range
+ogit.oslc-core:range
     a ogit.core:Verb;
     rdfs:label "range";
     ogit.core:original <http://open-services.net/ns/core#range>;
@@ -1582,7 +1582,7 @@ ogit.OSCL-core:range
         ];
 .
 
-ogit.OSCL-core:representation
+ogit.oslc-core:representation
     a ogit.core:Verb;
     rdfs:label "representation";
     ogit.core:original <http://open-services.net/ns/core#representation>;
@@ -1604,7 +1604,7 @@ ogit.OSCL-core:representation
         ];
 .
 
-ogit.OSCL-core:resourceShape
+ogit.oslc-core:resourceShape
     a ogit.core:Verb;
     rdfs:label "resourceShape";
     ogit.core:original <http://open-services.net/ns/core#resourceShape>;
@@ -1626,7 +1626,7 @@ ogit.OSCL-core:resourceShape
         ];
 .
 
-ogit.OSCL-core:resourceType
+ogit.oslc-core:resourceType
     a ogit.core:Verb;
     rdfs:label "resourceType";
     ogit.core:original <http://open-services.net/ns/core#resourceType>;
@@ -1648,7 +1648,7 @@ ogit.OSCL-core:resourceType
         ];
 .
 
-ogit.OSCL-core:results
+ogit.oslc-core:results
     a ogit.core:Verb;
     rdfs:label "results";
     ogit.core:original <http://open-services.net/ns/core#results>;
@@ -1672,7 +1672,7 @@ ogit.OSCL-core:results
         ];
 .
 
-ogit.OSCL-core:selectionDialog
+ogit.oslc-core:selectionDialog
     a ogit.core:Verb;
     rdfs:label "selectionDialog";
     ogit.core:original <http://open-services.net/ns/core#selectionDialog>;
@@ -1694,7 +1694,7 @@ ogit.OSCL-core:selectionDialog
         ];
 .
 
-ogit.OSCL-core:service
+ogit.oslc-core:service
     a ogit.core:Verb;
     rdfs:label "service";
     ogit.core:original <http://open-services.net/ns/core#service>;
@@ -1716,7 +1716,7 @@ ogit.OSCL-core:service
         ];
 .
 
-ogit.OSCL-core:serviceProvider
+ogit.oslc-core:serviceProvider
     a ogit.core:Verb;
     rdfs:label "serviceProvider";
     ogit.core:original <http://open-services.net/ns/core#serviceProvider>;
@@ -1738,7 +1738,7 @@ ogit.OSCL-core:serviceProvider
         ];
 .
 
-ogit.OSCL-core:serviceProviderCatalog
+ogit.oslc-core:serviceProviderCatalog
     a ogit.core:Verb;
     rdfs:label "serviceProviderCatalog";
     ogit.core:original <http://open-services.net/ns/core#serviceProviderCatalog>;
@@ -1760,7 +1760,7 @@ ogit.OSCL-core:serviceProviderCatalog
         ];
 .
 
-ogit.OSCL-core:usage
+ogit.oslc-core:usage
     a ogit.core:Verb;
     rdfs:label "usage";
     ogit.core:original <http://open-services.net/ns/core#usage>;
@@ -1782,7 +1782,7 @@ ogit.OSCL-core:usage
         ];
 .
 
-ogit.OSCL-core:valueShape
+ogit.oslc-core:valueShape
     a ogit.core:Verb;
     rdfs:label "valueShape";
     ogit.core:original <http://open-services.net/ns/core#valueShape>;
@@ -1804,7 +1804,7 @@ ogit.OSCL-core:valueShape
         ];
 .
 
-ogit.OSCL-core:valueType
+ogit.oslc-core:valueType
     a ogit.core:Verb;
     rdfs:label "valueType";
     ogit.core:original <http://open-services.net/ns/core#valueType>;
@@ -1825,4 +1825,3 @@ ogit.OSCL-core:valueType
             dcterms:creator "OGIT Importer"
         ];
 .
-

@@ -1,8 +1,8 @@
 @prefix dcterms:          <http://purl.org/dc/terms/> .
 @prefix ogit:             <http://www.purl.org/ogit/> .
-@prefix ogit.Datacenter:  <http://www.purl.org/ogit/Datacenter/> .
-@prefix ogit._Datacenter: <http://www.purl.org/ogit/> .
+@prefix ogit._datacenter: <http://www.purl.org/ogit/> .
 @prefix ogit.core:        <http://www.purl.org/ogit/> .
+@prefix ogit.datacenter:  <http://www.purl.org/ogit/Datacenter/> .
 @prefix ogit.foundation:  <http://www.purl.org/ogit/> .
 @prefix owl:              <http://www.w3.org/2002/07/owl#> .
 @prefix purl:             <http://www.purl.org/> .
@@ -12,7 +12,7 @@
 #
 # Ontology
 #
-ogit:Datacenter
+ogit:datacenter
     a owl:Ontology;
     rdfs:label "OGIT Datacenter";
     dcterms:creator "arago GmbH";
@@ -26,7 +26,7 @@ ogit:Datacenter
 #
 # Entities
 #
-ogit.Datacenter:Building
+ogit.datacenter:Building
     a ogit.core:Entity;
     rdfs:label "Building";
     dcterms:description "A physical Building within a location";
@@ -41,7 +41,7 @@ ogit.Datacenter:Building
     ogit.core:optional-attributes
         ogit.foundation:id,
         ogit.foundation:capacity,
-        ogit.Datacenter:datacenterId;
+        ogit.datacenter:datacenterId;
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -51,7 +51,7 @@ ogit.Datacenter:Building
         ];
 .
 
-ogit.Datacenter:Cooling
+ogit.datacenter:Cooling
     a ogit.core:Entity;
     rdfs:label "Cooling";
     dcterms:description "A physical Cooling Unit used for data centers and computer rooms";
@@ -65,7 +65,7 @@ ogit.Datacenter:Cooling
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:optional-attributes
         ogit.foundation:id,
-        ogit.Datacenter:roomId,
+        ogit.datacenter:roomId,
         ogit.foundation:capacity,
         ogit.foundation:powerConsumption;
     ogit.core:history
@@ -77,7 +77,7 @@ ogit.Datacenter:Cooling
         ];
 .
 
-ogit.Datacenter:Datacenter
+ogit.datacenter:Datacenter
     a ogit.core:Entity;
     rdfs:label "Datacenter";
     dcterms:description "Represents a datacenter";
@@ -101,7 +101,7 @@ ogit.Datacenter:Datacenter
         ];
 .
 
-ogit.Datacenter:PowerDistributionUnit
+ogit.datacenter:PowerDistributionUnit
     a ogit.core:Entity;
     rdfs:label "PowerDistributionUnit";
     dcterms:description "A PDU is a physical device for connecting datacenter devices with power sources";
@@ -115,7 +115,7 @@ ogit.Datacenter:PowerDistributionUnit
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:optional-attributes
         ogit.foundation:id,
-        ogit.Datacenter:rackId,
+        ogit.datacenter:rackId,
         ogit.foundation:capacity;
     ogit.core:history
         [
@@ -126,7 +126,7 @@ ogit.Datacenter:PowerDistributionUnit
         ];
 .
 
-ogit.Datacenter:Rack
+ogit.datacenter:Rack
     a ogit.core:Entity;
     rdfs:label "Rack";
     dcterms:description "A physical rack housing datacenter equipment";
@@ -141,13 +141,13 @@ ogit.Datacenter:Rack
     ogit.core:optional-attributes
         ogit.foundation:id,
         ogit.foundation:capacity,
-        ogit._Datacenter:brand,
+        ogit._datacenter:brand,
         ogit.foundation:model,
         ogit.foundation:purchaseDate,
-        ogit.Datacenter:moveProductionDate,
+        ogit.datacenter:moveProductionDate,
         ogit.foundation:endOfWarranty,
-        ogit.Datacenter:roomId,
-        ogit._Datacenter:weight,
+        ogit.datacenter:roomId,
+        ogit._datacenter:weight,
         ogit.foundation:powerConsumption;
     ogit.core:history
         [
@@ -158,7 +158,7 @@ ogit.Datacenter:Rack
         ];
 .
 
-ogit.Datacenter:Room
+ogit.datacenter:Room
     a ogit.core:Entity;
     rdfs:label "Room";
     dcterms:description "A physical Room within a Building";
@@ -173,7 +173,7 @@ ogit.Datacenter:Room
     ogit.core:optional-attributes
         ogit.foundation:id,
         ogit.foundation:capacity,
-        ogit._Datacenter:buildingId;
+        ogit._datacenter:buildingId;
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -183,7 +183,7 @@ ogit.Datacenter:Room
         ];
 .
 
-ogit.Datacenter:Section
+ogit.datacenter:Section
     a ogit.core:Entity;
     rdfs:label "Section";
     dcterms:description "A physical/logical Section within a Room";
@@ -207,7 +207,7 @@ ogit.Datacenter:Section
         ];
 .
 
-ogit.Datacenter:Sensor
+ogit.datacenter:Sensor
     a ogit.core:Entity;
     rdfs:label "Sensor";
     dcterms:description "A sensor is a device that measures a physical quantity and converts it into a 'signal' which can be read by an observer or by an instrument.";
@@ -221,7 +221,7 @@ ogit.Datacenter:Sensor
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:optional-attributes
         ogit.foundation:id,
-        ogit.Datacenter:sectionId;
+        ogit.datacenter:sectionId;
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -231,7 +231,7 @@ ogit.Datacenter:Sensor
         ];
 .
 
-ogit.Datacenter:Server
+ogit.datacenter:Server
     a ogit.core:Entity;
     rdfs:label "Server";
     dcterms:description "A physical/logical Server";
@@ -245,10 +245,10 @@ ogit.Datacenter:Server
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:optional-attributes
         ogit.foundation:id,
-        ogit._Datacenter:brand,
+        ogit._datacenter:brand,
         ogit.foundation:model,
         ogit.foundation:purchaseDate,
-        ogit.Datacenter:moveProductionDate,
+        ogit.datacenter:moveProductionDate,
         ogit.foundation:endOfWarranty;
     ogit.core:history
         [
@@ -259,7 +259,7 @@ ogit.Datacenter:Server
         ];
 .
 
-ogit.Datacenter:Storage
+ogit.datacenter:Storage
     a ogit.core:Entity;
     rdfs:label "Storage";
     dcterms:description "A physical/logical Storage Unit";
@@ -273,10 +273,10 @@ ogit.Datacenter:Storage
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:optional-attributes
         ogit.foundation:id,
-        ogit._Datacenter:brand,
+        ogit._datacenter:brand,
         ogit.foundation:model,
         ogit.foundation:purchaseDate,
-        ogit.Datacenter:moveProductionDate,
+        ogit.datacenter:moveProductionDate,
         ogit.foundation:endOfWarranty;
     ogit.core:history
         [
@@ -287,7 +287,7 @@ ogit.Datacenter:Storage
         ];
 .
 
-ogit.Datacenter:UPS
+ogit.datacenter:UPS
     a ogit.core:Entity;
     rdfs:label "UPS";
     dcterms:description "A physical UPS device (Uninterruptible power supply)";
@@ -314,7 +314,7 @@ ogit.Datacenter:UPS
 #
 # Attributes
 #
-ogit.Datacenter:datacenterId
+ogit.datacenter:datacenterId
     a ogit.core:Attribute;
     rdfs:label "datacenterId";
     dcterms:description "ID of a Datacenter";
@@ -333,7 +333,7 @@ ogit.Datacenter:datacenterId
         ];
 .
 
-ogit.Datacenter:moveProductionDate
+ogit.datacenter:moveProductionDate
     a ogit.core:Attribute;
     rdfs:label "moveProductionDate";
     dcterms:description "Date when an device is moved to production use.";
@@ -352,7 +352,7 @@ ogit.Datacenter:moveProductionDate
         ];
 .
 
-ogit.Datacenter:rackId
+ogit.datacenter:rackId
     a ogit.core:Attribute;
     rdfs:label "rackId";
     dcterms:description "ID of a rack within a datacenter.";
@@ -371,7 +371,7 @@ ogit.Datacenter:rackId
         ];
 .
 
-ogit.Datacenter:rackUnit
+ogit.datacenter:rackUnit
     a ogit.core:Attribute;
     rdfs:label "rackUnit";
     dcterms:description "The name of the RackUnit within a datacenter.";
@@ -390,7 +390,7 @@ ogit.Datacenter:rackUnit
         ];
 .
 
-ogit.Datacenter:roomId
+ogit.datacenter:roomId
     a ogit.core:Attribute;
     rdfs:label "roomId";
     dcterms:description "ID of a Room in a Datacenter.";
@@ -409,7 +409,7 @@ ogit.Datacenter:roomId
         ];
 .
 
-ogit.Datacenter:sectionId
+ogit.datacenter:sectionId
     a ogit.core:Attribute;
     rdfs:label "sectionId";
     dcterms:description "ID of a datacenter section.";

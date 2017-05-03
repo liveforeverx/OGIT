@@ -1,23 +1,23 @@
 @prefix dcterms:                 <http://purl.org/dc/terms/> .
 @prefix ogit:                    <http://www.purl.org/ogit/> .
-@prefix ogit.Automation:         <http://www.purl.org/ogit/Automation/> .
-@prefix ogit.ServiceManagement:  <http://www.purl.org/ogit/ServiceManagement/> .
-@prefix ogit._ServiceManagement: <http://www.purl.org/ogit/> .
+@prefix ogit._serviceManagement: <http://www.purl.org/ogit/> .
+@prefix ogit.automation:         <http://www.purl.org/ogit/Automation/> .
 @prefix ogit.core:               <http://www.purl.org/ogit/> .
 @prefix ogit.event:              <http://www.purl.org/ogit/> .
 @prefix ogit.location:           <http://www.purl.org/ogit/> .
+@prefix ogit.serviceManagement:  <http://www.purl.org/ogit/ServiceManagement/> .
 @prefix owl:                     <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:                    <http://www.w3.org/2000/01/rdf-schema#> .
 
 #
 # Ontology
 #
-ogit:ServiceManagement a owl:Ontology .
+ogit:serviceManagement a owl:Ontology .
 
 #
 # Attributes
 #
-ogit._ServiceManagement:assignedGroup
+ogit._serviceManagement:assignedGroup
     a ogit.core:Attribute;
     rdfs:label "assignedGroup";
     dcterms:description "Assigned Group to a Service Management process.";
@@ -36,7 +36,7 @@ ogit._ServiceManagement:assignedGroup
         ];
 .
 
-ogit._ServiceManagement:capacityAvailable
+ogit._serviceManagement:capacityAvailable
     a ogit.core:Attribute;
     rdfs:label "capacityAvailable";
     dcterms:description "If the flag is true, then service can be ordered by new instance. If the flag is false, the service cannot temporarily be ordered due to capacity reasons.";
@@ -55,7 +55,7 @@ ogit._ServiceManagement:capacityAvailable
         ];
 .
 
-ogit._ServiceManagement:closedAt
+ogit._serviceManagement:closedAt
     a ogit.core:Attribute;
     rdfs:label "closedAt";
     dcterms:description """Will defined the time when a ticket was closed.
@@ -75,7 +75,7 @@ The values must be combined date and time with time zone designator according to
         ];
 .
 
-ogit._ServiceManagement:effort
+ogit._serviceManagement:effort
     a ogit.core:Attribute;
     rdfs:label "effort";
     dcterms:description """Defines how much time was spent on the actual work for a change, task, or similar entity.
@@ -97,7 +97,7 @@ The values is expected to be in format HH:MM, e.g. 1:00 for 1 hour effort.""";
         ];
 .
 
-ogit._ServiceManagement:justification
+ogit._serviceManagement:justification
     a ogit.core:Attribute;
     rdfs:label "justification";
     dcterms:description "Justification for a ChangeRequest";
@@ -116,7 +116,7 @@ ogit._ServiceManagement:justification
         ];
 .
 
-ogit._ServiceManagement:market
+ogit._serviceManagement:market
     a ogit.core:Attribute;
     rdfs:label "market";
     dcterms:description "Indicates market, for which an entity may be applicable.";
@@ -135,7 +135,7 @@ ogit._ServiceManagement:market
         ];
 .
 
-ogit._ServiceManagement:project
+ogit._serviceManagement:project
     a ogit.core:Attribute;
     rdfs:label "project";
     dcterms:description "Project name, for which the entity is being used.";
@@ -154,7 +154,7 @@ ogit._ServiceManagement:project
         ];
 .
 
-ogit._ServiceManagement:reason
+ogit._serviceManagement:reason
     a ogit.core:Attribute;
     rdfs:label "reason";
     dcterms:description "Describes the reason for a decision.";
@@ -173,7 +173,7 @@ ogit._ServiceManagement:reason
         ];
 .
 
-ogit._ServiceManagement:reportedAt
+ogit._serviceManagement:reportedAt
     a ogit.core:Attribute;
     rdfs:label "reportedAt";
     dcterms:description """Defineds the time when something was actually reported.
@@ -194,7 +194,7 @@ Reported time is used in incident management in the following manner: in most ca
         ];
 .
 
-ogit._ServiceManagement:reviewedAt
+ogit._serviceManagement:reviewedAt
     a ogit.core:Attribute;
     rdfs:label "reviewedAt";
     dcterms:description """Defines the time when something was actually reviewed.
@@ -215,7 +215,7 @@ Reviewed time is used in incident management.""";
         ];
 .
 
-ogit._ServiceManagement:risk
+ogit._serviceManagement:risk
     a ogit.core:Attribute;
     rdfs:label "risk";
     dcterms:description "Used to store the result of a risk analysis.";
@@ -234,7 +234,7 @@ ogit._ServiceManagement:risk
         ];
 .
 
-ogit._ServiceManagement:taskLog
+ogit._serviceManagement:taskLog
     a ogit.core:Attribute;
     rdfs:label "taskLog";
     dcterms:description """In cases where the log for a Task is maintained as a single string it will be stored in taskLog.
@@ -254,7 +254,7 @@ In all other case consider using ogit/Timeseries.""";
         ];
 .
 
-ogit._ServiceManagement:urgency
+ogit._serviceManagement:urgency
     a ogit.core:Attribute;
     rdfs:label "urgency";
     dcterms:description "Contains the urgency which could be appliead to a ticket, incident etc.";
@@ -276,7 +276,7 @@ ogit._ServiceManagement:urgency
 #
 # Verbs
 #
-ogit._ServiceManagement:availableIn
+ogit._serviceManagement:availableIn
     a ogit.core:Verb;
     rdfs:label "availableIn";
     dcterms:description "Indicates that something can be found from somewhere.";
@@ -295,12 +295,12 @@ ogit._ServiceManagement:availableIn
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.ServiceManagement:Offering;
+            ogit.core:from ogit.serviceManagement:Offering;
             ogit.core:to ogit.location:Region
         ];
 .
 
-ogit._ServiceManagement:calls
+ogit._serviceManagement:calls
     a ogit.core:Verb;
     rdfs:label "calls";
     dcterms:description "Verb showing which entity calls which another entity.";
@@ -319,12 +319,12 @@ ogit._ServiceManagement:calls
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.ServiceManagement:Service;
-            ogit.core:to ogit.ServiceManagement:Service
+            ogit.core:from ogit.serviceManagement:Service;
+            ogit.core:to ogit.serviceManagement:Service
         ];
 .
 
-ogit._ServiceManagement:causes
+ogit._serviceManagement:causes
     a ogit.core:Verb;
     rdfs:label "causes";
     dcterms:description """Indicates that one entity causes the creation of another one.
@@ -344,60 +344,60 @@ E.g. an error situation during change execution might lead to a new incident tic
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.ServiceManagement:Order;
-            ogit.core:to ogit.ServiceManagement:Order
+            ogit.core:from ogit.serviceManagement:Order;
+            ogit.core:to ogit.serviceManagement:Order
         ],
         [
-            ogit.core:from ogit.ServiceManagement:Order;
-            ogit.core:to ogit.ServiceManagement:ChangeRequest
+            ogit.core:from ogit.serviceManagement:Order;
+            ogit.core:to ogit.serviceManagement:ChangeRequest
         ],
         [
-            ogit.core:from ogit.ServiceManagement:Order;
-            ogit.core:to ogit.ServiceManagement:Ticket
+            ogit.core:from ogit.serviceManagement:Order;
+            ogit.core:to ogit.serviceManagement:Ticket
         ],
         [
-            ogit.core:from ogit.ServiceManagement:ChangeRequest;
-            ogit.core:to ogit.ServiceManagement:Order
+            ogit.core:from ogit.serviceManagement:ChangeRequest;
+            ogit.core:to ogit.serviceManagement:Order
         ],
         [
-            ogit.core:from ogit.ServiceManagement:ChangeRequest;
-            ogit.core:to ogit.ServiceManagement:ChangeRequest
+            ogit.core:from ogit.serviceManagement:ChangeRequest;
+            ogit.core:to ogit.serviceManagement:ChangeRequest
         ],
         [
-            ogit.core:from ogit.ServiceManagement:Incident;
-            ogit.core:to ogit.ServiceManagement:Order
+            ogit.core:from ogit.serviceManagement:Incident;
+            ogit.core:to ogit.serviceManagement:Order
         ],
         [
-            ogit.core:from ogit.ServiceManagement:Incident;
-            ogit.core:to ogit.ServiceManagement:ChangeRequest
+            ogit.core:from ogit.serviceManagement:Incident;
+            ogit.core:to ogit.serviceManagement:ChangeRequest
         ],
         [
-            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:from ogit.serviceManagement:Incident;
             ogit.core:to ogit.event:Event
         ],
         [
-            ogit.core:from ogit.ServiceManagement:Incident;
-            ogit.core:to ogit.ServiceManagement:Incident
+            ogit.core:from ogit.serviceManagement:Incident;
+            ogit.core:to ogit.serviceManagement:Incident
         ],
         [
-            ogit.core:from ogit.ServiceManagement:Incident;
-            ogit.core:to ogit.ServiceManagement:Problem
+            ogit.core:from ogit.serviceManagement:Incident;
+            ogit.core:to ogit.serviceManagement:Problem
         ],
         [
-            ogit.core:from ogit.ServiceManagement:Problem;
-            ogit.core:to ogit.ServiceManagement:ChangeRequest
+            ogit.core:from ogit.serviceManagement:Problem;
+            ogit.core:to ogit.serviceManagement:ChangeRequest
         ],
         [
-            ogit.core:from ogit.ServiceManagement:Problem;
-            ogit.core:to ogit.ServiceManagement:Problem
+            ogit.core:from ogit.serviceManagement:Problem;
+            ogit.core:to ogit.serviceManagement:Problem
         ],
         [
-            ogit.core:from ogit.ServiceManagement:Ticket;
-            ogit.core:to ogit.ServiceManagement:Ticket
+            ogit.core:from ogit.serviceManagement:Ticket;
+            ogit.core:to ogit.serviceManagement:Ticket
         ];
 .
 
-ogit._ServiceManagement:reportedOn
+ogit._serviceManagement:reportedOn
     a ogit.core:Verb;
     rdfs:label "reportedOn";
     dcterms:description """Indicates where a failure situation was initially observed. In case an incident record is created from an event management system this relationship points to the entitiy that represents the monitored device/endpoint.
@@ -417,23 +417,23 @@ We call it \"reportedOn\" instead of \"observedOn\" to account for the close rel
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.ServiceManagement:Order;
-            ogit.core:to ogit.Automation:MARSNode
+            ogit.core:from ogit.serviceManagement:Order;
+            ogit.core:to ogit.automation:MARSNode
         ],
         [
-            ogit.core:from ogit.ServiceManagement:ChangeRequest;
-            ogit.core:to ogit.Automation:MARSNode
+            ogit.core:from ogit.serviceManagement:ChangeRequest;
+            ogit.core:to ogit.automation:MARSNode
         ],
         [
-            ogit.core:from ogit.ServiceManagement:Incident;
-            ogit.core:to ogit.Automation:MARSNode
+            ogit.core:from ogit.serviceManagement:Incident;
+            ogit.core:to ogit.automation:MARSNode
         ],
         [
-            ogit.core:from ogit.ServiceManagement:Problem;
-            ogit.core:to ogit.Automation:MARSNode
+            ogit.core:from ogit.serviceManagement:Problem;
+            ogit.core:to ogit.automation:MARSNode
         ],
         [
-            ogit.core:from ogit.ServiceManagement:Ticket;
-            ogit.core:to ogit.Automation:MARSNode
+            ogit.core:from ogit.serviceManagement:Ticket;
+            ogit.core:to ogit.automation:MARSNode
         ];
 .

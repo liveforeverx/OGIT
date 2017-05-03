@@ -1,21 +1,21 @@
 @prefix dcterms:     <http://purl.org/dc/terms/> .
 @prefix ogit:        <http://www.purl.org/ogit/> .
-@prefix ogit.Forum:  <http://www.purl.org/ogit/Forum/> .
-@prefix ogit._Forum: <http://www.purl.org/ogit/> .
+@prefix ogit._forum: <http://www.purl.org/ogit/> .
 @prefix ogit.core:   <http://www.purl.org/ogit/> .
 @prefix ogit.data:   <http://www.purl.org/ogit/> .
+@prefix ogit.forum:  <http://www.purl.org/ogit/Forum/> .
 @prefix owl:         <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
 
 #
 # Ontology
 #
-ogit:Forum a owl:Ontology .
+ogit:forum a owl:Ontology .
 
 #
 # Verbs
 #
-ogit._Forum:accepts
+ogit._forum:accepts
     a ogit.core:Verb;
     rdfs:label "accepts";
     dcterms:description "Indicates if an entity accepts something else.";
@@ -34,12 +34,12 @@ ogit._Forum:accepts
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.Forum:Profile;
-            ogit.core:to ogit.Forum:Invite
+            ogit.core:from ogit.forum:Profile;
+            ogit.core:to ogit.forum:Invite
         ];
 .
 
-ogit._Forum:configures
+ogit._forum:configures
     a ogit.core:Verb;
     rdfs:label "configures";
     dcterms:description "The `from` entity, contains configuration data for the to `entity`";
@@ -58,12 +58,12 @@ ogit._Forum:configures
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.Forum:Configuration;
-            ogit.core:to ogit.Forum:Profile
+            ogit.core:from ogit.forum:Configuration;
+            ogit.core:to ogit.forum:Profile
         ];
 .
 
-ogit._Forum:endorses
+ogit._forum:endorses
     a ogit.core:Verb;
     rdfs:label "endorses";
     dcterms:description """This relationship indicates that one entity endorses some other. This is a recommendation or a
@@ -95,28 +95,28 @@ social `like`.""";
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.Forum:Profile;
-            ogit.core:to ogit.Forum:KnowledgeBundle
+            ogit.core:from ogit.forum:Profile;
+            ogit.core:to ogit.forum:KnowledgeBundle
         ],
         [
-            ogit.core:from ogit.Forum:Profile;
-            ogit.core:to ogit.Forum:KnowledgeItemHistory
+            ogit.core:from ogit.forum:Profile;
+            ogit.core:to ogit.forum:KnowledgeItemHistory
         ],
         [
-            ogit.core:from ogit.Forum:Profile;
-            ogit.core:to ogit.Forum:Post
+            ogit.core:from ogit.forum:Profile;
+            ogit.core:to ogit.forum:Post
         ],
         [
-            ogit.core:from ogit.Forum:Profile;
-            ogit.core:to ogit.Forum:Reply
+            ogit.core:from ogit.forum:Profile;
+            ogit.core:to ogit.forum:Reply
         ],
         [
-            ogit.core:from ogit.Forum:Profile;
-            ogit.core:to ogit.Forum:Rating
+            ogit.core:from ogit.forum:Profile;
+            ogit.core:to ogit.forum:Rating
         ];
 .
 
-ogit._Forum:moderates
+ogit._forum:moderates
     a ogit.core:Verb;
     rdfs:label "moderates";
     dcterms:description """Moderation as a verb, in the context of a forum, is a supervisory role. It implies that the
@@ -137,16 +137,16 @@ entity takes a responsibility for the maintenance and upkeep of the connected en
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.Forum:Profile;
-            ogit.core:to ogit.Forum:Topic
+            ogit.core:from ogit.forum:Profile;
+            ogit.core:to ogit.forum:Topic
         ],
         [
-            ogit.core:from ogit.Forum:Profile;
-            ogit.core:to ogit.Forum:KnowledgeBundle
+            ogit.core:from ogit.forum:Profile;
+            ogit.core:to ogit.forum:KnowledgeBundle
         ];
 .
 
-ogit._Forum:responds
+ogit._forum:responds
     a ogit.core:Verb;
     rdfs:label "responds";
     dcterms:description """This relationship indicates that one entity is a response to another. For example, parts of a
@@ -179,27 +179,27 @@ conversation/fourm thread.""";
     ogit.core:allowed
         [
             ogit.core:from ogit.data:Comment;
-            ogit.core:to ogit.Forum:Reply
+            ogit.core:to ogit.forum:Reply
         ],
         [
-            ogit.core:from ogit.Forum:Reply;
-            ogit.core:to ogit.Forum:KnowledgeItemHistory
+            ogit.core:from ogit.forum:Reply;
+            ogit.core:to ogit.forum:KnowledgeItemHistory
         ],
         [
-            ogit.core:from ogit.Forum:Reply;
-            ogit.core:to ogit.Forum:Post
+            ogit.core:from ogit.forum:Reply;
+            ogit.core:to ogit.forum:Post
         ],
         [
-            ogit.core:from ogit.Forum:Reply;
-            ogit.core:to ogit.Forum:KnowledgeBundle
+            ogit.core:from ogit.forum:Reply;
+            ogit.core:to ogit.forum:KnowledgeBundle
         ],
         [
             ogit.core:from ogit.data:Comment;
-            ogit.core:to ogit.Forum:Rating
+            ogit.core:to ogit.forum:Rating
         ];
 .
 
-ogit._Forum:subscribes
+ogit._forum:subscribes
     a ogit.core:Verb;
     rdfs:label "subscribes";
     dcterms:description """A subscription by an entity to another. Implies that one entity is interested in something
@@ -231,32 +231,32 @@ the other can offer.""";
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.Forum:Profile;
-            ogit.core:to ogit.Forum:KnowledgeItemHistory
+            ogit.core:from ogit.forum:Profile;
+            ogit.core:to ogit.forum:KnowledgeItemHistory
         ],
         [
-            ogit.core:from ogit.Forum:Profile;
-            ogit.core:to ogit.Forum:Topic
+            ogit.core:from ogit.forum:Profile;
+            ogit.core:to ogit.forum:Topic
         ],
         [
-            ogit.core:from ogit.Forum:Profile;
-            ogit.core:to ogit.Forum:Post
+            ogit.core:from ogit.forum:Profile;
+            ogit.core:to ogit.forum:Post
         ],
         [
-            ogit.core:from ogit.Forum:Profile;
-            ogit.core:to ogit.Forum:KnowledgeBundle
+            ogit.core:from ogit.forum:Profile;
+            ogit.core:to ogit.forum:KnowledgeBundle
         ],
         [
-            ogit.core:from ogit.Forum:Profile;
-            ogit.core:to ogit.Forum:Profile
+            ogit.core:from ogit.forum:Profile;
+            ogit.core:to ogit.forum:Profile
         ],
         [
-            ogit.core:from ogit.Forum:Profile;
-            ogit.core:to ogit.Forum:FeedEntry
+            ogit.core:from ogit.forum:Profile;
+            ogit.core:to ogit.forum:FeedEntry
         ];
 .
 
-ogit._Forum:wins
+ogit._forum:wins
     a ogit.core:Verb;
     rdfs:label "wins";
     dcterms:description """Associates the entity that has won something with the thing that was won. Despite the present
@@ -277,7 +277,7 @@ tense used in the verb, this almost always will refer to some that *was* won in 
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.Forum:Profile;
-            ogit.core:to ogit.Forum:Award
+            ogit.core:from ogit.forum:Profile;
+            ogit.core:to ogit.forum:Award
         ];
 .

@@ -1,7 +1,7 @@
 @prefix dcterms:          <http://purl.org/dc/terms/> .
 @prefix ogit:             <http://www.purl.org/ogit/> .
-@prefix ogit.Automation:  <http://www.purl.org/ogit/Automation/> .
-@prefix ogit._Automation: <http://www.purl.org/ogit/> .
+@prefix ogit._automation: <http://www.purl.org/ogit/> .
+@prefix ogit.automation:  <http://www.purl.org/ogit/Automation/> .
 @prefix ogit.core:        <http://www.purl.org/ogit/> .
 @prefix ogit.task:        <http://www.purl.org/ogit/> .
 @prefix owl:              <http://www.w3.org/2002/07/owl#> .
@@ -10,12 +10,12 @@
 #
 # Ontology
 #
-ogit:Automation a owl:Ontology .
+ogit:automation a owl:Ontology .
 
 #
 # Attributes
 #
-ogit._Automation:ipAddress
+ogit._automation:ipAddress
     a ogit.core:Attribute;
     rdfs:label "ipAddress";
     dcterms:description "The IP address of a component/hardware device.";
@@ -34,7 +34,7 @@ ogit._Automation:ipAddress
         ];
 .
 
-ogit._Automation:macAddress
+ogit._automation:macAddress
     a ogit.core:Attribute;
     rdfs:label "macAddress";
     dcterms:description "The mac address of a component.";
@@ -53,7 +53,7 @@ ogit._Automation:macAddress
         ];
 .
 
-ogit._Automation:manufacturer
+ogit._automation:manufacturer
     a ogit.core:Attribute;
     rdfs:label "model";
     dcterms:description "Manufacturer of a device or component.";
@@ -72,7 +72,7 @@ ogit._Automation:manufacturer
         ];
 .
 
-ogit._Automation:message
+ogit._automation:message
     a ogit.core:Attribute;
     rdfs:label "message";
     dcterms:description "Contains a message.";
@@ -91,7 +91,7 @@ ogit._Automation:message
         ];
 .
 
-ogit._Automation:mode
+ogit._automation:mode
     a ogit.core:Attribute;
     rdfs:label "mode";
     dcterms:description """Contains the type of filter for the value contained in the entity \"Attribute\" and corresponding to one of the following strings:
@@ -111,7 +111,7 @@ eq, ne, lt, le, gt, ge, exists, notexists, string, notstring, regex, notregex"""
         ];
 .
 
-ogit._Automation:timestamp
+ogit._automation:timestamp
     a ogit.core:Attribute;
     rdfs:label "timestamp";
     dcterms:description "Contains the timestamp in milliseconds.";
@@ -133,7 +133,7 @@ ogit._Automation:timestamp
 #
 # Verbs
 #
-ogit._Automation:dependsOn
+ogit._automation:dependsOn
     a ogit.core:Verb;
     rdfs:label "dependsOn";
     dcterms:description "This relationship indicates that some entity is depending on some other. E.g. machine hosts software.";
@@ -152,12 +152,12 @@ ogit._Automation:dependsOn
         ];
     ogit.core:allowed 
         [
-            ogit.core:from ogit.Automation:MARSNode;
-            ogit.core:to ogit.Automation:MARSNode
+            ogit.core:from ogit.automation:MARSNode;
+            ogit.core:to ogit.automation:MARSNode
         ];
 .
 
-ogit._Automation:hosts
+ogit._automation:hosts
     a ogit.core:Verb;
     rdfs:label "hosts";
     dcterms:description "verb which shows that an entity is hosted in another entity.";
@@ -176,12 +176,12 @@ ogit._Automation:hosts
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.Automation:MARSNode;
-            ogit.core:to ogit.Automation:MARSNode
+            ogit.core:from ogit.automation:MARSNode;
+            ogit.core:to ogit.automation:MARSNode
         ];
 .
 
-ogit._Automation:solves
+ogit._automation:solves
     a ogit.core:Verb;
     rdfs:label "solves";
     dcterms:description """One entity can \"solve\" another.""";
@@ -200,12 +200,12 @@ ogit._Automation:solves
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.Automation:KnowledgeItem;
+            ogit.core:from ogit.automation:KnowledgeItem;
             ogit.core:to ogit.task:Task
         ];
 .
 
-ogit._Automation:worksOn
+ogit._automation:worksOn
     a ogit.core:Verb;
     rdfs:label "worksOn";
     dcterms:description "Indicates if one entity is currently working on another entity.";
@@ -236,11 +236,11 @@ ogit._Automation:worksOn
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.Automation:KnowledgeItem;
-            ogit.core:to ogit.Automation:AutomationIssue
+            ogit.core:from ogit.automation:KnowledgeItem;
+            ogit.core:to ogit.automation:AutomationIssue
         ],
         [
-            ogit.core:from ogit.Automation:AutomationIssue;
-            ogit.core:to ogit.Automation:MARSNode
+            ogit.core:from ogit.automation:AutomationIssue;
+            ogit.core:to ogit.automation:MARSNode
         ];
 .

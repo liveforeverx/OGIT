@@ -1,9 +1,9 @@
 @prefix dcterms:          <http://purl.org/dc/terms/> .
 @prefix ogit:             <http://www.purl.org/ogit/> .
-@prefix ogit.Automation:  <http://www.purl.org/ogit/Automation/> .
-@prefix ogit.Datacenter:  <http://www.purl.org/ogit/Datacenter/> .
-@prefix ogit._Automation: <http://www.purl.org/ogit/> .
+@prefix ogit._automation: <http://www.purl.org/ogit/> .
+@prefix ogit.automation:  <http://www.purl.org/ogit/Automation/> .
 @prefix ogit.core:        <http://www.purl.org/ogit/> .
+@prefix ogit.datacenter:  <http://www.purl.org/ogit/Datacenter/> .
 @prefix ogit.foundation:  <http://www.purl.org/ogit/> .
 @prefix owl:              <http://www.w3.org/2002/07/owl#> .
 @prefix purl:             <http://www.purl.org/> .
@@ -13,7 +13,7 @@
 #
 # Ontology
 #
-ogit:Automation
+ogit:automation
     a owl:Ontology;
     rdfs:label "OGIT Automation";
     dcterms:creator "arago GmbH";
@@ -27,7 +27,7 @@ ogit:Automation
 #
 # Entities
 #
-ogit.Automation:AutomationIssue
+ogit.automation:AutomationIssue
     a ogit.core:Entity;
     rdfs:label "AutomationIssue";
     dcterms:description """Dynamic information exists within an automation engine in the form of Issues otherwise referred to as
@@ -46,18 +46,18 @@ IssueCondition is processed first.""";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:mandatory-attributes
-        ogit.Automation:issueFormalRepresentation;
+        ogit.automation:issueFormalRepresentation;
     ogit.core:optional-attributes
         ogit.foundation:status,
         ogit.foundation:subject,
-        ogit.Automation:processingTimestamp,
+        ogit.automation:processingTimestamp,
         ogit.foundation:modificationTime,
         ogit.foundation:creationTime,
-        ogit.Automation:isDeployed,
-        ogit.Automation:deployStatus;
+        ogit.automation:isDeployed,
+        ogit.automation:deployStatus;
     ogit.core:indexed-attributes
         ogit.foundation:subject,
-        ogit.Automation:issueFormalRepresentation;
+        ogit.automation:issueFormalRepresentation;
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -85,7 +85,7 @@ IssueCondition is processed first.""";
         ];
 .
 
-ogit.Automation:DynamicEngineData
+ogit.automation:DynamicEngineData
     a ogit.core:Entity;
     rdfs:label "DynamicEngineData";
     dcterms:description "Dynamic information exists within the arago Automation Engine (aAE) used to store volatile data about current state of MARSNode or AutomationIssue.";
@@ -110,7 +110,7 @@ ogit.Automation:DynamicEngineData
         ];
 .
 
-ogit.Automation:History
+ogit.automation:History
     a ogit.core:Entity;
     rdfs:label "History";
     dcterms:description "IssueHistoryEntry corresponds to element <HistoryEntry> from IssueOutputSchema.";
@@ -123,12 +123,12 @@ ogit.Automation:History
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:mandatory-attributes
-        ogit.Automation:knowledgeItemId,
-        ogit.Automation:affectedNodeId,
-        ogit.Automation:command,
-        ogit._Automation:message,
-        ogit.Automation:logLevel,
-        ogit._Automation:timestamp;
+        ogit.automation:knowledgeItemId,
+        ogit.automation:affectedNodeId,
+        ogit.automation:command,
+        ogit._automation:message,
+        ogit.automation:logLevel,
+        ogit._automation:timestamp;
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -138,7 +138,7 @@ ogit.Automation:History
         ];
 .
 
-ogit.Automation:Item
+ogit.automation:Item
     a ogit.core:Entity;
     rdfs:label "Item";
     dcterms:description """Item describing a condition for an automation issue (e.g. Request) that would correspond to a technical characteristic,
@@ -162,7 +162,7 @@ which would activate the automation Trigger.""";
         ];
 .
 
-ogit.Automation:KnowledgeItem
+ogit.automation:KnowledgeItem
     a ogit.core:Entity;
     rdfs:label "KnowledgeItem";
     dcterms:description """Formalized Knowledge stored in XML format. Serves as the building block for automation solutions.
@@ -179,19 +179,19 @@ In that case, the KnowledgeItem executes operations, which serves the exploitati
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:any-attributes "true";
     ogit.core:mandatory-attributes
-        ogit.Automation:knowledgeItemFormalRepresentation,
-        ogit.Automation:deployToEngine;
+        ogit.automation:knowledgeItemFormalRepresentation,
+        ogit.automation:deployToEngine;
     ogit.core:optional-attributes
         ogit.foundation:modificationTime,
         ogit.foundation:isValid,
-        ogit.Automation:knowledgeItemTier,
+        ogit.automation:knowledgeItemTier,
         ogit.foundation:creationTime,
         ogit.foundation:name,
         ogit.foundation:description,
         ogit.foundation:changeLog,
         ogit.foundation:accessControl,
-        ogit.Automation:isDeployed,
-        ogit.Automation:deployStatus;
+        ogit.automation:isDeployed,
+        ogit.automation:deployStatus;
     ogit.core:indexed-attributes
         ogit.foundation:name,
         ogit.foundation:description,
@@ -219,7 +219,7 @@ In that case, the KnowledgeItem executes operations, which serves the exploitati
         ];
 .
 
-ogit.Automation:KnowledgeItemAttribute
+ogit.automation:KnowledgeItemAttribute
     a ogit.core:Entity;
     rdfs:label "KnowledgeItemAttribute";
     dcterms:description "Contains key-value pairs (together with mode) found inside Issue subitems.";
@@ -235,7 +235,7 @@ ogit.Automation:KnowledgeItemAttribute
         ogit.foundation:name,
         ogit.foundation:value;
     ogit.core:optional-attributes
-        ogit._Automation:mode;
+        ogit._automation:mode;
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -245,7 +245,7 @@ ogit.Automation:KnowledgeItemAttribute
         ];
 .
 
-ogit.Automation:MAID
+ogit.automation:MAID
     a ogit.core:Entity;
     rdfs:label "MAID";
     dcterms:description """The Monitoring-Automation Interface Description (MAID) is an abstract definition of
@@ -269,7 +269,7 @@ to the monitoring systems becomes possible.""";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:mandatory-attributes
-        ogit.Automation:maidFormalRepresentation;
+        ogit.automation:maidFormalRepresentation;
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -279,7 +279,7 @@ to the monitoring systems becomes possible.""";
         ];
 .
 
-ogit.Automation:MARSModel
+ogit.automation:MARSModel
     a ogit.core:Entity;
     rdfs:label "MARSModel";
     dcterms:description """A collection of MARSNodes allows to address all MARS nodes belonging together in a certain way at once the relationship
@@ -307,7 +307,7 @@ to any MARSNode being part of that model.""";
         ];
 .
 
-ogit.Automation:MARSModelTemplate
+ogit.automation:MARSModelTemplate
     a ogit.core:Entity;
     rdfs:label "MARSModelTemplate";
     dcterms:description """Represents a set of interconnected MARSNodes, which will be used to define a vendor implementation template of an ordered
@@ -333,7 +333,7 @@ service offering.""";
         ];
 .
 
-ogit.Automation:MARSNode
+ogit.automation:MARSNode
     a ogit.core:Entity;
     rdfs:label "MARSNode";
     dcterms:description """IT Objects will be representated in MARS Modell with MARS nodes.
@@ -350,88 +350,88 @@ describe the business view of the IT environment.""";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:optional-attributes
-        ogit.Automation:marsNodeFormalRepresentation,
-        ogit.Automation:marsNodeType,
+        ogit.automation:marsNodeFormalRepresentation,
+        ogit.automation:marsNodeType,
         ogit.foundation:name,
         ogit.foundation:serialNumber,
-        ogit._Automation:macAddress,
-        ogit._Automation:ipAddress,
-        ogit._Automation:manufacturer,
+        ogit._automation:macAddress,
+        ogit._automation:ipAddress,
+        ogit._automation:manufacturer,
         ogit.foundation:endOfWarranty,
-        ogit.Automation:software,
-        ogit.Automation:softwareKey,
-        ogit.Automation:adminUrl,
-        ogit.Automation:tcpPort,
-        ogit.Automation:licenseAvailability,
-        ogit.Automation:licenseName,
-        ogit.Automation:installPath,
-        ogit.Automation:serviceStatus,
-        ogit.Automation:serviceType,
-        ogit.Automation:serviceName,
-        ogit.Automation:dataClassification,
-        ogit.Automation:dataPrivacy,
-        ogit.Automation:portNumber,
-        ogit.Automation:serialNumber,
-        ogit.Automation:portNumberListener,
-        ogit.Automation:servletName,
-        ogit.Automation:servletClass,
-        ogit.Automation:contextPath,
-        ogit.Automation:appServer,
-        ogit.Automation:host,
-        ogit.Automation:objectIdentifier,
-        ogit.Automation:memory,
-        ogit.Automation:domain,
-        ogit.Automation:exchangeRate,
-        ogit.Automation:firewallStatus,
-        ogit.Automation:additionalMacAddress,
-        ogit.Automation:osManufacturer,
-        ogit.Automation:serviceId,
-        ogit.Automation:appInstanceType,
-        ogit.Automation:appInfrastructureType,
-        ogit.Automation:buildName,
-        ogit.Automation:buildType,
-        ogit.Automation:licenseType,
-        ogit.Automation:webServer,
-        ogit.Automation:osKey,
-        ogit.Automation:osName,
-        ogit.Automation:osLicense,
-        ogit.Automation:osVersion,
-        ogit.Automation:osServicePack,
-        ogit.Automation:moveToProductionAt,
-        ogit.Automation:diskSpace,
-        ogit.Automation:cpuModel,
-        ogit.Automation:cpuManufacturer,
-        ogit.Automation:cpuCoreCount,
-        ogit.Automation:cpuType,
-        ogit.Automation:cpuSpeed,
-        ogit.Automation:cpuCount,
-        ogit.Automation:diskCount,
-        ogit.Automation:firmwareVersion,
-        ogit.Automation:virtualSystemType,
-        ogit.Automation:virtualMachineName,
-        ogit.Automation:brand,
-        ogit.Automation:fqdn,
-        ogit.Automation:installCount,
-        ogit.Automation:basicConfigId,
-        ogit.Automation:virtualSystemName,
-        ogit.Automation:middlewareType,
-        ogit.Automation:databaseSchema,
-        ogit.Automation:databaseServer,
-        ogit.Automation:systemType,
-        ogit.Automation:systemClass,
-        ogit.Automation:patchNumber,
-        ogit.Datacenter:rackUnit,
+        ogit.automation:software,
+        ogit.automation:softwareKey,
+        ogit.automation:adminUrl,
+        ogit.automation:tcpPort,
+        ogit.automation:licenseAvailability,
+        ogit.automation:licenseName,
+        ogit.automation:installPath,
+        ogit.automation:serviceStatus,
+        ogit.automation:serviceType,
+        ogit.automation:serviceName,
+        ogit.automation:dataClassification,
+        ogit.automation:dataPrivacy,
+        ogit.automation:portNumber,
+        ogit.automation:serialNumber,
+        ogit.automation:portNumberListener,
+        ogit.automation:servletName,
+        ogit.automation:servletClass,
+        ogit.automation:contextPath,
+        ogit.automation:appServer,
+        ogit.automation:host,
+        ogit.automation:objectIdentifier,
+        ogit.automation:memory,
+        ogit.automation:domain,
+        ogit.automation:exchangeRate,
+        ogit.automation:firewallStatus,
+        ogit.automation:additionalMacAddress,
+        ogit.automation:osManufacturer,
+        ogit.automation:serviceId,
+        ogit.automation:appInstanceType,
+        ogit.automation:appInfrastructureType,
+        ogit.automation:buildName,
+        ogit.automation:buildType,
+        ogit.automation:licenseType,
+        ogit.automation:webServer,
+        ogit.automation:osKey,
+        ogit.automation:osName,
+        ogit.automation:osLicense,
+        ogit.automation:osVersion,
+        ogit.automation:osServicePack,
+        ogit.automation:moveToProductionAt,
+        ogit.automation:diskSpace,
+        ogit.automation:cpuModel,
+        ogit.automation:cpuManufacturer,
+        ogit.automation:cpuCoreCount,
+        ogit.automation:cpuType,
+        ogit.automation:cpuSpeed,
+        ogit.automation:cpuCount,
+        ogit.automation:diskCount,
+        ogit.automation:firmwareVersion,
+        ogit.automation:virtualSystemType,
+        ogit.automation:virtualMachineName,
+        ogit.automation:brand,
+        ogit.automation:fqdn,
+        ogit.automation:installCount,
+        ogit.automation:basicConfigId,
+        ogit.automation:virtualSystemName,
+        ogit.automation:middlewareType,
+        ogit.automation:databaseSchema,
+        ogit.automation:databaseServer,
+        ogit.automation:systemType,
+        ogit.automation:systemClass,
+        ogit.automation:patchNumber,
+        ogit.datacenter:rackUnit,
         ogit.foundation:modificationTime,
         ogit.foundation:creationTime,
         ogit.foundation:connectorId,
         ogit.foundation:id,
-        ogit.Automation:companyName,
-        ogit.Automation:projectName,
-        ogit.Automation:isDeployed,
-        ogit.Automation:deployStatus;
+        ogit.automation:companyName,
+        ogit.automation:projectName,
+        ogit.automation:isDeployed,
+        ogit.automation:deployStatus;
     ogit.core:indexed-attributes
         ogit.foundation:name,
-        ogit.Automation:marsNodeFormalRepresentation;
+        ogit.automation:marsNodeFormalRepresentation;
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -507,7 +507,7 @@ describe the business view of the IT environment.""";
         ];
 .
 
-ogit.Automation:MARSNodeTemplate
+ogit.automation:MARSNodeTemplate
     a ogit.core:Entity;
     rdfs:label "MARSNodeTemplate";
     dcterms:description """Entity similar to MARSNode but used to create ogit/Automation/MARSTemplate's, which are used to define a vendor implementation template of an ordered
@@ -521,9 +521,9 @@ service offering and to enable definition of cost elements (ogit/Cost/CostElemen
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:mandatory-attributes
-        ogit.Automation:marsNodeFormalRepresentation;
+        ogit.automation:marsNodeFormalRepresentation;
     ogit.core:optional-attributes
-        ogit.Automation:marsNodeType,
+        ogit.automation:marsNodeType,
         ogit.foundation:status;
     ogit.core:history
         [
@@ -534,7 +534,7 @@ service offering and to enable definition of cost elements (ogit/Cost/CostElemen
         ];
 .
 
-ogit.Automation:Trigger
+ogit.automation:Trigger
     a ogit.core:Entity;
     rdfs:label "Trigger";
     dcterms:description "Trigger of a KI having a set of Subitems.";
@@ -561,7 +561,7 @@ ogit.Automation:Trigger
 #
 # Attributes
 #
-ogit.Automation:additionalMacAddress
+ogit.automation:additionalMacAddress
     a ogit.core:Attribute;
     rdfs:label "additionalMacAddress";
     dcterms:description "Contains an additional MAC address";
@@ -580,7 +580,7 @@ ogit.Automation:additionalMacAddress
         ];
 .
 
-ogit.Automation:adminUrl
+ogit.automation:adminUrl
     a ogit.core:Attribute;
     rdfs:label "adminUrl";
     dcterms:description "Contains an URL (unified resource locator)";
@@ -599,7 +599,7 @@ ogit.Automation:adminUrl
         ];
 .
 
-ogit.Automation:affectedNodeId
+ogit.automation:affectedNodeId
     a ogit.core:Attribute;
     rdfs:label "affectedNodeId";
     dcterms:description "Contains the ID of the node which is affected by this entity.";
@@ -618,7 +618,7 @@ ogit.Automation:affectedNodeId
         ];
 .
 
-ogit.Automation:appInfrastructureType
+ogit.automation:appInfrastructureType
     a ogit.core:Attribute;
     rdfs:label "appInfrastructureType";
     dcterms:description "Contains the application infrastructure type.";
@@ -637,7 +637,7 @@ ogit.Automation:appInfrastructureType
         ];
 .
 
-ogit.Automation:appInstanceType
+ogit.automation:appInstanceType
     a ogit.core:Attribute;
     rdfs:label "appInstanceType";
     dcterms:description "Contains the instance type.";
@@ -656,7 +656,7 @@ ogit.Automation:appInstanceType
         ];
 .
 
-ogit.Automation:appServer
+ogit.automation:appServer
     a ogit.core:Attribute;
     rdfs:label "appServer";
     dcterms:description "Contains application server.";
@@ -675,7 +675,7 @@ ogit.Automation:appServer
         ];
 .
 
-ogit.Automation:basicConfigId
+ogit.automation:basicConfigId
     a ogit.core:Attribute;
     rdfs:label "basicConfigId";
     dcterms:description "Contains the internal identifier of the basic configuration of a component .";
@@ -694,7 +694,7 @@ ogit.Automation:basicConfigId
         ];
 .
 
-ogit.Automation:brand
+ogit.automation:brand
     a ogit.core:Attribute;
     rdfs:label "brand";
     dcterms:description "Contains the brand of a component/device.";
@@ -713,7 +713,7 @@ ogit.Automation:brand
         ];
 .
 
-ogit.Automation:buildName
+ogit.automation:buildName
     a ogit.core:Attribute;
     rdfs:label "buildName";
     dcterms:description "Contains the build name of a component.";
@@ -732,7 +732,7 @@ ogit.Automation:buildName
         ];
 .
 
-ogit.Automation:buildType
+ogit.automation:buildType
     a ogit.core:Attribute;
     rdfs:label "buildType";
     dcterms:description "Contains the build type of a component.";
@@ -751,7 +751,7 @@ ogit.Automation:buildType
         ];
 .
 
-ogit.Automation:command
+ogit.automation:command
     a ogit.core:Attribute;
     rdfs:label "command";
     dcterms:description "Contains an automation command.";
@@ -770,7 +770,7 @@ ogit.Automation:command
         ];
 .
 
-ogit.Automation:companyName
+ogit.automation:companyName
     a ogit.core:Attribute;
     rdfs:label "companyName";
     dcterms:description "Contains the company name of a component.";
@@ -789,7 +789,7 @@ ogit.Automation:companyName
         ];
 .
 
-ogit.Automation:contextPath
+ogit.automation:contextPath
     a ogit.core:Attribute;
     rdfs:label "contextPath";
     dcterms:description "Contains the context path of a component.";
@@ -808,7 +808,7 @@ ogit.Automation:contextPath
         ];
 .
 
-ogit.Automation:cpuCoreCount
+ogit.automation:cpuCoreCount
     a ogit.core:Attribute;
     rdfs:label "cpuCoreCount";
     dcterms:description "Contains the number of cpu cores.";
@@ -827,7 +827,7 @@ ogit.Automation:cpuCoreCount
         ];
 .
 
-ogit.Automation:cpuCount
+ogit.automation:cpuCount
     a ogit.core:Attribute;
     rdfs:label "cpuCount";
     dcterms:description "An integer which shows the number of cps of a component.";
@@ -846,7 +846,7 @@ ogit.Automation:cpuCount
         ];
 .
 
-ogit.Automation:cpuManufacturer
+ogit.automation:cpuManufacturer
     a ogit.core:Attribute;
     rdfs:label "cpuManufacturer";
     dcterms:description "Contains the manufacturer of the cpu of a device.";
@@ -865,7 +865,7 @@ ogit.Automation:cpuManufacturer
         ];
 .
 
-ogit.Automation:cpuModel
+ogit.automation:cpuModel
     a ogit.core:Attribute;
     rdfs:label "cpuModel";
     dcterms:description "Contains the model of the cpu.";
@@ -884,7 +884,7 @@ ogit.Automation:cpuModel
         ];
 .
 
-ogit.Automation:cpuSpeed
+ogit.automation:cpuSpeed
     a ogit.core:Attribute;
     rdfs:label "cpuSpeed";
     dcterms:description "An floating point number which shows the cpu speed in GHZ.";
@@ -903,7 +903,7 @@ ogit.Automation:cpuSpeed
         ];
 .
 
-ogit.Automation:cpuType
+ogit.automation:cpuType
     a ogit.core:Attribute;
     rdfs:label "cpuType";
     dcterms:description "Contains the cpu type of a device.";
@@ -922,7 +922,7 @@ ogit.Automation:cpuType
         ];
 .
 
-ogit.Automation:dataClassification
+ogit.automation:dataClassification
     a ogit.core:Attribute;
     rdfs:label "dataClassification";
     dcterms:description "Data classification of a component.";
@@ -941,7 +941,7 @@ ogit.Automation:dataClassification
         ];
 .
 
-ogit.Automation:dataPrivacy
+ogit.automation:dataPrivacy
     a ogit.core:Attribute;
     rdfs:label "dataPrivacy";
     dcterms:description "Data privacy of a component.";
@@ -960,7 +960,7 @@ ogit.Automation:dataPrivacy
         ];
 .
 
-ogit.Automation:databaseSchema
+ogit.automation:databaseSchema
     a ogit.core:Attribute;
     rdfs:label "databaseSchema";
     dcterms:description "Contains information about the database schema. The schema is the skeleton structure that represents the logical view of the entire database";
@@ -979,7 +979,7 @@ ogit.Automation:databaseSchema
         ];
 .
 
-ogit.Automation:databaseServer
+ogit.automation:databaseServer
     a ogit.core:Attribute;
     rdfs:label "databaseServer";
     dcterms:description "Contains information about the database server.";
@@ -998,7 +998,7 @@ ogit.Automation:databaseServer
         ];
 .
 
-ogit.Automation:deployStatus
+ogit.automation:deployStatus
     a ogit.core:Attribute;
     rdfs:label "deployStatus";
     dcterms:description "String value, represents the status if an automation Knowledge Item is not deployed into an Automation Engine.";
@@ -1017,7 +1017,7 @@ ogit.Automation:deployStatus
         ];
 .
 
-ogit.Automation:deployToEngine
+ogit.automation:deployToEngine
     a ogit.core:Attribute;
     rdfs:label "deployToEngine";
     dcterms:description "Boolean value, true if an automation Knowledge Item can deploy into an Automation Engine.";
@@ -1036,7 +1036,7 @@ ogit.Automation:deployToEngine
         ];
 .
 
-ogit.Automation:diskCount
+ogit.automation:diskCount
     a ogit.core:Attribute;
     rdfs:label "diskCount";
     dcterms:description "An integer which shows the number of disks of a component.";
@@ -1055,7 +1055,7 @@ ogit.Automation:diskCount
         ];
 .
 
-ogit.Automation:diskSpace
+ogit.automation:diskSpace
     a ogit.core:Attribute;
     rdfs:label "diskSpace";
     dcterms:description "An integer which contains the disk space in GB.";
@@ -1074,7 +1074,7 @@ ogit.Automation:diskSpace
         ];
 .
 
-ogit.Automation:domain
+ogit.automation:domain
     a ogit.core:Attribute;
     rdfs:label "domain";
     dcterms:description "Contains the domain name.";
@@ -1093,7 +1093,7 @@ ogit.Automation:domain
         ];
 .
 
-ogit.Automation:exchangeRate
+ogit.automation:exchangeRate
     a ogit.core:Attribute;
     rdfs:label "exchangeRate";
     dcterms:description "Contains the data rate exchanged.";
@@ -1112,7 +1112,7 @@ ogit.Automation:exchangeRate
         ];
 .
 
-ogit.Automation:firewallStatus
+ogit.automation:firewallStatus
     a ogit.core:Attribute;
     rdfs:label "firewallStatus";
     dcterms:description "Contains information about the firewall status.";
@@ -1131,7 +1131,7 @@ ogit.Automation:firewallStatus
         ];
 .
 
-ogit.Automation:firmwareVersion
+ogit.automation:firmwareVersion
     a ogit.core:Attribute;
     rdfs:label "firmWareVersion";
     dcterms:description "Version of the firmware.";
@@ -1150,7 +1150,7 @@ ogit.Automation:firmwareVersion
         ];
 .
 
-ogit.Automation:fqdn
+ogit.automation:fqdn
     a ogit.core:Attribute;
     rdfs:label "fqdn";
     dcterms:description "Contains a fully qualified domain name.";
@@ -1169,7 +1169,7 @@ ogit.Automation:fqdn
         ];
 .
 
-ogit.Automation:governingContract
+ogit.automation:governingContract
     a ogit.core:Attribute;
     rdfs:label "governingContract";
     dcterms:description "Contains information about the governing contract.";
@@ -1188,7 +1188,7 @@ ogit.Automation:governingContract
         ];
 .
 
-ogit.Automation:host
+ogit.automation:host
     a ogit.core:Attribute;
     rdfs:label "host";
     dcterms:description "Contains the host name.";
@@ -1207,7 +1207,7 @@ ogit.Automation:host
         ];
 .
 
-ogit.Automation:installCount
+ogit.automation:installCount
     a ogit.core:Attribute;
     rdfs:label "installCount";
     dcterms:description "Contains an integer. This integer can be adjust automatically when software is added to or deleted from configuration items (CIs).";
@@ -1226,7 +1226,7 @@ ogit.Automation:installCount
         ];
 .
 
-ogit.Automation:installPath
+ogit.automation:installPath
     a ogit.core:Attribute;
     rdfs:label "installPath";
     dcterms:description "Contains the installation path of a component.";
@@ -1245,7 +1245,7 @@ ogit.Automation:installPath
         ];
 .
 
-ogit.Automation:isDeployed
+ogit.automation:isDeployed
     a ogit.core:Attribute;
     rdfs:label "isDeployed";
     dcterms:description "Boolean value, true if an automation Knowledge Item is deployed into an Automation Engine.";
@@ -1264,7 +1264,7 @@ ogit.Automation:isDeployed
         ];
 .
 
-ogit.Automation:issueFormalRepresentation
+ogit.automation:issueFormalRepresentation
     a ogit.core:Attribute;
     rdfs:label "issueFormalRepresentation";
     dcterms:description "Contains an issue in XML representation defined by IssueSchema.";
@@ -1283,7 +1283,7 @@ ogit.Automation:issueFormalRepresentation
         ];
 .
 
-ogit.Automation:knowledgeItemFormalRepresentation
+ogit.automation:knowledgeItemFormalRepresentation
     a ogit.core:Attribute;
     rdfs:label "knowledgeItemFormalRepresentation";
     dcterms:description "Contains an automation Knowledge Item (KI) in XML representation defined by KiSchema.";
@@ -1302,7 +1302,7 @@ ogit.Automation:knowledgeItemFormalRepresentation
         ];
 .
 
-ogit.Automation:knowledgeItemId
+ogit.automation:knowledgeItemId
     a ogit.core:Attribute;
     rdfs:label "knowledgeItemId";
     dcterms:description "Contains a KnowledgeItemID in string representation.";
@@ -1321,7 +1321,7 @@ ogit.Automation:knowledgeItemId
         ];
 .
 
-ogit.Automation:knowledgeItemTier
+ogit.automation:knowledgeItemTier
     a ogit.core:Attribute;
     rdfs:label "knowledgeItemTier";
     dcterms:description "Numeric value describing KnowledgeItem Tier.";
@@ -1340,7 +1340,7 @@ ogit.Automation:knowledgeItemTier
         ];
 .
 
-ogit.Automation:licenseAvailability
+ogit.automation:licenseAvailability
     a ogit.core:Attribute;
     rdfs:label "licenseAvailability";
     dcterms:description "The availability of the license of a component.";
@@ -1359,7 +1359,7 @@ ogit.Automation:licenseAvailability
         ];
 .
 
-ogit.Automation:licenseName
+ogit.automation:licenseName
     a ogit.core:Attribute;
     rdfs:label "licenseName";
     dcterms:description "Contains the license name of a component.";
@@ -1378,7 +1378,7 @@ ogit.Automation:licenseName
         ];
 .
 
-ogit.Automation:licenseType
+ogit.automation:licenseType
     a ogit.core:Attribute;
     rdfs:label "licenseType";
     dcterms:description "Contains the license type of a component.";
@@ -1397,7 +1397,7 @@ ogit.Automation:licenseType
         ];
 .
 
-ogit.Automation:logLevel
+ogit.automation:logLevel
     a ogit.core:Attribute;
     rdfs:label "logLevel";
     dcterms:description "Contains the numeric log level of the history entry.";
@@ -1416,7 +1416,7 @@ ogit.Automation:logLevel
         ];
 .
 
-ogit.Automation:maidFormalRepresentation
+ogit.automation:maidFormalRepresentation
     a ogit.core:Attribute;
     rdfs:label "maidFormalRepresentation";
     dcterms:description "Contains a MAID in XML representation defined by MAIDSchema.";
@@ -1435,7 +1435,7 @@ ogit.Automation:maidFormalRepresentation
         ];
 .
 
-ogit.Automation:marsNodeFormalRepresentation
+ogit.automation:marsNodeFormalRepresentation
     a ogit.core:Attribute;
     rdfs:label "marsNodeFormalRepresentation";
     dcterms:description "Contains MARS in XML representation defined by MARSSchema2013.";
@@ -1454,7 +1454,7 @@ ogit.Automation:marsNodeFormalRepresentation
         ];
 .
 
-ogit.Automation:marsNodeType
+ogit.automation:marsNodeType
     a ogit.core:Attribute;
     rdfs:label "marsNodeType";
     dcterms:description "Contains The Type of the Mars Node. Should be one of Application, Machine, Software, Resource.";
@@ -1473,7 +1473,7 @@ ogit.Automation:marsNodeType
         ];
 .
 
-ogit.Automation:memory
+ogit.automation:memory
     a ogit.core:Attribute;
     rdfs:label "memory";
     dcterms:description "Contains a the total physical memory (RAM) in MB.";
@@ -1492,7 +1492,7 @@ ogit.Automation:memory
         ];
 .
 
-ogit.Automation:middlewareType
+ogit.automation:middlewareType
     a ogit.core:Attribute;
     rdfs:label "middlewareType";
     dcterms:description "Contains information about the type of middleware. For example it  database middleware, application server middleware or a message-oriented middleware.";
@@ -1511,7 +1511,7 @@ ogit.Automation:middlewareType
         ];
 .
 
-ogit.Automation:moveToProductionAt
+ogit.automation:moveToProductionAt
     a ogit.core:Attribute;
     rdfs:label "moveToProductionAt";
     dcterms:description """Defines the time when something was actually moved to production.
@@ -1531,7 +1531,7 @@ The values can combine date and time with time zone designator according to ISO 
         ];
 .
 
-ogit.Automation:objectIdentifier
+ogit.automation:objectIdentifier
     a ogit.core:Attribute;
     rdfs:label "objectIdentifier";
     dcterms:description "Contains a system object identifier.";
@@ -1550,7 +1550,7 @@ ogit.Automation:objectIdentifier
         ];
 .
 
-ogit.Automation:osKey
+ogit.automation:osKey
     a ogit.core:Attribute;
     rdfs:label "osKey";
     dcterms:description "Product key for the Operating System.";
@@ -1569,7 +1569,7 @@ ogit.Automation:osKey
         ];
 .
 
-ogit.Automation:osLicense
+ogit.automation:osLicense
     a ogit.core:Attribute;
     rdfs:label "osLicense";
     dcterms:description "License of the Operating System.";
@@ -1588,7 +1588,7 @@ ogit.Automation:osLicense
         ];
 .
 
-ogit.Automation:osManufacturer
+ogit.automation:osManufacturer
     a ogit.core:Attribute;
     rdfs:label "osManufacturer";
     dcterms:description "Contains the manufacturer of the operating system.";
@@ -1607,7 +1607,7 @@ ogit.Automation:osManufacturer
         ];
 .
 
-ogit.Automation:osName
+ogit.automation:osName
     a ogit.core:Attribute;
     rdfs:label "osName";
     dcterms:description "Contains operating system name.";
@@ -1626,7 +1626,7 @@ ogit.Automation:osName
         ];
 .
 
-ogit.Automation:osServicePack
+ogit.automation:osServicePack
     a ogit.core:Attribute;
     rdfs:label "osServicePack";
     dcterms:description "Contains the service pack for the operating system.";
@@ -1645,7 +1645,7 @@ ogit.Automation:osServicePack
         ];
 .
 
-ogit.Automation:osVersion
+ogit.automation:osVersion
     a ogit.core:Attribute;
     rdfs:label "osVersion";
     dcterms:description "Version of the Operating System.";
@@ -1664,7 +1664,7 @@ ogit.Automation:osVersion
         ];
 .
 
-ogit.Automation:patchNumber
+ogit.automation:patchNumber
     a ogit.core:Attribute;
     rdfs:label "patchNumber";
     dcterms:description "Contains a patch number.";
@@ -1683,7 +1683,7 @@ ogit.Automation:patchNumber
         ];
 .
 
-ogit.Automation:portNumber
+ogit.automation:portNumber
     a ogit.core:Attribute;
     rdfs:label "portNumber";
     dcterms:description "Contains a port number.";
@@ -1702,7 +1702,7 @@ ogit.Automation:portNumber
         ];
 .
 
-ogit.Automation:portNumberListener
+ogit.automation:portNumberListener
     a ogit.core:Attribute;
     rdfs:label "portNumberListener";
     dcterms:description "Contains a port number listener.";
@@ -1721,7 +1721,7 @@ ogit.Automation:portNumberListener
         ];
 .
 
-ogit.Automation:processingTimestamp
+ogit.automation:processingTimestamp
     a ogit.core:Attribute;
     rdfs:label "processingTimestamp";
     dcterms:description "Contains the timestamp indicating last time an aumation issue was processed.";
@@ -1740,7 +1740,7 @@ ogit.Automation:processingTimestamp
         ];
 .
 
-ogit.Automation:projectName
+ogit.automation:projectName
     a ogit.core:Attribute;
     rdfs:label "projectName";
     dcterms:description "Contains the project name of a component.";
@@ -1759,7 +1759,7 @@ ogit.Automation:projectName
         ];
 .
 
-ogit.Automation:serialNumber
+ogit.automation:serialNumber
     a ogit.core:Attribute;
     rdfs:label "serialNumber";
     dcterms:description "Contains a the serial number of a device/component.";
@@ -1778,7 +1778,7 @@ ogit.Automation:serialNumber
         ];
 .
 
-ogit.Automation:serviceClass
+ogit.automation:serviceClass
     a ogit.core:Attribute;
     rdfs:label "serviceClass";
     dcterms:description "Contains the class of the service.";
@@ -1797,7 +1797,7 @@ ogit.Automation:serviceClass
         ];
 .
 
-ogit.Automation:serviceId
+ogit.automation:serviceId
     a ogit.core:Attribute;
     rdfs:label "serviceId";
     dcterms:description "Contains the Id of the service.";
@@ -1816,7 +1816,7 @@ ogit.Automation:serviceId
         ];
 .
 
-ogit.Automation:serviceName
+ogit.automation:serviceName
     a ogit.core:Attribute;
     rdfs:label "serviceName";
     dcterms:description "Contains the name of a service.";
@@ -1835,7 +1835,7 @@ ogit.Automation:serviceName
         ];
 .
 
-ogit.Automation:serviceStatus
+ogit.automation:serviceStatus
     a ogit.core:Attribute;
     rdfs:label "serviceStatus";
     dcterms:description "Contains the status of a service.";
@@ -1854,7 +1854,7 @@ ogit.Automation:serviceStatus
         ];
 .
 
-ogit.Automation:serviceType
+ogit.automation:serviceType
     a ogit.core:Attribute;
     rdfs:label "serviceType";
     dcterms:description "Contains the Type of a service.";
@@ -1873,7 +1873,7 @@ ogit.Automation:serviceType
         ];
 .
 
-ogit.Automation:servletClass
+ogit.automation:servletClass
     a ogit.core:Attribute;
     rdfs:label "servletClass";
     dcterms:description "Contains the class of the servlet.";
@@ -1892,7 +1892,7 @@ ogit.Automation:servletClass
         ];
 .
 
-ogit.Automation:servletName
+ogit.automation:servletName
     a ogit.core:Attribute;
     rdfs:label "servletName";
     dcterms:description "Contains the name if the servlet.";
@@ -1911,7 +1911,7 @@ ogit.Automation:servletName
         ];
 .
 
-ogit.Automation:software
+ogit.automation:software
     a ogit.core:Attribute;
     rdfs:label "software";
     dcterms:description "A software component.";
@@ -1930,7 +1930,7 @@ ogit.Automation:software
         ];
 .
 
-ogit.Automation:softwareKey
+ogit.automation:softwareKey
     a ogit.core:Attribute;
     rdfs:label "softwareKey";
     dcterms:description "Contains the key of a software.";
@@ -1949,7 +1949,7 @@ ogit.Automation:softwareKey
         ];
 .
 
-ogit.Automation:systemClass
+ogit.automation:systemClass
     a ogit.core:Attribute;
     rdfs:label "systemClass";
     dcterms:description "Contains the class of the system.";
@@ -1968,7 +1968,7 @@ ogit.Automation:systemClass
         ];
 .
 
-ogit.Automation:systemType
+ogit.automation:systemType
     a ogit.core:Attribute;
     rdfs:label "systemType";
     dcterms:description "Contains the type of the system.";
@@ -1987,7 +1987,7 @@ ogit.Automation:systemType
         ];
 .
 
-ogit.Automation:tcpPort
+ogit.automation:tcpPort
     a ogit.core:Attribute;
     rdfs:label "tcpPort";
     dcterms:description "The tcp port.";
@@ -2006,7 +2006,7 @@ ogit.Automation:tcpPort
         ];
 .
 
-ogit.Automation:virtualMachineName
+ogit.automation:virtualMachineName
     a ogit.core:Attribute;
     rdfs:label "virtualMachineName";
     dcterms:description "Contains the name of the virtual machine.";
@@ -2025,7 +2025,7 @@ ogit.Automation:virtualMachineName
         ];
 .
 
-ogit.Automation:virtualSystemName
+ogit.automation:virtualSystemName
     a ogit.core:Attribute;
     rdfs:label "virtualSystemName";
     dcterms:description "Contains the name of the virtual system.";
@@ -2044,7 +2044,7 @@ ogit.Automation:virtualSystemName
         ];
 .
 
-ogit.Automation:virtualSystemType
+ogit.automation:virtualSystemType
     a ogit.core:Attribute;
     rdfs:label "virtualSystemType";
     dcterms:description "Contains the type of the virtual system.";
@@ -2063,7 +2063,7 @@ ogit.Automation:virtualSystemType
         ];
 .
 
-ogit.Automation:webServer
+ogit.automation:webServer
     a ogit.core:Attribute;
     rdfs:label "webServer";
     dcterms:description "Contains an webServer.";

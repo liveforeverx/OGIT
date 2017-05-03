@@ -1,7 +1,7 @@
 @prefix dcterms:         <http://purl.org/dc/terms/> .
 @prefix ogit:            <http://www.purl.org/ogit/> .
-@prefix ogit.OSCL-asset: <http://www.purl.org/ogit/OSLC-asset/> .
 @prefix ogit.core:       <http://www.purl.org/ogit/> .
+@prefix ogit.oslc-asset: <http://www.purl.org/ogit/OSLC-asset/> .
 @prefix owl:             <http://www.w3.org/2002/07/owl#> .
 @prefix purl:            <http://www.purl.org/> .
 @prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
@@ -10,13 +10,13 @@
 #
 # Ontology
 #
-ogit:OSCL-asset
+ogit:oslc-asset
     a owl:Ontology;
-    rdfs:label "OGIT oslc-assetmanagement Vocabulary";
+    rdfs:label "OGIT OSLC Asset Management";
     dcterms:creator "arago GmbH";
     dcterms:contributor "Fabian Meyer";
-    vann:preferredNamespaceUri "http://www.purl.org/ogit/OSCL-asset/";
-    vann:preferredNamespacePrefix "ogit.OSCL-asset";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit.oslc-asset/";
+    vann:preferredNamespacePrefix "ogit.oslc-asset";
     owl:versionInfo "__OGIT_VERSION__";
     owl:imports purl:ogit
 .
@@ -24,7 +24,7 @@ ogit:OSCL-asset
 #
 # Entities
 #
-ogit.OSCL-asset:Artifact
+ogit.oslc-asset:Artifact
     a ogit.core:Entity;
     rdfs:label "Artifact";
     ogit.core:original <http://open-services.net/ns/asset#Artifact>;
@@ -46,7 +46,7 @@ ogit.OSCL-asset:Artifact
         ];
 .
 
-ogit.OSCL-asset:Asset
+ogit.oslc-asset:Asset
     a ogit.core:Entity;
     rdfs:label "Asset";
     ogit.core:original <http://open-services.net/ns/asset#Asset>;
@@ -76,7 +76,7 @@ ogit.OSCL-asset:Asset
 #
 # Verbs
 #
-ogit.OSCL-asset:artifact
+ogit.oslc-asset:artifact
     a ogit.core:Verb;
     rdfs:label "artifact";
     ogit.core:original <http://open-services.net/ns/asset#artifact>;
@@ -98,7 +98,7 @@ ogit.OSCL-asset:artifact
         ];
 .
 
-ogit.OSCL-asset:artifactFactory
+ogit.oslc-asset:artifactFactory
     a ogit.core:Verb;
     rdfs:label "artifactFactory";
     ogit.core:original <http://open-services.net/ns/asset#artifactFactory>;
@@ -120,7 +120,7 @@ ogit.OSCL-asset:artifactFactory
         ];
 .
 
-ogit.OSCL-asset:categorization
+ogit.oslc-asset:categorization
     a ogit.core:Verb;
     rdfs:label "categorization";
     ogit.core:original <http://open-services.net/ns/asset#categorization>;
@@ -142,7 +142,7 @@ ogit.OSCL-asset:categorization
         ];
 .
 
-ogit.OSCL-asset:content
+ogit.oslc-asset:content
     a ogit.core:Verb;
     rdfs:label "content";
     ogit.core:original <http://open-services.net/ns/asset#content>;
@@ -164,7 +164,7 @@ ogit.OSCL-asset:content
         ];
 .
 
-ogit.OSCL-asset:guid
+ogit.oslc-asset:guid
     a ogit.core:Verb;
     rdfs:label "guid";
     ogit.core:original <http://open-services.net/ns/asset#guid>;
@@ -186,7 +186,7 @@ ogit.OSCL-asset:guid
         ];
 .
 
-ogit.OSCL-asset:identifier
+ogit.oslc-asset:identifier
     a ogit.core:Verb;
     rdfs:label "identifier";
     ogit.core:original <http://open-services.net/ns/asset#identifier>;
@@ -208,7 +208,7 @@ ogit.OSCL-asset:identifier
         ];
 .
 
-ogit.OSCL-asset:manufacturer
+ogit.oslc-asset:manufacturer
     a ogit.core:Verb;
     rdfs:label "manufacturer";
     ogit.core:original <http://open-services.net/ns/asset#manufacturer>;
@@ -230,7 +230,7 @@ ogit.OSCL-asset:manufacturer
         ];
 .
 
-ogit.OSCL-asset:model
+ogit.oslc-asset:model
     a ogit.core:Verb;
     rdfs:label "model";
     ogit.core:original <http://open-services.net/ns/asset#model>;
@@ -252,7 +252,7 @@ ogit.OSCL-asset:model
         ];
 .
 
-ogit.OSCL-asset:relationshipType
+ogit.oslc-asset:relationshipType
     a ogit.core:Verb;
     rdfs:label "relationshipType";
     ogit.core:original <http://open-services.net/ns/asset#relationshipType>;
@@ -274,7 +274,7 @@ ogit.OSCL-asset:relationshipType
         ];
 .
 
-ogit.OSCL-asset:serialNumber
+ogit.oslc-asset:serialNumber
     a ogit.core:Verb;
     rdfs:label "serialNumber";
     ogit.core:original <http://open-services.net/ns/asset#serialNumber>;
@@ -296,7 +296,7 @@ ogit.OSCL-asset:serialNumber
         ];
 .
 
-ogit.OSCL-asset:size
+ogit.oslc-asset:size
     a ogit.core:Verb;
     rdfs:label "size";
     ogit.core:original <http://open-services.net/ns/asset#size>;
@@ -318,7 +318,7 @@ ogit.OSCL-asset:size
         ];
 .
 
-ogit.OSCL-asset:state
+ogit.oslc-asset:state
     a ogit.core:Verb;
     rdfs:label "state";
     ogit.core:original <http://open-services.net/ns/asset#state>;
@@ -340,7 +340,7 @@ ogit.OSCL-asset:state
         ];
 .
 
-ogit.OSCL-asset:tag
+ogit.oslc-asset:tag
     a ogit.core:Verb;
     rdfs:label "tag";
     ogit.core:original <http://open-services.net/ns/asset#tag>;
@@ -362,7 +362,7 @@ ogit.OSCL-asset:tag
         ];
 .
 
-ogit.OSCL-asset:version
+ogit.oslc-asset:version
     a ogit.core:Verb;
     rdfs:label "version";
     ogit.core:original <http://open-services.net/ns/asset#version>;
@@ -383,4 +383,3 @@ ogit.OSCL-asset:version
             dcterms:creator "OGIT Importer"
         ];
 .
-

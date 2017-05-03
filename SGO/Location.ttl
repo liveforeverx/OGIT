@@ -1,14 +1,14 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
-@prefix ogit.Automation:        <http://www.purl.org/ogit/Automation/> .
-@prefix ogit.Datacenter:        <http://www.purl.org/ogit/Datacenter/> .
-@prefix ogit.ServiceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
 @prefix ogit.asset:             <http://www.purl.org/ogit/> .
+@prefix ogit.automation:        <http://www.purl.org/ogit/Automation/> .
 @prefix ogit.core:              <http://www.purl.org/ogit/> .
+@prefix ogit.datacenter:        <http://www.purl.org/ogit/Datacenter/> .
 @prefix ogit.foundation:        <http://www.purl.org/ogit/> .
 @prefix ogit.location:          <http://www.purl.org/ogit/> .
 @prefix ogit.organization:      <http://www.purl.org/ogit/> .
 @prefix ogit.person:            <http://www.purl.org/ogit/> .
+@prefix ogit.serviceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
 @prefix owl:                    <http://www.w3.org/2002/07/owl#> .
 @prefix purl:                   <http://www.purl.org/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
@@ -127,11 +127,11 @@ ogit.location:locatedIn
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:from ogit.automation:MARSNode;
             ogit.core:to ogit.location:Region
         ],
         [
-            ogit.core:from ogit.Datacenter:Datacenter;
+            ogit.core:from ogit.datacenter:Datacenter;
             ogit.core:to ogit.location:Location
         ],
         [
@@ -147,7 +147,7 @@ ogit.location:locatedIn
             ogit.core:to ogit.location:Location
         ],
         [
-            ogit.core:from ogit.ServiceManagement:Offering;
+            ogit.core:from ogit.serviceManagement:Offering;
             ogit.core:to ogit.location:Location
         ],
         [
@@ -163,19 +163,19 @@ ogit.location:locatedIn
             ogit.core:to ogit.location:Location
         ],
         [
-            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:from ogit.serviceManagement:Incident;
             ogit.core:to ogit.location:Location
         ],
         [
-            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:from ogit.serviceManagement:ChangeRequest;
             ogit.core:to ogit.location:Location
         ],
         [
-            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:from ogit.automation:MARSNode;
             ogit.core:to ogit.location:Location
         ],
         [
-            ogit.core:from ogit.ServiceManagement:SubTask;
+            ogit.core:from ogit.serviceManagement:SubTask;
             ogit.core:to ogit.location:Location
         ];
 .

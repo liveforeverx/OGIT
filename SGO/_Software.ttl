@@ -1,21 +1,21 @@
 @prefix dcterms:        <http://purl.org/dc/terms/> .
 @prefix ogit:           <http://www.purl.org/ogit/> .
-@prefix ogit.Network:   <http://www.purl.org/ogit/Network/> .
-@prefix ogit.Software:  <http://www.purl.org/ogit/Software/> .
-@prefix ogit._Software: <http://www.purl.org/ogit/> .
+@prefix ogit._software: <http://www.purl.org/ogit/> .
 @prefix ogit.core:      <http://www.purl.org/ogit/> .
+@prefix ogit.network:   <http://www.purl.org/ogit/Network/> .
+@prefix ogit.software:  <http://www.purl.org/ogit/Software/> .
 @prefix owl:            <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
 
 #
 # Ontology
 #
-ogit:Software a owl:Ontology .
+ogit:software a owl:Ontology .
 
 #
 # Verbs
 #
-ogit._Software:transfers
+ogit._software:transfers
     a ogit.core:Verb;
     rdfs:label "transfers";
     dcterms:description "Indicates if one entity transfers information to another.";
@@ -34,11 +34,11 @@ ogit._Software:transfers
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.Software:SoftwareConnection;
-            ogit.core:to ogit.Network:NetworkLink
+            ogit.core:from ogit.software:SoftwareConnection;
+            ogit.core:to ogit.network:NetworkLink
         ],
         [
-            ogit.core:from ogit.Software:SoftwareConnection;
-            ogit.core:to ogit.Software:Data
+            ogit.core:from ogit.software:SoftwareConnection;
+            ogit.core:to ogit.software:Data
         ];
 .

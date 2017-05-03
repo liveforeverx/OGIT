@@ -1,7 +1,7 @@
 @prefix dcterms:      <http://purl.org/dc/terms/> .
 @prefix ogit:         <http://www.purl.org/ogit/> .
-@prefix ogit.OSLC-cm: <http://www.purl.org/ogit/OSLC-cm/> .
 @prefix ogit.core:    <http://www.purl.org/ogit/> .
+@prefix ogit.oslc-cm: <http://www.purl.org/ogit/OSLC-cm/> .
 @prefix owl:          <http://www.w3.org/2002/07/owl#> .
 @prefix purl:         <http://www.purl.org/> .
 @prefix rdfs:         <http://www.w3.org/2000/01/rdf-schema#> .
@@ -10,13 +10,13 @@
 #
 # Ontology
 #
-ogit:OSLC-cm
+ogit:oslc-cm
     a owl:Ontology;
-    rdfs:label "OGIT oslc-changemanagement Vocabulary";
+    rdfs:label "OGIT OSLC Change Management";
     dcterms:creator "arago GmbH";
     dcterms:contributor "Fabian Meyer";
     vann:preferredNamespaceUri "http://www.purl.org/ogit/OSLC-cm/";
-    vann:preferredNamespacePrefix "ogit.OSLC-cm";
+    vann:preferredNamespacePrefix "ogit.oslc-cm";
     owl:versionInfo "__OGIT_VERSION__";
     owl:imports purl:ogit
 .
@@ -24,7 +24,7 @@ ogit:OSLC-cm
 #
 # Entities
 #
-ogit.OSLC-cm:ChangeRequest
+ogit.oslc-cm:ChangeRequest
     a ogit.core:Entity;
     rdfs:label "ChangeRequest";
     ogit.core:original <http://open-services.net/ns/cm#ChangeRequest>;
@@ -50,7 +50,7 @@ ogit.OSLC-cm:ChangeRequest
 #
 # Attributes
 #
-ogit.OSLC-cm:affectsPlanItem
+ogit.oslc-cm:affectsPlanItem
     a ogit.core:Attribute;
     rdfs:label "affectsPlanItem";
     ogit.core:original <http://open-services.net/ns/cm#affectsPlanItem>;
@@ -73,7 +73,7 @@ ogit.OSLC-cm:affectsPlanItem
         ];
 .
 
-ogit.OSLC-cm:affectsRequirement
+ogit.oslc-cm:affectsRequirement
     a ogit.core:Attribute;
     rdfs:label "affectsRequirement";
     ogit.core:original <http://open-services.net/ns/cm#affectsRequirement>;
@@ -96,7 +96,7 @@ ogit.OSLC-cm:affectsRequirement
         ];
 .
 
-ogit.OSLC-cm:approved
+ogit.oslc-cm:approved
     a ogit.core:Attribute;
     rdfs:label "approved";
     ogit.core:original <http://open-services.net/ns/cm#approved>;
@@ -119,7 +119,7 @@ ogit.OSLC-cm:approved
         ];
 .
 
-ogit.OSLC-cm:closeDate
+ogit.oslc-cm:closeDate
     a ogit.core:Attribute;
     rdfs:label "closeDate";
     ogit.core:original <http://open-services.net/ns/cm#closeDate>;
@@ -142,7 +142,7 @@ ogit.OSLC-cm:closeDate
         ];
 .
 
-ogit.OSLC-cm:closed
+ogit.oslc-cm:closed
     a ogit.core:Attribute;
     rdfs:label "closed";
     ogit.core:original <http://open-services.net/ns/cm#closed>;
@@ -165,7 +165,7 @@ ogit.OSLC-cm:closed
         ];
 .
 
-ogit.OSLC-cm:fixed
+ogit.oslc-cm:fixed
     a ogit.core:Attribute;
     rdfs:label "fixed";
     ogit.core:original <http://open-services.net/ns/cm#fixed>;
@@ -188,7 +188,7 @@ ogit.OSLC-cm:fixed
         ];
 .
 
-ogit.OSLC-cm:inprogress
+ogit.oslc-cm:inprogress
     a ogit.core:Attribute;
     rdfs:label "inprogress";
     ogit.core:original <http://open-services.net/ns/cm#inprogress>;
@@ -211,7 +211,7 @@ ogit.OSLC-cm:inprogress
         ];
 .
 
-ogit.OSLC-cm:reviewed
+ogit.oslc-cm:reviewed
     a ogit.core:Attribute;
     rdfs:label "reviewed";
     ogit.core:original <http://open-services.net/ns/cm#reviewed>;
@@ -234,7 +234,7 @@ ogit.OSLC-cm:reviewed
         ];
 .
 
-ogit.OSLC-cm:status
+ogit.oslc-cm:status
     a ogit.core:Attribute;
     rdfs:label "status";
     ogit.core:original <http://open-services.net/ns/cm#status>;
@@ -257,7 +257,7 @@ ogit.OSLC-cm:status
         ];
 .
 
-ogit.OSLC-cm:tracksChangeSet
+ogit.oslc-cm:tracksChangeSet
     a ogit.core:Attribute;
     rdfs:label "tracksChangeSet";
     ogit.core:original <http://open-services.net/ns/cm#tracksChangeSet>;
@@ -280,7 +280,7 @@ ogit.OSLC-cm:tracksChangeSet
         ];
 .
 
-ogit.OSLC-cm:tracksRequirement
+ogit.oslc-cm:tracksRequirement
     a ogit.core:Attribute;
     rdfs:label "tracksRequirement";
     ogit.core:original <http://open-services.net/ns/cm#tracksRequirement>;
@@ -303,7 +303,7 @@ ogit.OSLC-cm:tracksRequirement
         ];
 .
 
-ogit.OSLC-cm:verified
+ogit.oslc-cm:verified
     a ogit.core:Attribute;
     rdfs:label "verified";
     ogit.core:original <http://open-services.net/ns/cm#verified>;
@@ -330,7 +330,7 @@ ogit.OSLC-cm:verified
 #
 # Verbs
 #
-ogit.OSLC-cm:affectedByDefect
+ogit.oslc-cm:affectedByDefect
     a ogit.core:Verb;
     rdfs:label "affectedByDefect";
     ogit.core:original <http://open-services.net/ns/cm#affectedByDefect>;
@@ -352,7 +352,7 @@ ogit.OSLC-cm:affectedByDefect
         ];
 .
 
-ogit.OSLC-cm:affectsTestResult
+ogit.oslc-cm:affectsTestResult
     a ogit.core:Verb;
     rdfs:label "affectsTestResult";
     ogit.core:original <http://open-services.net/ns/cm#affectsTestResult>;
@@ -374,7 +374,7 @@ ogit.OSLC-cm:affectsTestResult
         ];
 .
 
-ogit.OSLC-cm:blocksTestExecutionRecord
+ogit.oslc-cm:blocksTestExecutionRecord
     a ogit.core:Verb;
     rdfs:label "blocksTestExecutionRecord";
     ogit.core:original <http://open-services.net/ns/cm#blocksTestExecutionRecord>;
@@ -396,7 +396,7 @@ ogit.OSLC-cm:blocksTestExecutionRecord
         ];
 .
 
-ogit.OSLC-cm:implementsRequirement
+ogit.oslc-cm:implementsRequirement
     a ogit.core:Verb;
     rdfs:label "implementsRequirement";
     ogit.core:original <http://open-services.net/ns/cm#implementsRequirement>;
@@ -418,7 +418,7 @@ ogit.OSLC-cm:implementsRequirement
         ];
 .
 
-ogit.OSLC-cm:relatedChangeRequest
+ogit.oslc-cm:relatedChangeRequest
     a ogit.core:Verb;
     rdfs:label "relatedChangeRequest";
     ogit.core:original <http://open-services.net/ns/cm#relatedChangeRequest>;
@@ -440,7 +440,7 @@ ogit.OSLC-cm:relatedChangeRequest
         ];
 .
 
-ogit.OSLC-cm:relatedTestCase
+ogit.oslc-cm:relatedTestCase
     a ogit.core:Verb;
     rdfs:label "relatedTestCase";
     ogit.core:original <http://open-services.net/ns/cm#relatedTestCase>;
@@ -462,7 +462,7 @@ ogit.OSLC-cm:relatedTestCase
         ];
 .
 
-ogit.OSLC-cm:relatedTestExecutionRecord
+ogit.oslc-cm:relatedTestExecutionRecord
     a ogit.core:Verb;
     rdfs:label "relatedTestExecutionRecord";
     ogit.core:original <http://open-services.net/ns/cm#relatedTestExecutionRecord>;
@@ -484,7 +484,7 @@ ogit.OSLC-cm:relatedTestExecutionRecord
         ];
 .
 
-ogit.OSLC-cm:relatedTestPlan
+ogit.oslc-cm:relatedTestPlan
     a ogit.core:Verb;
     rdfs:label "relatedTestPlan";
     ogit.core:original <http://open-services.net/ns/cm#relatedTestPlan>;
@@ -506,7 +506,7 @@ ogit.OSLC-cm:relatedTestPlan
         ];
 .
 
-ogit.OSLC-cm:relatedTestScript
+ogit.oslc-cm:relatedTestScript
     a ogit.core:Verb;
     rdfs:label "relatedTestScript";
     ogit.core:original <http://open-services.net/ns/cm#relatedTestScript>;
@@ -528,7 +528,7 @@ ogit.OSLC-cm:relatedTestScript
         ];
 .
 
-ogit.OSLC-cm:testedByTestCase
+ogit.oslc-cm:testedByTestCase
     a ogit.core:Verb;
     rdfs:label "testedByTestCase";
     ogit.core:original <http://open-services.net/ns/cm#testedByTestCase>;
@@ -549,4 +549,3 @@ ogit.OSLC-cm:testedByTestCase
             dcterms:creator "OGIT Importer"
         ];
 .
-

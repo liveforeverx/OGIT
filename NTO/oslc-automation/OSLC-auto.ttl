@@ -1,7 +1,7 @@
 @prefix dcterms:        <http://purl.org/dc/terms/> .
 @prefix ogit:           <http://www.purl.org/ogit/> .
-@prefix ogit.OSCL-auto: <http://www.purl.org/ogit/OSCL-auto/> .
 @prefix ogit.core:      <http://www.purl.org/ogit/> .
+@prefix ogit.oslc-auto: <http://www.purl.org/ogit.oslc-auto/> .
 @prefix owl:            <http://www.w3.org/2002/07/owl#> .
 @prefix purl:           <http://www.purl.org/> .
 @prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
@@ -10,13 +10,13 @@
 #
 # Ontology
 #
-ogit:OSCL-auto
+ogit:oslc-auto
     a owl:Ontology;
-    rdfs:label "OGIT oslc-automation Vocabulary";
+    rdfs:label "OGIT OSLC Automation";
     dcterms:creator "arago GmbH";
     dcterms:contributor "Fabian Meyer";
-    vann:preferredNamespaceUri "http://www.purl.org/ogit/OSCL-auto/";
-    vann:preferredNamespacePrefix "ogit.OSCL-auto";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit.oslc-auto/";
+    vann:preferredNamespacePrefix "ogit.oslc-auto";
     owl:versionInfo "__OGIT_VERSION__";
     owl:imports purl:ogit
 .
@@ -24,7 +24,7 @@ ogit:OSCL-auto
 #
 # Entities
 #
-ogit.OSCL-auto:AutomationPlan
+ogit.oslc-auto:AutomationPlan
     a ogit.core:Entity;
     rdfs:label "AutomationPlan";
     ogit.core:original <http://open-services.net/ns/auto#AutomationPlan>;
@@ -46,7 +46,7 @@ ogit.OSCL-auto:AutomationPlan
         ];
 .
 
-ogit.OSCL-auto:AutomationRequest
+ogit.oslc-auto:AutomationRequest
     a ogit.core:Entity;
     rdfs:label "AutomationRequest";
     ogit.core:original <http://open-services.net/ns/auto#AutomationRequest>;
@@ -68,7 +68,7 @@ ogit.OSCL-auto:AutomationRequest
         ];
 .
 
-ogit.OSCL-auto:AutomationResult
+ogit.oslc-auto:AutomationResult
     a ogit.core:Entity;
     rdfs:label "AutomationResult";
     ogit.core:original <http://open-services.net/ns/auto#AutomationResult>;
@@ -90,7 +90,7 @@ ogit.OSCL-auto:AutomationResult
         ];
 .
 
-ogit.OSCL-auto:ParameterInstance
+ogit.oslc-auto:ParameterInstance
     a ogit.core:Entity;
     rdfs:label "ParameterInstance";
     ogit.core:original <http://open-services.net/ns/auto#ParameterInstance>;
@@ -112,7 +112,7 @@ ogit.OSCL-auto:ParameterInstance
         ];
 .
 
-ogit.OSCL-auto:TeardownAction
+ogit.oslc-auto:TeardownAction
     a ogit.core:Entity;
     rdfs:label "TeardownAction";
     ogit.core:original <http://open-services.net/ns/auto#TeardownAction>;
@@ -138,7 +138,7 @@ ogit.OSCL-auto:TeardownAction
 #
 # Attributes
 #
-ogit.OSCL-auto:progress
+ogit.oslc-auto:progress
     a ogit.core:Attribute;
     rdfs:label "progress";
     ogit.core:original <http://open-services.net/ns/auto#progress>;
@@ -165,7 +165,7 @@ ogit.OSCL-auto:progress
 #
 # Verbs
 #
-ogit.OSCL-auto:desiredState
+ogit.oslc-auto:desiredState
     a ogit.core:Verb;
     rdfs:label "desiredState";
     ogit.core:original <http://open-services.net/ns/auto#desiredState>;
@@ -187,7 +187,7 @@ ogit.OSCL-auto:desiredState
         ];
 .
 
-ogit.OSCL-auto:executesAutomationPlan
+ogit.oslc-auto:executesAutomationPlan
     a ogit.core:Verb;
     rdfs:label "executesAutomationPlan";
     ogit.core:original <http://open-services.net/ns/auto#executesAutomationPlan>;
@@ -209,7 +209,7 @@ ogit.OSCL-auto:executesAutomationPlan
         ];
 .
 
-ogit.OSCL-auto:hasContribution
+ogit.oslc-auto:hasContribution
     a ogit.core:Verb;
     rdfs:label "contribution";
     ogit.core:original <http://open-services.net/ns/auto#hasContribution>;
@@ -231,7 +231,7 @@ ogit.OSCL-auto:hasContribution
         ];
 .
 
-ogit.OSCL-auto:inputParameter
+ogit.oslc-auto:inputParameter
     a ogit.core:Verb;
     rdfs:label "inputParameter";
     ogit.core:original <http://open-services.net/ns/auto#inputParameter>;
@@ -253,7 +253,7 @@ ogit.OSCL-auto:inputParameter
         ];
 .
 
-ogit.OSCL-auto:outputParameter
+ogit.oslc-auto:outputParameter
     a ogit.core:Verb;
     rdfs:label "outputParameter";
     ogit.core:original <http://open-services.net/ns/auto#outputParameter>;
@@ -275,7 +275,7 @@ ogit.OSCL-auto:outputParameter
         ];
 .
 
-ogit.OSCL-auto:parameterDefinition
+ogit.oslc-auto:parameterDefinition
     a ogit.core:Verb;
     rdfs:label "parameterDefinition";
     ogit.core:original <http://open-services.net/ns/auto#parameterDefinition>;
@@ -297,7 +297,7 @@ ogit.OSCL-auto:parameterDefinition
         ];
 .
 
-ogit.OSCL-auto:producedByAutomationRequest
+ogit.oslc-auto:producedByAutomationRequest
     a ogit.core:Verb;
     rdfs:label "producedByAutomationRequest";
     ogit.core:original <http://open-services.net/ns/auto#producedByAutomationRequest>;
@@ -319,7 +319,7 @@ ogit.OSCL-auto:producedByAutomationRequest
         ];
 .
 
-ogit.OSCL-auto:reportsOnAutomationPlan
+ogit.oslc-auto:reportsOnAutomationPlan
     a ogit.core:Verb;
     rdfs:label "reportsOnAutomationPlan";
     ogit.core:original <http://open-services.net/ns/auto#reportsOnAutomationPlan>;
@@ -341,7 +341,7 @@ ogit.OSCL-auto:reportsOnAutomationPlan
         ];
 .
 
-ogit.OSCL-auto:state
+ogit.oslc-auto:state
     a ogit.core:Verb;
     rdfs:label "state";
     ogit.core:original <http://open-services.net/ns/auto#state>;
@@ -363,7 +363,7 @@ ogit.OSCL-auto:state
         ];
 .
 
-ogit.OSCL-auto:usesExecutionEnvironment
+ogit.oslc-auto:usesExecutionEnvironment
     a ogit.core:Verb;
     rdfs:label "usesExecutionEnvironment";
     ogit.core:original <http://open-services.net/ns/auto#usesExecutionEnvironment>;
@@ -385,7 +385,7 @@ ogit.OSCL-auto:usesExecutionEnvironment
         ];
 .
 
-ogit.OSCL-auto:verdict
+ogit.oslc-auto:verdict
     a ogit.core:Verb;
     rdfs:label "verdict";
     ogit.core:original <http://open-services.net/ns/auto#verdict>;
@@ -406,4 +406,3 @@ ogit.OSCL-auto:verdict
             dcterms:creator "OGIT Importer"
         ];
 .
-

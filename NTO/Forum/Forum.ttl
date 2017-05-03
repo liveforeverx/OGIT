@@ -1,8 +1,8 @@
 @prefix dcterms:         <http://purl.org/dc/terms/> .
 @prefix ogit:            <http://www.purl.org/ogit/> .
-@prefix ogit.Automation: <http://www.purl.org/ogit/Automation/> .
-@prefix ogit.Forum:      <http://www.purl.org/ogit/Forum/> .
+@prefix ogit.automation: <http://www.purl.org/ogit/Automation/> .
 @prefix ogit.core:       <http://www.purl.org/ogit/> .
+@prefix ogit.forum:      <http://www.purl.org/ogit/Forum/> .
 @prefix ogit.foundation: <http://www.purl.org/ogit/> .
 @prefix owl:             <http://www.w3.org/2002/07/owl#> .
 @prefix purl:            <http://www.purl.org/> .
@@ -12,7 +12,7 @@
 #
 # Ontology
 #
-ogit:Forum
+ogit:forum
     a owl:Ontology;
     rdfs:label "OGIT Forum";
     dcterms:creator "arago GmbH";
@@ -26,7 +26,7 @@ ogit:Forum
 #
 # Entities
 #
-ogit.Forum:Award
+ogit.forum:Award
     a ogit.core:Entity;
     rdfs:label "Award";
     dcterms:description "Something which is won. A 'badge of merit' or an achievement, etc...";
@@ -49,7 +49,7 @@ ogit.Forum:Award
         ];
 .
 
-ogit.Forum:Banner
+ogit.forum:Banner
     a ogit.core:Entity;
     rdfs:label "Banner";
     dcterms:description """Standout content, i.e. a header, hero-unit or part of a carousel.
@@ -75,7 +75,7 @@ Examples:
         ];
 .
 
-ogit.Forum:Configuration
+ogit.forum:Configuration
     a ogit.core:Entity;
     rdfs:label "Configuration";
     dcterms:description "Configuration Data. No Schema - all free attributes";
@@ -96,7 +96,7 @@ ogit.Forum:Configuration
         ];
 .
 
-ogit.Forum:FeedEntry
+ogit.forum:FeedEntry
     a ogit.core:Entity;
     rdfs:label "FeedEntry";
     dcterms:description """A single entry in a newsfeed or other stream of items. Unlikely to contain many attributes of
@@ -118,7 +118,7 @@ its own, more likely to link users with items describing the event.""";
         ];
 .
 
-ogit.Forum:Group
+ogit.forum:Group
     a ogit.core:Entity;
     rdfs:label "Group";
     dcterms:description "A Node to associate a profile to a particular group";
@@ -139,7 +139,7 @@ ogit.Forum:Group
         ];
 .
 
-ogit.Forum:Invite
+ogit.forum:Invite
     a ogit.core:Entity;
     rdfs:label "Invite";
     dcterms:description "Invite is used to request participation with a node";
@@ -162,7 +162,7 @@ ogit.Forum:Invite
         ];
 .
 
-ogit.Forum:KnowledgeBundle
+ogit.forum:KnowledgeBundle
     a ogit.core:Entity;
     rdfs:label "KnowledgeBundle";
     dcterms:description "A grouping of `ogit/Automation/KnowledgeItem`s into a package.";
@@ -187,7 +187,7 @@ ogit.Forum:KnowledgeBundle
         ];
 .
 
-ogit.Forum:KnowledgeItemHistory
+ogit.forum:KnowledgeItemHistory
     a ogit.core:Entity;
     rdfs:label "KnowledgeItemHistory";
     dcterms:description "A data container of `ogit/Automation/KnowledgeItem`s changes.";
@@ -201,12 +201,12 @@ ogit.Forum:KnowledgeItemHistory
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:any-attributes "true";
     ogit.core:mandatory-attributes
-        ogit.Automation:knowledgeItemFormalRepresentation,
-        ogit.Automation:deployToEngine;
+        ogit.automation:knowledgeItemFormalRepresentation,
+        ogit.automation:deployToEngine;
     ogit.core:optional-attributes
         ogit.foundation:modificationTime,
         ogit.foundation:isValid,
-        ogit.Automation:knowledgeItemTier,
+        ogit.automation:knowledgeItemTier,
         ogit.foundation:creationTime,
         ogit.foundation:name,
         ogit.foundation:description,
@@ -224,7 +224,7 @@ ogit.Forum:KnowledgeItemHistory
         ];
 .
 
-ogit.Forum:Permission
+ogit.forum:Permission
     a ogit.core:Entity;
     rdfs:label "Permission";
     dcterms:description "Permission is used to approve a Nodes interaction with another Node";
@@ -245,7 +245,7 @@ ogit.Forum:Permission
         ];
 .
 
-ogit.Forum:Post
+ogit.forum:Post
     a ogit.core:Entity;
     rdfs:label "Post";
     dcterms:description "A Post is an online publication. Could be a blog post, or a posting on a forum/messageboard.";
@@ -268,7 +268,7 @@ ogit.Forum:Post
         ];
 .
 
-ogit.Forum:Profile
+ogit.forum:Profile
     a ogit.core:Entity;
     rdfs:label "Profile";
     dcterms:description """A User's persona within a forum. Linked to an `ogit/Identity` but separate, the Profile is
@@ -282,7 +282,7 @@ the root node for most operations with a Forum.""";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:mandatory-attributes
-        ogit.Forum:username,
+        ogit.forum:username,
         ogit.foundation:name;
     ogit.core:history
         [
@@ -293,7 +293,7 @@ the root node for most operations with a Forum.""";
         ];
 .
 
-ogit.Forum:Rating
+ogit.forum:Rating
     a ogit.core:Entity;
     rdfs:label "Rating";
     dcterms:description "Rating is used to rank nodes based on an arbitrary integer `value`";
@@ -324,7 +324,7 @@ ogit.Forum:Rating
         ];
 .
 
-ogit.Forum:Reply
+ogit.forum:Reply
     a ogit.core:Entity;
     rdfs:label "Reply";
     dcterms:description "A response to a some other entity";
@@ -347,7 +347,7 @@ ogit.Forum:Reply
         ];
 .
 
-ogit.Forum:Role
+ogit.forum:Role
     a ogit.core:Entity;
     rdfs:label "Role";
     dcterms:description "A Node to associate a profile with a particular Role within a Group";
@@ -368,7 +368,7 @@ ogit.Forum:Role
         ];
 .
 
-ogit.Forum:ShortId
+ogit.forum:ShortId
     a ogit.core:Entity;
     rdfs:label "ShortId";
     dcterms:description """A Reference to another Entity, used to track access via a specific channel/referrer.
@@ -401,7 +401,7 @@ The `ogit/id` attribute in this instance would be a short URL safe string.""";
         ];
 .
 
-ogit.Forum:Tag
+ogit.forum:Tag
     a ogit.core:Entity;
     rdfs:label "Tag";
     dcterms:description """A Tag used to categorise content. The required `key` attribute should be used
@@ -425,7 +425,7 @@ as the unique identifier, and the `name` considered a display name.""";
         ];
 .
 
-ogit.Forum:Topic
+ogit.forum:Topic
     a ogit.core:Entity;
     rdfs:label "Topic";
     dcterms:description """A Topic is a SubForum with a specific topic associated. Use to divide forums into
@@ -457,7 +457,7 @@ a given subject.""";
 #
 # Attributes
 #
-ogit.Forum:username
+ogit.forum:username
     a ogit.core:Attribute;
     rdfs:label "username";
     dcterms:description "A unique username for a member of a Forum";
@@ -480,7 +480,7 @@ ogit.Forum:username
 #
 # Verbs
 #
-ogit.Forum:downloads
+ogit.forum:downloads
     a ogit.core:Verb;
     rdfs:label "downloads";
     dcterms:description """This verb represents that a \"User\" has downloaded a given Bundle""";
@@ -499,12 +499,12 @@ ogit.Forum:downloads
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.Forum:Profile;
-            ogit.core:to ogit.Forum:KnowledgeBundle
+            ogit.core:from ogit.forum:Profile;
+            ogit.core:to ogit.forum:KnowledgeBundle
         ];
 .
 
-ogit.Forum:features
+ogit.forum:features
     a ogit.core:Verb;
     rdfs:label "features";
     dcterms:description """This verb represents which KnowledgeBundles are featured (\"choosen\") for a given Group""";
@@ -523,12 +523,12 @@ ogit.Forum:features
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.Forum:Group;
-            ogit.core:to ogit.Forum:KnowledgeBundle
+            ogit.core:from ogit.forum:Group;
+            ogit.core:to ogit.forum:KnowledgeBundle
         ];
 .
 
-ogit.Forum:mentions
+ogit.forum:mentions
     a ogit.core:Verb;
     rdfs:label "mentions";
     dcterms:description """This verb was envisaged to represent the *Social Media* menaing of the word mention (or
@@ -550,19 +550,19 @@ for example cross-references in documentation would also be a valid use-case."""
     ogit.core:allowed
         [
             ogit.core:from ogit.foundation:Comment;
-            ogit.core:to ogit.Forum:Profile
+            ogit.core:to ogit.forum:Profile
         ],
         [
-            ogit.core:from ogit.Forum:Post;
-            ogit.core:to ogit.Forum:Profile
+            ogit.core:from ogit.forum:Post;
+            ogit.core:to ogit.forum:Profile
         ],
         [
-            ogit.core:from ogit.Forum:Reply;
-            ogit.core:to ogit.Forum:Profile
+            ogit.core:from ogit.forum:Reply;
+            ogit.core:to ogit.forum:Profile
         ];
 .
 
-ogit.Forum:rates
+ogit.forum:rates
     a ogit.core:Verb;
     rdfs:label "rates";
     dcterms:description "This verb represents the `Rating` between two nodes";
@@ -587,20 +587,20 @@ ogit.Forum:rates
         ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.Forum:Profile;
-            ogit.core:to ogit.Forum:Rating
+            ogit.core:from ogit.forum:Profile;
+            ogit.core:to ogit.forum:Rating
         ],
         [
-            ogit.core:from ogit.Forum:Rating;
-            ogit.core:to ogit.Forum:KnowledgeBundle
+            ogit.core:from ogit.forum:Rating;
+            ogit.core:to ogit.forum:KnowledgeBundle
         ],
         [
-            ogit.core:from ogit.Forum:Rating;
-            ogit.core:to ogit.Forum:KnowledgeItemHistory
+            ogit.core:from ogit.forum:Rating;
+            ogit.core:to ogit.forum:KnowledgeItemHistory
         ],
         [
-            ogit.core:from ogit.Forum:Rating;
-            ogit.core:to ogit.Automation:KnowledgeItem
+            ogit.core:from ogit.forum:Rating;
+            ogit.core:to ogit.automation:KnowledgeItem
         ];
 .
 

@@ -1,7 +1,7 @@
 @prefix dcterms:               <http://purl.org/dc/terms/> .
 @prefix ogit:                  <http://www.purl.org/ogit/> .
-@prefix ogit.BusinessProcess:  <http://www.purl.org/ogit/BusinessProcess/> .
-@prefix ogit._BusinessProcess: <http://www.purl.org/ogit/> .
+@prefix ogit._businessProcess: <http://www.purl.org/ogit/> .
+@prefix ogit.businessProcess:  <http://www.purl.org/ogit/BusinessProcess/> .
 @prefix ogit.core:             <http://www.purl.org/ogit/> .
 @prefix ogit.organization:     <http://www.purl.org/ogit/> .
 @prefix ogit.person:           <http://www.purl.org/ogit/> .
@@ -11,12 +11,12 @@
 #
 # Ontology
 #
-ogit:BusinessProcess a owl:Ontology .
+ogit:businessProcess a owl:Ontology .
 
 #
 # Attributes
 #
-ogit._BusinessProcess:placement
+ogit._businessProcess:placement
     a ogit.core:Attribute;
     rdfs:label "placement";
     dcterms:description "A place where the object is placed.";
@@ -35,7 +35,7 @@ ogit._BusinessProcess:placement
         ];
 .
 
-ogit._BusinessProcess:plannedFinishDate
+ogit._businessProcess:plannedFinishDate
     a ogit.core:Attribute;
     rdfs:label "plannedFinishDate";
     dcterms:description "Defines the date when something will be finished.";
@@ -54,7 +54,7 @@ ogit._BusinessProcess:plannedFinishDate
         ];
 .
 
-ogit._BusinessProcess:plannedStartDate
+ogit._businessProcess:plannedStartDate
     a ogit.core:Attribute;
     rdfs:label "plannedStartDate";
     dcterms:description "Defines the date when something will be started.";
@@ -73,7 +73,7 @@ ogit._BusinessProcess:plannedStartDate
         ];
 .
 
-ogit._BusinessProcess:schedule
+ogit._businessProcess:schedule
     a ogit.core:Attribute;
     rdfs:label "schedule";
     dcterms:description "Schedule represented by a string in cron format.";
@@ -92,7 +92,7 @@ ogit._BusinessProcess:schedule
         ];
 .
 
-ogit._BusinessProcess:surveyQuestions
+ogit._businessProcess:surveyQuestions
     a ogit.core:Attribute;
     rdfs:label "surveyQuestions";
     dcterms:description "Questions from a survey or survey reply represented by a JSON array.";
@@ -114,7 +114,7 @@ ogit._BusinessProcess:surveyQuestions
 #
 # Verbs
 #
-ogit._BusinessProcess:consumes
+ogit._businessProcess:consumes
     a ogit.core:Verb;
     rdfs:label "consumes";
     dcterms:description "This relationship indicates that one consumes result of work from another.";
@@ -140,23 +140,23 @@ ogit._BusinessProcess:consumes
     ogit.core:allowed
         [
             ogit.core:from ogit.person:Person;
-            ogit.core:to ogit.BusinessProcess:Project
+            ogit.core:to ogit.businessProcess:Project
         ],
         [
             ogit.core:from ogit.organization:Organization;
-            ogit.core:to ogit.BusinessProcess:Project
+            ogit.core:to ogit.businessProcess:Project
         ],
         [
             ogit.core:from ogit.person:Person;
-            ogit.core:to ogit.BusinessProcess:Milestone
+            ogit.core:to ogit.businessProcess:Milestone
         ],
         [
             ogit.core:from ogit.organization:Organization;
-            ogit.core:to ogit.BusinessProcess:SurveyIteration
+            ogit.core:to ogit.businessProcess:SurveyIteration
         ];
 .
 
-ogit._BusinessProcess:produces
+ogit._businessProcess:produces
     a ogit.core:Verb;
     rdfs:label "produces";
     dcterms:description "This relationship indicates that one produces some work for another.";
@@ -182,18 +182,18 @@ ogit._BusinessProcess:produces
     ogit.core:allowed
         [
             ogit.core:from ogit.person:Person;
-            ogit.core:to ogit.BusinessProcess:Project
+            ogit.core:to ogit.businessProcess:Project
         ],
         [
             ogit.core:from ogit.organization:Organization;
-            ogit.core:to ogit.BusinessProcess:Project
+            ogit.core:to ogit.businessProcess:Project
         ],
         [
             ogit.core:from ogit.person:Person;
-            ogit.core:to ogit.BusinessProcess:Milestone
+            ogit.core:to ogit.businessProcess:Milestone
         ],
         [
             ogit.core:from ogit.organization:Organization;
-            ogit.core:to ogit.BusinessProcess:SurveyIteration
+            ogit.core:to ogit.businessProcess:SurveyIteration
         ];
 .

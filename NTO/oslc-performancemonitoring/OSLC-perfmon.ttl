@@ -1,7 +1,7 @@
 @prefix dcterms:           <http://purl.org/dc/terms/> .
 @prefix ogit:              <http://www.purl.org/ogit/> .
-@prefix ogit.OSLC-perfmon: <http://www.purl.org/ogit/OSLC-perfmon/> .
 @prefix ogit.core:         <http://www.purl.org/ogit/> .
+@prefix ogit.oslc-perfmon: <http://www.purl.org/ogit/OSLC-perfmon/> .
 @prefix owl:               <http://www.w3.org/2002/07/owl#> .
 @prefix purl:              <http://www.purl.org/> .
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
@@ -10,13 +10,13 @@
 #
 # Ontology
 #
-ogit:OSLC-perfmon
+ogit:oslc-perfmon
     a owl:Ontology;
-    rdfs:label "OGIT oslc-performancemonitoring Vocabulary";
+    rdfs:label "OGIT OSLC Performance Monitoring";
     dcterms:creator "arago GmbH";
     dcterms:contributor "Fabian Meyer";
     vann:preferredNamespaceUri "http://www.purl.org/ogit/OSLC-perfmon/";
-    vann:preferredNamespacePrefix "ogit.OSLC-perfmon";
+    vann:preferredNamespacePrefix "ogit.oslc-perfmon";
     owl:versionInfo "__OGIT_VERSION__";
     owl:imports purl:ogit
 .
@@ -24,7 +24,7 @@ ogit:OSLC-perfmon
 #
 # Entities
 #
-ogit.OSLC-perfmon:AvgJmsGetTime
+ogit.oslc-perfmon:AvgJmsGetTime
     a ogit.core:Entity;
     rdfs:label "AvgJmsGetTime";
     ogit.core:original <http://open-services.net/ns/perfmon#AvgJmsGetTime>;
@@ -46,7 +46,7 @@ ogit.OSLC-perfmon:AvgJmsGetTime
         ];
 .
 
-ogit.OSLC-perfmon:AvgLoginRequestFailures
+ogit.oslc-perfmon:AvgLoginRequestFailures
     a ogit.core:Entity;
     rdfs:label "AvgLoginRequestFailures";
     ogit.core:original <http://open-services.net/ns/perfmon#AvgLoginRequestFailures>;
@@ -68,7 +68,7 @@ ogit.OSLC-perfmon:AvgLoginRequestFailures
         ];
 .
 
-ogit.OSLC-perfmon:AvgRequestFailures
+ogit.oslc-perfmon:AvgRequestFailures
     a ogit.core:Entity;
     rdfs:label "AvgRequestFailures";
     ogit.core:original <http://open-services.net/ns/perfmon#AvgRequestFailures>;
@@ -90,7 +90,7 @@ ogit.OSLC-perfmon:AvgRequestFailures
         ];
 .
 
-ogit.OSLC-perfmon:BufferPoolHits
+ogit.oslc-perfmon:BufferPoolHits
     a ogit.core:Entity;
     rdfs:label "BufferPoolHits";
     ogit.core:original <http://open-services.net/ns/perfmon#BufferPoolHits>;
@@ -112,7 +112,7 @@ ogit.OSLC-perfmon:BufferPoolHits
         ];
 .
 
-ogit.OSLC-perfmon:BufferPoolMetrics
+ogit.oslc-perfmon:BufferPoolMetrics
     a ogit.core:Entity;
     rdfs:label "BufferPoolMetrics";
     ogit.core:original <http://open-services.net/ns/perfmon#BufferPoolMetrics>;
@@ -134,7 +134,7 @@ ogit.OSLC-perfmon:BufferPoolMetrics
         ];
 .
 
-ogit.OSLC-perfmon:CpuMetrics
+ogit.oslc-perfmon:CpuMetrics
     a ogit.core:Entity;
     rdfs:label "CpuMetrics";
     ogit.core:original <http://open-services.net/ns/perfmon#CpuMetrics>;
@@ -156,7 +156,7 @@ ogit.OSLC-perfmon:CpuMetrics
         ];
 .
 
-ogit.OSLC-perfmon:CpuSpeed
+ogit.oslc-perfmon:CpuSpeed
     a ogit.core:Entity;
     rdfs:label "CpuSpeed";
     ogit.core:original <http://open-services.net/ns/perfmon#CpuSpeed>;
@@ -178,7 +178,7 @@ ogit.OSLC-perfmon:CpuSpeed
         ];
 .
 
-ogit.OSLC-perfmon:CpuUsed
+ogit.oslc-perfmon:CpuUsed
     a ogit.core:Entity;
     rdfs:label "CpuUsed";
     ogit.core:original <http://open-services.net/ns/perfmon#CpuUsed>;
@@ -200,7 +200,7 @@ ogit.OSLC-perfmon:CpuUsed
         ];
 .
 
-ogit.OSLC-perfmon:DiskMetrics
+ogit.oslc-perfmon:DiskMetrics
     a ogit.core:Entity;
     rdfs:label "DiskMetrics";
     ogit.core:original <http://open-services.net/ns/perfmon#DiskMetrics>;
@@ -222,7 +222,7 @@ ogit.OSLC-perfmon:DiskMetrics
         ];
 .
 
-ogit.OSLC-perfmon:DiskSpaceOverCommitAmount
+ogit.oslc-perfmon:DiskSpaceOverCommitAmount
     a ogit.core:Entity;
     rdfs:label "DiskSpaceOverCommitAmount";
     ogit.core:original <http://open-services.net/ns/perfmon#DiskSpaceOverCommitAmount>;
@@ -244,7 +244,7 @@ ogit.OSLC-perfmon:DiskSpaceOverCommitAmount
         ];
 .
 
-ogit.OSLC-perfmon:DiskSpaceUsed
+ogit.oslc-perfmon:DiskSpaceUsed
     a ogit.core:Entity;
     rdfs:label "DiskSpaceUsed";
     ogit.core:original <http://open-services.net/ns/perfmon#DiskSpaceUsed>;
@@ -266,7 +266,7 @@ ogit.OSLC-perfmon:DiskSpaceUsed
         ];
 .
 
-ogit.OSLC-perfmon:FailureMetrics
+ogit.oslc-perfmon:FailureMetrics
     a ogit.core:Entity;
     rdfs:label "FailureMetrics";
     ogit.core:original <http://open-services.net/ns/perfmon#FailureMetrics>;
@@ -288,7 +288,7 @@ ogit.OSLC-perfmon:FailureMetrics
         ];
 .
 
-ogit.OSLC-perfmon:GarbageCollectionRequests
+ogit.oslc-perfmon:GarbageCollectionRequests
     a ogit.core:Entity;
     rdfs:label "GarbageCollectionRequests";
     ogit.core:original <http://open-services.net/ns/perfmon#GarbageCollectionRequests>;
@@ -310,7 +310,7 @@ ogit.OSLC-perfmon:GarbageCollectionRequests
         ];
 .
 
-ogit.OSLC-perfmon:HeapMemoryUsed
+ogit.oslc-perfmon:HeapMemoryUsed
     a ogit.core:Entity;
     rdfs:label "HeapMemoryUsed";
     ogit.core:original <http://open-services.net/ns/perfmon#HeapMemoryUsed>;
@@ -332,7 +332,7 @@ ogit.OSLC-perfmon:HeapMemoryUsed
         ];
 .
 
-ogit.OSLC-perfmon:HighDepthQueueCount
+ogit.oslc-perfmon:HighDepthQueueCount
     a ogit.core:Entity;
     rdfs:label "HighDepthQueueCount";
     ogit.core:original <http://open-services.net/ns/perfmon#HighDepthQueueCount>;
@@ -354,7 +354,7 @@ ogit.OSLC-perfmon:HighDepthQueueCount
         ];
 .
 
-ogit.OSLC-perfmon:HostedDatabases
+ogit.oslc-perfmon:HostedDatabases
     a ogit.core:Entity;
     rdfs:label "HostedDatabases";
     ogit.core:original <http://open-services.net/ns/perfmon#HostedDatabases>;
@@ -376,7 +376,7 @@ ogit.OSLC-perfmon:HostedDatabases
         ];
 .
 
-ogit.OSLC-perfmon:LocalInboundConnections
+ogit.oslc-perfmon:LocalInboundConnections
     a ogit.core:Entity;
     rdfs:label "LocalInboundConnections";
     ogit.core:original <http://open-services.net/ns/perfmon#LocalInboundConnections>;
@@ -398,7 +398,7 @@ ogit.OSLC-perfmon:LocalInboundConnections
         ];
 .
 
-ogit.OSLC-perfmon:LockListUsed
+ogit.oslc-perfmon:LockListUsed
     a ogit.core:Entity;
     rdfs:label "LockListUsed";
     ogit.core:original <http://open-services.net/ns/perfmon#LockListUsed>;
@@ -420,7 +420,7 @@ ogit.OSLC-perfmon:LockListUsed
         ];
 .
 
-ogit.OSLC-perfmon:LogUsed
+ogit.oslc-perfmon:LogUsed
     a ogit.core:Entity;
     rdfs:label "LogUsed";
     ogit.core:original <http://open-services.net/ns/perfmon#LogUsed>;
@@ -442,7 +442,7 @@ ogit.OSLC-perfmon:LogUsed
         ];
 .
 
-ogit.OSLC-perfmon:LoginRequestFailures
+ogit.oslc-perfmon:LoginRequestFailures
     a ogit.core:Entity;
     rdfs:label "LoginRequestFailures";
     ogit.core:original <http://open-services.net/ns/perfmon#LoginRequestFailures>;
@@ -464,7 +464,7 @@ ogit.OSLC-perfmon:LoginRequestFailures
         ];
 .
 
-ogit.OSLC-perfmon:MemoryAvailableAfterGarbageCollection
+ogit.oslc-perfmon:MemoryAvailableAfterGarbageCollection
     a ogit.core:Entity;
     rdfs:label "MemoryAvailableAfterGarbageCollection";
     ogit.core:original <http://open-services.net/ns/perfmon#MemoryAvailableAfterGarbageCollection>;
@@ -486,7 +486,7 @@ ogit.OSLC-perfmon:MemoryAvailableAfterGarbageCollection
         ];
 .
 
-ogit.OSLC-perfmon:MemoryMetrics
+ogit.oslc-perfmon:MemoryMetrics
     a ogit.core:Entity;
     rdfs:label "MemoryMetrics";
     ogit.core:original <http://open-services.net/ns/perfmon#MemoryMetrics>;
@@ -508,7 +508,7 @@ ogit.OSLC-perfmon:MemoryMetrics
         ];
 .
 
-ogit.OSLC-perfmon:MessageCount
+ogit.oslc-perfmon:MessageCount
     a ogit.core:Entity;
     rdfs:label "MessageCount";
     ogit.core:original <http://open-services.net/ns/perfmon#MessageCount>;
@@ -530,7 +530,7 @@ ogit.OSLC-perfmon:MessageCount
         ];
 .
 
-ogit.OSLC-perfmon:Metric
+ogit.oslc-perfmon:Metric
     a ogit.core:Entity;
     rdfs:label "Metric";
     ogit.core:original <http://open-services.net/ns/perfmon#Metric>;
@@ -552,7 +552,7 @@ ogit.OSLC-perfmon:Metric
         ];
 .
 
-ogit.OSLC-perfmon:NetworkIOErrors
+ogit.oslc-perfmon:NetworkIOErrors
     a ogit.core:Entity;
     rdfs:label "NetworkIOErrors";
     ogit.core:original <http://open-services.net/ns/perfmon#NetworkIOErrors>;
@@ -574,7 +574,7 @@ ogit.OSLC-perfmon:NetworkIOErrors
         ];
 .
 
-ogit.OSLC-perfmon:NetworkMetrics
+ogit.oslc-perfmon:NetworkMetrics
     a ogit.core:Entity;
     rdfs:label "NetworkMetrics";
     ogit.core:original <http://open-services.net/ns/perfmon#NetworkMetrics>;
@@ -596,7 +596,7 @@ ogit.OSLC-perfmon:NetworkMetrics
         ];
 .
 
-ogit.OSLC-perfmon:PerMinute
+ogit.oslc-perfmon:PerMinute
     a ogit.core:Entity;
     rdfs:label "PerMinute";
     ogit.core:original <http://open-services.net/ns/perfmon#PerMinute>;
@@ -618,7 +618,7 @@ ogit.OSLC-perfmon:PerMinute
         ];
 .
 
-ogit.OSLC-perfmon:PerformanceMonitoringRecord
+ogit.oslc-perfmon:PerformanceMonitoringRecord
     a ogit.core:Entity;
     rdfs:label "PerformanceMonitoringRecord";
     ogit.core:original <http://open-services.net/ns/perfmon#PerformanceMonitoringRecord>;
@@ -640,7 +640,7 @@ ogit.OSLC-perfmon:PerformanceMonitoringRecord
         ];
 .
 
-ogit.OSLC-perfmon:QueueDepth
+ogit.oslc-perfmon:QueueDepth
     a ogit.core:Entity;
     rdfs:label "QueueDepth";
     ogit.core:original <http://open-services.net/ns/perfmon#QueueDepth>;
@@ -662,7 +662,7 @@ ogit.OSLC-perfmon:QueueDepth
         ];
 .
 
-ogit.OSLC-perfmon:QueueFull
+ogit.oslc-perfmon:QueueFull
     a ogit.core:Entity;
     rdfs:label "QueueFull";
     ogit.core:original <http://open-services.net/ns/perfmon#QueueFull>;
@@ -684,7 +684,7 @@ ogit.OSLC-perfmon:QueueFull
         ];
 .
 
-ogit.OSLC-perfmon:RealMemoryUsed
+ogit.oslc-perfmon:RealMemoryUsed
     a ogit.core:Entity;
     rdfs:label "RealMemoryUsed";
     ogit.core:original <http://open-services.net/ns/perfmon#RealMemoryUsed>;
@@ -706,7 +706,7 @@ ogit.OSLC-perfmon:RealMemoryUsed
         ];
 .
 
-ogit.OSLC-perfmon:RemoteInboundConnections
+ogit.oslc-perfmon:RemoteInboundConnections
     a ogit.core:Entity;
     rdfs:label "RemoteInboundConnections";
     ogit.core:original <http://open-services.net/ns/perfmon#RemoteInboundConnections>;
@@ -728,7 +728,7 @@ ogit.OSLC-perfmon:RemoteInboundConnections
         ];
 .
 
-ogit.OSLC-perfmon:RequestFailures
+ogit.oslc-perfmon:RequestFailures
     a ogit.core:Entity;
     rdfs:label "RequestFailures";
     ogit.core:original <http://open-services.net/ns/perfmon#RequestFailures>;
@@ -750,7 +750,7 @@ ogit.OSLC-perfmon:RequestFailures
         ];
 .
 
-ogit.OSLC-perfmon:RequestMetrics
+ogit.oslc-perfmon:RequestMetrics
     a ogit.core:Entity;
     rdfs:label "RequestMetrics";
     ogit.core:original <http://open-services.net/ns/perfmon#RequestMetrics>;
@@ -772,7 +772,7 @@ ogit.OSLC-perfmon:RequestMetrics
         ];
 .
 
-ogit.OSLC-perfmon:ResourceAvailabilityMetrics
+ogit.oslc-perfmon:ResourceAvailabilityMetrics
     a ogit.core:Entity;
     rdfs:label "ResourceAvailabilityMetrics";
     ogit.core:original <http://open-services.net/ns/perfmon#ResourceAvailabilityMetrics>;
@@ -794,7 +794,7 @@ ogit.OSLC-perfmon:ResourceAvailabilityMetrics
         ];
 .
 
-ogit.OSLC-perfmon:ResourceExhaustionMetrics
+ogit.oslc-perfmon:ResourceExhaustionMetrics
     a ogit.core:Entity;
     rdfs:label "ResourceExhaustionMetrics";
     ogit.core:original <http://open-services.net/ns/perfmon#ResourceExhaustionMetrics>;
@@ -816,7 +816,7 @@ ogit.OSLC-perfmon:ResourceExhaustionMetrics
         ];
 .
 
-ogit.OSLC-perfmon:ResourceUsageMetrics
+ogit.oslc-perfmon:ResourceUsageMetrics
     a ogit.core:Entity;
     rdfs:label "ResourceUsageMetrics";
     ogit.core:original <http://open-services.net/ns/perfmon#ResourceUsageMetrics>;
@@ -838,7 +838,7 @@ ogit.OSLC-perfmon:ResourceUsageMetrics
         ];
 .
 
-ogit.OSLC-perfmon:ResponseTime
+ogit.oslc-perfmon:ResponseTime
     a ogit.core:Entity;
     rdfs:label "ResponseTime";
     ogit.core:original <http://open-services.net/ns/perfmon#ResponseTime>;
@@ -860,7 +860,7 @@ ogit.OSLC-perfmon:ResponseTime
         ];
 .
 
-ogit.OSLC-perfmon:ResponseTimeMetrics
+ogit.oslc-perfmon:ResponseTimeMetrics
     a ogit.core:Entity;
     rdfs:label "ResponseTimeMetrics";
     ogit.core:original <http://open-services.net/ns/perfmon#ResponseTimeMetrics>;
@@ -882,7 +882,7 @@ ogit.OSLC-perfmon:ResponseTimeMetrics
         ];
 .
 
-ogit.OSLC-perfmon:SortOverflows
+ogit.oslc-perfmon:SortOverflows
     a ogit.core:Entity;
     rdfs:label "SortOverflows";
     ogit.core:original <http://open-services.net/ns/perfmon#SortOverflows>;
@@ -904,7 +904,7 @@ ogit.OSLC-perfmon:SortOverflows
         ];
 .
 
-ogit.OSLC-perfmon:SqlStatmentFailures
+ogit.oslc-perfmon:SqlStatmentFailures
     a ogit.core:Entity;
     rdfs:label "SqlStatmentFailures";
     ogit.core:original <http://open-services.net/ns/perfmon#SqlStatmentFailures>;
@@ -926,7 +926,7 @@ ogit.OSLC-perfmon:SqlStatmentFailures
         ];
 .
 
-ogit.OSLC-perfmon:TableSpaceFree
+ogit.oslc-perfmon:TableSpaceFree
     a ogit.core:Entity;
     rdfs:label "TableSpaceFree";
     ogit.core:original <http://open-services.net/ns/perfmon#TableSpaceFree>;
@@ -948,7 +948,7 @@ ogit.OSLC-perfmon:TableSpaceFree
         ];
 .
 
-ogit.OSLC-perfmon:TableSpaceUsed
+ogit.oslc-perfmon:TableSpaceUsed
     a ogit.core:Entity;
     rdfs:label "TableSpaceUsed";
     ogit.core:original <http://open-services.net/ns/perfmon#TableSpaceUsed>;
@@ -970,7 +970,7 @@ ogit.OSLC-perfmon:TableSpaceUsed
         ];
 .
 
-ogit.OSLC-perfmon:ThreadPoolMetrics
+ogit.oslc-perfmon:ThreadPoolMetrics
     a ogit.core:Entity;
     rdfs:label "ThreadPoolMetrics";
     ogit.core:original <http://open-services.net/ns/perfmon#ThreadPoolMetrics>;
@@ -992,7 +992,7 @@ ogit.OSLC-perfmon:ThreadPoolMetrics
         ];
 .
 
-ogit.OSLC-perfmon:TimeDatabaseThreadPoolExhausted
+ogit.oslc-perfmon:TimeDatabaseThreadPoolExhausted
     a ogit.core:Entity;
     rdfs:label "TimeDatabaseThreadPoolExhausted";
     ogit.core:original <http://open-services.net/ns/perfmon#TimeDatabaseThreadPoolExhausted>;
@@ -1014,7 +1014,7 @@ ogit.OSLC-perfmon:TimeDatabaseThreadPoolExhausted
         ];
 .
 
-ogit.OSLC-perfmon:TimeJCAThreadPoolExhausted
+ogit.oslc-perfmon:TimeJCAThreadPoolExhausted
     a ogit.core:Entity;
     rdfs:label "TimeJCAThreadPoolExhausted";
     ogit.core:original <http://open-services.net/ns/perfmon#TimeJCAThreadPoolExhausted>;
@@ -1036,7 +1036,7 @@ ogit.OSLC-perfmon:TimeJCAThreadPoolExhausted
         ];
 .
 
-ogit.OSLC-perfmon:TimeThreadPoolExhausted
+ogit.oslc-perfmon:TimeThreadPoolExhausted
     a ogit.core:Entity;
     rdfs:label "TimeThreadPoolExhausted";
     ogit.core:original <http://open-services.net/ns/perfmon#TimeThreadPoolExhausted>;
@@ -1058,7 +1058,7 @@ ogit.OSLC-perfmon:TimeThreadPoolExhausted
         ];
 .
 
-ogit.OSLC-perfmon:VirtualMemoryUsed
+ogit.oslc-perfmon:VirtualMemoryUsed
     a ogit.core:Entity;
     rdfs:label "VirtualMemoryUsed";
     ogit.core:original <http://open-services.net/ns/perfmon#VirtualMemoryUsed>;
@@ -1080,7 +1080,7 @@ ogit.OSLC-perfmon:VirtualMemoryUsed
         ];
 .
 
-ogit.OSLC-perfmon:VirtualizationMetrics
+ogit.oslc-perfmon:VirtualizationMetrics
     a ogit.core:Entity;
     rdfs:label "VirtualizationMetrics";
     ogit.core:original <http://open-services.net/ns/perfmon#VirtualizationMetrics>;
@@ -1102,7 +1102,7 @@ ogit.OSLC-perfmon:VirtualizationMetrics
         ];
 .
 
-ogit.OSLC-perfmon:VmCpuReady
+ogit.oslc-perfmon:VmCpuReady
     a ogit.core:Entity;
     rdfs:label "VmCpuReady";
     ogit.core:original <http://open-services.net/ns/perfmon#VmCpuReady>;
@@ -1128,7 +1128,7 @@ ogit.OSLC-perfmon:VmCpuReady
 #
 # Attributes
 #
-ogit.OSLC-perfmon:availabilityStatus
+ogit.oslc-perfmon:availabilityStatus
     a ogit.core:Attribute;
     rdfs:label "availabilityStatus";
     ogit.core:original <http://open-services.net/ns/perfmon#availabilityStatus>;
@@ -1151,7 +1151,7 @@ ogit.OSLC-perfmon:availabilityStatus
         ];
 .
 
-ogit.OSLC-perfmon:mobilityEnabled
+ogit.oslc-perfmon:mobilityEnabled
     a ogit.core:Attribute;
     rdfs:label "mobilityEnabled";
     ogit.core:original <http://open-services.net/ns/perfmon#mobilityEnabled>;
@@ -1174,7 +1174,7 @@ ogit.OSLC-perfmon:mobilityEnabled
         ];
 .
 
-ogit.OSLC-perfmon:tableReorganizationNeeded
+ogit.oslc-perfmon:tableReorganizationNeeded
     a ogit.core:Attribute;
     rdfs:label "tableReorganizationNeeded";
     ogit.core:original <http://open-services.net/ns/perfmon#tableReorganizationNeeded>;
@@ -1201,7 +1201,7 @@ ogit.OSLC-perfmon:tableReorganizationNeeded
 #
 # Verbs
 #
-ogit.OSLC-perfmon:disk
+ogit.oslc-perfmon:disk
     a ogit.core:Verb;
     rdfs:label "disk";
     ogit.core:original <http://open-services.net/ns/perfmon#disk>;
@@ -1223,7 +1223,7 @@ ogit.OSLC-perfmon:disk
         ];
 .
 
-ogit.OSLC-perfmon:monitoringAgent
+ogit.oslc-perfmon:monitoringAgent
     a ogit.core:Verb;
     rdfs:label "monitoringAgent";
     ogit.core:original <http://open-services.net/ns/perfmon#monitoringAgent>;
@@ -1245,7 +1245,7 @@ ogit.OSLC-perfmon:monitoringAgent
         ];
 .
 
-ogit.OSLC-perfmon:process
+ogit.oslc-perfmon:process
     a ogit.core:Verb;
     rdfs:label "process";
     ogit.core:original <http://open-services.net/ns/perfmon#process>;
@@ -1266,4 +1266,3 @@ ogit.OSLC-perfmon:process
             dcterms:creator "OGIT Importer"
         ];
 .
-

@@ -1103,3 +1103,55 @@ ogit.config:vendor
             dcterms:creator "Aymen Ayoub"
         ];
 .
+
+#
+# Verbs
+#
+ogit.config:proves
+    a ogit.core:Verb;
+    rdfs:label "proves";
+    dcterms:description """One entity can \"prove\" another.""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.config:Parameter;
+            ogit.core:to ogit.config:Parameter
+        ];
+.
+
+ogit.config:virtualizes
+    a ogit.core:Verb;
+    rdfs:label "virtualizes";
+    dcterms:description "Shows if an entity or a component virtualizes another entity or component .";
+    dcterms:valid "start=2015-07-27;";
+    dcterms:creator "Aymen Ayoub";
+    dcterms:created "2015-07-27";
+    dcterms:modified "2015-07-27";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-07-27";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.config:ConfigurationItem
+        ];
+.
+

@@ -1,11 +1,21 @@
-@prefix ogit:                   <http://www.purl.org/ogit/> .
-@prefix ogit.core:                   <http://www.purl.org/ogit/> .
-@prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ogit.Software:          <http://www.purl.org/ogit/Software/> .
-@prefix dcterms:                <http://purl.org/dc/terms/> .
-@prefix ogit.Network:           <http://www.purl.org/ogit/Network/> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.core:           <http://www.purl.org/ogit/> .
+@prefix ogit._Software:           <http://www.purl.org/ogit/> .
+@prefix ogit.Network:         <http://www.purl.org/ogit/Network/> .
+@prefix ogit.Software:         <http://www.purl.org/ogit/Software/> .
 
-ogit:transfers
+#
+# Ontology
+#
+ogit:Software a owl:Ontology .
+
+#
+# Verbs
+#
+ogit._Software:transfers
     a ogit.core:Verb;
     rdfs:label "transfers";
     dcterms:description "Indicates if one entity transfers information to another.";

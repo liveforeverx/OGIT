@@ -6,6 +6,7 @@
 @prefix ogit:           <http://www.purl.org/ogit/> .
 @prefix ogit.core:           <http://www.purl.org/ogit/> .
 @prefix ogit.event:     <http://www.purl.org/ogit/> .
+@prefix ogit.person:     <http://www.purl.org/ogit/> .
 @prefix ogit.ServiceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
 @prefix ogit.foundation:     <http://www.purl.org/ogit/> .
 
@@ -351,3 +352,31 @@ ogit.event:severity
             dcterms:creator "Peter Larem"
         ];
 .
+
+#
+# Verbs
+#
+ogit.event:alerts
+    a ogit.core:Verb;
+    rdfs:label "alerts";
+    dcterms:description "Verb showing if one entity alerts another.";
+    dcterms:valid "start=2016-10-26;";
+    dcterms:creator "stravlos@arago.co";
+    dcterms:created "2016-10-26";
+    dcterms:modified "2016-10-26";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2016-10-26";
+            dcterms:description "initial";
+            dcterms:creator "stravlos@arago.co"
+        ];
+  ogit.core:allowed
+        [
+            ogit.core:from ogit.event:Alert;
+            ogit.core:to ogit.person:Person
+        ];
+.
+

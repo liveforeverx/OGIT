@@ -5,6 +5,30 @@
 @prefix purl:           <http://www.purl.org/> .
 @prefix ogit:         <http://www.purl.org/ogit/> .
 @prefix ogit.core:         <http://www.purl.org/ogit/> .
+@prefix ogit.asset:         <http://www.purl.org/ogit/> .
+@prefix ogit.catalog:         <http://www.purl.org/ogit/> .
+@prefix ogit.config:         <http://www.purl.org/ogit/> .
+@prefix ogit.contract:         <http://www.purl.org/ogit/> .
+@prefix ogit.data:         <http://www.purl.org/ogit/> .
+@prefix ogit.device:         <http://www.purl.org/ogit/> .
+@prefix ogit.event:         <http://www.purl.org/ogit/> .
+@prefix ogit.license:         <http://www.purl.org/ogit/> .
+@prefix ogit.location:         <http://www.purl.org/ogit/> .
+@prefix ogit.ontology:         <http://www.purl.org/ogit/> .
+@prefix ogit.person:         <http://www.purl.org/ogit/> .
+@prefix ogit.task:         <http://www.purl.org/ogit/> .
+@prefix ogit.organization:         <http://www.purl.org/ogit/> .
+@prefix ogit.Cost:         <http://www.purl.org/ogit/Cost/> .
+@prefix ogit.Price:         <http://www.purl.org/ogit/Price/> .
+@prefix ogit.Automation:         <http://www.purl.org/ogit/Automation/> .
+@prefix ogit.Forum:         <http://www.purl.org/ogit/Forum/> .
+@prefix ogit.Network:         <http://www.purl.org/ogit/Network/> .
+@prefix ogit.Knowledge:         <http://www.purl.org/ogit/Knowledge/> .
+@prefix ogit.Datacenter:         <http://www.purl.org/ogit/Datacenter/> .
+@prefix ogit.BusinessProcess:         <http://www.purl.org/ogit/BusinessProcess/> .
+@prefix ogit.ServiceManagement:         <http://www.purl.org/ogit/ServiceManagement/> .
+@prefix ogit.Software:         <http://www.purl.org/ogit/Software/> .
+@prefix ogit.UserMeta:         <http://www.purl.org/ogit/UserMeta/> .
 @prefix ogit.foundation:  <http://www.purl.org/ogit/> .
 
 
@@ -71,25 +95,6 @@ ogit.foundation:capacity
     a ogit.core:Attribute;
     rdfs:label "capacity";
     dcterms:description "General Capacity";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-ogit.foundation:capacityAvailable
-    a ogit.core:Attribute;
-    rdfs:label "capacityAvailable";
-    dcterms:description "If the flag is true, then service can be ordered by new instance. If the flag is false, the service cannot temporarily be ordered due to capacity reasons.";
     dcterms:valid "start=2015-05-21;";
     dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
@@ -1067,3 +1072,5212 @@ ogit.foundation:webPage
             dcterms:creator "Philipp Pelchmann"
         ];
 .
+
+#
+# Verbs
+#
+ogit.foundation:affects
+    a ogit.core:Verb;
+    rdfs:label "affects";
+    dcterms:description "The relationship indicates that one entity affects some other entity.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-06-12";
+            dcterms:description "updated";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-07-24";
+            dcterms:description "updated";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2015-09-10";
+            dcterms:description "updated";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "5";
+            dcterms:date "2016-08-03";
+            dcterms:description "added event->person, event-> ci";
+            dcterms:creator "Philipp Pelchmann"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.BusinessProcess:BusinessProcess
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Service;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.event:Event;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.event:Event;
+            ogit.core:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit.core:from ogit.event:Event;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Ticket;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Ticket;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.location:Location
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:SubTask;
+            ogit.core:to ogit.config:ConfigurationItem
+        ];
+.
+
+ogit.foundation:approves
+    a ogit.core:Verb;
+    rdfs:label "approves";
+    dcterms:description "Indicates if an entity approves something else.";
+    dcterms:valid "start=2015-07-27;";
+    dcterms:creator "Aymen Ayoub";
+    dcterms:created "2015-07-27";
+    dcterms:modified "2015-07-27";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-07-27";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-09-04";
+            dcterms:description "Added edge Permission -> Organization, Profile";
+            dcterms:creator "bmoore@arago.de"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-12-03";
+            dcterms:description "Edited edge Permission -> Forum/Group";
+            dcterms:creator "bmoore@arago.de"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2016-06-23";
+            dcterms:description "connection added";
+            dcterms:creator "Spyridon Travlos"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit.core:from ogit.Forum:Permission;
+            ogit.core:to ogit.Forum:Group
+        ],
+        [
+            ogit.core:from ogit.Forum:Permission;
+            ogit.core:to ogit.Forum:Profile
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.contract:Contract
+        ];
+.
+
+ogit.foundation:assignedTo
+    a ogit.core:Verb;
+    rdfs:label "assignedTo";
+    dcterms:description "Verb expressing which entity could be assigned to which another entity.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-05-20";
+            dcterms:description """Added Connection for `ogit/Forum/Tag` -> `ogit/Forum/KnowledgeBundle`
+Added Connection for `ogit/Forum/Tag` -> `ogit/Forum/Post`
+Added Connection for `ogit/Forum/Tag` -> `ogit/Automation/KnowledgeItem`
+""";
+            dcterms:creator "cwalker@arago.de"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-07-27";
+            dcterms:description """Added Connection for `ogit/Automation/MARSNode` -> `ogit/Person`""";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2015-11-12";
+            dcterms:description """changed direction of ogit/Role to ogit/*Task""";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "5";
+            dcterms:date "2015-11-13";
+            dcterms:description """Added Connection for `ogit/Forum/Tag` -> `ogit/Forum/KnowledgeItemHistory`""";
+            dcterms:creator "bmoore@arago.de"
+        ],
+        [
+            dcterms:identifier "6";
+            dcterms:date "2015-12-10";
+            dcterms:description "change entity name from ogit/ServiceManagement/ChangeTask to ogit/ServiceManagement/SubTask";
+            dcterms:creator "Peter Larem"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ApprovalTask;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ApprovalTask;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:SubTask;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:SubTask;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Ticket;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Ticket;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Ticket;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:CancelEvent;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:CompensationEvent;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ConditionalEvent;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:DataObject;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:DataStore;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ErrorEvent;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:EscalationEvent;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:EventBasedGateway;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ExclusiveGateway;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InclusiveGateway;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:LinkEvent;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:MessageEvent;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:MultipleEvent;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:NoneEvent;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ParallelGateway;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ProcessLane;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ProcessPool;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SignalEvent;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:TerminationEvent;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:TimerEvent;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.Forum:Tag;
+            ogit.core:to ogit.Forum:KnowledgeBundle
+        ],
+        [
+            ogit.core:from ogit.Forum:Tag;
+            ogit.core:to ogit.Forum:Post
+        ],
+        [
+            ogit.core:from ogit.Forum:Tag;
+            ogit.core:to ogit.Automation:KnowledgeItem
+        ],
+        [
+            ogit.core:from ogit.Forum:Tag;
+            ogit.core:to ogit.Forum:KnowledgeItemHistory
+        ];
+.
+
+ogit.foundation:associates
+    a ogit.core:Verb;
+    rdfs:label "associates";
+    dcterms:description "";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-05-26";
+            dcterms:description "change Issue to AutomationIssue";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-12-04";
+            dcterms:description "Added Forum/Group -> Forum/Role";
+            dcterms:creator "bmoore@arago.de"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.Automation:AutomationIssue;
+            ogit.core:to ogit.task:Question
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Cost:CostElement
+        ],
+        [
+            ogit.core:from ogit.asset:Asset;
+            ogit.core:to ogit.Cost:CostElement
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNodeTemplate;
+            ogit.core:to ogit.Cost:CostElement
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeItemHistory;
+            ogit.core:to ogit.Forum:KnowledgeItemHistory
+        ],
+        [
+            ogit.core:from ogit.Forum:Group;
+            ogit.core:to ogit.Forum:Role
+        ];
+.
+
+ogit.foundation:belongs
+    a ogit.core:Verb;
+    rdfs:label "belongs";
+    dcterms:description "Verb showing if one entity belongs to another.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2016-08-08";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-07-15";
+            dcterms:description "add connection Person -> Organization";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-08-20";
+            dcterms:description "added Link";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2015-09-03";
+            dcterms:description "add connection Attachment -> License, Contract";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "5";
+            dcterms:date "2015-09-04";
+            dcterms:description "add edge Profile -> Organization";
+            dcterms:creator "bmoore@arago.de"
+        ],
+        [
+            dcterms:identifier "6";
+            dcterms:date "2015-09-17";
+            dcterms:description "add connection Attachment -> Person, Organization";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "7";
+            dcterms:date "2015-10-02";
+            dcterms:description "add connection /Forum/Profile -> Person";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "8";
+            dcterms:date "2015-09-04";
+            dcterms:description "Modify edge /Forum/Profile -> Organization, to /Forum/Profile -> /Forum/Group";
+            dcterms:creator "bmoore@arago.de"
+        ],
+        [
+            dcterms:identifier "9";
+            dcterms:date "2015-12-10";
+            dcterms:description "change entity name from ogit/ServiceManagement/ChangeTask to ogit/ServiceManagement/SubTask";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "10";
+            dcterms:date "2015-12-14";
+            dcterms:description "add connection Attachment -> Comment";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "11";
+            dcterms:date "2016-07-12";
+            dcterms:description "Added edges for `Person` -> `BusinessProcess/Project`, `Person` -> `BusinessProcess/Milestone`, `BusinessProcess/Milestone` -> `BusinessProcess/Project`, `BusinessProcess/SurveyCycle` -> `BusinessProcess/Survey`, `BusinessProcess/Survey` -> `Person`, `BusinessProcess/SurveyCycle` -> `Person`";
+            dcterms:creator "Arthur Shoba"
+        ],
+        [
+            dcterms:identifier "13";
+            dcterms:date "2016-08-03";
+            dcterms:description "Added comment -> event";
+            dcterms:creator "Philipp Pelchmann"
+        ],
+        [
+            dcterms:identifier "14";
+            dcterms:date "2016-08-08";
+            dcterms:description "Removed edges for `Person` -> `BusinessProcess/Project`, `Person` -> `BusinessProcess/Milestone`. Added edges for `BusinessProcess/Survey` -> `BusinessProcess/Milestone`, `BusinessProcess/Survey` -> `BusinessProcess/Project`, `BusinessProcess/Survey` -> `Organization`, `BusinessProcess/SurveyReply` -> `BusinessProcess/SurveyIteration`. Renamed `BusinessProcess/SurveyCycle` to `BusinessProcess/SurveyIteration`";
+            dcterms:creator "Alexander Ryabtsev"
+        ],
+        [
+            dcterms:identifier "15";
+            dcterms:date "2016-10-26";
+            dcterms:description "Added Organization -> Alert";
+            dcterms:creator "stravlos@arago.de"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.contract:Contract;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.Software:Application;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ApprovalTask;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
+        ],
+        [
+            ogit.core:from ogit.asset:Asset;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.config:Attachment;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.config:Attachment;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
+        ],
+        [
+            ogit.core:from ogit.config:Attachment;
+            ogit.core:to ogit.ServiceManagement:Incident
+        ],
+        [
+            ogit.core:from ogit.config:Attachment;
+            ogit.core:to ogit.ServiceManagement:Problem
+        ],
+        [
+            ogit.core:from ogit.config:Attachment;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:SubTask;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:SubTask;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:SubTask;
+            ogit.core:to ogit.ServiceManagement:Incident
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:SubTask;
+            ogit.core:to ogit.ServiceManagement:Problem
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:SubTask;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.license:LicenseToken;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.Network:IPAddress;
+            ogit.core:to ogit.Network:Subnet
+        ],
+        [
+            ogit.core:from ogit.Network:Port;
+            ogit.core:to ogit.Network:VLAN
+        ],
+        [
+            ogit.core:from ogit.Network:PortChannel;
+            ogit.core:to ogit.Network:Port
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.Forum:Role;
+            ogit.core:to ogit.Forum:Profile
+        ],
+        [
+            ogit.core:from ogit.data:Comment;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.config:Attachment;
+            ogit.core:to ogit.license:License
+        ],
+        [
+            ogit.core:from ogit.config:Attachment;
+            ogit.core:to ogit.contract:Contract
+        ],
+        [
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:Group
+        ],
+        [
+            ogit.core:from ogit.config:Attachment;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.config:Attachment;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.config:Attachment;
+            ogit.core:to ogit.ServiceManagement:SubTask
+        ],
+        [
+            ogit.core:from ogit.data:Comment;
+            ogit.core:to ogit.ServiceManagement:SubTask
+        ],
+        [
+            ogit.core:from ogit.data:Comment;
+            ogit.core:to ogit.event:Event
+        ],
+        [
+            ogit.core:from ogit.config:Attachment;
+            ogit.core:to ogit.data:Comment
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:Milestone;
+            ogit.core:to ogit.BusinessProcess:Project
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SurveyIteration;
+            ogit.core:to ogit.BusinessProcess:Survey
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SurveyIteration;
+            ogit.core:to ogit.BusinessProcess:Project
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SurveyIteration;
+            ogit.core:to ogit.BusinessProcess:Milestone
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:Survey;
+            ogit.core:to ogit.BusinessProcess:Project
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:Survey;
+            ogit.core:to ogit.BusinessProcess:Milestone
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:Survey;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SurveyReply;
+            ogit.core:to ogit.BusinessProcess:SurveyIteration
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.event:Alert
+        ];
+.
+
+ogit.foundation:communicatesWith
+    a ogit.core:Verb;
+    rdfs:label "communicatesWith";
+    dcterms:description "indicates which entities can communicate with other entities";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.person:Person
+        ];
+.
+
+ogit.foundation:complies
+    a ogit.core:Verb;
+    rdfs:label "complies";
+    dcterms:description "Indicates wether one entity should comply to another.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-06-08";
+            dcterms:description "added edges between ogit/ServiceManagement/Incident => ogit/ complies ogit/ServiceManagement/SLA, ogit/ServiceManagement/ChangeRequest => ogit/complies ogit/ServiceManagement/SLA and ogit/ServiceManagement/Problem => ogit/complies ogit/ServiceManagement/SLA";
+            dcterms:creator "Philipp Pelchmann"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.ServiceManagement:SLA
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.ServiceManagement:SLA
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.ServiceManagement:SLA
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Service;
+            ogit.core:to ogit.ServiceManagement:SLA
+        ],
+        [
+            ogit.core:from ogit.Network:AccessControlList;
+            ogit.core:to ogit.Network:NetworkSetting
+        ],
+        [
+            ogit.core:from ogit.Network:NetworkFilter;
+            ogit.core:to ogit.Network:NetworkSetting
+        ],
+        [
+            ogit.core:from ogit.Network:NetworkInterface;
+            ogit.core:to ogit.Network:NetworkSetting
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.organization:Policy
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.Software:Application;
+            ogit.core:to ogit.ServiceManagement:SLA
+        ];
+.
+
+ogit.foundation:conformsTo
+    a ogit.core:Verb;
+    rdfs:label "conformsTo";
+    dcterms:description "allows reference to a Schema";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:connects
+    a ogit.core:Verb;
+    rdfs:label "connects";
+    dcterms:description "Verb showing that an entity is physically/virtually connecting to another entity.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-06-09";
+            dcterms:description "Adding many connections for NTO/Forum";
+            dcterms:creator "cwalker@arago.de"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-09-15";
+            dcterms:description "Adding connection for Account -> Person";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2015-10-15";
+            dcterms:description "Adding connection for Comment -> Contract, License";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "5";
+            dcterms:date "2015-11-13";
+            dcterms:description "Adding many more connections for NTO/Forum (KnowledgeItemHistory)";
+            dcterms:creator "bmoore@arago.de"
+        ],
+        [
+            dcterms:identifier "6";
+            dcterms:date "2016-01-22";
+            dcterms:description "Adding connection for Email -> Person";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "7";
+            dcterms:date "2016-01-26";
+            dcterms:description "Adding connection for Comment -> Organization";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "8";
+            dcterms:date "2016-03-02";
+            dcterms:description "Adding connection for Comment -> Person";
+            dcterms:creator "Peter Larem"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.device:Device;
+            ogit.core:to ogit.Datacenter:UPS
+        ],
+        [
+            ogit.core:from ogit.device:Device;
+            ogit.core:to ogit.Datacenter:PowerDistributionUnit
+        ],
+        [
+            ogit.core:from ogit.Network:NetworkLink;
+            ogit.core:to ogit.Network:NetworkInterface
+        ],
+        [
+            ogit.core:from ogit.Network:Port;
+            ogit.core:to ogit.Network:FCHBA
+        ],
+        [
+            ogit.core:from ogit.Network:Port;
+            ogit.core:to ogit.Network:NIC
+        ],
+        [
+            ogit.core:from ogit.Software:SoftwareComponent;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.Forum:Post;
+            ogit.core:to ogit.data:Hyperlink
+        ],
+        [
+            ogit.core:from ogit.Forum:Post;
+            ogit.core:to ogit.Forum:Post
+        ],
+        [
+            ogit.core:from ogit.Forum:Post;
+            ogit.core:to ogit.Automation:KnowledgeItem
+        ],
+        [
+            ogit.core:from ogit.Forum:Post;
+            ogit.core:to ogit.Forum:KnowledgeBundle
+        ],
+        [
+            ogit.core:from ogit.Forum:Post;
+            ogit.core:to ogit.Forum:Reply
+        ],
+        [
+            ogit.core:from ogit.Forum:Post;
+            ogit.core:to ogit.data:Comment
+        ],
+        [
+            ogit.core:from ogit.Forum:Post;
+            ogit.core:to ogit.Forum:Topic
+        ],
+        [
+            ogit.core:from ogit.Forum:Post;
+            ogit.core:to ogit.Forum:Profile
+        ],
+        [
+            ogit.core:from ogit.Automation:KnowledgeItem;
+            ogit.core:to ogit.data:Hyperlink
+        ],
+        [
+            ogit.core:from ogit.Automation:KnowledgeItem;
+            ogit.core:to ogit.Forum:Post
+        ],
+        [
+            ogit.core:from ogit.Automation:KnowledgeItem;
+            ogit.core:to ogit.Automation:KnowledgeItem
+        ],
+        [
+            ogit.core:from ogit.Automation:KnowledgeItem;
+            ogit.core:to ogit.Forum:KnowledgeBundle
+        ],
+        [
+            ogit.core:from ogit.Automation:KnowledgeItem;
+            ogit.core:to ogit.Forum:Reply
+        ],
+        [
+            ogit.core:from ogit.Automation:KnowledgeItem;
+            ogit.core:to ogit.data:Comment
+        ],
+        [
+            ogit.core:from ogit.Automation:KnowledgeItem;
+            ogit.core:to ogit.Forum:Topic
+        ],
+        [
+            ogit.core:from ogit.Automation:KnowledgeItem;
+            ogit.core:to ogit.Forum:Profile
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeBundle;
+            ogit.core:to ogit.data:Hyperlink
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeBundle;
+            ogit.core:to ogit.Forum:Post
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeBundle;
+            ogit.core:to ogit.Automation:KnowledgeItem
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeBundle;
+            ogit.core:to ogit.Forum:KnowledgeBundle
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeBundle;
+            ogit.core:to ogit.Forum:Reply
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeBundle;
+            ogit.core:to ogit.data:Comment
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeBundle;
+            ogit.core:to ogit.Forum:Topic
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeBundle;
+            ogit.core:to ogit.Forum:Profile
+        ],
+        [
+            ogit.core:from ogit.Forum:Reply;
+            ogit.core:to ogit.data:Hyperlink
+        ],
+        [
+            ogit.core:from ogit.Forum:Reply;
+            ogit.core:to ogit.Forum:Post
+        ],
+        [
+            ogit.core:from ogit.Forum:Reply;
+            ogit.core:to ogit.Automation:KnowledgeItem
+        ],
+        [
+            ogit.core:from ogit.Forum:Reply;
+            ogit.core:to ogit.Forum:KnowledgeBundle
+        ],
+        [
+            ogit.core:from ogit.Forum:Reply;
+            ogit.core:to ogit.Forum:Reply
+        ],
+        [
+            ogit.core:from ogit.Forum:Reply;
+            ogit.core:to ogit.data:Comment
+        ],
+        [
+            ogit.core:from ogit.Forum:Reply;
+            ogit.core:to ogit.Forum:Topic
+        ],
+        [
+            ogit.core:from ogit.Forum:Reply;
+            ogit.core:to ogit.Forum:Profile
+        ],
+        [
+            ogit.core:from ogit.data:Comment;
+            ogit.core:to ogit.data:Hyperlink
+        ],
+        [
+            ogit.core:from ogit.data:Comment;
+            ogit.core:to ogit.Forum:Post
+        ],
+        [
+            ogit.core:from ogit.data:Comment;
+            ogit.core:to ogit.Automation:KnowledgeItem
+        ],
+        [
+            ogit.core:from ogit.data:Comment;
+            ogit.core:to ogit.Forum:KnowledgeBundle
+        ],
+        [
+            ogit.core:from ogit.data:Comment;
+            ogit.core:to ogit.Forum:Reply
+        ],
+        [
+            ogit.core:from ogit.data:Comment;
+            ogit.core:to ogit.data:Comment
+        ],
+        [
+            ogit.core:from ogit.data:Comment;
+            ogit.core:to ogit.Forum:Topic
+        ],
+        [
+            ogit.core:from ogit.data:Comment;
+            ogit.core:to ogit.Forum:Profile
+        ],
+        [
+            ogit.core:from ogit.person:Account;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.data:Comment;
+            ogit.core:to ogit.contract:Contract
+        ],
+        [
+            ogit.core:from ogit.data:Comment;
+            ogit.core:to ogit.license:License
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeItemHistory;
+            ogit.core:to ogit.data:Hyperlink
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeItemHistory;
+            ogit.core:to ogit.Forum:Post
+        ],
+        [
+            ogit.core:from ogit.Forum:Post;
+            ogit.core:to ogit.Forum:KnowledgeItemHistory
+        ],
+        [
+            ogit.core:from ogit.Forum:Reply;
+            ogit.core:to ogit.Forum:KnowledgeItemHistory
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeItemHistory;
+            ogit.core:to ogit.Forum:KnowledgeItemHistory
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeItemHistory;
+            ogit.core:to ogit.Forum:KnowledgeBundle
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeItemHistory;
+            ogit.core:to ogit.Forum:Reply
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeItemHistory;
+            ogit.core:to ogit.data:Comment
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeItemHistory;
+            ogit.core:to ogit.Forum:Topic
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeItemHistory;
+            ogit.core:to ogit.Forum:Profile
+        ],
+        [
+            ogit.core:from ogit.person:Email;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.data:Comment;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.data:Comment;
+            ogit.core:to ogit.person:Person
+        ];
+.
+
+ogit.foundation:contains
+    a ogit.core:Verb;
+    rdfs:label "contains";
+    dcterms:description """This relationship indicates that something is part of something else. see also \"includes\"""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2016-07-12";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-05-26";
+            dcterms:description "change Issue to AutomationIssue";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-06-01";
+            dcterms:description """Added a connection from `ogit/Forum/Topic` -> `ogit/Forum/Post`
+Added a connection from `ogit/Forum/KnowledgeBundle` -> `ogit/Automation/KnowledgeItem`
+""";
+            dcterms:creator "cwalker@arago.de"
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2015-06-25";
+            dcterms:description "added DynamicEngineData";
+            dcterms:creator "Miroslaw Glusiuk"
+        ],
+        [
+            dcterms:identifier "5";
+            dcterms:date "2015-07-06";
+            dcterms:description """Added a connection from `ogit/Forum/KnowledgeBundle` -> `ogit/Automation/AutomationIssue""";
+            dcterms:creator "cwalker@arago.de"
+        ],
+        [
+            dcterms:identifier "6";
+            dcterms:date "2015-07-27";
+            dcterms:description "Added a connection from `ogit/ConfigurationItem` -> `ogit/ConfigurationItem`, Added a connection from `ogit/Automation/MARSNode` -> `/ogit/Network/NetworkInterface`";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "7";
+            dcterms:date "2015-10-15";
+            dcterms:description "Added a connection from `ogit/Automation/MARSNode` -> `ogit/Automation/MARSNode`";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "8";
+            dcterms:date "2016-10-26";
+            dcterms:description "Added a connection from `ogit/Alert` -> `ogit/License`";
+            dcterms:creator "stravlos@arago.co"
+        ],
+        [
+            dcterms:identifier "9";
+            dcterms:date "2017-03-23";
+            dcterms:description "add connection for Knowledge:AcuqisitionSession's";
+            dcterms:creator "cwalker@arago.de"
+        ],
+        [
+            dcterms:identifier "10";
+            dcterms:date "2017-04-05";
+            dcterms:description "Added a connection from `ogit/Alert` -> `ogit/Contract`";
+            dcterms:creator "stravlos@arago.co"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.Automation:AutomationIssue;
+            ogit.core:to ogit.Automation:Item
+        ],
+        [
+            ogit.core:from ogit.Automation:KnowledgeItem;
+            ogit.core:to ogit.Automation:Trigger
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSModel;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.Automation:Item;
+            ogit.core:to ogit.Automation:Item
+        ],
+        [
+            ogit.core:from ogit.Automation:Item;
+            ogit.core:to ogit.Automation:KnowledgeItemAttribute
+        ],
+        [
+            ogit.core:from ogit.task:TaskList;
+            ogit.core:to ogit.task:Task
+        ],
+        [
+            ogit.core:from ogit.Automation:Trigger;
+            ogit.core:to ogit.Automation:Item
+        ],
+        [
+            ogit.core:from ogit.Cost:CostDistribution;
+            ogit.core:to ogit.Cost:CostElement
+        ],
+        [
+            ogit.core:from ogit.Cost:PlanningTemplate;
+            ogit.core:to ogit.Cost:PlanningTemplate
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:CancelEvent;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:CancelEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:CompensationEvent;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:CompensationEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ConditionalEvent;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ConditionalEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:DataObject;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:DataObject;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:DataStore;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:DataStore;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ErrorEvent;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ErrorEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:EscalationEvent;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:EscalationEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:EventBasedGateway;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:EventBasedGateway;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ExclusiveGateway;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ExclusiveGateway;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InclusiveGateway;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InclusiveGateway;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:LinkEvent;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:LinkEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:MessageEvent;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:MessageEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:MultipleEvent;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:MultipleEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:NoneEvent;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:NoneEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ParallelGateway;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ParallelGateway;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ProcessLane;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ProcessLane;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ProcessPool;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ProcessPool;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ProcessPool;
+            ogit.core:to ogit.BusinessProcess:ProcessLane
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SignalEvent;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SignalEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:TerminationEvent;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:TerminationEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:TimerEvent;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:TimerEvent;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.contract:Contract;
+            ogit.core:to ogit.ServiceManagement:SLA
+        ],
+        [
+            ogit.core:from ogit.contract:Contract;
+            ogit.core:to ogit.license:License
+        ],
+        [
+            ogit.core:from ogit.Datacenter:Building;
+            ogit.core:to ogit.Datacenter:Room
+        ],
+        [
+            ogit.core:from ogit.Datacenter:Building;
+            ogit.core:to ogit.Datacenter:Datacenter
+        ],
+        [
+            ogit.core:from ogit.device:Device;
+            ogit.core:to ogit.Datacenter:Sensor
+        ],
+        [
+            ogit.core:from ogit.Datacenter:Rack;
+            ogit.core:to ogit.device:Device
+        ],
+        [
+            ogit.core:from ogit.Datacenter:Rack;
+            ogit.core:to ogit.Datacenter:PowerDistributionUnit
+        ],
+        [
+            ogit.core:from ogit.Datacenter:Rack;
+            ogit.core:to ogit.Datacenter:Sensor
+        ],
+        [
+            ogit.core:from ogit.Datacenter:Room;
+            ogit.core:to ogit.Datacenter:Section
+        ],
+        [
+            ogit.core:from ogit.Datacenter:Room;
+            ogit.core:to ogit.Datacenter:Sensor
+        ],
+        [
+            ogit.core:from ogit.Datacenter:Room;
+            ogit.core:to ogit.Datacenter:Cooling
+        ],
+        [
+            ogit.core:from ogit.Datacenter:Room;
+            ogit.core:to ogit.Datacenter:Rack
+        ],
+        [
+            ogit.core:from ogit.Datacenter:Section;
+            ogit.core:to ogit.Datacenter:Rack
+        ],
+        [
+            ogit.core:from ogit.Datacenter:Section;
+            ogit.core:to ogit.Datacenter:Sensor
+        ],
+        [
+            ogit.core:from ogit.catalog:Catalog;
+            ogit.core:to ogit.catalog:CatalogItem
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Offering;
+            ogit.core:to ogit.Cost:CostElement
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Offering;
+            ogit.core:to ogit.catalog:CatalogItem
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Offering;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSModelTemplate;
+            ogit.core:to ogit.Automation:MARSNodeTemplate
+        ],
+        [
+            ogit.core:from ogit.Network:NetworkCard;
+            ogit.core:to ogit.Network:Port
+        ],
+        [
+            ogit.core:from ogit.Network:NetworkEnclosure;
+            ogit.core:to ogit.Network:Shelf
+        ],
+        [
+            ogit.core:from ogit.Network:NetworkEndpoint;
+            ogit.core:to ogit.Network:FCHBA
+        ],
+        [
+            ogit.core:from ogit.Network:NetworkEndpoint;
+            ogit.core:to ogit.Network:NetworkInterface
+        ],
+        [
+            ogit.core:from ogit.Network:NetworkFabric;
+            ogit.core:to ogit.Network:NetworkCard
+        ],
+        [
+            ogit.core:from ogit.Network:NetworkFabric;
+            ogit.core:to ogit.Network:SimpleDevice
+        ],
+        [
+            ogit.core:from ogit.Network:NIC;
+            ogit.core:to ogit.Network:MACAddress
+        ],
+        [
+            ogit.core:from ogit.Network:Shelf;
+            ogit.core:to ogit.Network:Slot
+        ],
+        [
+            ogit.core:from ogit.Network:SimpleDevice;
+            ogit.core:to ogit.Network:Port
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.Software:Application;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.Software:SoftwareComponent;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Offering;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.asset:Asset;
+            ogit.core:to ogit.contract:Contract
+        ],
+        [
+            ogit.core:from ogit.Forum:Topic;
+            ogit.core:to ogit.Forum:Post
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeBundle;
+            ogit.core:to ogit.Automation:KnowledgeItem
+        ],
+        [
+            ogit.core:from ogit.Automation:AutomationIssue;
+            ogit.core:to ogit.Automation:DynamicEngineData
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Automation:DynamicEngineData
+        ],
+        [
+            ogit.core:from ogit.Automation:DynamicEngineData;
+            ogit.core:to ogit.Automation:DynamicEngineData
+        ],
+        [
+            ogit.core:from ogit.Automation:AutomationIssue;
+            ogit.core:to ogit.task:Task
+        ],
+        [
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeBundle;
+            ogit.core:to ogit.Automation:AutomationIssue
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Network:NetworkInterface
+        ],
+        [
+            ogit.core:from ogit.event:Alert;
+            ogit.core:to ogit.license:License
+        ],
+                [
+            ogit.core:from ogit.event:Alert;
+            ogit.core:to ogit.contract:Contract
+        ],
+        [
+            ogit.core:from ogit.Knowledge:AcquisitionSession;
+            ogit.core:to ogit.data:Comment
+        ];
+.
+
+ogit.foundation:corresponds
+    a ogit.core:Verb;
+    rdfs:label "corresponds";
+    dcterms:description "Indicates wether one entity could correpond to a more general one, e.g. an Incident could correspond to a Ticket";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-05-26";
+            dcterms:description "change Issue to AutomationIssue";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-05-26";
+            dcterms:description "change Issue to AutomationIssue";
+            dcterms:creator ""
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2015-06-11";
+            dcterms:description "edge added from /ogit/ConfigurationItem to /ogit/AutomationMARSNode.";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "5";
+            dcterms:date "2015-08-19";
+            dcterms:description "Two edges added";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "6";
+            dcterms:date "2015-09-04";
+            dcterms:description "Added edge Invite -> Topic";
+            dcterms:creator "bmoore@arago.de"
+        ],
+        [
+            dcterms:identifier "7";
+            dcterms:date "2015-12-10";
+            dcterms:description "change entity name from ogit/ServiceManagement/ChangeTask to ogit/ServiceManagement/SubTask";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "8";
+            dcterms:date "2016-04-04";
+            dcterms:description "Added edge Invite -> KnowledgeItemHistory|KnowledgeBundle";
+            dcterms:creator "bmoore@arago.de"
+        ],
+        [
+            dcterms:identifier "9";
+            dcterms:date "2016-08-09";
+            dcterms:description "Added Event->AutomationIssue";
+            dcterms:creator "Philipp Pelchmann"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.Datacenter:Server;
+            ogit.core:to ogit.device:Device
+        ],
+        [
+            ogit.core:from ogit.Datacenter:Storage;
+            ogit.core:to ogit.device:Device
+        ],
+        [
+            ogit.core:from ogit.Datacenter:UPS;
+            ogit.core:to ogit.device:Device
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Action;
+            ogit.core:to ogit.catalog:CatalogItem
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.config:ParameterType;
+            ogit.core:to ogit.config:Parameter
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Service;
+            ogit.core:to ogit.catalog:CatalogItem
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.Automation:AutomationIssue
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.Automation:AutomationIssue
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.event:Event;
+            ogit.core:to ogit.Automation:AutomationIssue
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.Automation:AutomationIssue
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Ticket;
+            ogit.core:to ogit.Automation:AutomationIssue
+        ],
+        [
+            ogit.core:from ogit.Network:NetworkCard;
+            ogit.core:to ogit.asset:Asset
+        ],
+        [
+            ogit.core:from ogit.Network:NetworkEnclosure;
+            ogit.core:to ogit.asset:Asset
+        ],
+        [
+            ogit.core:from ogit.Network:NetworkEndpoint;
+            ogit.core:to ogit.asset:Asset
+        ],
+        [
+            ogit.core:from ogit.Network:NetworkFabric;
+            ogit.core:to ogit.asset:Asset
+        ],
+        [
+            ogit.core:from ogit.Network:FCHBA;
+            ogit.core:to ogit.asset:Asset
+        ],
+        [
+            ogit.core:from ogit.Network:NIC;
+            ogit.core:to ogit.asset:Asset
+        ],
+        [
+            ogit.core:from ogit.Network:Shelf;
+            ogit.core:to ogit.asset:Asset
+        ],
+        [
+            ogit.core:from ogit.Network:SimpleDevice;
+            ogit.core:to ogit.asset:Asset
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ApprovalTask;
+            ogit.core:to ogit.task:Task
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:SubTask;
+            ogit.core:to ogit.task:Task
+        ],
+        [
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.Forum:Invite;
+            ogit.core:to ogit.Forum:Topic
+        ],
+        [
+            ogit.core:from ogit.Forum:Invite;
+            ogit.core:to ogit.Forum:KnowledgeItemHistory
+        ],
+        [
+            ogit.core:from ogit.Forum:Invite;
+            ogit.core:to ogit.Forum:KnowledgeBundle
+        ];
+.
+
+ogit.foundation:creates
+    a ogit.core:Verb;
+    rdfs:label "creates";
+    dcterms:description "Indicates if one entity creates another one.";
+    dcterms:valid "start=2015-05-19;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-19";
+    dcterms:modified "2016-07-12";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-19";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-05-20";
+            dcterms:description """Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/KnowledgeBundle`
+Added Connection for `ogit/Forum/Profile` -> `ogit/Comment`
+Added Connection for `ogit/Forum/Profile` -> `ogit/Automation/KnowledgeItem`
+Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/Post`
+Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/Reply`
+Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/Topic`
+""";
+            dcterms:creator "cwalker@arago.de"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-06-09";
+            dcterms:description """Added Connection for `ogit/Forum/Profile` -> `ogit/Automation/AutomationIssue`
+""";
+            dcterms:creator ""
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2015-07-24";
+            dcterms:description """Added Connection for `/ogit/Organization` -> `/ogit/ConfigurationItem`
+""";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "5";
+            dcterms:date "2015-07-27";
+            dcterms:description """Added Connection for `/ogit/Person` -> `/ogit/ConfigurationItem`
+""";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "6";
+            dcterms:date "2015-08-11";
+            dcterms:description """Added Connections for `Connector` -> `ConfigurationItem`, `ChangeRequest`,`Incident`
+""";
+            dcterms:creator "Philipp Pelchmann"
+        ],
+        [
+            dcterms:identifier "7";
+            dcterms:date "2015-04-09";
+            dcterms:description "Added edge for `ogit/Forum/Profile` -> `ogit/Forum/Invite`, `ogit/Forum/Permission`";
+            dcterms:creator "bmoore@arago.de"
+        ],
+        [
+            dcterms:identifier "8";
+            dcterms:date "2015-11-13";
+            dcterms:description "Added edge for `ogit/Forum/Profile` -> `ogit/Forum/KnowledgeItemHistory`";
+            dcterms:creator "bmoore@arago.de"
+        ],
+        [
+            dcterms:identifier "9";
+            dcterms:date "2016-02-22";
+            dcterms:description "Added edge for `ogit/Organization` -> `ogit/Organization`";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "10";
+            dcterms:date "2016-05-17";
+            dcterms:description "Added edge for `ogit/Forum/Profile` -> `ogit/Forum/Rating`";
+            dcterms:creator "Ben Neal"
+        ],
+        [
+            dcterms:identifier "11";
+            dcterms:date "2016-07-12";
+            dcterms:description "Added edge for `ogit/Person` -> `ogit/BusinessProcess/Project`, `ogit/Person` -> `ogit/BusinessProcess/Milestone`";
+            dcterms:creator "Arthur Shoba"
+        ],
+        [
+            dcterms:identifier "12";
+            dcterms:date "2016-08-03";
+            dcterms:description "Added connector -> event";
+            dcterms:creator "Philipp Pelchmann"
+        ],
+        [
+            dcterms:identifier "13";
+            dcterms:date "2016-08-08";
+            dcterms:description "Removed edges for `ogit/Person` -> `ogit/BusinessProcess/Project`, `ogit/Person` -> `ogit/BusinessProcess/Milestone`";
+            dcterms:creator "Arthur Shoba"
+        ],
+        [
+            dcterms:identifier "14";
+            dcterms:date "2016-10-26";
+            dcterms:description "Add edge for `ogit/Person` -> `ogit/Alert`";
+            dcterms:creator "stravlos@arago.co"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.ServiceManagement:Report;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:KnowledgeBundle
+        ],
+        [
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.data:Comment
+        ],
+        [
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Automation:KnowledgeItem
+        ],
+        [
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:Post
+        ],
+        [
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:Reply
+        ],
+        [
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:Topic
+        ],
+        [
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Automation:AutomationIssue
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit.core:from ogit.Software:Connector;
+            ogit.core:to ogit.ServiceManagement:Incident
+        ],
+        [
+            ogit.core:from ogit.Software:Connector;
+            ogit.core:to ogit.event:Event
+        ],
+        [
+            ogit.core:from ogit.Software:Connector;
+            ogit.core:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit.core:from ogit.Software:Connector;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
+        ],
+        [
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:Invite
+        ],
+        [
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:Permission
+        ],
+        [
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:KnowledgeItemHistory
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:Rating
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.event:Alert
+        ];
+.
+
+ogit.foundation:defines
+    a ogit.core:Verb;
+    rdfs:label "defines";
+    dcterms:description "General relationship indicating that some entitiy defines some other.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-10-14";
+            dcterms:description "add connection";
+            dcterms:creator "stravlos@arago.de"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2017-03-23";
+            dcterms:description "add connections for Knowledge:AcuqisitionSession's";
+            dcterms:creator "cwalker@arago.de"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.Automation:MAID;
+            ogit.core:to ogit.data:Timeseries
+        ],
+        [
+            ogit.core:from ogit.contract:Contract;
+            ogit.core:to ogit.contract:Penalty
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.ServiceManagement:Offering
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.UserMeta:Filter
+        ],
+        [
+            ogit.core:from ogit.Knowledge:AcquisitionSession;
+            ogit.core:to ogit.Knowledge:Step
+        ],
+        [
+            ogit.core:from ogit.Knowledge:AcquisitionSession;
+            ogit.core:to ogit.Automation:KnowledgeItem
+        ];
+.
+
+ogit.foundation:deployedTo
+    a ogit.core:Verb;
+    rdfs:label "deployedTo";
+    dcterms:description "Verb associates if something was deployed to another entity/component.";
+    dcterms:valid "start=2015-07-27;";
+    dcterms:creator "Aymen Ayoub";
+    dcterms:created "2015-07-27";
+    dcterms:modified "2015-07-27";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-27";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-10-15";
+            dcterms:description "added a new edge from a MARSNode to a MARSNode";
+            dcterms:creator "Aymen Ayoub"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Automation:MARSNode
+        ];
+.
+
+ogit.foundation:describes
+    a ogit.core:Verb;
+    rdfs:label "describes";
+    dcterms:description """This relationship allows to associate additional information with an entity. The \"described\" node can have many \"describing\" nodes.""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.config:Parameter;
+            ogit.core:to ogit.Cost:CostElement
+        ],
+        [
+            ogit.core:from ogit.config:Parameter;
+            ogit.core:to ogit.ServiceManagement:Offering
+        ],
+        [
+            ogit.core:from ogit.config:Parameter;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.config:Parameter;
+            ogit.core:to ogit.ServiceManagement:SLA
+        ],
+        [
+            ogit.core:from ogit.asset:Asset;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.asset:Asset;
+            ogit.core:to ogit.Datacenter:Cooling
+        ],
+        [
+            ogit.core:from ogit.asset:Asset;
+            ogit.core:to ogit.device:Device
+        ],
+        [
+            ogit.core:from ogit.asset:Asset;
+            ogit.core:to ogit.Datacenter:PowerDistributionUnit
+        ],
+        [
+            ogit.core:from ogit.asset:Asset;
+            ogit.core:to ogit.Datacenter:Rack
+        ],
+        [
+            ogit.core:from ogit.asset:Asset;
+            ogit.core:to ogit.Automation:MARSNodeTemplate
+        ],
+        [
+            ogit.core:from ogit.asset:Asset;
+            ogit.core:to ogit.Network:NetworkCard
+        ],
+        [
+            ogit.core:from ogit.asset:Asset;
+            ogit.core:to ogit.Network:NetworkEnclosure
+        ],
+        [
+            ogit.core:from ogit.asset:Asset;
+            ogit.core:to ogit.Network:NetworkFabric
+        ],
+        [
+            ogit.core:from ogit.asset:Asset;
+            ogit.core:to ogit.Network:SimpleDevice
+        ],
+        [
+            ogit.core:from ogit.config:Parameter;
+            ogit.core:to ogit.catalog:CatalogItem
+        ];
+.
+
+ogit.foundation:follows
+    a ogit.core:Verb;
+    rdfs:label "follows";
+    dcterms:description "Indicates if one entity follows another, as in a sequence flow  connecting two elements of a process.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2016-11-01";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-09-15";
+            dcterms:description "add connection Person -> Person";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2016-11-01";
+            dcterms:description "add connection Account -> Account";
+            dcterms:creator "Ben Neal"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:BusinessRuleTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:InstantiatedReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:ManualTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:ReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:ScriptTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:SendTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:ServiceTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:UndefinedTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:UserTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:BusinessRuleTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:InstantiatedReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:ManualTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:ReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:ScriptTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:SendTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:ServiceTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:UndefinedTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:UserTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:BusinessRuleTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:InstantiatedReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:ManualTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:ReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:ScriptTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:SendTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:ServiceTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:UndefinedTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:UserTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:BusinessRuleTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:InstantiatedReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:ManualTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:ReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:ScriptTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:SendTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:ServiceTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:UndefinedTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:UserTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:BusinessRuleTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:InstantiatedReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:ManualTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:ReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:ScriptTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:SendTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:ServiceTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:UndefinedTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:UserTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:BusinessRuleTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:InstantiatedReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:ManualTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:ReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:ScriptTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:SendTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:ServiceTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:UndefinedTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:UserTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:BusinessRuleTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:InstantiatedReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:ManualTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:ReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:ScriptTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:SendTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:ServiceTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:UndefinedTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:UserTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:BusinessRuleTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:InstantiatedReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:ManualTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:ReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:ScriptTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:SendTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:ServiceTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:UndefinedTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:UserTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:BusinessRuleTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:InstantiatedReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:ManualTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:ReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:ScriptTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:SendTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:ServiceTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:UndefinedTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:UserTask
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.person:Account;
+            ogit.core:to ogit.person:Account
+        ];
+.
+
+ogit.foundation:generates
+    a ogit.core:Verb;
+    rdfs:label "generates";
+    dcterms:description "";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2016-06-09";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-05-26";
+            dcterms:description "change Issue to AutomationIssue";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-08-04";
+            dcterms:description "some connections addded";
+            dcterms:creator "FCO"
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2016-06-09";
+            dcterms:description "connection added";
+            dcterms:creator "stravlos"
+        ],
+                [
+            dcterms:identifier "5";
+            dcterms:date "2016-10-11";
+            dcterms:description "connection added";
+            dcterms:creator "stravlos"
+        ],
+                [
+            dcterms:identifier "6";
+            dcterms:date "2017-01-20";
+            dcterms:description "connection added";
+            dcterms:creator "stravlos"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.Automation:AutomationIssue;
+            ogit.core:to ogit.Automation:History
+        ],
+        [
+            ogit.core:from ogit.Automation:AutomationIssue;
+            ogit.core:to ogit.data:Timeseries
+        ],
+        [
+            ogit.core:from ogit.task:Question;
+            ogit.core:to ogit.data:Timeseries
+        ],
+        [
+            ogit.core:from ogit.Automation:History;
+            ogit.core:to ogit.data:Timeseries
+        ],
+        [
+            ogit.core:from ogit.Automation:KnowledgeItem;
+            ogit.core:to ogit.data:Timeseries
+        ],
+        [
+            ogit.core:from ogit.Automation:MAID;
+            ogit.core:to ogit.data:Timeseries
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSModel;
+            ogit.core:to ogit.data:Timeseries
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.data:Timeseries
+        ],
+        [
+            ogit.core:from ogit.task:Task;
+            ogit.core:to ogit.data:Timeseries
+        ],
+        [
+            ogit.core:from ogit.task:TaskList;
+            ogit.core:to ogit.data:Timeseries
+        ],
+        [
+            ogit.core:from ogit.device:Device;
+            ogit.core:to ogit.data:Timeseries
+        ],
+        [
+            ogit.core:from ogit.Datacenter:Server;
+            ogit.core:to ogit.data:Timeseries
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.catalog:Catalog
+        ],
+        [
+            ogit.core:from ogit.location:Location;
+            ogit.core:to ogit.data:Timeseries
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Report;
+            ogit.core:to ogit.Price:Invoice
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Service;
+            ogit.core:to ogit.ServiceManagement:Report
+        ],
+        [
+            ogit.core:from ogit.Network:SimpleDevice;
+            ogit.core:to ogit.data:Timeseries
+        ],
+        [
+            ogit.core:from ogit.Software:Application;
+            ogit.core:to ogit.data:Timeseries
+        ],
+        [
+            ogit.core:from ogit.license:License;
+            ogit.core:to ogit.data:Timeseries
+        ],
+                [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.data:Timeseries
+        ],
+                [
+            ogit.core:from ogit.contract:Contract;
+            ogit.core:to ogit.data:Timeseries
+        ];
+.
+
+ogit.foundation:implements
+    a ogit.core:Verb;
+    rdfs:label "implements";
+    dcterms:description "Defines that an entity provides the implementation for another entity.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.Automation:MARSModel;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Service;
+            ogit.core:to ogit.Software:Application
+        ];
+.
+
+ogit.foundation:manages
+    a ogit.core:Verb;
+    rdfs:label "manages";
+    dcterms:description "This relationship indicates that one entity manages some other.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2017-03-28";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-07-27";
+            dcterms:description "updated";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2016-07-12";
+            dcterms:description "Added edges `Person` -> `BusinessProcess/Project`, `Person` -> `BusinessProcess/Milestone`";
+            dcterms:creator "Arthur Shoba"
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2016-08-08";
+            dcterms:description "Removed edges `Person` -> `BusinessProcess/Project`, `Person` -> `BusinessProcess/Milestone`";
+            dcterms:creator "Alexander Ryabtsev"
+        ],
+        [
+            dcterms:identifier "5";
+            dcterms:date "2017-03-28";
+            dcterms:description "Added edge `Organization` -> `Organization`";
+            dcterms:creator "Ben Neal"
+        ],
+        [
+            dcterms:identifier "6";
+            dcterms:date "2017-04-18";
+            dcterms:description "Added edges `Person` -> `BusinessProcess/Project`, `Person` -> `BusinessProcess/Milestone`";
+            dcterms:creator "Vitaly Teremasov"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.Datacenter:Building
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.Datacenter:Cooling
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.Datacenter:Datacenter
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.device:Device
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.Datacenter:Rack
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.Datacenter:Room
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Datacenter:Building
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Datacenter:Cooling
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Datacenter:Datacenter
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.device:Device
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Datacenter:Rack
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Datacenter:Room
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Network:Port
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Network:PortChannel
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Network:Router
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Network:Shelf
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Network:Slot
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Network:Subnet
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Network:Switch
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Network:VLAN
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.BusinessProcess:Project
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Network:WifiAccessPoint
+        ],
+        [
+            ogit.core:from ogit.organization:Role;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.organization:Organization
+        ];
+.
+
+ogit.foundation:opens
+    a ogit.core:Verb;
+    rdfs:label "opens";
+    dcterms:description "Indicates an entity which creates/opens another entity (e.g. Person opens Ticket).";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-08-11";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-06-11";
+            dcterms:description "updated";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-07-06";
+            dcterms:description "updated";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2015-07-27";
+            dcterms:description "updated";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "5";
+            dcterms:date "2015-08-11";
+            dcterms:description "removed link between connector -> incident, connector -> configuration item";
+            dcterms:creator "Philipp Pelchmann"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.ServiceManagement:Service;
+            ogit.core:to ogit.ServiceManagement:Incident
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Service;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.ServiceManagement:Problem
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.ServiceManagement:Incident
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.ServiceManagement:Problem
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.task:Task
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.ServiceManagement:SubTask
+        ];
+.
+
+ogit.foundation:owns
+    a ogit.core:Verb;
+    rdfs:label "owns";
+    dcterms:description "This relationship indicates that one entity owns some other.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-05-20";
+            dcterms:description """Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/KnowledgeBundle`
+Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/FeedEntry`
+Added Connection for `ogit/Forum/Profile` -> `ogit/Notification`
+Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/Topic`
+""";
+            dcterms:creator ""
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-07-27";
+            dcterms:description """Added Connection for `ogit/Organization` -> `ogit/Automation/MARSNode`""";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2016-05-17";
+            dcterms:description """Added Connection for `ogit/Forum/Group` -> `ogit/Forum/KnowledgeBundle`
+Added Connection for `ogit/Forum/Group` -> `ogit/Forum/KnowledgeItemHistory`
+Added Connection for `ogit/Forum/Group` -> `ogit/Forum/Topic`
+""";
+            dcterms:creator "Ben Neal"
+        ],
+        [
+            dcterms:identifier "5";
+            dcterms:date "2016-08-03";
+            dcterms:description "Added person -> event";
+            dcterms:creator "Philipp Pelchmann"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.asset:Asset
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.person:Vcard
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.event:Event
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:KnowledgeBundle
+        ],
+        [
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:FeedEntry
+        ],
+        [
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.event:Notification
+        ],
+        [
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:Topic
+        ],
+        [
+            ogit.core:from ogit.Forum:Group;
+            ogit.core:to ogit.Forum:KnowledgeBundle
+        ],
+        [
+            ogit.core:from ogit.Forum:Group;
+            ogit.core:to ogit.Forum:KnowledgeItemHistory
+        ],
+        [
+            ogit.core:from ogit.Forum:Group;
+            ogit.core:to ogit.Forum:Topic
+        ];
+.
+
+ogit.foundation:plans
+    a ogit.core:Verb;
+    rdfs:label "plans";
+    dcterms:description "Verb showing how one entity plans/predicts on the content of another entity";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.Cost:PlanningTemplate;
+            ogit.core:to ogit.Cost:CostElement
+        ],
+        [
+            ogit.core:from ogit.Cost:PlanningTemplate;
+            ogit.core:to ogit.Automation:MARSModelTemplate
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.Cost:Budget
+        ];
+.
+
+ogit.foundation:precedes
+    a ogit.core:Verb;
+    rdfs:label "precedes";
+    dcterms:description """Describes the relation between a predecessor and a successor entity. This can be use in two ways:
+Either do define some temporal order of things. Or to define some dependency of actions to be done.
+The application managing such dependency graphs is responsible to prevent cyclic dependencies.""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-10-21";
+            dcterms:description "Added allowed between `ogit/Forum/FeedEntry`s";
+            dcterms:creator "cwalker@arago.de"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-12-10";
+            dcterms:description "change entity name from ogit/ServiceManagement/ChangeTask to ogit/ServiceManagement/SubTask";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2015-12-14";
+            dcterms:description "Added allowed between `ogit/Forum/Award`s";
+            dcterms:creator "cwalker@arago.de"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.ServiceManagement:ApprovalTask;
+            ogit.core:to ogit.ServiceManagement:ApprovalTask
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:SubTask;
+            ogit.core:to ogit.ServiceManagement:SubTask
+        ],
+        [
+            ogit.core:from ogit.license:License;
+            ogit.core:to ogit.license:License
+        ],
+        [
+            ogit.core:from ogit.Forum:FeedEntry;
+            ogit.core:to ogit.Forum:FeedEntry
+        ],
+        [
+            ogit.core:from ogit.Forum:Award;
+            ogit.core:to ogit.Forum:Award
+        ];
+.
+
+ogit.foundation:provides
+    a ogit.core:Verb;
+    rdfs:label "provides";
+    dcterms:description "Verb showing if one entity provides something to another.";
+    dcterms:valid "start=2015-07-24;";
+    dcterms:creator "Aymen Ayoub";
+    dcterms:created "2015-07-24";
+    dcterms:modified "2015-07-24";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-07-24";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-07-27";
+            dcterms:description "updated edge from ogit/ConfigurationItem -> ogit/ConfigurationItem added";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-10-15";
+            dcterms:description "updated edge from ogit/Automation/MARSNode -> ogit/Automation/MARSNode added";
+            dcterms:creator "Aymen Ayoub"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Automation:MARSNode
+        ];
+.
+
+ogit.foundation:receivesFrom
+    a ogit.core:Verb;
+    rdfs:label "receivesFrom";
+    dcterms:description "an entity receives data from another entity";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+.
+
+ogit.foundation:rejects
+    a ogit.core:Verb;
+    rdfs:label "rejects";
+    dcterms:description "Indicates if an entity rejects something else.";
+    dcterms:valid "start=2015-09-02;";
+    dcterms:creator "bmoore@arago.de";
+    dcterms:created "2015-09-02";
+    dcterms:modified "2017-03-01";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-09-02";
+            dcterms:description "initial";
+            dcterms:creator "bmoore@arago.de"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2017-03-01";
+            dcterms:description "Added allowed";
+            dcterms:creator "stravlos@arago.de"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.Forum:Profile;
+            ogit.core:to ogit.Forum:Invite
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.event:Alert
+        ];
+.
+
+ogit.foundation:relates
+    a ogit.core:Verb;
+    rdfs:label "relates";
+    dcterms:description "General relationship indicating that one entity is related to another one.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-07-27";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-05-26";
+            dcterms:description "change Issue to AutomationIssue";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-06-01";
+            dcterms:description "Added connection from `ogit/Forum/FeedEntry` to `ogit/Node` (the FeedEntry could relate to anything).";
+            dcterms:creator "cwalker@arago.de"
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2015-07-15";
+            dcterms:description "updated";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "5";
+            dcterms:date "2015-07-24";
+            dcterms:description "updated";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "5";
+            dcterms:date "2015-07-27";
+            dcterms:description "added from ogit/ConfigurationItem to ogit/Device";
+            dcterms:creator "Philipp Pelchmann"
+        ],
+        [
+            dcterms:identifier "6";
+            dcterms:date "2015-08-03";
+            dcterms:description "added from ogit/Software/Application to ogit/License";
+            dcterms:creator "FCO"
+        ],
+        [
+            dcterms:identifier "7";
+            dcterms:date "2016-08-03";
+            dcterms:description "added event-> event, event-> incident";
+            dcterms:creator "Philipp Pelchmann"
+        ],
+        [
+            dcterms:identifier "8";
+            dcterms:date "2016-12-20";
+            dcterms:description "added from ogit/Person to ogit/BusinessProcess/SurveyIteration";
+            dcterms:creator "Alexander Ryabtsev"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.Automation:AutomationIssue;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.Automation:KnowledgeItem;
+            ogit.core:to ogit.Automation:MARSNodeTemplate
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Automation:KnowledgeItem
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.license:License
+        ],
+        [
+            ogit.core:from ogit.Software:Application;
+            ogit.core:to ogit.license:License
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.event:Event;
+            ogit.core:to ogit.event:Event
+        ],
+        [
+            ogit.core:from ogit.event:Event;
+            ogit.core:to ogit.ServiceManagement:Incident
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Automation:MARSNodeTemplate
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.contract:Contract
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.ServiceManagement:Incident
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.ServiceManagement:Problem
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Report;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.ServiceManagement:Incident
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.ServiceManagement:Problem
+        ],
+        [
+            ogit.core:from ogit.event:Event;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.event:Event;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.ServiceManagement:Incident
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.ServiceManagement:Problem
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.ServiceManagement:Incident
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.ServiceManagement:Problem
+        ],
+        [
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.Datacenter:Server
+        ],
+        [
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.config:Attachment
+        ],
+        [
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Ticket;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNodeTemplate;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNodeTemplate;
+            ogit.core:to ogit.Automation:MARSNodeTemplate
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNodeTemplate;
+            ogit.core:to ogit.Automation:MARSNodeTemplate
+        ],
+        [
+            ogit.core:from ogit.Network:IPAddress;
+            ogit.core:to ogit.Network:NetworkInterface
+        ],
+        [
+            ogit.core:from ogit.Network:Port;
+            ogit.core:to ogit.Network:NetworkInterface
+        ],
+        [
+            ogit.core:from ogit.Network:PortChannel;
+            ogit.core:to ogit.Network:NetworkInterface
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.Forum:FeedEntry;
+            ogit.core:to ogit:Node
+        ],
+        [
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.asset:Asset
+        ],
+        [
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.device:Device
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeItemHistory;
+            ogit.core:to ogit.Automation:KnowledgeItem
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.BusinessProcess:SurveyIteration
+        ];
+.
+
+ogit.foundation:reports
+    a ogit.core:Verb;
+    rdfs:label "reports";
+    dcterms:description "Verb showing which entity reports to which another entity.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-08-19";
+            dcterms:description "add connection ogit/Person to ogit/Person";
+            dcterms:creator "Peter Larem"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.config:Parameter;
+            ogit.core:to ogit.config:Parameter
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.ServiceManagement:Incident
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.ServiceManagement:Problem
+        ],
+        [
+            ogit.core:from ogit.organization:Role;
+            ogit.core:to ogit.organization:Role
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.person:Person
+        ];
+.
+
+ogit.foundation:represents
+    a ogit.core:Verb;
+    rdfs:label "represents";
+    dcterms:description "This relationship defines that one entity represents another entity.";
+    dcterms:valid "start=2017-04-11;";
+    dcterms:creator "arago GmbH";
+    dcterms:created "2017-04-11";
+    dcterms:modified "2017-04-11";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2017-04-11";
+            dcterms:description "initial";
+            dcterms:creator "arago GmbH"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.organization:Organization
+        ];
+.
+
+ogit.foundation:requests
+    a ogit.core:Verb;
+    rdfs:label "requests";
+    dcterms:description """Indicates if one entity requests another, e.g. Person requests a ChangeRequest. This might be different from the person
+who created the ticket (ogit/ITSM/opendBy) in case the reporter is calling a service desk and the ticket will be opened
+by help desk staff. Sometimes also named as \"caller\". This Person or entity must be kept informed about relevant updates
+of the ticket.""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-04-09";
+            dcterms:description "Added edge Invite -> Profile";
+            dcterms:creator "bmoore@arago.de"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.license:LicenseRequest
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
+        ],
+        [
+            ogit.core:from ogit.Forum:Invite;
+            ogit.core:to ogit.Forum:Profile
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.ServiceManagement:SubTask
+        ];
+.
+
+ogit.foundation:requires
+    a ogit.core:Verb;
+    rdfs:label "requires";
+    dcterms:description """Indicates dependencies between entities in the sense of \"necessary condition\".""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-09-03";
+            dcterms:description "Added edge Topic -> Permission";
+            dcterms:creator "bmoore@arago.de"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2016-04-04";
+            dcterms:description "Added edge KnowledgeItemHistory|KnowledgeBundle -> Permission";
+            dcterms:creator "bmoore@arago.de"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.BusinessProcess:ProcessLane;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ProcessLane;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ProcessPool;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ProcessPool;
+            ogit.core:to ogit.person:Person
+        ],
+        [
+            ogit.core:from ogit.catalog:CatalogItem;
+            ogit.core:to ogit.catalog:CatalogItem
+        ],
+        [
+            ogit.core:from ogit.catalog:CatalogItem;
+            ogit.core:to ogit.ServiceManagement:Action
+        ],
+        [
+            ogit.core:from ogit.catalog:CatalogItem;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Action;
+            ogit.core:to ogit.catalog:CatalogItem
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Action;
+            ogit.core:to ogit.ServiceManagement:Action
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Action;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Service;
+            ogit.core:to ogit.ServiceManagement:Action
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Service;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.Forum:Topic;
+            ogit.core:to ogit.Forum:Permission
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeItemHistory;
+            ogit.core:to ogit.Forum:Permission
+        ],
+        [
+            ogit.core:from ogit.Forum:KnowledgeBundle;
+            ogit.core:to ogit.Forum:Permission
+        ];
+.
+
+ogit.foundation:runsOn
+    a ogit.core:Verb;
+    rdfs:label "runsOn";
+    dcterms:description "Shows if a certain component is running on another component.";
+    dcterms:valid "start=2015-07-27;";
+    dcterms:creator "Aymen Ayoub";
+    dcterms:created "2015-07-27";
+    dcterms:modified "2015-07-27";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-07-27";
+            dcterms:description "initial";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-10-15";
+            dcterms:description "added an edge from MARSNode to MARSNode";
+            dcterms:creator "Aymen Ayoub"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.config:ConfigurationItem;
+            ogit.core:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit.core:from ogit.Automation:MARSNode;
+            ogit.core:to ogit.Automation:MARSNode
+        ];
+.
+
+ogit.foundation:sends
+    a ogit.core:Verb;
+    rdfs:label "sends";
+    dcterms:description "an entity sends data to another entity";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2017-02-17";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2017-02-17";
+            dcterms:description "add connection";
+            dcterms:creator "stravlos@arago.de"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:BusinessRuleTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:InstantiatedReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:ManualTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:ReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:ScriptTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:SendTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:ServiceTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:UndefinedTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:UserTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:BusinessRuleTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:InstantiatedReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:ManualTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:ReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:ScriptTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:SendTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:ServiceTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:UndefinedTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:UserTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:BusinessRuleTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:InstantiatedReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:ManualTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:ReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:ScriptTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:SendTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:ServiceTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:UndefinedTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:UserTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ProcessLane;
+            ogit.core:to ogit.BusinessProcess:ProcessLane
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ProcessLane;
+            ogit.core:to ogit.BusinessProcess:ProcessPool
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ProcessPool;
+            ogit.core:to ogit.BusinessProcess:ProcessLane
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ProcessPool;
+            ogit.core:to ogit.BusinessProcess:ProcessPool
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:BusinessRuleTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:InstantiatedReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:ManualTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:ReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:ScriptTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:SendTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:ServiceTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:UndefinedTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:UserTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:BusinessRuleTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:InstantiatedReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:ManualTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:ReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:ScriptTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:SendTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:ServiceTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:UndefinedTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:UserTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:BusinessRuleTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:InstantiatedReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:ManualTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:ReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:ScriptTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:SendTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:ServiceTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:UndefinedTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:UserTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:BusinessRuleTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:InstantiatedReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:ManualTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:ReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:ScriptTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:SendTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:ServiceTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:UndefinedTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:UserTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:BusinessRuleTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:InstantiatedReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:ManualTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:ReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:ScriptTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:SendTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:ServiceTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:UndefinedTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:UserTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:BusinessRuleTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:InstantiatedReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:ManualTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:ReceiveTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:ScriptTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:SendTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:ServiceTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:UndefinedTask
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:UserTask
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.event:Notification
+        ];
+.
+
+ogit.foundation:specifies
+    a ogit.core:Verb;
+    rdfs:label "specifies";
+    dcterms:description """One entity \"specifies\" another.""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-06-01";
+            dcterms:description """Adding connection from `ogit/Forum/ShortId` -> `ogit/Forum/Post`
+Adding connection from `ogit/Forum/ShortId` -> `ogit/Automation/KnowledgeItem`
+""";
+            dcterms:creator "cwalker@arago.de"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-11-13";
+            dcterms:description "Added for KnowledgeItemHistory";
+            dcterms:creator "bmoore@arago.de"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.Cost:PlanningParameter;
+            ogit.core:to ogit.config:Parameter
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Offering;
+            ogit.core:to ogit.Automation:MARSModelTemplate
+        ],
+        [
+            ogit.core:from ogit.config:Parameter;
+            ogit.core:to ogit.Price:PriceSpecification
+        ],
+        [
+            ogit.core:from ogit.Forum:ShortId;
+            ogit.core:to ogit.Forum:Post
+        ],
+        [
+            ogit.core:from ogit.Forum:ShortId;
+            ogit.core:to ogit.Automation:KnowledgeItem
+        ],
+        [
+            ogit.core:from ogit.Forum:ShortId;
+            ogit.core:to ogit.Forum:KnowledgeItemHistory
+        ];
+.
+
+ogit.foundation:supervises
+    a ogit.core:Verb;
+    rdfs:label "supervises";
+    dcterms:description "Indicates if an entity supervises another entity. E.g. a Person supervises a Ticket or a Task.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2016-06-23";
+            dcterms:description "connection added";
+            dcterms:creator "Peter Larem"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.ServiceManagement:Incident
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.ServiceManagement:Problem
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.ServiceManagement:Incident
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.ServiceManagement:Problem
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.ServiceManagement:SubTask
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.ServiceManagement:SubTask
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.contract:Contract
+        ];
+.
+
+ogit.foundation:supports
+    a ogit.core:Verb;
+    rdfs:label "supports";
+    dcterms:description "This relationship defines that one entity provides/supports another entity.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-07-27";
+            dcterms:description "updated";
+            dcterms:creator "Aymen Ayoub"
+        ],
+        [
+            dcterms:identifier "3";
+            dcterms:date "2015-09-18";
+            dcterms:description "add new connection Org -> Org";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2017-2-1";
+            dcterms:description "add new connections Org -> Project and Person -> Project";
+            dcterms:creator "Vitaly Teremasov"
+        ],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2017-02-06";
+            dcterms:description "Add edge from Person to Milestone.";
+            dcterms:creator "Alexander Ryabtsev"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.ServiceManagement:Service;
+            ogit.core:to ogit.ServiceManagement:Action
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.config:ConfigurationItem
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.organization:Organization
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.BusinessProcess:Project
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.BusinessProcess:Project
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.BusinessProcess:Milestone
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.BusinessProcess:SurveyIteration
+        ];
+.
+
+ogit.foundation:triggers
+    a ogit.core:Verb;
+    rdfs:label "triggers";
+    dcterms:description "This relationship indicates that one entity triggers some other.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+                [
+            dcterms:identifier "2";
+            dcterms:date "2016-11-02";
+            dcterms:description "alert -> triggers -> event";
+            dcterms:creator "stravlos@arago.de"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.ServiceManagement:SLA;
+            ogit.core:to ogit.contract:Penalty
+        ],
+                [
+            ogit.core:from ogit.event:Alert;
+            ogit.core:to ogit.event:Event
+        ];
+.
+
+ogit.foundation:uses
+    a ogit.core:Verb;
+    rdfs:label "uses";
+    dcterms:description "This relationship indicates that some entity is used by some other.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ],
+        [
+            dcterms:identifier "2";
+            dcterms:date "2015-09-10";
+            dcterms:description "add connection Org, Person -> License";
+            dcterms:creator "Peter Larem"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.contract:Contract
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.ServiceManagement:Offering
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.ServiceManagement:Report
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.ServiceManagement:SLA
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.asset:Asset
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.license:License
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.Price:Invoice
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:BusinessRuleTask;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:CancelEvent;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:CancelEvent;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:CompensationEvent;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:CompensationEvent;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ConditionalEvent;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ConditionalEvent;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:DataObject;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:DataStore;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:DataStore;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ErrorEvent;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ErrorEvent;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:EscalationEvent;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:EscalationEvent;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:EventBasedGateway;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:EventBasedGateway;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ExclusiveGateway;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ExclusiveGateway;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InclusiveGateway;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InclusiveGateway;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.contract:Contract
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.ServiceManagement:Offering
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.ServiceManagement:Report
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.ServiceManagement:SLA
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.asset:Asset
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.license:License
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.Price:Invoice
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:InstantiatedReceiveTask;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:LinkEvent;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:LinkEvent;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.contract:Contract
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.ServiceManagement:Offering
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.ServiceManagement:Report
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.ServiceManagement:SLA
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.asset:Asset
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.license:License
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.Price:Invoice
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ManualTask;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:MessageEvent;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:MessageEvent;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:MultipleEvent;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:MultipleEvent;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:NoneEvent;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:NoneEvent;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ParallelGateway;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ParallelGateway;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ProcessLane;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ProcessLane;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ProcessPool;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ProcessPool;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.contract:Contract
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.ServiceManagement:Offering
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.ServiceManagement:Report
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.ServiceManagement:SLA
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.asset:Asset
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.license:License
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.Price:Invoice
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ReceiveTask;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.contract:Contract
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.ServiceManagement:Offering
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.ServiceManagement:Report
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.ServiceManagement:SLA
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.asset:Asset
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.license:License
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.Price:Invoice
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ScriptTask;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.contract:Contract
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.ServiceManagement:Offering
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.ServiceManagement:Report
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.ServiceManagement:SLA
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.asset:Asset
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.license:License
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.Price:Invoice
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SendTask;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.contract:Contract
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.ServiceManagement:Offering
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.ServiceManagement:Report
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.ServiceManagement:SLA
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.asset:Asset
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.license:License
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.Price:Invoice
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:ServiceTask;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SignalEvent;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:SignalEvent;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:TerminationEvent;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:TerminationEvent;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:TimerEvent;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:TimerEvent;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.contract:Contract
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.ServiceManagement:Offering
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.ServiceManagement:Report
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.ServiceManagement:SLA
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.asset:Asset
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.license:License
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.Price:Invoice
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UndefinedTask;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:DataStore
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.BusinessProcess:DataObject
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.contract:Contract
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.ServiceManagement:Offering
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.ServiceManagement:Report
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.ServiceManagement:Service
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.ServiceManagement:SLA
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.asset:Asset
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.license:License
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.Price:Invoice
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.BusinessProcess:UserTask;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.data:CustomApplicationData;
+            ogit.core:to ogit.data:CustomApplicationData
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Report;
+            ogit.core:to ogit.data:Timeseries
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
+        ],
+        [
+            ogit.core:from ogit.ontology:OntologyEntity;
+            ogit.core:to ogit.ontology:Schema
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Cost:Budget
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.Software:Application
+        ],
+        [
+            ogit.core:from ogit.Software:SoftwareComponent;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.Software:SoftwareConnection;
+            ogit.core:to ogit.Software:SoftwareComponent
+        ],
+        [
+            ogit.core:from ogit.organization:Organization;
+            ogit.core:to ogit.license:License
+        ],
+        [
+            ogit.core:from ogit.person:Person;
+            ogit.core:to ogit.license:License
+        ];
+.
+

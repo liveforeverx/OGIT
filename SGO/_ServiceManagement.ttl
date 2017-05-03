@@ -1,25 +1,18 @@
 @prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:            <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms:        <http://purl.org/dc/terms/> .
-@prefix vann:           <http://purl.org/vocab/vann/> .
-@prefix purl:           <http://www.purl.org/> .
 @prefix ogit:           <http://www.purl.org/ogit/> .
 @prefix ogit.core:           <http://www.purl.org/ogit/> .
 @prefix ogit._ServiceManagement:           <http://www.purl.org/ogit/> .
+@prefix ogit.event:         <http://www.purl.org/ogit/> .
+@prefix ogit.location:         <http://www.purl.org/ogit/> .
+@prefix ogit.ServiceManagement:         <http://www.purl.org/ogit/ServiceManagement/> .
+@prefix ogit.Automation:         <http://www.purl.org/ogit/Automation/> .
 
 #
 # Ontology
 #
-ogit:_ServiceManagement
-    a owl:Ontology;
-    rdfs:label "OGIT _ServiceManagement";
-    dcterms:creator "arago GmbH";
-    dcterms:contributor "Fabian Meyer";
-    vann:preferredNamespaceUri "http://www.purl.org/ogit/_ServiceManagement/";
-    vann:preferredNamespacePrefix "ogit._ServiceManagement";
-    owl:versionInfo "__OGIT_VERSION__";
-    owl:imports purl:ogit
-.
+ogit:ServiceManagement a owl:Ontology .
 
 #
 # Attributes
@@ -40,6 +33,25 @@ ogit._ServiceManagement:assignedGroup
             dcterms:date "2015-07-01";
             dcterms:description "initial";
             dcterms:creator "Aymen Ayoub"
+        ];
+.
+
+ogit._ServiceManagement:capacityAvailable
+    a ogit.core:Attribute;
+    rdfs:label "capacityAvailable";
+    dcterms:description "If the flag is true, then service can be ordered by new instance. If the flag is false, the service cannot temporarily be ordered due to capacity reasons.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
         ];
 .
 
@@ -261,3 +273,167 @@ ogit._ServiceManagement:urgency
         ];
 .
 
+#
+# Verbs
+#
+ogit._ServiceManagement:availableIn
+    a ogit.core:Verb;
+    rdfs:label "availableIn";
+    dcterms:description "Indicates that something can be found from somewhere.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.ServiceManagement:Offering;
+            ogit.core:to ogit.location:Region
+        ];
+.
+
+ogit._ServiceManagement:calls
+    a ogit.core:Verb;
+    rdfs:label "calls";
+    dcterms:description "Verb showing which entity calls which another entity.";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.ServiceManagement:Service;
+            ogit.core:to ogit.ServiceManagement:Service
+        ];
+.
+
+ogit._ServiceManagement:causes
+    a ogit.core:Verb;
+    rdfs:label "causes";
+    dcterms:description """Indicates that one entity causes the creation of another one.
+E.g. an error situation during change execution might lead to a new incident ticket.""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.ServiceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.event:Event
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.ServiceManagement:Incident
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.ServiceManagement:Problem
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.ServiceManagement:ChangeRequest
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.ServiceManagement:Problem
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Ticket;
+            ogit.core:to ogit.ServiceManagement:Ticket
+        ];
+.
+
+ogit._ServiceManagement:reportedOn
+    a ogit.core:Verb;
+    rdfs:label "reportedOn";
+    dcterms:description """Indicates where a failure situation was initially observed. In case an incident record is created from an event management system this relationship points to the entitiy that represents the monitored device/endpoint.
+We call it \"reportedOn\" instead of \"observedOn\" to account for the close relation to \"reportedAt\", \"reportedBy\"""";
+    dcterms:valid "start=2015-05-21;";
+    dcterms:creator "Peter Larem";
+    dcterms:created "2015-05-21";
+    dcterms:modified "2015-05-21";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:tech-contact "arago GmbH";
+    ogit.core:history
+        [
+            dcterms:identifier "1";
+            dcterms:date "2015-05-21";
+            dcterms:description "initial";
+            dcterms:creator "Peter Larem"
+        ];
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.ServiceManagement:Order;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:ChangeRequest;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Incident;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Problem;
+            ogit.core:to ogit.Automation:MARSNode
+        ],
+        [
+            ogit.core:from ogit.ServiceManagement:Ticket;
+            ogit.core:to ogit.Automation:MARSNode
+        ];
+.

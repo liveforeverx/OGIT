@@ -25,49 +25,6 @@ ogit:data
 #
 # Entities
 #
-ogit.data:Comment
-    a ogit.core:Entity;
-    rdfs:label "Comment";
-    dcterms:description "Defines comments for a ticket, issue or another type of entity. Also known as WorkLog, ChangeLog or HistoryEntry.";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "SGO";
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:optional-attributes
-        ogit.foundation:id,
-        ogit.foundation:content,
-        ogit.foundation:creator;
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ],
-        [
-            dcterms:identifier "2";
-            dcterms:date "2015-08-20";
-            dcterms:description "updated Attribute ogit/id and ogit/content added.";
-            dcterms:creator "Aymen Ayoub"
-        ],
-        [
-            dcterms:identifier "3";
-            dcterms:date "2015-09-01";
-            dcterms:description "updated Attribute ogit/id to be optional.";
-            dcterms:creator "Aymen Ayoub"
-        ],
-        [
-            dcterms:identifier "4";
-            dcterms:date "2015-10-16";
-            dcterms:description "added ogit/creater as optional.";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
 ogit.data:CustomApplicationData
     a ogit.core:Entity;
     rdfs:label "CustomApplicationData";
@@ -85,56 +42,6 @@ the global ontology. The storage of data through this entity is discouraged due 
         [
             dcterms:identifier "1";
             dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-ogit.data:Hyperlink
-    a ogit.core:Entity;
-    rdfs:label "Hyperlink";
-    dcterms:description "A representation of an (optionally) titled Hyperlink to some media. No protocol restrictions imposed.";
-    dcterms:valid "start=2015-06-09;";
-    dcterms:creator "cwalker@arago.de";
-    dcterms:created "2015-06-09";
-    dcterms:modified "2015-06-09";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "SGO";
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:any-attributes "true";
-    ogit.core:mandatory-attributes
-        ogit.foundation:url;
-    ogit.core:optional-attributes
-        ogit.foundation:title;
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "cwalker@arago.de"
-        ];
-.
-
-ogit.data:Note
-    a ogit.core:Entity;
-    rdfs:label "Note";
-    dcterms:description "Any type of note.";
-    dcterms:valid "start=2015-04-29;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-04-29";
-    dcterms:modified "2013-04-29";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "SGO";
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:optional-attributes
-        ogit.foundation:name,
-        ogit.foundation:content;
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-04-29";
             dcterms:description "initial";
             dcterms:creator "Peter Larem"
         ];

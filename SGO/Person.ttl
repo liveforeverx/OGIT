@@ -3,7 +3,7 @@
 @prefix ogit.businessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
 @prefix ogit.config:            <http://www.purl.org/ogit/> .
 @prefix ogit.core:              <http://www.purl.org/ogit/> .
-@prefix ogit.data:              <http://www.purl.org/ogit/> .
+@prefix ogit.media:             <http://www.purl.org/ogit/> .
 @prefix ogit.event:             <http://www.purl.org/ogit/> .
 @prefix ogit.foundation:        <http://www.purl.org/ogit/> .
 @prefix ogit.person:            <http://www.purl.org/ogit/> .
@@ -473,7 +473,7 @@ ogit.person:ignores
     ogit.core:allowed
         [
             ogit.core:from ogit.person:Person;
-            ogit.core:to ogit.data:Comment
+            ogit.core:to ogit.media:Comment
         ];
 .
 

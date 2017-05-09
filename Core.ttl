@@ -76,8 +76,7 @@ ogit.core:Attribute
             sh:path ogit.core:tech-contact;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit.core:deleter;
             sh:minCount 0;
@@ -176,8 +175,7 @@ ogit.core:Entity
             sh:path ogit.core:parent;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit.core:deleter;
             sh:minCount 0;
@@ -250,8 +248,7 @@ ogit.core:Verb
             sh:path ogit.core:admin-contact;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit.core:deleter;
             sh:minCount 0;
@@ -303,11 +300,6 @@ ogit.core:indexed-attributes
     a ogit.core:Verb;
     rdfs:label "indexed-attributes";
     dcterms:description "The list of indexed Attributes for an Entity"@en .
-
-ogit.core:optional-attributes
-    a ogit.core:Verb;
-    rdfs:label "optional-attributes";
-    dcterms:description "The list of optional Attributes for an Entity"@en .
 
 ogit.core:to
     a ogit.core:Verb;

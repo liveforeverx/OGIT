@@ -52,8 +52,7 @@ IssueCondition is processed first.""";
             sh:path ogit.automation:issueFormalRepresentation;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit.foundation:status;
             sh:minCount 0;
@@ -262,8 +261,7 @@ In that case, the KnowledgeItem executes operations, which serves the exploitati
             sh:path ogit.automation:deployToEngine;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit.foundation:modificationTime;
             sh:minCount 0;
@@ -363,8 +361,7 @@ ogit.automation:KnowledgeItemAttribute
             sh:path ogit.foundation:value;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit._automation:mode;
             sh:minCount 0;
@@ -471,8 +468,7 @@ service offering.""";
             sh:path ogit.foundation:name;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit.foundation:description;
             sh:minCount 0;
@@ -995,8 +991,7 @@ service offering and to enable definition of cost elements (ogit/Cost/CostElemen
             sh:path ogit.automation:marsNodeFormalRepresentation;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit.automation:marsNodeType;
             sh:minCount 0;

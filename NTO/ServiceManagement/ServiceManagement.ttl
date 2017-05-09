@@ -44,8 +44,7 @@ ogit.serviceManagement:Action
             sh:path ogit.foundation:name;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit.foundation:id;
             sh:minCount 0;
@@ -141,8 +140,7 @@ ogit.serviceManagement:ChangeRequest
             sh:path ogit.foundation:id;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit._serviceManagement:risk;
             sh:minCount 0;
@@ -397,8 +395,7 @@ ogit.serviceManagement:Offering
             sh:path ogit.foundation:id;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit.serviceManagement:allowedForNewBusiness;
             sh:minCount 0;
@@ -470,8 +467,7 @@ ogit.serviceManagement:Order
             sh:path ogit.foundation:id;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit.foundation:description;
             sh:minCount 0;
@@ -574,8 +570,7 @@ ogit.serviceManagement:Problem
             sh:path ogit.foundation:id;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit.serviceManagement:problemStatus;
             sh:minCount 0;
@@ -750,8 +745,7 @@ ogit.serviceManagement:Service
             sh:path ogit.foundation:id;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit.foundation:description;
             sh:minCount 0;
@@ -800,8 +794,7 @@ Comman alternative names with same meaning are: task, activity, work order.""";
             sh:path ogit.foundation:id;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit.serviceManagement:taskStatus;
             sh:minCount 0;
@@ -932,8 +925,7 @@ ogit.serviceManagement:Ticket
             sh:path ogit.foundation:id;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit.foundation:summary;
             sh:minCount 0;

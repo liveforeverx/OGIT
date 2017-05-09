@@ -192,8 +192,7 @@ ogit.forum:KnowledgeBundle
             sh:path ogit.foundation:name;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit.foundation:accessControl;
             sh:minCount 0;
@@ -231,8 +230,7 @@ ogit.forum:KnowledgeItemHistory
             sh:path ogit.automation:deployToEngine;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit.foundation:modificationTime;
             sh:minCount 0;
@@ -383,8 +381,7 @@ ogit.forum:Rating
             sh:path ogit.foundation:value;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit.foundation:content;
             sh:minCount 0;
@@ -478,8 +475,7 @@ The `ogit/id` attribute in this instance would be a short URL safe string.""";
             sh:path ogit.foundation:id;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit.foundation:function;
             sh:minCount 0;
@@ -546,8 +542,7 @@ a given subject.""";
             sh:path ogit.foundation:description;
             sh:minCount 1;
             sh:maxCount 1
-        ];
-    sh:property
+        ],
         [
             sh:path ogit.foundation:accessControl;
             sh:minCount 0;

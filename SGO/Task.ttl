@@ -39,11 +39,27 @@ Additionaly could be used to create new Issue from some form.""";
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "SGO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:optional-attributes
-        ogit.foundation:status,
-        ogit.task:question,
-        ogit.task:response,
-        ogit.foundation:capacity;
+    sh:property
+        [
+            sh:path ogit.foundation:status;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.task:question;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.task:response;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:capacity;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -71,12 +87,32 @@ ogit.task:Task
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "SGO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:optional-attributes
-        ogit.foundation:id,
-        ogit.foundation:name,
-        ogit.foundation:description,
-        ogit.foundation:status,
-        ogit.task:positionNumber;
+    sh:property
+        [
+            sh:path ogit.foundation:id;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:status;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.task:positionNumber;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:indexed-attributes
         ogit.foundation:name;
     ogit.core:history

@@ -7,6 +7,7 @@
 @prefix purl:            <http://www.purl.org/> .
 @prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann:            <http://purl.org/vocab/vann/> .
+@prefix sh:				  <http://www.w3.org/ns/shacl#> .
 
 #
 # Ontology
@@ -40,9 +41,17 @@ Knowledge, People, Information, Applications, Infrastructure, Financial Capital.
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "SGO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:optional-attributes
-        ogit.foundation:id,
-        ogit.foundation:name;
+    sh:property
+        [
+            sh:path ogit.foundation:id;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";

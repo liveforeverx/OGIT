@@ -46,14 +46,42 @@ ogit.contract:Contract
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.foundation:description,
-        ogit.foundation:type,
-        ogit.foundation:validFrom,
-        ogit.foundation:expirationDate,
-        ogit.foundation:status,
-                ogit.foundation:deadline,
-                ogit.foundation:validTo;
+    sh:property
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:type;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:validFrom;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:expirationDate;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:status;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+                [
+            sh:path ogit.foundation:deadline;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+                [
+            sh:path ogit.foundation:validTo;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -87,8 +115,12 @@ ogit.contract:Penalty
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "SGO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:optional-attributes
-        ogit.foundation:description;
+    sh:property
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";

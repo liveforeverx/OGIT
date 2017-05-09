@@ -51,8 +51,12 @@ Organization. Similar to http://purl.org/goodrelations/v1#Location""";
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.foundation:description;
+    sh:property
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -74,9 +78,17 @@ ogit.location:Region
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "SGO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:optional-attributes
-        ogit.foundation:name,
-        ogit.foundation:description;
+    sh:property
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";

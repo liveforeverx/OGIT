@@ -45,9 +45,17 @@ ogit.serviceManagement:Action
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.foundation:id,
-        ogit.foundation:description;
+    sh:property
+        [
+            sh:path ogit.foundation:id;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -69,13 +77,37 @@ ogit.serviceManagement:ApprovalTask
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:optional-attributes
-        ogit.foundation:id,
-        ogit.foundation:name,
-        ogit.serviceManagement:approvalStatus,
-        ogit.serviceManagement:sourceStatus,
-        ogit._serviceManagement:reason,
-        ogit.foundation:lastUpdatedAt;
+    sh:property
+        [
+            sh:path ogit.foundation:id;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:approvalStatus;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:sourceStatus;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:reason;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:lastUpdatedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -110,28 +142,112 @@ ogit.serviceManagement:ChangeRequest
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit._serviceManagement:risk,
-        ogit._serviceManagement:justification,
-        ogit.foundation:category,
-        ogit.foundation:startedAt,
-        ogit.foundation:finishedAt,
-        ogit._serviceManagement:effort,
-        ogit._serviceManagement:reportedAt,
-        ogit._serviceManagement:reviewedAt,
-        ogit._serviceManagement:assignedGroup,
-        ogit.serviceManagement:changeStatus,
-        ogit.serviceManagement:targetStartAt,
-        ogit.serviceManagement:targetFinishAt,
-        ogit.serviceManagement:scheduledStartAt,
-        ogit.serviceManagement:scheduledFinishAt,
-        ogit.serviceManagement:sourceStatus,
-        ogit.serviceManagement:fallbackPlan,
-        ogit.serviceManagement:testPlan,
-        ogit.serviceManagement:implementationPlan,
-        ogit.serviceManagement:solution,
-        ogit.serviceManagement:resolutionCode,
-        ogit.serviceManagement:customer;
+    sh:property
+        [
+            sh:path ogit._serviceManagement:risk;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:justification;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:category;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:startedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:finishedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:effort;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:reportedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:reviewedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:assignedGroup;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:changeStatus;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:targetStartAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:targetFinishAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:scheduledStartAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:scheduledFinishAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:sourceStatus;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:fallbackPlan;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:testPlan;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:implementationPlan;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:solution;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:resolutionCode;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:customer;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -165,19 +281,67 @@ ogit.serviceManagement:Incident
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:optional-attributes
-        ogit.foundation:id,
-        ogit.serviceManagement:incidentStatus,
-        ogit.serviceManagement:solution,
-        ogit.serviceManagement:resolutionCode,
-        ogit.serviceManagement:resolvedAt,
-        ogit.serviceManagement:sourceStatus,
-        ogit.serviceManagement:reportedSource,
-        ogit.serviceManagement:customer,
-        ogit.serviceManagement:task,
-        ogit._serviceManagement:assignedGroup,
-        ogit.foundation:category,
-        ogit._serviceManagement:reportedAt;
+    sh:property
+        [
+            sh:path ogit.foundation:id;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:incidentStatus;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:solution;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:resolutionCode;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:resolvedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:sourceStatus;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:reportedSource;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:customer;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:task;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:assignedGroup;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:category;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:reportedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -234,16 +398,52 @@ ogit.serviceManagement:Offering
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.serviceManagement:allowedForNewBusiness,
-        ogit._serviceManagement:capacityAvailable,
-        ogit.foundation:currency,
-        ogit.foundation:serialNumber,
-        ogit.foundation:validFrom,
-        ogit.foundation:expirationDate,
-        ogit.foundation:category,
-        ogit.foundation:description,
-        ogit._serviceManagement:market;
+    sh:property
+        [
+            sh:path ogit.serviceManagement:allowedForNewBusiness;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:capacityAvailable;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:currency;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:serialNumber;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:validFrom;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:expirationDate;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:category;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:market;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -271,21 +471,77 @@ ogit.serviceManagement:Order
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.foundation:description,
-        ogit.serviceManagement:sourceStatus,
-        ogit.foundation:impact,
-        ogit._serviceManagement:urgency,
-        ogit.foundation:priority,
-        ogit.foundation:createdAt,
-        ogit.foundation:openedAt,
-        ogit._serviceManagement:closedAt,
-        ogit.foundation:lastUpdatedAt,
-        ogit.serviceManagement:externalTicketSource,
-        ogit.serviceManagement:externalTicketId,
-        ogit.serviceManagement:reportedSource,
-        ogit._serviceManagement:project,
-        ogit.foundation:summary;
+    sh:property
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:sourceStatus;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:impact;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:urgency;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:priority;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:createdAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:openedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:closedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:lastUpdatedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:externalTicketSource;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:externalTicketId;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:reportedSource;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:project;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:summary;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -319,13 +575,37 @@ ogit.serviceManagement:Problem
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.serviceManagement:problemStatus,
-        ogit._serviceManagement:reportedAt,
-        ogit.serviceManagement:solution,
-        ogit.serviceManagement:resolutionCode,
-        ogit.serviceManagement:rootCause,
-        ogit.serviceManagement:workAround;
+    sh:property
+        [
+            sh:path ogit.serviceManagement:problemStatus;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:reportedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:solution;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:resolutionCode;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:rootCause;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:workAround;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -353,10 +633,22 @@ ogit.serviceManagement:Report
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:optional-attributes
-        ogit.foundation:version,
-        ogit.foundation:id,
-        ogit.foundation:name;
+    sh:property
+        [
+            sh:path ogit.foundation:version;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:id;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -378,14 +670,42 @@ ogit.serviceManagement:SLA
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:optional-attributes
-        ogit.foundation:name,
-        ogit.foundation:startedAt,
-        ogit.serviceManagement:scheduledFinishAt,
-        ogit.serviceManagement:leftTime,
-        ogit.serviceManagement:elapsedTime,
-        ogit.serviceManagement:slaStage,
-        ogit.serviceManagement:resolvedInTime;
+    sh:property
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:startedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:scheduledFinishAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:leftTime;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:elapsedTime;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:slaStage;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:resolvedInTime;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -431,10 +751,22 @@ ogit.serviceManagement:Service
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.foundation:description,
-        ogit.foundation:name,
-        ogit.foundation:uri;
+    sh:property
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:uri;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -469,24 +801,92 @@ Comman alternative names with same meaning are: task, activity, work order.""";
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.serviceManagement:taskStatus,
-        ogit.serviceManagement:sourceStatus,
-        ogit.foundation:description,
-        ogit._serviceManagement:taskLog,
-        ogit.foundation:startedAt,
-        ogit.foundation:finishedAt,
-        ogit.serviceManagement:targetStartAt,
-        ogit.serviceManagement:targetFinishAt,
-        ogit.serviceManagement:scheduledStartAt,
-        ogit.serviceManagement:scheduledFinishAt,
-        ogit._serviceManagement:effort,
-        ogit.foundation:lastUpdatedAt,
-        ogit.serviceManagement:resolutionCode,
-        ogit.foundation:name,
-        ogit._serviceManagement:assignedGroup,
-        ogit.serviceManagement:customer,
-        ogit.foundation:type;
+    sh:property
+        [
+            sh:path ogit.serviceManagement:taskStatus;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:sourceStatus;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:taskLog;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:startedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:finishedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:targetStartAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:targetFinishAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:scheduledStartAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:scheduledFinishAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:effort;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:lastUpdatedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:resolutionCode;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:assignedGroup;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:customer;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:type;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -533,21 +933,77 @@ ogit.serviceManagement:Ticket
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.foundation:summary,
-        ogit.foundation:description,
-        ogit._serviceManagement:project,
-        ogit.foundation:impact,
-        ogit._serviceManagement:urgency,
-        ogit.foundation:priority,
-        ogit.foundation:createdAt,
-        ogit.foundation:openedAt,
-        ogit._serviceManagement:closedAt,
-        ogit.foundation:lastUpdatedAt,
-        ogit.serviceManagement:sourceStatus,
-        ogit.serviceManagement:externalTicketId,
-        ogit.serviceManagement:reportedSource,
-        ogit.serviceManagement:ticketId;
+    sh:property
+        [
+            sh:path ogit.foundation:summary;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:project;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:impact;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:urgency;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:priority;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:createdAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:openedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._serviceManagement:closedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:lastUpdatedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:sourceStatus;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:externalTicketId;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:reportedSource;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:ticketId;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";

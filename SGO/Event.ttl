@@ -56,9 +56,17 @@ ogit.event:Alert
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-    ogit.foundation:function,
-        ogit.foundation:value;
+    sh:property
+    [
+        sh:path ogit.foundation:function;
+        sh:minCount 0;
+        sh:maxCount 1
+    ],
+        [
+            sh:path ogit.foundation:value;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -97,29 +105,117 @@ ogit.event:Event
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.foundation:status,
-        ogit.foundation:description,
-        ogit.event:severity,
-        ogit.foundation:summary,
-        ogit.foundation:impact,
-        ogit.foundation:priority,
-        ogit.event:certainty,
-        ogit.event:firstOccurredAt,
-        ogit.event:lastOccurredAt,
-        ogit.foundation:openedAt,
-        ogit.foundation:lastUpdatedAt,
-        ogit.event:lastClearedAt,
-        ogit.event:expiresAt,
-        ogit.event:occurenceCount,
-        ogit.foundation:type,
-        ogit.serviceManagement:reportedSource,
-        ogit.foundation:category,
-        ogit.foundation:instance,
-        ogit.event:resource,
-        ogit.event:maintenanceState,
-        ogit.event:acknowledgeState,
-        ogit.event:isRoot;
+    sh:property
+        [
+            sh:path ogit.foundation:status;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.event:severity;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:summary;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:impact;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:priority;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.event:certainty;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.event:firstOccurredAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.event:lastOccurredAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:openedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:lastUpdatedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.event:lastClearedAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.event:expiresAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.event:occurenceCount;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:type;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:reportedSource;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:category;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:instance;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.event:resource;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.event:maintenanceState;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.event:acknowledgeState;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.event:isRoot;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";

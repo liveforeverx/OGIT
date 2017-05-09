@@ -65,11 +65,27 @@ ogit.dataProcessing:Program
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.foundation:name,
-        ogit.foundation:description,
-        ogit.dataProcessing:internalJobId,
-        ogit.dataProcessing:state;
+    sh:property
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.dataProcessing:internalJobId;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.dataProcessing:state;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:indexed-attributes
         ogit.foundation:name,
         ogit.foundation:description;

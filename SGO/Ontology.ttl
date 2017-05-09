@@ -86,11 +86,27 @@ ogit.ontology:OntologyAttribute
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.ontology:ontologyDeleter,
-        ogit.ontology:ontologyHide,
-        ogit.ontology:ontologyValidationType,
-        ogit.ontology:ontologyValidationParameter;
+    sh:property
+        [
+            sh:path ogit.ontology:ontologyDeleter;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyHide;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyValidationType;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyValidationParameter;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -175,10 +191,22 @@ whenever there is a Schema describing/restricting the entity's content there wil
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.ontology:ontologyDeleter,
-        ogit.ontology:ontologyHide,
-        ogit.ontology:ontologyValidUntil;
+    sh:property
+        [
+            sh:path ogit.ontology:ontologyDeleter;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyHide;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyValidUntil;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -247,10 +275,22 @@ ogit.ontology:OntologyVerb
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.ontology:ontologyDeleter,
-        ogit.ontology:ontologyHide,
-        ogit.ontology:ontologyCardinality;
+    sh:property
+        [
+            sh:path ogit.ontology:ontologyDeleter;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyHide;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyCardinality;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -278,9 +318,17 @@ ogit.ontology:Schema
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.foundation:uri,
-        ogit.foundation:name;
+    sh:property
+        [
+            sh:path ogit.foundation:uri;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";

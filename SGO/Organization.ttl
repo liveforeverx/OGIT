@@ -51,19 +51,67 @@ The ogit/function attribute should be used to tell what kind of grouping an enti
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.foundation:description,
-        ogit.foundation:function,
-        ogit.foundation:status,
-        ogit.foundation:email,
-        ogit.foundation:streetAddress,
-        ogit.organization:city,
-        ogit.organization:country,
-        ogit.foundation:postalCode,
-        ogit.organization:businessCategory,
-        ogit.foundation:webPage,
-        ogit.foundation:sourceId,
-        ogit.foundation:phone;
+    sh:property
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:function;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:status;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:email;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:streetAddress;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.organization:city;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.organization:country;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:postalCode;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.organization:businessCategory;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:webPage;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:sourceId;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:phone;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:indexed-attributes
         ogit.foundation:name,
         ogit.foundation:description;
@@ -134,9 +182,17 @@ ogit.organization:Role
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.foundation:description,
-        ogit.foundation:status;
+    sh:property
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:status;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";

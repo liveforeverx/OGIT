@@ -45,16 +45,52 @@ ogit.license:License
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.foundation:validFrom,
-        ogit.foundation:expirationDate,
-        ogit.foundation:subject,
-        ogit.license:licenseKey,
-        ogit.foundation:createdAt,
-        ogit.license:licenseType,
-                ogit.foundation:creator,
-                ogit.foundation:validTo,
-                ogit.foundation:deadline;
+    sh:property
+        [
+            sh:path ogit.foundation:validFrom;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:expirationDate;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:subject;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.license:licenseKey;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:createdAt;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.license:licenseType;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+                [
+            sh:path ogit.foundation:creator;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+                [
+            sh:path ogit.foundation:validTo;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+                [
+            sh:path ogit.foundation:deadline;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -96,10 +132,22 @@ A request might contain a valid LicenseToken to indicate that this request is pr
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.foundation:description,
-        ogit.foundation:token,
-        ogit.license:licenseRequestStatus;
+    sh:property
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:token;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.license:licenseRequestStatus;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -128,13 +176,37 @@ This will created by a license admin and communicated to potential licence reque
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.foundation:description,
-        ogit.foundation:validFrom,
-        ogit.foundation:expirationDate,
-        ogit.license:licenseType,
-        ogit.foundation:token,
-        ogit.serviceManagement:licenseTokenStatus;
+    sh:property
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:validFrom;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:expirationDate;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.license:licenseType;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:token;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.serviceManagement:licenseTokenStatus;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";

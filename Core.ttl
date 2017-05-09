@@ -77,11 +77,27 @@ ogit.core:Attribute
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.core:deleter,
-        ogit.core:hide,
-        ogit.core:validation-type,
-        ogit.core:validation-parameter;
+    sh:property
+        [
+            sh:path ogit.core:deleter;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:hide;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:validation-type;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:validation-parameter;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -161,9 +177,17 @@ ogit.core:Entity
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.core:deleter,
-        ogit.core:hide;
+    sh:property
+        [
+            sh:path ogit.core:deleter;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:hide;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -227,10 +251,22 @@ ogit.core:Verb
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.core:deleter,
-        ogit.core:hide,
-        ogit.core:cardinality;
+    sh:property
+        [
+            sh:path ogit.core:deleter;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:hide;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:cardinality;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";

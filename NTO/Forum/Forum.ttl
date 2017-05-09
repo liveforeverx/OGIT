@@ -193,8 +193,12 @@ ogit.forum:KnowledgeBundle
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.foundation:accessControl;
+    sh:property
+        [
+            sh:path ogit.foundation:accessControl;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -228,15 +232,47 @@ ogit.forum:KnowledgeItemHistory
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.foundation:modificationTime,
-        ogit.foundation:isValid,
-        ogit.automation:knowledgeItemTier,
-        ogit.foundation:creationTime,
-        ogit.foundation:name,
-        ogit.foundation:description,
-        ogit.foundation:changeLog,
-        ogit.foundation:accessControl;
+    sh:property
+        [
+            sh:path ogit.foundation:modificationTime;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:isValid;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.automation:knowledgeItemTier;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:creationTime;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:changeLog;
+            sh:minCount 0;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:accessControl;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:indexed-attributes
         ogit.foundation:name,
         ogit.foundation:description;
@@ -348,8 +384,12 @@ ogit.forum:Rating
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.foundation:content;
+    sh:property
+        [
+            sh:path ogit.foundation:content;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -439,8 +479,12 @@ The `ogit/id` attribute in this instance would be a short URL safe string.""";
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.foundation:function;
+    sh:property
+        [
+            sh:path ogit.foundation:function;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -503,8 +547,12 @@ a given subject.""";
             sh:minCount 1;
             sh:maxCount 1
         ];
-    ogit.core:optional-attributes
-        ogit.foundation:accessControl;
+    sh:property
+        [
+            sh:path ogit.foundation:accessControl;
+            sh:minCount 0;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";

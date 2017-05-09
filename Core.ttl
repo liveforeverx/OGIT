@@ -4,6 +4,7 @@
 @prefix purl:      <http://www.purl.org/> .
 @prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann:      <http://purl.org/vocab/vann/> .
+@prefix sh:				  <http://www.w3.org/ns/shacl#> .
 
 #
 # Ontology
@@ -35,15 +36,47 @@ ogit.core:Attribute
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "SGO";
     ogit.core:hide "true";
-    ogit.core:mandatory-attributes
-        rdfs:label,
-        dcterms:description,
-        dcterms:valid,
-        dcterms:creator,
-        dcterms:created,
-        dcterms:modified,
-        ogit.core:admin-contact,
-        ogit.core:tech-contact;
+    sh:property
+        [
+            sh:path rdfs:label;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path dcterms:description;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path dcterms:valid;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path dcterms:creator;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path dcterms:created;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path dcterms:modified;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:admin-contact;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:tech-contact;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.core:deleter,
         ogit.core:hide,
@@ -72,18 +105,62 @@ ogit.core:Entity
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "SGO";
     ogit.core:hide "true";
-    ogit.core:mandatory-attributes
-        rdfs:label,
-        ogit.core:scope,
-        dcterms:description,
-        dcterms:valid,
-        dcterms:creator,
-        dcterms:modified,
-        ogit.core:admin-contact,
-        ogit.core:tech-contact,
-        dcterms:description,
-        dcterms:created,
-        ogit.core:parent;
+    sh:property
+        [
+            sh:path rdfs:label;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:scope;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path dcterms:description;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path dcterms:valid;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path dcterms:creator;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path dcterms:modified;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:admin-contact;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:tech-contact;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path dcterms:description;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path dcterms:created;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:parent;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.core:deleter,
         ogit.core:hide;
@@ -109,15 +186,47 @@ ogit.core:Verb
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "SGO";
     ogit.core:hide "true";
-    ogit.core:mandatory-attributes
-        dcterms:description,
-        rdfs:label,
-        dcterms:valid,
-        dcterms:creator,
-        dcterms:created,
-        dcterms:modified,
-        ogit.core:tech-contact,
-        ogit.core:admin-contact;
+    sh:property
+        [
+            sh:path dcterms:description;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path rdfs:label;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path dcterms:valid;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path dcterms:creator;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path dcterms:created;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path dcterms:modified;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:tech-contact;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:admin-contact;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.core:deleter,
         ogit.core:hide,
@@ -158,11 +267,6 @@ ogit.core:indexed-attributes
     a ogit.core:Verb;
     rdfs:label "indexed-attributes";
     dcterms:description "The list of indexed Attributes for an Entity"@en .
-
-ogit.core:mandatory-attributes
-    a ogit.core:Verb;
-    rdfs:label "mandatory-attributes";
-    dcterms:description "The list of mandatory Attributes for an Entity"@en .
 
 ogit.core:optional-attributes
     a ogit.core:Verb;

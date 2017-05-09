@@ -7,6 +7,7 @@
 @prefix purl:            <http://www.purl.org/> .
 @prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann:            <http://purl.org/vocab/vann/> .
+@prefix sh:				  <http://www.w3.org/ns/shacl#> .
 
 #
 # Ontology
@@ -78,8 +79,12 @@ ogit.media:Hyperlink
     ogit.core:scope "SGO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:any-attributes "true";
-    ogit.core:mandatory-attributes
-        ogit.foundation:url;
+    sh:property
+        [
+            sh:path ogit.foundation:url;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:title;
     ogit.core:history

@@ -8,6 +8,7 @@
 @prefix purl:            <http://www.purl.org/> .
 @prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann:            <http://purl.org/vocab/vann/> .
+@prefix sh:				  <http://www.w3.org/ns/shacl#> .
 
 #
 # Ontology
@@ -38,8 +39,12 @@ ogit.forum:Award
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:title;
+    sh:property
+        [
+            sh:path ogit.foundation:title;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -64,8 +69,12 @@ Examples:
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:content;
+    sh:property
+        [
+            sh:path ogit.foundation:content;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -151,8 +160,12 @@ ogit.forum:Invite
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:token;
+    sh:property
+        [
+            sh:path ogit.foundation:token;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -174,8 +187,12 @@ ogit.forum:KnowledgeBundle
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:name;
+    sh:property
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:accessControl;
     ogit.core:history
@@ -200,9 +217,17 @@ ogit.forum:KnowledgeItemHistory
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:any-attributes "true";
-    ogit.core:mandatory-attributes
-        ogit.automation:knowledgeItemFormalRepresentation,
-        ogit.automation:deployToEngine;
+    sh:property
+        [
+            sh:path ogit.automation:knowledgeItemFormalRepresentation;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.automation:deployToEngine;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:modificationTime,
         ogit.foundation:isValid,
@@ -257,8 +282,12 @@ ogit.forum:Post
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:content;
+    sh:property
+        [
+            sh:path ogit.foundation:content;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -281,9 +310,17 @@ the root node for most operations with a Forum.""";
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.forum:username,
-        ogit.foundation:name;
+    sh:property
+        [
+            sh:path ogit.forum:username;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -305,8 +342,12 @@ ogit.forum:Rating
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:value;
+    sh:property
+        [
+            sh:path ogit.foundation:value;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:content;
     ogit.core:history
@@ -336,8 +377,12 @@ ogit.forum:Reply
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:content;
+    sh:property
+        [
+            sh:path ogit.foundation:content;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -388,8 +433,12 @@ The `ogit/id` attribute in this instance would be a short URL safe string.""";
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:id;
+    sh:property
+        [
+            sh:path ogit.foundation:id;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:function;
     ogit.core:history
@@ -414,8 +463,12 @@ as the unique identifier, and the `name` considered a display name.""";
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:name;
+    sh:property
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -439,9 +492,17 @@ a given subject.""";
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:title,
-        ogit.foundation:description;
+    sh:property
+        [
+            sh:path ogit.foundation:title;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:accessControl;
     ogit.core:history

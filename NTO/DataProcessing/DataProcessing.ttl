@@ -7,6 +7,7 @@
 @prefix purl:                <http://www.purl.org/> .
 @prefix rdfs:                <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann:                <http://purl.org/vocab/vann/> .
+@prefix sh:				  <http://www.w3.org/ns/shacl#> .
 
 #
 # Ontology
@@ -38,12 +39,32 @@ ogit.dataProcessing:Program
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.dataProcessing:queryType,
-        ogit.dataProcessing:query,
-        ogit.dataProcessing:parameters,
-        ogit.dataProcessing:outputType,
-        ogit.foundation:content;
+    sh:property
+        [
+            sh:path ogit.dataProcessing:queryType;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.dataProcessing:query;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.dataProcessing:parameters;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.dataProcessing:outputType;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:content;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:name,
         ogit.foundation:description,

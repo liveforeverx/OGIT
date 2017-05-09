@@ -8,6 +8,7 @@
 @prefix purl:                   <http://www.purl.org/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann:                   <http://purl.org/vocab/vann/> .
+@prefix sh:				  <http://www.w3.org/ns/shacl#> .
 
 #
 # Ontology
@@ -38,8 +39,12 @@ ogit.license:License
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "SGO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:id;
+    sh:property
+        [
+            sh:path ogit.foundation:id;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:validFrom,
         ogit.foundation:expirationDate,
@@ -85,8 +90,12 @@ A request might contain a valid LicenseToken to indicate that this request is pr
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "SGO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:id;
+    sh:property
+        [
+            sh:path ogit.foundation:id;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:description,
         ogit.foundation:token,
@@ -113,8 +122,12 @@ This will created by a license admin and communicated to potential licence reque
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "SGO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:id;
+    sh:property
+        [
+            sh:path ogit.foundation:id;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:description,
         ogit.foundation:validFrom,

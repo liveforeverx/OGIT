@@ -7,6 +7,7 @@
 @prefix purl:            <http://www.purl.org/> .
 @prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann:            <http://purl.org/vocab/vann/> .
+@prefix sh:				  <http://www.w3.org/ns/shacl#> .
 
 #
 # Ontology
@@ -39,16 +40,52 @@ ogit.ontology:OntologyAttribute
     ogit.core:scope "SGO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:hide "true";
-    ogit.core:mandatory-attributes
-        ogit.ontology:ontologyId,
-        ogit.ontology:ontologyDescription,
-        ogit.ontology:ontologyName,
-        ogit.ontology:ontologyValidFrom,
-        ogit.ontology:ontologyCreator,
-        ogit.ontology:ontologyCreated,
-        ogit.ontology:ontologyModified,
-        ogit.ontology:ontologyAdminContact,
-        ogit.ontology:ontologyTechContact;
+    sh:property
+        [
+            sh:path ogit.ontology:ontologyId;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyDescription;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyName;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyValidFrom;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyCreator;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyCreated;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyModified;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyAdminContact;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyTechContact;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.ontology:ontologyDeleter,
         ogit.ontology:ontologyHide,
@@ -77,19 +114,67 @@ whenever there is a Schema describing/restricting the entity's content there wil
     ogit.core:scope "SGO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:hide "true";
-    ogit.core:mandatory-attributes
-        ogit.ontology:ontologyScope,
-        ogit.ontology:ontologyId,
-        ogit.foundation:description,
-        ogit.ontology:ontologyName,
-        ogit.ontology:ontologyValidFrom,
-        ogit.ontology:ontologyCreator,
-        ogit.ontology:ontologyModified,
-        ogit.ontology:ontologyAdminContact,
-        ogit.ontology:ontologyTechContact,
-        ogit.ontology:ontologyDescription,
-        ogit.ontology:ontologyCreated,
-        ogit.ontology:ontologyParent;
+    sh:property
+        [
+            sh:path ogit.ontology:ontologyScope;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyId;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyName;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyValidFrom;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyCreator;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyModified;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyAdminContact;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyTechContact;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyDescription;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyCreated;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyParent;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.ontology:ontologyDeleter,
         ogit.ontology:ontologyHide,
@@ -116,16 +201,52 @@ ogit.ontology:OntologyVerb
     ogit.core:scope "SGO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:hide "true";
-    ogit.core:mandatory-attributes
-        ogit.ontology:ontologyId,
-        ogit.ontology:ontologyDescription,
-        ogit.ontology:ontologyName,
-        ogit.ontology:ontologyValidFrom,
-        ogit.ontology:ontologyCreator,
-        ogit.ontology:ontologyCreated,
-        ogit.ontology:ontologyModified,
-        ogit.ontology:ontologyAdminContact,
-        ogit.ontology:ontologyTechContact;
+    sh:property
+        [
+            sh:path ogit.ontology:ontologyId;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyDescription;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyName;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyValidFrom;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyCreator;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyCreated;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyModified;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyAdminContact;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.ontology:ontologyTechContact;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.ontology:ontologyDeleter,
         ogit.ontology:ontologyHide,
@@ -151,8 +272,12 @@ ogit.ontology:Schema
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "SGO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:content;
+    sh:property
+        [
+            sh:path ogit.foundation:content;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:uri,
         ogit.foundation:name;

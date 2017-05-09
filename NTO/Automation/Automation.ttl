@@ -9,6 +9,8 @@
 @prefix purl:             <http://www.purl.org/> .
 @prefix rdfs:             <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann:             <http://purl.org/vocab/vann/> .
+@prefix sh:				  <http://www.w3.org/ns/shacl#> .
+
 
 #
 # Ontology
@@ -45,8 +47,12 @@ IssueCondition is processed first.""";
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.automation:issueFormalRepresentation;
+    sh:property
+        [
+            sh:path ogit.automation:issueFormalRepresentation;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:status,
         ogit.foundation:subject,
@@ -122,13 +128,37 @@ ogit.automation:History
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.automation:knowledgeItemId,
-        ogit.automation:affectedNodeId,
-        ogit.automation:command,
-        ogit._automation:message,
-        ogit.automation:logLevel,
-        ogit._automation:timestamp;
+    sh:property
+        [
+            sh:path ogit.automation:knowledgeItemId;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.automation:affectedNodeId;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.automation:command;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._automation:message;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.automation:logLevel;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._automation:timestamp;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -151,8 +181,12 @@ which would activate the automation Trigger.""";
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:name;
+    sh:property
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -178,9 +212,17 @@ In that case, the KnowledgeItem executes operations, which serves the exploitati
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:any-attributes "true";
-    ogit.core:mandatory-attributes
-        ogit.automation:knowledgeItemFormalRepresentation,
-        ogit.automation:deployToEngine;
+    sh:property
+        [
+            sh:path ogit.automation:knowledgeItemFormalRepresentation;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.automation:deployToEngine;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:modificationTime,
         ogit.foundation:isValid,
@@ -231,9 +273,17 @@ ogit.automation:KnowledgeItemAttribute
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:name,
-        ogit.foundation:value;
+    sh:property
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:value;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit._automation:mode;
     ogit.core:history
@@ -268,8 +318,12 @@ to the monitoring systems becomes possible.""";
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.automation:maidFormalRepresentation;
+    sh:property
+        [
+            sh:path ogit.automation:maidFormalRepresentation;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -320,8 +374,12 @@ service offering.""";
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:name;
+    sh:property
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:description;
     ogit.core:history
@@ -520,8 +578,12 @@ service offering and to enable definition of cost elements (ogit/Cost/CostElemen
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.automation:marsNodeFormalRepresentation;
+    sh:property
+        [
+            sh:path ogit.automation:marsNodeFormalRepresentation;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.automation:marsNodeType,
         ogit.foundation:status;
@@ -546,8 +608,12 @@ ogit.automation:Trigger
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:description;
+    sh:property
+        [
+            sh:path ogit.foundation:description;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";

@@ -8,6 +8,7 @@
 @prefix purl:              <http://www.purl.org/> .
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann:              <http://purl.org/vocab/vann/> .
+@prefix sh:				  <http://www.w3.org/ns/shacl#> .
 
 
 #
@@ -41,21 +42,77 @@ top level of the SGO.""";
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "SGO";
     ogit.core:hide "true";
-    ogit.core:mandatory-attributes
-        ogit.graphit:_id,
-        ogit.graphit:_type,
-        ogit.graphit:_owner,
-        ogit.graphit:_modified-on,
-        ogit.graphit:_modified-by,
-        ogit.graphit:_graphtype,
-        ogit.graphit:_is-deleted,
-        ogit.graphit:_deleted-on,
-        ogit.graphit:_creator,
-        ogit.graphit:_created-on,
-        ogit.graphit:_version,
-        ogit.graphit:_content,
-        ogit.graphit:_tags,
-        ogit.graphit:_edge_id;
+    sh:property
+        [
+            sh:path ogit.graphit:_id;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.graphit:_type;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.graphit:_owner;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.graphit:_modified-on;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.graphit:_modified-by;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.graphit:_graphtype;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.graphit:_is-deleted;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.graphit:_deleted-on;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.graphit:_creator;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.graphit:_created-on;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.graphit:_version;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.graphit:_content;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.graphit:_tags;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.graphit:_edge_id;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";

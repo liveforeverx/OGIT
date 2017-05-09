@@ -8,6 +8,7 @@
 @prefix purl:                    <http://www.purl.org/> .
 @prefix rdfs:                    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann:                    <http://purl.org/vocab/vann/> .
+@prefix sh:				  <http://www.w3.org/ns/shacl#> .
 
 #
 # Ontology
@@ -38,8 +39,12 @@ ogit.serviceManagement:Action
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:name;
+    sh:property
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:id,
         ogit.foundation:description;
@@ -99,8 +104,12 @@ ogit.serviceManagement:ChangeRequest
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:id;
+    sh:property
+        [
+            sh:path ogit.foundation:id;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit._serviceManagement:risk,
         ogit._serviceManagement:justification,
@@ -214,9 +223,17 @@ ogit.serviceManagement:Offering
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:name,
-        ogit.foundation:id;
+    sh:property
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:id;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.serviceManagement:allowedForNewBusiness,
         ogit._serviceManagement:capacityAvailable,
@@ -248,8 +265,12 @@ ogit.serviceManagement:Order
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:id;
+    sh:property
+        [
+            sh:path ogit.foundation:id;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:description,
         ogit.serviceManagement:sourceStatus,
@@ -292,8 +313,12 @@ ogit.serviceManagement:Problem
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:id;
+    sh:property
+        [
+            sh:path ogit.foundation:id;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.serviceManagement:problemStatus,
         ogit._serviceManagement:reportedAt,
@@ -400,8 +425,12 @@ ogit.serviceManagement:Service
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:id;
+    sh:property
+        [
+            sh:path ogit.foundation:id;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:description,
         ogit.foundation:name,
@@ -434,8 +463,12 @@ Comman alternative names with same meaning are: task, activity, work order.""";
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:id;
+    sh:property
+        [
+            sh:path ogit.foundation:id;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.serviceManagement:taskStatus,
         ogit.serviceManagement:sourceStatus,
@@ -494,8 +527,12 @@ ogit.serviceManagement:Ticket
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "NTO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:id;
+    sh:property
+        [
+            sh:path ogit.foundation:id;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:summary,
         ogit.foundation:description,

@@ -9,6 +9,7 @@
 @prefix purl:                   <http://www.purl.org/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann:                   <http://purl.org/vocab/vann/> .
+@prefix sh:				  <http://www.w3.org/ns/shacl#> .
 
 #
 # Ontology
@@ -44,8 +45,12 @@ The ogit/function attribute should be used to tell what kind of grouping an enti
     ogit.core:scope "SGO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:any-attributes "true";
-    ogit.core:mandatory-attributes
-        ogit.foundation:name;
+    sh:property
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:description,
         ogit.foundation:function,
@@ -95,8 +100,12 @@ ogit.organization:Policy
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "SGO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:content;
+    sh:property
+        [
+            sh:path ogit.foundation:content;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:history
         [
             dcterms:identifier "1";
@@ -119,8 +128,12 @@ ogit.organization:Role
     ogit.core:scope "SGO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:any-attributes "true";
-    ogit.core:mandatory-attributes
-        ogit.foundation:name;
+    sh:property
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:description,
         ogit.foundation:status;

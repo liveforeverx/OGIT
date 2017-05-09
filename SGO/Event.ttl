@@ -9,6 +9,7 @@
 @prefix purl:                   <http://www.purl.org/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann:                   <http://purl.org/vocab/vann/> .
+@prefix sh:				  <http://www.w3.org/ns/shacl#> .
 
 #
 # Ontology
@@ -39,10 +40,22 @@ ogit.event:Alert
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "SGO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:type,
-        ogit.foundation:creator,
-    ogit.foundation:category;
+    sh:property
+        [
+            sh:path ogit.foundation:type;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:creator;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+    	[
+            sh:path ogit.foundation:category;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
     ogit.foundation:function,
         ogit.foundation:value;
@@ -73,9 +86,17 @@ ogit.event:Event
     ogit.core:tech-contact "arago GmbH";
     ogit.core:scope "SGO";
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:mandatory-attributes
-        ogit.foundation:name,
-        ogit.foundation:id;
+    sh:property
+        [
+            sh:path ogit.foundation:name;
+            sh:minCount 1;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:id;
+            sh:minCount 1;
+            sh:maxCount 1
+        ];
     ogit.core:optional-attributes
         ogit.foundation:status,
         ogit.foundation:description,

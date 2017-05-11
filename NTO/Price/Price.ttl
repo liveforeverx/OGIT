@@ -15,13 +15,12 @@
 ogit:price
     a owl:Ontology;
     rdfs:label "OGIT Price";
-    dcterms:creator "arago GmbH";
-    dcterms:contributor "Fabian Meyer";
-    vann:preferredNamespaceUri "http://www.purl.org/ogit/Price/";
-    vann:preferredNamespacePrefix "ogit.Price";
+    owl:imports purl:ogit;
     owl:versionInfo "__OGIT_VERSION__";
-    owl:imports purl:ogit
-.
+    dcterms:contributor "Fabian Meyer";
+    dcterms:creator "arago GmbH";
+    vann:preferredNamespacePrefix "ogit.Price";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/Price/" .
 
 #
 # Entities
@@ -29,66 +28,61 @@ ogit:price
 ogit.price:Invoice
     a ogit.core:Entity;
     rdfs:label "Invoice";
-    dcterms:description "Models any type of invoice";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Models any type of invoice";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "NTO";
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:scope "NTO";
+    ogit.core:tech-contact "arago GmbH";
     sh:property
         [
-            sh:path ogit.foundation:currency;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.foundation:currency
         ],
         [
-            sh:path ogit.price:priceAmount;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.price:priceAmount
         ],
         [
-            sh:path ogit.foundation:name;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:name
         ],
         [
-            sh:path ogit.foundation:description;
-            sh:minCount 0;
-            sh:maxCount 1
-        ];
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:description
+        ] .
 
 ogit.price:PriceSpecification
     a ogit.core:Entity;
     rdfs:label "PriceSpecification";
-    dcterms:description "Models a price specification for any type of IT service, component or task";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Models a price specification for any type of IT service, component or task";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "NTO";
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
+    ogit.core:scope "NTO";
+    ogit.core:tech-contact "arago GmbH" .
 
 #
 # Attributes
@@ -96,139 +90,120 @@ ogit.price:PriceSpecification
 ogit.price:discreteValue
     a ogit.core:Attribute;
     rdfs:label "discreteValue";
-    dcterms:description "Concrete value for the pricing element.";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Concrete value for the pricing element.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.price:factor
     a ogit.core:Attribute;
     rdfs:label "factor";
-    dcterms:description "Value of the factor.";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Value of the factor.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.price:factorTarget
     a ogit.core:Attribute;
     rdfs:label "factorTarget";
-    dcterms:description "Where to apply the factor (Node/Tree/Attribute).";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Where to apply the factor (Node/Tree/Attribute).";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.price:priceAmount
     a ogit.core:Attribute;
     rdfs:label "priceAmount";
-    dcterms:description "Amount to pay for example for an invoice.";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Amount to pay for example for an invoice.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.price:priceTimeUnit
     a ogit.core:Attribute;
     rdfs:label "priceTimeUnit";
-    dcterms:description "Unit price of the service per time unit (attribute timeUnitSeconds).";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Unit price of the service per time unit (attribute timeUnitSeconds).";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.price:targetAttribute
     a ogit.core:Attribute;
     rdfs:label "targetAttribute";
-    dcterms:description "Attribute to which the factor will be applied to (If target == Attribute)";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Attribute to which the factor will be applied to (If target == Attribute)";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.price:timeUnitSeconds
     a ogit.core:Attribute;
     rdfs:label "timeUnitSeconds";
-    dcterms:description """Time unit (in seconds) that price applies to. A time unit of 0 for a quantity means a one-time fee is charged. A time
-unit of 0 for an activity means the price is charged for every instance of the activity. All pricing elements of an 
-attribute pricing must have the same time unit. The time unit is irrelevant for factor pricing elements.""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description """Time unit (in seconds) that price applies to. A time unit of 0 for a quantity means a one-time fee is charged. A time
+            unit of 0 for an activity means the price is charged for every instance of the activity. All pricing elements of an 
+            attribute pricing must have the same time unit. The time unit is irrelevant for factor pricing elements.""";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-
-#
-# Verbs
-#
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .

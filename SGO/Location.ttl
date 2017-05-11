@@ -21,13 +21,12 @@
 ogit:location
     a owl:Ontology;
     rdfs:label "OGIT Location";
-    dcterms:creator "arago GmbH";
-    dcterms:contributor "Fabian Meyer";
-    vann:preferredNamespaceUri "http://www.purl.org/ogit/";
-    vann:preferredNamespacePrefix "ogit.location";
+    owl:imports purl:ogit;
     owl:versionInfo "__OGIT_VERSION__";
-    owl:imports purl:ogit
-.
+    dcterms:contributor "Fabian Meyer";
+    dcterms:creator "arago GmbH";
+    vann:preferredNamespacePrefix "ogit.location";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
@@ -35,67 +34,63 @@ ogit:location
 ogit.location:Location
     a ogit.core:Entity;
     rdfs:label "Location";
-    dcterms:description """A place where some some service is offered or requested. In many cases this will be related to a an address of an
-Organization. Similar to http://purl.org/goodrelations/v1#Location""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description """A place where some some service is offered or requested. In many cases this will be related to a an address of an
+            Organization. Similar to http://purl.org/goodrelations/v1#Location""";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "SGO";
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:scope "SGO";
+    ogit.core:tech-contact "arago GmbH";
     sh:property
         [
-            sh:path ogit.foundation:name;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.foundation:name
         ],
         [
-            sh:path ogit.foundation:description;
-            sh:minCount 0;
-            sh:maxCount 1
-        ];
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:description
+        ] .
 
 ogit.location:Region
     a ogit.core:Entity;
     rdfs:label "Region";
-    dcterms:description "A region is always something that has a certain geographic extension (a country, a county,  ) whereas ogit/Location usually refers to specific place usually having an address";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "A region is always something that has a certain geographic extension (a country, a county,  ) whereas ogit/Location usually refers to specific place usually having an address";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "SGO";
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:scope "SGO";
+    ogit.core:tech-contact "arago GmbH";
     sh:property
         [
-            sh:path ogit.foundation:name;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:name
         ],
         [
-            sh:path ogit.foundation:description;
-            sh:minCount 0;
-            sh:maxCount 1
-        ];
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:description
+        ] .
 
 #
 # Verbs
@@ -103,96 +98,94 @@ ogit.location:Region
 ogit.location:locatedIn
     a ogit.core:Verb;
     rdfs:label "locatedIn";
-    dcterms:description "indicate that something has its place somewhere";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "indicate that something has its place somewhere";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ],
-        [
-            dcterms:identifier "2";
-            dcterms:date "2015-05-12";
-            dcterms:description "updated";
-            dcterms:creator "Aymen Ayoub"
-        ],
-        [
-            dcterms:identifier "3";
-            dcterms:date "2015-07-06";
-            dcterms:description "updated";
-            dcterms:creator "Aymen Ayoub"
-        ],
-        [
-            dcterms:identifier "4";
-            dcterms:date "2015-07-15";
-            dcterms:description "updated";
-            dcterms:creator "Aymen Ayoub"
-        ],
-        [
-            dcterms:identifier "5";
-            dcterms:date "2015-07-20";
-            dcterms:description "updated";
-            dcterms:creator "Aymen Ayoub"
-        ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.automation:MARSNode;
+            ogit.core:from ogit.automation:MARSNode ;
             ogit.core:to ogit.location:Region
         ],
         [
-            ogit.core:from ogit.datacenter:Datacenter;
+            ogit.core:from ogit.datacenter:Datacenter ;
             ogit.core:to ogit.location:Location
         ],
         [
-            ogit.core:from ogit.organization:Organization;
+            ogit.core:from ogit.organization:Organization ;
             ogit.core:to ogit.location:Location
         ],
         [
-            ogit.core:from ogit.location:Location;
+            ogit.core:from ogit.location:Location ;
             ogit.core:to ogit.location:Region
         ],
         [
-            ogit.core:from ogit.person:Vcard;
+            ogit.core:from ogit.person:Vcard ;
             ogit.core:to ogit.location:Location
         ],
         [
-            ogit.core:from ogit.serviceManagement:Offering;
+            ogit.core:from ogit.serviceManagement:Offering ;
             ogit.core:to ogit.location:Location
         ],
         [
-            ogit.core:from ogit.asset:Asset;
+            ogit.core:from ogit.asset:Asset ;
             ogit.core:to ogit.location:Location
         ],
         [
-            ogit.core:from ogit.organization:Organization;
+            ogit.core:from ogit.organization:Organization ;
             ogit.core:to ogit.location:Location
         ],
         [
-            ogit.core:from ogit.person:Person;
+            ogit.core:from ogit.person:Person ;
             ogit.core:to ogit.location:Location
         ],
         [
-            ogit.core:from ogit.serviceManagement:Incident;
+            ogit.core:from ogit.serviceManagement:Incident ;
             ogit.core:to ogit.location:Location
         ],
         [
-            ogit.core:from ogit.serviceManagement:ChangeRequest;
+            ogit.core:from ogit.serviceManagement:ChangeRequest ;
             ogit.core:to ogit.location:Location
         ],
         [
-            ogit.core:from ogit.automation:MARSNode;
+            ogit.core:from ogit.automation:MARSNode ;
             ogit.core:to ogit.location:Location
         ],
         [
-            ogit.core:from ogit.serviceManagement:SubTask;
+            ogit.core:from ogit.serviceManagement:SubTask ;
             ogit.core:to ogit.location:Location
         ];
-.
-
+    ogit.core:history
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-05-12" ;
+            dcterms:description "updated" ;
+            dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-07-06" ;
+            dcterms:description "updated" ;
+            dcterms:identifier "3"
+        ],
+        [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-07-15" ;
+            dcterms:description "updated" ;
+            dcterms:identifier "4"
+        ],
+        [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-07-20" ;
+            dcterms:description "updated" ;
+            dcterms:identifier "5"
+        ];
+    ogit.core:tech-contact "arago GmbH" .

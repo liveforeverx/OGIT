@@ -21,13 +21,12 @@
 ogit:person
     a owl:Ontology;
     rdfs:label "OGIT Person";
-    dcterms:creator "arago GmbH";
-    dcterms:contributor "Fabian Meyer";
-    vann:preferredNamespaceUri "http://www.purl.org/ogit/";
-    vann:preferredNamespacePrefix "ogit.person";
+    owl:imports purl:ogit;
     owl:versionInfo "__OGIT_VERSION__";
-    owl:imports purl:ogit
-.
+    dcterms:contributor "Fabian Meyer";
+    dcterms:creator "arago GmbH";
+    vann:preferredNamespacePrefix "ogit.person";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
@@ -35,235 +34,226 @@ ogit:person
 ogit.person:Account
     a ogit.core:Entity;
     rdfs:label "Account";
+    dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
     dcterms:description "A account can be e.g. an facebook-account.";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
     dcterms:modified "2015-05-21";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "SGO";
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    sh:property
-        [
-            sh:path ogit.foundation:id;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.foundation:name;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.foundation:description;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.foundation:email;
-            sh:minCount 0;
-            sh:maxCount 1
-        ];
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-09-15";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-
-ogit.person:Person
-    a ogit.core:Entity;
-    rdfs:label "Person";
-    dcterms:description "A Person represents a human identity.";
     dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-07-27";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "SGO";
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-09-15" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:scope "SGO";
+    ogit.core:tech-contact "arago GmbH";
     sh:property
         [
-            sh:path ogit.person:firstName;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:id
         ],
         [
-            sh:path ogit.person:lastName;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:name
         ],
         [
-            sh:path ogit.person:middleName;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:description
         ],
         [
-            sh:path ogit.foundation:title;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.person:alternativeName;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.foundation:email;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.person:officePhone;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.person:otherPhone;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.person:mobilePhone;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.person:fax;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.person:notification;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.foundation:webPage;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.foundation:sourceId;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.foundation:status;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.person:position;
-            sh:minCount 0;
-            sh:maxCount 1
-        ];
-    ogit.core:indexed-attributes
-        ogit.person:firstName,
-        ogit.person:lastName,
-        ogit.foundation:email,
-        ogit.person:alternativeName;
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ],
-        [
-            dcterms:identifier "2";
-            dcterms:date "2015-06-11";
-            dcterms:description "added optional attribute /ogit/sourceId";
-            dcterms:creator "Peter Larem"
-        ],
-        [
-            dcterms:identifier "3";
-            dcterms:date "2015-07-27";
-            dcterms:description "added optional attribute ogit/middleName, ogit/officePhone, ogit/otherPhone, ogit/mobilePhone, ogit/fax, ogit/webPage, ogit/notification, ogit/status";
-            dcterms:creator "Philipp Pelchmann"
-        ];
-.
-
-ogit.person:Vcard
-    a ogit.core:Entity;
-    rdfs:label "Vcard";
-    dcterms:description """vCard is a specification developed by the IETF for the description of people and organisations. Recently, vCard has been
-significantly updated to Version 4 as documented in [RFC6350]. Typically, vCard objects are encoded in its own defined
-text-based syntax or XML renderings.""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
-    dcterms:created "2015-05-21";
-    dcterms:modified "2015-05-21";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "SGO";
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    sh:property
-        [
-            sh:path ogit.foundation:phone;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.person:mobilePhone;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.foundation:streetAddress;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.person:addressLocality;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.foundation:postalCode;
-            sh:minCount 0;
-            sh:maxCount 1
-        ];
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:email
+        ] .
 
 ogit.person:Email
     a ogit.core:Entity;
     rdfs:label "Email";
-    dcterms:description "Any type of email adress.";
-    dcterms:valid "start=2016-01-22;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2016-01-22";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Any type of email adress.";
     dcterms:modified "2016-01-22";
+    dcterms:valid "start=2016-01-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "SGO";
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2016-01-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    sh:property
-        [
-            sh:path ogit.foundation:status;
-            sh:minCount 1;
-            sh:maxCount 1
-        ];
+    ogit.core:scope "SGO";
+    ogit.core:tech-contact "arago GmbH";
+    sh:property [
+        sh:maxCount 1 ;
+        sh:minCount 1 ;
+        sh:path ogit.foundation:status
+    ] .
+
+ogit.person:Person
+    a ogit.core:Entity;
+    rdfs:label "Person";
+    dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "A Person represents a human identity.";
+    dcterms:modified "2015-07-27";
+    dcterms:valid "start=2015-05-21;";
+    ogit.core:admin-contact "arago GmbH";
     ogit.core:history
         [
-            dcterms:identifier "1";
-            dcterms:date "2016-01-22";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-06-11" ;
+            dcterms:description "added optional attribute /ogit/sourceId" ;
+            dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Philipp Pelchmann" ;
+            dcterms:date "2015-07-27" ;
+            dcterms:description "added optional attribute ogit/middleName, ogit/officePhone, ogit/otherPhone, ogit/mobilePhone, ogit/fax, ogit/webPage, ogit/notification, ogit/status" ;
+            dcterms:identifier "3"
         ];
-.
+    ogit.core:indexed-attributes
+        ogit.person:alternativeName,
+        ogit.foundation:email,
+        ogit.person:firstName,
+        ogit.person:lastName;
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:scope "SGO";
+    ogit.core:tech-contact "arago GmbH";
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:firstName
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:lastName
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:middleName
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:title
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:alternativeName
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:email
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:officePhone
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:otherPhone
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:mobilePhone
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:fax
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:notification
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:webPage
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:sourceId
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:status
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:position
+        ] .
+
+ogit.person:Vcard
+    a ogit.core:Entity;
+    rdfs:label "Vcard";
+    dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description """vCard is a specification developed by the IETF for the description of people and organisations. Recently, vCard has been
+            significantly updated to Version 4 as documented in [RFC6350]. Typically, vCard objects are encoded in its own defined
+            text-based syntax or XML renderings.""";
+    dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:scope "SGO";
+    ogit.core:tech-contact "arago GmbH";
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:phone
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:mobilePhone
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:streetAddress
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:addressLocality
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:postalCode
+        ] .
 
 #
 # Attributes
@@ -271,211 +261,189 @@ ogit.person:Email
 ogit.person:addressLocality
     a ogit.core:Attribute;
     rdfs:label "addressLocality";
-    dcterms:description "The locality belonging to an address. For example, Frankfurt am Main";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "The locality belonging to an address. For example, Frankfurt am Main";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:alternativeName
     a ogit.core:Attribute;
     rdfs:label "alternativeName";
-    dcterms:description "Alternative name of something. In context of a Person this can be the full name or an alias/nick name.";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Alternative name of something. In context of a Person this can be the full name or an alias/nick name.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:fax
     a ogit.core:Attribute;
     rdfs:label "fax";
-    dcterms:description "The number of a fax.";
-    dcterms:valid "start=2015-07-27;";
-    dcterms:creator "Philipp Pelchmann";
     dcterms:created "2015-05-21";
+    dcterms:creator "Philipp Pelchmann";
+    dcterms:description "The number of a fax.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-07-27;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-07-27";
-            dcterms:description "initial";
-            dcterms:creator "Philipp Pelchmann"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Philipp Pelchmann" ;
+        dcterms:date "2015-07-27" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:firstName
     a ogit.core:Attribute;
     rdfs:label "firstName";
-    dcterms:description "First name of a person";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "First name of a person";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:lastName
     a ogit.core:Attribute;
     rdfs:label "lastName";
-    dcterms:description "Last name of a person.";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Last name of a person.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:middleName
     a ogit.core:Attribute;
     rdfs:label "middleName";
-    dcterms:description "Middle name of a person.";
-    dcterms:valid "start=2015-07-27;";
-    dcterms:creator "Philipp Pelchmann";
     dcterms:created "2015-05-21";
+    dcterms:creator "Philipp Pelchmann";
+    dcterms:description "Middle name of a person.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-07-27;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-07-27";
-            dcterms:description "initial";
-            dcterms:creator "Philipp Pelchmann"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Philipp Pelchmann" ;
+        dcterms:date "2015-07-27" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:mobilePhone
     a ogit.core:Attribute;
     rdfs:label "mobilePhone";
-    dcterms:description "A mobile phone number.";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "A mobile phone number.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:notification
     a ogit.core:Attribute;
     rdfs:label "notification";
-    dcterms:description "A notification.";
-    dcterms:valid "start=2015-07-27;";
-    dcterms:creator "Philipp Pelchmann";
     dcterms:created "2015-05-21";
+    dcterms:creator "Philipp Pelchmann";
+    dcterms:description "A notification.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-07-27;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-07-27";
-            dcterms:description "initial";
-            dcterms:creator "Philipp Pelchmann"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Philipp Pelchmann" ;
+        dcterms:date "2015-07-27" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:officePhone
     a ogit.core:Attribute;
     rdfs:label "officePhone";
-    dcterms:description "The phone number in the office.";
-    dcterms:valid "start=2015-07-27;";
-    dcterms:creator "Philipp Pelchmann";
     dcterms:created "2015-05-21";
+    dcterms:creator "Philipp Pelchmann";
+    dcterms:description "The phone number in the office.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-07-27;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-07-27";
-            dcterms:description "initial";
-            dcterms:creator "Philipp Pelchmann"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Philipp Pelchmann" ;
+        dcterms:date "2015-07-27" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:otherPhone
     a ogit.core:Attribute;
     rdfs:label "otherPhone";
-    dcterms:description "The number of an other phone.";
-    dcterms:valid "start=2015-07-27;";
-    dcterms:creator "Philipp Pelchmann";
     dcterms:created "2015-05-21";
+    dcterms:creator "Philipp Pelchmann";
+    dcterms:description "The number of an other phone.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-07-27;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-07-27";
-            dcterms:description "initial";
-            dcterms:creator "Philipp Pelchmann"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Philipp Pelchmann" ;
+        dcterms:date "2015-07-27" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:position
     a ogit.core:Attribute;
     rdfs:label "position";
-    dcterms:description """Indicates user's position. This field contains a string value.""";
-    dcterms:valid "start=2016-10-18;";
-    dcterms:creator "Arthur Shoba";
     dcterms:created "2016-10-18";
+    dcterms:creator "Arthur Shoba";
+    dcterms:description "Indicates user's position. This field contains a string value.";
     dcterms:modified "2016-10-18";
+    dcterms:valid "start=2016-10-18;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-10-18";
-            dcterms:description "initial";
-            dcterms:creator "Arthur Shoba"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Arthur Shoba" ;
+        dcterms:date "2016-10-18" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 #
 # Verbs
@@ -483,279 +451,254 @@ ogit.person:position
 ogit.person:closes
     a ogit.core:Verb;
     rdfs:label "closes";
-    dcterms:description "Indicates if one entity closes another one, e.g. a Person might close a Ticket";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Indicates if one entity closes another one, e.g. a Person might close a Ticket";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ],
-        [
-            dcterms:identifier "2";
-            dcterms:date "2015-12-10";
-            dcterms:description "change entity name from ogit/ServiceManagement/ChangeTask to ogit/ServiceManagement/SubTask";
-            dcterms:creator "Peter Larem"
-        ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.person:Person;
+            ogit.core:from ogit.person:Person ;
             ogit.core:to ogit.serviceManagement:SubTask
         ],
         [
-            ogit.core:from ogit.person:Person;
+            ogit.core:from ogit.person:Person ;
             ogit.core:to ogit.serviceManagement:Incident
         ],
         [
-            ogit.core:from ogit.person:Person;
+            ogit.core:from ogit.person:Person ;
             ogit.core:to ogit.serviceManagement:Problem
         ],
         [
-            ogit.core:from ogit.person:Person;
+            ogit.core:from ogit.person:Person ;
             ogit.core:to ogit.serviceManagement:Ticket
         ],
         [
-            ogit.core:from ogit.person:Person;
+            ogit.core:from ogit.person:Person ;
             ogit.core:to ogit.serviceManagement:Order
         ],
         [
-            ogit.core:from ogit.person:Person;
+            ogit.core:from ogit.person:Person ;
             ogit.core:to ogit.serviceManagement:ChangeRequest
         ];
-.
+    ogit.core:history
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-12-10" ;
+            dcterms:description "change entity name from ogit/ServiceManagement/ChangeTask to ogit/ServiceManagement/SubTask" ;
+            dcterms:identifier "2"
+        ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:dislikes
     a ogit.core:Verb;
     rdfs:label "dislikes";
-    dcterms:description "Indicates if an entity (mostly Person) dislikes something else.";
-    dcterms:valid "start=2015-09-15;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-09-15";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Indicates if an entity (mostly Person) dislikes something else.";
     dcterms:modified "2015-09-15";
+    dcterms:valid "start=2015-09-15;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-09-15";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.person:Person;
-            ogit.core:to ogit.person:Person
-        ];
-.
+    ogit.core:allowed [
+        ogit.core:from ogit.person:Person ;
+        ogit.core:to ogit.person:Person
+    ];
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-09-15" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:ignores
     a ogit.core:Verb;
     rdfs:label "ignores";
-    dcterms:description "Verb showing that one entity ignores another - (useful as a mark-as-read flag)";
-    dcterms:valid "start=2016-10-14;";
-    dcterms:creator "cwalker@arago.de";
     dcterms:created "2016-10-14";
+    dcterms:creator "cwalker@arago.de";
+    dcterms:description "Verb showing that one entity ignores another - (useful as a mark-as-read flag)";
     dcterms:modified "2016-10-14";
+    dcterms:valid "start=2016-10-14;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-10-14";
-            dcterms:description "initial";
-            dcterms:creator "cwalker@arago.de"
-        ];
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.person:Person;
-            ogit.core:to ogit.media:Comment
-        ];
-.
+    ogit.core:allowed [
+        ogit.core:from ogit.person:Person ;
+        ogit.core:to ogit.media:Comment
+    ];
+    ogit.core:history [
+        dcterms:creator "cwalker@arago.de" ;
+        dcterms:date "2016-10-14" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:installs
     a ogit.core:Verb;
     rdfs:label "installs";
-    dcterms:description "Indicates which entities are installed by other entities.";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Indicates which entities are installed by other entities.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.person:Person;
-            ogit.core:to ogit.software:Application
-        ];
-.
+    ogit.core:allowed [
+        ogit.core:from ogit.person:Person ;
+        ogit.core:to ogit.software:Application
+    ];
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:invites
     a ogit.core:Verb;
     rdfs:label "invites";
-    dcterms:description "Indicates if an entity (mostly Person) invites something else.";
-    dcterms:valid "start=2015-09-15;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-09-15";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Indicates if an entity (mostly Person) invites something else.";
     dcterms:modified "2015-09-15";
+    dcterms:valid "start=2015-09-15;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-09-15";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.person:Person;
-            ogit.core:to ogit.person:Person
-        ];
-.
+    ogit.core:allowed [
+        ogit.core:from ogit.person:Person ;
+        ogit.core:to ogit.person:Person
+    ];
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-09-15" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:likes
     a ogit.core:Verb;
     rdfs:label "likes";
-    dcterms:description "Indicates if an entity (mostly Person) likes something else.";
-    dcterms:valid "start=2015-09-15;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-09-15";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Indicates if an entity (mostly Person) likes something else.";
     dcterms:modified "2015-09-15";
+    dcterms:valid "start=2015-09-15;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-09-15";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.person:Person;
-            ogit.core:to ogit.person:Person
-        ];
-.
-
+    ogit.core:allowed [
+        ogit.core:from ogit.person:Person ;
+        ogit.core:to ogit.person:Person
+    ];
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-09-15" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:receives
     a ogit.core:Verb;
     rdfs:label "receives";
-    dcterms:description "an entity receives something another entity";
-    dcterms:valid "start=2017-02-17;";
-    dcterms:creator "stravlos@arago.de";
     dcterms:created "2017-02-17";
+    dcterms:creator "stravlos@arago.de";
+    dcterms:description "an entity receives something another entity";
     dcterms:modified "2017-02-17";
+    dcterms:valid "start=2017-02-17;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2017-02-17";
-            dcterms:description "initial";
-            dcterms:creator "stravlos@arago.de"
-        ];
-    ogit.core:allowed
-                [
-            ogit.core:from ogit.person:Person;
-            ogit.core:to ogit.event:Notification
-        ];
-.
+    ogit.core:allowed [
+        ogit.core:from ogit.person:Person ;
+        ogit.core:to ogit.event:Notification
+    ];
+    ogit.core:history [
+        dcterms:creator "stravlos@arago.de" ;
+        dcterms:date "2017-02-17" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:repliedWith
     a ogit.core:Verb;
     rdfs:label "repliedWith";
-    dcterms:description "This relationship indicates that user replied with something.";
-    dcterms:valid "start=2016-08-08;";
-    dcterms:creator "Alexander Ryabtsev";
     dcterms:created "2016-08-08";
+    dcterms:creator "Alexander Ryabtsev";
+    dcterms:description "This relationship indicates that user replied with something.";
     dcterms:modified "2016-08-08";
+    dcterms:valid "start=2016-08-08;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-08-08";
-            dcterms:description "initial";
-            dcterms:creator "Alexander Ryabtsev"
-        ];
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.person:Person;
-            ogit.core:to ogit.businessProcess:SurveyReply
-        ];
-.
+    ogit.core:allowed [
+        ogit.core:from ogit.person:Person ;
+        ogit.core:to ogit.businessProcess:SurveyReply
+    ];
+    ogit.core:history [
+        dcterms:creator "Alexander Ryabtsev" ;
+        dcterms:date "2016-08-08" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:updates
     a ogit.core:Verb;
     rdfs:label "updates";
-    dcterms:description "Indicates which entity (e.g. Person) updated each another entity (e.g. Ticket).";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Indicates which entity (e.g. Person) updated each another entity (e.g. Ticket).";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-07-27";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ],
-        [
-            dcterms:identifier "2";
-            dcterms:date "2015-07-27";
-            dcterms:description "updated";
-            dcterms:creator "Aymen Ayoub"
-        ],
-        [
-            dcterms:identifier "3";
-            dcterms:date "2015-12-10";
-            dcterms:description "change entity name from ogit/ServiceManagement/ChangeTask to ogit/ServiceManagement/SubTask";
-            dcterms:creator "Peter Larem"
-        ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.person:Person;
+            ogit.core:from ogit.person:Person ;
             ogit.core:to ogit.serviceManagement:SubTask
         ],
         [
-            ogit.core:from ogit.person:Person;
+            ogit.core:from ogit.person:Person ;
             ogit.core:to ogit.serviceManagement:Incident
         ],
         [
-            ogit.core:from ogit.person:Person;
+            ogit.core:from ogit.person:Person ;
             ogit.core:to ogit.serviceManagement:Problem
         ],
         [
-            ogit.core:from ogit.person:Person;
+            ogit.core:from ogit.person:Person ;
             ogit.core:to ogit.serviceManagement:Ticket
         ],
         [
-            ogit.core:from ogit.person:Person;
+            ogit.core:from ogit.person:Person ;
             ogit.core:to ogit.serviceManagement:Order
         ],
         [
-            ogit.core:from ogit.person:Person;
+            ogit.core:from ogit.person:Person ;
             ogit.core:to ogit.serviceManagement:ChangeRequest
         ],
         [
-            ogit.core:from ogit.person:Person;
+            ogit.core:from ogit.person:Person ;
             ogit.core:to ogit.config:ConfigurationItem
         ];
-.
-
+    ogit.core:history
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-07-27" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-07-27" ;
+            dcterms:description "updated" ;
+            dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-12-10" ;
+            dcterms:description "change entity name from ogit/ServiceManagement/ChangeTask to ogit/ServiceManagement/SubTask" ;
+            dcterms:identifier "3"
+        ];
+    ogit.core:tech-contact "arago GmbH" .

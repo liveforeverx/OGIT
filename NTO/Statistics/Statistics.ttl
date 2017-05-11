@@ -16,13 +16,12 @@
 ogit:statistics
     a owl:Ontology;
     rdfs:label "OGIT Statistics";
-    dcterms:creator "arago GmbH";
-    dcterms:contributor "Fabian Meyer";
-    vann:preferredNamespaceUri "http://www.purl.org/ogit/Statistics/";
-    vann:preferredNamespacePrefix "ogit.Statistics";
+    owl:imports purl:ogit;
     owl:versionInfo "__OGIT_VERSION__";
-    owl:imports purl:ogit
-.
+    dcterms:contributor "Fabian Meyer";
+    dcterms:creator "arago GmbH";
+    vann:preferredNamespacePrefix "ogit.Statistics";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/Statistics/" .
 
 #
 # Entities
@@ -30,53 +29,42 @@ ogit:statistics
 ogit.statistics:AutomationFamily
     a ogit.core:Entity;
     rdfs:label "AutomationFamily";
-    dcterms:description "AutomationFamily defines the group of cases for automation of IT environment and its functionality.";
-    dcterms:valid "start=2016-03-07;";
-    dcterms:creator "Liudmyla Nechepurenko";
     dcterms:created "2016-03-07";
+    dcterms:creator "Liudmyla Nechepurenko";
+    dcterms:description "AutomationFamily defines the group of cases for automation of IT environment and its functionality.";
     dcterms:modified "2016-03-07";
+    dcterms:valid "start=2016-03-07;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "NTO";
+    ogit.core:history [
+        dcterms:creator "Liudmyla Nechepurenko" ;
+        dcterms:date "2016-03-07" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:indexed-attributes
+        ogit.foundation:description,
+        ogit.foundation:name;
     ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:scope "NTO";
+    ogit.core:tech-contact "arago GmbH";
     sh:property
         [
-            sh:path ogit.foundation:name;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.foundation:name
         ],
         [
-            sh:path ogit.foundation:description;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:description
         ],
         [
-            sh:path ogit.foundation:category;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:category
         ],
         [
-            sh:path ogit.automation:marsNodeType;
-            sh:minCount 0;
-            sh:maxCount 1
-        ];
-    ogit.core:indexed-attributes
-        ogit.foundation:name,
-        ogit.foundation:description;
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-03-07";
-            dcterms:description "initial";
-            dcterms:creator "Liudmyla Nechepurenko"
-        ];
-.
-
-
-#
-# Attributes
-#
-
-#
-# Verbs
-#
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.automation:marsNodeType
+        ] .

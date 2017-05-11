@@ -10,10 +10,10 @@
 #
 # Ontology
 #
-ogit:network 
-	a owl:Ontology; 
-	vann:preferredNamespaceUri "http://www.purl.org/ogit/";
-    vann:preferredNamespacePrefix "ogit._network";.
+ogit:network
+    a owl:Ontology;
+    vann:preferredNamespacePrefix "ogit._network";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Verbs
@@ -21,63 +21,61 @@ ogit:network
 ogit._network:extends
     a ogit.core:Verb;
     rdfs:label "extends";
-    dcterms:description "Indicates if one entity extends another one";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Indicates if one entity extends another one";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.network:NetworkCard;
+            ogit.core:from ogit.network:NetworkCard ;
             ogit.core:to ogit.network:IDSIPS
         ],
         [
-            ogit.core:from ogit.network:NetworkCard;
+            ogit.core:from ogit.network:NetworkCard ;
             ogit.core:to ogit.network:Loadbalancer
         ],
         [
-            ogit.core:from ogit.network:NetworkCard;
+            ogit.core:from ogit.network:NetworkCard ;
             ogit.core:to ogit.network:Router
         ],
         [
-            ogit.core:from ogit.network:NetworkCard;
+            ogit.core:from ogit.network:NetworkCard ;
             ogit.core:to ogit.network:Switch
         ],
         [
-            ogit.core:from ogit.network:NetworkCard;
+            ogit.core:from ogit.network:NetworkCard ;
             ogit.core:to ogit.network:WifiAccessPoint
         ],
         [
-            ogit.core:from ogit.network:NetworkCard;
+            ogit.core:from ogit.network:NetworkCard ;
             ogit.core:to ogit.network:Slot
         ],
         [
-            ogit.core:from ogit.network:SimpleDevice;
+            ogit.core:from ogit.network:SimpleDevice ;
             ogit.core:to ogit.network:IDSIPS
         ],
         [
-            ogit.core:from ogit.network:SimpleDevice;
+            ogit.core:from ogit.network:SimpleDevice ;
             ogit.core:to ogit.network:Loadbalancer
         ],
         [
-            ogit.core:from ogit.network:SimpleDevice;
+            ogit.core:from ogit.network:SimpleDevice ;
             ogit.core:to ogit.network:Router
         ],
         [
-            ogit.core:from ogit.network:SimpleDevice;
+            ogit.core:from ogit.network:SimpleDevice ;
             ogit.core:to ogit.network:Switch
         ],
         [
-            ogit.core:from ogit.network:SimpleDevice;
+            ogit.core:from ogit.network:SimpleDevice ;
             ogit.core:to ogit.network:WifiAccessPoint
         ];
-.
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .

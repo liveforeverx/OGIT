@@ -13,13 +13,12 @@
 ogit:rddl
     a owl:Ontology;
     rdfs:label "OGIT OSLC RDDL";
-    dcterms:creator "arago GmbH";
-    dcterms:contributor "Fabian Meyer";
-    vann:preferredNamespaceUri "http://www.purl.org/ogit/RDDL/";
-    vann:preferredNamespacePrefix "ogit.rddl";
+    owl:imports purl:ogit;
     owl:versionInfo "__OGIT_VERSION__";
-    owl:imports purl:ogit
-.
+    dcterms:contributor "Fabian Meyer";
+    dcterms:creator "arago GmbH";
+    vann:preferredNamespacePrefix "ogit.rddl";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/RDDL/" .
 
 #
 # Entities
@@ -27,47 +26,42 @@ ogit:rddl
 ogit.rddl:Namespace
     a ogit.core:Entity;
     rdfs:label "Namespace";
-    ogit.core:original <http://www.rddl.org/Namespace>;
-    dcterms:description "An XML namespace.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "An XML namespace.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "NTO";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://www.rddl.org/Namespace>;
     ogit.core:parent ogit:Node;
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:scope "NTO";
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.rddl:Resource
     a ogit.core:Entity;
     rdfs:label "Resource";
-    ogit.core:original <http://www.rddl.org/Resource>;
-    dcterms:description "RDF Schema for RDDL: 2001-01-29";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "RDF Schema for RDDL: 2001-01-29";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "NTO";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://www.rddl.org/Resource>;
     ogit.core:parent ogit:Node;
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
-
+    ogit.core:scope "NTO";
+    ogit.core:tech-contact "arago GmbH" .
 
 #
 # Attributes
@@ -75,26 +69,23 @@ ogit.rddl:Resource
 ogit.rddl:purpose
     a ogit.core:Attribute;
     rdfs:label "purpose";
-    ogit.core:original <http://www.rddl.org/purpose>;
-    dcterms:description "Purpose is derived from xlink:arcrole";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Purpose is derived from xlink:arcrole";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
     ogit.core:hide "false";
-    ogit.core:validation-type "";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://www.rddl.org/purpose>;
+    ogit.core:tech-contact "arago GmbH";
     ogit.core:validation-parameter "";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
-
+    ogit.core:validation-type "" .
 
 #
 # Verbs
@@ -102,65 +93,59 @@ ogit.rddl:purpose
 ogit.rddl:id
     a ogit.core:Verb;
     rdfs:label "id";
-    ogit.core:original <http://www.rddl.org/id>;
-    dcterms:description "The id attribute value may be used to give the resource description a unique identifier";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "The id attribute value may be used to give the resource description a unique identifier";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:hide "false";
     ogit.core:cardinality "many2many";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:hide "false";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://www.rddl.org/id>;
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.rddl:nature
     a ogit.core:Verb;
     rdfs:label "nature";
-    ogit.core:original <http://www.rddl.org/nature>;
-    dcterms:description "A machine-readable label provided by the value of the xlink:role attribute";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "A machine-readable label provided by the value of the xlink:role attribute";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:hide "false";
     ogit.core:cardinality "many2many";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:hide "false";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://www.rddl.org/nature>;
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.rddl:resource
     a ogit.core:Verb;
     rdfs:label "resource";
-    ogit.core:original <http://www.rddl.org/resource>;
-    dcterms:description "This property is used to specify a resource relationship";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "This property is used to specify a resource relationship";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:hide "false";
     ogit.core:cardinality "many2many";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:hide "false";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://www.rddl.org/resource>;
+    ogit.core:tech-contact "arago GmbH" .

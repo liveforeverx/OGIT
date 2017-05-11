@@ -10,10 +10,10 @@
 #
 # Ontology
 #
-ogit:cost 	
-	a owl:Ontology; 
-	vann:preferredNamespaceUri "http://www.purl.org/ogit/";
-    vann:preferredNamespacePrefix "ogit._cost";.
+ogit:cost
+    a owl:Ontology;
+    vann:preferredNamespacePrefix "ogit._cost";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Verbs
@@ -21,72 +21,63 @@ ogit:cost
 ogit._cost:assumes
     a ogit.core:Verb;
     rdfs:label "assumes";
-    dcterms:description "verb which allows to connect the planning parameters to a planning template";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "verb which allows to connect the planning parameters to a planning template";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.cost:PlanningParameter;
-            ogit.core:to ogit.cost:PlanningTemplate
-        ];
-.
+    ogit.core:allowed [
+        ogit.core:from ogit.cost:PlanningParameter ;
+        ogit.core:to ogit.cost:PlanningTemplate
+    ];
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit._cost:contributes
     a ogit.core:Verb;
     rdfs:label "contributes";
-    dcterms:description """Verb associates which entity contributes to another, for example could be used to express a distribution for the percentage
-of a cost element, which contributes to another cost element.""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description """Verb associates which entity contributes to another, for example could be used to express a distribution for the percentage
+            of a cost element, which contributes to another cost element.""";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.cost:CostElement;
-            ogit.core:to ogit.cost:CostDistribution
-        ];
-.
+    ogit.core:allowed [
+        ogit.core:from ogit.cost:CostElement ;
+        ogit.core:to ogit.cost:CostDistribution
+    ];
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit._cost:covers
     a ogit.core:Verb;
     rdfs:label "covers";
-    dcterms:description "Verb showing which entity covers another entity.";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Verb showing which entity covers another entity.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.cost:Budget;
-            ogit.core:to ogit.cost:CostElement
-        ];
-.
+    ogit.core:allowed [
+        ogit.core:from ogit.cost:Budget ;
+        ogit.core:to ogit.cost:CostElement
+    ];
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .

@@ -16,13 +16,12 @@
 ogit:license
     a owl:Ontology;
     rdfs:label "OGIT License";
-    dcterms:creator "arago GmbH";
-    dcterms:contributor "Fabian Meyer";
-    vann:preferredNamespaceUri "http://www.purl.org/ogit/";
-    vann:preferredNamespacePrefix "ogit.license";
+    owl:imports purl:ogit;
     owl:versionInfo "__OGIT_VERSION__";
-    owl:imports purl:ogit
-.
+    dcterms:contributor "Fabian Meyer";
+    dcterms:creator "arago GmbH";
+    vann:preferredNamespacePrefix "ogit.license";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
@@ -30,188 +29,183 @@ ogit:license
 ogit.license:License
     a ogit.core:Entity;
     rdfs:label "License";
-    dcterms:description "This entity type allows to store license information or actual licenses.";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "This entity type allows to store license information or actual licenses.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "SGO";
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    sh:property
-        [
-            sh:path ogit.foundation:id;
-            sh:minCount 1;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.foundation:validFrom;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.foundation:expirationDate;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.foundation:subject;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.license:licenseKey;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.foundation:createdAt;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.license:licenseType;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-                [
-            sh:path ogit.foundation:creator;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-                [
-            sh:path ogit.foundation:validTo;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-                [
-            sh:path ogit.foundation:deadline;
-            sh:minCount 0;
-            sh:maxCount 1
-        ];
     ogit.core:history
         [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ],
         [
-            dcterms:identifier "2";
-            dcterms:date "2016-11-29";
-            dcterms:description "add attribute validTo";
-            dcterms:creator "stravlos@arago.co"
+            dcterms:creator "stravlos@arago.co" ;
+            dcterms:date "2016-11-29" ;
+            dcterms:description "add attribute validTo" ;
+            dcterms:identifier "2"
         ],
         [
-            dcterms:identifier "3";
-            dcterms:date "2016-12-19";
-            dcterms:description "add attribute deadlie";
-            dcterms:creator "stravlos@arago.co"
+            dcterms:creator "stravlos@arago.co" ;
+            dcterms:date "2016-12-19" ;
+            dcterms:description "add attribute deadlie" ;
+            dcterms:identifier "3"
         ];
-.
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:scope "SGO";
+    ogit.core:tech-contact "arago GmbH";
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.foundation:id
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:validFrom
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:expirationDate
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:subject
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.license:licenseKey
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:createdAt
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.license:licenseType
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:creator
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:validTo
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:deadline
+        ] .
 
 ogit.license:LicenseRequest
     a ogit.core:Entity;
     rdfs:label "LicenseRequest";
-    dcterms:description """This allows clients to place a request for a license.
-Usually some license admin personnel will use the information from such a request to create the actual license.
-A request might contain a valid LicenseToken to indicate that this request is pre-approved.""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description """This allows clients to place a request for a license.
+            Usually some license admin personnel will use the information from such a request to create the actual license.
+            A request might contain a valid LicenseToken to indicate that this request is pre-approved.""";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "SGO";
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:scope "SGO";
+    ogit.core:tech-contact "arago GmbH";
     sh:property
         [
-            sh:path ogit.foundation:id;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.foundation:id
         ],
         [
-            sh:path ogit.foundation:description;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:description
         ],
         [
-            sh:path ogit.foundation:token;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:token
         ],
         [
-            sh:path ogit.license:licenseRequestStatus;
-            sh:minCount 0;
-            sh:maxCount 1
-        ];
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.license:licenseRequestStatus
+        ] .
 
 ogit.license:LicenseToken
     a ogit.core:Entity;
     rdfs:label "LicenseToken";
-    dcterms:description """This serves as a placeholder for pre-approved license request it will be subsituted by a real license throughout the licence request process.
-This will created by a license admin and communicated to potential licence requesters.""";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description """This serves as a placeholder for pre-approved license request it will be subsituted by a real license throughout the licence request process.
+            This will created by a license admin and communicated to potential licence requesters.""";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "SGO";
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:scope "SGO";
+    ogit.core:tech-contact "arago GmbH";
     sh:property
         [
-            sh:path ogit.foundation:id;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.foundation:id
         ],
         [
-            sh:path ogit.foundation:description;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:description
         ],
         [
-            sh:path ogit.foundation:validFrom;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:validFrom
         ],
         [
-            sh:path ogit.foundation:expirationDate;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:expirationDate
         ],
         [
-            sh:path ogit.license:licenseType;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.license:licenseType
         ],
         [
-            sh:path ogit.foundation:token;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:token
         ],
         [
-            sh:path ogit.serviceManagement:licenseTokenStatus;
-            sh:minCount 0;
-            sh:maxCount 1
-        ];
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.serviceManagement:licenseTokenStatus
+        ] .
 
 #
 # Attributes
@@ -219,59 +213,52 @@ This will created by a license admin and communicated to potential licence reque
 ogit.license:licenseKey
     a ogit.core:Attribute;
     rdfs:label "licenseKey";
-    dcterms:description "A string containing a license key.";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "A string containing a license key.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.license:licenseRequestStatus
     a ogit.core:Attribute;
     rdfs:label "licenseRequestStatus";
-    dcterms:description "The list of valid status values a license request can have.";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "The list of valid status values a license request can have.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
     ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-type "regex";
     ogit.core:validation-parameter "^(pending|approved|rejected|failed|cancelled)$";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+    ogit.core:validation-type "regex" .
 
 ogit.license:licenseType
     a ogit.core:Attribute;
     rdfs:label "licenseType";
-    dcterms:description "Type of the License e.g. community/enterprise.";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Type of the License e.g. community/enterprise.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .

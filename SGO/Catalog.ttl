@@ -16,13 +16,12 @@
 ogit:catalog
     a owl:Ontology;
     rdfs:label "OGIT Catalog";
-    dcterms:creator "arago GmbH";
-    dcterms:contributor "Fabian Meyer";
-    vann:preferredNamespaceUri "http://www.purl.org/ogit/";
-    vann:preferredNamespacePrefix "ogit.catalog";
+    owl:imports purl:ogit;
     owl:versionInfo "__OGIT_VERSION__";
-    owl:imports purl:ogit
-.
+    dcterms:contributor "Fabian Meyer";
+    dcterms:creator "arago GmbH";
+    vann:preferredNamespacePrefix "ogit.catalog";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
@@ -30,81 +29,77 @@ ogit:catalog
 ogit.catalog:Catalog
     a ogit.core:Entity;
     rdfs:label "Catalog";
-    dcterms:description "Any kind of catalog which could be offered by an Organization (e.g. corresponding to a vendor). Might contain products, services, books, etc.";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Any kind of catalog which could be offered by an Organization (e.g. corresponding to a vendor). Might contain products, services, books, etc.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "SGO";
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:scope "SGO";
+    ogit.core:tech-contact "arago GmbH";
     sh:property
         [
-            sh:path ogit.foundation:name;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.foundation:name
         ],
         [
-            sh:path ogit.foundation:description;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:description
         ],
         [
-            sh:path ogit.foundation:id;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:id
         ],
         [
-            sh:path ogit.foundation:version;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:version
         ],
         [
-            sh:path ogit.foundation:type;
-            sh:minCount 0;
-            sh:maxCount 1
-        ];
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:type
+        ] .
 
 ogit.catalog:CatalogItem
     a ogit.core:Entity;
     rdfs:label "CatalogItem";
-    dcterms:description "An entry within a Catalog. the semantics of Item is more general than that of http://purl.org/goodrelations/v1#ProductOrService";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "An entry within a Catalog. the semantics of Item is more general than that of http://purl.org/goodrelations/v1#ProductOrService";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "SGO";
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:scope "SGO";
+    ogit.core:tech-contact "arago GmbH";
     sh:property
         [
-            sh:path ogit.foundation:name;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.foundation:name
         ],
         [
-            sh:path ogit.foundation:description;
-            sh:minCount 0;
-            sh:maxCount 1
-        ];
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:description
+        ] .
 
 #
 # Verbs
@@ -112,24 +107,20 @@ ogit.catalog:CatalogItem
 ogit.catalog:validFor
     a ogit.core:Verb;
     rdfs:label "validFor";
-    dcterms:description "This relationship indicates the something specifies validity for something else.";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "This relationship indicates the something specifies validity for something else.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.catalog:Catalog;
-            ogit.core:to ogit.location:Region
-        ];
-.
-
+    ogit.core:allowed [
+        ogit.core:from ogit.catalog:Catalog ;
+        ogit.core:to ogit.location:Region
+    ];
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .

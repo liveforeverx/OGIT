@@ -11,10 +11,10 @@
 #
 # Ontology
 #
-ogit:forum 
-	a owl:Ontology; 
-	vann:preferredNamespaceUri "http://www.purl.org/ogit/";
-    vann:preferredNamespacePrefix "ogit._forum";.
+ogit:forum
+    a owl:Ontology;
+    vann:preferredNamespacePrefix "ogit._forum";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Verbs
@@ -22,266 +22,252 @@ ogit:forum
 ogit._forum:accepts
     a ogit.core:Verb;
     rdfs:label "accepts";
-    dcterms:description "Indicates if an entity accepts something else.";
-    dcterms:valid "start=2015-09-02;";
-    dcterms:creator "bmoore@arago.de";
     dcterms:created "2015-09-02";
+    dcterms:creator "bmoore@arago.de";
+    dcterms:description "Indicates if an entity accepts something else.";
     dcterms:modified "2015-09-02";
+    dcterms:valid "start=2015-09-02;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-09-02";
-            dcterms:description "initial";
-            dcterms:creator "bmoore@arago.de"
-        ];
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.forum:Profile;
-            ogit.core:to ogit.forum:Invite
-        ];
-.
+    ogit.core:allowed [
+        ogit.core:from ogit.forum:Profile ;
+        ogit.core:to ogit.forum:Invite
+    ];
+    ogit.core:history [
+        dcterms:creator "bmoore@arago.de" ;
+        dcterms:date "2015-09-02" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:configures
     a ogit.core:Verb;
     rdfs:label "configures";
-    dcterms:description "The `from` entity, contains configuration data for the to `entity`";
-    dcterms:valid "start=2015-04-27;";
-    dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-27";
+    dcterms:creator "cwalker@arago.de";
+    dcterms:description "The `from` entity, contains configuration data for the to `entity`";
     dcterms:modified "2015-04-27";
+    dcterms:valid "start=2015-04-27;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-04-27";
-            dcterms:description "intitial inception";
-            dcterms:creator "cwalker@arago.de"
-        ];
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.forum:Configuration;
-            ogit.core:to ogit.forum:Profile
-        ];
-.
+    ogit.core:allowed [
+        ogit.core:from ogit.forum:Configuration ;
+        ogit.core:to ogit.forum:Profile
+    ];
+    ogit.core:history [
+        dcterms:creator "cwalker@arago.de" ;
+        dcterms:date "2015-04-27" ;
+        dcterms:description "intitial inception" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:endorses
     a ogit.core:Verb;
     rdfs:label "endorses";
-    dcterms:description """This relationship indicates that one entity endorses some other. This is a recommendation or a
-social `like`.""";
-    dcterms:valid "start=2015-04-27;";
-    dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-27";
+    dcterms:creator "cwalker@arago.de";
+    dcterms:description """This relationship indicates that one entity endorses some other. This is a recommendation or a
+            social `like`.""";
     dcterms:modified "2015-04-27";
+    dcterms:valid "start=2015-04-27;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-04-27";
-            dcterms:description "intitial inception";
-            dcterms:creator "cwalker@arago.de"
-        ],
-        [
-            dcterms:identifier "2";
-            dcterms:date "2015-11-13";
-            dcterms:description "Edit for KnowledgeItemHistory";
-            dcterms:creator "bmoore@arago.de"
-        ],
-        [
-            dcterms:identifier "3";
-            dcterms:date "2016-05-17";
-            dcterms:description "Added edge for `ogit/Forum/Profile` -> `ogit/Forum/Rating`";
-            dcterms:creator "Ben Neal"
-        ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.forum:Profile;
+            ogit.core:from ogit.forum:Profile ;
             ogit.core:to ogit.forum:KnowledgeBundle
         ],
         [
-            ogit.core:from ogit.forum:Profile;
+            ogit.core:from ogit.forum:Profile ;
             ogit.core:to ogit.forum:KnowledgeItemHistory
         ],
         [
-            ogit.core:from ogit.forum:Profile;
+            ogit.core:from ogit.forum:Profile ;
             ogit.core:to ogit.forum:Post
         ],
         [
-            ogit.core:from ogit.forum:Profile;
+            ogit.core:from ogit.forum:Profile ;
             ogit.core:to ogit.forum:Reply
         ],
         [
-            ogit.core:from ogit.forum:Profile;
+            ogit.core:from ogit.forum:Profile ;
             ogit.core:to ogit.forum:Rating
         ];
-.
+    ogit.core:history
+        [
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-04-27" ;
+            dcterms:description "intitial inception" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "bmoore@arago.de" ;
+            dcterms:date "2015-11-13" ;
+            dcterms:description "Edit for KnowledgeItemHistory" ;
+            dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Ben Neal" ;
+            dcterms:date "2016-05-17" ;
+            dcterms:description "Added edge for `ogit/Forum/Profile` -> `ogit/Forum/Rating`" ;
+            dcterms:identifier "3"
+        ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:moderates
     a ogit.core:Verb;
     rdfs:label "moderates";
-    dcterms:description """Moderation as a verb, in the context of a forum, is a supervisory role. It implies that the
-entity takes a responsibility for the maintenance and upkeep of the connected entity.""";
-    dcterms:valid "start=2015-04-23;";
-    dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-23";
+    dcterms:creator "cwalker@arago.de";
+    dcterms:description """Moderation as a verb, in the context of a forum, is a supervisory role. It implies that the
+            entity takes a responsibility for the maintenance and upkeep of the connected entity.""";
     dcterms:modified "2015-04-23";
+    dcterms:valid "start=2015-04-23;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-04-23";
-            dcterms:description "Initial Creation";
-            dcterms:creator "cwalker@arago.de"
-        ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.forum:Profile;
+            ogit.core:from ogit.forum:Profile ;
             ogit.core:to ogit.forum:Topic
         ],
         [
-            ogit.core:from ogit.forum:Profile;
+            ogit.core:from ogit.forum:Profile ;
             ogit.core:to ogit.forum:KnowledgeBundle
         ];
-.
+    ogit.core:cardinality "many2many";
+    ogit.core:history [
+        dcterms:creator "cwalker@arago.de" ;
+        dcterms:date "2015-04-23" ;
+        dcterms:description "Initial Creation" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:responds
     a ogit.core:Verb;
     rdfs:label "responds";
-    dcterms:description """This relationship indicates that one entity is a response to another. For example, parts of a
-conversation/fourm thread.""";
-    dcterms:valid "start=2015-04-27;";
-    dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-27";
+    dcterms:creator "cwalker@arago.de";
+    dcterms:description """This relationship indicates that one entity is a response to another. For example, parts of a
+            conversation/fourm thread.""";
     dcterms:modified "2015-04-27";
+    dcterms:valid "start=2015-04-27;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-04-27";
-            dcterms:description "intitial inception";
-            dcterms:creator "cwalker@arago.de"
-        ],
-        [
-            dcterms:identifier "2";
-            dcterms:date "2015-11-13";
-            dcterms:description "Edit for KnowledgeItemHistory";
-            dcterms:creator "bmoore@arago.de"
-        ],
-        [
-            dcterms:identifier "3";
-            dcterms:date "2016-05-17";
-            dcterms:description "Added edge for `ogit/Comment` -> `ogit/Forum/Rating`";
-            dcterms:creator "Ben Neal"
-        ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.media:Comment;
+            ogit.core:from ogit.media:Comment ;
             ogit.core:to ogit.forum:Reply
         ],
         [
-            ogit.core:from ogit.forum:Reply;
+            ogit.core:from ogit.forum:Reply ;
             ogit.core:to ogit.forum:KnowledgeItemHistory
         ],
         [
-            ogit.core:from ogit.forum:Reply;
+            ogit.core:from ogit.forum:Reply ;
             ogit.core:to ogit.forum:Post
         ],
         [
-            ogit.core:from ogit.forum:Reply;
+            ogit.core:from ogit.forum:Reply ;
             ogit.core:to ogit.forum:KnowledgeBundle
         ],
         [
-            ogit.core:from ogit.media:Comment;
+            ogit.core:from ogit.media:Comment ;
             ogit.core:to ogit.forum:Rating
         ];
-.
+    ogit.core:history
+        [
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-04-27" ;
+            dcterms:description "intitial inception" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "bmoore@arago.de" ;
+            dcterms:date "2015-11-13" ;
+            dcterms:description "Edit for KnowledgeItemHistory" ;
+            dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Ben Neal" ;
+            dcterms:date "2016-05-17" ;
+            dcterms:description "Added edge for `ogit/Comment` -> `ogit/Forum/Rating`" ;
+            dcterms:identifier "3"
+        ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:subscribes
     a ogit.core:Verb;
     rdfs:label "subscribes";
-    dcterms:description """A subscription by an entity to another. Implies that one entity is interested in something
-the other can offer.""";
-    dcterms:valid "start=2015-04-27;";
-    dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-27";
+    dcterms:creator "cwalker@arago.de";
+    dcterms:description """A subscription by an entity to another. Implies that one entity is interested in something
+            the other can offer.""";
     dcterms:modified "2015-04-27";
+    dcterms:valid "start=2015-04-27;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-04-27";
-            dcterms:description "intitial inception";
-            dcterms:creator "cwalker@arago.de"
-        ],
-        [
-            dcterms:identifier "2";
-            dcterms:date "2015-10-21";
-            dcterms:description "Adding Profile ->";
-            dcterms:creator "cwalker@arago.de"
-        ],
-        [
-            dcterms:identifier "3";
-            dcterms:date "2015-11-13";
-            dcterms:description "Edit for KnowledgeItemHistory";
-            dcterms:creator "bmoore@arago.de"
-        ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.forum:Profile;
+            ogit.core:from ogit.forum:Profile ;
             ogit.core:to ogit.forum:KnowledgeItemHistory
         ],
         [
-            ogit.core:from ogit.forum:Profile;
+            ogit.core:from ogit.forum:Profile ;
             ogit.core:to ogit.forum:Topic
         ],
         [
-            ogit.core:from ogit.forum:Profile;
+            ogit.core:from ogit.forum:Profile ;
             ogit.core:to ogit.forum:Post
         ],
         [
-            ogit.core:from ogit.forum:Profile;
+            ogit.core:from ogit.forum:Profile ;
             ogit.core:to ogit.forum:KnowledgeBundle
         ],
         [
-            ogit.core:from ogit.forum:Profile;
+            ogit.core:from ogit.forum:Profile ;
             ogit.core:to ogit.forum:Profile
         ],
         [
-            ogit.core:from ogit.forum:Profile;
+            ogit.core:from ogit.forum:Profile ;
             ogit.core:to ogit.forum:FeedEntry
         ];
-.
+    ogit.core:history
+        [
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-04-27" ;
+            dcterms:description "intitial inception" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-10-21" ;
+            dcterms:description "Adding Profile ->" ;
+            dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "bmoore@arago.de" ;
+            dcterms:date "2015-11-13" ;
+            dcterms:description "Edit for KnowledgeItemHistory" ;
+            dcterms:identifier "3"
+        ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:wins
     a ogit.core:Verb;
     rdfs:label "wins";
-    dcterms:description """Associates the entity that has won something with the thing that was won. Despite the present
-tense used in the verb, this almost always will refer to some that *was* won in the past.""";
-    dcterms:valid "start=2015-04-23;";
-    dcterms:creator "cwalker@arago.de";
     dcterms:created "2015-04-23";
+    dcterms:creator "cwalker@arago.de";
+    dcterms:description """Associates the entity that has won something with the thing that was won. Despite the present
+            tense used in the verb, this almost always will refer to some that *was* won in the past.""";
     dcterms:modified "2015-04-23";
+    dcterms:valid "start=2015-04-23;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
+    ogit.core:allowed [
+        ogit.core:from ogit.forum:Profile ;
+        ogit.core:to ogit.forum:Award
+    ];
     ogit.core:cardinality "many2many";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-04-23";
-            dcterms:description "Initial Creation";
-            dcterms:creator "cwalker@arago.de"
-        ];
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.forum:Profile;
-            ogit.core:to ogit.forum:Award
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "cwalker@arago.de" ;
+        dcterms:date "2015-04-23" ;
+        dcterms:description "Initial Creation" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .

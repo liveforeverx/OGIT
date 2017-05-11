@@ -7,112 +7,103 @@
 @prefix ogit.person:           <http://www.purl.org/ogit/> .
 @prefix owl:                   <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:                  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix vann:            	   <http://purl.org/vocab/vann/> .
+@prefix vann:                  <http://purl.org/vocab/vann/> .
 
 #
 # Ontology
 #
-ogit:businessProcess 
-	a owl:Ontology; 
-	vann:preferredNamespaceUri "http://www.purl.org/ogit/";
-    vann:preferredNamespacePrefix "ogit._businessProcess";.
+ogit:businessProcess
+    a owl:Ontology;
+    vann:preferredNamespacePrefix "ogit._businessProcess";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
+
 #
 # Attributes
 #
 ogit._businessProcess:placement
     a ogit.core:Attribute;
     rdfs:label "placement";
-    dcterms:description "A place where the object is placed.";
-    dcterms:valid "start=2016-08-08;";
-    dcterms:creator "Alexander Ryabtsev";
     dcterms:created "2016-08-08";
+    dcterms:creator "Alexander Ryabtsev";
+    dcterms:description "A place where the object is placed.";
     dcterms:modified "2016-08-08";
+    dcterms:valid "start=2016-08-08;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-08-08";
-            dcterms:description "initial";
-            dcterms:creator "Alexander Ryabtsev"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Alexander Ryabtsev" ;
+        dcterms:date "2016-08-08" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit._businessProcess:plannedFinishDate
     a ogit.core:Attribute;
     rdfs:label "plannedFinishDate";
-    dcterms:description "Defines the date when something will be finished.";
-    dcterms:valid "start=2016-08-08;";
-    dcterms:creator "Alexander Ryabtsev";
     dcterms:created "2016-08-08";
+    dcterms:creator "Alexander Ryabtsev";
+    dcterms:description "Defines the date when something will be finished.";
     dcterms:modified "2016-08-08";
+    dcterms:valid "start=2016-08-08;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-08-08";
-            dcterms:description "initial";
-            dcterms:creator "Alexander Ryabtsev"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Alexander Ryabtsev" ;
+        dcterms:date "2016-08-08" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit._businessProcess:plannedStartDate
     a ogit.core:Attribute;
     rdfs:label "plannedStartDate";
-    dcterms:description "Defines the date when something will be started.";
-    dcterms:valid "start=2016-08-08;";
-    dcterms:creator "Alexander Ryabtsev";
     dcterms:created "2016-08-08";
+    dcterms:creator "Alexander Ryabtsev";
+    dcterms:description "Defines the date when something will be started.";
     dcterms:modified "2016-08-08";
+    dcterms:valid "start=2016-08-08;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-08-08";
-            dcterms:description "initial";
-            dcterms:creator "Alexander Ryabtsev"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Alexander Ryabtsev" ;
+        dcterms:date "2016-08-08" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit._businessProcess:schedule
     a ogit.core:Attribute;
     rdfs:label "schedule";
-    dcterms:description "Schedule represented by a string in cron format.";
-    dcterms:valid "start=2016-08-08;";
-    dcterms:creator "Alexander Ryabtsev";
     dcterms:created "2016-08-08";
+    dcterms:creator "Alexander Ryabtsev";
+    dcterms:description "Schedule represented by a string in cron format.";
     dcterms:modified "2016-08-08";
+    dcterms:valid "start=2016-08-08;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-08-08";
-            dcterms:description "initial";
-            dcterms:creator "Alexander Ryabtsev"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Alexander Ryabtsev" ;
+        dcterms:date "2016-08-08" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit._businessProcess:surveyQuestions
     a ogit.core:Attribute;
     rdfs:label "surveyQuestions";
-    dcterms:description "Questions from a survey or survey reply represented by a JSON array.";
-    dcterms:valid "start=2016-08-08;";
-    dcterms:creator "Alexander Ryabtsev";
     dcterms:created "2016-08-08";
+    dcterms:creator "Alexander Ryabtsev";
+    dcterms:description "Questions from a survey or survey reply represented by a JSON array.";
     dcterms:modified "2016-08-08";
+    dcterms:valid "start=2016-08-08;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-08-08";
-            dcterms:description "initial";
-            dcterms:creator "Alexander Ryabtsev"
-        ];
-.
+    ogit.core:history [
+        dcterms:creator "Alexander Ryabtsev" ;
+        dcterms:date "2016-08-08" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 #
 # Verbs
@@ -120,83 +111,81 @@ ogit._businessProcess:surveyQuestions
 ogit._businessProcess:consumes
     a ogit.core:Verb;
     rdfs:label "consumes";
-    dcterms:description "This relationship indicates that one consumes result of work from another.";
-    dcterms:valid "start=2016-08-08;";
-    dcterms:creator "Alexander Ryabtsev";
     dcterms:created "2016-08-08";
+    dcterms:creator "Alexander Ryabtsev";
+    dcterms:description "This relationship indicates that one consumes result of work from another.";
     dcterms:modified "2016-08-08";
+    dcterms:valid "start=2016-08-08;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-08-08";
-            dcterms:description "initial";
-            dcterms:creator "Alexander Ryabtsev"
-        ],
-        [
-            dcterms:identifier "2";
-            dcterms:date "2017-02-06";
-            dcterms:description "Add edge from person to milestone.";
-            dcterms:creator "Alexander Ryabtsev"
-        ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.person:Person;
+            ogit.core:from ogit.person:Person ;
             ogit.core:to ogit.businessProcess:Project
         ],
         [
-            ogit.core:from ogit.organization:Organization;
+            ogit.core:from ogit.organization:Organization ;
             ogit.core:to ogit.businessProcess:Project
         ],
         [
-            ogit.core:from ogit.person:Person;
+            ogit.core:from ogit.person:Person ;
             ogit.core:to ogit.businessProcess:Milestone
         ],
         [
-            ogit.core:from ogit.organization:Organization;
+            ogit.core:from ogit.organization:Organization ;
             ogit.core:to ogit.businessProcess:SurveyIteration
         ];
-.
+    ogit.core:history
+        [
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2016-08-08" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2017-02-06" ;
+            dcterms:description "Add edge from person to milestone." ;
+            dcterms:identifier "2"
+        ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit._businessProcess:produces
     a ogit.core:Verb;
     rdfs:label "produces";
-    dcterms:description "This relationship indicates that one produces some work for another.";
-    dcterms:valid "start=2016-08-08;";
-    dcterms:creator "Alexander Ryabtsev";
     dcterms:created "2016-08-08";
+    dcterms:creator "Alexander Ryabtsev";
+    dcterms:description "This relationship indicates that one produces some work for another.";
     dcterms:modified "2016-08-08";
+    dcterms:valid "start=2016-08-08;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-08-08";
-            dcterms:description "initial";
-            dcterms:creator "Alexander Ryabtsev"
-        ],
-        [
-            dcterms:identifier "2";
-            dcterms:date "2017-02-06";
-            dcterms:description "Add edge from person to milestone.";
-            dcterms:creator "Alexander Ryabtsev"
-        ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.person:Person;
+            ogit.core:from ogit.person:Person ;
             ogit.core:to ogit.businessProcess:Project
         ],
         [
-            ogit.core:from ogit.organization:Organization;
+            ogit.core:from ogit.organization:Organization ;
             ogit.core:to ogit.businessProcess:Project
         ],
         [
-            ogit.core:from ogit.person:Person;
+            ogit.core:from ogit.person:Person ;
             ogit.core:to ogit.businessProcess:Milestone
         ],
         [
-            ogit.core:from ogit.organization:Organization;
+            ogit.core:from ogit.organization:Organization ;
             ogit.core:to ogit.businessProcess:SurveyIteration
         ];
-.
+    ogit.core:history
+        [
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2016-08-08" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2017-02-06" ;
+            dcterms:description "Add edge from person to milestone." ;
+            dcterms:identifier "2"
+        ];
+    ogit.core:tech-contact "arago GmbH" .

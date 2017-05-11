@@ -12,299 +12,262 @@
 purl:ogit
     a owl:Ontology;
     rdfs:label "OGIT Base";
-    dcterms:description """This ontology contains basic terms that are used to define Entities, Attributes and Verbs, but are not Verbs or Attributes themselves."""@en;
-    dcterms:creator "arago GmbH";
-    dcterms:contributor "Andreas Textor";
-    vann:preferredNamespaceUri "http://www.purl.org/ogit/";
-    vann:preferredNamespacePrefix "ogit.core";
     owl:versionInfo "__OGIT_VERSION__";
-.
+    dcterms:contributor "Andreas Textor";
+    dcterms:creator "arago GmbH";
+    dcterms:description "This ontology contains basic terms that are used to define Entities, Attributes and Verbs, but are not Verbs or Attributes themselves."@en;
+    vann:preferredNamespacePrefix "ogit.core";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
 #
 ogit.core:Attribute
-    rdfs:subClassOf owl:DatatypeProperty;
-    rdfs:subClassOf ogit.core:Entity;
     rdfs:label "Attribute";
-    dcterms:description "Represents the class of all Attributes"@en;
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
+    rdfs:subClassOf
+        ogit.core:Entity,
+        owl:DatatypeProperty;
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Represents the class of all Attributes"@en;
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "SGO";
     ogit.core:hide "true";
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:scope "SGO";
+    ogit.core:tech-contact "arago GmbH";
     sh:property
         [
-            sh:path rdfs:label;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path rdfs:label
         ],
         [
-            sh:path dcterms:description;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dcterms:description
         ],
         [
-            sh:path dcterms:valid;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dcterms:valid
         ],
         [
-            sh:path dcterms:creator;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dcterms:creator
         ],
         [
-            sh:path dcterms:created;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dcterms:created
         ],
         [
-            sh:path dcterms:modified;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dcterms:modified
         ],
         [
-            sh:path ogit.core:admin-contact;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.core:admin-contact
         ],
         [
-            sh:path ogit.core:tech-contact;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.core:tech-contact
         ],
         [
-            sh:path ogit.core:deleter;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.core:deleter
         ],
         [
-            sh:path ogit.core:hide;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.core:hide
         ],
         [
-            sh:path ogit.core:validation-type;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.core:validation-type
         ],
         [
-            sh:path ogit.core:validation-parameter;
-            sh:minCount 0;
-            sh:maxCount 1
-        ];
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.core:validation-parameter
+        ] .
 
 ogit.core:Entity
     a rdfs:Class;
-    rdfs:subClassOf rdfs:Class;
-    rdfs:subClassOf ogit.core:Entity;
     rdfs:label "Entity";
-    dcterms:description """Represents the class of all Entities"""@en;
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
+    rdfs:subClassOf
+        ogit.core:Entity,
+        rdfs:Class;
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Represents the class of all Entities"@en;
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "SGO";
     ogit.core:hide "true";
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:scope "SGO";
+    ogit.core:tech-contact "arago GmbH";
     sh:property
         [
-            sh:path rdfs:label;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path rdfs:label
         ],
         [
-            sh:path ogit.core:scope;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.core:scope
         ],
         [
-            sh:path dcterms:description;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dcterms:description
         ],
         [
-            sh:path dcterms:valid;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dcterms:valid
         ],
         [
-            sh:path dcterms:creator;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dcterms:creator
         ],
         [
-            sh:path dcterms:modified;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dcterms:modified
         ],
         [
-            sh:path ogit.core:admin-contact;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.core:admin-contact
         ],
         [
-            sh:path ogit.core:tech-contact;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.core:tech-contact
         ],
         [
-            sh:path dcterms:description;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dcterms:description
         ],
         [
-            sh:path dcterms:created;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dcterms:created
         ],
         [
-            sh:path ogit.core:parent;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.core:parent
         ],
         [
-            sh:path ogit.core:deleter;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.core:deleter
         ],
         [
-            sh:path ogit.core:hide;
-            sh:minCount 0;
-            sh:maxCount 1
-        ];
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.core:hide
+        ] .
 
 ogit.core:Verb
-    rdfs:subClassOf owl:ObjectProperty;
-    rdfs:subClassOf ogit.core:Entity;
     rdfs:label "Verb";
-    dcterms:description "Represents the class of all Verbs"@en;
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
+    rdfs:subClassOf
+        ogit.core:Entity,
+        owl:ObjectProperty;
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Represents the class of all Verbs"@en;
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "SGO";
     ogit.core:hide "true";
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:scope "SGO";
+    ogit.core:tech-contact "arago GmbH";
     sh:property
         [
-            sh:path dcterms:description;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dcterms:description
         ],
         [
-            sh:path rdfs:label;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path rdfs:label
         ],
         [
-            sh:path dcterms:valid;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dcterms:valid
         ],
         [
-            sh:path dcterms:creator;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dcterms:creator
         ],
         [
-            sh:path dcterms:created;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dcterms:created
         ],
         [
-            sh:path dcterms:modified;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path dcterms:modified
         ],
         [
-            sh:path ogit.core:tech-contact;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.core:tech-contact
         ],
         [
-            sh:path ogit.core:admin-contact;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.core:admin-contact
         ],
         [
-            sh:path ogit.core:deleter;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.core:deleter
         ],
         [
-            sh:path ogit.core:hide;
-            sh:minCount 0;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.core:hide
         ],
         [
-            sh:path ogit.core:cardinality;
-            sh:minCount 0;
-            sh:maxCount 1
-        ];
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
-
-#
-# Verbs
-#
-ogit.core:any-attributes
-    a ogit.core:Verb;
-    rdfs:label "any-attributes";
-    dcterms:description "The list of any Attributes for an Entity"@en .
-
-ogit.core:allowed
-    a ogit.core:Verb;
-    rdfs:label "allowed";
-    dcterms:description "Constrains ranges and domains for Verbs"@en .
-
-ogit.core:from
-    a ogit.core:Verb;
-    rdfs:label "from";
-    dcterms:description "Constrains domains for Verbs"@en .
-
-ogit.core:history
-    a ogit.core:Verb;
-    rdfs:label "history";
-    dcterms:description "This represents the change history of an Entity, Attribute or Verb"@en .
-
-ogit.core:indexed-attributes
-    a ogit.core:Verb;
-    rdfs:label "indexed-attributes";
-    dcterms:description "The list of indexed Attributes for an Entity"@en .
-
-ogit.core:to
-    a ogit.core:Verb;
-    rdfs:label "to";
-    dcterms:description "Constrains ranges for Verbs"@en .
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.core:cardinality
+        ] .
 
 #
 # Attributes
@@ -346,11 +309,44 @@ ogit.core:validation-type
     rdfs:label "validation-type" .
 
 #
-# Annotations
+# Verbs
+#
+ogit.core:allowed
+    a ogit.core:Verb;
+    rdfs:label "allowed";
+    dcterms:description "Constrains ranges and domains for Verbs"@en .
+
+ogit.core:any-attributes
+    a ogit.core:Verb;
+    rdfs:label "any-attributes";
+    dcterms:description "The list of any Attributes for an Entity"@en .
+
+ogit.core:from
+    a ogit.core:Verb;
+    rdfs:label "from";
+    dcterms:description "Constrains domains for Verbs"@en .
+
+ogit.core:history
+    a ogit.core:Verb;
+    rdfs:label "history";
+    dcterms:description "This represents the change history of an Entity, Attribute or Verb"@en .
+
+ogit.core:indexed-attributes
+    a ogit.core:Verb;
+    rdfs:label "indexed-attributes";
+    dcterms:description "The list of indexed Attributes for an Entity"@en .
+
+ogit.core:to
+    a ogit.core:Verb;
+    rdfs:label "to";
+    dcterms:description "Constrains ranges for Verbs"@en .
+
+#
+# Other
 #
 ogit.core:original
     a owl:AnnotationProperty;
     rdfs:label "original";
     dcterms:description """In a vocabulary imported into OGIT, an ogit.core:original reference can be added to elements to
-refer to the original URI of the element. It is less strict than owl:sameAs, but unlike rdfs:seeAlso, it should
-always refer to a URI.""" .
+            refer to the original URI of the element. It is less strict than owl:sameAs, but unlike rdfs:seeAlso, it should
+            always refer to a URI.""" .

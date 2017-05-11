@@ -13,13 +13,12 @@
 ogit:oslc-cm
     a owl:Ontology;
     rdfs:label "OGIT OSLC Change Management";
-    dcterms:creator "arago GmbH";
-    dcterms:contributor "Fabian Meyer";
-    vann:preferredNamespaceUri "http://www.purl.org/ogit/OSLC-cm/";
-    vann:preferredNamespacePrefix "ogit.oslc-cm";
+    owl:imports purl:ogit;
     owl:versionInfo "__OGIT_VERSION__";
-    owl:imports purl:ogit
-.
+    dcterms:contributor "Fabian Meyer";
+    dcterms:creator "arago GmbH";
+    vann:preferredNamespacePrefix "ogit.oslc-cm";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/OSLC-cm/" .
 
 #
 # Entities
@@ -27,25 +26,22 @@ ogit:oslc-cm
 ogit.oslc-cm:ChangeRequest
     a ogit.core:Entity;
     rdfs:label "ChangeRequest";
-    ogit.core:original <http://open-services.net/ns/cm#ChangeRequest>;
-    dcterms:description "The CM Change Request resource";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "The CM Change Request resource";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "NTO";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#ChangeRequest>;
     ogit.core:parent ogit:Node;
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
-
+    ogit.core:scope "NTO";
+    ogit.core:tech-contact "arago GmbH" .
 
 #
 # Attributes
@@ -53,279 +49,254 @@ ogit.oslc-cm:ChangeRequest
 ogit.oslc-cm:affectsPlanItem
     a ogit.core:Attribute;
     rdfs:label "affectsPlanItem";
-    ogit.core:original <http://open-services.net/ns/cm#affectsPlanItem>;
-    dcterms:description "Change request affects a plan item. It is likely that the target resource will be an oslc_cm:ChangeRequest but that is not necessarily the case.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Change request affects a plan item. It is likely that the target resource will be an oslc_cm:ChangeRequest but that is not necessarily the case.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
     ogit.core:hide "false";
-    ogit.core:validation-type "";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#affectsPlanItem>;
+    ogit.core:tech-contact "arago GmbH";
     ogit.core:validation-parameter "";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:validation-type "" .
 
 ogit.oslc-cm:affectsRequirement
     a ogit.core:Attribute;
     rdfs:label "affectsRequirement";
-    ogit.core:original <http://open-services.net/ns/cm#affectsRequirement>;
-    dcterms:description "Change request affecting a Requirement. It is likely that the target resource will be an oslc_rm:Requirement but that is not necessarily the case.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Change request affecting a Requirement. It is likely that the target resource will be an oslc_rm:Requirement but that is not necessarily the case.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
     ogit.core:hide "false";
-    ogit.core:validation-type "";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#affectsRequirement>;
+    ogit.core:tech-contact "arago GmbH";
     ogit.core:validation-parameter "";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:validation-type "" .
 
 ogit.oslc-cm:approved
     a ogit.core:Attribute;
     rdfs:label "approved";
-    ogit.core:original <http://open-services.net/ns/cm#approved>;
-    dcterms:description "Whether or not the Change Request has been approved.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Whether or not the Change Request has been approved.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
     ogit.core:hide "false";
-    ogit.core:validation-type "";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#approved>;
+    ogit.core:tech-contact "arago GmbH";
     ogit.core:validation-parameter "";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:validation-type "" .
 
 ogit.oslc-cm:closeDate
     a ogit.core:Attribute;
     rdfs:label "closeDate";
-    ogit.core:original <http://open-services.net/ns/cm#closeDate>;
-    dcterms:description "The date at which no further activity or work is intended to be conducted.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "The date at which no further activity or work is intended to be conducted.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
     ogit.core:hide "false";
-    ogit.core:validation-type "";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#closeDate>;
+    ogit.core:tech-contact "arago GmbH";
     ogit.core:validation-parameter "";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:validation-type "" .
 
 ogit.oslc-cm:closed
     a ogit.core:Attribute;
     rdfs:label "closed";
-    ogit.core:original <http://open-services.net/ns/cm#closed>;
-    dcterms:description "Whether or not the Change Request is completely done, no further fixes or fix verification is needed.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Whether or not the Change Request is completely done, no further fixes or fix verification is needed.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
     ogit.core:hide "false";
-    ogit.core:validation-type "";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#closed>;
+    ogit.core:tech-contact "arago GmbH";
     ogit.core:validation-parameter "";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:validation-type "" .
 
 ogit.oslc-cm:fixed
     a ogit.core:Attribute;
     rdfs:label "fixed";
-    ogit.core:original <http://open-services.net/ns/cm#fixed>;
-    dcterms:description "Whether or not the Change Request has been fixed.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Whether or not the Change Request has been fixed.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
     ogit.core:hide "false";
-    ogit.core:validation-type "";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#fixed>;
+    ogit.core:tech-contact "arago GmbH";
     ogit.core:validation-parameter "";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:validation-type "" .
 
 ogit.oslc-cm:inprogress
     a ogit.core:Attribute;
     rdfs:label "inprogress";
-    ogit.core:original <http://open-services.net/ns/cm#inprogress>;
-    dcterms:description "Whether or not the Change Request in a state indicating that active work is occurring.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Whether or not the Change Request in a state indicating that active work is occurring.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
     ogit.core:hide "false";
-    ogit.core:validation-type "";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#inprogress>;
+    ogit.core:tech-contact "arago GmbH";
     ogit.core:validation-parameter "";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:validation-type "" .
 
 ogit.oslc-cm:reviewed
     a ogit.core:Attribute;
     rdfs:label "reviewed";
-    ogit.core:original <http://open-services.net/ns/cm#reviewed>;
-    dcterms:description "Whether or not the Change Request has been reviewed.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Whether or not the Change Request has been reviewed.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
     ogit.core:hide "false";
-    ogit.core:validation-type "";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#reviewed>;
+    ogit.core:tech-contact "arago GmbH";
     ogit.core:validation-parameter "";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:validation-type "" .
 
 ogit.oslc-cm:status
     a ogit.core:Attribute;
     rdfs:label "status";
-    ogit.core:original <http://open-services.net/ns/cm#status>;
-    dcterms:description "Used to indicate the status of the change request based on values defined by the service provider. Most often a read-only property. Some possible values may include: 'Submitted', 'Done', 'InProgress', etc.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Used to indicate the status of the change request based on values defined by the service provider. Most often a read-only property. Some possible values may include: 'Submitted', 'Done', 'InProgress', etc.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
     ogit.core:hide "false";
-    ogit.core:validation-type "";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#status>;
+    ogit.core:tech-contact "arago GmbH";
     ogit.core:validation-parameter "";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:validation-type "" .
 
 ogit.oslc-cm:tracksChangeSet
     a ogit.core:Attribute;
     rdfs:label "tracksChangeSet";
-    ogit.core:original <http://open-services.net/ns/cm#tracksChangeSet>;
-    dcterms:description "Tracks SCM change set resource. It is likely that the target resource will be an oslc_scm:ChangeSet but that is not necessarily the case.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Tracks SCM change set resource. It is likely that the target resource will be an oslc_scm:ChangeSet but that is not necessarily the case.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
     ogit.core:hide "false";
-    ogit.core:validation-type "";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#tracksChangeSet>;
+    ogit.core:tech-contact "arago GmbH";
     ogit.core:validation-parameter "";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:validation-type "" .
 
 ogit.oslc-cm:tracksRequirement
     a ogit.core:Attribute;
     rdfs:label "tracksRequirement";
-    ogit.core:original <http://open-services.net/ns/cm#tracksRequirement>;
-    dcterms:description "Tracks the associated Requirement or Requirement ChangeSet resources. It is likely that the target resource will be an oslc_rm:Requirement but that is not necessarily the case.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Tracks the associated Requirement or Requirement ChangeSet resources. It is likely that the target resource will be an oslc_rm:Requirement but that is not necessarily the case.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
     ogit.core:hide "false";
-    ogit.core:validation-type "";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#tracksRequirement>;
+    ogit.core:tech-contact "arago GmbH";
     ogit.core:validation-parameter "";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:validation-type "" .
 
 ogit.oslc-cm:verified
     a ogit.core:Attribute;
     rdfs:label "verified";
-    ogit.core:original <http://open-services.net/ns/cm#verified>;
-    dcterms:description "Whether or not the resolution or fix of the Change Request has been verified.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Whether or not the resolution or fix of the Change Request has been verified.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
     ogit.core:hide "false";
-    ogit.core:validation-type "";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#verified>;
+    ogit.core:tech-contact "arago GmbH";
     ogit.core:validation-parameter "";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
-
+    ogit.core:validation-type "" .
 
 #
 # Verbs
@@ -333,219 +304,199 @@ ogit.oslc-cm:verified
 ogit.oslc-cm:affectedByDefect
     a ogit.core:Verb;
     rdfs:label "affectedByDefect";
-    ogit.core:original <http://open-services.net/ns/cm#affectedByDefect>;
-    dcterms:description "Change request is affected by a reported defect. It is likely that the target resource will be an oslc_cm:ChangeRequest but that is not necessarily the case.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Change request is affected by a reported defect. It is likely that the target resource will be an oslc_cm:ChangeRequest but that is not necessarily the case.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:hide "false";
     ogit.core:cardinality "many2many";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:hide "false";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#affectedByDefect>;
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-cm:affectsTestResult
     a ogit.core:Verb;
     rdfs:label "affectsTestResult";
-    ogit.core:original <http://open-services.net/ns/cm#affectsTestResult>;
-    dcterms:description "Associated QM resource that is affected by this Change Request. It is likely that the target resource will be an oslc_qm:TestResult but that is not necessarily the case.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Associated QM resource that is affected by this Change Request. It is likely that the target resource will be an oslc_qm:TestResult but that is not necessarily the case.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:hide "false";
     ogit.core:cardinality "many2many";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:hide "false";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#affectsTestResult>;
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-cm:blocksTestExecutionRecord
     a ogit.core:Verb;
     rdfs:label "blocksTestExecutionRecord";
-    ogit.core:original <http://open-services.net/ns/cm#blocksTestExecutionRecord>;
-    dcterms:description "Associated QM resource that is blocked by this Change Request. It is likely that the target resource will be an oslc_qm:TestExecutionRecord but that is not necessarily the case.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Associated QM resource that is blocked by this Change Request. It is likely that the target resource will be an oslc_qm:TestExecutionRecord but that is not necessarily the case.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:hide "false";
     ogit.core:cardinality "many2many";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:hide "false";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#blocksTestExecutionRecord>;
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-cm:implementsRequirement
     a ogit.core:Verb;
     rdfs:label "implementsRequirement";
-    ogit.core:original <http://open-services.net/ns/cm#implementsRequirement>;
-    dcterms:description "Implements associated Requirement. It is likely that the target resource will be an oslc_rm:Requirement but that is not necessarily the case.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Implements associated Requirement. It is likely that the target resource will be an oslc_rm:Requirement but that is not necessarily the case.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:hide "false";
     ogit.core:cardinality "many2many";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:hide "false";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#implementsRequirement>;
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-cm:relatedChangeRequest
     a ogit.core:Verb;
     rdfs:label "relatedChangeRequest";
-    ogit.core:original <http://open-services.net/ns/cm#relatedChangeRequest>;
-    dcterms:description "This relationship is loosely coupled and has no specific meaning. It is likely that the target resource will be an oslc_cm:ChangeRequest but that is not necessarily the case.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "This relationship is loosely coupled and has no specific meaning. It is likely that the target resource will be an oslc_cm:ChangeRequest but that is not necessarily the case.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:hide "false";
     ogit.core:cardinality "many2many";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:hide "false";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#relatedChangeRequest>;
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-cm:relatedTestCase
     a ogit.core:Verb;
     rdfs:label "relatedTestCase";
-    ogit.core:original <http://open-services.net/ns/cm#relatedTestCase>;
-    dcterms:description "Related QM test case resource. It is likely that the target resource will be an oslc_qm:TestCase but that is not necessarily the case.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Related QM test case resource. It is likely that the target resource will be an oslc_qm:TestCase but that is not necessarily the case.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:hide "false";
     ogit.core:cardinality "many2many";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:hide "false";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#relatedTestCase>;
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-cm:relatedTestExecutionRecord
     a ogit.core:Verb;
     rdfs:label "relatedTestExecutionRecord";
-    ogit.core:original <http://open-services.net/ns/cm#relatedTestExecutionRecord>;
-    dcterms:description "Related to a QM test execution resource. It is likely that the target resource will be an oslc_qm:TestExecutionRecord but that is not necessarily the case.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Related to a QM test execution resource. It is likely that the target resource will be an oslc_qm:TestExecutionRecord but that is not necessarily the case.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:hide "false";
     ogit.core:cardinality "many2many";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:hide "false";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#relatedTestExecutionRecord>;
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-cm:relatedTestPlan
     a ogit.core:Verb;
     rdfs:label "relatedTestPlan";
-    ogit.core:original <http://open-services.net/ns/cm#relatedTestPlan>;
-    dcterms:description "Related QM test plan resource. It is likely that the target resource will be an oslc_qm:TestPlan but that is not necessarily the case.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Related QM test plan resource. It is likely that the target resource will be an oslc_qm:TestPlan but that is not necessarily the case.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:hide "false";
     ogit.core:cardinality "many2many";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:hide "false";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#relatedTestPlan>;
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-cm:relatedTestScript
     a ogit.core:Verb;
     rdfs:label "relatedTestScript";
-    ogit.core:original <http://open-services.net/ns/cm#relatedTestScript>;
-    dcterms:description "Related QM test script resource. It is likely that the target resource will be an oslc_qm:TestScript but that is not necessarily the case.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Related QM test script resource. It is likely that the target resource will be an oslc_qm:TestScript but that is not necessarily the case.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:hide "false";
     ogit.core:cardinality "many2many";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:hide "false";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#relatedTestScript>;
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-cm:testedByTestCase
     a ogit.core:Verb;
     rdfs:label "testedByTestCase";
-    ogit.core:original <http://open-services.net/ns/cm#testedByTestCase>;
-    dcterms:description "Test case by which this change request is tested. It is likely that the target resource will be an oslc_qm:TestCase but that is not necessarily the case.";
-    dcterms:valid "start=2016-09-22;";
-    dcterms:creator "OGIT Importer";
     dcterms:created "2016-09-22";
+    dcterms:creator "OGIT Importer";
+    dcterms:description "Test case by which this change request is tested. It is likely that the target resource will be an oslc_qm:TestCase but that is not necessarily the case.";
     dcterms:modified "2016-09-22";
+    dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:hide "false";
     ogit.core:cardinality "many2many";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-09-22";
-            dcterms:description "initial";
-            dcterms:creator "OGIT Importer"
-        ];
-.
+    ogit.core:hide "false";
+    ogit.core:history [
+        dcterms:creator "OGIT Importer" ;
+        dcterms:date "2016-09-22" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit:original <http://open-services.net/ns/cm#testedByTestCase>;
+    ogit.core:tech-contact "arago GmbH" .

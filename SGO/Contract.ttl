@@ -17,13 +17,12 @@
 ogit:contract
     a owl:Ontology;
     rdfs:label "OGIT Contract";
-    dcterms:creator "arago GmbH";
-    dcterms:contributor "Fabian Meyer";
-    vann:preferredNamespaceUri "http://www.purl.org/ogit/";
-    vann:preferredNamespacePrefix "ogit.contract";
+    owl:imports purl:ogit;
     owl:versionInfo "__OGIT_VERSION__";
-    owl:imports purl:ogit
-.
+    dcterms:contributor "Fabian Meyer";
+    dcterms:creator "arago GmbH";
+    vann:preferredNamespacePrefix "ogit.contract";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
@@ -31,103 +30,99 @@ ogit:contract
 ogit.contract:Contract
     a ogit.core:Entity;
     rdfs:label "Contract";
-    dcterms:description "General definition of a contract. Usually used for IT service related contracts but at this level of detail it is not restricted to those.";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "General definition of a contract. Usually used for IT service related contracts but at this level of detail it is not restricted to those.";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "SGO";
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    sh:property
-        [
-            sh:path ogit.foundation:name;
-            sh:minCount 1;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.foundation:description;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.foundation:type;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.foundation:validFrom;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.foundation:expirationDate;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-        [
-            sh:path ogit.foundation:status;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-                [
-            sh:path ogit.foundation:deadline;
-            sh:minCount 0;
-            sh:maxCount 1
-        ],
-                [
-            sh:path ogit.foundation:validTo;
-            sh:minCount 0;
-            sh:maxCount 1
-        ];
     ogit.core:history
         [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ],
-                [
-            dcterms:identifier "2";
-            dcterms:date "2016-12-19";
-            dcterms:description "add attribute ogit/deadline";
-            dcterms:creator "stravlos@arago.co"
+        [
+            dcterms:creator "stravlos@arago.co" ;
+            dcterms:date "2016-12-19" ;
+            dcterms:description "add attribute ogit/deadline" ;
+            dcterms:identifier "2"
         ],
-                [
-            dcterms:identifier "3";
-            dcterms:date "2017-01-06";
-            dcterms:description "add attribute ogit/validTo";
-            dcterms:creator "stravlos@arago.co"
+        [
+            dcterms:creator "stravlos@arago.co" ;
+            dcterms:date "2017-01-06" ;
+            dcterms:description "add attribute ogit/validTo" ;
+            dcterms:identifier "3"
         ];
-.
+    ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:scope "SGO";
+    ogit.core:tech-contact "arago GmbH";
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.foundation:name
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:description
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:type
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:validFrom
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:expirationDate
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:status
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:deadline
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:validTo
+        ] .
 
 ogit.contract:Penalty
     a ogit.core:Entity;
     rdfs:label "Penalty";
-    dcterms:description "Defines the penalty that has to be paid in certain circumstances";
-    dcterms:valid "start=2015-05-21;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Defines the penalty that has to be paid in certain circumstances";
     dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "SGO";
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-05-21" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    sh:property
-        [
-            sh:path ogit.foundation:description;
-            sh:minCount 0;
-            sh:maxCount 1
-        ];
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-05-21";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
-.
+    ogit.core:scope "SGO";
+    ogit.core:tech-contact "arago GmbH";
+    sh:property [
+        sh:maxCount 1 ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:description
+    ] .
 
 #
 # Verbs
@@ -135,28 +130,25 @@ ogit.contract:Penalty
 ogit.contract:concludes
     a ogit.core:Verb;
     rdfs:label "concludes";
-    dcterms:description "Verb showing if a legal entity concludes something (e.g. Contract).";
-    dcterms:valid "start=2015-06-18;";
-    dcterms:creator "Peter Larem";
     dcterms:created "2015-06-18";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Verb showing if a legal entity concludes something (e.g. Contract).";
     dcterms:modified "2015-06-18";
+    dcterms:valid "start=2015-06-18;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2015-06-18";
-            dcterms:description "initial";
-            dcterms:creator "Peter Larem"
-        ];
     ogit.core:allowed
         [
-            ogit.core:from ogit.organization:Organization;
+            ogit.core:from ogit.organization:Organization ;
             ogit.core:to ogit.contract:Contract
         ],
         [
-            ogit.core:from ogit.person:Person;
+            ogit.core:from ogit.person:Person ;
             ogit.core:to ogit.contract:Contract
         ];
-.
-
+    ogit.core:history [
+        dcterms:creator "Peter Larem" ;
+        dcterms:date "2015-06-18" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .

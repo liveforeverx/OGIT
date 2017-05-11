@@ -13,65 +13,51 @@
 ogit:knowledge
     a owl:Ontology;
     rdfs:label "OGIT Knowledge";
-    dcterms:creator "arago GmbH";
-    dcterms:contributor "Fabian Meyer";
-    vann:preferredNamespaceUri "http://www.purl.org/ogit/Knowledge/";
-    vann:preferredNamespacePrefix "ogit.Knowledge";
+    owl:imports purl:ogit;
     owl:versionInfo "__OGIT_VERSION__";
-    owl:imports purl:ogit
-.
+    dcterms:contributor "Fabian Meyer";
+    dcterms:creator "arago GmbH";
+    vann:preferredNamespacePrefix "ogit.Knowledge";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/Knowledge/" .
 
 #
 # Entities
 #
 ogit.knowledge:AcquisitionSession
     a rdfs:Class;
-    rdfs:subClassOf ogit.core:Entity;
     rdfs:label "AcquisitionSession";
-    dcterms:description "Entity to describe a Knowledge Acquisition Session, linking to Conversation, Structured Task Steps and the Knowledge";
-    dcterms:valid "start=2017-03-14;";
-    dcterms:creator "cwalker@arago.de";
+    rdfs:subClassOf ogit.core:Entity;
     dcterms:created "2017-03-14";
+    dcterms:creator "cwalker@arago.de";
+    dcterms:description "Entity to describe a Knowledge Acquisition Session, linking to Conversation, Structured Task Steps and the Knowledge";
     dcterms:modified "2017-03-14";
+    dcterms:valid "start=2017-03-14;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "NTO";
+    ogit.core:history [
+        dcterms:creator "cwalker@arago.de" ;
+        dcterms:date "2017-03-14" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2017-03-14";
-            dcterms:description "initial";
-            dcterms:creator "cwalker@arago.de"
-        ];
-.
+    ogit.core:scope "NTO";
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.knowledge:Step
     a ogit.core:Entity;
     rdfs:label "Step";
-    dcterms:description "this is the description of a single - hopefully atomic - step in (potentially multi-step) process";
-    dcterms:valid "start=2017-03-14;";
-    dcterms:creator "cwalker@arago.de";
     dcterms:created "2017-03-14";
+    dcterms:creator "cwalker@arago.de";
+    dcterms:description "this is the description of a single - hopefully atomic - step in (potentially multi-step) process";
     dcterms:modified "2017-03-14";
+    dcterms:valid "start=2017-03-14;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "NTO";
+    ogit.core:history [
+        dcterms:creator "cwalker@arago.de" ;
+        dcterms:date "2017-03-14" ;
+        dcterms:description "initial" ;
+        dcterms:identifier "1"
+    ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2017-03-14";
-            dcterms:description "initial";
-            dcterms:creator "cwalker@arago.de"
-        ];
-.
-
-
-#
-# Attributes
-#
-
-#
-# Verbs
-#
+    ogit.core:scope "NTO";
+    ogit.core:tech-contact "arago GmbH" .

@@ -16,98 +16,86 @@
 ogit:userMeta
     a owl:Ontology;
     rdfs:label "OGIT User Meta";
-    dcterms:creator "arago GmbH";
-    dcterms:contributor "Fabian Meyer";
-    vann:preferredNamespaceUri "http://www.purl.org/ogit/UserMeta/";
-    vann:preferredNamespacePrefix "ogit.UserMeta";
+    owl:imports purl:ogit;
     owl:versionInfo "__OGIT_VERSION__";
-    owl:imports purl:ogit
-.
+    dcterms:contributor "Fabian Meyer";
+    dcterms:creator "arago GmbH";
+    vann:preferredNamespacePrefix "ogit.UserMeta";
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/UserMeta/" .
 
 #
 # Entities
 #
 ogit.userMeta:Filter
     a rdfs:Class;
-    rdfs:subClassOf ogit.core:Entity;
     rdfs:label "Filter";
-    dcterms:description "A filter set by user, indicating preferences";
-    dcterms:valid "start=2016-07-19;";
-    dcterms:creator "stravlos@arago.de";
+    rdfs:subClassOf ogit.core:Entity;
     dcterms:created "2016-10-14";
+    dcterms:creator "stravlos@arago.de";
+    dcterms:description "A filter set by user, indicating preferences";
     dcterms:modified "2016-10-14";
+    dcterms:valid "start=2016-07-19;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "NTO";
+    ogit.core:history [
+        dcterms:creator "stravlos@arago.de" ;
+        dcterms:date "2016-07-19" ;
+        dcterms:description "Initial Creation" ;
+        dcterms:identifier "1"
+    ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
+    ogit.core:scope "NTO";
+    ogit.core:tech-contact "arago GmbH";
     sh:property
         [
-            sh:path ogit.foundation:name;
-            sh:minCount 1;
-            sh:maxCount 1
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.foundation:name
         ],
         [
-            sh:path ogit.foundation:content;
-            sh:minCount 1;
-            sh:maxCount 1
-        ];
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-07-19";
-            dcterms:description "Initial Creation";
-            dcterms:creator "stravlos@arago.de"
-        ];
-.
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.foundation:content
+        ] .
 
 ogit.userMeta:Game
     a rdfs:Class;
-    rdfs:subClassOf ogit.core:Entity;
     rdfs:label "Game";
-    dcterms:description "Something which is played to obtain meta data around user behaviour and perception";
-    dcterms:valid "start=2016-07-19;";
-    dcterms:creator "bneal@arago.de";
+    rdfs:subClassOf ogit.core:Entity;
     dcterms:created "2016-07-19";
+    dcterms:creator "bneal@arago.de";
+    dcterms:description "Something which is played to obtain meta data around user behaviour and perception";
     dcterms:modified "2016-07-19";
+    dcterms:valid "start=2016-07-19;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "NTO";
+    ogit.core:history [
+        dcterms:creator "bneal@arago.de" ;
+        dcterms:date "2016-07-19" ;
+        dcterms:description "Initial Creation" ;
+        dcterms:identifier "1"
+    ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-07-19";
-            dcterms:description "Initial Creation";
-            dcterms:creator "bneal@arago.de"
-        ];
-.
+    ogit.core:scope "NTO";
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.userMeta:Question
     a rdfs:Class;
-    rdfs:subClassOf ogit.core:Entity;
     rdfs:label "Question";
-    dcterms:description "A question which is part of a game, played to obtain meta data around user behaviour and perception";
-    dcterms:valid "start=2016-07-19;";
-    dcterms:creator "bneal@arago.de";
+    rdfs:subClassOf ogit.core:Entity;
     dcterms:created "2016-07-19";
+    dcterms:creator "bneal@arago.de";
+    dcterms:description "A question which is part of a game, played to obtain meta data around user behaviour and perception";
     dcterms:modified "2016-07-19";
+    dcterms:valid "start=2016-07-19;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:scope "NTO";
+    ogit.core:history [
+        dcterms:creator "bneal@arago.de" ;
+        dcterms:date "2016-07-19" ;
+        dcterms:description "Initial Creation" ;
+        dcterms:identifier "1"
+    ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-07-19";
-            dcterms:description "Initial Creation";
-            dcterms:creator "bneal@arago.de"
-        ];
-.
-
-
-#
-# Attributes
-#
+    ogit.core:scope "NTO";
+    ogit.core:tech-contact "arago GmbH" .
 
 #
 # Verbs
@@ -115,95 +103,83 @@ ogit.userMeta:Question
 ogit.userMeta:asks
     a ogit.core:Verb;
     rdfs:label "asks";
-    dcterms:description "This verb represents that a games asks a question";
-    dcterms:valid "start=2016-07-19;";
-    dcterms:creator "bneal@arago.de";
     dcterms:created "2016-07-19";
+    dcterms:creator "bneal@arago.de";
+    dcterms:description "This verb represents that a games asks a question";
     dcterms:modified "2016-07-19";
+    dcterms:valid "start=2016-07-19;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-07-19";
-            dcterms:description "Initial Creation";
-            dcterms:creator "bneal@arago.de"
-        ];
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.userMeta:Game;
-            ogit.core:to ogit.userMeta:Question
-        ];
-.
+    ogit.core:allowed [
+        ogit.core:from ogit.userMeta:Game ;
+        ogit.core:to ogit.userMeta:Question
+    ];
+    ogit.core:history [
+        dcterms:creator "bneal@arago.de" ;
+        dcterms:date "2016-07-19" ;
+        dcterms:description "Initial Creation" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.userMeta:loses
     a ogit.core:Verb;
     rdfs:label "loses";
-    dcterms:description "This verb represents that a user has lost a game";
-    dcterms:valid "start=2016-07-19;";
-    dcterms:creator "bneal@arago.de";
     dcterms:created "2016-07-19";
+    dcterms:creator "bneal@arago.de";
+    dcterms:description "This verb represents that a user has lost a game";
     dcterms:modified "2016-07-19";
+    dcterms:valid "start=2016-07-19;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-07-19";
-            dcterms:description "Initial Creation";
-            dcterms:creator "bneal@arago.de"
-        ];
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.person:Person;
-            ogit.core:to ogit.userMeta:Game
-        ];
-.
+    ogit.core:allowed [
+        ogit.core:from ogit.person:Person ;
+        ogit.core:to ogit.userMeta:Game
+    ];
+    ogit.core:history [
+        dcterms:creator "bneal@arago.de" ;
+        dcterms:date "2016-07-19" ;
+        dcterms:description "Initial Creation" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.userMeta:plays
     a ogit.core:Verb;
     rdfs:label "plays";
-    dcterms:description "This verb represents that a user has played a game";
-    dcterms:valid "start=2016-07-19;";
-    dcterms:creator "bneal@arago.de";
     dcterms:created "2016-07-19";
+    dcterms:creator "bneal@arago.de";
+    dcterms:description "This verb represents that a user has played a game";
     dcterms:modified "2016-07-19";
+    dcterms:valid "start=2016-07-19;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-07-19";
-            dcterms:description "Initial Creation";
-            dcterms:creator "bneal@arago.de"
-        ];
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.person:Person;
-            ogit.core:to ogit.userMeta:Game
-        ];
-.
+    ogit.core:allowed [
+        ogit.core:from ogit.person:Person ;
+        ogit.core:to ogit.userMeta:Game
+    ];
+    ogit.core:history [
+        dcterms:creator "bneal@arago.de" ;
+        dcterms:date "2016-07-19" ;
+        dcterms:description "Initial Creation" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .
 
 ogit.userMeta:wins
     a ogit.core:Verb;
     rdfs:label "wins";
-    dcterms:description "This verb represents that a user has won a game";
-    dcterms:valid "start=2016-07-19;";
-    dcterms:creator "bneal@arago.de";
     dcterms:created "2016-07-19";
+    dcterms:creator "bneal@arago.de";
+    dcterms:description "This verb represents that a user has won a game";
     dcterms:modified "2016-07-19";
+    dcterms:valid "start=2016-07-19;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:history
-        [
-            dcterms:identifier "1";
-            dcterms:date "2016-07-19";
-            dcterms:description "Initial Creation";
-            dcterms:creator "bneal@arago.de"
-        ];
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.person:Person;
-            ogit.core:to ogit.userMeta:Game
-        ];
-.
+    ogit.core:allowed [
+        ogit.core:from ogit.person:Person ;
+        ogit.core:to ogit.userMeta:Game
+    ];
+    ogit.core:history [
+        dcterms:creator "bneal@arago.de" ;
+        dcterms:date "2016-07-19" ;
+        dcterms:description "Initial Creation" ;
+        dcterms:identifier "1"
+    ];
+    ogit.core:tech-contact "arago GmbH" .

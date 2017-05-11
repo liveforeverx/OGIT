@@ -6,11 +6,15 @@
 @prefix ogit.serviceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
 @prefix owl:                    <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann:                   <http://purl.org/vocab/vann/> .
 
 #
 # Ontology
 #
-ogit:price a owl:Ontology .
+ogit:price 
+	a owl:Ontology; 
+	vann:preferredNamespaceUri "http://www.purl.org/ogit/";
+    vann:preferredNamespacePrefix "ogit._price";.
 
 #
 # Verbs

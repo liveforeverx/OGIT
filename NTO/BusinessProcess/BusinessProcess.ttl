@@ -36,11 +36,11 @@ ogit.businessProcess:BusinessProcess
     dcterms:valid "start=2015-07-24;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Aymen Ayoub" ;
-        dcterms:date "2015-07-24" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-07-24" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -66,11 +66,11 @@ ogit.businessProcess:BusinessRuleTask
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -96,11 +96,11 @@ ogit.businessProcess:CancelEvent
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -127,20 +127,20 @@ ogit.businessProcess:CompensationEvent
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
     dcterms:description """Entity to store a compensation event. We execute tasks in our processes that sometimes have to be canceled later under certain circumstances.
-            Typical examples are:
-            Booking a train or airline ticket
-            Reserving a rental car
-            Charging a credit card
-            Commissioning a service provider""";
+        Typical examples are:
+        Booking a train or airline ticket
+        Reserving a rental car
+        Charging a credit card
+        Commissioning a service provider""";
     dcterms:modified "2015-05-21";
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -167,17 +167,17 @@ ogit.businessProcess:ConditionalEvent
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
     dcterms:description """Entity to store a condition event, which will determine wether a process should start or continue. Anything can be a condition, and
-            conditions are independent of processes, which is why the condition (like the timer event) can only exist as a catching
-            event. A process cannot therefore conditional event trigger a conditional event.""";
+        conditions are independent of processes, which is why the condition (like the timer event) can only exist as a catching
+        event. A process cannot therefore conditional event trigger a conditional event.""";
     dcterms:modified "2015-05-21";
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -208,11 +208,11 @@ ogit.businessProcess:DataObject
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH" .
@@ -227,11 +227,11 @@ ogit.businessProcess:DataStore
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH" .
@@ -242,21 +242,21 @@ ogit.businessProcess:ErrorEvent
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
     dcterms:description """Entitiy to store potential process errors as a step toward
-            eliminating them, or as part of modeling escalation processes. In BPMN, error events are represented by a flash symbol.
-            The BPMN specification does not specify what an error may be, the modeler has to decide that.
-            An error is a serious event in BPMN, so if catching, it can be modeled only as an attached intermediate event.
-            This means that an error during task execution must be handled in a specific way: As a throwing event, it can be modeled
-            only at the end of a process path so that the participant knows the process has failed. The parent process should likewise
-            recognize the failure.""";
+        eliminating them, or as part of modeling escalation processes. In BPMN, error events are represented by a flash symbol.
+        The BPMN specification does not specify what an error may be, the modeler has to decide that.
+        An error is a serious event in BPMN, so if catching, it can be modeled only as an attached intermediate event.
+        This means that an error during task execution must be handled in a specific way: As a throwing event, it can be modeled
+        only at the end of a process path so that the participant knows the process has failed. The parent process should likewise
+        recognize the failure.""";
     dcterms:modified "2015-05-21";
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -283,16 +283,16 @@ ogit.businessProcess:EscalationEvent
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
     dcterms:description """Entity to store an escalation event in BPMN 2.0. Mainly, it shows communication between parent and sub-processes.
-            We discuss it in here TODO with the help of an example.""";
+        We discuss it in here TODO with the help of an example.""";
     dcterms:modified "2015-05-21";
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -319,25 +319,25 @@ ogit.businessProcess:EventBasedGateway
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
     dcterms:description """The event-based Gateway allows you to make a decision based on events. Each outgoing sequence flow of the gateway needs
-            to be connected to an intermediate catching event. When process execution reaches an event-based Gateway, the gateway
-            acts like a wait state: execution is suspended. In addition, for each outgoing sequence flow, an event subscription is
-            created.
-            Note the sequence flows running out of an event-based Gateway are different than ordinary sequence flows. These sequence
-            flows are never actually \"executed\". On the contrary, they allow the process engine to determine which events an execution
-            arriving at an event-based Gateway needs to subscribe to. The following restrictions apply:
-            An event-based Gateway must have two or more outgoing sequence flows.
-            An event-based Gateway may only be connected to elements of the type intermediateCatchEvent. (Receive Tasks after an
-            event-based Gateway are not supported by the engine yet.)
-            An intermediateCatchEvent connected to an event-based Gateway must have a single incoming sequence flow.""";
+        to be connected to an intermediate catching event. When process execution reaches an event-based Gateway, the gateway
+        acts like a wait state: execution is suspended. In addition, for each outgoing sequence flow, an event subscription is
+        created.
+        Note the sequence flows running out of an event-based Gateway are different than ordinary sequence flows. These sequence
+        flows are never actually "executed". On the contrary, they allow the process engine to determine which events an execution
+        arriving at an event-based Gateway needs to subscribe to. The following restrictions apply:
+        An event-based Gateway must have two or more outgoing sequence flows.
+        An event-based Gateway may only be connected to elements of the type intermediateCatchEvent. (Receive Tasks after an
+        event-based Gateway are not supported by the engine yet.)
+        An intermediateCatchEvent connected to an event-based Gateway must have a single incoming sequence flow.""";
     dcterms:modified "2015-05-21";
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -359,17 +359,17 @@ ogit.businessProcess:ExclusiveGateway
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
     dcterms:description """An exclusive gateway (also called the XOR gateway or, in more technical terms, the exclusive data-based gateway), is used to model a decision in the process. When the execution arrives at this gateway, all outgoing sequence flows are evaluated in the order in which they have been defined. The sequence flow which condition evaluates to 'true' (or which doesn't have a condition set, conceptually having a 'true' value defined on the sequence flow) is selected for continuing the process.
-            Note that only one sequence flow is selected when using the exclusive gateway. In case multiple sequence flow have a condition that evaluates to 'true', the first one defined in the XML (and only that one!) is selected for continuing the process.
-            If no sequence flow can be selected (no condition evaluates to 'true') this will result in a runtime exception unless you have a default flow defined. One default flow can be set on the gateway itself in case no other condition matches - like an 'else' in programming languages.""";
+        Note that only one sequence flow is selected when using the exclusive gateway. In case multiple sequence flow have a condition that evaluates to 'true', the first one defined in the XML (and only that one!) is selected for continuing the process.
+        If no sequence flow can be selected (no condition evaluates to 'true') this will result in a runtime exception unless you have a default flow defined. One default flow can be set on the gateway itself in case no other condition matches - like an 'else' in programming languages.""";
     dcterms:modified "2015-05-21";
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -391,28 +391,28 @@ ogit.businessProcess:InclusiveGateway
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
     dcterms:description """The Inclusive Gateway can be seen as a combination of an exclusive and a parallel gateway.
-            Like an exclusive gateway you can define conditions on outgoing sequence flows and the inclusive gateway will evaluate them.
-            However, the main difference is that the inclusive gateway can receive more than one sequence flow, like a parallel gateway.
-            The functionality of the inclusive gateway is based on the incoming and outgoing sequence flow:
-            fork: all outgoing sequence flow conditions are evaluated and for the sequence flow conditions that evaluate to 'true' the
-            flows are followed in parallel, creating one concurrent execution for each sequence flow.
-            join: all concurrent executions arriving at the inclusive gateway wait at the gateway until an execution has arrived for
-            each of the incoming sequence flows that have a process token. This is an important difference to the parallel gateway.
-            So in other words, the inclusive gateway will only wait for the incoming sequence flows that will be executed. After the
-            join, the process continues past the joining inclusive gateway.
-            Note that an inclusive gateway can have both fork and join behavior, if there are multiple incoming and outgoing sequence
-            flows for the same inclusive gateway. In that case, the gateway will first join all incoming sequence flows that have a
-            process token, before splitting into multiple concurrent paths of executions for the outgoing sequence flows that have a
-            condition that evaluates to 'true'.""";
+        Like an exclusive gateway you can define conditions on outgoing sequence flows and the inclusive gateway will evaluate them.
+        However, the main difference is that the inclusive gateway can receive more than one sequence flow, like a parallel gateway.
+        The functionality of the inclusive gateway is based on the incoming and outgoing sequence flow:
+        fork: all outgoing sequence flow conditions are evaluated and for the sequence flow conditions that evaluate to 'true' the
+        flows are followed in parallel, creating one concurrent execution for each sequence flow.
+        join: all concurrent executions arriving at the inclusive gateway wait at the gateway until an execution has arrived for
+        each of the incoming sequence flows that have a process token. This is an important difference to the parallel gateway.
+        So in other words, the inclusive gateway will only wait for the incoming sequence flows that will be executed. After the
+        join, the process continues past the joining inclusive gateway.
+        Note that an inclusive gateway can have both fork and join behavior, if there are multiple incoming and outgoing sequence
+        flows for the same inclusive gateway. In that case, the gateway will first join all incoming sequence flows that have a
+        process token, before splitting into multiple concurrent paths of executions for the outgoing sequence flows that have a
+        condition that evaluates to 'true'.""";
     dcterms:modified "2015-05-21";
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -443,11 +443,11 @@ ogit.businessProcess:InstantiatedReceiveTask
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -473,11 +473,11 @@ ogit.businessProcess:LinkEvent
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -508,11 +508,11 @@ ogit.businessProcess:ManualTask
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -534,17 +534,17 @@ ogit.businessProcess:MessageEvent
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
     dcterms:description """Entity to store an instantiated message event. Sooner or later, most processes require communication, which can be represented in BPMN by means of the message event.
-            In terms of BPMN2 modelling it can bel recognized as a small envelope. The meaning of \"message\" in BPMN is not restricted to letters, e-mails, or calls.
-            Any action that refers to a specific addressee and represents or contains information for the addressee is a message.""";
+        In terms of BPMN2 modelling it can bel recognized as a small envelope. The meaning of "message" in BPMN is not restricted to letters, e-mails, or calls.
+        Any action that refers to a specific addressee and represents or contains information for the addressee is a message.""";
     dcterms:modified "2015-05-21";
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -639,11 +639,11 @@ ogit.businessProcess:MultipleEvent
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -674,11 +674,11 @@ ogit.businessProcess:NoneEvent
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -705,26 +705,26 @@ ogit.businessProcess:ParallelGateway
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
     dcterms:description """Gateways can be used to model concurrency in a process. The most straightforward gateway to introduce concurrency
-            in a process model is the Parallel Gateway, which allows forking into multiple paths of execution or joining multiple
-            incoming paths of execution.
-            The functionality of the parallel gateway is based on the incoming and outgoing sequence flow(s):
-            fork: all outgoing sequence flows are followed in parallel, creating one concurrent execution for each sequence flow.
-            join: all concurrent executions arriving at the parallel gateway wait at the gateway until an execution has arrived
-            for each of the incoming sequence flows. Then the process continues past the joining gateway.
-            Note that a parallel gateway can have both fork and join behaviors, if there are multiple incoming and outgoing
-            sequence flows for the same parallel gateway. In that case, the gateway will first join all incoming sequence flows,
-            before splitting into multiple concurrent paths of executions.
-            An important difference with other gateway types is that the parallel gateway does not evaluate conditions. If conditions
-            are defined on the sequence flow connected with the parallel gateway, they are simply ignored.""";
+        in a process model is the Parallel Gateway, which allows forking into multiple paths of execution or joining multiple
+        incoming paths of execution.
+        The functionality of the parallel gateway is based on the incoming and outgoing sequence flow(s):
+        fork: all outgoing sequence flows are followed in parallel, creating one concurrent execution for each sequence flow.
+        join: all concurrent executions arriving at the parallel gateway wait at the gateway until an execution has arrived
+        for each of the incoming sequence flows. Then the process continues past the joining gateway.
+        Note that a parallel gateway can have both fork and join behaviors, if there are multiple incoming and outgoing
+        sequence flows for the same parallel gateway. In that case, the gateway will first join all incoming sequence flows,
+        before splitting into multiple concurrent paths of executions.
+        An important difference with other gateway types is that the parallel gateway does not evaluate conditions. If conditions
+        are defined on the sequence flow connected with the parallel gateway, they are simply ignored.""";
     dcterms:modified "2015-05-21";
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -755,11 +755,11 @@ ogit.businessProcess:ProcessLane
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -785,11 +785,11 @@ ogit.businessProcess:ProcessPool
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -884,11 +884,11 @@ ogit.businessProcess:ReceiveTask
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -914,11 +914,11 @@ ogit.businessProcess:ScriptTask
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -944,11 +944,11 @@ ogit.businessProcess:SendTask
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -974,11 +974,11 @@ ogit.businessProcess:ServiceTask
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -1000,19 +1000,19 @@ ogit.businessProcess:SignalEvent
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
     dcterms:description """Signals are similar to messages, which is why you can model them in BPMN as events just as you can with messages.
-            The symbol for a signal is a triangle. The essential difference between a signal and a message is that that latter
-            is always addressed to a specific recipient. (An e-mail contains the e-mail address of the recipient, a call starts
-            with dialing the telephone number, and so on.) In contrast, a signal is more like a newspaper advertisement or a television
-            commercial. It is relatively undirected. Anyone who receives the signal and wants to react may do so.""";
+        The symbol for a signal is a triangle. The essential difference between a signal and a message is that that latter
+        is always addressed to a specific recipient. (An e-mail contains the e-mail address of the recipient, a call starts
+        with dialing the telephone number, and so on.) In contrast, a signal is more like a newspaper advertisement or a television
+        commercial. It is relatively undirected. Anyone who receives the signal and wants to react may do so.""";
     dcterms:modified "2015-05-21";
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -1148,11 +1148,11 @@ ogit.businessProcess:SurveyReply
     ogit.core:admin-contact "arago GmbH";
     ogit.core:any-attributes "true";
     ogit.core:history [
-        dcterms:creator "Alexander Ryabtsev" ;
-        dcterms:date "2016-08-08" ;
-        dcterms:description "Attributes rework" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2016-08-08" ;
+            dcterms:description "Attributes rework" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -1178,11 +1178,11 @@ ogit.businessProcess:TerminationEvent
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -1213,11 +1213,11 @@ ogit.businessProcess:TimerEvent
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -1248,11 +1248,11 @@ ogit.businessProcess:UndefinedTask
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -1274,17 +1274,17 @@ ogit.businessProcess:UserTask
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
     dcterms:description """User tasks are executed by people just like the manual tasks, but they are assigned by a process engine, which may, for example, place these tasks in each user's task list.
-            After the human finishes a task, the engine expects confirmation, usually including data input or a button click. User tasks are part of the Human Workflow Management.
-            Typical task examples from the world of Human Workflow Management are: Check an invoice; Approve an application for vacation; Process a support request.""";
+        After the human finishes a task, the engine expects confirmation, usually including data input or a button click. User tasks are part of the Human Workflow Management.
+        Typical task examples from the world of Human Workflow Management are: Check an invoice; Approve an application for vacation; Process a support request.""";
     dcterms:modified "2015-05-21";
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
@@ -1313,11 +1313,11 @@ ogit.businessProcess:businessProcessEventType
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:tech-contact "arago GmbH";
     ogit.core:validation-parameter "^(Start|End|Intermediate)$";
     ogit.core:validation-type "regex" .
@@ -1332,11 +1332,11 @@ ogit.businessProcess:gatewayFunctionality
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:tech-contact "arago GmbH";
     ogit.core:validation-parameter "^(Fork|Join)$";
     ogit.core:validation-type "regex" .

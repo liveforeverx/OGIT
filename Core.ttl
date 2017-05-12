@@ -35,11 +35,11 @@ ogit.core:Attribute
     ogit.core:admin-contact "arago GmbH";
     ogit.core:hide "true";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:scope "SGO";
     ogit.core:tech-contact "arago GmbH";
     sh:property
@@ -118,11 +118,11 @@ ogit.core:Entity
     ogit.core:admin-contact "arago GmbH";
     ogit.core:hide "true";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:scope "SGO";
     ogit.core:tech-contact "arago GmbH";
     sh:property
@@ -205,11 +205,11 @@ ogit.core:Verb
     ogit.core:admin-contact "arago GmbH";
     ogit.core:hide "true";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:scope "SGO";
     ogit.core:tech-contact "arago GmbH";
     sh:property
@@ -348,5 +348,5 @@ ogit.core:original
     a owl:AnnotationProperty;
     rdfs:label "original";
     dcterms:description """In a vocabulary imported into OGIT, an ogit.core:original reference can be added to elements to
-            refer to the original URI of the element. It is less strict than owl:sameAs, but unlike rdfs:seeAlso, it should
-            always refer to a URI.""" .
+        refer to the original URI of the element. It is less strict than owl:sameAs, but unlike rdfs:seeAlso, it should
+        always refer to a URI.""" .

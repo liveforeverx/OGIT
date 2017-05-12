@@ -30,16 +30,16 @@ ogit.oslc-reqman:Requirement
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
     dcterms:description """Statement of
-                        need.""";
+        need.""";
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "OGIT Importer" ;
-        dcterms:date "2016-09-22" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit:original <http://open-services.net/ns/rm#Requirement>;
     ogit.core:parent ogit:Node;
     ogit.core:scope "NTO";
@@ -51,16 +51,16 @@ ogit.oslc-reqman:RequirementCollection
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
     dcterms:description """Collection of requirements. A
-                        collection uses zero or more requirements.""";
+        collection uses zero or more requirements.""";
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "OGIT Importer" ;
-        dcterms:date "2016-09-22" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit:original <http://open-services.net/ns/rm#RequirementCollection>;
     ogit.core:parent ogit:Node;
     ogit.core:scope "NTO";
@@ -81,11 +81,11 @@ ogit.oslc-core:hasBasicShape
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
-        dcterms:creator "OGIT Importer" ;
-        dcterms:date "2016-09-22" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit:original <http://open-services.net/ns/core#hasBasicShape>;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -95,19 +95,19 @@ ogit.oslc-reqman:affectedBy
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
     dcterms:description """Expresses an affects relationship
-                        between entities. For example, a defect may be said to affect a
-                        requirement.""";
+        between entities. For example, a defect may be said to affect a
+        requirement.""";
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
-        dcterms:creator "OGIT Importer" ;
-        dcterms:date "2016-09-22" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit:original <http://open-services.net/ns/rm#affectedBy>;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -117,19 +117,19 @@ ogit.oslc-reqman:elaboratedBy
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
     dcterms:description """Expresses an elaboration relationship
-                        between entities. For example, a model element can elaborate a
-                        requirement.""";
+        between entities. For example, a model element can elaborate a
+        requirement.""";
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
-        dcterms:creator "OGIT Importer" ;
-        dcterms:date "2016-09-22" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit:original <http://open-services.net/ns/rm#elaboratedBy>;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -139,18 +139,18 @@ ogit.oslc-reqman:implementedBy
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
     dcterms:description """Expresses an implementation
-                        relationship between entities.""";
+        relationship between entities.""";
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
-        dcterms:creator "OGIT Importer" ;
-        dcterms:date "2016-09-22" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit:original <http://open-services.net/ns/rm#implementedBy>;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -160,19 +160,19 @@ ogit.oslc-reqman:specifiedBy
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
     dcterms:description """Expresses a specification relationship
-                        between entities. For example, a model element can specifiy a
-                        requirement.""";
+        between entities. For example, a model element can specifiy a
+        requirement.""";
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
-        dcterms:creator "OGIT Importer" ;
-        dcterms:date "2016-09-22" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit:original <http://open-services.net/ns/rm#specifiedBy>;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -182,20 +182,20 @@ ogit.oslc-reqman:trackedBy
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
     dcterms:description """Expresses a tracking relationship
-                        between entities. For example, a change request may be said to track a
-                        requirement, in that it governs the changes to a requirement according to some
-                        process machinery.""";
+        between entities. For example, a change request may be said to track a
+        requirement, in that it governs the changes to a requirement according to some
+        process machinery.""";
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
-        dcterms:creator "OGIT Importer" ;
-        dcterms:date "2016-09-22" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit:original <http://open-services.net/ns/rm#trackedBy>;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -205,19 +205,19 @@ ogit.oslc-reqman:uses
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
     dcterms:description """Expresses a use relationship between
-                        entities. For example, a requirement collection may use a
-                        requirement.""";
+        entities. For example, a requirement collection may use a
+        requirement.""";
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
-        dcterms:creator "OGIT Importer" ;
-        dcterms:date "2016-09-22" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit:original <http://open-services.net/ns/rm#uses>;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -227,18 +227,18 @@ ogit.oslc-reqman:validatedBy
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
     dcterms:description """Expresses a validation relationship
-                        between entities. For example, a test plan may be said to validated a requirement
-                        collection.""";
+        between entities. For example, a test plan may be said to validated a requirement
+        collection.""";
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
-        dcterms:creator "OGIT Importer" ;
-        dcterms:date "2016-09-22" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit:original <http://open-services.net/ns/rm#validatedBy>;
     ogit.core:tech-contact "arago GmbH" .

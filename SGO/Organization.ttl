@@ -33,10 +33,10 @@ ogit.organization:Organization
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
     dcterms:description """An identity that represents an organization, company, or some other grouping of Person objects.
-            Entities of this type should be created with a predefined ID. Those IDs should be named like a domain name, i.e.
-            a concatention of some strings separated with a dot. if organization data is created from a LDAP then a mapping
-            like \"cn=John Doe,dc=example,dc=com\" => \"john_doe.example.com\" should be employed.
-            The ogit/function attribute should be used to tell what kind of grouping an entity of type Organization is: company, department, group, ...""";
+        Entities of this type should be created with a predefined ID. Those IDs should be named like a domain name, i.e.
+        a concatention of some strings separated with a dot. if organization data is created from a LDAP then a mapping
+        like "cn=John Doe,dc=example,dc=com" => "john_doe.example.com" should be employed.
+        The ogit/function attribute should be used to tell what kind of grouping an entity of type Organization is: company, department, group, ...""";
     dcterms:modified "2015-07-27";
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
@@ -143,19 +143,19 @@ ogit.organization:Policy
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "SGO";
     ogit.core:tech-contact "arago GmbH";
     sh:property [
-        sh:maxCount 1 ;
-        sh:minCount 1 ;
-        sh:path ogit.foundation:content
-    ] .
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.foundation:content
+        ] .
 
 ogit.organization:Role
     a ogit.core:Entity;
@@ -168,11 +168,11 @@ ogit.organization:Role
     ogit.core:admin-contact "arago GmbH";
     ogit.core:any-attributes "true";
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "SGO";
     ogit.core:tech-contact "arago GmbH";
@@ -206,11 +206,11 @@ ogit.organization:businessCategory
     dcterms:valid "start=2015-07-27;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Philipp Pelchmann" ;
-        dcterms:date "2015-07-27" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Philipp Pelchmann" ;
+            dcterms:date "2015-07-27" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.organization:city
@@ -223,11 +223,11 @@ ogit.organization:city
     dcterms:valid "start=2015-07-27;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Philipp Pelchmann" ;
-        dcterms:date "2015-07-27" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Philipp Pelchmann" ;
+            dcterms:date "2015-07-27" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.organization:country
@@ -240,11 +240,11 @@ ogit.organization:country
     dcterms:valid "start=2015-07-27;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:history [
-        dcterms:creator "Philipp Pelchmann" ;
-        dcterms:date "2015-07-27" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Philipp Pelchmann" ;
+            dcterms:date "2015-07-27" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:tech-contact "arago GmbH" .
 
 #
@@ -260,15 +260,15 @@ ogit.organization:competes
     dcterms:valid "start=2015-09-18;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:allowed [
-        ogit.core:from ogit.organization:Organization ;
-        ogit.core:to ogit.organization:Organization
-    ];
+            ogit.core:from ogit.organization:Organization ;
+            ogit.core:to ogit.organization:Organization
+        ];
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.organization:deliversTo
@@ -281,15 +281,15 @@ ogit.organization:deliversTo
     dcterms:valid "start=2015-10-22;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:allowed [
-        ogit.core:from ogit.organization:Organization ;
-        ogit.core:to ogit.organization:Organization
-    ];
+            ogit.core:from ogit.organization:Organization ;
+            ogit.core:to ogit.organization:Organization
+        ];
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-10-22" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-10-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.organization:employs
@@ -302,15 +302,15 @@ ogit.organization:employs
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:allowed [
-        ogit.core:from ogit.organization:Organization ;
-        ogit.core:to ogit.person:Person
-    ];
+            ogit.core:from ogit.organization:Organization ;
+            ogit.core:to ogit.person:Person
+        ];
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-05-21" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.organization:governs
@@ -365,11 +365,11 @@ ogit.organization:leads
             ogit.core:to ogit.organization:Organization
         ];
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-10-22" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-10-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.organization:sellsTo
@@ -382,13 +382,13 @@ ogit.organization:sellsTo
     dcterms:valid "start=2015-10-22;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:allowed [
-        ogit.core:from ogit.organization:Organization ;
-        ogit.core:to ogit.organization:Organization
-    ];
+            ogit.core:from ogit.organization:Organization ;
+            ogit.core:to ogit.organization:Organization
+        ];
     ogit.core:history [
-        dcterms:creator "Peter Larem" ;
-        dcterms:date "2015-10-22" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-10-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:tech-contact "arago GmbH" .

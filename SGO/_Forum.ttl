@@ -29,15 +29,15 @@ ogit._forum:accepts
     dcterms:valid "start=2015-09-02;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:allowed [
-        ogit.core:from ogit.forum:Profile ;
-        ogit.core:to ogit.forum:Invite
-    ];
+            ogit.core:from ogit.forum:Profile ;
+            ogit.core:to ogit.forum:Invite
+        ];
     ogit.core:history [
-        dcterms:creator "bmoore@arago.de" ;
-        dcterms:date "2015-09-02" ;
-        dcterms:description "initial" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "bmoore@arago.de" ;
+            dcterms:date "2015-09-02" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:configures
@@ -50,15 +50,15 @@ ogit._forum:configures
     dcterms:valid "start=2015-04-27;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:allowed [
-        ogit.core:from ogit.forum:Configuration ;
-        ogit.core:to ogit.forum:Profile
-    ];
+            ogit.core:from ogit.forum:Configuration ;
+            ogit.core:to ogit.forum:Profile
+        ];
     ogit.core:history [
-        dcterms:creator "cwalker@arago.de" ;
-        dcterms:date "2015-04-27" ;
-        dcterms:description "intitial inception" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-04-27" ;
+            dcterms:description "intitial inception" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:endorses
@@ -67,7 +67,7 @@ ogit._forum:endorses
     dcterms:created "2015-04-27";
     dcterms:creator "cwalker@arago.de";
     dcterms:description """This relationship indicates that one entity endorses some other. This is a recommendation or a
-            social `like`.""";
+        social `like`.""";
     dcterms:modified "2015-04-27";
     dcterms:valid "start=2015-04-27;";
     ogit.core:admin-contact "arago GmbH";
@@ -119,7 +119,7 @@ ogit._forum:moderates
     dcterms:created "2015-04-23";
     dcterms:creator "cwalker@arago.de";
     dcterms:description """Moderation as a verb, in the context of a forum, is a supervisory role. It implies that the
-            entity takes a responsibility for the maintenance and upkeep of the connected entity.""";
+        entity takes a responsibility for the maintenance and upkeep of the connected entity.""";
     dcterms:modified "2015-04-23";
     dcterms:valid "start=2015-04-23;";
     ogit.core:admin-contact "arago GmbH";
@@ -134,11 +134,11 @@ ogit._forum:moderates
         ];
     ogit.core:cardinality "many2many";
     ogit.core:history [
-        dcterms:creator "cwalker@arago.de" ;
-        dcterms:date "2015-04-23" ;
-        dcterms:description "Initial Creation" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-04-23" ;
+            dcterms:description "Initial Creation" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:responds
@@ -147,7 +147,7 @@ ogit._forum:responds
     dcterms:created "2015-04-27";
     dcterms:creator "cwalker@arago.de";
     dcterms:description """This relationship indicates that one entity is a response to another. For example, parts of a
-            conversation/fourm thread.""";
+        conversation/fourm thread.""";
     dcterms:modified "2015-04-27";
     dcterms:valid "start=2015-04-27;";
     ogit.core:admin-contact "arago GmbH";
@@ -199,7 +199,7 @@ ogit._forum:subscribes
     dcterms:created "2015-04-27";
     dcterms:creator "cwalker@arago.de";
     dcterms:description """A subscription by an entity to another. Implies that one entity is interested in something
-            the other can offer.""";
+        the other can offer.""";
     dcterms:modified "2015-04-27";
     dcterms:valid "start=2015-04-27;";
     ogit.core:admin-contact "arago GmbH";
@@ -255,19 +255,19 @@ ogit._forum:wins
     dcterms:created "2015-04-23";
     dcterms:creator "cwalker@arago.de";
     dcterms:description """Associates the entity that has won something with the thing that was won. Despite the present
-            tense used in the verb, this almost always will refer to some that *was* won in the past.""";
+        tense used in the verb, this almost always will refer to some that *was* won in the past.""";
     dcterms:modified "2015-04-23";
     dcterms:valid "start=2015-04-23;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:allowed [
-        ogit.core:from ogit.forum:Profile ;
-        ogit.core:to ogit.forum:Award
-    ];
+            ogit.core:from ogit.forum:Profile ;
+            ogit.core:to ogit.forum:Award
+        ];
     ogit.core:cardinality "many2many";
     ogit.core:history [
-        dcterms:creator "cwalker@arago.de" ;
-        dcterms:date "2015-04-23" ;
-        dcterms:description "Initial Creation" ;
-        dcterms:identifier "1"
-    ];
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-04-23" ;
+            dcterms:description "Initial Creation" ;
+            dcterms:identifier "1"
+        ];
     ogit.core:tech-contact "arago GmbH" .

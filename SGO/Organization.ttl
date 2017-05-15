@@ -292,26 +292,6 @@ ogit.organization:deliversTo
         ];
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.organization:employs
-    a ogit.core:Verb;
-    rdfs:label "employs";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "Verb indicating if one entity employes another.";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.organization:Organization ;
-            ogit.core:to ogit.person:Person
-        ];
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ];
-    ogit.core:tech-contact "arago GmbH" .
 
 ogit.organization:governs
     a ogit.core:Verb;

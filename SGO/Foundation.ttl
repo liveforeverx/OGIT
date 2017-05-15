@@ -3165,83 +3165,7 @@ ogit.foundation:deployedTo
         ];
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.foundation:describes
-    a ogit.core:Verb;
-    rdfs:label "describes";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "This relationship allows to associate additional information with an entity. The \"described\" node can have many \"describing\" nodes.";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.config:Parameter ;
-            ogit.core:to ogit.cost:CostElement
-        ],
-        [
-            ogit.core:from ogit.config:Parameter ;
-            ogit.core:to ogit.serviceManagement:Offering
-        ],
-        [
-            ogit.core:from ogit.config:Parameter ;
-            ogit.core:to ogit.serviceManagement:Service
-        ],
-        [
-            ogit.core:from ogit.config:Parameter ;
-            ogit.core:to ogit.serviceManagement:SLA
-        ],
-        [
-            ogit.core:from ogit.asset:Asset ;
-            ogit.core:to ogit.automation:MARSNode
-        ],
-        [
-            ogit.core:from ogit.asset:Asset ;
-            ogit.core:to ogit.datacenter:Cooling
-        ],
-        [
-            ogit.core:from ogit.asset:Asset ;
-            ogit.core:to ogit.device:Device
-        ],
-        [
-            ogit.core:from ogit.asset:Asset ;
-            ogit.core:to ogit.datacenter:PowerDistributionUnit
-        ],
-        [
-            ogit.core:from ogit.asset:Asset ;
-            ogit.core:to ogit.datacenter:Rack
-        ],
-        [
-            ogit.core:from ogit.asset:Asset ;
-            ogit.core:to ogit.automation:MARSNodeTemplate
-        ],
-        [
-            ogit.core:from ogit.asset:Asset ;
-            ogit.core:to ogit.network:NetworkCard
-        ],
-        [
-            ogit.core:from ogit.asset:Asset ;
-            ogit.core:to ogit.network:NetworkEnclosure
-        ],
-        [
-            ogit.core:from ogit.asset:Asset ;
-            ogit.core:to ogit.network:NetworkFabric
-        ],
-        [
-            ogit.core:from ogit.asset:Asset ;
-            ogit.core:to ogit.network:SimpleDevice
-        ],
-        [
-            ogit.core:from ogit.config:Parameter ;
-            ogit.core:to ogit.catalog:CatalogItem
-        ];
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ];
-    ogit.core:tech-contact "arago GmbH" .
+
 
 ogit.foundation:follows
     a ogit.core:Verb;
@@ -3739,31 +3663,6 @@ ogit.foundation:generates
         ];
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.foundation:implements
-    a ogit.core:Verb;
-    rdfs:label "implements";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "Defines that an entity provides the implementation for another entity.";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.automation:MARSModel ;
-            ogit.core:to ogit.serviceManagement:Order
-        ],
-        [
-            ogit.core:from ogit.serviceManagement:Service ;
-            ogit.core:to ogit.software:Application
-        ];
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ];
-    ogit.core:tech-contact "arago GmbH" .
 
 ogit.foundation:manages
     a ogit.core:Verb;
@@ -3930,89 +3829,6 @@ ogit.foundation:manages
         ];
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.foundation:opens
-    a ogit.core:Verb;
-    rdfs:label "opens";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "Indicates an entity which creates/opens another entity (e.g. Person opens Ticket).";
-    dcterms:modified "2015-08-11";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.serviceManagement:Service ;
-            ogit.core:to ogit.serviceManagement:Incident
-        ],
-        [
-            ogit.core:from ogit.serviceManagement:Service ;
-            ogit.core:to ogit.serviceManagement:Ticket
-        ],
-        [
-            ogit.core:from ogit.serviceManagement:Problem ;
-            ogit.core:to ogit.serviceManagement:Problem
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:Incident
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:Problem
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:Ticket
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:Order
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:ChangeRequest
-        ],
-        [
-            ogit.core:from ogit.serviceManagement:Incident ;
-            ogit.core:to ogit.task:Task
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:SubTask
-        ];
-    ogit.core:history
-        [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-06-11" ;
-            dcterms:description "updated" ;
-            dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-07-06" ;
-            dcterms:description "updated" ;
-            dcterms:identifier "3"
-        ],
-        [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-07-27" ;
-            dcterms:description "updated" ;
-            dcterms:identifier "4"
-        ],
-        [
-            dcterms:creator "Philipp Pelchmann" ;
-            dcterms:date "2015-08-11" ;
-            dcterms:description "removed link between connector -> incident, connector -> configuration item" ;
-            dcterms:identifier "5"
-        ];
-    ogit.core:tech-contact "arago GmbH" .
-
 ogit.foundation:owns
     a ogit.core:Verb;
     rdfs:label "owns";
@@ -4115,35 +3931,7 @@ ogit.foundation:owns
         ];
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.foundation:plans
-    a ogit.core:Verb;
-    rdfs:label "plans";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "Verb showing how one entity plans/predicts on the content of another entity";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.cost:PlanningTemplate ;
-            ogit.core:to ogit.cost:CostElement
-        ],
-        [
-            ogit.core:from ogit.cost:PlanningTemplate ;
-            ogit.core:to ogit.automation:MARSModelTemplate
-        ],
-        [
-            ogit.core:from ogit.organization:Organization ;
-            ogit.core:to ogit.cost:Budget
-        ];
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ];
-    ogit.core:tech-contact "arago GmbH" .
+
 
 ogit.foundation:precedes
     a ogit.core:Verb;
@@ -5225,82 +5013,7 @@ ogit.foundation:specifies
         ];
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.foundation:supervises
-    a ogit.core:Verb;
-    rdfs:label "supervises";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "Indicates if an entity supervises another entity. E.g. a Person supervises a Ticket or a Task.";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.organization:Organization ;
-            ogit.core:to ogit.serviceManagement:Incident
-        ],
-        [
-            ogit.core:from ogit.organization:Organization ;
-            ogit.core:to ogit.serviceManagement:Problem
-        ],
-        [
-            ogit.core:from ogit.organization:Organization ;
-            ogit.core:to ogit.serviceManagement:Ticket
-        ],
-        [
-            ogit.core:from ogit.organization:Organization ;
-            ogit.core:to ogit.serviceManagement:Order
-        ],
-        [
-            ogit.core:from ogit.organization:Organization ;
-            ogit.core:to ogit.serviceManagement:ChangeRequest
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:Incident
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:Problem
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:Ticket
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:Order
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:ChangeRequest
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:SubTask
-        ],
-        [
-            ogit.core:from ogit.organization:Organization ;
-            ogit.core:to ogit.serviceManagement:SubTask
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.contract:Contract
-        ];
-    ogit.core:history
-        [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2016-06-23" ;
-            dcterms:description "connection added" ;
-            dcterms:identifier "2"
-        ];
-    ogit.core:tech-contact "arago GmbH" .
+
 
 ogit.foundation:supports
     a ogit.core:Verb;

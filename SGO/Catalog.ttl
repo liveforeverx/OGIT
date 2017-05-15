@@ -104,23 +104,3 @@ ogit.catalog:CatalogItem
 #
 # Verbs
 #
-ogit.catalog:validFor
-    a ogit.core:Verb;
-    rdfs:label "validFor";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "This relationship indicates the something specifies validity for something else.";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.catalog:Catalog ;
-            ogit.core:to ogit.location:Region
-        ];
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ];
-    ogit.core:tech-contact "arago GmbH" .

@@ -127,28 +127,3 @@ ogit.contract:Penalty
 #
 # Verbs
 #
-ogit.contract:concludes
-    a ogit.core:Verb;
-    rdfs:label "concludes";
-    dcterms:created "2015-06-18";
-    dcterms:creator "Peter Larem";
-    dcterms:description "Verb showing if a legal entity concludes something (e.g. Contract).";
-    dcterms:modified "2015-06-18";
-    dcterms:valid "start=2015-06-18;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.organization:Organization ;
-            ogit.core:to ogit.contract:Contract
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.contract:Contract
-        ];
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-06-18" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ];
-    ogit.core:tech-contact "arago GmbH" .

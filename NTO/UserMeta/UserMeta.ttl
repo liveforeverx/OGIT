@@ -27,7 +27,7 @@ ogit:userMeta
 # Entities
 #
 ogit.userMeta:Filter
-    a rdfs:Class;
+    a ogit.core:Entity;
     rdfs:label "Filter";
     rdfs:subClassOf ogit.core:Entity;
     dcterms:created "2016-10-14";
@@ -58,7 +58,7 @@ ogit.userMeta:Filter
         ] .
 
 ogit.userMeta:Game
-    a rdfs:Class;
+    a ogit.core:Entity;
     rdfs:label "Game";
     rdfs:subClassOf ogit.core:Entity;
     dcterms:created "2016-07-19";
@@ -78,7 +78,7 @@ ogit.userMeta:Game
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.userMeta:Question
-    a rdfs:Class;
+    a ogit.core:Entity;
     rdfs:label "Question";
     rdfs:subClassOf ogit.core:Entity;
     dcterms:created "2016-07-19";

@@ -448,54 +448,7 @@ ogit.person:position
 #
 # Verbs
 #
-ogit.person:closes
-    a ogit.core:Verb;
-    rdfs:label "closes";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "Indicates if one entity closes another one, e.g. a Person might close a Ticket";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:SubTask
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:Incident
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:Problem
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:Ticket
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:Order
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:ChangeRequest
-        ];
-    ogit.core:history
-        [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-12-10" ;
-            dcterms:description "change entity name from ogit/ServiceManagement/ChangeTask to ogit/ServiceManagement/SubTask" ;
-            dcterms:identifier "2"
-        ];
-    ogit.core:tech-contact "arago GmbH" .
+
 
 ogit.person:dislikes
     a ogit.core:Verb;
@@ -518,47 +471,7 @@ ogit.person:dislikes
         ];
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.person:ignores
-    a ogit.core:Verb;
-    rdfs:label "ignores";
-    dcterms:created "2016-10-14";
-    dcterms:creator "cwalker@arago.de";
-    dcterms:description "Verb showing that one entity ignores another - (useful as a mark-as-read flag)";
-    dcterms:modified "2016-10-14";
-    dcterms:valid "start=2016-10-14;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.media:Comment
-        ];
-    ogit.core:history [
-            dcterms:creator "cwalker@arago.de" ;
-            dcterms:date "2016-10-14" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ];
-    ogit.core:tech-contact "arago GmbH" .
 
-ogit.person:installs
-    a ogit.core:Verb;
-    rdfs:label "installs";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "Indicates which entities are installed by other entities.";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.software:Application
-        ];
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ];
-    ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:invites
     a ogit.core:Verb;
@@ -602,103 +515,4 @@ ogit.person:likes
         ];
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.person:receives
-    a ogit.core:Verb;
-    rdfs:label "receives";
-    dcterms:created "2017-02-17";
-    dcterms:creator "stravlos@arago.de";
-    dcterms:description "an entity receives something another entity";
-    dcterms:modified "2017-02-17";
-    dcterms:valid "start=2017-02-17;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.event:Notification
-        ];
-    ogit.core:history [
-            dcterms:creator "stravlos@arago.de" ;
-            dcterms:date "2017-02-17" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ];
-    ogit.core:tech-contact "arago GmbH" .
 
-ogit.person:repliedWith
-    a ogit.core:Verb;
-    rdfs:label "repliedWith";
-    dcterms:created "2016-08-08";
-    dcterms:creator "Alexander Ryabtsev";
-    dcterms:description "This relationship indicates that user replied with something.";
-    dcterms:modified "2016-08-08";
-    dcterms:valid "start=2016-08-08;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.businessProcess:SurveyReply
-        ];
-    ogit.core:history [
-            dcterms:creator "Alexander Ryabtsev" ;
-            dcterms:date "2016-08-08" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ];
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit.person:updates
-    a ogit.core:Verb;
-    rdfs:label "updates";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "Indicates which entity (e.g. Person) updated each another entity (e.g. Ticket).";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:SubTask
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:Incident
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:Problem
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:Ticket
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:Order
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.serviceManagement:ChangeRequest
-        ],
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.config:ConfigurationItem
-        ];
-    ogit.core:history
-        [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-07-27" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-07-27" ;
-            dcterms:description "updated" ;
-            dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-12-10" ;
-            dcterms:description "change entity name from ogit/ServiceManagement/ChangeTask to ogit/ServiceManagement/SubTask" ;
-            dcterms:identifier "3"
-        ];
-    ogit.core:tech-contact "arago GmbH" .

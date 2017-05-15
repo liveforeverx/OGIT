@@ -445,23 +445,3 @@ ogit.event:severity
 #
 # Verbs
 #
-ogit.event:alerts
-    a ogit.core:Verb;
-    rdfs:label "alerts";
-    dcterms:created "2016-10-26";
-    dcterms:creator "stravlos@arago.co";
-    dcterms:description "Verb showing if one entity alerts another.";
-    dcterms:modified "2016-10-26";
-    dcterms:valid "start=2016-10-26;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.event:Alert ;
-            ogit.core:to ogit.person:Person
-        ];
-    ogit.core:history [
-            dcterms:creator "stravlos@arago.co" ;
-            dcterms:date "2016-10-26" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ];
-    ogit.core:tech-contact "arago GmbH" .

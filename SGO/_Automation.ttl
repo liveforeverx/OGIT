@@ -3,7 +3,6 @@
 @prefix ogit._automation: <http://www.purl.org/ogit/> .
 @prefix ogit.automation:  <http://www.purl.org/ogit/Automation/> .
 @prefix ogit.core:        <http://www.purl.org/ogit/> .
-@prefix ogit.task:        <http://www.purl.org/ogit/> .
 @prefix owl:              <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:             <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann:             <http://purl.org/vocab/vann/> .
@@ -167,26 +166,7 @@ ogit._automation:hosts
         ];
     ogit.core:tech-contact "arago GmbH" .
 
-ogit._automation:solves
-    a ogit.core:Verb;
-    rdfs:label "solves";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "One entity can \"solve\" another.";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.automation:KnowledgeItem ;
-            ogit.core:to ogit.task:Task
-        ];
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ];
-    ogit.core:tech-contact "arago GmbH" .
+
 
 ogit._automation:worksOn
     a ogit.core:Verb;

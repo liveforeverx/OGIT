@@ -3,6 +3,8 @@
 @prefix ogit._cost: <http://www.purl.org/ogit/> .
 @prefix ogit.core:  <http://www.purl.org/ogit/> .
 @prefix ogit.cost:  <http://www.purl.org/ogit/Cost/> .
+@prefix ogit.automation:  <http://www.purl.org/ogit/Automation/> .
+@prefix ogit.organization:  <http://www.purl.org/ogit/> .
 @prefix owl:        <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann:       <http://purl.org/vocab/vann/> .
@@ -73,6 +75,36 @@ ogit._cost:covers
     ogit.core:allowed [
             ogit.core:from ogit.cost:Budget ;
             ogit.core:to ogit.cost:CostElement
+        ];
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ];
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit._cost:plans
+    a ogit.core:Verb;
+    rdfs:label "plans";
+    dcterms:created "2015-05-21";
+    dcterms:creator "Peter Larem";
+    dcterms:description "Verb showing how one entity plans/predicts on the content of another entity";
+    dcterms:modified "2015-05-21";
+    dcterms:valid "start=2015-05-21;";
+    ogit.core:admin-contact "arago GmbH";
+    ogit.core:allowed
+        [
+            ogit.core:from ogit.cost:PlanningTemplate ;
+            ogit.core:to ogit.cost:CostElement
+        ],
+        [
+            ogit.core:from ogit.cost:PlanningTemplate ;
+            ogit.core:to ogit.automation:MARSModelTemplate
+        ],
+        [
+            ogit.core:from ogit.organization:Organization ;
+            ogit.core:to ogit.cost:Budget
         ];
     ogit.core:history [
             dcterms:creator "Peter Larem" ;

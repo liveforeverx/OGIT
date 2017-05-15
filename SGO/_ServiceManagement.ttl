@@ -1,7 +1,8 @@
 @prefix dcterms:                 <http://purl.org/dc/terms/> .
 @prefix ogit:                    <http://www.purl.org/ogit/> .
 @prefix ogit._serviceManagement: <http://www.purl.org/ogit/> .
-@prefix ogit.automation:         <http://www.purl.org/ogit/Automation/> .
+@prefix ogit.person:         <http://www.purl.org/ogit/> .
+@prefix ogit.task:         <http://www.purl.org/ogit/> .
 @prefix ogit.core:               <http://www.purl.org/ogit/> .
 @prefix ogit.event:              <http://www.purl.org/ogit/> .
 @prefix ogit.location:           <http://www.purl.org/ogit/> .
@@ -254,26 +255,7 @@ ogit._serviceManagement:urgency
 #
 # Verbs
 #
-ogit._serviceManagement:availableIn
-    a ogit.core:Verb;
-    rdfs:label "availableIn";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "Indicates that something can be found from somewhere.";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.serviceManagement:Offering ;
-            ogit.core:to ogit.location:Region
-        ];
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ];
-    ogit.core:tech-contact "arago GmbH" .
+
 
 ogit._serviceManagement:calls
     a ogit.core:Verb;
@@ -367,41 +349,85 @@ ogit._serviceManagement:causes
         ];
     ogit.core:tech-contact "arago GmbH" .
 
-ogit._serviceManagement:reportedOn
+ogit._serviceManagement:opens
     a ogit.core:Verb;
-    rdfs:label "reportedOn";
+    rdfs:label "opens";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
-    dcterms:description """Indicates where a failure situation was initially observed. In case an incident record is created from an event management system this relationship points to the entitiy that represents the monitored device/endpoint.
-        We call it "reportedOn" instead of "observedOn" to account for the close relation to "reportedAt", "reportedBy\"""";
-    dcterms:modified "2015-05-21";
+    dcterms:description "Indicates an entity which creates/opens another entity (e.g. Person opens Ticket).";
+    dcterms:modified "2015-08-11";
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
     ogit.core:allowed
         [
-            ogit.core:from ogit.serviceManagement:Order ;
-            ogit.core:to ogit.automation:MARSNode
+            ogit.core:from ogit.serviceManagement:Service ;
+            ogit.core:to ogit.serviceManagement:Incident
         ],
         [
-            ogit.core:from ogit.serviceManagement:ChangeRequest ;
-            ogit.core:to ogit.automation:MARSNode
-        ],
-        [
-            ogit.core:from ogit.serviceManagement:Incident ;
-            ogit.core:to ogit.automation:MARSNode
+            ogit.core:from ogit.serviceManagement:Service ;
+            ogit.core:to ogit.serviceManagement:Ticket
         ],
         [
             ogit.core:from ogit.serviceManagement:Problem ;
-            ogit.core:to ogit.automation:MARSNode
+            ogit.core:to ogit.serviceManagement:Problem
         ],
         [
-            ogit.core:from ogit.serviceManagement:Ticket ;
-            ogit.core:to ogit.automation:MARSNode
+            ogit.core:from ogit.person:Person ;
+            ogit.core:to ogit.serviceManagement:Incident
+        ],
+        [
+            ogit.core:from ogit.person:Person ;
+            ogit.core:to ogit.serviceManagement:Problem
+        ],
+        [
+            ogit.core:from ogit.person:Person ;
+            ogit.core:to ogit.serviceManagement:Ticket
+        ],
+        [
+            ogit.core:from ogit.person:Person ;
+            ogit.core:to ogit.serviceManagement:Order
+        ],
+        [
+            ogit.core:from ogit.person:Person ;
+            ogit.core:to ogit.serviceManagement:ChangeRequest
+        ],
+        [
+            ogit.core:from ogit.serviceManagement:Incident ;
+            ogit.core:to ogit.task:Task
+        ],
+        [
+            ogit.core:from ogit.person:Person ;
+            ogit.core:to ogit.serviceManagement:SubTask
         ];
-    ogit.core:history [
+    ogit.core:history
+        [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-06-11" ;
+            dcterms:description "updated" ;
+            dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-07-06" ;
+            dcterms:description "updated" ;
+            dcterms:identifier "3"
+        ],
+        [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-07-27" ;
+            dcterms:description "updated" ;
+            dcterms:identifier "4"
+        ],
+        [
+            dcterms:creator "Philipp Pelchmann" ;
+            dcterms:date "2015-08-11" ;
+            dcterms:description "removed link between connector -> incident, connector -> configuration item" ;
+            dcterms:identifier "5"
         ];
     ogit.core:tech-contact "arago GmbH" .

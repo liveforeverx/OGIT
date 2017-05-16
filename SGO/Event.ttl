@@ -53,6 +53,12 @@ ogit.event:Alert
     ogit.core:tech-contact "arago GmbH";
     sh:property
         [
+            sh:class ogit.event:Event ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:triggers
+        ],
+        [
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.foundation:type
@@ -104,6 +110,12 @@ ogit.event:Event
     ogit.core:scope "SGO";
     ogit.core:tech-contact "arago GmbH";
     sh:property
+        [
+            sh:class ogit.event:Event ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -255,7 +267,7 @@ ogit.event:Notification
 # Attributes
 #
 ogit.event:acknowledgeState
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "acknowledgeState";
     dcterms:created "2016-08-03";
     dcterms:creator "Philipp Pelchmann";
@@ -272,7 +284,7 @@ ogit.event:acknowledgeState
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:certainty
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "certainty";
     dcterms:created "2016-08-03";
     dcterms:creator "Philipp Pelchmann";
@@ -289,7 +301,7 @@ ogit.event:certainty
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:expiresAt
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "expiresAt";
     dcterms:created "2016-08-03";
     dcterms:creator "Philipp Pelchmann";
@@ -306,7 +318,7 @@ ogit.event:expiresAt
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:firstOccurredAt
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "firstOccurredAt";
     dcterms:created "2016-08-03";
     dcterms:creator "Philipp Pelchmann";
@@ -323,7 +335,7 @@ ogit.event:firstOccurredAt
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:isRoot
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "isRoot";
     dcterms:created "2016-08-03";
     dcterms:creator "Philipp Pelchmann";
@@ -340,7 +352,7 @@ ogit.event:isRoot
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:lastClearedAt
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "lastClearedAt";
     dcterms:created "2016-08-03";
     dcterms:creator "Philipp Pelchmann";
@@ -357,7 +369,7 @@ ogit.event:lastClearedAt
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:lastOccurredAt
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "lastOccurredAt";
     dcterms:created "2016-08-03";
     dcterms:creator "Philipp Pelchmann";
@@ -374,7 +386,7 @@ ogit.event:lastOccurredAt
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:maintenanceState
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "maintenanceState";
     dcterms:created "2016-08-03";
     dcterms:creator "Philipp Pelchmann";
@@ -391,7 +403,7 @@ ogit.event:maintenanceState
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:occurenceCount
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "occurenceCount";
     dcterms:created "2016-08-03";
     dcterms:creator "Philipp Pelchmann";
@@ -408,7 +420,7 @@ ogit.event:occurenceCount
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:resource
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "resource";
     dcterms:created "2016-08-03";
     dcterms:creator "Philipp Pelchmann";
@@ -425,7 +437,7 @@ ogit.event:resource
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:severity
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "severity";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";

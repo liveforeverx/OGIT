@@ -1,7 +1,6 @@
 @prefix dcterms:          <http://purl.org/dc/terms/> .
 @prefix ogit:             <http://www.purl.org/ogit/> .
 @prefix ogit._automation: <http://www.purl.org/ogit/> .
-@prefix ogit.automation:  <http://www.purl.org/ogit/Automation/> .
 @prefix ogit.core:        <http://www.purl.org/ogit/> .
 @prefix owl:              <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:             <http://www.w3.org/2000/01/rdf-schema#> .
@@ -19,7 +18,7 @@ ogit:automation
 # Attributes
 #
 ogit._automation:ipAddress
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "ipAddress";
     dcterms:created "2015-05-21";
     dcterms:creator "Aymen Ayoub";
@@ -36,7 +35,7 @@ ogit._automation:ipAddress
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._automation:macAddress
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "macAddress";
     dcterms:created "2015-05-21";
     dcterms:creator "Aymen Ayoub";
@@ -53,7 +52,7 @@ ogit._automation:macAddress
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._automation:manufacturer
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "model";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -70,7 +69,7 @@ ogit._automation:manufacturer
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._automation:message
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "message";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -87,7 +86,7 @@ ogit._automation:message
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._automation:mode
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "mode";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -105,7 +104,7 @@ ogit._automation:mode
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._automation:timestamp
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "timestamp";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -125,7 +124,7 @@ ogit._automation:timestamp
 # Verbs
 #
 ogit._automation:dependsOn
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "dependsOn";
     dcterms:created "2015-10-15";
     dcterms:creator "Aymen Ayoub";
@@ -133,10 +132,6 @@ ogit._automation:dependsOn
     dcterms:modified "2015-10-15";
     dcterms:valid "start=2015-10-15;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.automation:MARSNode ;
-            ogit.core:to ogit.automation:MARSNode
-        ];
     ogit.core:history [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-10-15" ;
@@ -146,7 +141,7 @@ ogit._automation:dependsOn
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._automation:hosts
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "hosts";
     dcterms:created "2015-10-15";
     dcterms:creator "Aymen Ayoub";
@@ -154,10 +149,6 @@ ogit._automation:hosts
     dcterms:modified "2015-10-15";
     dcterms:valid "start=2015-10-15;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.automation:MARSNode ;
-            ogit.core:to ogit.automation:MARSNode
-        ];
     ogit.core:history [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-10-15" ;
@@ -167,7 +158,7 @@ ogit._automation:hosts
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._automation:worksOn
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "worksOn";
     dcterms:created "2015-06-24";
     dcterms:creator "Peter Larem";
@@ -175,15 +166,6 @@ ogit._automation:worksOn
     dcterms:modified "2015-08-13";
     dcterms:valid "start=2015-06-24;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.automation:KnowledgeItem ;
-            ogit.core:to ogit.automation:AutomationIssue
-        ],
-        [
-            ogit.core:from ogit.automation:AutomationIssue ;
-            ogit.core:to ogit.automation:MARSNode
-        ];
     ogit.core:history
         [
             dcterms:creator "Peter Larem" ;

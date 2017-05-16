@@ -43,7 +43,13 @@ ogit.data:CustomApplicationData
         ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "SGO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property [
+            sh:class ogit.data:CustomApplicationData ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:uses
+        ] .
 
 ogit.data:Timeseries
     a ogit.core:Entity;

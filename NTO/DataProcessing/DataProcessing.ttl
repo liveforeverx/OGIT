@@ -19,7 +19,7 @@ ogit:dataProcessing
     owl:versionInfo "__OGIT_VERSION__";
     dcterms:contributor "Fabian Meyer";
     dcterms:creator "arago GmbH";
-    vann:preferredNamespacePrefix "ogit.DataProcessing";
+    vann:preferredNamespacePrefix "ogit.dataProcessing";
     vann:preferredNamespaceUri "http://www.purl.org/ogit/DataProcessing/" .
 
 #
@@ -98,7 +98,7 @@ ogit.dataProcessing:Program
 # Attributes
 #
 ogit.dataProcessing:internalJobId
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "DataProcessingInternalJobId";
     dcterms:created "2017-02-28";
     dcterms:creator "Oday Jubran";
@@ -115,7 +115,7 @@ ogit.dataProcessing:internalJobId
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.dataProcessing:outputType
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "DataProcessingOutputType";
     dcterms:created "2017-02-27";
     dcterms:creator "Oday Jubran";
@@ -132,7 +132,7 @@ ogit.dataProcessing:outputType
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.dataProcessing:parameters
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "DataProcessingParameters";
     dcterms:created "2017-02-27";
     dcterms:creator "Oday Jubran";
@@ -149,7 +149,7 @@ ogit.dataProcessing:parameters
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.dataProcessing:query
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "DataProcessingQuery";
     dcterms:created "2017-02-27";
     dcterms:creator "Oday Jubran";
@@ -166,7 +166,7 @@ ogit.dataProcessing:query
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.dataProcessing:queryType
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "DataProcessingQueryType";
     dcterms:created "2017-02-27";
     dcterms:creator "Oday Jubran";
@@ -183,7 +183,7 @@ ogit.dataProcessing:queryType
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.dataProcessing:state
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "DataProcessingState";
     dcterms:created "2017-02-28";
     dcterms:creator "Oday Jubran";

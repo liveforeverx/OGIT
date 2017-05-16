@@ -68,6 +68,12 @@ ogit.catalog:Catalog
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.foundation:type
+        ],
+        [
+            sh:class ogit.catalog:CatalogItem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:contains
         ] .
 
 ogit.catalog:CatalogItem
@@ -98,4 +104,10 @@ ogit.catalog:CatalogItem
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.foundation:description
+        ],
+        [
+            sh:class ogit.catalog:CatalogItem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:requires
         ] .

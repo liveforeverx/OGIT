@@ -311,20 +311,10 @@ ogit.core:validation-type
 #
 # Verbs
 #
-ogit.core:allowed
-    a ogit.core:Verb;
-    rdfs:label "allowed";
-    dcterms:description "Constrains ranges and domains for Verbs"@en .
-
 ogit.core:any-attributes
     a ogit.core:Verb;
     rdfs:label "any-attributes";
     dcterms:description "The list of any Attributes for an Entity"@en .
-
-ogit.core:from
-    a ogit.core:Verb;
-    rdfs:label "from";
-    dcterms:description "Constrains domains for Verbs"@en .
 
 ogit.core:history
     a ogit.core:Verb;
@@ -335,11 +325,6 @@ ogit.core:indexed-attributes
     a ogit.core:Verb;
     rdfs:label "indexed-attributes";
     dcterms:description "The list of indexed Attributes for an Entity"@en .
-
-ogit.core:to
-    a ogit.core:Verb;
-    rdfs:label "to";
-    dcterms:description "Constrains ranges for Verbs"@en .
 
 #
 # Other

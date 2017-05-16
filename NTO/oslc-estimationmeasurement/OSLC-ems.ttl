@@ -5,6 +5,7 @@
 @prefix owl:           <http://www.w3.org/2002/07/owl#> .
 @prefix purl:          <http://www.purl.org/> .
 @prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:            <http://www.w3.org/ns/shacl#> .
 @prefix vann:          <http://purl.org/vocab/vann/> .
 
 #
@@ -62,7 +63,13 @@ ogit.oslc-ems:BaselineList
     ogit:original <http://open-services.net/ns/ems#BaselineList>;
     ogit.core:parent ogit:Node;
     ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property [
+            sh:class ogit.oslc-ems:Baseline ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:memberBaseline
+        ] .
 
 ogit.oslc-ems:CdfPoint
     a ogit.core:Entity;
@@ -119,7 +126,13 @@ ogit.oslc-ems:CumulativeDistributionFunction
     ogit:original <http://open-services.net/ns/ems#CumulativeDistributionFunction>;
     ogit.core:parent ogit:Node;
     ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property [
+            sh:class ogit.oslc-ems:CdfPoint ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:cdfPoint
+        ] .
 
 ogit.oslc-ems:Dimension
     a ogit.core:Entity;
@@ -275,7 +288,26 @@ ogit.oslc-ems:Estimate
     ogit:original <http://open-services.net/ns/ems#Estimate>;
     ogit.core:parent ogit:Node;
     ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property
+        [
+            sh:class ogit.oslc-ems:MeasureDistribution ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:predicts
+        ],
+        [
+            sh:class ogit.oslc-ems:FactDistributionTable ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:predictsTable
+        ],
+        [
+            sh:class ogit.oslc-ems:WorkBreakdownStructure ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:predictsWbs
+        ] .
 
 ogit.oslc-ems:EstimateList
     a ogit.core:Entity;
@@ -553,7 +585,13 @@ ogit.oslc-ems:Map
     ogit:original <http://open-services.net/ns/ems#Map>;
     ogit.core:parent ogit:Node;
     ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property [
+            sh:class ogit.oslc-ems:Mapping ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:mapping
+        ] .
 
 ogit.oslc-ems:Mapping
     a ogit.core:Entity;
@@ -578,7 +616,13 @@ ogit.oslc-ems:Mapping
     ogit:original <http://open-services.net/ns/ems#Mapping>;
     ogit.core:parent ogit:Node;
     ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property [
+            sh:class ogit.oslc-ems:DimensionMember ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:to
+        ] .
 
 ogit.oslc-ems:Measure
     a ogit.core:Entity;
@@ -607,7 +651,13 @@ ogit.oslc-ems:Measure
     ogit:original <http://open-services.net/ns/ems#Measure>;
     ogit.core:parent ogit:Node;
     ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property [
+            sh:class ogit.oslc-ems:UnitOfMeasure ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:unitOfMeasure
+        ] .
 
 ogit.oslc-ems:MeasureCell
     a ogit.core:Entity;
@@ -750,7 +800,13 @@ ogit.oslc-ems:MeasurementList
     ogit:original <http://open-services.net/ns/ems#MeasurementList>;
     ogit.core:parent ogit:Node;
     ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property [
+            sh:class ogit.oslc-ems:Measurement ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:memberMeasurement
+        ] .
 
 ogit.oslc-ems:Metric
     a ogit.core:Entity;
@@ -947,7 +1003,13 @@ ogit.oslc-ems:Project
     ogit:original <http://open-services.net/ns/ems#Project>;
     ogit.core:parent ogit:Node;
     ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property [
+            sh:class ogit.oslc-ems:Baseline ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:currentBaseline
+        ] .
 
 ogit.oslc-ems:ProjectList
     a ogit.core:Entity;
@@ -967,7 +1029,13 @@ ogit.oslc-ems:ProjectList
     ogit:original <http://open-services.net/ns/ems#ProjectList>;
     ogit.core:parent ogit:Node;
     ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property [
+            sh:class ogit.oslc-ems:Project ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:memberProject
+        ] .
 
 ogit.oslc-ems:Quantile
     a ogit.core:Entity;
@@ -1033,7 +1101,13 @@ ogit.oslc-ems:QuantileFunction
     ogit:original <http://open-services.net/ns/ems#QuantileFunction>;
     ogit.core:parent ogit:Node;
     ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property [
+            sh:class ogit.oslc-ems:Quantile ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:quantile
+        ] .
 
 ogit.oslc-ems:ReliabilityMetric
     a ogit.core:Entity;
@@ -1084,7 +1158,32 @@ ogit.oslc-ems:Scenario
     ogit:original <http://open-services.net/ns/ems#Scenario>;
     ogit.core:parent ogit:Node;
     ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property
+        [
+            sh:class ogit.oslc-ems:WorkBreakdownStructure ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:assumesWbs
+        ],
+        [
+            sh:class ogit.oslc-ems:FactDistributionTable ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:assumesTable
+        ],
+        [
+            sh:class ogit.oslc-ems:Scenario ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:extendsScenario
+        ],
+        [
+            sh:class ogit.oslc-ems:MeasureDistribution ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:assumes
+        ] .
 
 ogit.oslc-ems:ScenarioList
     a ogit.core:Entity;
@@ -1104,7 +1203,13 @@ ogit.oslc-ems:ScenarioList
     ogit:original <http://open-services.net/ns/ems#ScenarioList>;
     ogit.core:parent ogit:Node;
     ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property [
+            sh:class ogit.oslc-ems:Scenario ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:memberScenario
+        ] .
 
 ogit.oslc-ems:Service
     a ogit.core:Entity;
@@ -1126,7 +1231,38 @@ ogit.oslc-ems:Service
     ogit:original <http://open-services.net/ns/ems#Service>;
     ogit.core:parent ogit:Node;
     ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property
+        [
+            sh:class ogit.oslc-ems:MeasurementList ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:measurementList
+        ],
+        [
+            sh:class ogit.oslc-ems:ScenarioList ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:scenarioList
+        ],
+        [
+            sh:class ogit.oslc-ems:ProjectList ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:projectList
+        ],
+        [
+            sh:class ogit.oslc-ems:BaselineList ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:baselineList
+        ],
+        [
+            sh:class ogit.oslc-ems:EstimateList ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:estimateList
+        ] .
 
 ogit.oslc-ems:SizeMetric
     a ogit.core:Entity;
@@ -1307,13 +1443,19 @@ ogit.oslc-ems:WorkBreakdownStructure
     ogit:original <http://open-services.net/ns/ems#WorkBreakdownStructure>;
     ogit.core:parent ogit:Node;
     ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property [
+            sh:class ogit.oslc-ems:WbsFormat ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:wbsFormat
+        ] .
 
 #
 # Attributes
 #
 ogit.oslc-ems:from
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "from";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1336,7 +1478,7 @@ ogit.oslc-ems:from
     ogit.core:validation-type "" .
 
 ogit.oslc-ems:high
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "high";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1358,7 +1500,7 @@ ogit.oslc-ems:high
     ogit.core:validation-type "" .
 
 ogit.oslc-ems:isActive
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "isActive";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1381,7 +1523,7 @@ ogit.oslc-ems:isActive
     ogit.core:validation-type "" .
 
 ogit.oslc-ems:isClosed
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "isClosed";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1406,7 +1548,7 @@ ogit.oslc-ems:isClosed
     ogit.core:validation-type "" .
 
 ogit.oslc-ems:lambda
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "lambda";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1428,7 +1570,7 @@ ogit.oslc-ems:lambda
     ogit.core:validation-type "" .
 
 ogit.oslc-ems:low
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "low";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1450,7 +1592,7 @@ ogit.oslc-ems:low
     ogit.core:validation-type "" .
 
 ogit.oslc-ems:mostLikely
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "mostLikely";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1472,7 +1614,7 @@ ogit.oslc-ems:mostLikely
     ogit.core:validation-type "" .
 
 ogit.oslc-ems:mu
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "mu";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1494,7 +1636,7 @@ ogit.oslc-ems:mu
     ogit.core:validation-type "" .
 
 ogit.oslc-ems:numberOfQuantiles
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "numberOfQuantiles";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1516,7 +1658,7 @@ ogit.oslc-ems:numberOfQuantiles
     ogit.core:validation-type "" .
 
 ogit.oslc-ems:numericValue
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "numericValue";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1539,7 +1681,7 @@ ogit.oslc-ems:numericValue
     ogit.core:validation-type "" .
 
 ogit.oslc-ems:probability
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "probability";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1562,7 +1704,7 @@ ogit.oslc-ems:probability
     ogit.core:validation-type "" .
 
 ogit.oslc-ems:realProjectId
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "realProjectId";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1583,7 +1725,7 @@ ogit.oslc-ems:realProjectId
     ogit.core:validation-type "" .
 
 ogit.oslc-ems:scale
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "scale";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1610,7 +1752,7 @@ ogit.oslc-ems:scale
 # Verbs
 #
 ogit.oslc-ems:assumes
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "assumes";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1620,10 +1762,6 @@ ogit.oslc-ems:assumes
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:Scenario ;
-            ogit.core:to ogit.oslc-ems:MeasureDistribution
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -1636,7 +1774,7 @@ ogit.oslc-ems:assumes
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:assumesTable
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "assumesTable";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1646,10 +1784,6 @@ ogit.oslc-ems:assumesTable
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:Scenario ;
-            ogit.core:to ogit.oslc-ems:FactDistributionTable
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -1662,7 +1796,7 @@ ogit.oslc-ems:assumesTable
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:assumesWbs
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "assumesWbs";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1671,10 +1805,6 @@ ogit.oslc-ems:assumesWbs
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:Scenario ;
-            ogit.core:to ogit.oslc-ems:WorkBreakdownStructure
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -1687,7 +1817,7 @@ ogit.oslc-ems:assumesWbs
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:baselineList
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "baselineList";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1695,10 +1825,6 @@ ogit.oslc-ems:baselineList
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:Service ;
-            ogit.core:to ogit.oslc-ems:BaselineList
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -1711,7 +1837,7 @@ ogit.oslc-ems:baselineList
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:cdfPoint
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "cdfPoint";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1720,10 +1846,6 @@ ogit.oslc-ems:cdfPoint
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:CumulativeDistributionFunction ;
-            ogit.core:to ogit.oslc-ems:CdfPoint
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -1736,7 +1858,7 @@ ogit.oslc-ems:cdfPoint
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:currentBaseline
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "currentBaseline";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1744,10 +1866,6 @@ ogit.oslc-ems:currentBaseline
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:Project ;
-            ogit.core:to ogit.oslc-ems:Baseline
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -1760,7 +1878,7 @@ ogit.oslc-ems:currentBaseline
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:dimension
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "dimension";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1781,7 +1899,7 @@ ogit.oslc-ems:dimension
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:dimensionCell
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "dimensionCell";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1802,7 +1920,7 @@ ogit.oslc-ems:dimensionCell
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:dimensionColumn
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "dimensionColumn";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1826,7 +1944,7 @@ ogit.oslc-ems:dimensionColumn
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:dimensionMember
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "dimensionMember";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1847,7 +1965,7 @@ ogit.oslc-ems:dimensionMember
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:distribution
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "distribution";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1869,7 +1987,7 @@ ogit.oslc-ems:distribution
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:estimate
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "estimate";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1889,7 +2007,7 @@ ogit.oslc-ems:estimate
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:estimateList
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "estimateList";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1897,10 +2015,6 @@ ogit.oslc-ems:estimateList
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:Service ;
-            ogit.core:to ogit.oslc-ems:EstimateList
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -1913,7 +2027,7 @@ ogit.oslc-ems:estimateList
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:extendsScenario
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "extendsScenario";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1923,10 +2037,6 @@ ogit.oslc-ems:extendsScenario
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:Scenario ;
-            ogit.core:to ogit.oslc-ems:Scenario
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -1939,7 +2049,7 @@ ogit.oslc-ems:extendsScenario
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:fact
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "fact";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1965,7 +2075,7 @@ ogit.oslc-ems:fact
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:grain
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "grain";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -1986,7 +2096,7 @@ ogit.oslc-ems:grain
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:head
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "head";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2009,7 +2119,7 @@ ogit.oslc-ems:head
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:inColumn
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "inColumn";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2038,7 +2148,7 @@ ogit.oslc-ems:inColumn
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:map
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "map";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2062,7 +2172,7 @@ ogit.oslc-ems:map
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:mapping
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "mapping";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2072,10 +2182,6 @@ ogit.oslc-ems:mapping
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:Map ;
-            ogit.core:to ogit.oslc-ems:Mapping
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -2088,7 +2194,7 @@ ogit.oslc-ems:mapping
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:measureCell
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "measureCell";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2109,7 +2215,7 @@ ogit.oslc-ems:measureCell
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:measureColumn
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "measureColumn";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2132,7 +2238,7 @@ ogit.oslc-ems:measureColumn
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:measureDistributionCell
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "measureDistributionCell";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2153,7 +2259,7 @@ ogit.oslc-ems:measureDistributionCell
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:measurementList
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "measurementList";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2161,10 +2267,6 @@ ogit.oslc-ems:measurementList
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:Service ;
-            ogit.core:to ogit.oslc-ems:MeasurementList
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -2177,7 +2279,7 @@ ogit.oslc-ems:measurementList
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:memberBaseline
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "memberBaseline";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2185,10 +2287,6 @@ ogit.oslc-ems:memberBaseline
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:BaselineList ;
-            ogit.core:to ogit.oslc-ems:Baseline
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -2201,7 +2299,7 @@ ogit.oslc-ems:memberBaseline
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:memberEstimate
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "memberEstimate";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2221,7 +2319,7 @@ ogit.oslc-ems:memberEstimate
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:memberMeasurement
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "memberMeasurement";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2229,10 +2327,6 @@ ogit.oslc-ems:memberMeasurement
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:MeasurementList ;
-            ogit.core:to ogit.oslc-ems:Measurement
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -2245,7 +2339,7 @@ ogit.oslc-ems:memberMeasurement
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:memberProject
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "memberProject";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2253,10 +2347,6 @@ ogit.oslc-ems:memberProject
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:ProjectList ;
-            ogit.core:to ogit.oslc-ems:Project
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -2269,7 +2359,7 @@ ogit.oslc-ems:memberProject
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:memberScenario
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "memberScenario";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2277,10 +2367,6 @@ ogit.oslc-ems:memberScenario
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:ScenarioList ;
-            ogit.core:to ogit.oslc-ems:Scenario
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -2293,7 +2379,7 @@ ogit.oslc-ems:memberScenario
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:metric
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "metric";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2315,7 +2401,7 @@ ogit.oslc-ems:metric
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:observes
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "observes";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2340,7 +2426,7 @@ ogit.oslc-ems:observes
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:observesTable
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "observesTable";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2362,7 +2448,7 @@ ogit.oslc-ems:observesTable
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:observesWbs
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "observesWbs";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2383,7 +2469,7 @@ ogit.oslc-ems:observesWbs
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:predicts
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "predicts";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2393,10 +2479,6 @@ ogit.oslc-ems:predicts
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:Estimate ;
-            ogit.core:to ogit.oslc-ems:MeasureDistribution
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -2409,7 +2491,7 @@ ogit.oslc-ems:predicts
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:predictsTable
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "predictsTable";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2419,10 +2501,6 @@ ogit.oslc-ems:predictsTable
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:Estimate ;
-            ogit.core:to ogit.oslc-ems:FactDistributionTable
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -2435,7 +2513,7 @@ ogit.oslc-ems:predictsTable
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:predictsWbs
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "predictsWbs";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2444,10 +2522,6 @@ ogit.oslc-ems:predictsWbs
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:Estimate ;
-            ogit.core:to ogit.oslc-ems:WorkBreakdownStructure
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -2460,7 +2534,7 @@ ogit.oslc-ems:predictsWbs
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:project
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "project";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2480,7 +2554,7 @@ ogit.oslc-ems:project
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:projectList
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "projectList";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2488,10 +2562,6 @@ ogit.oslc-ems:projectList
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:Service ;
-            ogit.core:to ogit.oslc-ems:ProjectList
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -2504,7 +2574,7 @@ ogit.oslc-ems:projectList
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:quantile
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "quantile";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2513,10 +2583,6 @@ ogit.oslc-ems:quantile
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:QuantileFunction ;
-            ogit.core:to ogit.oslc-ems:Quantile
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -2529,7 +2595,7 @@ ogit.oslc-ems:quantile
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:scenario
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "scenario";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2549,7 +2615,7 @@ ogit.oslc-ems:scenario
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:scenarioList
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "scenarioList";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2557,10 +2623,6 @@ ogit.oslc-ems:scenarioList
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:Service ;
-            ogit.core:to ogit.oslc-ems:ScenarioList
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -2573,7 +2635,7 @@ ogit.oslc-ems:scenarioList
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:seeAlsoEstimation
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "seeAlsoEstimation";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2593,7 +2655,7 @@ ogit.oslc-ems:seeAlsoEstimation
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:seeAlsoPerformance
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "seeAlsoPerformance";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2613,7 +2675,7 @@ ogit.oslc-ems:seeAlsoPerformance
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:seeAlsoPortfolio
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "seeAlsoPortfolio";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2633,7 +2695,7 @@ ogit.oslc-ems:seeAlsoPortfolio
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:seeAlsoProject
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "seeAlsoProject";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2653,7 +2715,7 @@ ogit.oslc-ems:seeAlsoProject
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:service
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "service";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2674,7 +2736,7 @@ ogit.oslc-ems:service
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:tableSource
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "tableSource";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2709,7 +2771,7 @@ ogit.oslc-ems:tableSource
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:to
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "to";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2719,10 +2781,6 @@ ogit.oslc-ems:to
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:Mapping ;
-            ogit.core:to ogit.oslc-ems:DimensionMember
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -2735,7 +2793,7 @@ ogit.oslc-ems:to
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:unitOfMeasure
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "unitOfMeasure";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2744,10 +2802,6 @@ ogit.oslc-ems:unitOfMeasure
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:Measure ;
-            ogit.core:to ogit.oslc-ems:UnitOfMeasure
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -2760,7 +2814,7 @@ ogit.oslc-ems:unitOfMeasure
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:useMap
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "useMap";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2781,7 +2835,7 @@ ogit.oslc-ems:useMap
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:wbsContent
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "wbsContent";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2807,7 +2861,7 @@ ogit.oslc-ems:wbsContent
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:wbsFormat
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "wbsFormat";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";
@@ -2818,10 +2872,6 @@ ogit.oslc-ems:wbsFormat
     dcterms:modified "2016-09-22";
     dcterms:valid "start=2016-09-22;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.oslc-ems:WorkBreakdownStructure ;
-            ogit.core:to ogit.oslc-ems:WbsFormat
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:hide "false";
     ogit.core:history [
@@ -2834,7 +2884,7 @@ ogit.oslc-ems:wbsFormat
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-ems:wbsSource
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "wbsSource";
     dcterms:created "2016-09-22";
     dcterms:creator "OGIT Importer";

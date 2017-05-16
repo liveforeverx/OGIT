@@ -1,5 +1,6 @@
 @prefix dcterms:         <http://purl.org/dc/terms/> .
 @prefix ogit:            <http://www.purl.org/ogit/> .
+@prefix ogit._forum:     <http://www.purl.org/ogit/> .
 @prefix ogit.automation: <http://www.purl.org/ogit/Automation/> .
 @prefix ogit.core:       <http://www.purl.org/ogit/> .
 @prefix ogit.forum:      <http://www.purl.org/ogit/Forum/> .
@@ -20,7 +21,7 @@ ogit:forum
     owl:versionInfo "__OGIT_VERSION__";
     dcterms:contributor "Fabian Meyer";
     dcterms:creator "arago GmbH";
-    vann:preferredNamespacePrefix "ogit.Forum";
+    vann:preferredNamespacePrefix "ogit.forum";
     vann:preferredNamespaceUri "http://www.purl.org/ogit/Forum/" .
 
 #
@@ -44,7 +45,14 @@ ogit.forum:Award
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
-    sh:property [
+    sh:property
+        [
+            sh:class ogit.forum:Award ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:precedes
+        ],
+        [
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.foundation:title
@@ -94,7 +102,13 @@ ogit.forum:Configuration
         ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property [
+            sh:class ogit.forum:Profile ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._forum:configures
+        ] .
 
 ogit.forum:FeedEntry
     a ogit.core:Entity;
@@ -114,7 +128,13 @@ ogit.forum:FeedEntry
         ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property [
+            sh:class ogit.forum:FeedEntry ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:precedes
+        ] .
 
 ogit.forum:Group
     a ogit.core:Entity;
@@ -133,7 +153,38 @@ ogit.forum:Group
         ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property
+        [
+            sh:class ogit.forum:KnowledgeItemHistory ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:owns
+        ],
+        [
+            sh:class ogit.forum:Role ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:associates
+        ],
+        [
+            sh:class ogit.forum:KnowledgeBundle ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.forum:features
+        ],
+        [
+            sh:class ogit.forum:KnowledgeBundle ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:owns
+        ],
+        [
+            sh:class ogit.forum:Topic ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:owns
+        ] .
 
 ogit.forum:Invite
     a ogit.core:Entity;
@@ -153,10 +204,35 @@ ogit.forum:Invite
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
-    sh:property [
+    sh:property
+        [
+            sh:class ogit.forum:Profile ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:requests
+        ],
+        [
+            sh:class ogit.forum:Topic ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:corresponds
+        ],
+        [
+            sh:class ogit.forum:KnowledgeItemHistory ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:corresponds
+        ],
+        [
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.foundation:token
+        ],
+        [
+            sh:class ogit.forum:KnowledgeBundle ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:corresponds
         ] .
 
 ogit.forum:KnowledgeBundle
@@ -179,6 +255,12 @@ ogit.forum:KnowledgeBundle
     ogit.core:tech-contact "arago GmbH";
     sh:property
         [
+            sh:class ogit.forum:Topic ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.foundation:name
@@ -187,6 +269,36 @@ ogit.forum:KnowledgeBundle
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.foundation:accessControl
+        ],
+        [
+            sh:class ogit.forum:Post ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
+            sh:class ogit.forum:Permission ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:requires
+        ],
+        [
+            sh:class ogit.forum:Reply ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
+            sh:class ogit.forum:Profile ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
+            sh:class ogit.forum:KnowledgeBundle ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
         ] .
 
 ogit.forum:KnowledgeItemHistory
@@ -212,6 +324,36 @@ ogit.forum:KnowledgeItemHistory
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
     sh:property
+        [
+            sh:class ogit.forum:Post ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
+            sh:class ogit.forum:Profile ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
+            sh:class ogit.forum:KnowledgeItemHistory ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:associates
+        ],
+        [
+            sh:class ogit.forum:Reply ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
+            sh:class ogit.forum:KnowledgeBundle ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -261,6 +403,24 @@ ogit.forum:KnowledgeItemHistory
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.foundation:accessControl
+        ],
+        [
+            sh:class ogit.forum:Topic ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
+            sh:class ogit.forum:KnowledgeItemHistory ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
+            sh:class ogit.forum:Permission ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:requires
         ] .
 
 ogit.forum:Permission
@@ -280,7 +440,20 @@ ogit.forum:Permission
         ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property
+        [
+            sh:class ogit.forum:Profile ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:approves
+        ],
+        [
+            sh:class ogit.forum:Group ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:approves
+        ] .
 
 ogit.forum:Post
     a ogit.core:Entity;
@@ -300,10 +473,53 @@ ogit.forum:Post
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
-    sh:property [
+    sh:property
+        [
+            sh:class ogit.forum:Profile ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.forum:mentions
+        ],
+        [
+            sh:class ogit.forum:Post ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
+            sh:class ogit.forum:KnowledgeBundle ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
+            sh:class ogit.forum:Reply ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
+            sh:class ogit.forum:Topic ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.foundation:content
+        ],
+        [
+            sh:class ogit.forum:Profile ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
+            sh:class ogit.forum:KnowledgeItemHistory ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
         ] .
 
 ogit.forum:Profile
@@ -327,6 +543,114 @@ ogit.forum:Profile
     ogit.core:tech-contact "arago GmbH";
     sh:property
         [
+            sh:class ogit.forum:Topic ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._forum:subscribes
+        ],
+        [
+            sh:class ogit.forum:Invite ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:creates
+        ],
+        [
+            sh:class ogit.forum:Post ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:creates
+        ],
+        [
+            sh:class ogit.forum:Rating ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._forum:endorses
+        ],
+        [
+            sh:class ogit.forum:Permission ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:creates
+        ],
+        [
+            sh:class ogit.forum:Post ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._forum:endorses
+        ],
+        [
+            sh:class ogit.forum:KnowledgeBundle ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._forum:endorses
+        ],
+        [
+            sh:class ogit.forum:Rating ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:creates
+        ],
+        [
+            sh:class ogit.forum:Invite ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._forum:accepts
+        ],
+        [
+            sh:class ogit.forum:Topic ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:creates
+        ],
+        [
+            sh:class ogit.forum:Award ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._forum:wins
+        ],
+        [
+            sh:class ogit.forum:Invite ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:rejects
+        ],
+        [
+            sh:class ogit.forum:KnowledgeItemHistory ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._forum:subscribes
+        ],
+        [
+            sh:class ogit.forum:KnowledgeItemHistory ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._forum:endorses
+        ],
+        [
+            sh:class ogit.forum:Group ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:belongs
+        ],
+        [
+            sh:class ogit.forum:Reply ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:creates
+        ],
+        [
+            sh:class ogit.forum:FeedEntry ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._forum:subscribes
+        ],
+        [
+            sh:class ogit.forum:KnowledgeBundle ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:creates
+        ],
+        [
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.forum:username
@@ -335,6 +659,78 @@ ogit.forum:Profile
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.foundation:name
+        ],
+        [
+            sh:class ogit.forum:KnowledgeItemHistory ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:creates
+        ],
+        [
+            sh:class ogit.forum:Reply ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._forum:endorses
+        ],
+        [
+            sh:class ogit.forum:Rating ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.forum:rates
+        ],
+        [
+            sh:class ogit.forum:FeedEntry ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:owns
+        ],
+        [
+            sh:class ogit.forum:Post ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._forum:subscribes
+        ],
+        [
+            sh:class ogit.forum:Topic ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._forum:moderates
+        ],
+        [
+            sh:class ogit.forum:KnowledgeBundle ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:owns
+        ],
+        [
+            sh:class ogit.forum:KnowledgeBundle ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._forum:subscribes
+        ],
+        [
+            sh:class ogit.forum:KnowledgeBundle ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._forum:moderates
+        ],
+        [
+            sh:class ogit.forum:Topic ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:owns
+        ],
+        [
+            sh:class ogit.forum:Profile ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._forum:subscribes
+        ],
+        [
+            sh:class ogit.forum:KnowledgeBundle ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.forum:downloads
         ] .
 
 ogit.forum:Rating
@@ -364,6 +760,12 @@ ogit.forum:Rating
     ogit.core:tech-contact "arago GmbH";
     sh:property
         [
+            sh:class ogit.forum:KnowledgeItemHistory ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.forum:rates
+        ],
+        [
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.foundation:value
@@ -372,6 +774,12 @@ ogit.forum:Rating
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.foundation:content
+        ],
+        [
+            sh:class ogit.forum:KnowledgeBundle ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.forum:rates
         ] .
 
 ogit.forum:Reply
@@ -392,10 +800,71 @@ ogit.forum:Reply
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
-    sh:property [
+    sh:property
+        [
+            sh:class ogit.forum:Post ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
+            sh:class ogit.forum:Post ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._forum:responds
+        ],
+        [
+            sh:class ogit.forum:KnowledgeItemHistory ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._forum:responds
+        ],
+        [
+            sh:class ogit.forum:Profile ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.forum:mentions
+        ],
+        [
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.foundation:content
+        ],
+        [
+            sh:class ogit.forum:Profile ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
+            sh:class ogit.forum:KnowledgeBundle ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._forum:responds
+        ],
+        [
+            sh:class ogit.forum:KnowledgeBundle ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
+            sh:class ogit.forum:Topic ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
+            sh:class ogit.forum:Reply ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
+            sh:class ogit.forum:KnowledgeItemHistory ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
         ] .
 
 ogit.forum:Role
@@ -415,7 +884,13 @@ ogit.forum:Role
         ];
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH";
+    sh:property [
+            sh:class ogit.forum:Profile ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:belongs
+        ] .
 
 ogit.forum:ShortId
     a ogit.core:Entity;
@@ -453,6 +928,18 @@ ogit.forum:ShortId
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.foundation:function
+        ],
+        [
+            sh:class ogit.forum:Post ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:specifies
+        ],
+        [
+            sh:class ogit.forum:KnowledgeItemHistory ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:specifies
         ] .
 
 ogit.forum:Tag
@@ -474,10 +961,29 @@ ogit.forum:Tag
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
-    sh:property [
+    sh:property
+        [
+            sh:class ogit.forum:Post ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:assignedTo
+        ],
+        [
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.foundation:name
+        ],
+        [
+            sh:class ogit.forum:KnowledgeItemHistory ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:assignedTo
+        ],
+        [
+            sh:class ogit.forum:KnowledgeBundle ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:assignedTo
         ] .
 
 ogit.forum:Topic
@@ -502,6 +1008,18 @@ ogit.forum:Topic
     ogit.core:tech-contact "arago GmbH";
     sh:property
         [
+            sh:class ogit.forum:Permission ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:requires
+        ],
+        [
+            sh:class ogit.forum:Post ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:contains
+        ],
+        [
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.foundation:title
@@ -521,7 +1039,7 @@ ogit.forum:Topic
 # Attributes
 #
 ogit.forum:username
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "username";
     dcterms:created "2015-03-26";
     dcterms:creator "Chris Walker";
@@ -541,7 +1059,7 @@ ogit.forum:username
 # Verbs
 #
 ogit.forum:downloads
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "downloads";
     dcterms:created "2016-02-25";
     dcterms:creator "bneal@arago.de";
@@ -549,10 +1067,6 @@ ogit.forum:downloads
     dcterms:modified "2016-02-25";
     dcterms:valid "start=2016-02-25;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.forum:Profile ;
-            ogit.core:to ogit.forum:KnowledgeBundle
-        ];
     ogit.core:history [
             dcterms:creator "bneal@arago.de" ;
             dcterms:date "2016-02-25" ;
@@ -562,7 +1076,7 @@ ogit.forum:downloads
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.forum:features
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "features";
     dcterms:created "2016-02-25";
     dcterms:creator "bneal@arago.de";
@@ -570,10 +1084,6 @@ ogit.forum:features
     dcterms:modified "2016-02-25";
     dcterms:valid "start=2016-02-25;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.forum:Group ;
-            ogit.core:to ogit.forum:KnowledgeBundle
-        ];
     ogit.core:history [
             dcterms:creator "bneal@arago.de" ;
             dcterms:date "2016-02-25" ;
@@ -583,7 +1093,7 @@ ogit.forum:features
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.forum:mentions
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "mentions";
     dcterms:created "2015-04-27";
     dcterms:creator "cwalker@arago.de";
@@ -593,19 +1103,6 @@ ogit.forum:mentions
     dcterms:modified "2015-04-27";
     dcterms:valid "start=2015-04-27;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed
-        [
-            ogit.core:from ogit:Comment ;
-            ogit.core:to ogit.forum:Profile
-        ],
-        [
-            ogit.core:from ogit.forum:Post ;
-            ogit.core:to ogit.forum:Profile
-        ],
-        [
-            ogit.core:from ogit.forum:Reply ;
-            ogit.core:to ogit.forum:Profile
-        ];
     ogit.core:history [
             dcterms:creator "cwalker@arago.de" ;
             dcterms:date "2015-04-27" ;
@@ -615,7 +1112,7 @@ ogit.forum:mentions
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.forum:rates
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "rates";
     dcterms:created "2015-08-12";
     dcterms:creator "bneal@arago.de";
@@ -623,23 +1120,6 @@ ogit.forum:rates
     dcterms:modified "2016-03-24";
     dcterms:valid "start=2015-08-12;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.forum:Profile ;
-            ogit.core:to ogit.forum:Rating
-        ],
-        [
-            ogit.core:from ogit.forum:Rating ;
-            ogit.core:to ogit.forum:KnowledgeBundle
-        ],
-        [
-            ogit.core:from ogit.forum:Rating ;
-            ogit.core:to ogit.forum:KnowledgeItemHistory
-        ],
-        [
-            ogit.core:from ogit.forum:Rating ;
-            ogit.core:to ogit.automation:KnowledgeItem
-        ];
     ogit.core:history
         [
             dcterms:creator "bneal@arago.de" ;

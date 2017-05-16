@@ -184,6 +184,30 @@ ogit.config:ConfigurationItem
     ogit.core:tech-contact "arago GmbH";
     sh:property
         [
+            sh:class ogit.config:ConfigurationItem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:manages
+        ],
+        [
+            sh:class ogit.config:ConfigurationItem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:contains
+        ],
+        [
+            sh:class ogit.config:ConfigurationItem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:provides
+        ],
+        [
+            sh:class ogit.config:ConfigurationItem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:runsOn
+        ],
+        [
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.foundation:id
@@ -452,6 +476,30 @@ ogit.config:ConfigurationItem
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.config:modelNumber
+        ],
+        [
+            sh:class ogit.config:ConfigurationItem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.config:virtualizes
+        ],
+        [
+            sh:class ogit.config:Attachment ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.config:ConfigurationItem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.config:ConfigurationItem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:deployedTo
         ] .
 
 ogit.config:Parameter
@@ -473,6 +521,12 @@ ogit.config:Parameter
     ogit.core:scope "SGO";
     ogit.core:tech-contact "arago GmbH";
     sh:property
+        [
+            sh:class ogit.config:Parameter ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:reports
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -527,6 +581,12 @@ ogit.config:Parameter
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.foundation:category
+        ],
+        [
+            sh:class ogit.config:Parameter ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.config:proves
         ] .
 
 ogit.config:ParameterType
@@ -558,13 +618,19 @@ ogit.config:ParameterType
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.config:enumValues
+        ],
+        [
+            sh:class ogit.config:Parameter ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:corresponds
         ] .
 
 #
 # Attributes
 #
 ogit.config:asset
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "asset";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -581,7 +647,7 @@ ogit.config:asset
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:assetTag
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "assetTag";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -598,7 +664,7 @@ ogit.config:assetTag
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:assignedAt
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "assignedAt";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -616,7 +682,7 @@ ogit.config:assignedAt
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:availability
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "availability";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -633,7 +699,7 @@ ogit.config:availability
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:businessCriticality
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "businessCriticality";
     dcterms:created "2015-05-27";
     dcterms:creator "Aymen Ayoub";
@@ -650,7 +716,7 @@ ogit.config:businessCriticality
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:checkedInAt
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "checkedInAt";
     dcterms:created "2015-05-27";
     dcterms:creator "Aymen Ayoub";
@@ -668,7 +734,7 @@ ogit.config:checkedInAt
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:checkedOutAt
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "checkedOutAt";
     dcterms:created "2015-05-27";
     dcterms:creator "Aymen Ayoub";
@@ -686,7 +752,7 @@ ogit.config:checkedOutAt
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:ciType
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "ciType";
     dcterms:created "2015-08-20";
     dcterms:creator "Aymen Ayoub";
@@ -703,7 +769,7 @@ ogit.config:ciType
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:class
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "class";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -720,7 +786,7 @@ ogit.config:class
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:confidentiality
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "confidentiality";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -737,7 +803,7 @@ ogit.config:confidentiality
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:contact
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "contact";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -754,7 +820,7 @@ ogit.config:contact
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:deliveredAt
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "deliveredAt";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -772,7 +838,7 @@ ogit.config:deliveredAt
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:enumValues
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "enumValues";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -789,7 +855,7 @@ ogit.config:enumValues
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:externalId
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "id";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -806,7 +872,7 @@ ogit.config:externalId
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:faultCount
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "faultCount";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -823,7 +889,7 @@ ogit.config:faultCount
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:installStatus
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "installStatus";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -841,7 +907,7 @@ ogit.config:installStatus
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:installedAt
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "installedAt";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -859,7 +925,7 @@ ogit.config:installedAt
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:integrity
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "integrity";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -876,7 +942,7 @@ ogit.config:integrity
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:inventoryNumber
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "inventoryNumber";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -894,7 +960,7 @@ ogit.config:inventoryNumber
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:invoiceNumber
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "invoiceNumber";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -911,7 +977,7 @@ ogit.config:invoiceNumber
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:isCritical
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "isCritical";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -930,7 +996,7 @@ ogit.config:isCritical
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:isMutable
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "isMutable";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -947,7 +1013,7 @@ ogit.config:isMutable
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:isSupported
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "isSupported";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -965,7 +1031,7 @@ ogit.config:isSupported
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:lastScannedAt
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "lastScannedAt";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -983,7 +1049,7 @@ ogit.config:lastScannedAt
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:lastUpdatedBy
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "lastUpdatedBy";
     dcterms:created "2015-08-20";
     dcterms:creator "Aymen Ayoub";
@@ -1000,7 +1066,7 @@ ogit.config:lastUpdatedBy
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:leaseContract
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "leaseContract";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1017,7 +1083,7 @@ ogit.config:leaseContract
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:lengthOfReportingPeriod
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "lengthOfReportingPeriod";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1034,7 +1100,7 @@ ogit.config:lengthOfReportingPeriod
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:modelNumber
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "modelNumber";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1051,7 +1117,7 @@ ogit.config:modelNumber
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:operationalStatus
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "operationalStatus";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1069,7 +1135,7 @@ ogit.config:operationalStatus
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:orderedAt
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "orderedAt";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1087,7 +1153,7 @@ ogit.config:orderedAt
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:pendingChange
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "pendingChange";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1104,7 +1170,7 @@ ogit.config:pendingChange
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:productOrderNumber
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "productOrderNumber";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1121,7 +1187,7 @@ ogit.config:productOrderNumber
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:purchasedAt
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "purchasedAt";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1139,7 +1205,7 @@ ogit.config:purchasedAt
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:securityClass
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "securityClass";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1156,7 +1222,7 @@ ogit.config:securityClass
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:serviceContract
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "serviceContract";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1173,7 +1239,7 @@ ogit.config:serviceContract
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:shortDescription
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "shortDescription";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1190,7 +1256,7 @@ ogit.config:shortDescription
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:size
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "size";
     dcterms:created "2015-10-15";
     dcterms:creator "arago Technologies";
@@ -1207,7 +1273,7 @@ ogit.config:size
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:sourceTable
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "sourceTable";
     dcterms:created "2015-08-20";
     dcterms:creator "Aymen Ayoub";
@@ -1224,7 +1290,7 @@ ogit.config:sourceTable
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:soxClass
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "soxClass";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1241,7 +1307,7 @@ ogit.config:soxClass
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:subCategory
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "subCategory";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1258,7 +1324,7 @@ ogit.config:subCategory
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:subType
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "subType";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1275,7 +1341,7 @@ ogit.config:subType
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:updateCount
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "updateCount";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1292,7 +1358,7 @@ ogit.config:updateCount
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:values
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "values";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1309,7 +1375,7 @@ ogit.config:values
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:vendor
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "vendor";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1329,7 +1395,7 @@ ogit.config:vendor
 # Verbs
 #
 ogit.config:proves
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "proves";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1337,10 +1403,6 @@ ogit.config:proves
     dcterms:modified "2015-05-21";
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.config:Parameter ;
-            ogit.core:to ogit.config:Parameter
-        ];
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
@@ -1350,7 +1412,7 @@ ogit.config:proves
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.config:virtualizes
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "virtualizes";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1358,10 +1420,6 @@ ogit.config:virtualizes
     dcterms:modified "2015-07-27";
     dcterms:valid "start=2015-07-27;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.config:ConfigurationItem ;
-            ogit.core:to ogit.config:ConfigurationItem
-        ];
     ogit.core:history [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-07-27" ;

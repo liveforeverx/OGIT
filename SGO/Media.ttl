@@ -64,6 +64,12 @@ ogit.media:Comment
     ogit.core:tech-contact "arago GmbH";
     sh:property
         [
+            sh:class ogit.media:Comment ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.foundation:id
@@ -77,6 +83,12 @@ ogit.media:Comment
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.foundation:creator
+        ],
+        [
+            sh:class ogit.media:Hyperlink ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
         ] .
 
 ogit.media:Hyperlink

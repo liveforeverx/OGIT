@@ -19,7 +19,7 @@ ogit:price
     owl:versionInfo "__OGIT_VERSION__";
     dcterms:contributor "Fabian Meyer";
     dcterms:creator "arago GmbH";
-    vann:preferredNamespacePrefix "ogit.Price";
+    vann:preferredNamespacePrefix "ogit.price";
     vann:preferredNamespaceUri "http://www.purl.org/ogit/Price/" .
 
 #
@@ -88,7 +88,7 @@ ogit.price:PriceSpecification
 # Attributes
 #
 ogit.price:discreteValue
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "discreteValue";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -105,7 +105,7 @@ ogit.price:discreteValue
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.price:factor
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "factor";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -122,7 +122,7 @@ ogit.price:factor
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.price:factorTarget
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "factorTarget";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -139,7 +139,7 @@ ogit.price:factorTarget
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.price:priceAmount
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "priceAmount";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -156,7 +156,7 @@ ogit.price:priceAmount
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.price:priceTimeUnit
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "priceTimeUnit";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -173,7 +173,7 @@ ogit.price:priceTimeUnit
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.price:targetAttribute
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "targetAttribute";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -190,7 +190,7 @@ ogit.price:targetAttribute
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.price:timeUnitSeconds
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "timeUnitSeconds";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";

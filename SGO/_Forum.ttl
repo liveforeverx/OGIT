@@ -2,8 +2,6 @@
 @prefix ogit:        <http://www.purl.org/ogit/> .
 @prefix ogit._forum: <http://www.purl.org/ogit/> .
 @prefix ogit.core:   <http://www.purl.org/ogit/> .
-@prefix ogit.forum:  <http://www.purl.org/ogit/Forum/> .
-@prefix ogit.media:  <http://www.purl.org/ogit/> .
 @prefix owl:         <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann:        <http://purl.org/vocab/vann/> .
@@ -20,7 +18,7 @@ ogit:forum
 # Verbs
 #
 ogit._forum:accepts
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "accepts";
     dcterms:created "2015-09-02";
     dcterms:creator "bmoore@arago.de";
@@ -28,10 +26,6 @@ ogit._forum:accepts
     dcterms:modified "2015-09-02";
     dcterms:valid "start=2015-09-02;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.forum:Profile ;
-            ogit.core:to ogit.forum:Invite
-        ];
     ogit.core:history [
             dcterms:creator "bmoore@arago.de" ;
             dcterms:date "2015-09-02" ;
@@ -41,7 +35,7 @@ ogit._forum:accepts
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:configures
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "configures";
     dcterms:created "2015-04-27";
     dcterms:creator "cwalker@arago.de";
@@ -49,10 +43,6 @@ ogit._forum:configures
     dcterms:modified "2015-04-27";
     dcterms:valid "start=2015-04-27;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.forum:Configuration ;
-            ogit.core:to ogit.forum:Profile
-        ];
     ogit.core:history [
             dcterms:creator "cwalker@arago.de" ;
             dcterms:date "2015-04-27" ;
@@ -62,7 +52,7 @@ ogit._forum:configures
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:endorses
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "endorses";
     dcterms:created "2015-04-27";
     dcterms:creator "cwalker@arago.de";
@@ -71,27 +61,6 @@ ogit._forum:endorses
     dcterms:modified "2015-04-27";
     dcterms:valid "start=2015-04-27;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.forum:Profile ;
-            ogit.core:to ogit.forum:KnowledgeBundle
-        ],
-        [
-            ogit.core:from ogit.forum:Profile ;
-            ogit.core:to ogit.forum:KnowledgeItemHistory
-        ],
-        [
-            ogit.core:from ogit.forum:Profile ;
-            ogit.core:to ogit.forum:Post
-        ],
-        [
-            ogit.core:from ogit.forum:Profile ;
-            ogit.core:to ogit.forum:Reply
-        ],
-        [
-            ogit.core:from ogit.forum:Profile ;
-            ogit.core:to ogit.forum:Rating
-        ];
     ogit.core:history
         [
             dcterms:creator "cwalker@arago.de" ;
@@ -114,7 +83,7 @@ ogit._forum:endorses
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:moderates
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "moderates";
     dcterms:created "2015-04-23";
     dcterms:creator "cwalker@arago.de";
@@ -123,15 +92,6 @@ ogit._forum:moderates
     dcterms:modified "2015-04-23";
     dcterms:valid "start=2015-04-23;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.forum:Profile ;
-            ogit.core:to ogit.forum:Topic
-        ],
-        [
-            ogit.core:from ogit.forum:Profile ;
-            ogit.core:to ogit.forum:KnowledgeBundle
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:history [
             dcterms:creator "cwalker@arago.de" ;
@@ -142,7 +102,7 @@ ogit._forum:moderates
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:responds
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "responds";
     dcterms:created "2015-04-27";
     dcterms:creator "cwalker@arago.de";
@@ -151,27 +111,6 @@ ogit._forum:responds
     dcterms:modified "2015-04-27";
     dcterms:valid "start=2015-04-27;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.media:Comment ;
-            ogit.core:to ogit.forum:Reply
-        ],
-        [
-            ogit.core:from ogit.forum:Reply ;
-            ogit.core:to ogit.forum:KnowledgeItemHistory
-        ],
-        [
-            ogit.core:from ogit.forum:Reply ;
-            ogit.core:to ogit.forum:Post
-        ],
-        [
-            ogit.core:from ogit.forum:Reply ;
-            ogit.core:to ogit.forum:KnowledgeBundle
-        ],
-        [
-            ogit.core:from ogit.media:Comment ;
-            ogit.core:to ogit.forum:Rating
-        ];
     ogit.core:history
         [
             dcterms:creator "cwalker@arago.de" ;
@@ -194,7 +133,7 @@ ogit._forum:responds
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:subscribes
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "subscribes";
     dcterms:created "2015-04-27";
     dcterms:creator "cwalker@arago.de";
@@ -203,31 +142,6 @@ ogit._forum:subscribes
     dcterms:modified "2015-04-27";
     dcterms:valid "start=2015-04-27;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.forum:Profile ;
-            ogit.core:to ogit.forum:KnowledgeItemHistory
-        ],
-        [
-            ogit.core:from ogit.forum:Profile ;
-            ogit.core:to ogit.forum:Topic
-        ],
-        [
-            ogit.core:from ogit.forum:Profile ;
-            ogit.core:to ogit.forum:Post
-        ],
-        [
-            ogit.core:from ogit.forum:Profile ;
-            ogit.core:to ogit.forum:KnowledgeBundle
-        ],
-        [
-            ogit.core:from ogit.forum:Profile ;
-            ogit.core:to ogit.forum:Profile
-        ],
-        [
-            ogit.core:from ogit.forum:Profile ;
-            ogit.core:to ogit.forum:FeedEntry
-        ];
     ogit.core:history
         [
             dcterms:creator "cwalker@arago.de" ;
@@ -250,7 +164,7 @@ ogit._forum:subscribes
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:wins
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "wins";
     dcterms:created "2015-04-23";
     dcterms:creator "cwalker@arago.de";
@@ -259,10 +173,6 @@ ogit._forum:wins
     dcterms:modified "2015-04-23";
     dcterms:valid "start=2015-04-23;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.forum:Profile ;
-            ogit.core:to ogit.forum:Award
-        ];
     ogit.core:cardinality "many2many";
     ogit.core:history [
             dcterms:creator "cwalker@arago.de" ;

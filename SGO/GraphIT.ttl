@@ -1,14 +1,12 @@
-@prefix dcterms:           <http://purl.org/dc/terms/> .
-@prefix ogit:              <http://www.purl.org/ogit/> .
-@prefix ogit.core:         <http://www.purl.org/ogit/> .
-@prefix ogit.graphit:      <http://www.purl.org/ogit/> .
-@prefix ogit.organization: <http://www.purl.org/ogit/> .
-@prefix ogit.person:       <http://www.purl.org/ogit/> .
-@prefix owl:               <http://www.w3.org/2002/07/owl#> .
-@prefix purl:              <http://www.purl.org/> .
-@prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh:                <http://www.w3.org/ns/shacl#> .
-@prefix vann:              <http://purl.org/vocab/vann/> .
+@prefix dcterms:      <http://purl.org/dc/terms/> .
+@prefix ogit:         <http://www.purl.org/ogit/> .
+@prefix ogit.core:    <http://www.purl.org/ogit/> .
+@prefix ogit.graphit: <http://www.purl.org/ogit/> .
+@prefix owl:          <http://www.w3.org/2002/07/owl#> .
+@prefix purl:         <http://www.purl.org/> .
+@prefix rdfs:         <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:           <http://www.w3.org/ns/shacl#> .
+@prefix vann:         <http://purl.org/vocab/vann/> .
 
 #
 # Ontology
@@ -122,7 +120,7 @@ ogit.graphit:Node
 # Attributes
 #
 ogit.graphit:_content
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "_content";
     dcterms:created "2015-07-27";
     dcterms:creator "Peter Larem";
@@ -139,7 +137,7 @@ ogit.graphit:_content
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.graphit:_created-on
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "_created-on";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -156,7 +154,7 @@ ogit.graphit:_created-on
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.graphit:_creator
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "_creator";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -173,7 +171,7 @@ ogit.graphit:_creator
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.graphit:_creator-app
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "_creator-app";
     dcterms:created "2015-07-27";
     dcterms:creator "Peter Larem";
@@ -190,7 +188,7 @@ ogit.graphit:_creator-app
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.graphit:_deleted-on
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "_deleted-on";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -207,7 +205,7 @@ ogit.graphit:_deleted-on
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.graphit:_edge_id
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "_content";
     dcterms:created "2015-07-27";
     dcterms:creator "Peter Larem";
@@ -224,7 +222,7 @@ ogit.graphit:_edge_id
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.graphit:_graphtype
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "_graphtype";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -241,7 +239,7 @@ ogit.graphit:_graphtype
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.graphit:_id
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "_id";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -258,7 +256,7 @@ ogit.graphit:_id
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.graphit:_is-deleted
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "_is-deleted";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -275,7 +273,7 @@ ogit.graphit:_is-deleted
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.graphit:_modified-by
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "_modified-by";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -292,7 +290,7 @@ ogit.graphit:_modified-by
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.graphit:_modified-by-app
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "_modified-by-app";
     dcterms:created "2015-07-27";
     dcterms:creator "Peter Larem";
@@ -309,7 +307,7 @@ ogit.graphit:_modified-by-app
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.graphit:_modified-on
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "_modified-on";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -326,7 +324,7 @@ ogit.graphit:_modified-on
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.graphit:_owner
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "_owner";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -343,7 +341,7 @@ ogit.graphit:_owner
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.graphit:_tags
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "_tags";
     dcterms:created "2015-07-27";
     dcterms:creator "Peter Larem";
@@ -360,7 +358,7 @@ ogit.graphit:_tags
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.graphit:_type
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "_type";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -377,7 +375,7 @@ ogit.graphit:_type
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.graphit:_version
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "_version";
     dcterms:created "2015-05-27";
     dcterms:creator "Peter Larem";
@@ -397,7 +395,7 @@ ogit.graphit:_version
 # Verbs
 #
 ogit.graphit:_created
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "_created";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -405,15 +403,6 @@ ogit.graphit:_created
     dcterms:modified "2015-05-21";
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.graphit:Node
-        ],
-        [
-            ogit.core:from ogit.organization:Organization ;
-            ogit.core:to ogit.graphit:Node
-        ];
     ogit.core:hide "true";
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
@@ -424,7 +413,7 @@ ogit.graphit:_created
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.graphit:_deleted
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "_deleted";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -432,15 +421,6 @@ ogit.graphit:_deleted
     dcterms:modified "2015-05-21";
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.graphit:Node
-        ],
-        [
-            ogit.core:from ogit.organization:Organization ;
-            ogit.core:to ogit.graphit:Node
-        ];
     ogit.core:hide "true";
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
@@ -451,7 +431,7 @@ ogit.graphit:_deleted
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.graphit:_owns
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "_owns";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -459,15 +439,6 @@ ogit.graphit:_owns
     dcterms:modified "2015-05-21";
     dcterms:valid "start=2015-05-21;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed
-        [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.graphit:Node
-        ],
-        [
-            ogit.core:from ogit.organization:Organization ;
-            ogit.core:to ogit.graphit:Node
-        ];
     ogit.core:hide "true";
     ogit.core:history [
             dcterms:creator "Peter Larem" ;

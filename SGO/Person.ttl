@@ -63,6 +63,18 @@ ogit.person:Account
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.foundation:email
+        ],
+        [
+            sh:class ogit.person:Account ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:follows
+        ],
+        [
+            sh:class ogit.person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
         ] .
 
 ogit.person:Email
@@ -83,7 +95,14 @@ ogit.person:Email
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "SGO";
     ogit.core:tech-contact "arago GmbH";
-    sh:property [
+    sh:property
+        [
+            sh:class ogit.person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.foundation:status
@@ -126,6 +145,24 @@ ogit.person:Person
     ogit.core:scope "SGO";
     ogit.core:tech-contact "arago GmbH";
     sh:property
+        [
+            sh:class ogit.person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.person:invites
+        ],
+        [
+            sh:class ogit.person:Vcard ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:owns
+        ],
+        [
+            sh:class ogit.person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.person:dislikes
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
@@ -200,6 +237,36 @@ ogit.person:Person
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.person:position
+        ],
+        [
+            sh:class ogit.person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:reports
+        ],
+        [
+            sh:class ogit.person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.person:likes
+        ],
+        [
+            sh:class ogit.person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:follows
+        ],
+        [
+            sh:class ogit.person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:represents
+        ],
+        [
+            sh:class ogit.person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:communicatesWith
         ] .
 
 ogit.person:Vcard
@@ -253,7 +320,7 @@ ogit.person:Vcard
 # Attributes
 #
 ogit.person:addressLocality
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "addressLocality";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -270,7 +337,7 @@ ogit.person:addressLocality
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:alternativeName
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "alternativeName";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -287,7 +354,7 @@ ogit.person:alternativeName
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:fax
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "fax";
     dcterms:created "2015-05-21";
     dcterms:creator "Philipp Pelchmann";
@@ -304,7 +371,7 @@ ogit.person:fax
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:firstName
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "firstName";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -321,7 +388,7 @@ ogit.person:firstName
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:lastName
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "lastName";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -338,7 +405,7 @@ ogit.person:lastName
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:middleName
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "middleName";
     dcterms:created "2015-05-21";
     dcterms:creator "Philipp Pelchmann";
@@ -355,7 +422,7 @@ ogit.person:middleName
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:mobilePhone
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "mobilePhone";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -372,7 +439,7 @@ ogit.person:mobilePhone
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:notification
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "notification";
     dcterms:created "2015-05-21";
     dcterms:creator "Philipp Pelchmann";
@@ -389,7 +456,7 @@ ogit.person:notification
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:officePhone
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "officePhone";
     dcterms:created "2015-05-21";
     dcterms:creator "Philipp Pelchmann";
@@ -406,7 +473,7 @@ ogit.person:officePhone
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:otherPhone
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "otherPhone";
     dcterms:created "2015-05-21";
     dcterms:creator "Philipp Pelchmann";
@@ -423,7 +490,7 @@ ogit.person:otherPhone
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:position
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "position";
     dcterms:created "2016-10-18";
     dcterms:creator "Arthur Shoba";
@@ -443,7 +510,7 @@ ogit.person:position
 # Verbs
 #
 ogit.person:dislikes
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "dislikes";
     dcterms:created "2015-09-15";
     dcterms:creator "Peter Larem";
@@ -451,10 +518,6 @@ ogit.person:dislikes
     dcterms:modified "2015-09-15";
     dcterms:valid "start=2015-09-15;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.person:Person
-        ];
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-09-15" ;
@@ -464,7 +527,7 @@ ogit.person:dislikes
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:invites
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "invites";
     dcterms:created "2015-09-15";
     dcterms:creator "Peter Larem";
@@ -472,10 +535,6 @@ ogit.person:invites
     dcterms:modified "2015-09-15";
     dcterms:valid "start=2015-09-15;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.person:Person
-        ];
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-09-15" ;
@@ -485,7 +544,7 @@ ogit.person:invites
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.person:likes
-    a ogit.core:Verb;
+    a ogit:Verb;
     rdfs:label "likes";
     dcterms:created "2015-09-15";
     dcterms:creator "Peter Larem";
@@ -493,10 +552,6 @@ ogit.person:likes
     dcterms:modified "2015-09-15";
     dcterms:valid "start=2015-09-15;";
     ogit.core:admin-contact "arago GmbH";
-    ogit.core:allowed [
-            ogit.core:from ogit.person:Person ;
-            ogit.core:to ogit.person:Person
-        ];
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-09-15" ;

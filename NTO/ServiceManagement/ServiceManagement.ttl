@@ -20,7 +20,7 @@ ogit:serviceManagement
     owl:versionInfo "__OGIT_VERSION__";
     dcterms:contributor "Fabian Meyer";
     dcterms:creator "arago GmbH";
-    vann:preferredNamespacePrefix "ogit.ServiceManagement";
+    vann:preferredNamespacePrefix "ogit.serviceManagement";
     vann:preferredNamespaceUri "http://www.purl.org/ogit/ServiceManagement/" .
 
 #
@@ -46,6 +46,12 @@ ogit.serviceManagement:Action
     ogit.core:tech-contact "arago GmbH";
     sh:property
         [
+            sh:class ogit.serviceManagement:Action ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:requires
+        ],
+        [
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.foundation:name
@@ -59,6 +65,12 @@ ogit.serviceManagement:Action
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.foundation:description
+        ],
+        [
+            sh:class ogit.serviceManagement:Service ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:requires
         ] .
 
 ogit.serviceManagement:ApprovalTask
@@ -88,6 +100,18 @@ ogit.serviceManagement:ApprovalTask
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
     sh:property
+        [
+            sh:class ogit.serviceManagement:ApprovalTask ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:precedes
+        ],
+        [
+            sh:class ogit.serviceManagement:ChangeRequest ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:belongs
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
@@ -151,6 +175,48 @@ ogit.serviceManagement:ChangeRequest
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
     sh:property
+        [
+            sh:class ogit.serviceManagement:Order ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._serviceManagement:causes
+        ],
+        [
+            sh:class ogit.serviceManagement:Service ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:assignedTo
+        ],
+        [
+            sh:class ogit.serviceManagement:ChangeRequest ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._serviceManagement:causes
+        ],
+        [
+            sh:class ogit.serviceManagement:Order ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.serviceManagement:ChangeRequest ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.serviceManagement:Ticket ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:corresponds
+        ],
+        [
+            sh:class ogit.serviceManagement:ChangeRequest ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:uses
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -260,6 +326,30 @@ ogit.serviceManagement:ChangeRequest
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.serviceManagement:customer
+        ],
+        [
+            sh:class ogit.serviceManagement:SLA ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:complies
+        ],
+        [
+            sh:class ogit.serviceManagement:Service ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:affects
+        ],
+        [
+            sh:class ogit.serviceManagement:Problem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.serviceManagement:Incident ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
         ] .
 
 ogit.serviceManagement:Incident
@@ -306,6 +396,54 @@ ogit.serviceManagement:Incident
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
     sh:property
+        [
+            sh:class ogit.serviceManagement:Service ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:assignedTo
+        ],
+        [
+            sh:class ogit.serviceManagement:ChangeRequest ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.serviceManagement:Problem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.serviceManagement:Order ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._serviceManagement:causes
+        ],
+        [
+            sh:class ogit.serviceManagement:ChangeRequest ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._serviceManagement:causes
+        ],
+        [
+            sh:class ogit.serviceManagement:Incident ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.serviceManagement:Ticket ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:corresponds
+        ],
+        [
+            sh:class ogit.serviceManagement:Service ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:affects
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
@@ -365,6 +503,24 @@ ogit.serviceManagement:Incident
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit._serviceManagement:reportedAt
+        ],
+        [
+            sh:class ogit.serviceManagement:Incident ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._serviceManagement:causes
+        ],
+        [
+            sh:class ogit.serviceManagement:SLA ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:complies
+        ],
+        [
+            sh:class ogit.serviceManagement:Problem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._serviceManagement:causes
         ] .
 
 ogit.serviceManagement:Offering
@@ -386,6 +542,12 @@ ogit.serviceManagement:Offering
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
     sh:property
+        [
+            sh:class ogit.serviceManagement:Order ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:contains
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -440,6 +602,12 @@ ogit.serviceManagement:Offering
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit._serviceManagement:market
+        ],
+        [
+            sh:class ogit.serviceManagement:Service ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:contains
         ] .
 
 ogit.serviceManagement:Order
@@ -468,6 +636,36 @@ ogit.serviceManagement:Order
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
     sh:property
+        [
+            sh:class ogit.serviceManagement:ChangeRequest ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._serviceManagement:causes
+        ],
+        [
+            sh:class ogit.serviceManagement:Order ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.serviceManagement:Ticket ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._serviceManagement:causes
+        ],
+        [
+            sh:class ogit.serviceManagement:Ticket ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.serviceManagement:Service ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:corresponds
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -542,6 +740,30 @@ ogit.serviceManagement:Order
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.foundation:summary
+        ],
+        [
+            sh:class ogit.serviceManagement:Problem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.serviceManagement:Incident ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.serviceManagement:ChangeRequest ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.serviceManagement:Order ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._serviceManagement:causes
         ] .
 
 ogit.serviceManagement:Problem
@@ -570,6 +792,24 @@ ogit.serviceManagement:Problem
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
     sh:property
+        [
+            sh:class ogit.serviceManagement:Service ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:assignedTo
+        ],
+        [
+            sh:class ogit.serviceManagement:Ticket ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:corresponds
+        ],
+        [
+            sh:class ogit.serviceManagement:ChangeRequest ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -604,6 +844,48 @@ ogit.serviceManagement:Problem
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.serviceManagement:workAround
+        ],
+        [
+            sh:class ogit.serviceManagement:Incident ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.serviceManagement:Problem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.serviceManagement:Problem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._serviceManagement:causes
+        ],
+        [
+            sh:class ogit.serviceManagement:ChangeRequest ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._serviceManagement:causes
+        ],
+        [
+            sh:class ogit.serviceManagement:SLA ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:complies
+        ],
+        [
+            sh:class ogit.serviceManagement:Order ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.serviceManagement:Problem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._serviceManagement:opens
         ] .
 
 ogit.serviceManagement:Report
@@ -625,6 +907,12 @@ ogit.serviceManagement:Report
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
     sh:property
+        [
+            sh:class ogit.serviceManagement:Service ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:creates
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
@@ -742,6 +1030,18 @@ ogit.serviceManagement:Service
     ogit.core:tech-contact "arago GmbH";
     sh:property
         [
+            sh:class ogit.serviceManagement:Service ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._serviceManagement:calls
+        ],
+        [
+            sh:class ogit.serviceManagement:Action ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:requires
+        ],
+        [
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.foundation:id
@@ -760,6 +1060,42 @@ ogit.serviceManagement:Service
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.foundation:uri
+        ],
+        [
+            sh:class ogit.serviceManagement:SLA ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:complies
+        ],
+        [
+            sh:class ogit.serviceManagement:Incident ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._serviceManagement:opens
+        ],
+        [
+            sh:class ogit.serviceManagement:Report ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:generates
+        ],
+        [
+            sh:class ogit.serviceManagement:Action ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:supports
+        ],
+        [
+            sh:class ogit.serviceManagement:Service ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:requires
+        ],
+        [
+            sh:class ogit.serviceManagement:Ticket ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._serviceManagement:opens
         ] .
 
 ogit.serviceManagement:SubTask
@@ -802,6 +1138,30 @@ ogit.serviceManagement:SubTask
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
     sh:property
+        [
+            sh:class ogit.serviceManagement:Order ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:belongs
+        ],
+        [
+            sh:class ogit.serviceManagement:SubTask ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:precedes
+        ],
+        [
+            sh:class ogit.serviceManagement:ChangeRequest ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:belongs
+        ],
+        [
+            sh:class ogit.serviceManagement:Problem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:belongs
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -891,6 +1251,18 @@ ogit.serviceManagement:SubTask
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.foundation:type
+        ],
+        [
+            sh:class ogit.serviceManagement:Incident ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:belongs
+        ],
+        [
+            sh:class ogit.serviceManagement:Ticket ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:belongs
         ] .
 
 ogit.serviceManagement:Ticket
@@ -931,6 +1303,12 @@ ogit.serviceManagement:Ticket
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
     sh:property
+        [
+            sh:class ogit.serviceManagement:Ticket ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._serviceManagement:causes
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -1005,13 +1383,25 @@ ogit.serviceManagement:Ticket
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.serviceManagement:ticketId
+        ],
+        [
+            sh:class ogit.serviceManagement:Service ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:assignedTo
+        ],
+        [
+            sh:class ogit.serviceManagement:Ticket ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
         ] .
 
 #
 # Attributes
 #
 ogit.serviceManagement:allowedForNewBusiness
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "allowedForNewBusiness";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1028,7 +1418,7 @@ ogit.serviceManagement:allowedForNewBusiness
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:approvalStatus
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "approvalStatus";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1047,7 +1437,7 @@ ogit.serviceManagement:approvalStatus
     ogit.core:validation-type "regex" .
 
 ogit.serviceManagement:changeStatus
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "changeStatus";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1079,7 +1469,7 @@ ogit.serviceManagement:changeStatus
     ogit.core:validation-type "regex" .
 
 ogit.serviceManagement:customer
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "customer";
     dcterms:created "2015-07-03";
     dcterms:creator "Aymen Ayoub";
@@ -1096,7 +1486,7 @@ ogit.serviceManagement:customer
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:elapsedTime
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "elapsedTime";
     dcterms:created "2015-06-08";
     dcterms:creator "Aymen Ayoub";
@@ -1113,7 +1503,7 @@ ogit.serviceManagement:elapsedTime
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:eventMessage
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "eventMessage";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1130,7 +1520,7 @@ ogit.serviceManagement:eventMessage
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:eventNodeId
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "eventNodeId";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1148,7 +1538,7 @@ ogit.serviceManagement:eventNodeId
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:externalTicketId
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "externalTicketId";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1165,7 +1555,7 @@ ogit.serviceManagement:externalTicketId
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:externalTicketSource
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "externalTicketSource";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1182,7 +1572,7 @@ ogit.serviceManagement:externalTicketSource
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:fallbackPlan
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "fallbackPlan";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1199,7 +1589,7 @@ ogit.serviceManagement:fallbackPlan
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:granularity
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "granularity";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1216,7 +1606,7 @@ ogit.serviceManagement:granularity
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:implementationPlan
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "implementationPlan";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1233,7 +1623,7 @@ ogit.serviceManagement:implementationPlan
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:incidentStatus
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "incidentStatus";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1259,7 +1649,7 @@ ogit.serviceManagement:incidentStatus
     ogit.core:validation-type "regex" .
 
 ogit.serviceManagement:isRequired
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "isRequired";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1276,7 +1666,7 @@ ogit.serviceManagement:isRequired
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:leftTime
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "leftTime";
     dcterms:created "2015-06-08";
     dcterms:creator "Aymen Ayoub";
@@ -1293,7 +1683,7 @@ ogit.serviceManagement:leftTime
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:licenseTokenStatus
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "licenseTokenStatus";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1312,7 +1702,7 @@ ogit.serviceManagement:licenseTokenStatus
     ogit.core:validation-type "regex" .
 
 ogit.serviceManagement:problemStatus
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "problemStatus";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1331,7 +1721,7 @@ ogit.serviceManagement:problemStatus
     ogit.core:validation-type "regex" .
 
 ogit.serviceManagement:reportedSource
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "reportedSource";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1348,7 +1738,7 @@ ogit.serviceManagement:reportedSource
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:requirementId
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "requirementId";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1365,7 +1755,7 @@ ogit.serviceManagement:requirementId
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:resolutionCode
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "resolutionCode";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1382,7 +1772,7 @@ ogit.serviceManagement:resolutionCode
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:resolvedAt
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "resolvedAt";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1400,7 +1790,7 @@ ogit.serviceManagement:resolvedAt
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:resolvedInTime
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "resolvedAt";
     dcterms:created "2015-08-11";
     dcterms:creator "Philipp Pelchmann";
@@ -1417,7 +1807,7 @@ ogit.serviceManagement:resolvedInTime
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:rootCause
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "rootCause";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1434,7 +1824,7 @@ ogit.serviceManagement:rootCause
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:scheduledFinishAt
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "scheduledFinishAt";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1452,7 +1842,7 @@ ogit.serviceManagement:scheduledFinishAt
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:scheduledStartAt
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "scheduledStartAt";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1470,7 +1860,7 @@ ogit.serviceManagement:scheduledStartAt
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:slaStage
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "slaStage";
     dcterms:created "2015-06-08";
     dcterms:creator "Aymen Ayoub";
@@ -1494,7 +1884,7 @@ ogit.serviceManagement:slaStage
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:solution
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "solution";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1512,7 +1902,7 @@ ogit.serviceManagement:solution
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:sourceStatus
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "sourceStatus";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1538,7 +1928,7 @@ ogit.serviceManagement:sourceStatus
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:targetFinishAt
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "targetFinishAt";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1556,7 +1946,7 @@ ogit.serviceManagement:targetFinishAt
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:targetStartAt
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "targetStartAt";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1574,7 +1964,7 @@ ogit.serviceManagement:targetStartAt
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:task
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "task";
     dcterms:created "2015-07-06";
     dcterms:creator "Aymen Ayoub";
@@ -1591,7 +1981,7 @@ ogit.serviceManagement:task
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:taskName
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "taskName";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1608,7 +1998,7 @@ ogit.serviceManagement:taskName
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:taskStatus
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "taskStatus";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1634,7 +2024,7 @@ ogit.serviceManagement:taskStatus
     ogit.core:validation-type "regex" .
 
 ogit.serviceManagement:testPlan
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "testPlan";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1651,7 +2041,7 @@ ogit.serviceManagement:testPlan
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:ticketId
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "ticketId";
     dcterms:created "2015-05-26";
     dcterms:creator "Peter Larem";
@@ -1668,7 +2058,7 @@ ogit.serviceManagement:ticketId
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.serviceManagement:workAround
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "workAround";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";

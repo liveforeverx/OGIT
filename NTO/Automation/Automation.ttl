@@ -21,7 +21,7 @@ ogit:automation
     owl:versionInfo "__OGIT_VERSION__";
     dcterms:contributor "Fabian Meyer";
     dcterms:creator "arago GmbH";
-    vann:preferredNamespacePrefix "ogit.Automation";
+    vann:preferredNamespacePrefix "ogit.automation";
     vann:preferredNamespaceUri "http://www.purl.org/ogit/Automation/" .
 
 #
@@ -75,6 +75,24 @@ ogit.automation:AutomationIssue
     ogit.core:tech-contact "arago GmbH";
     sh:property
         [
+            sh:class ogit.automation:MARSNode ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.automation:Item ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:contains
+        ],
+        [
+            sh:class ogit.automation:MARSNode ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._automation:worksOn
+        ],
+        [
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.automation:issueFormalRepresentation
@@ -113,6 +131,18 @@ ogit.automation:AutomationIssue
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.automation:deployStatus
+        ],
+        [
+            sh:class ogit.automation:History ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:generates
+        ],
+        [
+            sh:class ogit.automation:DynamicEngineData ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:contains
         ] .
 
 ogit.automation:DynamicEngineData
@@ -134,6 +164,12 @@ ogit.automation:DynamicEngineData
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
     sh:property
+        [
+            sh:class ogit.automation:DynamicEngineData ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:contains
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
@@ -219,10 +255,23 @@ ogit.automation:Item
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
-    sh:property [
+    sh:property
+        [
+            sh:class ogit.automation:Item ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:contains
+        ],
+        [
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.foundation:name
+        ],
+        [
+            sh:class ogit.automation:KnowledgeItemAttribute ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:contains
         ] .
 
 ogit.automation:KnowledgeItem
@@ -267,6 +316,24 @@ ogit.automation:KnowledgeItem
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
     sh:property
+        [
+            sh:class ogit.automation:MARSNodeTemplate ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.automation:Trigger ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:contains
+        ],
+        [
+            sh:class ogit.automation:AutomationIssue ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._automation:worksOn
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
@@ -326,6 +393,12 @@ ogit.automation:KnowledgeItem
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.automation:deployStatus
+        ],
+        [
+            sh:class ogit.automation:KnowledgeItem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
         ] .
 
 ogit.automation:KnowledgeItemAttribute
@@ -430,6 +503,12 @@ ogit.automation:MARSModel
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.foundation:description
+        ],
+        [
+            sh:class ogit.automation:MARSNode ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:contains
         ] .
 
 ogit.automation:MARSModelTemplate
@@ -461,6 +540,12 @@ ogit.automation:MARSModelTemplate
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.foundation:description
+        ],
+        [
+            sh:class ogit.automation:MARSNodeTemplate ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:contains
         ] .
 
 ogit.automation:MARSNode
@@ -556,6 +641,54 @@ ogit.automation:MARSNode
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
     sh:property
+        [
+            sh:class ogit.automation:MARSNode ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:affects
+        ],
+        [
+            sh:class ogit.automation:MARSNodeTemplate ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.automation:MARSNode ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:provides
+        ],
+        [
+            sh:class ogit.automation:MARSNode ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._automation:dependsOn
+        ],
+        [
+            sh:class ogit.automation:MARSNode ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:runsOn
+        ],
+        [
+            sh:class ogit.automation:MARSNode ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:deployedTo
+        ],
+        [
+            sh:class ogit.automation:DynamicEngineData ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:contains
+        ],
+        [
+            sh:class ogit.automation:MARSNode ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
@@ -950,6 +1083,24 @@ ogit.automation:MARSNode
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.automation:deployStatus
+        ],
+        [
+            sh:class ogit.automation:MARSNode ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:contains
+        ],
+        [
+            sh:class ogit.automation:KnowledgeItem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.automation:MARSNode ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit._automation:hosts
         ] .
 
 ogit.automation:MARSNodeTemplate
@@ -986,6 +1137,18 @@ ogit.automation:MARSNodeTemplate
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.foundation:status
+        ],
+        [
+            sh:class ogit.automation:MARSNodeTemplate ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.automation:MARSNode ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
         ] .
 
 ogit.automation:Trigger
@@ -1006,17 +1169,24 @@ ogit.automation:Trigger
     ogit.core:parent "http://www.purl.org/ogit/Node";
     ogit.core:scope "NTO";
     ogit.core:tech-contact "arago GmbH";
-    sh:property [
+    sh:property
+        [
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.foundation:description
+        ],
+        [
+            sh:class ogit.automation:Item ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:contains
         ] .
 
 #
 # Attributes
 #
 ogit.automation:additionalMacAddress
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "additionalMacAddress";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1033,7 +1203,7 @@ ogit.automation:additionalMacAddress
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:adminUrl
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "adminUrl";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -1050,7 +1220,7 @@ ogit.automation:adminUrl
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:affectedNodeId
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "affectedNodeId";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1067,7 +1237,7 @@ ogit.automation:affectedNodeId
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:appInfrastructureType
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "appInfrastructureType";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -1084,7 +1254,7 @@ ogit.automation:appInfrastructureType
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:appInstanceType
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "appInstanceType";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -1101,7 +1271,7 @@ ogit.automation:appInstanceType
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:appServer
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "appServer";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -1118,7 +1288,7 @@ ogit.automation:appServer
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:basicConfigId
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "basicConfigId";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1135,7 +1305,7 @@ ogit.automation:basicConfigId
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:brand
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "brand";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1152,7 +1322,7 @@ ogit.automation:brand
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:buildName
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "buildName";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -1169,7 +1339,7 @@ ogit.automation:buildName
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:buildType
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "buildType";
     dcterms:created "2015-08-19";
     dcterms:creator "Aymen Ayoub";
@@ -1186,7 +1356,7 @@ ogit.automation:buildType
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:command
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "command";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1203,7 +1373,7 @@ ogit.automation:command
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:companyName
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "companyName";
     dcterms:created "2015-11-02";
     dcterms:creator "Peter Larem";
@@ -1220,7 +1390,7 @@ ogit.automation:companyName
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:contextPath
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "contextPath";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -1237,7 +1407,7 @@ ogit.automation:contextPath
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:cpuCoreCount
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "cpuCoreCount";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1254,7 +1424,7 @@ ogit.automation:cpuCoreCount
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:cpuCount
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "cpuCount";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1271,7 +1441,7 @@ ogit.automation:cpuCount
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:cpuManufacturer
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "cpuManufacturer";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1288,7 +1458,7 @@ ogit.automation:cpuManufacturer
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:cpuModel
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "cpuModel";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1305,7 +1475,7 @@ ogit.automation:cpuModel
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:cpuSpeed
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "cpuSpeed";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1322,7 +1492,7 @@ ogit.automation:cpuSpeed
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:cpuType
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "cpuType";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1339,7 +1509,7 @@ ogit.automation:cpuType
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:dataClassification
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "dataClassification";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -1356,7 +1526,7 @@ ogit.automation:dataClassification
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:dataPrivacy
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "dataPrivacy";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -1373,7 +1543,7 @@ ogit.automation:dataPrivacy
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:databaseSchema
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "databaseSchema";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1390,7 +1560,7 @@ ogit.automation:databaseSchema
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:databaseServer
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "databaseServer";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1407,7 +1577,7 @@ ogit.automation:databaseServer
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:deployStatus
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "deployStatus";
     dcterms:created "2016-01-25";
     dcterms:creator "Peter Larem";
@@ -1424,7 +1594,7 @@ ogit.automation:deployStatus
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:deployToEngine
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "deployToEngine";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1441,7 +1611,7 @@ ogit.automation:deployToEngine
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:diskCount
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "diskCount";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1458,7 +1628,7 @@ ogit.automation:diskCount
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:diskSpace
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "diskSpace";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1475,7 +1645,7 @@ ogit.automation:diskSpace
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:domain
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "domain";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1492,7 +1662,7 @@ ogit.automation:domain
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:exchangeRate
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "exchangeRate";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1509,7 +1679,7 @@ ogit.automation:exchangeRate
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:firewallStatus
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "firewallStatus";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1526,7 +1696,7 @@ ogit.automation:firewallStatus
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:firmwareVersion
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "firmWareVersion";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1543,7 +1713,7 @@ ogit.automation:firmwareVersion
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:fqdn
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "fqdn";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1560,7 +1730,7 @@ ogit.automation:fqdn
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:governingContract
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "governingContract";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1577,7 +1747,7 @@ ogit.automation:governingContract
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:host
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "host";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1594,7 +1764,7 @@ ogit.automation:host
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:installCount
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "installCount";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1611,7 +1781,7 @@ ogit.automation:installCount
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:installPath
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "installPath";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -1628,7 +1798,7 @@ ogit.automation:installPath
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:isDeployed
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "isDeployed";
     dcterms:created "2016-01-25";
     dcterms:creator "Peter Larem";
@@ -1645,7 +1815,7 @@ ogit.automation:isDeployed
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:issueFormalRepresentation
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "issueFormalRepresentation";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1662,7 +1832,7 @@ ogit.automation:issueFormalRepresentation
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:knowledgeItemFormalRepresentation
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "knowledgeItemFormalRepresentation";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1679,7 +1849,7 @@ ogit.automation:knowledgeItemFormalRepresentation
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:knowledgeItemId
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "knowledgeItemId";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1696,7 +1866,7 @@ ogit.automation:knowledgeItemId
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:knowledgeItemTier
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "knowledgeItemTier";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1713,7 +1883,7 @@ ogit.automation:knowledgeItemTier
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:licenseAvailability
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "licenseAvailability";
     dcterms:created "2015-07-24";
     dcterms:creator "Peter Larem";
@@ -1730,7 +1900,7 @@ ogit.automation:licenseAvailability
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:licenseName
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "licenseName";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -1747,7 +1917,7 @@ ogit.automation:licenseName
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:licenseType
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "licenseType";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -1764,7 +1934,7 @@ ogit.automation:licenseType
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:logLevel
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "logLevel";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1781,7 +1951,7 @@ ogit.automation:logLevel
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:maidFormalRepresentation
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "maidFormalRepresentation";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1798,7 +1968,7 @@ ogit.automation:maidFormalRepresentation
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:marsNodeFormalRepresentation
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "marsNodeFormalRepresentation";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1815,7 +1985,7 @@ ogit.automation:marsNodeFormalRepresentation
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:marsNodeType
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "marsNodeType";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -1832,7 +2002,7 @@ ogit.automation:marsNodeType
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:memory
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "memory";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1849,7 +2019,7 @@ ogit.automation:memory
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:middlewareType
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "middlewareType";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1866,7 +2036,7 @@ ogit.automation:middlewareType
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:moveToProductionAt
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "moveToProductionAt";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1884,7 +2054,7 @@ ogit.automation:moveToProductionAt
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:objectIdentifier
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "objectIdentifier";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1901,7 +2071,7 @@ ogit.automation:objectIdentifier
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:osKey
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "osKey";
     dcterms:created "2015-07-27";
     dcterms:creator "Philipp Pelchmann";
@@ -1918,7 +2088,7 @@ ogit.automation:osKey
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:osLicense
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "osLicense";
     dcterms:created "2015-07-27";
     dcterms:creator "Philipp Pelchmann";
@@ -1935,7 +2105,7 @@ ogit.automation:osLicense
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:osManufacturer
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "osManufacturer";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -1952,7 +2122,7 @@ ogit.automation:osManufacturer
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:osName
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "osName";
     dcterms:created "2015-07-27";
     dcterms:creator "Philipp Pelchmann";
@@ -1969,7 +2139,7 @@ ogit.automation:osName
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:osServicePack
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "osServicePack";
     dcterms:created "2015-07-27";
     dcterms:creator "Philipp Pelchmann";
@@ -1986,7 +2156,7 @@ ogit.automation:osServicePack
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:osVersion
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "osVersion";
     dcterms:created "2015-07-27";
     dcterms:creator "Philipp Pelchmann";
@@ -2003,7 +2173,7 @@ ogit.automation:osVersion
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:patchNumber
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "patchNumber";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -2020,7 +2190,7 @@ ogit.automation:patchNumber
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:portNumber
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "portNumber";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -2037,7 +2207,7 @@ ogit.automation:portNumber
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:portNumberListener
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "portNumberListener";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -2054,7 +2224,7 @@ ogit.automation:portNumberListener
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:processingTimestamp
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "processingTimestamp";
     dcterms:created "2015-05-21";
     dcterms:creator "Peter Larem";
@@ -2071,7 +2241,7 @@ ogit.automation:processingTimestamp
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:projectName
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "projectName";
     dcterms:created "2015-11-02";
     dcterms:creator "Peter Larem";
@@ -2088,7 +2258,7 @@ ogit.automation:projectName
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:serialNumber
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "serialNumber";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -2105,7 +2275,7 @@ ogit.automation:serialNumber
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:serviceClass
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "serviceClass";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -2122,7 +2292,7 @@ ogit.automation:serviceClass
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:serviceId
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "serviceId";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -2139,7 +2309,7 @@ ogit.automation:serviceId
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:serviceName
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "serviceName";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -2156,7 +2326,7 @@ ogit.automation:serviceName
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:serviceStatus
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "serviceStatus";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -2173,7 +2343,7 @@ ogit.automation:serviceStatus
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:serviceType
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "serviceType";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -2190,7 +2360,7 @@ ogit.automation:serviceType
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:servletClass
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "servletClass";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -2207,7 +2377,7 @@ ogit.automation:servletClass
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:servletName
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "servletName";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -2224,7 +2394,7 @@ ogit.automation:servletName
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:software
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "software";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -2241,7 +2411,7 @@ ogit.automation:software
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:softwareKey
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "softwareKey";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -2258,7 +2428,7 @@ ogit.automation:softwareKey
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:systemClass
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "systemClass";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -2275,7 +2445,7 @@ ogit.automation:systemClass
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:systemType
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "systemType";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -2292,7 +2462,7 @@ ogit.automation:systemType
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:tcpPort
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "tcpPort";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";
@@ -2309,7 +2479,7 @@ ogit.automation:tcpPort
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:virtualMachineName
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "virtualMachineName";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -2326,7 +2496,7 @@ ogit.automation:virtualMachineName
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:virtualSystemName
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "virtualSystemName";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -2343,7 +2513,7 @@ ogit.automation:virtualSystemName
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:virtualSystemType
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "virtualSystemType";
     dcterms:created "2015-07-27";
     dcterms:creator "Aymen Ayoub";
@@ -2360,7 +2530,7 @@ ogit.automation:virtualSystemType
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.automation:webServer
-    a ogit.core:Attribute;
+    a ogit:Attribute;
     rdfs:label "webServer";
     dcterms:created "2015-07-24";
     dcterms:creator "Aymen Ayoub";

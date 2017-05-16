@@ -1,8 +1,28 @@
+List of enabled NTOs
+====
+
+Currently the following NTOs have been enabled for OGIT:
+
+* [Automation](Automation)
+* [Business Process](BusinessProcess)
+* [Cost](Cost)
+* [Datacenter](Datacenter)
+* [Forum](Forum)
+* [Network](Network)
+* [Price](Price)
+* [Service Management](ServiceManagement)
+* [Software](Software)
+* [Statistics](Statistics)
+
+The format used within the Turtle files is described [here](https://github.com/arago/OGIT/wiki/OGIT-ontology-details).
+
+## Cost
+
 All elements for the cost model are in the Cost NTO and can be found in OGIT under „ogit/Cost“.
 
 The cost model defines the cost structure of a vendor through a hierarchy of cost elements.
 
-Planning templates describe assumptions about how many instances of a certain service with a certain parameterization the vendor will have to operate. Applying a price function to the cost model yields the price model. 
+Planning templates describe assumptions about how many instances of a certain service with a certain parameterization the vendor will have to operate. Applying a price function to the cost model yields the price model.
 
 #### Cost element for a Service
 
@@ -26,7 +46,7 @@ A service, e.g. DBHosting has associated to it different types of costs. Let’s
 
 Each cost element could have an incoming  and an outgoing edge, which connects it to another cost element and contains it’s weight indicating how much it contributes/consists in relation to another cost element.
 
-E.g.: from the picture below we can understand that the CPU cost is consisting in 30% of HR cost. 5% of the HR cost contribute to the CPU costs. 
+E.g.: from the picture below we can understand that the CPU cost is consisting in 30% of HR cost. 5% of the HR cost contribute to the CPU costs.
 
 ![cost](/docs/images/cost.png)
 
@@ -54,3 +74,15 @@ A *Planning Template* is an estimated planning of cost elements referring to:
 As there could be some services that don’t have any parameters, the additional edge plansCostFor from PlanningTemplate to Service is required.
 
 A Planning Parameter will contain a concrete value of a Parameter and the statistics derived from the expected distribution as attributes.
+
+## Forum
+
+This NTO is pertains to generic web forum / social media. Heavily utilised by [TabTab](https://tabtab.co/)
+
+## Statistics
+
+Elements for the autopilot statistics are grouped under the stats NTO and can be found in OGIT under "ogit/stats".
+
+## UserMeta
+
+This NTO pertains to generic meta around an ogit/Person. Initially used for Game Meta in aragoId

@@ -39,15 +39,15 @@
 #
 # Ontology
 #
-ogit:sgo
+ogit:nexus
     a owl:Ontology;
-    rdfs:label "OGIT Semantic Graph Ontology";
+    rdfs:label "OGIT Nexus";
     owl:imports purl:ogit;
     owl:versionInfo "__OGIT_VERSION__";
     dcterms:contributor "Fabian Meyer";
     dcterms:creator "arago GmbH";
     dcterms:description "This ontology contains inter-domain knowledge."@en;
-    vann:preferredNamespacePrefix "ogit.sgo";
+    vann:preferredNamespacePrefix "ogit.nexus";
     vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #

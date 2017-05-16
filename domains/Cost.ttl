@@ -14,36 +14,38 @@
 # Ontology
 #
 ogit:cost
-    a owl:Ontology;
-    rdfs:label "OGIT Cost";
-    owl:imports purl:ogit;
-    owl:versionInfo "__OGIT_VERSION__";
-    dcterms:contributor "Fabian Meyer";
-    dcterms:creator "arago GmbH";
-    vann:preferredNamespacePrefix "ogit.cost";
-    vann:preferredNamespaceUri "http://www.purl.org/ogit/Cost/" .
+    a owl:Ontology ;
+    rdfs:label "OGIT Cost" ;
+    owl:imports purl:ogit ;
+    owl:versionInfo "__OGIT_VERSION__" ;
+    dcterms:contributor "Fabian Meyer" ;
+    dcterms:creator "arago GmbH" ;
+    vann:preferredNamespacePrefix
+        "ogit._cost",
+        "ogit.cost" ;
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
 #
 ogit.cost:Budget
-    a ogit.core:Entity;
-    rdfs:label "Budget";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "The budget covers the CostElement. It is a list of all the money an Organisation or Business Unit plans to receive, and plans to pay out, over a specified period of time. For a general overview: see the NTO description on github.";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "Budget" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "The budget covers the CostElement. It is a list of all the money an Organisation or Business Unit plans to receive, and plans to pay out, over a specified period of time. For a general overview: see the NTO description on github." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH";
+        ] ;
+    ogit.core:parent "http://www.purl.org/ogit/Node" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     sh:property [
             sh:class ogit.cost:CostElement ;
             sh:description "" ;
@@ -52,23 +54,23 @@ ogit.cost:Budget
         ] .
 
 ogit.cost:CostDistribution
-    a ogit.core:Entity;
-    rdfs:label "CostDistribution";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "Auxiliary structure to express the influence of CostElements on one another. For more detailed explanation please check definition of the entity ogit/CostModel/CostElement and for a general overview: see the NTO description on github.";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "CostDistribution" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Auxiliary structure to express the influence of CostElements on one another. For more detailed explanation please check definition of the entity ogit/CostModel/CostElement and for a general overview: see the NTO description on github." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH";
+        ] ;
+    ogit.core:parent "http://www.purl.org/ogit/Node" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     sh:property [
             sh:class ogit.cost:CostElement ;
             sh:description "" ;
@@ -77,23 +79,23 @@ ogit.cost:CostDistribution
         ] .
 
 ogit.cost:CostElement
-    a ogit.core:Entity;
-    rdfs:label "CostElement";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "The cost element is a type of cost for an activity, an ordered service or a business unit or budget. There are 3 levels of cost elements: Top Level, Middle Level, Bottom Level. Between the different levels, for each cost element there could be two types of edges: Incoming and Outgoing. Each type of edge could have two types of connections: consistsOf and contributesTo. E.g. a cost element CPU consists in 30% of a HR cost element. The HR cost element contributes in 40% to the cost of the CPU cost element. This percentage values will then be saved in the entity Distribution, which will be connected to the cost element. For a general overview: see the NTO description on github.";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "CostElement" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "The cost element is a type of cost for an activity, an ordered service or a business unit or budget. There are 3 levels of cost elements: Top Level, Middle Level, Bottom Level. Between the different levels, for each cost element there could be two types of edges: Incoming and Outgoing. Each type of edge could have two types of connections: consistsOf and contributesTo. E.g. a cost element CPU consists in 30% of a HR cost element. The HR cost element contributes in 40% to the cost of the CPU cost element. This percentage values will then be saved in the entity Distribution, which will be connected to the cost element. For a general overview: see the NTO description on github." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH";
+        ] ;
+    ogit.core:parent "http://www.purl.org/ogit/Node" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     sh:property [
             sh:class ogit.cost:CostDistribution ;
             sh:description "" ;
@@ -102,23 +104,23 @@ ogit.cost:CostElement
         ] .
 
 ogit.cost:PlanningParameter
-    a ogit.core:Entity;
-    rdfs:label "PlanningParameter";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "A Planning Parameter describes a Planning Template. It will contain a concrete value of a Parameter and the statistics derived from the expected distribution as attributes. For a general overview: see the NTO description on github.";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "PlanningParameter" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "A Planning Parameter describes a Planning Template. It will contain a concrete value of a Parameter and the statistics derived from the expected distribution as attributes. For a general overview: see the NTO description on github." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH";
+        ] ;
+    ogit.core:parent "http://www.purl.org/ogit/Node" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     sh:property [
             sh:class ogit.cost:PlanningTemplate ;
             sh:description "" ;
@@ -127,23 +129,23 @@ ogit.cost:PlanningParameter
         ] .
 
 ogit.cost:PlanningTemplate
-    a ogit.core:Entity;
-    rdfs:label "PlanningTemplate";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "A Planning Template is an estimated planning of cost elements referring to an Implementation Template and a Planning Parameter. It will consist of a recursive set of sub-templates, connected through an edge, where each one of them will represent a service. For a general overview: see the NTO description on github.";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "PlanningTemplate" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "A Planning Template is an estimated planning of cost elements referring to an Implementation Template and a Planning Parameter. It will consist of a recursive set of sub-templates, connected through an edge, where each one of them will represent a service. For a general overview: see the NTO description on github." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH";
+        ] ;
+    ogit.core:parent "http://www.purl.org/ogit/Node" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:class ogit.cost:PlanningTemplate ;
@@ -157,3 +159,75 @@ ogit.cost:PlanningTemplate
             sh:minCount 0 ;
             sh:path ogit._cost:plans
         ] .
+
+#
+# Verbs
+#
+ogit._cost:assumes
+    a ogit:Verb ;
+    rdfs:label "assumes" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "verb which allows to connect the planning parameters to a planning template" ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit._cost:contributes
+    a ogit:Verb ;
+    rdfs:label "contributes" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description """Verb associates which entity contributes to another, for example could be used to express a distribution for the percentage
+        of a cost element, which contributes to another cost element.""" ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit._cost:covers
+    a ogit:Verb ;
+    rdfs:label "covers" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Verb showing which entity covers another entity." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit._cost:plans
+    a ogit:Verb ;
+    rdfs:label "plans" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Verb showing how one entity plans/predicts on the content of another entity" ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .

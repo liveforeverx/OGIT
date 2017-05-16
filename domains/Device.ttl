@@ -14,36 +14,36 @@
 # Ontology
 #
 ogit:device
-    a owl:Ontology;
-    rdfs:label "OGIT Device";
-    owl:imports purl:ogit;
-    owl:versionInfo "__OGIT_VERSION__";
-    dcterms:contributor "Fabian Meyer";
-    dcterms:creator "arago GmbH";
-    vann:preferredNamespacePrefix "ogit.device";
+    a owl:Ontology ;
+    rdfs:label "OGIT Device" ;
+    owl:imports purl:ogit ;
+    owl:versionInfo "__OGIT_VERSION__" ;
+    dcterms:contributor "Fabian Meyer" ;
+    dcterms:creator "arago GmbH" ;
+    vann:preferredNamespacePrefix "ogit.device" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
 #
 ogit.device:Device
-    a ogit.core:Entity;
-    rdfs:label "Device";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "Any type of device";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "Device" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Any type of device" ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:scope "SGO";
-    ogit.core:tech-contact "arago GmbH";
+        ] ;
+    ogit.core:parent "http://www.purl.org/ogit/Node" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:maxCount 1 ;

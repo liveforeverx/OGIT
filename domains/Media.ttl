@@ -13,27 +13,27 @@
 # Ontology
 #
 ogit:media
-    a owl:Ontology;
-    rdfs:label "OGIT Media";
-    owl:imports purl:ogit;
-    owl:versionInfo "__OGIT_VERSION__";
-    dcterms:contributor "Fabian Meyer";
-    dcterms:creator "arago GmbH";
-    vann:preferredNamespacePrefix "ogit.media";
+    a owl:Ontology ;
+    rdfs:label "OGIT Media" ;
+    owl:imports purl:ogit ;
+    owl:versionInfo "__OGIT_VERSION__" ;
+    dcterms:contributor "Fabian Meyer" ;
+    dcterms:creator "arago GmbH" ;
+    vann:preferredNamespacePrefix "ogit.media" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
 #
 ogit.media:Comment
-    a ogit.core:Entity;
-    rdfs:label "Comment";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "Defines comments for a ticket, issue or another type of entity. Also known as WorkLog, ChangeLog or HistoryEntry.";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "Comment" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Defines comments for a ticket, issue or another type of entity. Also known as WorkLog, ChangeLog or HistoryEntry." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
             dcterms:creator "Peter Larem" ;
@@ -58,10 +58,10 @@ ogit.media:Comment
             dcterms:date "2015-10-16" ;
             dcterms:description "added ogit/creater as optional." ;
             dcterms:identifier "4"
-        ];
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:scope "SGO";
-    ogit.core:tech-contact "arago GmbH";
+        ] ;
+    ogit.core:parent "http://www.purl.org/ogit/Node" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:class ogit.media:Comment ;
@@ -92,24 +92,24 @@ ogit.media:Comment
         ] .
 
 ogit.media:Hyperlink
-    a ogit.core:Entity;
-    rdfs:label "Hyperlink";
-    dcterms:created "2015-06-09";
-    dcterms:creator "cwalker@arago.de";
-    dcterms:description "A representation of an (optionally) titled Hyperlink to some media. No protocol restrictions imposed.";
-    dcterms:modified "2015-06-09";
-    dcterms:valid "start=2015-06-09;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:any-attributes "true";
+    a ogit.core:Entity ;
+    rdfs:label "Hyperlink" ;
+    dcterms:created "2015-06-09" ;
+    dcterms:creator "cwalker@arago.de" ;
+    dcterms:description "A representation of an (optionally) titled Hyperlink to some media. No protocol restrictions imposed." ;
+    dcterms:modified "2015-06-09" ;
+    dcterms:valid "start=2015-06-09;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:any-attributes "true" ;
     ogit.core:history [
             dcterms:creator "cwalker@arago.de" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:scope "SGO";
-    ogit.core:tech-contact "arago GmbH";
+        ] ;
+    ogit.core:parent "http://www.purl.org/ogit/Node" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:maxCount 1 ;
@@ -123,23 +123,23 @@ ogit.media:Hyperlink
         ] .
 
 ogit.media:Note
-    a ogit.core:Entity;
-    rdfs:label "Note";
-    dcterms:created "2015-04-29";
-    dcterms:creator "Peter Larem";
-    dcterms:description "Any type of note.";
-    dcterms:modified "2013-04-29";
-    dcterms:valid "start=2015-04-29;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "Note" ;
+    dcterms:created "2015-04-29" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Any type of note." ;
+    dcterms:modified "2013-04-29" ;
+    dcterms:valid "start=2015-04-29;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-04-29" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:scope "SGO";
-    ogit.core:tech-contact "arago GmbH";
+        ] ;
+    ogit.core:parent "http://www.purl.org/ogit/Node" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:maxCount 1 ;

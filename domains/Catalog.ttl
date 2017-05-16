@@ -13,36 +13,36 @@
 # Ontology
 #
 ogit:catalog
-    a owl:Ontology;
-    rdfs:label "OGIT Catalog";
-    owl:imports purl:ogit;
-    owl:versionInfo "__OGIT_VERSION__";
-    dcterms:contributor "Fabian Meyer";
-    dcterms:creator "arago GmbH";
-    vann:preferredNamespacePrefix "ogit.catalog";
+    a owl:Ontology ;
+    rdfs:label "OGIT Catalog" ;
+    owl:imports purl:ogit ;
+    owl:versionInfo "__OGIT_VERSION__" ;
+    dcterms:contributor "Fabian Meyer" ;
+    dcterms:creator "arago GmbH" ;
+    vann:preferredNamespacePrefix "ogit.catalog" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
 #
 ogit.catalog:Catalog
-    a ogit.core:Entity;
-    rdfs:label "Catalog";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "Any kind of catalog which could be offered by an Organization (e.g. corresponding to a vendor). Might contain products, services, books, etc.";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "Catalog" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Any kind of catalog which could be offered by an Organization (e.g. corresponding to a vendor). Might contain products, services, books, etc." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:scope "SGO";
-    ogit.core:tech-contact "arago GmbH";
+        ] ;
+    ogit.core:parent "http://www.purl.org/ogit/Node" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:maxCount 1 ;
@@ -77,23 +77,23 @@ ogit.catalog:Catalog
         ] .
 
 ogit.catalog:CatalogItem
-    a ogit.core:Entity;
-    rdfs:label "CatalogItem";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "An entry within a Catalog. the semantics of Item is more general than that of http://purl.org/goodrelations/v1#ProductOrService";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "CatalogItem" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "An entry within a Catalog. the semantics of Item is more general than that of http://purl.org/goodrelations/v1#ProductOrService" ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:scope "SGO";
-    ogit.core:tech-contact "arago GmbH";
+        ] ;
+    ogit.core:parent "http://www.purl.org/ogit/Node" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:maxCount 1 ;

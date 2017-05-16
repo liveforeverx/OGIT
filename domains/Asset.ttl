@@ -13,39 +13,39 @@
 # Ontology
 #
 ogit:asset
-    a owl:Ontology;
-    rdfs:label "OGIT Asset";
-    owl:imports purl:ogit;
-    owl:versionInfo "__OGIT_VERSION__";
-    dcterms:contributor "Fabian Meyer";
-    dcterms:creator "arago GmbH";
-    vann:preferredNamespacePrefix "ogit.asset";
+    a owl:Ontology ;
+    rdfs:label "OGIT Asset" ;
+    owl:imports purl:ogit ;
+    owl:versionInfo "__OGIT_VERSION__" ;
+    dcterms:contributor "Fabian Meyer" ;
+    dcterms:creator "arago GmbH" ;
+    vann:preferredNamespacePrefix "ogit.asset" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
 #
 ogit.asset:Asset
-    a ogit.core:Entity;
-    rdfs:label "Asset";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
+    a ogit.core:Entity ;
+    rdfs:label "Asset" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
     dcterms:description """Assets represent a physical hold of a value and are situated in a location. Assets could correspond to one or more
         ogit/Automation/MARSNode's and can be physical or virtual. Assets of a Service Provider include anything that could
         contribute to the delivery of a Service. Assets can have a type, for example: Management, Organisation, Process,
-        Knowledge, People, Information, Applications, Infrastructure, Financial Capital.""";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
+        Knowledge, People, Information, Applications, Infrastructure, Financial Capital.""" ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:scope "SGO";
-    ogit.core:tech-contact "arago GmbH";
+        ] ;
+    ogit.core:parent "http://www.purl.org/ogit/Node" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:maxCount 1 ;

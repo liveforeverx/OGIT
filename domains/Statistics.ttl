@@ -14,39 +14,39 @@
 # Ontology
 #
 ogit:statistics
-    a owl:Ontology;
-    rdfs:label "OGIT Statistics";
-    owl:imports purl:ogit;
-    owl:versionInfo "__OGIT_VERSION__";
-    dcterms:contributor "Fabian Meyer";
-    dcterms:creator "arago GmbH";
-    vann:preferredNamespacePrefix "ogit.statistics";
+    a owl:Ontology ;
+    rdfs:label "OGIT Statistics" ;
+    owl:imports purl:ogit ;
+    owl:versionInfo "__OGIT_VERSION__" ;
+    dcterms:contributor "Fabian Meyer" ;
+    dcterms:creator "arago GmbH" ;
+    vann:preferredNamespacePrefix "ogit.statistics" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit/Statistics/" .
 
 #
 # Entities
 #
 ogit.statistics:AutomationFamily
-    a ogit.core:Entity;
-    rdfs:label "AutomationFamily";
-    dcterms:created "2016-03-07";
-    dcterms:creator "Liudmyla Nechepurenko";
-    dcterms:description "AutomationFamily defines the group of cases for automation of IT environment and its functionality.";
-    dcterms:modified "2016-03-07";
-    dcterms:valid "start=2016-03-07;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "AutomationFamily" ;
+    dcterms:created "2016-03-07" ;
+    dcterms:creator "Liudmyla Nechepurenko" ;
+    dcterms:description "AutomationFamily defines the group of cases for automation of IT environment and its functionality." ;
+    dcterms:modified "2016-03-07" ;
+    dcterms:valid "start=2016-03-07;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Liudmyla Nechepurenko" ;
             dcterms:date "2016-03-07" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
+        ] ;
     ogit.core:indexed-attributes
         ogit.foundation:description,
-        ogit.foundation:name;
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:scope "NTO";
-    ogit.core:tech-contact "arago GmbH";
+        ogit.foundation:name ;
+    ogit.core:parent "http://www.purl.org/ogit/Node" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:maxCount 1 ;

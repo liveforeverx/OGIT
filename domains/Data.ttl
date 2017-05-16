@@ -13,37 +13,37 @@
 # Ontology
 #
 ogit:data
-    a owl:Ontology;
-    rdfs:label "OGIT Data";
-    owl:imports purl:ogit;
-    owl:versionInfo "__OGIT_VERSION__";
-    dcterms:contributor "Fabian Meyer";
-    dcterms:creator "arago GmbH";
-    vann:preferredNamespacePrefix "ogit.data";
+    a owl:Ontology ;
+    rdfs:label "OGIT Data" ;
+    owl:imports purl:ogit ;
+    owl:versionInfo "__OGIT_VERSION__" ;
+    dcterms:contributor "Fabian Meyer" ;
+    dcterms:creator "arago GmbH" ;
+    vann:preferredNamespacePrefix "ogit.data" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
 #
 ogit.data:CustomApplicationData
-    a ogit.core:Entity;
-    rdfs:label "CustomApplicationData";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
+    a ogit.core:Entity ;
+    rdfs:label "CustomApplicationData" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
     dcterms:description """Entity to store custom application data, a storage place not connected to any other entity and therefore isolated from
-        the global ontology. The storage of data through this entity is discouraged due to low performance.""";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
+        the global ontology. The storage of data through this entity is discouraged due to low performance.""" ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:scope "SGO";
-    ogit.core:tech-contact "arago GmbH";
+        ] ;
+    ogit.core:parent "http://www.purl.org/ogit/Node" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     sh:property [
             sh:class ogit.data:CustomApplicationData ;
             sh:description "" ;
@@ -52,27 +52,27 @@ ogit.data:CustomApplicationData
         ] .
 
 ogit.data:Timeseries
-    a ogit.core:Entity;
-    rdfs:label "Timeseries";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "A time series is a sequence of data points, measured typically at successive points in time spaced at uniform time intervals.";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "Timeseries" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "A time series is a sequence of data points, measured typically at successive points in time spaced at uniform time intervals." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
+        ] ;
     ogit.core:indexed-attributes
         ogit.foundation:description,
         ogit.foundation:instance,
-        ogit.foundation:name;
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:scope "SGO";
-    ogit.core:tech-contact "arago GmbH";
+        ogit.foundation:name ;
+    ogit.core:parent "http://www.purl.org/ogit/Node" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:maxCount 1 ;

@@ -40,14 +40,14 @@
 # Ontology
 #
 ogit:nexus
-    a owl:Ontology;
-    rdfs:label "OGIT Nexus";
-    owl:imports purl:ogit;
-    owl:versionInfo "__OGIT_VERSION__";
-    dcterms:contributor "Fabian Meyer";
-    dcterms:creator "arago GmbH";
-    dcterms:description "This ontology contains inter-domain knowledge."@en;
-    vann:preferredNamespacePrefix "ogit.nexus";
+    a owl:Ontology ;
+    rdfs:label "OGIT Nexus" ;
+    owl:imports purl:ogit ;
+    owl:versionInfo "__OGIT_VERSION__" ;
+    dcterms:contributor "Fabian Meyer" ;
+    dcterms:creator "arago GmbH" ;
+    dcterms:description "This ontology contains inter-domain knowledge."@en ;
+    vann:preferredNamespacePrefix "ogit.nexus" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
@@ -78,8 +78,7 @@ ogit.Automation:History sh:property [
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:generates
-    ]
- .
+    ] .
 
 ogit.Automation:KnowledgeItem sh:property
     [
@@ -232,8 +231,7 @@ ogit.Automation:MARSNodeTemplate sh:property [
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:associates
-    ]
- .
+    ] .
 
 ogit.BusinessProcess:BusinessRuleTask sh:property
     [
@@ -1268,8 +1266,7 @@ ogit.BusinessProcess:Survey sh:property [
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:belongs
-    ]
- .
+    ] .
 
 ogit.BusinessProcess:TerminationEvent sh:property
     [
@@ -1500,32 +1497,28 @@ ogit.Cost:PlanningParameter sh:property [
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:specifies
-    ]
- .
+    ] .
 
 ogit.Cost:PlanningTemplate sh:property [
         sh:class ogit.Automation:MARSModelTemplate ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit._cost:plans
-    ]
- .
+    ] .
 
 ogit.Datacenter:Datacenter sh:property [
         sh:class ogit.location:Location ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.location:locatedIn
-    ]
- .
+    ] .
 
 ogit.Datacenter:Rack sh:property [
         sh:class ogit.device:Device ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:contains
-    ]
- .
+    ] .
 
 ogit.Datacenter:Server sh:property
     [
@@ -1546,24 +1539,21 @@ ogit.Datacenter:Storage sh:property [
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:corresponds
-    ]
- .
+    ] .
 
 ogit.Datacenter:UPS sh:property [
         sh:class ogit.device:Device ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:corresponds
-    ]
- .
+    ] .
 
 ogit.Forum:FeedEntry sh:property [
         sh:class ogit.graphit:Node ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:relates
-    ]
- .
+    ] .
 
 ogit.Forum:KnowledgeBundle sh:property
     [
@@ -1674,8 +1664,7 @@ ogit.Forum:Rating sh:property [
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.Forum:rates
-    ]
- .
+    ] .
 
 ogit.Forum:Reply sh:property
     [
@@ -1702,16 +1691,14 @@ ogit.Forum:ShortId sh:property [
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:specifies
-    ]
- .
+    ] .
 
 ogit.Forum:Tag sh:property [
         sh:class ogit.Automation:KnowledgeItem ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:assignedTo
-    ]
- .
+    ] .
 
 ogit.Knowledge:AcquisitionSession sh:property
     [
@@ -1738,56 +1725,49 @@ ogit.Network:FCHBA sh:property [
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:corresponds
-    ]
- .
+    ] .
 
 ogit.Network:NIC sh:property [
         sh:class ogit.asset:Asset ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:corresponds
-    ]
- .
+    ] .
 
 ogit.Network:NetworkCard sh:property [
         sh:class ogit.asset:Asset ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:corresponds
-    ]
- .
+    ] .
 
 ogit.Network:NetworkEnclosure sh:property [
         sh:class ogit.asset:Asset ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:corresponds
-    ]
- .
+    ] .
 
 ogit.Network:NetworkEndpoint sh:property [
         sh:class ogit.asset:Asset ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:corresponds
-    ]
- .
+    ] .
 
 ogit.Network:NetworkFabric sh:property [
         sh:class ogit.asset:Asset ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:corresponds
-    ]
- .
+    ] .
 
 ogit.Network:Shelf sh:property [
         sh:class ogit.asset:Asset ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:corresponds
-    ]
- .
+    ] .
 
 ogit.Network:SimpleDevice sh:property
     [
@@ -1808,8 +1788,7 @@ ogit.Price:Invoice sh:property [
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:bills
-    ]
- .
+    ] .
 
 ogit.ServiceManagement:Action sh:property
     [
@@ -2102,8 +2081,7 @@ ogit.ServiceManagement:SLA sh:property [
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:triggers
-    ]
- .
+    ] .
 
 ogit.ServiceManagement:Service sh:property
     [
@@ -2252,16 +2230,14 @@ ogit.Software:SoftwareComponent sh:property [
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:uses
-    ]
- .
+    ] .
 
 ogit.Software:SoftwareConnection sh:property [
         sh:class ogit.Network:NetworkLink ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit._software:transfers
-    ]
- .
+    ] .
 
 ogit.asset:Asset sh:property
     [
@@ -2354,8 +2330,7 @@ ogit.catalog:Catalog sh:property [
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:validFor
-    ]
- .
+    ] .
 
 ogit.catalog:CatalogItem sh:property
     [
@@ -2642,24 +2617,21 @@ ogit.license:License sh:property [
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:generates
-    ]
- .
+    ] .
 
 ogit.license:LicenseToken sh:property [
         sh:class ogit.organization:Organization ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:belongs
-    ]
- .
+    ] .
 
 ogit.location:Location sh:property [
         sh:class ogit.data:Timeseries ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:generates
-    ]
- .
+    ] .
 
 ogit.media:Comment sh:property
     [
@@ -3000,16 +2972,14 @@ ogit.organization:Policy sh:property [
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.organization:governs
-    ]
- .
+    ] .
 
 ogit.organization:Role sh:property [
         sh:class ogit.ServiceManagement:Service ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:manages
-    ]
- .
+    ] .
 
 ogit.person:Person sh:property
     [
@@ -3522,29 +3492,25 @@ ogit.person:Vcard sh:property [
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.location:locatedIn
-    ]
- .
+    ] .
 
 ogit.task:Question sh:property [
         sh:class ogit.data:Timeseries ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:generates
-    ]
- .
+    ] .
 
 ogit.task:Task sh:property [
         sh:class ogit.data:Timeseries ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:generates
-    ]
- .
+    ] .
 
 ogit.task:TaskList sh:property [
         sh:class ogit.data:Timeseries ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:generates
-    ]
- .
+    ] .

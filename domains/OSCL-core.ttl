@@ -11,1094 +11,1094 @@
 # Ontology
 #
 ogit:oslc-core
-    a owl:Ontology;
-    rdfs:label "OGIT OSLC Core";
-    owl:imports purl:ogit;
-    owl:versionInfo "__OGIT_VERSION__";
-    dcterms:contributor "Fabian Meyer";
-    dcterms:creator "arago GmbH";
-    vann:preferredNamespacePrefix "ogit.oslc-core";
+    a owl:Ontology ;
+    rdfs:label "OGIT OSLC Core" ;
+    owl:imports purl:ogit ;
+    owl:versionInfo "__OGIT_VERSION__" ;
+    dcterms:contributor "Fabian Meyer" ;
+    dcterms:creator "arago GmbH" ;
+    vann:preferredNamespacePrefix "ogit.oslc-core" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit.oslc-core/" .
 
 #
 # Entities
 #
 ogit.oslc-core:AllowedValues
-    a ogit.core:Entity;
-    rdfs:label "AllowedValues";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Allowed values for one property.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "AllowedValues" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Allowed values for one property." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#AllowedValues>;
-    ogit.core:parent ogit:Node;
-    ogit.core:scope "NTO";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#AllowedValues> ;
+    ogit.core:parent ogit:Node ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:Comment
-    a ogit.core:Entity;
-    rdfs:label "Comment";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "A Comment resource represents a single note, or comment, in a discussion thread.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "Comment" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "A Comment resource represents a single note, or comment, in a discussion thread." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#Comment>;
-    ogit.core:parent ogit:Node;
-    ogit.core:scope "NTO";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#Comment> ;
+    ogit.core:parent ogit:Node ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:Compact
-    a ogit.core:Entity;
-    rdfs:label "Compact";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The Compact representation, fetched as application/x-oslc-compact+xml";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "Compact" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The Compact representation, fetched as application/x-oslc-compact+xml" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#Compact>;
-    ogit.core:parent ogit:Node;
-    ogit.core:scope "NTO";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#Compact> ;
+    ogit.core:parent ogit:Node ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:CreationFactory
-    a ogit.core:Entity;
-    rdfs:label "CreationFactory";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The CreationFactory definition included in a ServiceProvider.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "CreationFactory" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The CreationFactory definition included in a ServiceProvider." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#CreationFactory>;
-    ogit.core:parent ogit:Node;
-    ogit.core:scope "NTO";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#CreationFactory> ;
+    ogit.core:parent ogit:Node ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:Dialog
-    a ogit.core:Entity;
-    rdfs:label "Dialog";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The Dialog definition included in ServiceProvider.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "Dialog" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The Dialog definition included in ServiceProvider." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#Dialog>;
-    ogit.core:parent ogit:Node;
-    ogit.core:scope "NTO";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#Dialog> ;
+    ogit.core:parent ogit:Node ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:Discussion
-    a ogit.core:Entity;
-    rdfs:label "Discussion";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "A Discussion resource is intended to represent a sequence of comments or notes regarding the associated resource";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "Discussion" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "A Discussion resource is intended to represent a sequence of comments or notes regarding the associated resource" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#Discussion>;
-    ogit.core:parent ogit:Node;
-    ogit.core:scope "NTO";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#Discussion> ;
+    ogit.core:parent ogit:Node ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:Error
-    a ogit.core:Entity;
-    rdfs:label "Error";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Basis for forming an error response.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "Error" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Basis for forming an error response." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#Error>;
-    ogit.core:parent ogit:Node;
-    ogit.core:scope "NTO";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#Error> ;
+    ogit.core:parent ogit:Node ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:ExtendedError
-    a ogit.core:Entity;
-    rdfs:label "ExtendedError";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Extended error information.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "ExtendedError" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Extended error information." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#ExtendedError>;
-    ogit.core:parent ogit:Node;
-    ogit.core:scope "NTO";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#ExtendedError> ;
+    ogit.core:parent ogit:Node ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:OAuthConfiguration
-    a ogit.core:Entity;
-    rdfs:label "OAuthConfiguration";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The OAuthConfiguration definition included in ServiceProvider.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "OAuthConfiguration" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The OAuthConfiguration definition included in ServiceProvider." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#OAuthConfiguration>;
-    ogit.core:parent ogit:Node;
-    ogit.core:scope "NTO";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#OAuthConfiguration> ;
+    ogit.core:parent ogit:Node ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:PrefixDefinition
-    a ogit.core:Entity;
-    rdfs:label "PrefixDefinition";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The PrefixDefinition definition included in ServiceProvider.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "PrefixDefinition" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The PrefixDefinition definition included in ServiceProvider." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#PrefixDefinition>;
-    ogit.core:parent ogit:Node;
-    ogit.core:scope "NTO";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#PrefixDefinition> ;
+    ogit.core:parent ogit:Node ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:Preview
-    a ogit.core:Entity;
-    rdfs:label "Preview";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The UI Preview representation.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "Preview" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The UI Preview representation." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#Preview>;
-    ogit.core:parent ogit:Node;
-    ogit.core:scope "NTO";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#Preview> ;
+    ogit.core:parent ogit:Node ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:Property
-    a ogit.core:Entity;
-    rdfs:label "Property";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "A Property resource describes one allowed or required property of a resource.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "Property" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "A Property resource describes one allowed or required property of a resource." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#Property>;
-    ogit.core:parent ogit:Node;
-    ogit.core:scope "NTO";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#Property> ;
+    ogit.core:parent ogit:Node ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:Publisher
-    a ogit.core:Entity;
-    rdfs:label "Publisher";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The Publisher definition included in ServiceProvider.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "Publisher" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The Publisher definition included in ServiceProvider." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#Publisher>;
-    ogit.core:parent ogit:Node;
-    ogit.core:scope "NTO";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#Publisher> ;
+    ogit.core:parent ogit:Node ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:QueryCapability
-    a ogit.core:Entity;
-    rdfs:label "QueryCapability";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The QueryCapability definition included in a ServiceProvider.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "QueryCapability" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The QueryCapability definition included in a ServiceProvider." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#QueryCapability>;
-    ogit.core:parent ogit:Node;
-    ogit.core:scope "NTO";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#QueryCapability> ;
+    ogit.core:parent ogit:Node ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:ResourceShape
-    a ogit.core:Entity;
-    rdfs:label "ResourceShape";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The Resource Shape used for creation, query and modify.  Formally, a shape S applies to a resource R if there is a triple R rdf:type T and there is a triple S oslc:describes T, or if there is a triple R oslc:instanceShape S.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "ResourceShape" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The Resource Shape used for creation, query and modify.  Formally, a shape S applies to a resource R if there is a triple R rdf:type T and there is a triple S oslc:describes T, or if there is a triple R oslc:instanceShape S." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#ResourceShape>;
-    ogit.core:parent ogit:Node;
-    ogit.core:scope "NTO";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#ResourceShape> ;
+    ogit.core:parent ogit:Node ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:ResponseInfo
-    a ogit.core:Entity;
-    rdfs:label "ResponseInfo";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The ResponseInfo included in query results.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "ResponseInfo" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The ResponseInfo included in query results." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#ResponseInfo>;
-    ogit.core:parent ogit:Node;
-    ogit.core:scope "NTO";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#ResponseInfo> ;
+    ogit.core:parent ogit:Node ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:Service
-    a ogit.core:Entity;
-    rdfs:label "Service";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The Service definition included in a ServiceProvider.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "Service" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The Service definition included in a ServiceProvider." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#Service>;
-    ogit.core:parent ogit:Node;
-    ogit.core:scope "NTO";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#Service> ;
+    ogit.core:parent ogit:Node ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:ServiceProvider
-    a ogit.core:Entity;
-    rdfs:label "ServiceProvider";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The Service Provider resource";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "ServiceProvider" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The Service Provider resource" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#ServiceProvider>;
-    ogit.core:parent ogit:Node;
-    ogit.core:scope "NTO";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#ServiceProvider> ;
+    ogit.core:parent ogit:Node ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:ServiceProviderCatalog
-    a ogit.core:Entity;
-    rdfs:label "ServiceProviderCatalog";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The Service Provider Catalog resource";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "ServiceProviderCatalog" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The Service Provider Catalog resource" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#ServiceProviderCatalog>;
-    ogit.core:parent ogit:Node;
-    ogit.core:scope "NTO";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#ServiceProviderCatalog> ;
+    ogit.core:parent ogit:Node ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 #
 # Attributes
 #
 ogit.oslc-core:allowedValue
-    a ogit:Attribute;
-    rdfs:label "allowedValue";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "value allowed for a property.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:hide "false";
+    a ogit:Attribute ;
+    rdfs:label "allowedValue" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "value allowed for a property." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#allowedValue>;
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-parameter "";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#allowedValue> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
     ogit.core:validation-type "" .
 
 ogit.oslc-core:defaultValue
-    a ogit:Attribute;
-    rdfs:label "defaultValue";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "A default value for property, inlined into property definition.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:hide "false";
+    a ogit:Attribute ;
+    rdfs:label "defaultValue" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "A default value for property, inlined into property definition." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#defaultValue>;
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-parameter "";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#defaultValue> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
     ogit.core:validation-type "" .
 
 ogit.oslc-core:hidden
-    a ogit:Attribute;
-    rdfs:label "hidden";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "A hint that indicates that property MAY be hidden when presented in a user interface.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:hide "false";
+    a ogit:Attribute ;
+    rdfs:label "hidden" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "A hint that indicates that property MAY be hidden when presented in a user interface." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#hidden>;
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-parameter "";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#hidden> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
     ogit.core:validation-type "" .
 
 ogit.oslc-core:hintHeight
-    a ogit:Attribute;
-    rdfs:label "hintHeight";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Values MUST be expressed in relative length units as defined in the W3C Cascading Style Sheets Specification (CSS 2.1) Em and ex units are interpreted relative to the default system font (at 100% size).";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:hide "false";
+    a ogit:Attribute ;
+    rdfs:label "hintHeight" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Values MUST be expressed in relative length units as defined in the W3C Cascading Style Sheets Specification (CSS 2.1) Em and ex units are interpreted relative to the default system font (at 100% size)." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#hintHeight>;
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-parameter "";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#hintHeight> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
     ogit.core:validation-type "" .
 
 ogit.oslc-core:hintWidth
-    a ogit:Attribute;
-    rdfs:label "hintWidth";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Values MUST be expressed in relative length units as defined in the W3C Cascading Style Sheets Specification (CSS 2.1) Em and ex units are interpreted relative to the default system font (at 100% size).";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:hide "false";
+    a ogit:Attribute ;
+    rdfs:label "hintWidth" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Values MUST be expressed in relative length units as defined in the W3C Cascading Style Sheets Specification (CSS 2.1) Em and ex units are interpreted relative to the default system font (at 100% size)." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#hintWidth>;
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-parameter "";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#hintWidth> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
     ogit.core:validation-type "" .
 
 ogit.oslc-core:isMemberProperty
-    a ogit:Attribute;
-    rdfs:label "isMemberProperty";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Used to define when a property is a member of a container, useful for query.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:hide "false";
+    a ogit:Attribute ;
+    rdfs:label "isMemberProperty" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Used to define when a property is a member of a container, useful for query." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#isMemberProperty>;
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-parameter "";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#isMemberProperty> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
     ogit.core:validation-type "" .
 
 ogit.oslc-core:label
-    a ogit:Attribute;
-    rdfs:label "label";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Very short label for use in menu items.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:hide "false";
+    a ogit:Attribute ;
+    rdfs:label "label" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Very short label for use in menu items." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#label>;
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-parameter "";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#label> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
     ogit.core:validation-type "" .
 
 ogit.oslc-core:maxSize
-    a ogit:Attribute;
-    rdfs:label "maxSize";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "For String properties only, specifies maximum characters allowed. If not set, then there is no maximum or maximum is specified elsewhere.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:hide "false";
+    a ogit:Attribute ;
+    rdfs:label "maxSize" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "For String properties only, specifies maximum characters allowed. If not set, then there is no maximum or maximum is specified elsewhere." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#maxSize>;
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-parameter "";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#maxSize> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
     ogit.core:validation-type "" .
 
 ogit.oslc-core:message
-    a ogit:Attribute;
-    rdfs:label "message";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "An informative message describing the error that occurred.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:hide "false";
+    a ogit:Attribute ;
+    rdfs:label "message" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "An informative message describing the error that occurred." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#message>;
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-parameter "";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#message> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
     ogit.core:validation-type "" .
 
 ogit.oslc-core:name
-    a ogit:Attribute;
-    rdfs:label "name";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Name of property being defined, i.e. second part of property's Prefixed Name.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:hide "false";
+    a ogit:Attribute ;
+    rdfs:label "name" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Name of property being defined, i.e. second part of property's Prefixed Name." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#name>;
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-parameter "";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#name> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
     ogit.core:validation-type "" .
 
 ogit.oslc-core:prefix
-    a ogit:Attribute;
-    rdfs:label "prefix";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Namespace prefix to be used for this namespace.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:hide "false";
+    a ogit:Attribute ;
+    rdfs:label "prefix" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Namespace prefix to be used for this namespace." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#prefix>;
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-parameter "";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#prefix> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
     ogit.core:validation-type "" .
 
 ogit.oslc-core:prefixBase
-    a ogit:Attribute;
-    rdfs:label "prefixBase";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The base URI of the namespace.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:hide "false";
+    a ogit:Attribute ;
+    rdfs:label "prefixBase" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The base URI of the namespace." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#prefixBase>;
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-parameter "";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#prefixBase> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
     ogit.core:validation-type "" .
 
 ogit.oslc-core:prefixDefinition
-    a ogit:Attribute;
-    rdfs:label "prefixDefinition";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Defines a namespace prefix for use in JSON representations and in forming OSLC Query Syntax strings.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:hide "false";
+    a ogit:Attribute ;
+    rdfs:label "prefixDefinition" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Defines a namespace prefix for use in JSON representations and in forming OSLC Query Syntax strings." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#prefixDefinition>;
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-parameter "";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#prefixDefinition> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
     ogit.core:validation-type "" .
 
 ogit.oslc-core:readOnly
-    a ogit:Attribute;
-    rdfs:label "readOnly";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "true if the property is read-only. If omitted, or set to false, then the property is writable. Providers SHOULD declare a property read-only when changes to the value of that property will not be accepted after the resource has been created, e.g. on PUT/PATCH requests. Consumers should note that the converse does not apply: Providers MAY reject a change to the value of a writable property.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:hide "false";
+    a ogit:Attribute ;
+    rdfs:label "readOnly" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "true if the property is read-only. If omitted, or set to false, then the property is writable. Providers SHOULD declare a property read-only when changes to the value of that property will not be accepted after the resource has been created, e.g. on PUT/PATCH requests. Consumers should note that the converse does not apply: Providers MAY reject a change to the value of a writable property." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#readOnly>;
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-parameter "";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#readOnly> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
     ogit.core:validation-type "" .
 
 ogit.oslc-core:rel
-    a ogit:Attribute;
-    rdfs:label "rel";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "If present and set to 'alternate' then indicates that work-around is provided, behavior for other values is undefined.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:hide "false";
+    a ogit:Attribute ;
+    rdfs:label "rel" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "If present and set to 'alternate' then indicates that work-around is provided, behavior for other values is undefined." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#rel>;
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-parameter "";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#rel> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
     ogit.core:validation-type "" .
 
 ogit.oslc-core:shortId
-    a ogit:Attribute;
-    rdfs:label "shortId";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Shorter form of dcterms:identifier for the resource.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:hide "false";
+    a ogit:Attribute ;
+    rdfs:label "shortId" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Shorter form of dcterms:identifier for the resource." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#shortId>;
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-parameter "";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#shortId> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
     ogit.core:validation-type "" .
 
 ogit.oslc-core:shortTitle
-    a ogit:Attribute;
-    rdfs:label "shortTitle";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Shorter form of dcterms:title for the resource.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:hide "false";
+    a ogit:Attribute ;
+    rdfs:label "shortTitle" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Shorter form of dcterms:title for the resource." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#shortTitle>;
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-parameter "";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#shortTitle> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
     ogit.core:validation-type "" .
 
 ogit.oslc-core:statusCode
-    a ogit:Attribute;
-    rdfs:label "statusCode";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The HTTP status code reported with the error.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:hide "false";
+    a ogit:Attribute ;
+    rdfs:label "statusCode" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The HTTP status code reported with the error." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#statusCode>;
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-parameter "";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#statusCode> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
     ogit.core:validation-type "" .
 
 ogit.oslc-core:totalCount
-    a ogit:Attribute;
-    rdfs:label "totalCount";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
+    a ogit:Attribute ;
+    rdfs:label "totalCount" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
     dcterms:description """This optional property indicates the total number of results across all pages,
         its value should be non-negative. In the context of a query resource, this value SHOULD
         be the total number of results, i.e. the number of resources that match the query.
         In the context of other resources, the value SHOULD be the total number of property
         values (i.e. RDF triples) of the resource. Unless Stable Paging is in effect, the
-        total count MAY vary as a client retrieves subsequent pages.""";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:hide "false";
+        total count MAY vary as a client retrieves subsequent pages.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#totalCount>;
-    ogit.core:tech-contact "arago GmbH";
-    ogit.core:validation-parameter "";
+        ] ;
+    ogit:original <http://open-services.net/ns/core#totalCount> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
     ogit.core:validation-type "" .
 
 #
 # Verbs
 #
 ogit.oslc-core:allowedValues
-    a ogit:Verb;
-    rdfs:label "allowedValues";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Resource with allowed values for the property being defined. Range of oslc:AllowedValues";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "allowedValues" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Resource with allowed values for the property being defined. Range of oslc:AllowedValues" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#allowedValues>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#allowedValues> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:authorizationURI
-    a ogit:Verb;
-    rdfs:label "authorizationURI";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "URI for obtaining OAuth authorization.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "authorizationURI" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "URI for obtaining OAuth authorization." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#authorizationURI>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#authorizationURI> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:comment
-    a ogit:Verb;
-    rdfs:label "comment";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Comment about the resource.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "comment" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Comment about the resource." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#comment>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#comment> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:creation
-    a ogit:Verb;
-    rdfs:label "creation";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "To create a new resource via the factory, post it to this URI.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "creation" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "To create a new resource via the factory, post it to this URI." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#creation>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#creation> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:creationDialog
-    a ogit:Verb;
-    rdfs:label "creationDialog";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Enables clients to create a resource via UI.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "creationDialog" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Enables clients to create a resource via UI." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#creationDialog>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#creationDialog> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:creationFactory
-    a ogit:Verb;
-    rdfs:label "creationFactory";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Enables clients to create new resources.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "creationFactory" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Enables clients to create new resources." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#creationFactory>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#creationFactory> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:describes
-    a ogit:Verb;
-    rdfs:label "describes";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "This shape describes resources that are of the RDF type given by the object of the oslc:describes predicate. Formally, a shape S applies to a resource R if there is a triple R rdf:type T and there is a triple S oslc:describes T.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "describes" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "This shape describes resources that are of the RDF type given by the object of the oslc:describes predicate. Formally, a shape S applies to a resource R if there is a triple R rdf:type T and there is a triple S oslc:describes T." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#describes>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#describes> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:details
-    a ogit:Verb;
-    rdfs:label "details";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "A URL that may be used to retrieve a web page to determine additional details about the service provider.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "details" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "A URL that may be used to retrieve a web page to determine additional details about the service provider." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#details>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#details> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:dialog
-    a ogit:Verb;
-    rdfs:label "dialog";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The URI of the dialog.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "dialog" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The URI of the dialog." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#dialog>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#dialog> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:discussedBy
-    a ogit:Verb;
-    rdfs:label "discussedBy";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "A series of notes and comments about this resource.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "discussedBy" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "A series of notes and comments about this resource." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#discussedBy>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#discussedBy> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:discussionAbout
-    a ogit:Verb;
-    rdfs:label "discussionAbout";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Reference to associated resource.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "discussionAbout" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Reference to associated resource." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#discussionAbout>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#discussionAbout> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:domain
-    a ogit:Verb;
-    rdfs:label "domain";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Namespace URI of the specification that is implemented by this service. In most cases this namespace URI will be for an OSLC domain, but other URIs MAY be used.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "domain" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Namespace URI of the specification that is implemented by this service. In most cases this namespace URI will be for an OSLC domain, but other URIs MAY be used." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#domain>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#domain> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:executes
-    a ogit:Verb;
-    rdfs:label "executes";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
+    a ogit:Verb ;
+    rdfs:label "executes" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
     dcterms:description """Link from a currently available action to the future action it realizes.
-        """;
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+        """ ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#executes>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#executes> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:extendedError
-    a ogit:Verb;
-    rdfs:label "extendedError";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Extended (additional) error information.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "extendedError" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Extended (additional) error information." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#extendedError>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#extendedError> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:futureAction
-    a ogit:Verb;
-    rdfs:label "futureAction";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
+    a ogit:Verb ;
+    rdfs:label "futureAction" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
     dcterms:description """A predicate that links to an action that is not currently executable on the subject resource,
         but may be executable in the future and/or on other resources.
         For example, in OSLC Automation this is expected to link from an oslc_auto:AutomationPlan to an
@@ -1106,559 +1106,559 @@ ogit.oslc-core:futureAction
         with the meaning that the executable form of the action may be available on oslc_auto:AutomationResult resources
         generated by executing that Automation Plan.  Similarly, resource shapes can allow discovery of actions
         available on the output of a creation factory.
-        """;
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+        """ ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#futureAction>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#futureAction> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:icon
-    a ogit:Verb;
-    rdfs:label "icon";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "URL to an icon file that represents the provider. This icon should be a favicon format and 16x16 pixels in size.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "icon" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "URL to an icon file that represents the provider. This icon should be a favicon format and 16x16 pixels in size." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#icon>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#icon> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:inReplyTo
-    a ogit:Verb;
-    rdfs:label "inReplyTo";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Reference to comment this comment is in reply to.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "inReplyTo" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Reference to comment this comment is in reply to." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#inReplyTo>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#inReplyTo> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:instanceShape
-    a ogit:Verb;
-    rdfs:label "instanceShape";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The URI of a Resource Shape that describes the possible properties.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "instanceShape" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The URI of a Resource Shape that describes the possible properties." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#instanceShape>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#instanceShape> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:modifiedBy
-    a ogit:Verb;
-    rdfs:label "modifiedBy";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The URI of a resource describing the entity that most recently modified this resource.  The link target is usually a foaf:Person or foaf:Agent, but could be any type.  This is modeled after dcterms:creator, but Dublin Core currently has no equivalent property.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "modifiedBy" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The URI of a resource describing the entity that most recently modified this resource.  The link target is usually a foaf:Person or foaf:Agent, but could be any type.  This is modeled after dcterms:creator, but Dublin Core currently has no equivalent property." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#modifiedBy>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#modifiedBy> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:moreInfo
-    a ogit:Verb;
-    rdfs:label "moreInfo";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "A resource giving more information on the error SHOULD be of an HTML content-type.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "moreInfo" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "A resource giving more information on the error SHOULD be of an HTML content-type." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#moreInfo>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#moreInfo> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:nextPage
-    a ogit:Verb;
-    rdfs:label "nextPage";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Link to next page of response.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "nextPage" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Link to next page of response." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#nextPage>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#nextPage> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:oauthAccessTokenURI
-    a ogit:Verb;
-    rdfs:label "oauthAccessTokenURI";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "URI for obtaining OAuth access token.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "oauthAccessTokenURI" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "URI for obtaining OAuth access token." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#oauthAccessTokenURI>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#oauthAccessTokenURI> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:oauthConfiguration
-    a ogit:Verb;
-    rdfs:label "oauthConfiguration";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Defines the three OAuth URIs required for a client to act as an OAuth consumer.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "oauthConfiguration" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Defines the three OAuth URIs required for a client to act as an OAuth consumer." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#oauthConfiguration>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#oauthConfiguration> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:oauthRequestTokenURI
-    a ogit:Verb;
-    rdfs:label "oauthRequestTokenURI";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "URI for obtaining OAuth request token.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "oauthRequestTokenURI" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "URI for obtaining OAuth request token." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#oauthRequestTokenURI>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#oauthRequestTokenURI> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:occurs
-    a ogit:Verb;
-    rdfs:label "occurs";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "MUST be either http://open-services.net/ns/core#Exactly-one, http://open-services.net/ns/core#Zero-or-one, http://open-services.net/ns/core#Zero-or-many or http://open-services.net/ns/core#One-or-many.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "occurs" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "MUST be either http://open-services.net/ns/core#Exactly-one, http://open-services.net/ns/core#Zero-or-one, http://open-services.net/ns/core#Zero-or-many or http://open-services.net/ns/core#One-or-many." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#occurs>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#occurs> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:partOfDiscussion
-    a ogit:Verb;
-    rdfs:label "partOfDiscussion";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Reference to owning Discussion resource .";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "partOfDiscussion" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Reference to owning Discussion resource ." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#partOfDiscussion>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#partOfDiscussion> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:property
-    a ogit:Verb;
-    rdfs:label "property";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The properties that are allowed or required by this shape.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "property" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The properties that are allowed or required by this shape." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#property>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#property> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:propertyDefinition
-    a ogit:Verb;
-    rdfs:label "propertyDefinition";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "URI of the property whose usage is being described.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "propertyDefinition" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "URI of the property whose usage is being described." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#propertyDefinition>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#propertyDefinition> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:queryBase
-    a ogit:Verb;
-    rdfs:label "queryBase";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The base URI to use for queries. Queries may be invoked either by HTTP GET or HTTP POST. For HTTP GET, a query URI is formed by appending a key=value pair to the base URI. For HTTP POST, the query parameters are encoded as content with media type application/x-www-form-urlencoded and sent in the request body. The base URI MAY accept other query languages and media types in the request body, e.g. application/sparql-query for SPARQL queries.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "queryBase" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The base URI to use for queries. Queries may be invoked either by HTTP GET or HTTP POST. For HTTP GET, a query URI is formed by appending a key=value pair to the base URI. For HTTP POST, the query parameters are encoded as content with media type application/x-www-form-urlencoded and sent in the request body. The base URI MAY accept other query languages and media types in the request body, e.g. application/sparql-query for SPARQL queries." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#queryBase>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#queryBase> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:queryCapability
-    a ogit:Verb;
-    rdfs:label "queryCapability";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Enables clients query across a collection of resources.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "queryCapability" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Enables clients query across a collection of resources." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#queryCapability>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#queryCapability> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:range
-    a ogit:Verb;
-    rdfs:label "range";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "For properties with a resource value-type, Providers MAY also specify the range of possible resource types allowed, each specified by URI. The default range is http://open-services.net/ns/core#Any.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "range" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "For properties with a resource value-type, Providers MAY also specify the range of possible resource types allowed, each specified by URI. The default range is http://open-services.net/ns/core#Any." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#range>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#range> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:representation
-    a ogit:Verb;
-    rdfs:label "representation";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Should be http://open-services.net/ns/core#Reference, http://open-services.net/ns/core#Inline or http://open-services.net/ns/core#Either";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "representation" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Should be http://open-services.net/ns/core#Reference, http://open-services.net/ns/core#Inline or http://open-services.net/ns/core#Either" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#representation>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#representation> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:resourceShape
-    a ogit:Verb;
-    rdfs:label "resourceShape";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "A Creation Factory MAY provide Resource Shapes that describe shapes of resources that may be created.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "resourceShape" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "A Creation Factory MAY provide Resource Shapes that describe shapes of resources that may be created." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#resourceShape>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#resourceShape> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:resourceType
-    a ogit:Verb;
-    rdfs:label "resourceType";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "The expected resource type URI of the resource that will be created using this creation factory. These would be the URIs found in the result resource's rdf:type property.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "resourceType" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The expected resource type URI of the resource that will be created using this creation factory. These would be the URIs found in the result resource's rdf:type property." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#resourceType>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#resourceType> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:results
-    a ogit:Verb;
-    rdfs:label "results";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
+    a ogit:Verb ;
+    rdfs:label "results" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
     dcterms:description """Used to hold the results of dialog action or JSON query results (default).
         The JSON query result attribute 'oslc:results' is used whenever a provider doesn't have
-        a suitable property already in its model for such purposes.""";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+        a suitable property already in its model for such purposes.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#results>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#results> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:selectionDialog
-    a ogit:Verb;
-    rdfs:label "selectionDialog";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Enables clients to select a resource via UI.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "selectionDialog" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Enables clients to select a resource via UI." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#selectionDialog>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#selectionDialog> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:service
-    a ogit:Verb;
-    rdfs:label "service";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Describes a service offered by the service provider.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "service" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Describes a service offered by the service provider." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#service>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#service> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:serviceProvider
-    a ogit:Verb;
-    rdfs:label "serviceProvider";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "A link to the resource's OSLC Service Provider.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "serviceProvider" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "A link to the resource's OSLC Service Provider." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#serviceProvider>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#serviceProvider> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:serviceProviderCatalog
-    a ogit:Verb;
-    rdfs:label "serviceProviderCatalog";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "Additional service provider catalog.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "serviceProviderCatalog" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Additional service provider catalog." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#serviceProviderCatalog>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#serviceProviderCatalog> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:usage
-    a ogit:Verb;
-    rdfs:label "usage";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "An identifier URI for the domain specified usage of this creation factory. If a service provides multiple creation factories, it may designate the primary or default one that should be used with a property value of http://open-services.net/ns/core#default.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "usage" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "An identifier URI for the domain specified usage of this creation factory. If a service provides multiple creation factories, it may designate the primary or default one that should be used with a property value of http://open-services.net/ns/core#default." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#usage>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#usage> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:valueShape
-    a ogit:Verb;
-    rdfs:label "valueShape";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "if the value-type is a resource type, then Property MAY provide a shape value to indicate the Resource Shape that applies to the resource.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "valueShape" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "if the value-type is a resource type, then Property MAY provide a shape value to indicate the Resource Shape that applies to the resource." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#valueShape>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#valueShape> ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-core:valueType
-    a ogit:Verb;
-    rdfs:label "valueType";
-    dcterms:created "2016-09-22";
-    dcterms:creator "OGIT Importer";
-    dcterms:description "A URI that indicates the value type, for example XML Schema or RDF URIs for literal value types, and OSLC-specified for others.  If this property is omitted, then the value type is unconstrained.";
-    dcterms:modified "2016-09-22";
-    dcterms:valid "start=2016-09-22;";
-    ogit.core:admin-contact "arago GmbH";
-    ogit.core:cardinality "many2many";
-    ogit.core:hide "false";
+    a ogit:Verb ;
+    rdfs:label "valueType" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "A URI that indicates the value type, for example XML Schema or RDF URIs for literal value types, and OSLC-specified for others.  If this property is omitted, then the value type is unconstrained." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
     ogit.core:history [
             dcterms:creator "OGIT Importer" ;
             dcterms:date "2016-09-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
-    ogit:original <http://open-services.net/ns/core#valueType>;
+        ] ;
+    ogit:original <http://open-services.net/ns/core#valueType> ;
     ogit.core:tech-contact "arago GmbH" .

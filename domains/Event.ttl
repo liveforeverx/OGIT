@@ -14,27 +14,27 @@
 # Ontology
 #
 ogit:event
-    a owl:Ontology;
-    rdfs:label "OGIT Event";
-    owl:imports purl:ogit;
-    owl:versionInfo "__OGIT_VERSION__";
-    dcterms:contributor "Fabian Meyer";
-    dcterms:creator "arago GmbH";
-    vann:preferredNamespacePrefix "ogit.event";
+    a owl:Ontology ;
+    rdfs:label "OGIT Event" ;
+    owl:imports purl:ogit ;
+    owl:versionInfo "__OGIT_VERSION__" ;
+    dcterms:contributor "Fabian Meyer" ;
+    dcterms:creator "arago GmbH" ;
+    vann:preferredNamespacePrefix "ogit.event" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
 #
 ogit.event:Alert
-    a ogit.core:Entity;
-    rdfs:label "Alert";
-    dcterms:created "2016-10-26";
-    dcterms:creator "stravlos@arago.de";
-    dcterms:description "Alerts are used to notify users if certain events happen.";
-    dcterms:modified "2016-10-261";
-    dcterms:valid "start=2016-10-26;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "Alert" ;
+    dcterms:created "2016-10-26" ;
+    dcterms:creator "stravlos@arago.de" ;
+    dcterms:description "Alerts are used to notify users if certain events happen." ;
+    dcterms:modified "2016-10-261" ;
+    dcterms:valid "start=2016-10-26;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
             dcterms:creator "stravlos@arago.de" ;
@@ -47,10 +47,10 @@ ogit.event:Alert
             dcterms:date "2016-11-02" ;
             dcterms:description "make attributes optional" ;
             dcterms:identifier "2"
-        ];
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:scope "SGO";
-    ogit.core:tech-contact "arago GmbH";
+        ] ;
+    ogit.core:parent "http://www.purl.org/ogit/Node" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:class ogit.event:Event ;
@@ -85,14 +85,14 @@ ogit.event:Alert
         ] .
 
 ogit.event:Event
-    a ogit.core:Entity;
-    rdfs:label "Event";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "This entity defines any type of event records, e.g. ITSM/produced by event management systems, Business Process etc.";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "Event" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "This entity defines any type of event records, e.g. ITSM/produced by event management systems, Business Process etc." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
             dcterms:creator "Peter Larem" ;
@@ -105,10 +105,10 @@ ogit.event:Event
             dcterms:date "2016-08-03" ;
             dcterms:description "Added Attributes: ogit/summary, ogit/impact, ogit/priority, ogit/certainty, ogit/firstOccurredAt, ogit/lastOccurredAt, ogit/openedAt, ogit/lastUpdatedAt, ogit/lastClearedAt, ogit/expiresAt, ogit/occurenceCount,  ogit/ServiceManagement/reportedSource, ogit/type, ogit/category, ogit/instance, ogit/resource, ogit/maintenanceState, ogit/acknowledgeState, ogit/isRoot" ;
             dcterms:identifier "2"
-        ];
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:scope "SGO";
-    ogit.core:tech-contact "arago GmbH";
+        ] ;
+    ogit.core:parent "http://www.purl.org/ogit/Node" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:class ogit.event:Event ;
@@ -238,14 +238,14 @@ ogit.event:Event
         ] .
 
 ogit.event:Notification
-    a ogit.core:Entity;
-    rdfs:label "Notification";
-    dcterms:created "2015-04-27";
-    dcterms:creator "cwalker@arago.de";
-    dcterms:description "A notification event";
-    dcterms:modified "2017-02-17";
-    dcterms:valid "start=2015-04-27;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit.core:Entity ;
+    rdfs:label "Notification" ;
+    dcterms:created "2015-04-27" ;
+    dcterms:creator "cwalker@arago.de" ;
+    dcterms:description "A notification event" ;
+    dcterms:modified "2017-02-17" ;
+    dcterms:valid "start=2015-04-27;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
             dcterms:creator "cwalker@arago.de" ;
@@ -258,197 +258,197 @@ ogit.event:Notification
             dcterms:date "2017-02-17" ;
             dcterms:description "Make description more general" ;
             dcterms:identifier "2"
-        ];
-    ogit.core:parent "http://www.purl.org/ogit/Node";
-    ogit.core:scope "NTO";
+        ] ;
+    ogit.core:parent "http://www.purl.org/ogit/Node" ;
+    ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
 #
 # Attributes
 #
 ogit.event:acknowledgeState
-    a ogit:Attribute;
-    rdfs:label "acknowledgeState";
-    dcterms:created "2016-08-03";
-    dcterms:creator "Philipp Pelchmann";
-    dcterms:description "Defines the state of acknowledgement.";
-    dcterms:modified "2016-08-03";
-    dcterms:valid "start=2016-08-03;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit:Attribute ;
+    rdfs:label "acknowledgeState" ;
+    dcterms:created "2016-08-03" ;
+    dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines the state of acknowledgement." ;
+    dcterms:modified "2016-08-03" ;
+    dcterms:valid "start=2016-08-03;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:date "2016-08-03" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
+        ] ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:certainty
-    a ogit:Attribute;
-    rdfs:label "certainty";
-    dcterms:created "2016-08-03";
-    dcterms:creator "Philipp Pelchmann";
-    dcterms:description "Defines the certainty of an event";
-    dcterms:modified "2016-08-03";
-    dcterms:valid "start=2016-08-03;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit:Attribute ;
+    rdfs:label "certainty" ;
+    dcterms:created "2016-08-03" ;
+    dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines the certainty of an event" ;
+    dcterms:modified "2016-08-03" ;
+    dcterms:valid "start=2016-08-03;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:date "2016-08-03" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
+        ] ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:expiresAt
-    a ogit:Attribute;
-    rdfs:label "expiresAt";
-    dcterms:created "2016-08-03";
-    dcterms:creator "Philipp Pelchmann";
-    dcterms:description "Defines the date something expires.";
-    dcterms:modified "2016-08-03";
-    dcterms:valid "start=2016-08-03;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit:Attribute ;
+    rdfs:label "expiresAt" ;
+    dcterms:created "2016-08-03" ;
+    dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines the date something expires." ;
+    dcterms:modified "2016-08-03" ;
+    dcterms:valid "start=2016-08-03;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:date "2016-08-03" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
+        ] ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:firstOccurredAt
-    a ogit:Attribute;
-    rdfs:label "firstOccurredAt";
-    dcterms:created "2016-08-03";
-    dcterms:creator "Philipp Pelchmann";
-    dcterms:description "Defines the date of first occurrence of an event";
-    dcterms:modified "2016-08-03";
-    dcterms:valid "start=2016-08-03;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit:Attribute ;
+    rdfs:label "firstOccurredAt" ;
+    dcterms:created "2016-08-03" ;
+    dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines the date of first occurrence of an event" ;
+    dcterms:modified "2016-08-03" ;
+    dcterms:valid "start=2016-08-03;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:date "2016-08-03" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
+        ] ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:isRoot
-    a ogit:Attribute;
-    rdfs:label "isRoot";
-    dcterms:created "2016-08-03";
-    dcterms:creator "Philipp Pelchmann";
-    dcterms:description "Defines if an event is root.";
-    dcterms:modified "2016-08-03";
-    dcterms:valid "start=2016-08-03;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit:Attribute ;
+    rdfs:label "isRoot" ;
+    dcterms:created "2016-08-03" ;
+    dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines if an event is root." ;
+    dcterms:modified "2016-08-03" ;
+    dcterms:valid "start=2016-08-03;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:date "2016-08-03" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
+        ] ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:lastClearedAt
-    a ogit:Attribute;
-    rdfs:label "lastClearedAt";
-    dcterms:created "2016-08-03";
-    dcterms:creator "Philipp Pelchmann";
-    dcterms:description "Defines the date an event has been cleared.";
-    dcterms:modified "2016-08-03";
-    dcterms:valid "start=2016-08-03;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit:Attribute ;
+    rdfs:label "lastClearedAt" ;
+    dcterms:created "2016-08-03" ;
+    dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines the date an event has been cleared." ;
+    dcterms:modified "2016-08-03" ;
+    dcterms:valid "start=2016-08-03;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:date "2016-08-03" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
+        ] ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:lastOccurredAt
-    a ogit:Attribute;
-    rdfs:label "lastOccurredAt";
-    dcterms:created "2016-08-03";
-    dcterms:creator "Philipp Pelchmann";
-    dcterms:description "Defines the date of last occurrence of an event";
-    dcterms:modified "2016-08-03";
-    dcterms:valid "start=2016-08-03;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit:Attribute ;
+    rdfs:label "lastOccurredAt" ;
+    dcterms:created "2016-08-03" ;
+    dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines the date of last occurrence of an event" ;
+    dcterms:modified "2016-08-03" ;
+    dcterms:valid "start=2016-08-03;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:date "2016-08-03" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
+        ] ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:maintenanceState
-    a ogit:Attribute;
-    rdfs:label "maintenanceState";
-    dcterms:created "2016-08-03";
-    dcterms:creator "Philipp Pelchmann";
-    dcterms:description "Defines the state of maintenance.";
-    dcterms:modified "2016-08-03";
-    dcterms:valid "start=2016-08-03;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit:Attribute ;
+    rdfs:label "maintenanceState" ;
+    dcterms:created "2016-08-03" ;
+    dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines the state of maintenance." ;
+    dcterms:modified "2016-08-03" ;
+    dcterms:valid "start=2016-08-03;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:date "2016-08-03" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
+        ] ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:occurenceCount
-    a ogit:Attribute;
-    rdfs:label "occurenceCount";
-    dcterms:created "2016-08-03";
-    dcterms:creator "Philipp Pelchmann";
-    dcterms:description "Defines the number an event occured.";
-    dcterms:modified "2016-08-03";
-    dcterms:valid "start=2016-08-03;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit:Attribute ;
+    rdfs:label "occurenceCount" ;
+    dcterms:created "2016-08-03" ;
+    dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines the number an event occured." ;
+    dcterms:modified "2016-08-03" ;
+    dcterms:valid "start=2016-08-03;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:date "2016-08-03" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
+        ] ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:resource
-    a ogit:Attribute;
-    rdfs:label "resource";
-    dcterms:created "2016-08-03";
-    dcterms:creator "Philipp Pelchmann";
-    dcterms:description "Defines the name of an resource on an instance e.g. disk or database.";
-    dcterms:modified "2016-08-03";
-    dcterms:valid "start=2016-08-03;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit:Attribute ;
+    rdfs:label "resource" ;
+    dcterms:created "2016-08-03" ;
+    dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines the name of an resource on an instance e.g. disk or database." ;
+    dcterms:modified "2016-08-03" ;
+    dcterms:valid "start=2016-08-03;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:date "2016-08-03" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
+        ] ;
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.event:severity
-    a ogit:Attribute;
-    rdfs:label "severity";
-    dcterms:created "2015-05-21";
-    dcterms:creator "Peter Larem";
-    dcterms:description "Stores a severity. E.g. Some event management systems might store a severity field.";
-    dcterms:modified "2015-05-21";
-    dcterms:valid "start=2015-05-21;";
-    ogit.core:admin-contact "arago GmbH";
+    a ogit:Attribute ;
+    rdfs:label "severity" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Stores a severity. E.g. Some event management systems might store a severity field." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ];
+        ] ;
     ogit.core:tech-contact "arago GmbH" .

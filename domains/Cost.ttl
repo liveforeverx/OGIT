@@ -157,7 +157,7 @@ ogit.cost:PlanningTemplate
             sh:class ogit.cost:CostElement ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._cost:plans
+            sh:path ogit.foundation:plans
         ] .
 
 #
@@ -204,23 +204,6 @@ ogit._cost:covers
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "Verb showing which entity covers another entity." ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._cost:plans
-    a ogit:Verb ;
-    rdfs:label "plans" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "Verb showing how one entity plans/predicts on the content of another entity" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;

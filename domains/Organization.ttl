@@ -111,7 +111,7 @@ ogit.organization:Organization
             sh:class ogit.organization:Organization ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.organization:leads
+            sh:path ogit.foundation:leads
         ],
         [
             sh:maxCount 1 ;
@@ -212,7 +212,7 @@ ogit.organization:Organization
             sh:class ogit.organization:Organization ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.organization:governs
+            sh:path ogit.foundation:governs
         ],
         [
             sh:class ogit.organization:Organization ;
@@ -367,47 +367,6 @@ ogit.organization:deliversTo
     dcterms:created "2015-10-22" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "This relationship defines that one entity delivers sth. to another entity." ;
-    dcterms:modified "2015-10-22" ;
-    dcterms:valid "start=2015-10-22;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-10-22" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit.organization:governs
-    a ogit:Verb ;
-    rdfs:label "governs" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "Verb showing if an entity governs/enforces another one." ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history
-        [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-07-15" ;
-            dcterms:description "updated" ;
-            dcterms:identifier "2"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit.organization:leads
-    a ogit:Verb ;
-    rdfs:label "leads" ;
-    dcterms:created "2015-10-22" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "This relationship defines that one entity leads another entity." ;
     dcterms:modified "2015-10-22" ;
     dcterms:valid "start=2015-10-22;" ;
     ogit.core:admin-contact "arago GmbH" ;

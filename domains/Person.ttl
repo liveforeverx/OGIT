@@ -25,89 +25,6 @@ ogit:person
 #
 # Entities
 #
-ogit.person:Account
-    a ogit.core:Entity ;
-    rdfs:label "Account" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "A account can be e.g. an facebook-account." ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-09-15" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:parent "http://www.purl.org/ogit/Node" ;
-    ogit.core:scope "SGO" ;
-    ogit.core:tech-contact "arago GmbH" ;
-    sh:property
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:email
-        ],
-        [
-            sh:class ogit.person:Account ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
-        ],
-        [
-            sh:class ogit.person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:connects
-        ] .
-
-ogit.person:Email
-    a ogit.core:Entity ;
-    rdfs:label "Email" ;
-    dcterms:created "2016-01-22" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "Any type of email adress." ;
-    dcterms:modified "2016-01-22" ;
-    dcterms:valid "start=2016-01-22;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2016-01-22" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:parent "http://www.purl.org/ogit/Node" ;
-    ogit.core:scope "SGO" ;
-    ogit.core:tech-contact "arago GmbH" ;
-    sh:property
-        [
-            sh:class ogit.person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:connects
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path ogit.foundation:status
-        ] .
-
 ogit.person:Person
     a ogit.core:Entity ;
     rdfs:label "Person" ;
@@ -152,7 +69,7 @@ ogit.person:Person
             sh:path ogit.person:invites
         ],
         [
-            sh:class ogit.person:Vcard ;
+            sh:class ogit:Vcard ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:owns
@@ -206,7 +123,7 @@ ogit.person:Person
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.person:mobilePhone
+            sh:path ogit.foundation:mobilePhone
         ],
         [
             sh:maxCount 1 ;
@@ -269,73 +186,9 @@ ogit.person:Person
             sh:path ogit.foundation:communicatesWith
         ] .
 
-ogit.person:Vcard
-    a ogit.core:Entity ;
-    rdfs:label "Vcard" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description """vCard is a specification developed by the IETF for the description of people and organisations. Recently, vCard has been
-        significantly updated to Version 4 as documented in [RFC6350]. Typically, vCard objects are encoded in its own defined
-        text-based syntax or XML renderings.""" ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:parent "http://www.purl.org/ogit/Node" ;
-    ogit.core:scope "SGO" ;
-    ogit.core:tech-contact "arago GmbH" ;
-    sh:property
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:phone
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.person:mobilePhone
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:streetAddress
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.person:addressLocality
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:postalCode
-        ] .
-
 #
 # Attributes
 #
-ogit.person:addressLocality
-    a ogit:Attribute ;
-    rdfs:label "addressLocality" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "The locality belonging to an address. For example, Frankfurt am Main" ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
 ogit.person:alternativeName
     a ogit:Attribute ;
     rdfs:label "alternativeName" ;
@@ -416,23 +269,6 @@ ogit.person:middleName
     ogit.core:history [
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:date "2015-07-27" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit.person:mobilePhone
-    a ogit:Attribute ;
-    rdfs:label "mobilePhone" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "A mobile phone number." ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;

@@ -195,7 +195,7 @@ ogit.software:SoftwareConnection
             sh:class ogit.software:Data ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._software:transfers
+            sh:path ogit.foundation:transfers
         ],
         [
             sh:maxCount 1 ;
@@ -208,23 +208,3 @@ ogit.software:SoftwareConnection
             sh:minCount 0 ;
             sh:path ogit.foundation:uses
         ] .
-
-#
-# Verbs
-#
-ogit._software:transfers
-    a ogit:Verb ;
-    rdfs:label "transfers" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "Indicates if one entity transfers information to another." ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .

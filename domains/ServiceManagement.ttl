@@ -181,7 +181,7 @@ ogit.serviceManagement:ChangeRequest
             sh:class ogit.serviceManagement:Order ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:causes
+            sh:path ogit.foundation:causes
         ],
         [
             sh:class ogit.serviceManagement:Service ;
@@ -193,7 +193,7 @@ ogit.serviceManagement:ChangeRequest
             sh:class ogit.serviceManagement:ChangeRequest ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:causes
+            sh:path ogit.foundation:causes
         ],
         [
             sh:class ogit.serviceManagement:Order ;
@@ -420,13 +420,13 @@ ogit.serviceManagement:Incident
             sh:class ogit.serviceManagement:Order ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:causes
+            sh:path ogit.foundation:causes
         ],
         [
             sh:class ogit.serviceManagement:ChangeRequest ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:causes
+            sh:path ogit.foundation:causes
         ],
         [
             sh:class ogit.serviceManagement:Incident ;
@@ -510,7 +510,7 @@ ogit.serviceManagement:Incident
             sh:class ogit.serviceManagement:Incident ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:causes
+            sh:path ogit.foundation:causes
         ],
         [
             sh:class ogit.serviceManagement:SLA ;
@@ -522,7 +522,7 @@ ogit.serviceManagement:Incident
             sh:class ogit.serviceManagement:Problem ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:causes
+            sh:path ogit.foundation:causes
         ] .
 
 ogit.serviceManagement:Offering
@@ -642,7 +642,7 @@ ogit.serviceManagement:Order
             sh:class ogit.serviceManagement:ChangeRequest ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:causes
+            sh:path ogit.foundation:causes
         ],
         [
             sh:class ogit.serviceManagement:Order ;
@@ -654,7 +654,7 @@ ogit.serviceManagement:Order
             sh:class ogit.serviceManagement:Ticket ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:causes
+            sh:path ogit.foundation:causes
         ],
         [
             sh:class ogit.serviceManagement:Ticket ;
@@ -765,7 +765,7 @@ ogit.serviceManagement:Order
             sh:class ogit.serviceManagement:Order ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:causes
+            sh:path ogit.foundation:causes
         ] .
 
 ogit.serviceManagement:Problem
@@ -863,13 +863,13 @@ ogit.serviceManagement:Problem
             sh:class ogit.serviceManagement:Problem ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:causes
+            sh:path ogit.foundation:causes
         ],
         [
             sh:class ogit.serviceManagement:ChangeRequest ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:causes
+            sh:path ogit.foundation:causes
         ],
         [
             sh:class ogit.serviceManagement:SLA ;
@@ -887,7 +887,7 @@ ogit.serviceManagement:Problem
             sh:class ogit.serviceManagement:Problem ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:opens
+            sh:path ogit.foundation:opens
         ] .
 
 ogit.serviceManagement:Report
@@ -1073,7 +1073,7 @@ ogit.serviceManagement:Service
             sh:class ogit.serviceManagement:Incident ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:opens
+            sh:path ogit.foundation:opens
         ],
         [
             sh:class ogit.serviceManagement:Report ;
@@ -1097,7 +1097,7 @@ ogit.serviceManagement:Service
             sh:class ogit.serviceManagement:Ticket ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:opens
+            sh:path ogit.foundation:opens
         ] .
 
 ogit.serviceManagement:SubTask
@@ -1309,7 +1309,7 @@ ogit.serviceManagement:Ticket
             sh:class ogit.serviceManagement:Ticket ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:causes
+            sh:path ogit.foundation:causes
         ],
         [
             sh:maxCount 1 ;
@@ -2323,65 +2323,5 @@ ogit._serviceManagement:calls
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._serviceManagement:causes
-    a ogit:Verb ;
-    rdfs:label "causes" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description """Indicates that one entity causes the creation of another one.
-        E.g. an error situation during change execution might lead to a new incident ticket.""" ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._serviceManagement:opens
-    a ogit:Verb ;
-    rdfs:label "opens" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "Indicates an entity which creates/opens another entity (e.g. Person opens Ticket)." ;
-    dcterms:modified "2015-08-11" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history
-        [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-06-11" ;
-            dcterms:description "updated" ;
-            dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-07-06" ;
-            dcterms:description "updated" ;
-            dcterms:identifier "3"
-        ],
-        [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-07-27" ;
-            dcterms:description "updated" ;
-            dcterms:identifier "4"
-        ],
-        [
-            dcterms:creator "Philipp Pelchmann" ;
-            dcterms:date "2015-08-11" ;
-            dcterms:description "removed link between connector -> incident, connector -> configuration item" ;
-            dcterms:identifier "5"
         ] ;
     ogit.core:tech-contact "arago GmbH" .

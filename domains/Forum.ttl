@@ -813,13 +813,13 @@ ogit.forum:Reply
             sh:class ogit.forum:Post ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._forum:responds
+            sh:path ogit.foundation:responds
         ],
         [
             sh:class ogit.forum:KnowledgeItemHistory ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._forum:responds
+            sh:path ogit.foundation:responds
         ],
         [
             sh:class ogit.forum:Profile ;
@@ -842,7 +842,7 @@ ogit.forum:Reply
             sh:class ogit.forum:KnowledgeBundle ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._forum:responds
+            sh:path ogit.foundation:responds
         ],
         [
             sh:class ogit.forum:KnowledgeBundle ;
@@ -1141,37 +1141,6 @@ ogit._forum:moderates
             dcterms:date "2015-04-23" ;
             dcterms:description "Initial Creation" ;
             dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._forum:responds
-    a ogit:Verb ;
-    rdfs:label "responds" ;
-    dcterms:created "2015-04-27" ;
-    dcterms:creator "cwalker@arago.de" ;
-    dcterms:description """This relationship indicates that one entity is a response to another. For example, parts of a
-        conversation/fourm thread.""" ;
-    dcterms:modified "2015-04-27" ;
-    dcterms:valid "start=2015-04-27;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history
-        [
-            dcterms:creator "cwalker@arago.de" ;
-            dcterms:date "2015-04-27" ;
-            dcterms:description "intitial inception" ;
-            dcterms:identifier "1"
-        ],
-        [
-            dcterms:creator "bmoore@arago.de" ;
-            dcterms:date "2015-11-13" ;
-            dcterms:description "Edit for KnowledgeItemHistory" ;
-            dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "Ben Neal" ;
-            dcterms:date "2016-05-17" ;
-            dcterms:description "Added edge for `ogit/Comment` -> `ogit/Forum/Rating`" ;
-            dcterms:identifier "3"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 

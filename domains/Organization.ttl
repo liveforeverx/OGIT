@@ -4,7 +4,6 @@
 @prefix ogit.foundation:   <http://www.purl.org/ogit/> .
 @prefix ogit.organization: <http://www.purl.org/ogit/> .
 @prefix owl:               <http://www.w3.org/2002/07/owl#> .
-@prefix purl:              <http://www.purl.org/> .
 @prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh:                <http://www.w3.org/ns/shacl#> .
 @prefix vann:              <http://purl.org/vocab/vann/> .
@@ -15,7 +14,7 @@
 ogit:organization
     a owl:Ontology ;
     rdfs:label "OGIT Organization" ;
-    owl:imports purl:ogit ;
+    owl:imports ogit:foundation ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;

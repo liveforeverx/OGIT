@@ -3051,6 +3051,12 @@ ogit.person:Person sh:property
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:reports
+    ],
+    [
+        sh:class ogit:Vcard ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:owns
     ] .
 
 ogit.price:Invoice sh:property [
@@ -3528,6 +3534,20 @@ ogit.task:TaskList sh:property [
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:generates
+    ] .
+
+ogit:Account sh:property [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ] .
+
+ogit:Email sh:property [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
     ] .
 
 ogit:Vcard sh:property [

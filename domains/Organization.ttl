@@ -77,6 +77,18 @@ ogit.organization:Organization
             sh:path ogit.foundation:represents
         ],
         [
+            sh:class ogit:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:employs
+        ],
+        [
+            sh:class ogit:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:represents
+        ],
+        [
             sh:class ogit.organization:Organization ;
             sh:description "" ;
             sh:minCount 0 ;
@@ -410,6 +422,36 @@ ogit.organization:sellsTo
 # Other
 #
 ogit:Person sh:property
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:represents
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:complies
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:leads
+    ],
     [
         sh:class ogit.organization:Organization ;
         sh:description "" ;

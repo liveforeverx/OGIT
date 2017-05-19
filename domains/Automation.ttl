@@ -16,7 +16,7 @@
 ogit:automation
     a owl:Ontology ;
     rdfs:label "OGIT Automation" ;
-    owl:imports ogit:foundation ;
+    owl:imports ogit:location ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -642,6 +642,18 @@ ogit.automation:MARSNode
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
+        [
+            sh:class ogit:Region ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:locatedIn
+        ],
+        [
+            sh:class ogit:Location ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:locatedIn
+        ],
         [
             sh:class ogit.automation:MARSNode ;
             sh:description "" ;

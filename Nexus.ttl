@@ -56,7 +56,6 @@ ogit:nexus
         ogit:graphit,
         ogit:knowledge,
         ogit:license,
-        ogit:location,
         ogit:media,
         ogit:network,
         ogit:organization,
@@ -81,12 +80,6 @@ ogit.asset:Asset sh:property
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:belongs
-    ],
-    [
-        sh:class ogit.location:Location ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:locatedIn
     ],
     [
         sh:class ogit.datacenter:PowerDistributionUnit ;
@@ -274,12 +267,6 @@ ogit.automation:MARSModel sh:property
 
 ogit.automation:MARSNode sh:property
     [
-        sh:class ogit.location:Region ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:locatedIn
-    ],
-    [
         sh:class ogit.businessProcess:BusinessProcess ;
         sh:description "" ;
         sh:minCount 0 ;
@@ -308,12 +295,6 @@ ogit.automation:MARSNode sh:property
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:assignedTo
-    ],
-    [
-        sh:class ogit.location:Location ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:locatedIn
     ],
     [
         sh:class ogit.data:Timeseries ;
@@ -1778,13 +1759,6 @@ ogit.contact:Email sh:property [
         sh:path ogit.foundation:connects
     ] .
 
-ogit.contact:Vcard sh:property [
-        sh:class ogit.location:Location ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:locatedIn
-    ] .
-
 ogit.contract:Contract sh:property
     [
         sh:class ogit.serviceManagement:SLA ;
@@ -1823,13 +1797,6 @@ ogit.cost:PlanningTemplate sh:property [
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:plans
-    ] .
-
-ogit.datacenter:Datacenter sh:property [
-        sh:class ogit.location:Location ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:locatedIn
     ] .
 
 ogit.datacenter:Rack sh:property [
@@ -2150,13 +2117,6 @@ ogit.license:LicenseToken sh:property [
         sh:path ogit.foundation:belongs
     ] .
 
-ogit.location:Location sh:property [
-        sh:class ogit.data:Timeseries ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:generates
-    ] .
-
 ogit.media:Comment sh:property
     [
         sh:class ogit.forum:Profile ;
@@ -2330,12 +2290,6 @@ ogit.organization:Organization sh:property
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:manages
-    ],
-    [
-        sh:class ogit.location:Location ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:locatedIn
     ],
     [
         sh:class ogit.serviceManagement:Ticket ;
@@ -3008,12 +2962,6 @@ ogit.person:Person sh:property
         sh:path ogit.userMeta:wins
     ],
     [
-        sh:class ogit.location:Location ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:locatedIn
-    ],
-    [
         sh:class ogit.datacenter:Building ;
         sh:description "" ;
         sh:minCount 0 ;
@@ -3105,12 +3053,6 @@ ogit.serviceManagement:ChangeRequest sh:property
         sh:path ogit.foundation:affects
     ],
     [
-        sh:class ogit.location:Location ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:locatedIn
-    ],
-    [
         sh:class ogit.person:Person ;
         sh:description "" ;
         sh:minCount 0 ;
@@ -3121,12 +3063,6 @@ ogit.serviceManagement:ChangeRequest sh:property
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:reportedOn
-    ],
-    [
-        sh:class ogit.location:Location ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:affects
     ],
     [
         sh:class ogit.organization:Organization ;
@@ -3153,12 +3089,6 @@ ogit.serviceManagement:Incident sh:property
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:affects
-    ],
-    [
-        sh:class ogit.location:Location ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:locatedIn
     ],
     [
         sh:class ogit.person:Person ;
@@ -3205,22 +3135,10 @@ ogit.serviceManagement:Incident sh:property
 
 ogit.serviceManagement:Offering sh:property
     [
-        sh:class ogit.location:Location ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:locatedIn
-    ],
-    [
         sh:class ogit.automation:MARSModelTemplate ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:specifies
-    ],
-    [
-        sh:class ogit.location:Region ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:availableIn
     ],
     [
         sh:class ogit.cost:CostElement ;
@@ -3359,12 +3277,6 @@ ogit.serviceManagement:Service sh:property
     ] .
 
 ogit.serviceManagement:SubTask sh:property
-    [
-        sh:class ogit.location:Location ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:locatedIn
-    ],
     [
         sh:class ogit.person:Person ;
         sh:description "" ;

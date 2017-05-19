@@ -14,7 +14,7 @@
 ogit:assets
     a owl:Ontology ;
     rdfs:label "OGIT Asset" ;
-    owl:imports ogit:foundation ;
+    owl:imports ogit:location ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -46,6 +46,12 @@ ogit.asset:Asset
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
+        [
+            sh:class ogit:Location ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:locatedIn
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;

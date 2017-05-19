@@ -15,7 +15,7 @@
 ogit:serviceManagement
     a owl:Ontology ;
     rdfs:label "OGIT Service Management" ;
-    owl:imports ogit:foundation ;
+    owl:imports ogit:location ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -176,6 +176,18 @@ ogit.serviceManagement:ChangeRequest
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
+        [
+            sh:class ogit:Location ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:locatedIn
+        ],
+        [
+            sh:class ogit:Location ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:affects
+        ],
         [
             sh:class ogit.serviceManagement:Order ;
             sh:description "" ;
@@ -398,6 +410,12 @@ ogit.serviceManagement:Incident
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
+            sh:class ogit:Location ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:locatedIn
+        ],
+        [
             sh:class ogit.serviceManagement:Service ;
             sh:description "" ;
             sh:minCount 0 ;
@@ -543,6 +561,18 @@ ogit.serviceManagement:Offering
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
+        [
+            sh:class ogit:Location ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:locatedIn
+        ],
+        [
+            sh:class ogit:Region ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:availableIn
+        ],
         [
             sh:class ogit.serviceManagement:Order ;
             sh:description "" ;
@@ -1139,6 +1169,12 @@ ogit.serviceManagement:SubTask
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
+        [
+            sh:class ogit:Location ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:locatedIn
+        ],
         [
             sh:class ogit.serviceManagement:Order ;
             sh:description "" ;

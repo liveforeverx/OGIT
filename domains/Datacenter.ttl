@@ -15,7 +15,7 @@
 ogit:datacenter
     a owl:Ontology ;
     rdfs:label "OGIT Datacenter" ;
-    owl:imports ogit:foundation ;
+    owl:imports ogit:location ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -133,6 +133,12 @@ ogit.datacenter:Datacenter
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
+        [
+            sh:class ogit:Location ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:locatedIn
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;

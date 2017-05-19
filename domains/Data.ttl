@@ -14,7 +14,7 @@
 ogit:data
     a owl:Ontology ;
     rdfs:label "OGIT Data" ;
-    owl:imports ogit:foundation ;
+    owl:imports ogit:location ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -93,3 +93,13 @@ ogit.data:Timeseries
             sh:minCount 0 ;
             sh:path ogit.foundation:instance
         ] .
+
+#
+# Other
+#
+ogit:Location sh:property [
+        sh:class ogit.data:Timeseries ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:generates
+    ] .

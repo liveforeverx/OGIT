@@ -127,7 +127,7 @@ ogit.oslc-auto:TeardownAction
 # Attributes
 #
 ogit.oslc-auto:progress
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "progress" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -151,7 +151,7 @@ ogit.oslc-auto:progress
 # Verbs
 #
 ogit.oslc-auto:desiredState
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "desiredState" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -171,7 +171,7 @@ ogit.oslc-auto:desiredState
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-auto:executesAutomationPlan
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "executesAutomationPlan" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -191,7 +191,7 @@ ogit.oslc-auto:executesAutomationPlan
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-auto:hasContribution
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "contribution" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -211,7 +211,7 @@ ogit.oslc-auto:hasContribution
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-auto:inputParameter
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "inputParameter" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -231,7 +231,7 @@ ogit.oslc-auto:inputParameter
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-auto:outputParameter
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "outputParameter" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -251,7 +251,7 @@ ogit.oslc-auto:outputParameter
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-auto:parameterDefinition
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "parameterDefinition" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -271,7 +271,7 @@ ogit.oslc-auto:parameterDefinition
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-auto:producedByAutomationRequest
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "producedByAutomationRequest" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -291,7 +291,7 @@ ogit.oslc-auto:producedByAutomationRequest
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-auto:reportsOnAutomationPlan
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "reportsOnAutomationPlan" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -311,7 +311,7 @@ ogit.oslc-auto:reportsOnAutomationPlan
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-auto:state
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "state" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -331,7 +331,7 @@ ogit.oslc-auto:state
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-auto:usesExecutionEnvironment
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "usesExecutionEnvironment" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -351,7 +351,7 @@ ogit.oslc-auto:usesExecutionEnvironment
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-auto:verdict
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "verdict" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;

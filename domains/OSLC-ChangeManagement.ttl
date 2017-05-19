@@ -47,7 +47,7 @@ ogit.oslc-cm:ChangeRequest
 # Attributes
 #
 ogit.oslc-cm:affectsPlanItem
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "affectsPlanItem" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -68,7 +68,7 @@ ogit.oslc-cm:affectsPlanItem
     ogit.core:validation-type "" .
 
 ogit.oslc-cm:affectsRequirement
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "affectsRequirement" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -89,7 +89,7 @@ ogit.oslc-cm:affectsRequirement
     ogit.core:validation-type "" .
 
 ogit.oslc-cm:approved
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "approved" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -110,7 +110,7 @@ ogit.oslc-cm:approved
     ogit.core:validation-type "" .
 
 ogit.oslc-cm:closeDate
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "closeDate" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -131,7 +131,7 @@ ogit.oslc-cm:closeDate
     ogit.core:validation-type "" .
 
 ogit.oslc-cm:closed
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "closed" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -152,7 +152,7 @@ ogit.oslc-cm:closed
     ogit.core:validation-type "" .
 
 ogit.oslc-cm:fixed
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "fixed" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -173,7 +173,7 @@ ogit.oslc-cm:fixed
     ogit.core:validation-type "" .
 
 ogit.oslc-cm:inprogress
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "inprogress" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -194,7 +194,7 @@ ogit.oslc-cm:inprogress
     ogit.core:validation-type "" .
 
 ogit.oslc-cm:reviewed
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "reviewed" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -215,7 +215,7 @@ ogit.oslc-cm:reviewed
     ogit.core:validation-type "" .
 
 ogit.oslc-cm:status
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "status" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -236,7 +236,7 @@ ogit.oslc-cm:status
     ogit.core:validation-type "" .
 
 ogit.oslc-cm:tracksChangeSet
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "tracksChangeSet" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -257,7 +257,7 @@ ogit.oslc-cm:tracksChangeSet
     ogit.core:validation-type "" .
 
 ogit.oslc-cm:tracksRequirement
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "tracksRequirement" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -278,7 +278,7 @@ ogit.oslc-cm:tracksRequirement
     ogit.core:validation-type "" .
 
 ogit.oslc-cm:verified
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "verified" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -302,7 +302,7 @@ ogit.oslc-cm:verified
 # Verbs
 #
 ogit.oslc-cm:affectedByDefect
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "affectedByDefect" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -322,7 +322,7 @@ ogit.oslc-cm:affectedByDefect
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-cm:affectsTestResult
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "affectsTestResult" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -342,7 +342,7 @@ ogit.oslc-cm:affectsTestResult
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-cm:blocksTestExecutionRecord
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "blocksTestExecutionRecord" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -362,7 +362,7 @@ ogit.oslc-cm:blocksTestExecutionRecord
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-cm:implementsRequirement
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "implementsRequirement" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -382,7 +382,7 @@ ogit.oslc-cm:implementsRequirement
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-cm:relatedChangeRequest
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "relatedChangeRequest" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -402,7 +402,7 @@ ogit.oslc-cm:relatedChangeRequest
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-cm:relatedTestCase
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "relatedTestCase" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -422,7 +422,7 @@ ogit.oslc-cm:relatedTestCase
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-cm:relatedTestExecutionRecord
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "relatedTestExecutionRecord" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -442,7 +442,7 @@ ogit.oslc-cm:relatedTestExecutionRecord
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-cm:relatedTestPlan
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "relatedTestPlan" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -462,7 +462,7 @@ ogit.oslc-cm:relatedTestPlan
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-cm:relatedTestScript
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "relatedTestScript" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -482,7 +482,7 @@ ogit.oslc-cm:relatedTestScript
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-cm:testedByTestCase
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "testedByTestCase" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;

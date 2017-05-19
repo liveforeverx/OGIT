@@ -1027,7 +1027,7 @@ ogit.oslc-perfmon:VmCpuReady
 # Attributes
 #
 ogit.oslc-perfmon:availabilityStatus
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "availabilityStatus" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -1048,7 +1048,7 @@ ogit.oslc-perfmon:availabilityStatus
     ogit.core:validation-type "" .
 
 ogit.oslc-perfmon:mobilityEnabled
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "mobilityEnabled" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -1069,7 +1069,7 @@ ogit.oslc-perfmon:mobilityEnabled
     ogit.core:validation-type "" .
 
 ogit.oslc-perfmon:tableReorganizationNeeded
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "tableReorganizationNeeded" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -1093,7 +1093,7 @@ ogit.oslc-perfmon:tableReorganizationNeeded
 # Verbs
 #
 ogit.oslc-perfmon:disk
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "disk" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -1113,7 +1113,7 @@ ogit.oslc-perfmon:disk
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-perfmon:monitoringAgent
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "monitoringAgent" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
@@ -1133,7 +1133,7 @@ ogit.oslc-perfmon:monitoringAgent
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.oslc-perfmon:process
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "process" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;

@@ -1040,7 +1040,7 @@ ogit.forum:Topic
 # Attributes
 #
 ogit.forum:username
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "username" ;
     dcterms:created "2015-03-26" ;
     dcterms:creator "Chris Walker" ;
@@ -1060,7 +1060,7 @@ ogit.forum:username
 # Verbs
 #
 ogit._forum:accepts
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "accepts" ;
     dcterms:created "2015-09-02" ;
     dcterms:creator "bmoore@arago.de" ;
@@ -1077,7 +1077,7 @@ ogit._forum:accepts
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:configures
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "configures" ;
     dcterms:created "2015-04-27" ;
     dcterms:creator "cwalker@arago.de" ;
@@ -1094,7 +1094,7 @@ ogit._forum:configures
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:endorses
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "endorses" ;
     dcterms:created "2015-04-27" ;
     dcterms:creator "cwalker@arago.de" ;
@@ -1125,7 +1125,7 @@ ogit._forum:endorses
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:moderates
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "moderates" ;
     dcterms:created "2015-04-23" ;
     dcterms:creator "cwalker@arago.de" ;
@@ -1144,7 +1144,7 @@ ogit._forum:moderates
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:subscribes
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "subscribes" ;
     dcterms:created "2015-04-27" ;
     dcterms:creator "cwalker@arago.de" ;
@@ -1175,7 +1175,7 @@ ogit._forum:subscribes
     ogit.core:tech-contact "arago GmbH" .
 
 ogit._forum:wins
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "wins" ;
     dcterms:created "2015-04-23" ;
     dcterms:creator "cwalker@arago.de" ;
@@ -1194,7 +1194,7 @@ ogit._forum:wins
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.forum:downloads
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "downloads" ;
     dcterms:created "2016-02-25" ;
     dcterms:creator "bneal@arago.de" ;
@@ -1211,7 +1211,7 @@ ogit.forum:downloads
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.forum:features
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "features" ;
     dcterms:created "2016-02-25" ;
     dcterms:creator "bneal@arago.de" ;
@@ -1228,7 +1228,7 @@ ogit.forum:features
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.forum:mentions
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "mentions" ;
     dcterms:created "2015-04-27" ;
     dcterms:creator "cwalker@arago.de" ;
@@ -1247,7 +1247,7 @@ ogit.forum:mentions
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.forum:rates
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "rates" ;
     dcterms:created "2015-08-12" ;
     dcterms:creator "bneal@arago.de" ;

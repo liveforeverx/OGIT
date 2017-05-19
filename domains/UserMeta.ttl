@@ -15,10 +15,10 @@ ogit:userMeta
     a owl:Ontology ;
     rdfs:label "OGIT User Meta" ;
     owl:imports ogit:foundation ;
-    owl:versionInfo "__OGIT_VERSION__";
-    dcterms:contributor "Fabian Meyer";
-    dcterms:creator "arago GmbH";
-    vann:preferredNamespacePrefix "ogit.userMeta";
+    owl:versionInfo "__OGIT_VERSION__" ;
+    dcterms:contributor "Fabian Meyer" ;
+    dcterms:creator "arago GmbH" ;
+    vann:preferredNamespacePrefix "ogit.userMeta" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit/UserMeta/" .
 
 #
@@ -105,7 +105,7 @@ ogit.userMeta:Question
 # Verbs
 #
 ogit.userMeta:asks
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "asks" ;
     dcterms:created "2016-07-19" ;
     dcterms:creator "bneal@arago.de" ;
@@ -122,7 +122,7 @@ ogit.userMeta:asks
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.userMeta:loses
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "loses" ;
     dcterms:created "2016-07-19" ;
     dcterms:creator "bneal@arago.de" ;
@@ -139,7 +139,7 @@ ogit.userMeta:loses
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.userMeta:plays
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "plays" ;
     dcterms:created "2016-07-19" ;
     dcterms:creator "bneal@arago.de" ;
@@ -156,7 +156,7 @@ ogit.userMeta:plays
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.userMeta:wins
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "wins" ;
     dcterms:created "2016-07-19" ;
     dcterms:creator "bneal@arago.de" ;

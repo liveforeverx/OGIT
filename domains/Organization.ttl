@@ -290,7 +290,7 @@ ogit.organization:Role
 # Attributes
 #
 ogit.organization:businessCategory
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "businessCategory" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Philipp Pelchmann" ;
@@ -307,7 +307,7 @@ ogit.organization:businessCategory
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.organization:city
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "city" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Philipp Pelchmann" ;
@@ -324,7 +324,7 @@ ogit.organization:city
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.organization:country
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "country" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Philipp Pelchmann" ;
@@ -344,7 +344,7 @@ ogit.organization:country
 # Verbs
 #
 ogit.organization:competes
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "competes" ;
     dcterms:created "2015-09-18" ;
     dcterms:creator "Peter Larem" ;
@@ -361,7 +361,7 @@ ogit.organization:competes
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.organization:deliversTo
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "deliversTo" ;
     dcterms:created "2015-10-22" ;
     dcterms:creator "Peter Larem" ;
@@ -378,7 +378,7 @@ ogit.organization:deliversTo
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.organization:sellsTo
-    a ogit:Verb ;
+    a ogit.core:Verb ;
     rdfs:label "sellsTo" ;
     dcterms:created "2015-10-22" ;
     dcterms:creator "Peter Larem" ;

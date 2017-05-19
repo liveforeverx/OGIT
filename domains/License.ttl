@@ -216,7 +216,7 @@ ogit.license:LicenseToken
 # Attributes
 #
 ogit.license:licenseKey
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "licenseKey" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
@@ -233,7 +233,7 @@ ogit.license:licenseKey
     ogit.core:tech-contact "arago GmbH" .
 
 ogit.license:licenseRequestStatus
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "licenseRequestStatus" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
@@ -252,7 +252,7 @@ ogit.license:licenseRequestStatus
     ogit.core:validation-type "regex" .
 
 ogit.license:licenseType
-    a ogit:Attribute ;
+    a ogit.core:Attribute ;
     rdfs:label "licenseType" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;

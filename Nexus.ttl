@@ -5,6 +5,7 @@
 @prefix ogit.businessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
 @prefix ogit.catalog:           <http://www.purl.org/ogit/> .
 @prefix ogit.config:            <http://www.purl.org/ogit/> .
+@prefix ogit.contact:           <http://www.purl.org/ogit/> .
 @prefix ogit.contract:          <http://www.purl.org/ogit/> .
 @prefix ogit.cost:              <http://www.purl.org/ogit/Cost/> .
 @prefix ogit.data:              <http://www.purl.org/ogit/> .
@@ -14,6 +15,7 @@
 @prefix ogit.forum:             <http://www.purl.org/ogit/Forum/> .
 @prefix ogit.foundation:        <http://www.purl.org/ogit/> .
 @prefix ogit.graphit:           <http://www.purl.org/ogit/> .
+@prefix ogit.identity:          <http://www.purl.org/ogit/> .
 @prefix ogit.knowledge:         <http://www.purl.org/ogit/Knowledge/> .
 @prefix ogit.license:           <http://www.purl.org/ogit/> .
 @prefix ogit.location:          <http://www.purl.org/ogit/> .
@@ -51,7 +53,6 @@ ogit:nexus
         ogit:device,
         ogit:event,
         ogit:forum,
-        ogit:foundation,
         ogit:graphit,
         ogit:knowledge,
         ogit:license,
@@ -59,7 +60,6 @@ ogit:nexus
         ogit:media,
         ogit:network,
         ogit:organization,
-        ogit:person,
         ogit:price,
         ogit:serviceManagement,
         ogit:software,
@@ -1771,6 +1771,20 @@ ogit.config:Parameter sh:property
         sh:path ogit.foundation:describes
     ] .
 
+ogit.contact:Email sh:property [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ] .
+
+ogit.contact:Vcard sh:property [
+        sh:class ogit.location:Location ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:locatedIn
+    ] .
+
 ogit.contract:Contract sh:property
     [
         sh:class ogit.serviceManagement:SLA ;
@@ -2095,6 +2109,13 @@ ogit.forum:Tag sh:property [
         sh:path ogit.foundation:assignedTo
     ] .
 
+ogit.identity:Account sh:property [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ] .
+
 ogit.knowledge:AcquisitionSession sh:property
     [
         sh:class ogit.knowledge:Step ;
@@ -2335,12 +2356,6 @@ ogit.organization:Organization sh:property
         sh:path ogit.graphit:_deleted
     ],
     [
-        sh:class ogit.person:Person ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:employs
-    ],
-    [
         sh:class ogit.businessProcess:SurveyIteration ;
         sh:description "" ;
         sh:minCount 0 ;
@@ -2455,12 +2470,6 @@ ogit.organization:Organization sh:property
         sh:path ogit.foundation:supports
     ],
     [
-        sh:class ogit.person:Person ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:represents
-    ],
-    [
         sh:class ogit.serviceManagement:ChangeRequest ;
         sh:description "" ;
         sh:minCount 0 ;
@@ -2549,12 +2558,6 @@ ogit.organization:Role sh:property [
 
 ogit.person:Person sh:property
     [
-        sh:class ogit.organization:Organization ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:represents
-    ],
-    [
         sh:class ogit.contract:Contract ;
         sh:description "" ;
         sh:minCount 0 ;
@@ -2571,12 +2574,6 @@ ogit.person:Person sh:property
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:uses
-    ],
-    [
-        sh:class ogit.organization:Organization ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:manages
     ],
     [
         sh:class ogit.serviceManagement:Ticket ;
@@ -2675,12 +2672,6 @@ ogit.person:Person sh:property
         sh:path ogit.foundation:opens
     ],
     [
-        sh:class ogit.organization:Organization ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:belongs
-    ],
-    [
         sh:class ogit.businessProcess:SurveyIteration ;
         sh:description "" ;
         sh:minCount 0 ;
@@ -2691,12 +2682,6 @@ ogit.person:Person sh:property
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:supervises
-    ],
-    [
-        sh:class ogit.organization:Role ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:complies
     ],
     [
         sh:class ogit.graphit:Node ;
@@ -2817,12 +2802,6 @@ ogit.person:Person sh:property
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:uses
-    ],
-    [
-        sh:class ogit.organization:Organization ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:leads
     ],
     [
         sh:class ogit.event:Alert ;
@@ -3053,7 +3032,7 @@ ogit.person:Person sh:property
         sh:path ogit.foundation:reports
     ],
     [
-        sh:class ogit:Vcard ;
+        sh:class ogit.contact:Vcard ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:owns
@@ -3534,25 +3513,4 @@ ogit.task:TaskList sh:property [
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:generates
-    ] .
-
-ogit:Account sh:property [
-        sh:class ogit.person:Person ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:connects
-    ] .
-
-ogit:Email sh:property [
-        sh:class ogit.person:Person ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:connects
-    ] .
-
-ogit:Vcard sh:property [
-        sh:class ogit.location:Location ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:locatedIn
     ] .

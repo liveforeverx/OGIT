@@ -1,5 +1,6 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.alerting:          <http://www.purl.org/ogit/> .
 @prefix ogit.asset:             <http://www.purl.org/ogit/> .
 @prefix ogit.automation:        <http://www.purl.org/ogit/Automation/> .
 @prefix ogit.businessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
@@ -44,7 +45,6 @@
 @prefix ogit.task:              <http://www.purl.org/ogit/> .
 @prefix ogit.userMeta:          <http://www.purl.org/ogit/UserMeta/> .
 @prefix owl:                    <http://www.w3.org/2002/07/owl#> .
-@prefix purl:                   <http://www.purl.org/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh:                     <http://www.w3.org/ns/shacl#> .
 @prefix vann:                   <http://purl.org/vocab/vann/> .
@@ -511,6 +511,8 @@ ogit.graphit:indexed-attributes
 #
 # Other
 #
+ogit.alerting:Alert ogit.core:parent ogit.graphit:Node .
+
 ogit.asset:Asset ogit.core:parent ogit.graphit:Node .
 
 ogit.automation:AutomationIssue
@@ -698,8 +700,6 @@ ogit.datacenter:Storage ogit.core:parent ogit.graphit:Node .
 ogit.datacenter:UPS ogit.core:parent ogit.graphit:Node .
 
 ogit.device:Device ogit.core:parent ogit.graphit:Node .
-
-ogit.event:Alert ogit.core:parent ogit.graphit:Node .
 
 ogit.event:Event ogit.core:parent ogit.graphit:Node .
 

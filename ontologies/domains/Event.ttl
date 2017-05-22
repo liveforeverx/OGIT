@@ -25,63 +25,6 @@ ogit:event
 #
 # Entities
 #
-ogit.event:Alert
-    a ogit.core:Entity ;
-    rdfs:label "Alert" ;
-    dcterms:created "2016-10-26" ;
-    dcterms:creator "stravlos@arago.de" ;
-    dcterms:description "Alerts are used to notify users if certain events happen." ;
-    dcterms:modified "2016-10-261" ;
-    dcterms:valid "start=2016-10-26;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history
-        [
-            dcterms:creator "stravlos@arago.de" ;
-            dcterms:date "2016-10-26" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
-            dcterms:creator "stravlos@arago.de" ;
-            dcterms:date "2016-11-02" ;
-            dcterms:description "make attributes optional" ;
-            dcterms:identifier "2"
-        ] ;
-    ogit.core:scope "SGO" ;
-    ogit.core:tech-contact "arago GmbH" ;
-    sh:property
-        [
-            sh:class ogit.event:Event ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:triggers
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path ogit.foundation:type
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path ogit.foundation:creator
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path ogit.foundation:category
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:function
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:value
-        ] .
-
 ogit.event:Event
     a ogit.core:Entity ;
     rdfs:label "Event" ;

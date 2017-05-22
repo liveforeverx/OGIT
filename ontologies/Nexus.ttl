@@ -1,11 +1,11 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.alerting:          <http://www.purl.org/ogit/> .
 @prefix ogit.asset:             <http://www.purl.org/ogit/> .
 @prefix ogit.automation:        <http://www.purl.org/ogit/Automation/> .
 @prefix ogit.businessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
 @prefix ogit.catalog:           <http://www.purl.org/ogit/> .
 @prefix ogit.configuration:     <http://www.purl.org/ogit/> .
-@prefix ogit.contact:           <http://www.purl.org/ogit/> .
 @prefix ogit.contract:          <http://www.purl.org/ogit/> .
 @prefix ogit.cost:              <http://www.purl.org/ogit/Cost/> .
 @prefix ogit.data:              <http://www.purl.org/ogit/> .
@@ -14,10 +14,8 @@
 @prefix ogit.event:             <http://www.purl.org/ogit/> .
 @prefix ogit.forum:             <http://www.purl.org/ogit/Forum/> .
 @prefix ogit.foundation:        <http://www.purl.org/ogit/> .
-@prefix ogit.identity:          <http://www.purl.org/ogit/> .
 @prefix ogit.knowledge:         <http://www.purl.org/ogit/Knowledge/> .
 @prefix ogit.license:           <http://www.purl.org/ogit/> .
-@prefix ogit.location:          <http://www.purl.org/ogit/> .
 @prefix ogit.media:             <http://www.purl.org/ogit/> .
 @prefix ogit.network:           <http://www.purl.org/ogit/Network/> .
 @prefix ogit.organization:      <http://www.purl.org/ogit/> .
@@ -26,9 +24,7 @@
 @prefix ogit.serviceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
 @prefix ogit.software:          <http://www.purl.org/ogit/Software/> .
 @prefix ogit.task:              <http://www.purl.org/ogit/> .
-@prefix ogit.userMeta:          <http://www.purl.org/ogit/UserMeta/> .
 @prefix owl:                    <http://www.w3.org/2002/07/owl#> .
-@prefix purl:                   <http://www.purl.org/> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh:                     <http://www.w3.org/ns/shacl#> .
 @prefix vann:                   <http://purl.org/vocab/vann/> .
@@ -40,6 +36,7 @@ ogit:nexus
     a owl:Ontology ;
     rdfs:label "OGIT Nexus" ;
     owl:imports
+        ogit:alerting,
         ogit:assets,
         ogit:automation,
         ogit:businessProcess,
@@ -50,7 +47,6 @@ ogit:nexus
         ogit:data,
         ogit:datacenter,
         ogit:device,
-        ogit:event,
         ogit:forum,
         ogit:knowledge,
         ogit:license,
@@ -72,6 +68,20 @@ ogit:nexus
 #
 # Other
 #
+ogit.alerting:Alert sh:property
+    [
+        sh:class ogit.contract:Contract ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.license:License ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ] .
+
 ogit.asset:Asset sh:property
     [
         sh:class ogit.organization:Organization ;
@@ -1579,13 +1589,6 @@ ogit.businessProcess:UserTask sh:property
         sh:path ogit.foundation:uses
     ] .
 
-ogit.catalog:Catalog sh:property [
-        sh:class ogit.location:Region ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:validFor
-    ] .
-
 ogit.catalog:CatalogItem sh:property
     [
         sh:class ogit.serviceManagement:Service ;
@@ -1851,26 +1854,6 @@ ogit.device:Device sh:property
         sh:path ogit.foundation:generates
     ] .
 
-ogit.event:Alert sh:property
-    [
-        sh:class ogit.person:Person ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:alerts
-    ],
-    [
-        sh:class ogit.contract:Contract ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:contains
-    ],
-    [
-        sh:class ogit.license:License ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:contains
-    ] .
-
 ogit.event:Event sh:property
     [
         sh:class ogit.automation:AutomationIssue ;
@@ -1895,12 +1878,6 @@ ogit.event:Event sh:property
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:relates
-    ],
-    [
-        sh:class ogit.person:Person ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:affects
     ],
     [
         sh:class ogit.configuration:ConfigurationItem ;
@@ -2257,7 +2234,7 @@ ogit.network:SimpleDevice sh:property
 
 ogit.organization:Organization sh:property
     [
-        sh:class ogit.event:Alert ;
+        sh:class ogit.alerting:Alert ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:belongs
@@ -2687,12 +2664,6 @@ ogit.person:Person sh:property
         sh:path ogit.foundation:uses
     ],
     [
-        sh:class ogit.event:Notification ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:sends
-    ],
-    [
         sh:class ogit.serviceManagement:SubTask ;
         sh:description "" ;
         sh:minCount 0 ;
@@ -2703,12 +2674,6 @@ ogit.person:Person sh:property
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:uses
-    ],
-    [
-        sh:class ogit.event:Alert ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:creates
     ],
     [
         sh:class ogit.serviceManagement:Order ;
@@ -2795,22 +2760,10 @@ ogit.person:Person sh:property
         sh:path ogit.foundation:updates
     ],
     [
-        sh:class ogit.event:Alert ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:rejects
-    ],
-    [
         sh:class ogit.network:Port ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:manages
-    ],
-    [
-        sh:class ogit.event:Event ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:owns
     ],
     [
         sh:class ogit.license:LicenseRequest ;
@@ -2871,12 +2824,6 @@ ogit.person:Person sh:property
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:supervises
-    ],
-    [
-        sh:class ogit.event:Notification ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:receives
     ],
     [
         sh:class ogit.datacenter:Building ;

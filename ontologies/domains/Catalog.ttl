@@ -3,6 +3,7 @@
 @prefix ogit.catalog:    <http://www.purl.org/ogit/> .
 @prefix ogit.core:       <http://www.purl.org/ogit/> .
 @prefix ogit.foundation: <http://www.purl.org/ogit/> .
+@prefix ogit.location:   <http://www.purl.org/ogit/> .
 @prefix owl:             <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh:              <http://www.w3.org/ns/shacl#> .
@@ -14,7 +15,7 @@
 ogit:catalog
     a owl:Ontology ;
     rdfs:label "OGIT Catalog" ;
-    owl:imports ogit:foundation ;
+    owl:imports ogit:location ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -42,6 +43,12 @@ ogit.catalog:Catalog
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
+        [
+            sh:class ogit.location:Region ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:validFor
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;

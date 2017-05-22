@@ -1,0 +1,479 @@
+@prefix dcterms:           <http://purl.org/dc/terms/> .
+@prefix ogit:              <http://www.purl.org/ogit/> .
+@prefix ogit.core:         <http://www.purl.org/ogit/> .
+@prefix ogit.foundation:   <http://www.purl.org/ogit/> .
+@prefix ogit.organization: <http://www.purl.org/ogit/> .
+@prefix ogit.person:       <http://www.purl.org/ogit/> .
+@prefix owl:               <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:                <http://www.w3.org/ns/shacl#> .
+@prefix vann:              <http://purl.org/vocab/vann/> .
+
+#
+# Ontology
+#
+ogit:organization
+    a owl:Ontology ;
+    rdfs:label "OGIT Organization" ;
+    owl:imports ogit:person ;
+    owl:versionInfo "__OGIT_VERSION__" ;
+    dcterms:contributor "Fabian Meyer" ;
+    dcterms:creator "arago GmbH" ;
+    vann:preferredNamespacePrefix "ogit.organization" ;
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
+
+#
+# Entities
+#
+ogit.organization:Organization
+    a ogit.core:Entity ;
+    rdfs:label "Organization" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description """An identity that represents an organization, company, or some other grouping of Person objects.
+        Entities of this type should be created with a predefined ID. Those IDs should be named like a domain name, i.e.
+        a concatention of some strings separated with a dot. if organization data is created from a LDAP then a mapping
+        like "cn=John Doe,dc=example,dc=com" => "john_doe.example.com" should be employed.
+        The ogit/function attribute should be used to tell what kind of grouping an entity of type Organization is: company, department, group, ...""" ;
+    dcterms:modified "2015-07-27" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:any-attributes "true" ;
+    ogit.core:history
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Philipp Pelchmann" ;
+            dcterms:date "2015-07-27" ;
+            dcterms:description "added optional attributes ogit/streetAddress, ogit/city, ogit/country, ogit/postalCode, ogit/businessCategory" ;
+            dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-10-15" ;
+            dcterms:description "added optional attribute ogit/webPage" ;
+            dcterms:identifier "3"
+        ] ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property
+        [
+            sh:class ogit.person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:employs
+        ],
+        [
+            sh:class ogit.person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:represents
+        ],
+        [
+            sh:class ogit.person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:employs
+        ],
+        [
+            sh:class ogit.person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:represents
+        ],
+        [
+            sh:class ogit.organization:Organization ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.organization:sellsTo
+        ],
+        [
+            sh:class ogit.organization:Organization ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit.organization:Role ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:associates
+        ],
+        [
+            sh:class ogit.organization:Organization ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.organization:deliversTo
+        ],
+        [
+            sh:class ogit.organization:Organization ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:supports
+        ],
+        [
+            sh:class ogit.organization:Organization ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:contains
+        ],
+        [
+            sh:class ogit.organization:Organization ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:creates
+        ],
+        [
+            sh:class ogit.organization:Organization ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:leads
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.foundation:name
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:description
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:function
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:status
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:email
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:streetAddress
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.organization:city
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.organization:country
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:postalCode
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.organization:businessCategory
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:webPage
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:sourceId
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:phone
+        ],
+        [
+            sh:class ogit.organization:Organization ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.organization:competes
+        ],
+        [
+            sh:class ogit.organization:Organization ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:represents
+        ],
+        [
+            sh:class ogit.organization:Role ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:defines
+        ],
+        [
+            sh:class ogit.organization:Policy ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:complies
+        ],
+        [
+            sh:class ogit.organization:Organization ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:communicatesWith
+        ],
+        [
+            sh:class ogit.organization:Organization ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:governs
+        ],
+        [
+            sh:class ogit.organization:Organization ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:manages
+        ] .
+
+ogit.organization:Policy
+    a ogit.core:Entity ;
+    rdfs:label "Policy" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "A policy is a deliberate system of principles to guide decisions and achieve rational outcomes. It is connected and applied to Organizations" ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property [
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.foundation:content
+        ] .
+
+ogit.organization:Role
+    a ogit.core:Entity ;
+    rdfs:label "Role" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "In contrast to ogit/Organization, which is mainly a collection of persons and/or other organziations, ogit/Role defines behavior of an actor along with necessary privileges." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:any-attributes "true" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.foundation:name
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:description
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:status
+        ],
+        [
+            sh:class ogit.organization:Role ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:reports
+        ] .
+
+#
+# Attributes
+#
+ogit.organization:businessCategory
+    a ogit.core:Attribute ;
+    rdfs:label "businessCategory" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "The category of a business." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-07-27;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Philipp Pelchmann" ;
+            dcterms:date "2015-07-27" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.organization:city
+    a ogit.core:Attribute ;
+    rdfs:label "city" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Name of a city." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-07-27;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Philipp Pelchmann" ;
+            dcterms:date "2015-07-27" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.organization:country
+    a ogit.core:Attribute ;
+    rdfs:label "country" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Name of a country." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-07-27;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Philipp Pelchmann" ;
+            dcterms:date "2015-07-27" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+#
+# Verbs
+#
+ogit.organization:competes
+    a ogit.core:Verb ;
+    rdfs:label "competes" ;
+    dcterms:created "2015-09-18" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "This relationship defines that one entity competes another entity." ;
+    dcterms:modified "2015-09-18" ;
+    dcterms:valid "start=2015-09-18;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.organization:deliversTo
+    a ogit.core:Verb ;
+    rdfs:label "deliversTo" ;
+    dcterms:created "2015-10-22" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "This relationship defines that one entity delivers sth. to another entity." ;
+    dcterms:modified "2015-10-22" ;
+    dcterms:valid "start=2015-10-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-10-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.organization:sellsTo
+    a ogit.core:Verb ;
+    rdfs:label "sellsTo" ;
+    dcterms:created "2015-10-22" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "This relationship defines that one entity sells sth. to another entity." ;
+    dcterms:modified "2015-10-22" ;
+    dcterms:valid "start=2015-10-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-10-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+#
+# Other
+#
+ogit.person:Person sh:property
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:represents
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:complies
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:leads
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:represents
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:complies
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:leads
+    ] .

@@ -1,0 +1,366 @@
+@prefix dcterms:        <http://purl.org/dc/terms/> .
+@prefix ogit:           <http://www.purl.org/ogit/> .
+@prefix ogit.core:      <http://www.purl.org/ogit/> .
+@prefix ogit.oslc-auto: <http://www.purl.org/ogit/OSLC-automation/> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix purl:           <http://www.purl.org/> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann:           <http://purl.org/vocab/vann/> .
+
+#
+# Ontology
+#
+ogit:oslc-auto
+    a owl:Ontology ;
+    rdfs:label "OGIT OSLC Automation" ;
+    owl:imports purl:ogit ;
+    owl:versionInfo "__OGIT_VERSION__" ;
+    dcterms:contributor "Fabian Meyer" ;
+    dcterms:creator "arago GmbH" ;
+    vann:preferredNamespacePrefix "ogit.oslc-auto" ;
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/OSLC-automation/" .
+
+#
+# Entities
+#
+ogit.oslc-auto:AutomationPlan
+    a ogit.core:Entity ;
+    rdfs:label "AutomationPlan" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The Automation Plan resource" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/auto#AutomationPlan> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-auto:AutomationRequest
+    a ogit.core:Entity ;
+    rdfs:label "AutomationRequest" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The Automation Request resource" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/auto#AutomationRequest> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-auto:AutomationResult
+    a ogit.core:Entity ;
+    rdfs:label "AutomationResult" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The Automation Result resource" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/auto#AutomationResult> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-auto:ParameterInstance
+    a ogit.core:Entity ;
+    rdfs:label "ParameterInstance" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The Automation Parameter Instance resource" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/auto#ParameterInstance> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-auto:TeardownAction
+    a ogit.core:Entity ;
+    rdfs:label "TeardownAction" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "An action that tears down a previously deployed resource. It is likely that the resource was deployed using an OSLC Automation deployment plan, but this is not always the case. That is, a tear-down action typically has the opposite semantics from a oslc_auto:Deploy sub-domain Automation Plan or Request, even if the service provider offers no equivalents in its Automation Plan collection." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/auto#TeardownAction> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+#
+# Attributes
+#
+ogit.oslc-auto:progress
+    a ogit.core:Attribute ;
+    rdfs:label "progress" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Represents the progress that has been made towards completion (e.g. of an AutomationRequest or AutomationResult). The value of this property can either be an integer (showing percentage completion) or a resource (for implementation-specific details, or future extension)." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/auto#progress> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
+    ogit.core:validation-type "" .
+
+#
+# Verbs
+#
+ogit.oslc-auto:desiredState
+    a ogit.core:Verb ;
+    rdfs:label "desiredState" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The intended (domain- or provider-dependant) value of a resource's (domain-dependant) \"state\" property after some (future, present or past) process, transition or change. It is expected that this will be a resource reference to a definition of a valid state on the service provider. For example, in the OSLC Automation domain this is used to indicate the desired state of the Automation Request based on values defined in the OSLC Automation specification and, optionally, by the service provider." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/auto#desiredState> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-auto:executesAutomationPlan
+    a ogit.core:Verb ;
+    rdfs:label "executesAutomationPlan" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Automation Plan run by the Automation Request. It is likely that the target resource will be an oslc_auto:AutomationPlan but that is not necessarily the case." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/auto#executesAutomationPlan> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-auto:hasContribution
+    a ogit.core:Verb ;
+    rdfs:label "contribution" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "A result contribution associated with this automation result. It is recommended that the contribution be an inline resource which can be retrieved with the automation result. The recommended attributes beyond the contribution itself are dcterms:title, dcterms:description and dcterms:type to provide a description of the contribution which would be appropriate for display in a simple UI for an automation result." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/auto#hasContribution> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-auto:inputParameter
+    a ogit.core:Verb ;
+    rdfs:label "inputParameter" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Parameters provided when Automation Requests are created. These include parameters provided by the creator of the Automation Request (whether by delegated UI or HTTP POST) and *MAY* include additional parameters added by the service provider during Automation Request creation. See the definition of the `oslc_auto:parameterDefinition` attribute of the Automation Plan for additional guidance on determining which parameters are required. Creators of Automation Requests *MAY* provide parameters beyond those defined in the Automation Plan without guarantee the service provider will recognize or honor them. It is expected that this attribute is write-able on Automation Request creation and read-only thereafter." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/auto#inputParameter> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-auto:outputParameter
+    a ogit.core:Verb ;
+    rdfs:label "outputParameter" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Automation Result output parameters are parameters associated with the automation execution which produced this Result. This includes the final value of all parameters used to initiate the execution and any additional parameters which may have been created during automation execution by the service provider or external agents. The value of a given `oslc_auto:outputParameter` MAY change as the execution proceeds. Point-in-time accuracy of the values of output parameters is not covered by this specification. Once the Automation Result is in a final state ( `oslc_auto:complete` or `oslc_auto:canceled`), the `oslc_auto:outputParameter` values MUST NOT change." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/auto#outputParameter> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-auto:parameterDefinition
+    a ogit.core:Verb ;
+    rdfs:label "parameterDefinition" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The definition of a parameter for this Automation Plan. parameterDefinitions are either a local (inline) or referenced resource and use the attributes (the range) of the oslc:Property resource with one exception. When used in the context of an oslc_auto:parameterDefinition, the cardinality of `oslc:propertyDefinition` becomes zero-or-one instead of exactly-one. Automation consumers creating Automation Requests *MUST* use the `oslc:occurs` attribute of the parameterDefinition, if present, to determine if a given parameter is required when creating the Automation Request. If the `oslc:occurs` attribute indicates the parameter is required (exactly-one or one-or-more), the service provider must guarantee the named parameter will be present in the Automation Result either as an `oslc_auto:inputParameter` when unmodified during execution, or as an `oslc_auto:outputParameter` when modified during execution." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/auto#parameterDefinition> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-auto:producedByAutomationRequest
+    a ogit.core:Verb ;
+    rdfs:label "producedByAutomationRequest" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Automation Request which produced the Automation Result. It is likely that the target resource will be an oslc_auto:AutomationResult but that is not necessarily the case." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/auto#producedByAutomationRequest> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-auto:reportsOnAutomationPlan
+    a ogit.core:Verb ;
+    rdfs:label "reportsOnAutomationPlan" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Automation Plan which the Automation Result reports on. It is likely that the target resource will be an oslc_auto:AutomationPlan but that is not necessarily the case." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/auto#reportsOnAutomationPlan> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-auto:state
+    a ogit.core:Verb ;
+    rdfs:label "state" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Used to indicate the state of the automation request or result based on values defined in the automation specification and, optionally, by the service provider. Most often a read-only property. It is expected that this will be a resource reference to a definition of a valid automation request or result state on the service provider." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/auto#state> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-auto:usesExecutionEnvironment
+    a ogit.core:Verb ;
+    rdfs:label "usesExecutionEnvironment" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "A resource representing the environment(s) which this Automation Plan can be executed in. The execution environment resource could represent a grouping of environmental details such as operating system, database, browser, compiler, etc." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/auto#usesExecutionEnvironment> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-auto:verdict
+    a ogit.core:Verb ;
+    rdfs:label "verdict" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "Used to indicate the verdict of the automation result based on values defined by the automation specification and, optionally, by the service provider. Most often a read-only property. It is expected that this will be a resource reference to a definition of a valid automation result verdict on the service provider." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/auto#verdict> ;
+    ogit.core:tech-contact "arago GmbH" .

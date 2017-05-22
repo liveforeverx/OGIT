@@ -1,0 +1,203 @@
+@prefix dcterms:         <http://purl.org/dc/terms/> .
+@prefix ogit:            <http://www.purl.org/ogit/> .
+@prefix ogit.core:       <http://www.purl.org/ogit/> .
+@prefix ogit.foundation: <http://www.purl.org/ogit/> .
+@prefix ogit.software:   <http://www.purl.org/ogit/Software/> .
+@prefix owl:             <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:              <http://www.w3.org/ns/shacl#> .
+@prefix vann:            <http://purl.org/vocab/vann/> .
+
+#
+# Ontology
+#
+ogit:software
+    a owl:Ontology ;
+    rdfs:label "OGIT Software" ;
+    owl:imports ogit:foundation ;
+    owl:versionInfo "__OGIT_VERSION__" ;
+    dcterms:contributor "Fabian Meyer" ;
+    dcterms:creator "arago GmbH" ;
+    vann:preferredNamespacePrefix
+        "ogit._software",
+        "ogit.software" ;
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/Software/" .
+
+#
+# Entities
+#
+ogit.software:Application
+    a ogit.core:Entity ;
+    rdfs:label "Application" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Represents any type of software application" ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property
+        [
+            sh:class ogit.software:SoftwareComponent ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:contains
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path ogit.foundation:name
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:url
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:description
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:version
+        ] .
+
+ogit.software:Connector
+    a ogit.core:Entity ;
+    rdfs:label "Connector" ;
+    dcterms:created "2015-06-11" ;
+    dcterms:creator "Aymen Ayoub" ;
+    dcterms:description "Represents any type of software connector" ;
+    dcterms:modified "2015-06-11" ;
+    dcterms:valid "start=2015-06-11;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history
+        [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-06-11" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-06-29" ;
+            dcterms:description "updated" ;
+            dcterms:identifier "2"
+        ] ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connectorId
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:name
+        ] .
+
+ogit.software:Data
+    a ogit.core:Entity ;
+    rdfs:label "Data" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Data transmitted between two components via connection." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:type
+        ] .
+
+ogit.software:SoftwareComponent
+    a ogit.core:Entity ;
+    rdfs:label "SoftwareComponent" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Any type of Software Component" ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property
+        [
+            sh:class ogit.software:SoftwareComponent ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
+            sh:class ogit.software:SoftwareComponent ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:contains
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:id
+        ] .
+
+ogit.software:SoftwareConnection
+    a ogit.core:Entity ;
+    rdfs:label "SoftwareConnection" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Represents the connection between two components, which allows data transmission through a network link." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property
+        [
+            sh:class ogit.software:Data ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:transfers
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:type
+        ],
+        [
+            sh:class ogit.software:SoftwareComponent ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:uses
+        ] .

@@ -1,0 +1,2859 @@
+@prefix dcterms:       <http://purl.org/dc/terms/> .
+@prefix ogit:          <http://www.purl.org/ogit/> .
+@prefix ogit.core:     <http://www.purl.org/ogit/> .
+@prefix ogit.oslc-ems: <http://www.purl.org/ogit/OSLC-ems/> .
+@prefix owl:           <http://www.w3.org/2002/07/owl#> .
+@prefix purl:          <http://www.purl.org/> .
+@prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:            <http://www.w3.org/ns/shacl#> .
+@prefix vann:          <http://purl.org/vocab/vann/> .
+
+#
+# Ontology
+#
+ogit:oslc-ems
+    a owl:Ontology ;
+    rdfs:label "OGIT OSLC Estimation Measurement" ;
+    owl:imports purl:ogit ;
+    owl:versionInfo "__OGIT_VERSION__" ;
+    dcterms:contributor "Fabian Meyer" ;
+    dcterms:creator "arago GmbH" ;
+    vann:preferredNamespacePrefix "ogit.oslc-ems" ;
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/OSLC-ems/" .
+
+#
+# Entities
+#
+ogit.oslc-ems:Baseline
+    a ogit.core:Entity ;
+    rdfs:label "Baseline" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A baseline is a set of estimates, based on some scenario, that are used to track the performance of a project.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#Baseline> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:BaselineList
+    a ogit.core:Entity ;
+    rdfs:label "BaselineList" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "A baseline list is a container for baseline resources." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#BaselineList> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property [
+            sh:class ogit.oslc-ems:Baseline ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:memberBaseline
+        ] .
+
+ogit.oslc-ems:CdfPoint
+    a ogit.core:Entity ;
+    rdfs:label "CdfPoint" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        <p>This class describes a point on the graph of a cumulative probability function.
+        The cumulative probability at a point is given by
+        <a href="#probability"><code>ems:probability</code></a>.
+        The cumulative probability MUST be greater than 0 and less than 1.
+        The measurement value is given by
+        <a href="#numericValue"><code>ems:numericValue</code></a>.
+        <p>The probability that a measurement gives a value less than or equal to
+        the numeric value is equal to the cumulative probability.</p>""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#CdfPoint> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:CumulativeDistributionFunction
+    a ogit.core:Entity ;
+    rdfs:label "CumulativeDistributionFunction" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        <p>A <em>cumulative distribution function</em> (cdf) is a probabilty distribution defined by giving the
+        cumulative probability at an increasing sequence of measurement values.
+        The range of possible measurement values may be unbounded.
+        If a lower bound exists, it is given by <a href="#low"><code>ems:low</code></a>.
+        If an upper bound exists, it is given by <a href="#high"><code>ems:high</code></a>.</p>
+        <p>The graph of the cumulative distribution function is given by a set of measurement values
+        at an increasing sequence of cumulative probabilities between 0 and 1.
+        The cumulative probability values are given by one or more
+        <a href="#cdfPoint"><code>ems:cdfPoint</code></a> properties.</p>""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#CumulativeDistributionFunction> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property [
+            sh:class ogit.oslc-ems:CdfPoint ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:cdfPoint
+        ] .
+
+ogit.oslc-ems:Dimension
+    a ogit.core:Entity ;
+    rdfs:label "Dimension" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>dimension</em> is some aspect of an aggregated quantity which lets the aggregate be analyzed.
+        For example, the total effort expended in a project can be analyzed by week or month.
+        Therefore time
+        (<a href="http://open-services.net/ns/ems/dimension#Time"><code>dimension:Time</code></a>)
+        is a dimension of effort
+        (<a href="http://open-services.net/ns/ems/metric#Effort"><code>metric:Effort</code></a>).""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#Dimension> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:DimensionCell
+    a ogit.core:Entity ;
+    rdfs:label "DimensionCell" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This class describes a dimension cell in a row of a fact table.
+        A dimension cell refers to its column
+        (see <a href="#ems:inColumn"><code>ems:inColumn</code></a>
+        and has a dimension member
+        (see <a href="#dimensionMember"><code>ems:dimensionMember</code></a>).""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#DimensionCell> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:DimensionColumn
+    a ogit.core:Entity ;
+    rdfs:label "DimensionColumn" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This class describes a dimension column in a fact table.
+        A dimension column has a dimension
+        (see <a href="#dimension"><code>ems:dimension</code>) and grain
+        (see <a href="#grain"><code>ems:grain</code></a> and may refer to a map
+        (see <a href="#useMap"><code>ems:useMap</code></a>.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#DimensionColumn> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:DimensionMember
+    a ogit.core:Entity ;
+    rdfs:label "DimensionMember" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>dimension member</em> is some subset of a dimension.
+        For example, work on a project is performed by people in various roles.
+        It is often of interest to break down an effort estimate or measurement by role.
+        Members of the dimension <em>role</em>
+        (<a href="http://open-services.net/ns/ems/dimension#Role"><code>dimension:Role</code></a>)
+        include <em>manager</em>
+        (<a href="http://open-services.net/ns/ems/dimension-member#Manager"><code>dimension-member:Manager</code></a>
+        and <em>programmer</em>
+        (<a href="http://open-services.net/ns/ems/dimension-member#Programmer"><code>dimension-member:Programmer</code></a>).""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#DimensionMember> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:EffortMetric
+    a ogit.core:Entity ;
+    rdfs:label "EffortMetric" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        An <em>effort metric</em> is a metric that measures the effort of effort required to perform some task.
+        For example,
+        <em>effort</em> as measured in person-months, person-years, etc.
+        (<a href="http://open-services.net/ns/ems/metric#Effort"><code>metric:Effort</code></a>),
+        <em>average staffing</em>
+        (<a href="http://open-services.net/ns/ems/metric#Staffing"><code>metric:Staffing</code></a>),
+        <em>peak staffing</em>
+        (<a href="http://open-services.net/ns/ems/metric#PeakStaffing"><code>metric:PeakStaffing</code></a>), and
+        <em>full-time equivalents</em>
+        (<a href="http://open-services.net/ns/ems/metric#FullTimeEquivalent"><code>metric:FullTimeEquivalent</code></a>)
+        are effort metrics.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#EffortMetric> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:Estimate
+    a ogit.core:Entity ;
+    rdfs:label "Estimate" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "An estimate is a probabilistic prediction, based on a scenario, for a set of measurements." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#Estimate> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property
+        [
+            sh:class ogit.oslc-ems:MeasureDistribution ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:predicts
+        ],
+        [
+            sh:class ogit.oslc-ems:FactDistributionTable ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:predictsTable
+        ],
+        [
+            sh:class ogit.oslc-ems:WorkBreakdownStructure ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:predictsWbs
+        ] .
+
+ogit.oslc-ems:EstimateList
+    a ogit.core:Entity ;
+    rdfs:label "EstimateList" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "An estimate list is a container for estimate resources." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#EstimateList> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:Fact
+    a ogit.core:Entity ;
+    rdfs:label "Fact" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This class describes a row of a fact table
+        (see <a href="#FactTable"><code>ems:FactTable</code></a>).
+        Each fact row has a set of dimension cells
+        (see <a href="#DimensionCell"><code>ems:DimensionCell</code></a>)
+        and measure cells
+        (see <a href="#MeasureCell">ems:MeasureCell</a>).
+        These MUST match the description of the columns given in the head of the fact table
+        (see <a href="#Head"><code>ems:Head</code></a>).""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#Fact> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:FactDistribution
+    a ogit.core:Entity ;
+    rdfs:label "FactDistribution" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>fact distribution</em> is a row of a fact distribution table
+        (see <a href="#FactDistributionTable"><code>ems:FactDistributionTable</code></a>).
+        It contains one or more dimension cells
+        (see <a href="#dimensionCell"><code>ems:dimensionCell</code></a>) and one or more measure distribution cells
+        (see <a href="#measureDistributionCell"><code>ems:measureDistributionCell</code></a>).""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#FactDistribution> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:FactDistributionTable
+    a ogit.core:Entity ;
+    rdfs:label "FactDistributionTable" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        <p>A <em>fact distribution table</em> is a fact table that contains probability distributions
+        instead of precise numeric values for its measures.
+        Fact distribution tables are used in scenario assumptions
+        (see <a href="#assumesTable"><code>ems:assumesTable</code></a>) and estimate predictions
+        (see <a href="#predictsTable"><code>ems:predictsTable</code></a>).</p>
+        <p>A fact distribution table is similar to a fact table
+        (see <a href="#FactTable"><code>ems:FactTable</code></a>),
+        except that it has <em>fact distribution</em> rows
+        (see <a href="#FactDistribution"><code>ems:FactDistribution</code></a>) instead of fact rows
+        (see <a href="#Fact"><code>ems:Fact</code></a>), and they have <em>measure distribution</em> cells
+        (see <a href="#MeasureDistributionCell"><code>ems:MeasureDistributionCell</code></a>) instead of measure cells
+        (see <a href="#MeasureCell"><code>ems:MeasureCell</code></a>).</p>""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#FactDistributionTable> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:FactTable
+    a ogit.core:Entity ;
+    rdfs:label "FactTable" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        <p>This class is used to represent <em>fact tables</em>.</p>
+        <p>Consider the work performed on a project.
+        Work may be analyzed according to attributes such as who performed the work,
+        the task or activity that the work accomplished,
+        when the work was performed, etc.
+        These attributes are referred to as <em>dimensions</em>.</p>
+        <p>Work may be quantified by such metrics as its effort in person-hours,
+        its cost in some currency, its duration in months, its peak staffing, etc.
+        These quantities are referred to as <em>measures</em>.</p>
+        <p>The term dimension is used because the measures can be regarded as occupying cells
+        in a multi-dimensional array (sometimes referred to as a <em>datacube</em>).
+        It is frequently of interest to summarize the measures along a dimension,
+        for example given the effort by activity, calculate the total effort for all activities.
+        Conversely, given the total effort, it may be of interest to see how it is broken down by activity.</p>
+        <p>In general, set of related measures, analyzed along a set of dimensions may be organized into a
+        <a href="http://en.wikipedia.org/wiki/Fact_table">fact table</a>.
+        Each row of a fact table contains a set of measures (e.g. effort and cost)
+        for a given combination of dimension values (e.g. activity and month).</p>
+        <p>This resource MAY contain the actual measurements,
+        provide a link to the source of the actual measurements,
+        or contain both a link to the source and a copy of the actual measurements obtained from the source
+        (i.e. a cached copy of the source).</p>""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#FactTable> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:FinancialMetric
+    a ogit.core:Entity ;
+    rdfs:label "FinancialMetric" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>financial metric</em> is a metric that measures the cost of an artifact or work effort.
+        For example,
+        <em>total cost</em>
+        (<a href="http://open-services.net/ns/ems/metric#Cost"><code>metric:Cost</code></a>) and
+        <em>labor cost</em>
+        (<a href="http://open-services.net/ns/ems/metric#LaborCost"><code>metric:LaborCost</code></a>)
+        are financial metrics.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#FinancialMetric> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:Format
+    a ogit.core:Entity ;
+    rdfs:label "Format" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>format</em> is a specification of the syntax of an artifact.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#Format> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:Grain
+    a ogit.core:Entity ;
+    rdfs:label "Grain" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        Dimensions may be aggregated into subsets of various sizes.
+        A <em>grain</em> is a unit of aggregation of a dimension.
+        For example, <em>month</em>
+        (<a href="http://open-services.net/ns/ems/grain#CalendarMonth"><code>grain:CalendarMonth</code></a>) and <em>week</em>
+        (<a href="http://open-services.net/ns/ems/grain#CalendarWeek"><code>grain:CalendarWeek</code></a>) are grain sizes for the dimension <em>time</em>
+        (<a href="http://open-services.net/ns/ems/dimension#Time"><code>dimension:Time</code></a>).""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#Grain> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:Head
+    a ogit.core:Entity ;
+    rdfs:label "Head" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This class defined the columns of a fact table.
+        A fact table MUST have one or more dimension columns, e.g. date or role,
+        and one or more measure columns, e.g. cost or effort.
+        The dimension columns contain dimension values.
+        Dimension columns SHOULD contain standard dimension values when they exist, e.g. for roles.
+        The creator of the fact table MAY use custom dimension dimension values and
+        record how these custom values are mapped to the standard values.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#Head> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:Map
+    a ogit.core:Entity ;
+    rdfs:label "Map" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        <p>Some key dimensions may define standard dimension member URIs which are used for
+        data interchange. However, users may wish to use custom values.
+        This class lets you define how custom values are mapped to standard URIs.
+        You can include an map resource in the description of a dimension column of a fact table
+        (see <a href="#useMap"><code>ems:useMap</code></a>).</p>
+        <p>We make the simplifying assumption that this mapping is many-to-one, that is,
+        one or more custom dimension values may be mapped to the same standard dimension value.
+        A map may contain one or more of these mappings
+        (see <a href="#mapping"><code>ems:mapping</code></a>), but each custom dimension value must map to
+        exactly one standard dimension value.</p>""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#Map> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property [
+            sh:class ogit.oslc-ems:Mapping ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:mapping
+        ] .
+
+ogit.oslc-ems:Mapping
+    a ogit.core:Entity ;
+    rdfs:label "Mapping" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This class describes a <em>mapping</em>.
+        A mapping maps some custom string label value for a dimension
+        (see <a href="#from"><code>ems:from</code></a>) to a dimension member URI which may be a standard
+        value defined in some vocabulary.
+        (see <a href="#to"><code>ems:to</code></a>).""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#Mapping> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property [
+            sh:class ogit.oslc-ems:DimensionMember ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:to
+        ] .
+
+ogit.oslc-ems:Measure
+    a ogit.core:Entity ;
+    rdfs:label "Measure" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>measure</em>, as in the idiom <em>take the measure of</em>,
+        is the result of observing some numerically quantifiable aspect of a project, system, or thing.
+        For example, a <em>duration of 12 months</em> or a <em>size of 10 KLOC</em> are measures.
+        The aspect being measured, e.g. duration or size, is referred to as the <em>metric</em>
+        and is given by the property <a href='#metric'><code>ems:metric</code></a>.
+        The scale of measurement, e.g. months or KLOC, is referred to as the <em>unit of measure</em>
+        and is given by the property <a href="#unitOfMeasure"><code>ems:unitOfMeasure</code></a>.
+        The numeric value of an observation, e.g. 12 or 10, is given by the property
+        <a href="numericValue"><code>ems:numericValue</a></code>.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#Measure> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property [
+            sh:class ogit.oslc-ems:UnitOfMeasure ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:unitOfMeasure
+        ] .
+
+ogit.oslc-ems:MeasureCell
+    a ogit.core:Entity ;
+    rdfs:label "MeasureCell" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This class descibes measure cells.
+        A measure cell refers to a measure column
+        (see <a href="#inColumn"><code>ems:inColumn</code></a>)
+        and has a numeric value
+        (see <a href="numericValue"><code>ems:numericValue</code></a>.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#MeasureCell> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:MeasureColumn
+    a ogit.core:Entity ;
+    rdfs:label "MeasureColumn" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This class describes a measure column of a fact table.
+        A measure column has a metric
+        (see <a href="#metric"><code>ems:metric</code></a>
+        and a unit of measure
+        (see <a href="#unitOfMeasure"><code>ems:unitOfMeasure</code></a>.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#MeasureColumn> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:MeasureDistribution
+    a ogit.core:Entity ;
+    rdfs:label "MeasureDistribution" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>measure distribution</em> is like a measure
+        (see <a href="#Measure"><code>ems:Measure</code></a>)
+        except that it gives a probability distribution for the numeric value of a measure instead of a precise numeric value.
+        Measure distributions are used in scenario assumptions
+        (see <a href="#assumes"><code>ems:assumes</code></a> and
+        <a href="#assumesTable"><code>ems:assumesTable</code></a>) and
+        estimate predications
+        (see <a href="#predicts"><code>ems:predicts</code></a> and
+        <a href="#predictsTable"><code>ems:predictsTable</code></a>).""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#MeasureDistribution> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:MeasureDistributionCell
+    a ogit.core:Entity ;
+    rdfs:label "MeasureDistributionCell" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>measure distribution cell</em> is a cell in a fact distribution row.
+        It refers to its column
+        (see <a href="#inColumn"><code>ems:inColumn</code></a>) and contains a measure distribution
+        (see <a href="#distribution"><code>ems:distribution</code></a>).""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#MeasureDistributionCell> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:Measurement
+    a ogit.core:Entity ;
+    rdfs:label "Measurement" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "A measurement is a set of observations of numerically quantifiable aspects of a project, system, or thing." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#Measurement> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:MeasurementList
+    a ogit.core:Entity ;
+    rdfs:label "MeasurementList" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "A measurement list is a container for measurement resources." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#MeasurementList> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property [
+            sh:class ogit.oslc-ems:Measurement ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:memberMeasurement
+        ] .
+
+ogit.oslc-ems:Metric
+    a ogit.core:Entity ;
+    rdfs:label "Metric" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>metric</em> is a procedure or algorithm for quantifying or measuring some aspect of a thing, system, event, etc.
+        For example <em>duration</em> is a metric that measures the amount of time an activity takes.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#Metric> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:NormalDistribution
+    a ogit.core:Entity ;
+    rdfs:label "NormalDistribution" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>normal distribution</em> (also known as a <em>Gaussian distribution</em>
+        is a probability distribution that naturally arises as the
+        limit of many random factors. It is symmetric about its mean and has a certain scale.
+        The mean is given by <a href="#mu"><code>ems:mu</code></a>.
+        Its scale (also known as its standard deviation) is given by
+        <a href="#scale"><code>ems:scale</code></a>.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#NormalDistribution> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:PointEstimate
+    a ogit.core:Entity ;
+    rdfs:label "PointEstimate" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>point estimate</em> is a probability distribution that is concentrated at a single value.
+        The single value is given by <a href="#numericValue"><code>ems:numericValue</code></a>.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#PointEstimate> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:PoissonDistribution
+    a ogit.core:Entity ;
+    rdfs:label "PoissonDistribution" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>Poisson distribution</em> is a probability distribution that gives the probability
+        that a given number of events will occur in a fixed time period.
+        This distribution is completely specified by a single parameter often denoted by the
+        Greek letter <em>lambda</em>.
+        Lambda is given by <a href="#lambda"><code>ems:lambda</code>.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#PoissonDistribution> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:ProbabilityDistribution
+    a ogit.core:Entity ;
+    rdfs:label "ProbabilityDistribution" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This class describes <em>probability distributions</em>.
+        A probability distribution gives the likelihood that a measurement of some value
+        (a random variable)
+        will fall within some given range.
+        Probability distributions are used in scenario assumptions
+        (see <a href="#assumes"><code>ems:assumes</code></a>) and estimate predictions
+        (see <a href="#predicts"><code>ems:predicts</code></a>).""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#ProbabilityDistribution> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:ProcessMetric
+    a ogit.core:Entity ;
+    rdfs:label "ProcessMetric" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>process metric</em> is a metric that measures the process used to create an artifact such as software.
+        For example,
+        <em>build</em>
+        (<a href="http://open-services.net/ns/ems/metric#Builds"><code>metric:Builds</code></a>) and
+        <em>test executions</em>
+        (<a href="http://open-services.net/ns/ems/metric#TestExecutions"><code>metric:TestExecutions</code></a>)
+        are process metrics.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#ProcessMetric> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:ProductivityMetric
+    a ogit.core:Entity ;
+    rdfs:label "ProductivityMetric" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>productivity metric</em> is a metric that measures the rate at which some artifact, such as software, is produced.
+        For example,
+        <em>lines of code per unit time</em>
+        (<a href="http://open-services.net/ns/ems/metric#EslocPerTime"><code>metric:EslocPerTime</code></a>) and
+        <em>team velocity</em>
+        (<a href="http://open-services.net/ns/ems/metric#TeamVelocity"><code>metric:TeamVelocity</code></a>)
+        are productivity metrics.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#ProductivityMetric> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:Project
+    a ogit.core:Entity ;
+    rdfs:label "Project" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """Within the scope of EMS, a project is any activity, system, or thing that can be the subject of a set of measurements.
+        In practice, a project is often a time-bounded work effort that produces a unique result.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#Project> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property [
+            sh:class ogit.oslc-ems:Baseline ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:currentBaseline
+        ] .
+
+ogit.oslc-ems:ProjectList
+    a ogit.core:Entity ;
+    rdfs:label "ProjectList" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "A project list is a container for projects." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#ProjectList> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property [
+            sh:class ogit.oslc-ems:Project ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:memberProject
+        ] .
+
+ogit.oslc-ems:Quantile
+    a ogit.core:Entity ;
+    rdfs:label "Quantile" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        <p>This class describes a <em>quantile</em> of a quantile function.
+        The cumulative probability of a quantile is given by
+        <a href="#probability"><code>ems:probability</code></a>.
+        The cumulative probability MUST be greater than 0 and less than 1.
+        The upper limit of the range of measurement values is given by
+        <a href="#numericValue"><code>ems:numericValue</code></a>.
+        The lower limit of the range of measurement values is given by
+        the upper limit of the preceding quantiles.</p>
+        <p>The probability that a measurement gives a value less than or equal to
+        the numeric value is equal to the cumulative probability.</p>""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#Quantile> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:QuantileFunction
+    a ogit.core:Entity ;
+    rdfs:label "QuantileDistribution" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        <p>A <em>quantile function</em> is a probability distribution that breaks up a range of values
+        into quantiles that each have the same probability.
+        When the number of quantiles is 4, 10, or 100, we refer to them as <em>quartiles</em>,
+        <em>deciles</em>, and <em>percentiles</em>.
+        For example, there is a 25% probability that a measurement will fall within any given quartile.
+        The number of quantiles is given by
+        <a href="#numberOfQuantiles"><code>ems:numberOfQuantiles</code></a>.
+        The number of quantiles MUST be greater than one.</p>
+        <p>The range of possible measurement values may be unbounded.
+        If a lower bound exists, it is given by <a href="#low"><code>ems:low</code></a>.
+        If an upper bound exists, it is given by <a href="#high"><code>ems:high</code></a>.</p>
+        <p>The graph of the quantile function is given by a set of measurement values that
+        correspond to the equally spaced cumulative probabilities between 0 and 1.
+        For example, for quartiles the cumulative probabilities are 25%, 50%, and 75%.
+        The cumulative probability values are given by one or more
+        <a href="#quantile"><code>ems:quantile</code></a> properties.</p>""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#QuantileFunction> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property [
+            sh:class ogit.oslc-ems:Quantile ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:quantile
+        ] .
+
+ogit.oslc-ems:ReliabilityMetric
+    a ogit.core:Entity ;
+    rdfs:label "ReliabilityMetric" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>reliability metric</em> is a metric that measures the correctness or absence of failures in a system such as a software system.
+        For example
+        <em>defects</em>
+        (<a href="http://open-services.net/ns/ems/metric#Defects"><code>metric:Defects</code></a>),
+        <em>failures</em>
+        (<a href="http://open-services.net/ns/ems/metric#Failures"><code>metric:Failures</code></a>), and
+        <em>mean time to failure</em>
+        (<a href="http://open-services.net/ns/ems/metric#MeanTimeToFailure"><code>metric:MeanTimeToFailure</code></a>)
+        are reliability metrics.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#ReliabilityMetric> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:Scenario
+    a ogit.core:Entity ;
+    rdfs:label "Scenario" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A scenario is a set of assumptions about how a project will be executed.
+        These assumptions are used as inputs to estimates.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#Scenario> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property
+        [
+            sh:class ogit.oslc-ems:WorkBreakdownStructure ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:assumesWbs
+        ],
+        [
+            sh:class ogit.oslc-ems:FactDistributionTable ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:assumesTable
+        ],
+        [
+            sh:class ogit.oslc-ems:Scenario ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:extendsScenario
+        ],
+        [
+            sh:class ogit.oslc-ems:MeasureDistribution ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:assumes
+        ] .
+
+ogit.oslc-ems:ScenarioList
+    a ogit.core:Entity ;
+    rdfs:label "ScenarioList" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "A scenario list is a container for scenario resources." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#ScenarioList> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property [
+            sh:class ogit.oslc-ems:Scenario ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:memberScenario
+        ] .
+
+ogit.oslc-ems:Service
+    a ogit.core:Entity ;
+    rdfs:label "Service" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        An EMS <em>service</em> hosts and manages a set of resources that describe projects, scenarios, estimates, measurements, and baselines.
+        Each instance of an service has a set of resource containers that contain resources of a given type.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#Service> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property
+        [
+            sh:class ogit.oslc-ems:MeasurementList ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:measurementList
+        ],
+        [
+            sh:class ogit.oslc-ems:ScenarioList ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:scenarioList
+        ],
+        [
+            sh:class ogit.oslc-ems:ProjectList ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:projectList
+        ],
+        [
+            sh:class ogit.oslc-ems:BaselineList ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:baselineList
+        ],
+        [
+            sh:class ogit.oslc-ems:EstimateList ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:estimateList
+        ] .
+
+ogit.oslc-ems:SizeMetric
+    a ogit.core:Entity ;
+    rdfs:label "SizeMetric" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>size metric</em> is a metric that measures the magnitude, volume, bulk, or capability of some artifact such as software.
+        For example,
+        <em>lines of code</em>
+        (<a href="http://open-services.net/ns/ems/metric#Sloc"><code>metric:Sloc</code></a>) and
+        <em>story points</em>
+        (<a href="http://open-services.net/ns/ems/metric#StoryPoints"><code>metric:StoryPoints</code></a>)
+        are size metrics.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#SizeMetric> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:TimeMetric
+    a ogit.core:Entity ;
+    rdfs:label "TimeMetric" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>time metric</em> is a metric that describes some temporal aspect of a project, system, or thing.
+        For example,
+        <em>duration</em> (<a href="http://open-services.net/ns/ems/metric#Duration"><code>metric:Duration</code></a>),
+        <em>start</em> (<a href="http://open-services.net/ns/ems/metric#Start"><code>metric:Start</code></a>), and
+        <em>finish</em> (<a href="http://open-services.net/ns/ems/metric#Finish"><code>metric:Finish</code></a>) are time metrics.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#TimeMetric> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:TriangularDistribution
+    a ogit.core:Entity ;
+    rdfs:label "TriangularDistribution" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>triangular distribution</em> is a probability distribution that concentrated between
+        <em>high</em> and <em>low</em> values, and that linearly rises to and falls from to an
+        intermediate <em>most likely</em> value.
+        The low value is given by <a href="#low"><code>ems:low</code></a>.
+        The most likely value is given by <a href="#mostLikely"><code>ems:mostLikely</code></a>.
+        The high value is given by <a href="#high"><code>ems:high</code></a>.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#TriangularDistribution> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:UniformDistribution
+    a ogit.core:Entity ;
+    rdfs:label "UniformDistribution" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>uniform distribution</em> is a probability distribution that is evenly spread between
+        a <em>high</em> and a <em>low</em> value.
+        The high value is given by <a href="#high"><code>ems:high</code></a>.
+        The low value is given by <a href="#low"><code>ems:low</code></a>.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#UniformDistribution> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:UnitOfMeasure
+    a ogit.core:Entity ;
+    rdfs:label "UnitOfMeasure" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>unit of measure</em> specifies a procedure for associating a numeric value with some metric.
+        For example, <em>month</em>
+        (<a href="http://open-services.net/ns/ems/unit#Month"><code>unit:Month</code></a>)
+        is a unit of measure for <em>duration</em>
+        (<a href="http://open-services.net/ns/ems/metric#Duration"><code>metric:Duration</code></a>).""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#UnitOfMeasure> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:WbsFormat
+    a ogit.core:Entity ;
+    rdfs:label "WbsFormat" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        A <em>WBS format</em> is a format that specifies the syntax of work breakdown structures.
+        For example,
+        <a href="http://schemas.microsoft.com/project/2007"><code>http://schemas.microsoft.com/project/2007</code></a>
+        is the format for
+        Microsoft Office Project 2007 XML Data Interchange Schema.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#WbsFormat> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:WorkBreakdownStructure
+    a ogit.core:Entity ;
+    rdfs:label "WorkBreakdownStructure" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        <p>This class describes <em>work breakdown structures</em>.
+        A <a href="http://en.wikipedia.org/wiki/Work_breakdown_structure">work breakdown structure</a> (WBS) is a common way to represent the work to be performed in a project.
+        In EMS, a WBS may be used as an assumption in an scenario,
+        as a prediction in an estimate, or as an observation in a measurement.</p>
+        <p>A WBS has a format
+        (see <a href="#wbsFormat"><code>ems:wbsFormat</code></a>), and may either include
+        (see <a href="#wbsContent"><code>ems:wbsContent</code></a>) or link to
+        (see <a href="#wbsSource"><code>ems:wbsSource</code></a>) its content.
+        The included or linked WBS content MUST be in the specified format.</p>""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#WorkBreakdownStructure> ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property [
+            sh:class ogit.oslc-ems:WbsFormat ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.oslc-ems:wbsFormat
+        ] .
+
+#
+# Attributes
+#
+ogit.oslc-ems:from
+    a ogit.core:Attribute ;
+    rdfs:label "from" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a mapping to its custom label value.
+        The value MUST be unique within its enclosing map resource.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#from> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
+    ogit.core:validation-type "" .
+
+ogit.oslc-ems:high
+    a ogit.core:Attribute ;
+    rdfs:label "high" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property gives the <em>high</em> parameter value of a probability distribution.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#high> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
+    ogit.core:validation-type "" .
+
+ogit.oslc-ems:isActive
+    a ogit.core:Attribute ;
+    rdfs:label "isActive" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This boolean property indicates if a scenario is under active consideration.
+        When a scenario has been ruled out, it is marked as inactive by setting this property to <code>false</code>.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#isActive> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
+    ogit.core:validation-type "" .
+
+ogit.oslc-ems:isClosed
+    a ogit.core:Attribute ;
+    rdfs:label "isClosed" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """This boolean property indicates if the project is closed.
+        No further activities or measurements are done on closed projects.
+        The measurements of closed projects can be used to calibrate the estimates for new projects.
+        When a project is completed and all measurements on it have been performed,
+        it is marked as closed by setting this property to <code>true</code>.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#isClosed> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
+    ogit.core:validation-type "" .
+
+ogit.oslc-ems:lambda
+    a ogit.core:Attribute ;
+    rdfs:label "lambda" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property gives the <em>lambda</em> parameter value of a Poission distribution.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#lambda> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
+    ogit.core:validation-type "" .
+
+ogit.oslc-ems:low
+    a ogit.core:Attribute ;
+    rdfs:label "low" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property gives the <em>low</em> parameter value of a probability distribution.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#low> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
+    ogit.core:validation-type "" .
+
+ogit.oslc-ems:mostLikely
+    a ogit.core:Attribute ;
+    rdfs:label "mostLikely" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property gives the <em>most likely</em> parameter value of a probability distribution.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#mostLikely> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
+    ogit.core:validation-type "" .
+
+ogit.oslc-ems:mu
+    a ogit.core:Attribute ;
+    rdfs:label "mu" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property gives the <em>mu</em> parameter value of a probability distribution.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#mu> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
+    ogit.core:validation-type "" .
+
+ogit.oslc-ems:numberOfQuantiles
+    a ogit.core:Attribute ;
+    rdfs:label "numberOfQuantiles" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property gives the <em>number of quantiles</em> parameter value of a probability distribution.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#numberOfQuantiles> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
+    ogit.core:validation-type "" .
+
+ogit.oslc-ems:numericValue
+    a ogit.core:Attribute ;
+    rdfs:label "numericValue" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """This property gives the numeric value of a resource.
+        For example, the numeric value of the measure <em>duration of 12 months</em> is 12.
+        The datatype of this property is typically <code>xsd:double</code>.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#numericValue> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
+    ogit.core:validation-type "" .
+
+ogit.oslc-ems:probability
+    a ogit.core:Attribute ;
+    rdfs:label "probability" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property gives the cumulative probability.
+        For example, the cumulative probability of the third quartile is 75%.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#probability> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
+    ogit.core:validation-type "" .
+
+ogit.oslc-ems:realProjectId
+    a ogit.core:Attribute ;
+    rdfs:label "realProjectId" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "This property links a project to an identifier of the project as a real-world object." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#realProjectId> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
+    ogit.core:validation-type "" .
+
+ogit.oslc-ems:scale
+    a ogit.core:Attribute ;
+    rdfs:label "scale" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property gives the <em>scale</em> parameter value of a probability distribution.
+        This parameter is also known as the <em>standard deviation</em> and is often denoted by
+        the Greek letter sigma.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#scale> ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "" ;
+    ogit.core:validation-type "" .
+
+#
+# Verbs
+#
+ogit.oslc-ems:assumes
+    a ogit.core:Verb ;
+    rdfs:label "assumes" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a scenario to the assumed value for some measure, e.g. duration, size.
+        The assumed value is a probability distribution.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#assumes> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:assumesTable
+    a ogit.core:Verb ;
+    rdfs:label "assumesTable" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a scenario to the assumed value for some fact table of measures, e.g. staffing by week.
+        The assumed fact table contains probability distributions.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#assumesTable> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:assumesWbs
+    a ogit.core:Verb ;
+    rdfs:label "assumesWbs" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a scenario to the assumed work breakdown structure.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#assumesWbs> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:baselineList
+    a ogit.core:Verb ;
+    rdfs:label "baselineList" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "This property links a service to its baseline list." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#baselineList> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:cdfPoint
+    a ogit.core:Verb ;
+    rdfs:label "cdfPoint" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a cumulative probability function resource to one or more points on its graph.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#cdfPoint> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:currentBaseline
+    a ogit.core:Verb ;
+    rdfs:label "currentBaseline" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "This property links a project to its current baseline." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#currentBaseline> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:dimension
+    a ogit.core:Verb ;
+    rdfs:label "dimension" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a resource to a dimension.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#dimension> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:dimensionCell
+    a ogit.core:Verb ;
+    rdfs:label "dimensionCell" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a fact row to one or more of its dimension cells.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#dimensionCell> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:dimensionColumn
+    a ogit.core:Verb ;
+    rdfs:label "dimensionColumn" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links the head of a fact table to one or more
+        <a href="#DimensionColumn"><code>ems:DimensionColumn</code></a>
+        resources that define dimension columns.
+        Every fact table MUST have at least one dimension column.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#dimensionColumn> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:dimensionMember
+    a ogit.core:Verb ;
+    rdfs:label "dimensionMember" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a dimension cell to its dimension member.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#dimensionMember> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:distribution
+    a ogit.core:Verb ;
+    rdfs:label "distribution" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a resource, e.g. <a href="#MeasureDistribution">ems:MeasureDistribution</a>
+        to a probability distribution.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#distribution> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:estimate
+    a ogit.core:Verb ;
+    rdfs:label "estimate" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The property links a resource to an estimate." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#estimate> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:estimateList
+    a ogit.core:Verb ;
+    rdfs:label "estimateList" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "This property links a service to its estimate list." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#estimateList> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:extendsScenario
+    a ogit.core:Verb ;
+    rdfs:label "extendsScenario" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a scenario a base scenario that it extends.
+        The base scenario contains assumptions that can be included in several other extended scenarios.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#extendsScenario> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:fact
+    a ogit.core:Verb ;
+    rdfs:label "fact" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a fact table to its fact rows.
+        In general, a fact table will have many fact rows.
+        If the fact table has an
+        <a href=#tableSource"><code>ems:tableSource</code></a> property,
+        then the rows of the fact table MUST be a copy of the data values received in the response of
+        an HTTP GET request of the URL of the remote table source.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#fact> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:grain
+    a ogit.core:Verb ;
+    rdfs:label "grain" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a resource to a grain.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#grain> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:head
+    a ogit.core:Verb ;
+    rdfs:label "head" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a fact table to an
+        <a href="#Head"><code>ems:Head</code></a> resource that
+        describes the columns of the table.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#head> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:inColumn
+    a ogit.core:Verb ;
+    rdfs:label "inColumn" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a cell to its column.
+        Dimension cells
+        (see <a href="#DimensionCell"><code>ems:DimensionCell</code></a>)
+        are linked to dimension columns
+        (see <a href="#DimensionColumn"><code>ems:DimensionColumn</code></a>).
+        Measure cells
+        (see <a href="#MeasureCell"><code>ems:MeasureCell</code></a>)
+        are linked to measure columns
+        (see <a href="#MeasureColumn"><code>ems:MeasureColumn</code></a>).""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#inColumn> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:map
+    a ogit.core:Verb ;
+    rdfs:label "map" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a fact table head to an
+        <a href="#Map"><code>ems:Map</code></a> resource that defines
+        how custom dimension values are mapped to standard values.
+        The scope of this mapping is local to the fact table.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#map> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:mapping
+    a ogit.core:Verb ;
+    rdfs:label "mapping" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a map to a mapping.
+        A map may have one or more mappings.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#mapping> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:measureCell
+    a ogit.core:Verb ;
+    rdfs:label "measureCell" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a fact row to one or more of its measure cells.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#measureCell> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:measureColumn
+    a ogit.core:Verb ;
+    rdfs:label "measureColumn" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links the head of a fact table to one or more
+        <a href="#MeasureColumn"><code>ems:MeasureColumn</code></a> resources that define measure columns.
+        Every fact table MUST have at least one measure column.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#measureColumn> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:measureDistributionCell
+    a ogit.core:Verb ;
+    rdfs:label "measureDistributionCell" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a fact distribution row to a measure distribution cell.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#measureDistributionCell> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:measurementList
+    a ogit.core:Verb ;
+    rdfs:label "measurementList" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "This property links a service to its measurement list." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#measurementList> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:memberBaseline
+    a ogit.core:Verb ;
+    rdfs:label "memberBaseline" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "This property links a baseline list to its member baselines." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#memberBaseline> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:memberEstimate
+    a ogit.core:Verb ;
+    rdfs:label "memberEstimate" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "This property links an estimate list to its member estimates." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#memberEstimate> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:memberMeasurement
+    a ogit.core:Verb ;
+    rdfs:label "memberMeasurement" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "This property links a measurement list to its member measurements." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#memberMeasurement> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:memberProject
+    a ogit.core:Verb ;
+    rdfs:label "memberProject" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "This property links a project list to its member projects." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#memberProject> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:memberScenario
+    a ogit.core:Verb ;
+    rdfs:label "memberScenario" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "This property links a scenario list to its member scenarios." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#memberScenario> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:metric
+    a ogit.core:Verb ;
+    rdfs:label "metric" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a measure to its metric.
+        For example, the measure <em>duration of 12 months</em> has the metric <em>duration</em>.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#metric> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:observes
+    a ogit.core:Verb ;
+    rdfs:label "observes" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a measurement to the observed value of a measure.
+        In an EMS service, the measurement is a resource of type
+        <a href="#Measurement"><code>ems:Measurement</code></a>
+        which may observe zero or more measures.
+        For example, a measurement at the end of a project may observe a <em>duration of 12 months</em> and a <em>cost of 200,000 USD</em>.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#observes> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:observesTable
+    a ogit.core:Verb ;
+    rdfs:label "observesTable" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a measurement to the observed fact table.
+        The fact table analyzes the measurement along one or more dimensions.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#observesTable> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:observesWbs
+    a ogit.core:Verb ;
+    rdfs:label "observesWbs" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a measurement to the observed work breakdown structure.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#observesWbs> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:predicts
+    a ogit.core:Verb ;
+    rdfs:label "predicts" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links an estimate to the predicted value for some measure, e.g. duration, size.
+        The predicted value is a probability distribution.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#predicts> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:predictsTable
+    a ogit.core:Verb ;
+    rdfs:label "predictsTable" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links an estimate to the predicted value for some fact table of measures, e.g. staffing by week.
+        The predicted fact table contains probability distributions.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#predictsTable> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:predictsWbs
+    a ogit.core:Verb ;
+    rdfs:label "predictsWbs" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links an estimate to the predicted work breakdown structure.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#predictsWbs> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:project
+    a ogit.core:Verb ;
+    rdfs:label "project" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The property links a resource to a project." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#project> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:projectList
+    a ogit.core:Verb ;
+    rdfs:label "projectList" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "This property links a service to its project list." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#projectList> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:quantile
+    a ogit.core:Verb ;
+    rdfs:label "quantile" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a quantile function resource to one or more quantiles.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#quantile> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:scenario
+    a ogit.core:Verb ;
+    rdfs:label "scenario" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "The property links a resource to a scenario." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#scenario> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:scenarioList
+    a ogit.core:Verb ;
+    rdfs:label "scenarioList" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "This property links a service to its scenario list." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#scenarioList> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:seeAlsoEstimation
+    a ogit.core:Verb ;
+    rdfs:label "seeAlsoEstimation" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "This property links a project to a corresponding resource in an estimation application." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#seeAlsoEstimation> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:seeAlsoPerformance
+    a ogit.core:Verb ;
+    rdfs:label "seeAlsoPerformance" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "This property links a project to a corresponding resource in a performance management application." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#seeAlsoPerformance> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:seeAlsoPortfolio
+    a ogit.core:Verb ;
+    rdfs:label "seeAlsoPortfolio" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "This property links a project to a corresponding resource in a portfolio management application." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#seeAlsoPortfolio> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:seeAlsoProject
+    a ogit.core:Verb ;
+    rdfs:label "seeAlsoProject" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "This property links a project to a corresponding resource in a project management application." ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#seeAlsoProject> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:service
+    a ogit.core:Verb ;
+    rdfs:label "service" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property is used to link a resource to the EMS service instance that hosts it.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#service> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:tableSource
+    a ogit.core:Verb ;
+    rdfs:label "tableSource" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        <p>Fact tables contain actual measurements for projects, systems, or things.
+        In practice, there may be many measurements and they may be updated frequently.
+        The measurements may be at a finer level of granularity than the estimates,
+        e.g. a project may estimate total defects found per month,
+        whereas the actual number found may be collected daily.
+        Furthermore, these measurements are often collected automatically by software development tools
+        such as bug tracking systems or source code control systems.
+        It may therefore be useful to simply refer to the source of the measurements rather than copy
+        the actual measurements into the EMS service provider,
+        e.g. a dynamic query on a software tool may generate the fact table on demand.</p>
+        <p>This property lets you refer to the remote source of the fact table data via a URL.
+        An HTTP GET request on this URL MUST return an
+        <a href="#FactTable"><code>ems:FactTable</code></a> resource whose
+        <code>dcterms:title</code> and
+        <a href="#head"><code>ems:head</code></a> properties match this resource.</p>""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#tableSource> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:to
+    a ogit.core:Verb ;
+    rdfs:label "to" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a mapping to its dimension member URI.
+        Many mappings MAY map to the same dimension member URI.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#to> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:unitOfMeasure
+    a ogit.core:Verb ;
+    rdfs:label "unitOfMeasure" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property gives the unit of measure. For example, the measure <em>duration of 12 months</em> has a unit of measure <em>months</em>.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#unitOfMeasure> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:useMap
+    a ogit.core:Verb ;
+    rdfs:label "useMap" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a resource to a map.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#useMap> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:wbsContent
+    a ogit.core:Verb ;
+    rdfs:label "wbsContent" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property gives the literal XML WBS content of a WBS resource.
+        This content MUST be in the XML format specified by the WBS resource.
+        If this property is absent, then <code>ems:wbsSource</code> MUST be present.
+        If this property and <code>ems:wbsSource</code> are present,
+        then the value of this property SHOULD be the XML document representation returned in the
+        HTTP GET response for the link given in <code>ems:wbsSource</code>.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#wbsContent> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:wbsFormat
+    a ogit.core:Verb ;
+    rdfs:label "wbsFormat" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a WBS resource to the XML format of its content.
+        EMS does not define a format for WBS content.
+        Instead, this property identifies the specification that defines the XML format of the WBS content.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#wbsFormat> ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.oslc-ems:wbsSource
+    a ogit.core:Verb ;
+    rdfs:label "wbsSource" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description """
+        This property links a WBS resource to a resource that contains the WBS XML content.
+        This content MUST be in the XML format specified by the WBS resource.
+        When this link is deferenced using an HTTP GET request, the response MUST be the WBS.
+        If this property is absent, then the WBS resource MUST have a
+        <a href="#wbsContent"><code>ems:wbsContent</code></a> property.""" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/ems#wbsSource> ;
+    ogit.core:tech-contact "arago GmbH" .

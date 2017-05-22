@@ -1,0 +1,3339 @@
+@prefix dcterms:                <http://purl.org/dc/terms/> .
+@prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.asset:             <http://www.purl.org/ogit/> .
+@prefix ogit.automation:        <http://www.purl.org/ogit/Automation/> .
+@prefix ogit.businessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
+@prefix ogit.catalog:           <http://www.purl.org/ogit/> .
+@prefix ogit.configuration:     <http://www.purl.org/ogit/> .
+@prefix ogit.contact:           <http://www.purl.org/ogit/> .
+@prefix ogit.contract:          <http://www.purl.org/ogit/> .
+@prefix ogit.cost:              <http://www.purl.org/ogit/Cost/> .
+@prefix ogit.data:              <http://www.purl.org/ogit/> .
+@prefix ogit.datacenter:        <http://www.purl.org/ogit/Datacenter/> .
+@prefix ogit.device:            <http://www.purl.org/ogit/> .
+@prefix ogit.event:             <http://www.purl.org/ogit/> .
+@prefix ogit.forum:             <http://www.purl.org/ogit/Forum/> .
+@prefix ogit.foundation:        <http://www.purl.org/ogit/> .
+@prefix ogit.identity:          <http://www.purl.org/ogit/> .
+@prefix ogit.knowledge:         <http://www.purl.org/ogit/Knowledge/> .
+@prefix ogit.license:           <http://www.purl.org/ogit/> .
+@prefix ogit.location:          <http://www.purl.org/ogit/> .
+@prefix ogit.media:             <http://www.purl.org/ogit/> .
+@prefix ogit.network:           <http://www.purl.org/ogit/Network/> .
+@prefix ogit.organization:      <http://www.purl.org/ogit/> .
+@prefix ogit.person:            <http://www.purl.org/ogit/> .
+@prefix ogit.price:             <http://www.purl.org/ogit/Price/> .
+@prefix ogit.serviceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
+@prefix ogit.software:          <http://www.purl.org/ogit/Software/> .
+@prefix ogit.task:              <http://www.purl.org/ogit/> .
+@prefix ogit.userMeta:          <http://www.purl.org/ogit/UserMeta/> .
+@prefix owl:                    <http://www.w3.org/2002/07/owl#> .
+@prefix purl:                   <http://www.purl.org/> .
+@prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:                     <http://www.w3.org/ns/shacl#> .
+@prefix vann:                   <http://purl.org/vocab/vann/> .
+
+#
+# Ontology
+#
+ogit:nexus
+    a owl:Ontology ;
+    rdfs:label "OGIT Nexus" ;
+    owl:imports
+        ogit:assets,
+        ogit:automation,
+        ogit:businessProcess,
+        ogit:catalog,
+        ogit:configuration,
+        ogit:contract,
+        ogit:cost,
+        ogit:data,
+        ogit:datacenter,
+        ogit:device,
+        ogit:event,
+        ogit:forum,
+        ogit:knowledge,
+        ogit:license,
+        ogit:media,
+        ogit:network,
+        ogit:organization,
+        ogit:price,
+        ogit:serviceManagement,
+        ogit:software,
+        ogit:task,
+        ogit:userMeta ;
+    owl:versionInfo "__OGIT_VERSION__" ;
+    dcterms:contributor "Fabian Meyer" ;
+    dcterms:creator "arago GmbH" ;
+    dcterms:description "This ontology contains inter-domain knowledge."@en ;
+    vann:preferredNamespacePrefix "ogit.nexus" ;
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
+
+#
+# Other
+#
+ogit.asset:Asset sh:property
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.datacenter:PowerDistributionUnit ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:describes
+    ],
+    [
+        sh:class ogit.contract:Contract ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.cost:CostElement ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:associates
+    ],
+    [
+        sh:class ogit.network:NetworkEnclosure ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:describes
+    ],
+    [
+        sh:class ogit.automation:MARSNodeTemplate ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:describes
+    ],
+    [
+        sh:class ogit.network:NetworkCard ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:describes
+    ],
+    [
+        sh:class ogit.datacenter:Cooling ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:describes
+    ],
+    [
+        sh:class ogit.network:NetworkFabric ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:describes
+    ],
+    [
+        sh:class ogit.device:Device ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:describes
+    ],
+    [
+        sh:class ogit.network:SimpleDevice ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:describes
+    ],
+    [
+        sh:class ogit.datacenter:Rack ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:describes
+    ],
+    [
+        sh:class ogit.automation:MARSNode ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:describes
+    ] .
+
+ogit.automation:AutomationIssue sh:property
+    [
+        sh:class ogit.data:Timeseries ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:generates
+    ],
+    [
+        sh:class ogit.task:Task ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.task:Question ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:associates
+    ] .
+
+ogit.automation:History sh:property [
+        sh:class ogit.data:Timeseries ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:generates
+    ] .
+
+ogit.automation:KnowledgeItem sh:property
+    [
+        sh:class ogit.task:Task ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:solves
+    ],
+    [
+        sh:class ogit.forum:Topic ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.media:Hyperlink ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.forum:KnowledgeBundle ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.forum:Reply ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.data:Timeseries ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:generates
+    ],
+    [
+        sh:class ogit.media:Comment ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.forum:Post ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.forum:Profile ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ] .
+
+ogit.automation:MAID sh:property
+    [
+        sh:class ogit.data:Timeseries ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:defines
+    ],
+    [
+        sh:class ogit.data:Timeseries ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:generates
+    ] .
+
+ogit.automation:MARSModel sh:property
+    [
+        sh:class ogit.serviceManagement:Order ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:implements
+    ],
+    [
+        sh:class ogit.data:Timeseries ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:generates
+    ] .
+
+ogit.automation:MARSNode sh:property
+    [
+        sh:class ogit.businessProcess:BusinessProcess ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:affects
+    ],
+    [
+        sh:class ogit.license:License ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:relates
+    ],
+    [
+        sh:class ogit.cost:CostElement ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:associates
+    ],
+    [
+        sh:class ogit.network:NetworkInterface ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.data:Timeseries ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:generates
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ],
+    [
+        sh:class ogit.serviceManagement:Service ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:affects
+    ] .
+
+ogit.automation:MARSNodeTemplate sh:property [
+        sh:class ogit.cost:CostElement ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:associates
+    ] .
+
+ogit.businessProcess:BusinessRuleTask sh:property
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:SLA ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.price:Invoice ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.serviceManagement:Order ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.asset:Asset ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Report ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Offering ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Service ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.license:License ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Ticket ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.contract:Contract ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ] .
+
+ogit.businessProcess:CancelEvent sh:property
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ] .
+
+ogit.businessProcess:CompensationEvent sh:property
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ] .
+
+ogit.businessProcess:ConditionalEvent sh:property
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ] .
+
+ogit.businessProcess:DataObject sh:property
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ] .
+
+ogit.businessProcess:DataStore sh:property
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ] .
+
+ogit.businessProcess:ErrorEvent sh:property
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ] .
+
+ogit.businessProcess:EscalationEvent sh:property
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ] .
+
+ogit.businessProcess:EventBasedGateway sh:property
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ] .
+
+ogit.businessProcess:ExclusiveGateway sh:property
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ] .
+
+ogit.businessProcess:InclusiveGateway sh:property
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ] .
+
+ogit.businessProcess:InstantiatedReceiveTask sh:property
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.contract:Contract ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.serviceManagement:Offering ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.serviceManagement:Service ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.price:Invoice ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Ticket ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.asset:Asset ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:SLA ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.license:License ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Report ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Order ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ] .
+
+ogit.businessProcess:LinkEvent sh:property
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ] .
+
+ogit.businessProcess:ManualTask sh:property
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.serviceManagement:Ticket ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.contract:Contract ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Service ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Report ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.asset:Asset ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:SLA ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Order ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.serviceManagement:Offering ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.price:Invoice ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.license:License ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ] .
+
+ogit.businessProcess:MessageEvent sh:property
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ] .
+
+ogit.businessProcess:MultipleEvent sh:property
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ] .
+
+ogit.businessProcess:NoneEvent sh:property
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ] .
+
+ogit.businessProcess:ParallelGateway sh:property
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ] .
+
+ogit.businessProcess:ProcessLane sh:property
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:requires
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:requires
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ] .
+
+ogit.businessProcess:ProcessPool sh:property
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:requires
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:requires
+    ] .
+
+ogit.businessProcess:ReceiveTask sh:property
+    [
+        sh:class ogit.serviceManagement:Offering ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.price:Invoice ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.contract:Contract ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Report ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.license:License ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.serviceManagement:Service ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.asset:Asset ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.serviceManagement:Order ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Ticket ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.serviceManagement:SLA ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ] .
+
+ogit.businessProcess:ScriptTask sh:property
+    [
+        sh:class ogit.serviceManagement:Service ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.price:Invoice ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.contract:Contract ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Ticket ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.license:License ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.serviceManagement:Report ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Order ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.asset:Asset ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.serviceManagement:Offering ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:SLA ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ] .
+
+ogit.businessProcess:SendTask sh:property
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.price:Invoice ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.contract:Contract ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.asset:Asset ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.license:License ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Report ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Order ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:SLA ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Offering ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Service ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Ticket ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ] .
+
+ogit.businessProcess:ServiceTask sh:property
+    [
+        sh:class ogit.serviceManagement:Offering ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Report ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.license:License ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.asset:Asset ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.contract:Contract ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Order ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.price:Invoice ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.serviceManagement:SLA ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Ticket ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Service ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ] .
+
+ogit.businessProcess:SignalEvent sh:property
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ] .
+
+ogit.businessProcess:Survey sh:property [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ] .
+
+ogit.businessProcess:TerminationEvent sh:property
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ] .
+
+ogit.businessProcess:TimerEvent sh:property
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ] .
+
+ogit.businessProcess:UndefinedTask sh:property
+    [
+        sh:class ogit.license:License ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.serviceManagement:Report ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.contract:Contract ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.serviceManagement:Offering ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.price:Invoice ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:SLA ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.asset:Asset ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Ticket ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Order ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.serviceManagement:Service ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ] .
+
+ogit.businessProcess:UserTask sh:property
+    [
+        sh:class ogit.license:License ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.asset:Asset ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Order ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.serviceManagement:Service ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Ticket ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Report ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:SoftwareComponent ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Offering ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.price:Invoice ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.organization:Role ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.contract:Contract ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:SLA ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ] .
+
+ogit.catalog:Catalog sh:property [
+        sh:class ogit.location:Region ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:validFor
+    ] .
+
+ogit.catalog:CatalogItem sh:property
+    [
+        sh:class ogit.serviceManagement:Service ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:requires
+    ],
+    [
+        sh:class ogit.serviceManagement:Action ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:requires
+    ] .
+
+ogit.configuration:Attachment sh:property
+    [
+        sh:class ogit.serviceManagement:Problem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.media:Comment ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.serviceManagement:Order ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.serviceManagement:Ticket ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.serviceManagement:Incident ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.serviceManagement:SubTask ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.contract:Contract ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.serviceManagement:ChangeRequest ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.license:License ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ] .
+
+ogit.configuration:ConfigurationItem sh:property
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ],
+    [
+        sh:class ogit.automation:MARSNode ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:relates
+    ],
+    [
+        sh:class ogit.device:Device ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:relates
+    ],
+    [
+        sh:class ogit.automation:MARSNode ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ],
+    [
+        sh:class ogit.datacenter:Server ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:relates
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ],
+    [
+        sh:class ogit.asset:Asset ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:relates
+    ] .
+
+ogit.configuration:Parameter sh:property
+    [
+        sh:class ogit.catalog:CatalogItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:describes
+    ],
+    [
+        sh:class ogit.serviceManagement:Service ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:describes
+    ],
+    [
+        sh:class ogit.price:PriceSpecification ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:specifies
+    ],
+    [
+        sh:class ogit.cost:CostElement ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:describes
+    ],
+    [
+        sh:class ogit.serviceManagement:Offering ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:describes
+    ],
+    [
+        sh:class ogit.serviceManagement:SLA ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:describes
+    ] .
+
+ogit.contract:Contract sh:property
+    [
+        sh:class ogit.serviceManagement:SLA ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.data:Timeseries ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:generates
+    ],
+    [
+        sh:class ogit.license:License ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ] .
+
+ogit.cost:PlanningParameter sh:property [
+        sh:class ogit.configuration:Parameter ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:specifies
+    ] .
+
+ogit.cost:PlanningTemplate sh:property [
+        sh:class ogit.automation:MARSModelTemplate ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:plans
+    ] .
+
+ogit.datacenter:Rack sh:property [
+        sh:class ogit.device:Device ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ] .
+
+ogit.datacenter:Server sh:property
+    [
+        sh:class ogit.device:Device ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ],
+    [
+        sh:class ogit.data:Timeseries ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:generates
+    ] .
+
+ogit.datacenter:Storage sh:property [
+        sh:class ogit.device:Device ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ] .
+
+ogit.datacenter:UPS sh:property [
+        sh:class ogit.device:Device ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ] .
+
+ogit.device:Device sh:property
+    [
+        sh:class ogit.datacenter:Sensor ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.datacenter:UPS ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.datacenter:PowerDistributionUnit ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.data:Timeseries ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:generates
+    ] .
+
+ogit.event:Alert sh:property
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:alerts
+    ],
+    [
+        sh:class ogit.contract:Contract ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.license:License ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ] .
+
+ogit.event:Event sh:property
+    [
+        sh:class ogit.automation:AutomationIssue ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ],
+    [
+        sh:class ogit.automation:MARSNode ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:affects
+    ],
+    [
+        sh:class ogit.automation:MARSNode ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:relates
+    ],
+    [
+        sh:class ogit.serviceManagement:Incident ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:relates
+    ],
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:affects
+    ],
+    [
+        sh:class ogit.configuration:ConfigurationItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:affects
+    ],
+    [
+        sh:class ogit.serviceManagement:Order ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:relates
+    ] .
+
+ogit.forum:KnowledgeBundle sh:property
+    [
+        sh:class ogit.media:Hyperlink ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.media:Comment ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.automation:KnowledgeItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.automation:KnowledgeItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.automation:AutomationIssue ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ] .
+
+ogit.forum:KnowledgeItemHistory sh:property
+    [
+        sh:class ogit.media:Comment ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.media:Hyperlink ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.automation:KnowledgeItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:relates
+    ] .
+
+ogit.forum:Post sh:property
+    [
+        sh:class ogit.automation:KnowledgeItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.media:Comment ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.media:Hyperlink ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ] .
+
+ogit.forum:Profile sh:property
+    [
+        sh:class ogit.media:Comment ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:creates
+    ],
+    [
+        sh:class ogit.automation:AutomationIssue ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:creates
+    ],
+    [
+        sh:class ogit.event:Notification ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:owns
+    ],
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.automation:KnowledgeItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:creates
+    ] .
+
+ogit.forum:Rating sh:property [
+        sh:class ogit.automation:KnowledgeItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.forum:rates
+    ] .
+
+ogit.forum:Reply sh:property
+    [
+        sh:class ogit.automation:KnowledgeItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.media:Hyperlink ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.media:Comment ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ] .
+
+ogit.forum:ShortId sh:property [
+        sh:class ogit.automation:KnowledgeItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:specifies
+    ] .
+
+ogit.forum:Tag sh:property [
+        sh:class ogit.automation:KnowledgeItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ] .
+
+ogit.knowledge:AcquisitionSession sh:property
+    [
+        sh:class ogit.knowledge:Step ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:defines
+    ],
+    [
+        sh:class ogit.media:Comment ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.automation:KnowledgeItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:defines
+    ] .
+
+ogit.license:License sh:property [
+        sh:class ogit.data:Timeseries ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:generates
+    ] .
+
+ogit.license:LicenseToken sh:property [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ] .
+
+ogit.media:Comment sh:property
+    [
+        sh:class ogit.forum:Profile ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.forum:mentions
+    ],
+    [
+        sh:class ogit.license:License ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.forum:Topic ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.serviceManagement:Ticket ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.forum:Post ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.automation:KnowledgeItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.event:Event ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.forum:Profile ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.forum:Reply ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.serviceManagement:SubTask ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.forum:Reply ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:responds
+    ],
+    [
+        sh:class ogit.forum:Rating ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:responds
+    ],
+    [
+        sh:class ogit.forum:KnowledgeBundle ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ],
+    [
+        sh:class ogit.contract:Contract ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:connects
+    ] .
+
+ogit.network:FCHBA sh:property [
+        sh:class ogit.asset:Asset ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ] .
+
+ogit.network:NIC sh:property [
+        sh:class ogit.asset:Asset ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ] .
+
+ogit.network:NetworkCard sh:property [
+        sh:class ogit.asset:Asset ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ] .
+
+ogit.network:NetworkEnclosure sh:property [
+        sh:class ogit.asset:Asset ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ] .
+
+ogit.network:NetworkEndpoint sh:property [
+        sh:class ogit.asset:Asset ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ] .
+
+ogit.network:NetworkFabric sh:property [
+        sh:class ogit.asset:Asset ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ] .
+
+ogit.network:Shelf sh:property [
+        sh:class ogit.asset:Asset ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ] .
+
+ogit.network:SimpleDevice sh:property
+    [
+        sh:class ogit.data:Timeseries ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:generates
+    ],
+    [
+        sh:class ogit.asset:Asset ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ] .
+
+ogit.organization:Organization sh:property
+    [
+        sh:class ogit.event:Alert ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.datacenter:Datacenter ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.serviceManagement:Ticket ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:supervises
+    ],
+    [
+        sh:class ogit.datacenter:Room ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.businessProcess:SurveyIteration ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:supports
+    ],
+    [
+        sh:class ogit.catalog:Catalog ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:generates
+    ],
+    [
+        sh:class ogit.automation:MARSNode ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:owns
+    ],
+    [
+        sh:class ogit.configuration:ConfigurationItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:approves
+    ],
+    [
+        sh:class ogit.license:License ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.businessProcess:SurveyIteration ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:produces
+    ],
+    [
+        sh:class ogit.configuration:ConfigurationItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.serviceManagement:SubTask ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:supervises
+    ],
+    [
+        sh:class ogit.serviceManagement:Offering ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:defines
+    ],
+    [
+        sh:class ogit.businessProcess:Project ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:produces
+    ],
+    [
+        sh:class ogit.serviceManagement:Problem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:supervises
+    ],
+    [
+        sh:class ogit.configuration:ConfigurationItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:creates
+    ],
+    [
+        sh:class ogit.businessProcess:Project ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:consumes
+    ],
+    [
+        sh:class ogit.configuration:ConfigurationItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:provides
+    ],
+    [
+        sh:class ogit.datacenter:Building ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.cost:Budget ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:plans
+    ],
+    [
+        sh:class ogit.businessProcess:Project ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:supports
+    ],
+    [
+        sh:class ogit.serviceManagement:ChangeRequest ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:supervises
+    ],
+    [
+        sh:class ogit.serviceManagement:Order ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:supervises
+    ],
+    [
+        sh:class ogit.datacenter:Cooling ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.businessProcess:SurveyIteration ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:consumes
+    ],
+    [
+        sh:class ogit.configuration:ConfigurationItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:supports
+    ],
+    [
+        sh:class ogit.serviceManagement:Incident ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:supervises
+    ],
+    [
+        sh:class ogit.asset:Asset ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:owns
+    ],
+    [
+        sh:class ogit.datacenter:Rack ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.device:Device ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.data:Timeseries ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:generates
+    ],
+    [
+        sh:class ogit.contract:Contract ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:concludes
+    ] .
+
+ogit.organization:Policy sh:property [
+        sh:class ogit.serviceManagement:Service ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:governs
+    ] .
+
+ogit.organization:Role sh:property [
+        sh:class ogit.serviceManagement:Service ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ] .
+
+ogit.person:Person sh:property
+    [
+        sh:class ogit.contract:Contract ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:approves
+    ],
+    [
+        sh:class ogit.serviceManagement:ChangeRequest ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:updates
+    ],
+    [
+        sh:class ogit.license:License ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.serviceManagement:Ticket ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:opens
+    ],
+    [
+        sh:class ogit.serviceManagement:Incident ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:supervises
+    ],
+    [
+        sh:class ogit.businessProcess:Milestone ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:supports
+    ],
+    [
+        sh:class ogit.datacenter:Datacenter ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.datacenter:Cooling ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.businessProcess:Milestone ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:produces
+    ],
+    [
+        sh:class ogit.network:PortChannel ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.serviceManagement:Ticket ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:supervises
+    ],
+    [
+        sh:class ogit.serviceManagement:ChangeRequest ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:opens
+    ],
+    [
+        sh:class ogit.serviceManagement:Order ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:updates
+    ],
+    [
+        sh:class ogit.businessProcess:Milestone ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:consumes
+    ],
+    [
+        sh:class ogit.network:Router ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.serviceManagement:Problem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:closes
+    ],
+    [
+        sh:class ogit.network:Slot ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.serviceManagement:Incident ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:opens
+    ],
+    [
+        sh:class ogit.businessProcess:SurveyIteration ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:relates
+    ],
+    [
+        sh:class ogit.contract:Contract ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:supervises
+    ],
+    [
+        sh:class ogit.businessProcess:Project ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.serviceManagement:Problem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:opens
+    ],
+    [
+        sh:class ogit.serviceManagement:Service ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:owns
+    ],
+    [
+        sh:class ogit.serviceManagement:Problem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:supervises
+    ],
+    [
+        sh:class ogit.media:Comment ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:ignores
+    ],
+    [
+        sh:class ogit.serviceManagement:SubTask ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:opens
+    ],
+    [
+        sh:class ogit.serviceManagement:SubTask ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:requests
+    ],
+    [
+        sh:class ogit.configuration:ConfigurationItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:supports
+    ],
+    [
+        sh:class ogit.serviceManagement:Incident ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:reports
+    ],
+    [
+        sh:class ogit.configuration:ConfigurationItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:creates
+    ],
+    [
+        sh:class ogit.serviceManagement:Incident ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:closes
+    ],
+    [
+        sh:class ogit.serviceManagement:Order ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:supervises
+    ],
+    [
+        sh:class ogit.serviceManagement:Ticket ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:updates
+    ],
+    [
+        sh:class ogit.datacenter:Room ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.serviceManagement:ChangeRequest ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:closes
+    ],
+    [
+        sh:class ogit.cost:Budget ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.event:Notification ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:sends
+    ],
+    [
+        sh:class ogit.serviceManagement:SubTask ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:updates
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.event:Alert ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:creates
+    ],
+    [
+        sh:class ogit.serviceManagement:Order ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:closes
+    ],
+    [
+        sh:class ogit.businessProcess:Project ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:consumes
+    ],
+    [
+        sh:class ogit.serviceManagement:Incident ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:updates
+    ],
+    [
+        sh:class ogit.network:VLAN ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.serviceManagement:ChangeRequest ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:requests
+    ],
+    [
+        sh:class ogit.serviceManagement:Problem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:updates
+    ],
+    [
+        sh:class ogit.businessProcess:Project ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:produces
+    ],
+    [
+        sh:class ogit.datacenter:Rack ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.serviceManagement:Ticket ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:closes
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:owns
+    ],
+    [
+        sh:class ogit.businessProcess:Project ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:supports
+    ],
+    [
+        sh:class ogit.network:WifiAccessPoint ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.serviceManagement:SubTask ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:closes
+    ],
+    [
+        sh:class ogit.configuration:ConfigurationItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:updates
+    ],
+    [
+        sh:class ogit.event:Alert ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:rejects
+    ],
+    [
+        sh:class ogit.network:Port ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.event:Event ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:owns
+    ],
+    [
+        sh:class ogit.license:LicenseRequest ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:requests
+    ],
+    [
+        sh:class ogit.contract:Contract ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:concludes
+    ],
+    [
+        sh:class ogit.businessProcess:SurveyReply ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:repliedWith
+    ],
+    [
+        sh:class ogit.network:Switch ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.serviceManagement:Order ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:opens
+    ],
+    [
+        sh:class ogit.network:Subnet ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.network:Shelf ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.device:Device ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.serviceManagement:SubTask ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:supervises
+    ],
+    [
+        sh:class ogit.event:Notification ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:receives
+    ],
+    [
+        sh:class ogit.datacenter:Building ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:manages
+    ],
+    [
+        sh:class ogit.serviceManagement:ChangeRequest ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:supervises
+    ],
+    [
+        sh:class ogit.serviceManagement:Problem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:reports
+    ] .
+
+ogit.price:Invoice sh:property [
+        sh:class ogit.serviceManagement:Order ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:bills
+    ] .
+
+ogit.serviceManagement:Action sh:property
+    [
+        sh:class ogit.catalog:CatalogItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:requires
+    ],
+    [
+        sh:class ogit.catalog:CatalogItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ] .
+
+ogit.serviceManagement:ApprovalTask sh:property
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.task:Task ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ] .
+
+ogit.serviceManagement:ChangeRequest sh:property
+    [
+        sh:class ogit.automation:MARSNode ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:relates
+    ],
+    [
+        sh:class ogit.configuration:ConfigurationItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:affects
+    ],
+    [
+        sh:class ogit.automation:MARSNode ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:affects
+    ],
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:affects
+    ],
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.automation:MARSNode ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:reportedOn
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.automation:AutomationIssue ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ] .
+
+ogit.serviceManagement:Incident sh:property
+    [
+        sh:class ogit.automation:MARSNode ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:reportedOn
+    ],
+    [
+        sh:class ogit.automation:MARSNode ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:affects
+    ],
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:affects
+    ],
+    [
+        sh:class ogit.automation:AutomationIssue ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.configuration:ConfigurationItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:affects
+    ],
+    [
+        sh:class ogit.event:Event ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:causes
+    ],
+    [
+        sh:class ogit.task:Task ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:opens
+    ] .
+
+ogit.serviceManagement:Offering sh:property
+    [
+        sh:class ogit.automation:MARSModelTemplate ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:specifies
+    ],
+    [
+        sh:class ogit.cost:CostElement ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ],
+    [
+        sh:class ogit.catalog:CatalogItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:contains
+    ] .
+
+ogit.serviceManagement:Order sh:property
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.automation:MARSNode ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:affects
+    ],
+    [
+        sh:class ogit.contract:Contract ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:relates
+    ],
+    [
+        sh:class ogit.automation:MARSNode ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:reportedOn
+    ],
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:affects
+    ],
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ] .
+
+ogit.serviceManagement:Problem sh:property
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.automation:MARSNode ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:reportedOn
+    ],
+    [
+        sh:class ogit.automation:MARSNode ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:affects
+    ],
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:affects
+    ],
+    [
+        sh:class ogit.automation:AutomationIssue ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ] .
+
+ogit.serviceManagement:Report sh:property
+    [
+        sh:class ogit.automation:MARSNode ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:relates
+    ],
+    [
+        sh:class ogit.data:Timeseries ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ],
+    [
+        sh:class ogit.price:Invoice ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:generates
+    ] .
+
+ogit.serviceManagement:SLA sh:property [
+        sh:class ogit.contract:Penalty ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:triggers
+    ] .
+
+ogit.serviceManagement:Service sh:property
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:affects
+    ],
+    [
+        sh:class ogit.catalog:CatalogItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ],
+    [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:implements
+    ] .
+
+ogit.serviceManagement:SubTask sh:property
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.task:Task ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.configuration:ConfigurationItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:affects
+    ] .
+
+ogit.serviceManagement:Ticket sh:property
+    [
+        sh:class ogit.automation:MARSNode ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:affects
+    ],
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:affects
+    ],
+    [
+        sh:class ogit.automation:AutomationIssue ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:corresponds
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.person:Person ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:class ogit.automation:MARSNode ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:reportedOn
+    ] .
+
+ogit.software:Application sh:property
+    [
+        sh:class ogit.serviceManagement:SLA ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:complies
+    ],
+    [
+        sh:class ogit.data:Timeseries ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:generates
+    ],
+    [
+        sh:class ogit.organization:Organization ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:class ogit.license:License ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:relates
+    ] .
+
+ogit.software:Connector sh:property
+    [
+        sh:class ogit.event:Event ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:creates
+    ],
+    [
+        sh:class ogit.configuration:ConfigurationItem ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:creates
+    ],
+    [
+        sh:class ogit.serviceManagement:ChangeRequest ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:creates
+    ],
+    [
+        sh:class ogit.serviceManagement:Incident ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:creates
+    ] .
+
+ogit.software:SoftwareComponent sh:property [
+        sh:class ogit.automation:MARSNode ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:uses
+    ] .
+
+ogit.software:SoftwareConnection sh:property [
+        sh:class ogit.network:NetworkLink ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:transfers
+    ] .
+
+ogit.task:Question sh:property [
+        sh:class ogit.data:Timeseries ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:generates
+    ] .
+
+ogit.task:Task sh:property [
+        sh:class ogit.data:Timeseries ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:generates
+    ] .
+
+ogit.task:TaskList sh:property [
+        sh:class ogit.data:Timeseries ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:generates
+    ] .

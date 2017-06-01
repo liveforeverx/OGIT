@@ -1,5 +1,6 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit._forum:            <http://www.purl.org/ogit/> .
 @prefix ogit.alerting:          <http://www.purl.org/ogit/> .
 @prefix ogit.asset:             <http://www.purl.org/ogit/> .
 @prefix ogit.automation:        <http://www.purl.org/ogit/Automation/> .
@@ -63,6 +64,7 @@ ogit:graphit
         ogit:oslc-asset,
         ogit:oslc-auto,
         ogit:oslc-cm,
+        ogit:oslc-core,
         ogit:oslc-crtv,
         ogit:oslc-ems,
         ogit:oslc-perfmon,
@@ -511,6 +513,8 @@ ogit.graphit:indexed-attributes
 #
 # Other
 #
+ogit._forum:Notification ogit.core:parent ogit.graphit:Node .
+
 ogit.alerting:Alert ogit.core:parent ogit.graphit:Node .
 
 ogit.asset:Asset ogit.core:parent ogit.graphit:Node .
@@ -702,8 +706,6 @@ ogit.datacenter:UPS ogit.core:parent ogit.graphit:Node .
 ogit.device:Device ogit.core:parent ogit.graphit:Node .
 
 ogit.event:Event ogit.core:parent ogit.graphit:Node .
-
-ogit.event:Notification ogit.core:parent ogit.graphit:Node .
 
 ogit.forum:Award ogit.core:parent ogit.graphit:Node .
 

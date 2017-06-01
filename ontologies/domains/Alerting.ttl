@@ -2,9 +2,7 @@
 @prefix ogit:            <http://www.purl.org/ogit/> .
 @prefix ogit.alerting:   <http://www.purl.org/ogit/> .
 @prefix ogit.core:       <http://www.purl.org/ogit/> .
-@prefix ogit.event:      <http://www.purl.org/ogit/> .
 @prefix ogit.foundation: <http://www.purl.org/ogit/> .
-@prefix ogit.person:     <http://www.purl.org/ogit/> .
 @prefix owl:             <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh:              <http://www.w3.org/ns/shacl#> .
@@ -16,9 +14,7 @@
 ogit:alerting
     a owl:Ontology ;
     rdfs:label "OGIT Alerting" ;
-    owl:imports
-        ogit:event,
-        ogit:person ;
+    owl:imports ogit:foundation ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -54,18 +50,6 @@ ogit.alerting:Alert
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:alerts
-        ],
-        [
-            sh:class ogit.event:Event ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:triggers
-        ],
-        [
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.foundation:type
@@ -90,45 +74,3 @@ ogit.alerting:Alert
             sh:minCount 0 ;
             sh:path ogit.foundation:value
         ] .
-
-#
-# Other
-#
-ogit.event:Event sh:property [
-        sh:class ogit.person:Person ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:affects
-    ] .
-
-ogit.person:Person sh:property
-    [
-        sh:class ogit.event:Notification ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:sends
-    ],
-    [
-        sh:class ogit.alerting:Alert ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:creates
-    ],
-    [
-        sh:class ogit.alerting:Alert ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:rejects
-    ],
-    [
-        sh:class ogit.event:Event ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:owns
-    ],
-    [
-        sh:class ogit.event:Notification ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:receives
-    ] .

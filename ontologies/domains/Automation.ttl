@@ -5,7 +5,6 @@
 @prefix ogit.core:        <http://www.purl.org/ogit/> .
 @prefix ogit.datacenter:  <http://www.purl.org/ogit/Datacenter/> .
 @prefix ogit.foundation:  <http://www.purl.org/ogit/> .
-@prefix ogit.location:    <http://www.purl.org/ogit/> .
 @prefix owl:              <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:             <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh:               <http://www.w3.org/ns/shacl#> .
@@ -17,7 +16,7 @@
 ogit:automation
     a owl:Ontology ;
     rdfs:label "OGIT Automation" ;
-    owl:imports ogit:location ;
+    owl:imports ogit:foundation ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -621,18 +620,6 @@ ogit.automation:MARSNode
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
-        [
-            sh:class ogit.location:Region ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:locatedIn
-        ],
-        [
-            sh:class ogit.location:Location ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:locatedIn
-        ],
         [
             sh:class ogit.automation:MARSNode ;
             sh:description "" ;

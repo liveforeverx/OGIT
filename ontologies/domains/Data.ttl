@@ -3,7 +3,6 @@
 @prefix ogit.core:       <http://www.purl.org/ogit/> .
 @prefix ogit.data:       <http://www.purl.org/ogit/> .
 @prefix ogit.foundation: <http://www.purl.org/ogit/> .
-@prefix ogit.location:   <http://www.purl.org/ogit/> .
 @prefix owl:             <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh:              <http://www.w3.org/ns/shacl#> .
@@ -15,7 +14,7 @@
 ogit:data
     a owl:Ontology ;
     rdfs:label "OGIT Data" ;
-    owl:imports ogit:location ;
+    owl:imports ogit:foundation ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -88,13 +87,3 @@ ogit.data:Timeseries
             sh:minCount 0 ;
             sh:path ogit.foundation:instance
         ] .
-
-#
-# Other
-#
-ogit.location:Location sh:property [
-        sh:class ogit.data:Timeseries ;
-        sh:description "" ;
-        sh:minCount 0 ;
-        sh:path ogit.foundation:generates
-    ] .

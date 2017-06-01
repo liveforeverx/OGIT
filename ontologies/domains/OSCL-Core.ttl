@@ -1102,6 +1102,26 @@ ogit.oslc-core:futureAction
     ogit:original <http://open-services.net/ns/core#futureAction> ;
     ogit.core:tech-contact "arago GmbH" .
 
+ogit.oslc-core:hasBasicShape
+    a ogit.core:Verb ;
+    rdfs:label "hasBasicShape" ;
+    dcterms:created "2016-09-22" ;
+    dcterms:creator "OGIT Importer" ;
+    dcterms:description "" ;
+    dcterms:modified "2016-09-22" ;
+    dcterms:valid "start=2016-09-22;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:hide "false" ;
+    ogit.core:history [
+            dcterms:creator "OGIT Importer" ;
+            dcterms:date "2016-09-22" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit:original <http://open-services.net/ns/core#hasBasicShape> ;
+    ogit.core:tech-contact "arago GmbH" .
+
 ogit.oslc-core:icon
     a ogit.core:Verb ;
     rdfs:label "icon" ;

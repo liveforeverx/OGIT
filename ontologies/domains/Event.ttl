@@ -177,31 +177,6 @@ ogit.event:Event
             sh:path ogit.event:isRoot
         ] .
 
-ogit.event:Notification
-    a ogit.core:Entity ;
-    rdfs:label "Notification" ;
-    dcterms:created "2015-04-27" ;
-    dcterms:creator "cwalker@arago.de" ;
-    dcterms:description "A notification event" ;
-    dcterms:modified "2017-02-17" ;
-    dcterms:valid "start=2015-04-27;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history
-        [
-            dcterms:creator "cwalker@arago.de" ;
-            dcterms:date "2015-04-27" ;
-            dcterms:description "Initial Creation" ;
-            dcterms:identifier "1"
-        ],
-        [
-            dcterms:creator "stravlos@arago.de" ;
-            dcterms:date "2017-02-17" ;
-            dcterms:description "Make description more general" ;
-            dcterms:identifier "2"
-        ] ;
-    ogit.core:scope "NTO" ;
-    ogit.core:tech-contact "arago GmbH" .
-
 #
 # Attributes
 #

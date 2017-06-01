@@ -1230,7 +1230,12 @@ ogit.statistics:AutomationFamily
     ogit.graphit:indexed-attributes
         ogit.foundation:description,
         ogit.foundation:name ;
-    ogit.core:parent ogit.graphit:Node .
+    ogit.core:parent ogit.graphit:Node ;
+    sh:property [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.automation:marsNodeType
+        ] .
 
 ogit.task:Question ogit.core:parent ogit.graphit:Node .
 

@@ -57,6 +57,7 @@ ogit:nexus
         ogit:identity,
         ogit:knowledge,
         ogit:license,
+        ogit:location,
         ogit:media,
         ogit:network,
         ogit:organization,
@@ -359,6 +360,11 @@ ogit.automation:MARSNode sh:property
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:assignedTo
+    ],
+    [
+        sh:maxCount 1 ;
+        sh:minCount 0 ;
+        sh:path ogit.datacenter:rackUnit
     ] .
 
 ogit.automation:MARSNodeTemplate sh:property [
@@ -1758,6 +1764,11 @@ ogit.configuration:ConfigurationItem sh:property
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:relates
+    ],
+    [
+        sh:maxCount 1 ;
+        sh:minCount 0 ;
+        sh:path ogit.automation:governingContract
     ] .
 
 ogit.configuration:Parameter sh:property
@@ -1796,6 +1807,21 @@ ogit.configuration:Parameter sh:property
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:describes
+    ],
+    [
+        sh:maxCount 1 ;
+        sh:minCount 0 ;
+        sh:path ogit.serviceManagement:granularity
+    ],
+    [
+        sh:maxCount 1 ;
+        sh:minCount 0 ;
+        sh:path ogit.serviceManagement:isRequired
+    ],
+    [
+        sh:maxCount 1 ;
+        sh:minCount 0 ;
+        sh:path ogit.serviceManagement:requirementId
     ] .
 
 ogit.contact:Email sh:property [
@@ -1918,6 +1944,11 @@ ogit.device:Device sh:property
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:generates
+    ],
+    [
+        sh:maxCount 1 ;
+        sh:minCount 0 ;
+        sh:path ogit.datacenter:moveProductionDate
     ] .
 
 ogit.event:Event sh:property
@@ -1962,6 +1993,11 @@ ogit.event:Event sh:property
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:affects
+    ],
+    [
+        sh:maxCount 1 ;
+        sh:minCount 0 ;
+        sh:path ogit.serviceManagement:reportedSource
     ] .
 
 ogit.forum:KnowledgeBundle sh:property
@@ -2014,6 +2050,21 @@ ogit.forum:KnowledgeItemHistory sh:property
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:relates
+    ],
+    [
+        sh:maxCount 1 ;
+        sh:minCount 1 ;
+        sh:path ogit.automation:knowledgeItemFormalRepresentation
+    ],
+    [
+        sh:maxCount 1 ;
+        sh:minCount 1 ;
+        sh:path ogit.automation:deployToEngine
+    ],
+    [
+        sh:maxCount 1 ;
+        sh:minCount 0 ;
+        sh:path ogit.automation:knowledgeItemTier
     ] .
 
 ogit.forum:Post sh:property
@@ -2137,11 +2188,17 @@ ogit.license:License sh:property [
         sh:path ogit.foundation:generates
     ] .
 
-ogit.license:LicenseToken sh:property [
+ogit.license:LicenseToken sh:property
+    [
         sh:class ogit.organization:Organization ;
         sh:description "" ;
         sh:minCount 0 ;
         sh:path ogit.foundation:belongs
+    ],
+    [
+        sh:maxCount 1 ;
+        sh:minCount 0 ;
+        sh:path ogit.serviceManagement:licenseTokenStatus
     ] .
 
 ogit.location:Location sh:property [

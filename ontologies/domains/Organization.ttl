@@ -1,12 +1,12 @@
-@prefix dcterms:           <http://purl.org/dc/terms/> .
-@prefix ogit:              <http://www.purl.org/ogit/> .
-@prefix ogit.core:         <http://www.purl.org/ogit/> .
-@prefix ogit.foundation:   <http://www.purl.org/ogit/> .
-@prefix ogit.organization: <http://www.purl.org/ogit/> .
-@prefix owl:               <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs:              <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh:                <http://www.w3.org/ns/shacl#> .
-@prefix vann:              <http://purl.org/vocab/vann/> .
+@prefix dcterms:            <http://purl.org/dc/terms/> .
+@prefix ogit:               <http://www.purl.org/ogit/> .
+@prefix ogit._organization: <http://www.purl.org/ogit/> .
+@prefix ogit.core:          <http://www.purl.org/ogit/> .
+@prefix ogit.foundation:    <http://www.purl.org/ogit/> .
+@prefix owl:                <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:               <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:                 <http://www.w3.org/ns/shacl#> .
+@prefix vann:               <http://purl.org/vocab/vann/> .
 
 #
 # Ontology
@@ -18,13 +18,13 @@ ogit:organization
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
-    vann:preferredNamespacePrefix "ogit.organization" ;
+    vann:preferredNamespacePrefix "ogit._organization" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
 #
-ogit.organization:Organization
+ogit._organization:Organization
     a ogit.core:Entity ;
     rdfs:label "Organization" ;
     dcterms:created "2015-05-21" ;
@@ -61,49 +61,49 @@ ogit.organization:Organization
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.organization:Organization ;
+            sh:class ogit._organization:Organization ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.organization:sellsTo
+            sh:path ogit._organization:sellsTo
         ],
         [
-            sh:class ogit.organization:Organization ;
+            sh:class ogit._organization:Organization ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:relates
         ],
         [
-            sh:class ogit.organization:Role ;
+            sh:class ogit._organization:Role ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:associates
         ],
         [
-            sh:class ogit.organization:Organization ;
+            sh:class ogit._organization:Organization ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.organization:deliversTo
+            sh:path ogit._organization:deliversTo
         ],
         [
-            sh:class ogit.organization:Organization ;
+            sh:class ogit._organization:Organization ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:supports
         ],
         [
-            sh:class ogit.organization:Organization ;
+            sh:class ogit._organization:Organization ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:contains
         ],
         [
-            sh:class ogit.organization:Organization ;
+            sh:class ogit._organization:Organization ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:creates
         ],
         [
-            sh:class ogit.organization:Organization ;
+            sh:class ogit._organization:Organization ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:leads
@@ -141,12 +141,12 @@ ogit.organization:Organization
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.organization:city
+            sh:path ogit._organization:city
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.organization:country
+            sh:path ogit._organization:country
         ],
         [
             sh:maxCount 1 ;
@@ -156,7 +156,7 @@ ogit.organization:Organization
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.organization:businessCategory
+            sh:path ogit._organization:businessCategory
         ],
         [
             sh:maxCount 1 ;
@@ -174,49 +174,49 @@ ogit.organization:Organization
             sh:path ogit.foundation:phone
         ],
         [
-            sh:class ogit.organization:Organization ;
+            sh:class ogit._organization:Organization ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.organization:competes
+            sh:path ogit._organization:competes
         ],
         [
-            sh:class ogit.organization:Organization ;
+            sh:class ogit._organization:Organization ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:represents
         ],
         [
-            sh:class ogit.organization:Role ;
+            sh:class ogit._organization:Role ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:defines
         ],
         [
-            sh:class ogit.organization:Policy ;
+            sh:class ogit._organization:Policy ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:complies
         ],
         [
-            sh:class ogit.organization:Organization ;
+            sh:class ogit._organization:Organization ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:communicatesWith
         ],
         [
-            sh:class ogit.organization:Organization ;
+            sh:class ogit._organization:Organization ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:governs
         ],
         [
-            sh:class ogit.organization:Organization ;
+            sh:class ogit._organization:Organization ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:manages
         ] .
 
-ogit.organization:Policy
+ogit._organization:Policy
     a ogit.core:Entity ;
     rdfs:label "Policy" ;
     dcterms:created "2015-05-21" ;
@@ -239,7 +239,7 @@ ogit.organization:Policy
             sh:path ogit.foundation:content
         ] .
 
-ogit.organization:Role
+ogit._organization:Role
     a ogit.core:Entity ;
     rdfs:label "Role" ;
     dcterms:created "2015-05-21" ;
@@ -274,7 +274,7 @@ ogit.organization:Role
             sh:path ogit.foundation:status
         ],
         [
-            sh:class ogit.organization:Role ;
+            sh:class ogit._organization:Role ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:reports
@@ -283,7 +283,7 @@ ogit.organization:Role
 #
 # Attributes
 #
-ogit.organization:businessCategory
+ogit._organization:businessCategory
     a ogit.core:Attribute ;
     rdfs:label "businessCategory" ;
     dcterms:created "2015-05-21" ;
@@ -300,7 +300,7 @@ ogit.organization:businessCategory
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.organization:city
+ogit._organization:city
     a ogit.core:Attribute ;
     rdfs:label "city" ;
     dcterms:created "2015-05-21" ;
@@ -317,7 +317,7 @@ ogit.organization:city
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.organization:country
+ogit._organization:country
     a ogit.core:Attribute ;
     rdfs:label "country" ;
     dcterms:created "2015-05-21" ;
@@ -337,7 +337,7 @@ ogit.organization:country
 #
 # Verbs
 #
-ogit.organization:competes
+ogit._organization:competes
     a ogit.core:Verb ;
     rdfs:label "competes" ;
     dcterms:created "2015-09-18" ;
@@ -354,7 +354,7 @@ ogit.organization:competes
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.organization:deliversTo
+ogit._organization:deliversTo
     a ogit.core:Verb ;
     rdfs:label "deliversTo" ;
     dcterms:created "2015-10-22" ;
@@ -371,7 +371,7 @@ ogit.organization:deliversTo
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.organization:sellsTo
+ogit._organization:sellsTo
     a ogit.core:Verb ;
     rdfs:label "sellsTo" ;
     dcterms:created "2015-10-22" ;

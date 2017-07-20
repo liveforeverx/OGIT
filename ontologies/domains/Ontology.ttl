@@ -1,8 +1,8 @@
 @prefix dcterms:         <http://purl.org/dc/terms/> .
 @prefix ogit:            <http://www.purl.org/ogit/> .
+@prefix ogit._ontology:  <http://www.purl.org/ogit/> .
 @prefix ogit.core:       <http://www.purl.org/ogit/> .
 @prefix ogit.foundation: <http://www.purl.org/ogit/> .
-@prefix ogit.ontology:   <http://www.purl.org/ogit/> .
 @prefix owl:             <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh:              <http://www.w3.org/ns/shacl#> .
@@ -19,13 +19,13 @@ ogit:ontology
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
     dcterms:description "This ontology contains terms that are used to describe OGIT entities, attributes and verbs."@en ;
-    vann:preferredNamespacePrefix "ogit.ontology" ;
+    vann:preferredNamespacePrefix "ogit._ontology" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
 #
-ogit.ontology:OntologyAttribute
+ogit._ontology:OntologyAttribute
     a ogit.core:Entity ;
     rdfs:label "OntologyAttribute" ;
     dcterms:created "2015-05-21" ;
@@ -47,70 +47,70 @@ ogit.ontology:OntologyAttribute
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyId
+            sh:path ogit._ontology:ontologyId
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyDescription
+            sh:path ogit._ontology:ontologyDescription
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyName
+            sh:path ogit._ontology:ontologyName
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyValidFrom
+            sh:path ogit._ontology:ontologyValidFrom
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyCreator
+            sh:path ogit._ontology:ontologyCreator
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyCreated
+            sh:path ogit._ontology:ontologyCreated
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyModified
+            sh:path ogit._ontology:ontologyModified
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyAdminContact
+            sh:path ogit._ontology:ontologyAdminContact
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyTechContact
+            sh:path ogit._ontology:ontologyTechContact
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.ontology:ontologyDeleter
+            sh:path ogit._ontology:ontologyDeleter
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.ontology:ontologyHide
+            sh:path ogit._ontology:ontologyHide
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.ontology:ontologyValidationType
+            sh:path ogit._ontology:ontologyValidationType
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.ontology:ontologyValidationParameter
+            sh:path ogit._ontology:ontologyValidationParameter
         ] .
 
-ogit.ontology:OntologyEntity
+ogit._ontology:OntologyEntity
     a ogit.core:Entity ;
     rdfs:label "OntologyEntity" ;
     dcterms:created "2015-05-21" ;
@@ -133,12 +133,12 @@ ogit.ontology:OntologyEntity
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyScope
+            sh:path ogit._ontology:ontologyScope
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyId
+            sh:path ogit._ontology:ontologyId
         ],
         [
             sh:maxCount 1 ;
@@ -148,71 +148,71 @@ ogit.ontology:OntologyEntity
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyName
+            sh:path ogit._ontology:ontologyName
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyValidFrom
+            sh:path ogit._ontology:ontologyValidFrom
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyCreator
+            sh:path ogit._ontology:ontologyCreator
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyModified
+            sh:path ogit._ontology:ontologyModified
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyAdminContact
+            sh:path ogit._ontology:ontologyAdminContact
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyTechContact
+            sh:path ogit._ontology:ontologyTechContact
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyDescription
+            sh:path ogit._ontology:ontologyDescription
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyCreated
+            sh:path ogit._ontology:ontologyCreated
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyParent
+            sh:path ogit._ontology:ontologyParent
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.ontology:ontologyDeleter
+            sh:path ogit._ontology:ontologyDeleter
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.ontology:ontologyHide
+            sh:path ogit._ontology:ontologyHide
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.ontology:ontologyValidUntil
+            sh:path ogit._ontology:ontologyValidUntil
         ],
         [
-            sh:class ogit.ontology:Schema ;
+            sh:class ogit._ontology:Schema ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:uses
         ] .
 
-ogit.ontology:OntologyVerb
+ogit._ontology:OntologyVerb
     a ogit.core:Entity ;
     rdfs:label "OntologyVerb" ;
     dcterms:created "2015-05-21" ;
@@ -234,65 +234,65 @@ ogit.ontology:OntologyVerb
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyId
+            sh:path ogit._ontology:ontologyId
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyDescription
+            sh:path ogit._ontology:ontologyDescription
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyName
+            sh:path ogit._ontology:ontologyName
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyValidFrom
+            sh:path ogit._ontology:ontologyValidFrom
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyCreator
+            sh:path ogit._ontology:ontologyCreator
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyCreated
+            sh:path ogit._ontology:ontologyCreated
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyModified
+            sh:path ogit._ontology:ontologyModified
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyAdminContact
+            sh:path ogit._ontology:ontologyAdminContact
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.ontology:ontologyTechContact
+            sh:path ogit._ontology:ontologyTechContact
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.ontology:ontologyDeleter
+            sh:path ogit._ontology:ontologyDeleter
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.ontology:ontologyHide
+            sh:path ogit._ontology:ontologyHide
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.ontology:ontologyCardinality
+            sh:path ogit._ontology:ontologyCardinality
         ] .
 
-ogit.ontology:Schema
+ogit._ontology:Schema
     a ogit.core:Entity ;
     rdfs:label "Schema" ;
     dcterms:created "2015-05-21" ;
@@ -329,7 +329,7 @@ ogit.ontology:Schema
 #
 # Attributes
 #
-ogit.ontology:ontologyAdminContact
+ogit._ontology:ontologyAdminContact
     a ogit.core:Attribute ;
     rdfs:label "ontologyAdminContact" ;
     dcterms:created "2015-05-21" ;
@@ -347,7 +347,7 @@ ogit.ontology:ontologyAdminContact
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.ontology:ontologyAnyAttributes
+ogit._ontology:ontologyAnyAttributes
     a ogit.core:Attribute ;
     rdfs:label "ontologyAnyAttributes" ;
     dcterms:created "2015-05-21" ;
@@ -365,7 +365,7 @@ ogit.ontology:ontologyAnyAttributes
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.ontology:ontologyCardinality
+ogit._ontology:ontologyCardinality
     a ogit.core:Attribute ;
     rdfs:label "ontologyCardinality" ;
     dcterms:created "2015-05-21" ;
@@ -383,7 +383,7 @@ ogit.ontology:ontologyCardinality
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.ontology:ontologyCreated
+ogit._ontology:ontologyCreated
     a ogit.core:Attribute ;
     rdfs:label "ontologyCreated" ;
     dcterms:created "2015-05-21" ;
@@ -401,7 +401,7 @@ ogit.ontology:ontologyCreated
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.ontology:ontologyCreator
+ogit._ontology:ontologyCreator
     a ogit.core:Attribute ;
     rdfs:label "ontologyCreator" ;
     dcterms:created "2015-05-21" ;
@@ -419,7 +419,7 @@ ogit.ontology:ontologyCreator
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.ontology:ontologyDeleter
+ogit._ontology:ontologyDeleter
     a ogit.core:Attribute ;
     rdfs:label "ontologyDeleter" ;
     dcterms:created "2015-05-21" ;
@@ -437,7 +437,7 @@ ogit.ontology:ontologyDeleter
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.ontology:ontologyDescription
+ogit._ontology:ontologyDescription
     a ogit.core:Attribute ;
     rdfs:label "ontologyDescription" ;
     dcterms:created "2015-05-21" ;
@@ -455,7 +455,7 @@ ogit.ontology:ontologyDescription
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.ontology:ontologyHide
+ogit._ontology:ontologyHide
     a ogit.core:Attribute ;
     rdfs:label "ontologyHide" ;
     dcterms:created "2015-06-01" ;
@@ -473,7 +473,7 @@ ogit.ontology:ontologyHide
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.ontology:ontologyId
+ogit._ontology:ontologyId
     a ogit.core:Attribute ;
     rdfs:label "ontologyId" ;
     dcterms:created "2015-05-21" ;
@@ -491,7 +491,7 @@ ogit.ontology:ontologyId
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.ontology:ontologyModified
+ogit._ontology:ontologyModified
     a ogit.core:Attribute ;
     rdfs:label "ontologyModified" ;
     dcterms:created "2015-05-21" ;
@@ -509,7 +509,7 @@ ogit.ontology:ontologyModified
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.ontology:ontologyName
+ogit._ontology:ontologyName
     a ogit.core:Attribute ;
     rdfs:label "ontologyName" ;
     dcterms:created "2015-05-21" ;
@@ -527,7 +527,7 @@ ogit.ontology:ontologyName
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.ontology:ontologyParent
+ogit._ontology:ontologyParent
     a ogit.core:Attribute ;
     rdfs:label "ontologyParent" ;
     dcterms:created "2015-05-21" ;
@@ -545,7 +545,7 @@ ogit.ontology:ontologyParent
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.ontology:ontologyScope
+ogit._ontology:ontologyScope
     a ogit.core:Attribute ;
     rdfs:label "ontologyScope" ;
     dcterms:created "2015-05-21" ;
@@ -563,7 +563,7 @@ ogit.ontology:ontologyScope
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.ontology:ontologyTechContact
+ogit._ontology:ontologyTechContact
     a ogit.core:Attribute ;
     rdfs:label "ontologyTechContact" ;
     dcterms:created "2015-05-21" ;
@@ -581,7 +581,7 @@ ogit.ontology:ontologyTechContact
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.ontology:ontologyType
+ogit._ontology:ontologyType
     a ogit.core:Attribute ;
     rdfs:label "ontologyType" ;
     dcterms:created "2015-05-21" ;
@@ -599,7 +599,7 @@ ogit.ontology:ontologyType
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.ontology:ontologyValidFrom
+ogit._ontology:ontologyValidFrom
     a ogit.core:Attribute ;
     rdfs:label "ontologyValidFrom" ;
     dcterms:created "2015-05-21" ;
@@ -617,7 +617,7 @@ ogit.ontology:ontologyValidFrom
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.ontology:ontologyValidUntil
+ogit._ontology:ontologyValidUntil
     a ogit.core:Attribute ;
     rdfs:label "ontologyValidUntil" ;
     dcterms:created "2015-05-21" ;
@@ -635,7 +635,7 @@ ogit.ontology:ontologyValidUntil
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.ontology:ontologyValidationParameter
+ogit._ontology:ontologyValidationParameter
     a ogit.core:Attribute ;
     rdfs:label "ontologyValidationParameter" ;
     dcterms:created "2015-05-21" ;
@@ -653,7 +653,7 @@ ogit.ontology:ontologyValidationParameter
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.ontology:ontologyValidationType
+ogit._ontology:ontologyValidationType
     a ogit.core:Attribute ;
     rdfs:label "ontologyValidationType" ;
     dcterms:created "2015-05-21" ;

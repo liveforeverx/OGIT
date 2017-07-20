@@ -1,7 +1,7 @@
 @prefix dcterms:         <http://purl.org/dc/terms/> .
 @prefix ogit:            <http://www.purl.org/ogit/> .
+@prefix ogit._event:     <http://www.purl.org/ogit/> .
 @prefix ogit.core:       <http://www.purl.org/ogit/> .
-@prefix ogit.event:      <http://www.purl.org/ogit/> .
 @prefix ogit.foundation: <http://www.purl.org/ogit/> .
 @prefix owl:             <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
@@ -18,13 +18,13 @@ ogit:event
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
-    vann:preferredNamespacePrefix "ogit.event" ;
+    vann:preferredNamespacePrefix "ogit._event" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
 #
-ogit.event:Event
+ogit._event:Event
     a ogit.core:Entity ;
     rdfs:label "Event" ;
     dcterms:created "2015-05-21" ;
@@ -50,7 +50,7 @@ ogit.event:Event
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.event:Event ;
+            sh:class ogit._event:Event ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:relates
@@ -78,7 +78,7 @@ ogit.event:Event
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.event:severity
+            sh:path ogit._event:severity
         ],
         [
             sh:maxCount 1 ;
@@ -98,17 +98,17 @@ ogit.event:Event
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.event:certainty
+            sh:path ogit._event:certainty
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.event:firstOccurredAt
+            sh:path ogit._event:firstOccurredAt
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.event:lastOccurredAt
+            sh:path ogit._event:lastOccurredAt
         ],
         [
             sh:maxCount 1 ;
@@ -123,17 +123,17 @@ ogit.event:Event
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.event:lastClearedAt
+            sh:path ogit._event:lastClearedAt
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.event:expiresAt
+            sh:path ogit._event:expiresAt
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.event:occurenceCount
+            sh:path ogit._event:occurenceCount
         ],
         [
             sh:maxCount 1 ;
@@ -153,28 +153,28 @@ ogit.event:Event
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.event:resource
+            sh:path ogit._event:resource
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.event:maintenanceState
+            sh:path ogit._event:maintenanceState
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.event:acknowledgeState
+            sh:path ogit._event:acknowledgeState
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.event:isRoot
+            sh:path ogit._event:isRoot
         ] .
 
 #
 # Attributes
 #
-ogit.event:acknowledgeState
+ogit._event:acknowledgeState
     a ogit.core:Attribute ;
     rdfs:label "acknowledgeState" ;
     dcterms:created "2016-08-03" ;
@@ -191,7 +191,7 @@ ogit.event:acknowledgeState
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.event:certainty
+ogit._event:certainty
     a ogit.core:Attribute ;
     rdfs:label "certainty" ;
     dcterms:created "2016-08-03" ;
@@ -208,7 +208,7 @@ ogit.event:certainty
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.event:expiresAt
+ogit._event:expiresAt
     a ogit.core:Attribute ;
     rdfs:label "expiresAt" ;
     dcterms:created "2016-08-03" ;
@@ -225,7 +225,7 @@ ogit.event:expiresAt
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.event:firstOccurredAt
+ogit._event:firstOccurredAt
     a ogit.core:Attribute ;
     rdfs:label "firstOccurredAt" ;
     dcterms:created "2016-08-03" ;
@@ -242,7 +242,7 @@ ogit.event:firstOccurredAt
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.event:isRoot
+ogit._event:isRoot
     a ogit.core:Attribute ;
     rdfs:label "isRoot" ;
     dcterms:created "2016-08-03" ;
@@ -259,7 +259,7 @@ ogit.event:isRoot
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.event:lastClearedAt
+ogit._event:lastClearedAt
     a ogit.core:Attribute ;
     rdfs:label "lastClearedAt" ;
     dcterms:created "2016-08-03" ;
@@ -276,7 +276,7 @@ ogit.event:lastClearedAt
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.event:lastOccurredAt
+ogit._event:lastOccurredAt
     a ogit.core:Attribute ;
     rdfs:label "lastOccurredAt" ;
     dcterms:created "2016-08-03" ;
@@ -293,7 +293,7 @@ ogit.event:lastOccurredAt
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.event:maintenanceState
+ogit._event:maintenanceState
     a ogit.core:Attribute ;
     rdfs:label "maintenanceState" ;
     dcterms:created "2016-08-03" ;
@@ -310,7 +310,7 @@ ogit.event:maintenanceState
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.event:occurenceCount
+ogit._event:occurenceCount
     a ogit.core:Attribute ;
     rdfs:label "occurenceCount" ;
     dcterms:created "2016-08-03" ;
@@ -327,7 +327,7 @@ ogit.event:occurenceCount
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.event:resource
+ogit._event:resource
     a ogit.core:Attribute ;
     rdfs:label "resource" ;
     dcterms:created "2016-08-03" ;
@@ -344,7 +344,7 @@ ogit.event:resource
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.event:severity
+ogit._event:severity
     a ogit.core:Attribute ;
     rdfs:label "severity" ;
     dcterms:created "2015-05-21" ;

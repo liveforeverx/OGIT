@@ -1,33 +1,35 @@
 @prefix dcterms:                <http://purl.org/dc/terms/> .
 @prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit._alerting:         <http://www.purl.org/ogit/> .
+@prefix ogit._asset:            <http://www.purl.org/ogit/> .
+@prefix ogit._catalog:          <http://www.purl.org/ogit/> .
+@prefix ogit._configuration:    <http://www.purl.org/ogit/> .
+@prefix ogit._contact:          <http://www.purl.org/ogit/> .
+@prefix ogit._contract:         <http://www.purl.org/ogit/> .
+@prefix ogit._course:           <http://www.purl.org/ogit/> .
+@prefix ogit._data:             <http://www.purl.org/ogit/> .
+@prefix ogit._device:           <http://www.purl.org/ogit/> .
+@prefix ogit._event:            <http://www.purl.org/ogit/> .
 @prefix ogit._forum:            <http://www.purl.org/ogit/> .
-@prefix ogit.alerting:          <http://www.purl.org/ogit/> .
-@prefix ogit.asset:             <http://www.purl.org/ogit/> .
+@prefix ogit._identity:         <http://www.purl.org/ogit/> .
+@prefix ogit._license:          <http://www.purl.org/ogit/> .
+@prefix ogit._location:         <http://www.purl.org/ogit/> .
+@prefix ogit._media:            <http://www.purl.org/ogit/> .
+@prefix ogit._ontology:         <http://www.purl.org/ogit/> .
+@prefix ogit._organization:     <http://www.purl.org/ogit/> .
+@prefix ogit._person:           <http://www.purl.org/ogit/> .
+@prefix ogit._task:             <http://www.purl.org/ogit/> .
 @prefix ogit.automation:        <http://www.purl.org/ogit/Automation/> .
 @prefix ogit.businessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
-@prefix ogit.catalog:           <http://www.purl.org/ogit/> .
-@prefix ogit.configuration:     <http://www.purl.org/ogit/> .
-@prefix ogit.contact:           <http://www.purl.org/ogit/> .
-@prefix ogit.contract:          <http://www.purl.org/ogit/> .
 @prefix ogit.core:              <http://www.purl.org/ogit/> .
 @prefix ogit.cost:              <http://www.purl.org/ogit/Cost/> .
-@prefix ogit.course:            <http://www.purl.org/ogit/> .
-@prefix ogit.data:              <http://www.purl.org/ogit/> .
 @prefix ogit.dataProcessing:    <http://www.purl.org/ogit/DataProcessing/> .
 @prefix ogit.datacenter:        <http://www.purl.org/ogit/Datacenter/> .
-@prefix ogit.device:            <http://www.purl.org/ogit/> .
-@prefix ogit.event:             <http://www.purl.org/ogit/> .
 @prefix ogit.forum:             <http://www.purl.org/ogit/Forum/> .
 @prefix ogit.foundation:        <http://www.purl.org/ogit/> .
 @prefix ogit.graphit:           <http://www.purl.org/ogit/> .
-@prefix ogit.identity:          <http://www.purl.org/ogit/> .
 @prefix ogit.knowledge:         <http://www.purl.org/ogit/Knowledge/> .
-@prefix ogit.license:           <http://www.purl.org/ogit/> .
-@prefix ogit.location:          <http://www.purl.org/ogit/> .
-@prefix ogit.media:             <http://www.purl.org/ogit/> .
 @prefix ogit.network:           <http://www.purl.org/ogit/Network/> .
-@prefix ogit.ontology:          <http://www.purl.org/ogit/> .
-@prefix ogit.organization:      <http://www.purl.org/ogit/> .
 @prefix ogit.oslc-arch:         <http://www.purl.org/ogit/OSLC-arch/> .
 @prefix ogit.oslc-asset:        <http://www.purl.org/ogit/OSLC-asset/> .
 @prefix ogit.oslc-auto:         <http://www.purl.org/ogit/OSLC-automation/> .
@@ -38,7 +40,6 @@
 @prefix ogit.oslc-perfmon:      <http://www.purl.org/ogit/OSLC-perfmon/> .
 @prefix ogit.oslc-qm:           <http://www.purl.org/ogit/OSLC-qm/> .
 @prefix ogit.oslc-reqman:       <http://www.purl.org/ogit/OSLC-reqman/> .
-@prefix ogit.person:            <http://www.purl.org/ogit/> .
 @prefix ogit.price:             <http://www.purl.org/ogit/Price/> .
 @prefix ogit.project:           <http://www.purl.org/ogit/Project/> .
 @prefix ogit.rddl:              <http://www.purl.org/ogit/RDDL/> .
@@ -46,7 +47,6 @@
 @prefix ogit.software:          <http://www.purl.org/ogit/Software/> .
 @prefix ogit.statistics:        <http://www.purl.org/ogit/Statistics/> .
 @prefix ogit.survey:            <http://www.purl.org/ogit/Survey/> .
-@prefix ogit.task:              <http://www.purl.org/ogit/> .
 @prefix ogit.userMeta:          <http://www.purl.org/ogit/UserMeta/> .
 @prefix owl:                    <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
@@ -519,11 +519,142 @@ ogit.graphit:indexed-attributes
 #
 <http://www.purl.org/ogit/Data/Log> ogit.core:parent "http://www.purl.org/ogit/Node" .
 
+ogit._alerting:Alert ogit.core:parent ogit.graphit:Node .
+
+ogit._asset:Asset ogit.core:parent ogit.graphit:Node .
+
+ogit._catalog:Catalog ogit.core:parent ogit.graphit:Node .
+
+ogit._catalog:CatalogItem ogit.core:parent ogit.graphit:Node .
+
+ogit._configuration:Attachment ogit.core:parent ogit.graphit:Node .
+
+ogit._configuration:ConfigurationItem ogit.core:parent ogit.graphit:Node .
+
+ogit._configuration:Parameter ogit.core:parent ogit.graphit:Node .
+
+ogit._configuration:ParameterType ogit.core:parent ogit.graphit:Node .
+
+ogit._contact:Email ogit.core:parent ogit.graphit:Node .
+
+ogit._contact:Vcard ogit.core:parent ogit.graphit:Node .
+
+ogit._contract:Contract ogit.core:parent ogit.graphit:Node .
+
+ogit._contract:Penalty ogit.core:parent ogit.graphit:Node .
+
+ogit._course:Course ogit.core:parent ogit.graphit:Node .
+
+ogit._course:Series ogit.core:parent ogit.graphit:Node .
+
+ogit._course:Status ogit.core:parent ogit.graphit:Node .
+
+ogit._data:CustomApplicationData ogit.core:parent ogit.graphit:Node .
+
+ogit._data:Timeseries
+    ogit.graphit:indexed-attributes
+        ogit.foundation:description,
+        ogit.foundation:instance,
+        ogit.foundation:name ;
+    ogit.core:parent ogit.graphit:Node .
+
+ogit._device:Device ogit.core:parent ogit.graphit:Node .
+
+ogit._event:Event ogit.core:parent ogit.graphit:Node .
+
 ogit._forum:Notification ogit.core:parent ogit.graphit:Node .
 
-ogit.alerting:Alert ogit.core:parent ogit.graphit:Node .
+ogit._identity:Account ogit.core:parent ogit.graphit:Node .
 
-ogit.asset:Asset ogit.core:parent ogit.graphit:Node .
+ogit._license:License ogit.core:parent ogit.graphit:Node .
+
+ogit._license:LicenseRequest ogit.core:parent ogit.graphit:Node .
+
+ogit._license:LicenseToken ogit.core:parent ogit.graphit:Node .
+
+ogit._location:Location ogit.core:parent ogit.graphit:Node .
+
+ogit._location:Region ogit.core:parent ogit.graphit:Node .
+
+ogit._media:Comment ogit.core:parent ogit.graphit:Node .
+
+ogit._media:Hyperlink ogit.core:parent ogit.graphit:Node .
+
+ogit._media:Note ogit.core:parent ogit.graphit:Node .
+
+ogit._ontology:OntologyAttribute ogit.core:parent ogit.graphit:Node .
+
+ogit._ontology:OntologyEntity ogit.core:parent ogit.graphit:Node .
+
+ogit._ontology:OntologyVerb ogit.core:parent ogit.graphit:Node .
+
+ogit._ontology:Schema ogit.core:parent ogit.graphit:Node .
+
+ogit._organization:Organization
+    ogit.graphit:indexed-attributes
+        ogit.foundation:description,
+        ogit.foundation:name ;
+    ogit.core:parent ogit.graphit:Node ;
+    sh:property
+        [
+            sh:class ogit.graphit:Node ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.graphit:_deleted
+        ],
+        [
+            sh:class ogit.graphit:Node ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.graphit:_created
+        ],
+        [
+            sh:class ogit.graphit:Node ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.graphit:_owns
+        ] .
+
+ogit._organization:Policy ogit.core:parent ogit.graphit:Node .
+
+ogit._organization:Role ogit.core:parent ogit.graphit:Node .
+
+ogit._person:Person
+    ogit.graphit:indexed-attributes
+        ogit._person:alternativeName,
+        ogit.foundation:email,
+        ogit._person:firstName,
+        ogit._person:lastName ;
+    ogit.core:parent ogit.graphit:Node ;
+    sh:property
+        [
+            sh:class ogit.graphit:Node ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.graphit:_owns
+        ],
+        [
+            sh:class ogit.graphit:Node ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.graphit:_created
+        ],
+        [
+            sh:class ogit.graphit:Node ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.graphit:_deleted
+        ] .
+
+ogit._task:Question ogit.core:parent ogit.graphit:Node .
+
+ogit._task:Task
+    ogit.graphit:indexed-attributes ogit.foundation:name ;
+    ogit.core:parent ogit.graphit:Node .
+
+ogit._task:TaskList
+    ogit.graphit:indexed-attributes ogit.foundation:name ;
+    ogit.core:parent ogit.graphit:Node .
 
 ogit.automation:AutomationIssue
     ogit.graphit:indexed-attributes
@@ -624,26 +755,6 @@ ogit.businessProcess:UndefinedTask ogit.core:parent ogit.graphit:Node .
 
 ogit.businessProcess:UserTask ogit.core:parent ogit.graphit:Node .
 
-ogit.catalog:Catalog ogit.core:parent ogit.graphit:Node .
-
-ogit.catalog:CatalogItem ogit.core:parent ogit.graphit:Node .
-
-ogit.configuration:Attachment ogit.core:parent ogit.graphit:Node .
-
-ogit.configuration:ConfigurationItem ogit.core:parent ogit.graphit:Node .
-
-ogit.configuration:Parameter ogit.core:parent ogit.graphit:Node .
-
-ogit.configuration:ParameterType ogit.core:parent ogit.graphit:Node .
-
-ogit.contact:Email ogit.core:parent ogit.graphit:Node .
-
-ogit.contact:Vcard ogit.core:parent ogit.graphit:Node .
-
-ogit.contract:Contract ogit.core:parent ogit.graphit:Node .
-
-ogit.contract:Penalty ogit.core:parent ogit.graphit:Node .
-
 ogit.cost:Budget ogit.core:parent ogit.graphit:Node .
 
 ogit.cost:CostDistribution ogit.core:parent ogit.graphit:Node .
@@ -653,21 +764,6 @@ ogit.cost:CostElement ogit.core:parent ogit.graphit:Node .
 ogit.cost:PlanningParameter ogit.core:parent ogit.graphit:Node .
 
 ogit.cost:PlanningTemplate ogit.core:parent ogit.graphit:Node .
-
-ogit.course:Course ogit.core:parent ogit.graphit:Node .
-
-ogit.course:Series ogit.core:parent ogit.graphit:Node .
-
-ogit.course:Status ogit.core:parent ogit.graphit:Node .
-
-ogit.data:CustomApplicationData ogit.core:parent ogit.graphit:Node .
-
-ogit.data:Timeseries
-    ogit.graphit:indexed-attributes
-        ogit.foundation:description,
-        ogit.foundation:instance,
-        ogit.foundation:name ;
-    ogit.core:parent ogit.graphit:Node .
 
 ogit.dataProcessing:Program
     ogit.graphit:indexed-attributes
@@ -696,10 +792,6 @@ ogit.datacenter:Server ogit.core:parent ogit.graphit:Node .
 ogit.datacenter:Storage ogit.core:parent ogit.graphit:Node .
 
 ogit.datacenter:UPS ogit.core:parent ogit.graphit:Node .
-
-ogit.device:Device ogit.core:parent ogit.graphit:Node .
-
-ogit.event:Event ogit.core:parent ogit.graphit:Node .
 
 ogit.forum:Award ogit.core:parent ogit.graphit:Node .
 
@@ -746,27 +838,9 @@ ogit.forum:Tag ogit.core:parent ogit.graphit:Node .
 
 ogit.forum:Topic ogit.core:parent ogit.graphit:Node .
 
-ogit.identity:Account ogit.core:parent ogit.graphit:Node .
-
 ogit.knowledge:AcquisitionSession ogit.core:parent ogit.graphit:Node .
 
 ogit.knowledge:Step ogit.core:parent ogit.graphit:Node .
-
-ogit.license:License ogit.core:parent ogit.graphit:Node .
-
-ogit.license:LicenseRequest ogit.core:parent ogit.graphit:Node .
-
-ogit.license:LicenseToken ogit.core:parent ogit.graphit:Node .
-
-ogit.location:Location ogit.core:parent ogit.graphit:Node .
-
-ogit.location:Region ogit.core:parent ogit.graphit:Node .
-
-ogit.media:Comment ogit.core:parent ogit.graphit:Node .
-
-ogit.media:Hyperlink ogit.core:parent ogit.graphit:Node .
-
-ogit.media:Note ogit.core:parent ogit.graphit:Node .
 
 ogit.network:AccessControlList ogit.core:parent ogit.graphit:Node .
 
@@ -817,43 +891,6 @@ ogit.network:Switch ogit.core:parent ogit.graphit:Node .
 ogit.network:VLAN ogit.core:parent ogit.graphit:Node .
 
 ogit.network:WifiAccessPoint ogit.core:parent ogit.graphit:Node .
-
-ogit.ontology:OntologyAttribute ogit.core:parent ogit.graphit:Node .
-
-ogit.ontology:OntologyEntity ogit.core:parent ogit.graphit:Node .
-
-ogit.ontology:OntologyVerb ogit.core:parent ogit.graphit:Node .
-
-ogit.ontology:Schema ogit.core:parent ogit.graphit:Node .
-
-ogit.organization:Organization
-    ogit.graphit:indexed-attributes
-        ogit.foundation:description,
-        ogit.foundation:name ;
-    ogit.core:parent ogit.graphit:Node ;
-    sh:property
-        [
-            sh:class ogit.graphit:Node ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.graphit:_deleted
-        ],
-        [
-            sh:class ogit.graphit:Node ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.graphit:_created
-        ],
-        [
-            sh:class ogit.graphit:Node ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.graphit:_owns
-        ] .
-
-ogit.organization:Policy ogit.core:parent ogit.graphit:Node .
-
-ogit.organization:Role ogit.core:parent ogit.graphit:Node .
 
 ogit.oslc-arch:LinkType ogit.core:parent ogit.graphit:Node .
 
@@ -1151,33 +1188,6 @@ ogit.oslc-reqman:Requirement ogit.core:parent ogit.graphit:Node .
 
 ogit.oslc-reqman:RequirementCollection ogit.core:parent ogit.graphit:Node .
 
-ogit.person:Person
-    ogit.graphit:indexed-attributes
-        ogit.person:alternativeName,
-        ogit.foundation:email,
-        ogit.person:firstName,
-        ogit.person:lastName ;
-    ogit.core:parent ogit.graphit:Node ;
-    sh:property
-        [
-            sh:class ogit.graphit:Node ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.graphit:_owns
-        ],
-        [
-            sh:class ogit.graphit:Node ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.graphit:_created
-        ],
-        [
-            sh:class ogit.graphit:Node ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.graphit:_deleted
-        ] .
-
 ogit.price:Invoice ogit.core:parent ogit.graphit:Node .
 
 ogit.price:PriceSpecification ogit.core:parent ogit.graphit:Node .
@@ -1247,16 +1257,6 @@ ogit.survey:Survey
     ogit.graphit:indexed-attributes
         ogit.foundation:description,
         ogit.foundation:title ;
-    ogit.core:parent ogit.graphit:Node .
-
-ogit.task:Question ogit.core:parent ogit.graphit:Node .
-
-ogit.task:Task
-    ogit.graphit:indexed-attributes ogit.foundation:name ;
-    ogit.core:parent ogit.graphit:Node .
-
-ogit.task:TaskList
-    ogit.graphit:indexed-attributes ogit.foundation:name ;
     ogit.core:parent ogit.graphit:Node .
 
 ogit.userMeta:Filter ogit.core:parent ogit.graphit:Node .

@@ -1,6 +1,6 @@
 @prefix dcterms:         <http://purl.org/dc/terms/> .
 @prefix ogit:            <http://www.purl.org/ogit/> .
-@prefix ogit.catalog:    <http://www.purl.org/ogit/> .
+@prefix ogit._catalog:   <http://www.purl.org/ogit/> .
 @prefix ogit.core:       <http://www.purl.org/ogit/> .
 @prefix ogit.foundation: <http://www.purl.org/ogit/> .
 @prefix owl:             <http://www.w3.org/2002/07/owl#> .
@@ -18,13 +18,13 @@ ogit:catalog
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
-    vann:preferredNamespacePrefix "ogit.catalog" ;
+    vann:preferredNamespacePrefix "ogit._catalog" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
 #
-ogit.catalog:Catalog
+ogit._catalog:Catalog
     a ogit.core:Entity ;
     rdfs:label "Catalog" ;
     dcterms:created "2015-05-21" ;
@@ -68,13 +68,13 @@ ogit.catalog:Catalog
             sh:path ogit.foundation:type
         ],
         [
-            sh:class ogit.catalog:CatalogItem ;
+            sh:class ogit._catalog:CatalogItem ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:contains
         ] .
 
-ogit.catalog:CatalogItem
+ogit._catalog:CatalogItem
     a ogit.core:Entity ;
     rdfs:label "CatalogItem" ;
     dcterms:created "2015-05-21" ;
@@ -103,7 +103,7 @@ ogit.catalog:CatalogItem
             sh:path ogit.foundation:description
         ],
         [
-            sh:class ogit.catalog:CatalogItem ;
+            sh:class ogit._catalog:CatalogItem ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:requires

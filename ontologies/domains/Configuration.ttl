@@ -1,12 +1,12 @@
-@prefix dcterms:            <http://purl.org/dc/terms/> .
-@prefix ogit:               <http://www.purl.org/ogit/> .
-@prefix ogit.configuration: <http://www.purl.org/ogit/> .
-@prefix ogit.core:          <http://www.purl.org/ogit/> .
-@prefix ogit.foundation:    <http://www.purl.org/ogit/> .
-@prefix owl:                <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs:               <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh:                 <http://www.w3.org/ns/shacl#> .
-@prefix vann:               <http://purl.org/vocab/vann/> .
+@prefix dcterms:             <http://purl.org/dc/terms/> .
+@prefix ogit:                <http://www.purl.org/ogit/> .
+@prefix ogit._configuration: <http://www.purl.org/ogit/> .
+@prefix ogit.core:           <http://www.purl.org/ogit/> .
+@prefix ogit.foundation:     <http://www.purl.org/ogit/> .
+@prefix owl:                 <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:                <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:                  <http://www.w3.org/ns/shacl#> .
+@prefix vann:                <http://purl.org/vocab/vann/> .
 
 #
 # Ontology
@@ -18,13 +18,13 @@ ogit:configuration
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
-    vann:preferredNamespacePrefix "ogit.configuration" ;
+    vann:preferredNamespacePrefix "ogit._configuration" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
 #
-ogit.configuration:Attachment
+ogit._configuration:Attachment
     a ogit.core:Entity ;
     rdfs:label "Attachment" ;
     dcterms:created "2015-05-21" ;
@@ -91,7 +91,7 @@ ogit.configuration:Attachment
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:sourceTable
+            sh:path ogit._configuration:sourceTable
         ],
         [
             sh:maxCount 1 ;
@@ -106,7 +106,7 @@ ogit.configuration:Attachment
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:lastUpdatedBy
+            sh:path ogit._configuration:lastUpdatedBy
         ],
         [
             sh:maxCount 1 ;
@@ -121,7 +121,7 @@ ogit.configuration:Attachment
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:size
+            sh:path ogit._configuration:size
         ],
         [
             sh:maxCount 1 ;
@@ -129,7 +129,7 @@ ogit.configuration:Attachment
             sh:path ogit.foundation:accessControl
         ] .
 
-ogit.configuration:ConfigurationItem
+ogit._configuration:ConfigurationItem
     a ogit.core:Entity ;
     rdfs:label "ConfigurationItem" ;
     dcterms:created "2015-06-11" ;
@@ -179,25 +179,25 @@ ogit.configuration:ConfigurationItem
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.configuration:ConfigurationItem ;
+            sh:class ogit._configuration:ConfigurationItem ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:manages
         ],
         [
-            sh:class ogit.configuration:ConfigurationItem ;
+            sh:class ogit._configuration:ConfigurationItem ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:contains
         ],
         [
-            sh:class ogit.configuration:ConfigurationItem ;
+            sh:class ogit._configuration:ConfigurationItem ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:provides
         ],
         [
-            sh:class ogit.configuration:ConfigurationItem ;
+            sh:class ogit._configuration:ConfigurationItem ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:runsOn
@@ -215,12 +215,12 @@ ogit.configuration:ConfigurationItem
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:externalId
+            sh:path ogit._configuration:externalId
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:class
+            sh:path ogit._configuration:class
         ],
         [
             sh:maxCount 1 ;
@@ -230,12 +230,12 @@ ogit.configuration:ConfigurationItem
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:ciType
+            sh:path ogit._configuration:ciType
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:subType
+            sh:path ogit._configuration:subType
         ],
         [
             sh:maxCount 1 ;
@@ -260,17 +260,17 @@ ogit.configuration:ConfigurationItem
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:isCritical
+            sh:path ogit._configuration:isCritical
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:isSupported
+            sh:path ogit._configuration:isSupported
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:businessCriticality
+            sh:path ogit._configuration:businessCriticality
         ],
         [
             sh:maxCount 1 ;
@@ -280,47 +280,47 @@ ogit.configuration:ConfigurationItem
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:inventoryNumber
+            sh:path ogit._configuration:inventoryNumber
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:invoiceNumber
+            sh:path ogit._configuration:invoiceNumber
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:productOrderNumber
+            sh:path ogit._configuration:productOrderNumber
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:leaseContract
+            sh:path ogit._configuration:leaseContract
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:asset
+            sh:path ogit._configuration:asset
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:assetTag
+            sh:path ogit._configuration:assetTag
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:pendingChange
+            sh:path ogit._configuration:pendingChange
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:faultCount
+            sh:path ogit._configuration:faultCount
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:updateCount
+            sh:path ogit._configuration:updateCount
         ],
         [
             sh:maxCount 1 ;
@@ -340,27 +340,27 @@ ogit.configuration:ConfigurationItem
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:installedAt
+            sh:path ogit._configuration:installedAt
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:orderedAt
+            sh:path ogit._configuration:orderedAt
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:deliveredAt
+            sh:path ogit._configuration:deliveredAt
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:purchasedAt
+            sh:path ogit._configuration:purchasedAt
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:lastScannedAt
+            sh:path ogit._configuration:lastScannedAt
         ],
         [
             sh:maxCount 1 ;
@@ -375,22 +375,22 @@ ogit.configuration:ConfigurationItem
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:vendor
+            sh:path ogit._configuration:vendor
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:shortDescription
+            sh:path ogit._configuration:shortDescription
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:installStatus
+            sh:path ogit._configuration:installStatus
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:operationalStatus
+            sh:path ogit._configuration:operationalStatus
         ],
         [
             sh:maxCount 1 ;
@@ -400,57 +400,57 @@ ogit.configuration:ConfigurationItem
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:subCategory
+            sh:path ogit._configuration:subCategory
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:securityClass
+            sh:path ogit._configuration:securityClass
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:soxClass
+            sh:path ogit._configuration:soxClass
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:confidentiality
+            sh:path ogit._configuration:confidentiality
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:integrity
+            sh:path ogit._configuration:integrity
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:availability
+            sh:path ogit._configuration:availability
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:contact
+            sh:path ogit._configuration:contact
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:serviceContract
+            sh:path ogit._configuration:serviceContract
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:assignedAt
+            sh:path ogit._configuration:assignedAt
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:checkedInAt
+            sh:path ogit._configuration:checkedInAt
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:checkedOutAt
+            sh:path ogit._configuration:checkedOutAt
         ],
         [
             sh:maxCount 1 ;
@@ -465,34 +465,34 @@ ogit.configuration:ConfigurationItem
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:modelNumber
+            sh:path ogit._configuration:modelNumber
         ],
         [
-            sh:class ogit.configuration:ConfigurationItem ;
+            sh:class ogit._configuration:ConfigurationItem ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:virtualizes
+            sh:path ogit._configuration:virtualizes
         ],
         [
-            sh:class ogit.configuration:Attachment ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
-        ],
-        [
-            sh:class ogit.configuration:ConfigurationItem ;
+            sh:class ogit._configuration:Attachment ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:relates
         ],
         [
-            sh:class ogit.configuration:ConfigurationItem ;
+            sh:class ogit._configuration:ConfigurationItem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:relates
+        ],
+        [
+            sh:class ogit._configuration:ConfigurationItem ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:deployedTo
         ] .
 
-ogit.configuration:Parameter
+ogit._configuration:Parameter
     a ogit.core:Entity ;
     rdfs:label "Parameter" ;
     dcterms:created "2015-05-21" ;
@@ -511,7 +511,7 @@ ogit.configuration:Parameter
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.configuration:Parameter ;
+            sh:class ogit._configuration:Parameter ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:reports
@@ -524,7 +524,7 @@ ogit.configuration:Parameter
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:isMutable
+            sh:path ogit._configuration:isMutable
         ],
         [
             sh:maxCount 1 ;
@@ -534,7 +534,7 @@ ogit.configuration:Parameter
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:lengthOfReportingPeriod
+            sh:path ogit._configuration:lengthOfReportingPeriod
         ],
         [
             sh:maxCount 1 ;
@@ -544,7 +544,7 @@ ogit.configuration:Parameter
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:values
+            sh:path ogit._configuration:values
         ],
         [
             sh:maxCount 1 ;
@@ -557,13 +557,13 @@ ogit.configuration:Parameter
             sh:path ogit.foundation:category
         ],
         [
-            sh:class ogit.configuration:Parameter ;
+            sh:class ogit._configuration:Parameter ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.configuration:proves
+            sh:path ogit._configuration:proves
         ] .
 
-ogit.configuration:ParameterType
+ogit._configuration:ParameterType
     a ogit.core:Entity ;
     rdfs:label "ParameterType" ;
     dcterms:created "2015-05-21" ;
@@ -590,10 +590,10 @@ ogit.configuration:ParameterType
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.configuration:enumValues
+            sh:path ogit._configuration:enumValues
         ],
         [
-            sh:class ogit.configuration:Parameter ;
+            sh:class ogit._configuration:Parameter ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:corresponds
@@ -602,7 +602,7 @@ ogit.configuration:ParameterType
 #
 # Attributes
 #
-ogit.configuration:asset
+ogit._configuration:asset
     a ogit.core:Attribute ;
     rdfs:label "asset" ;
     dcterms:created "2015-07-27" ;
@@ -619,7 +619,7 @@ ogit.configuration:asset
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:assetTag
+ogit._configuration:assetTag
     a ogit.core:Attribute ;
     rdfs:label "assetTag" ;
     dcterms:created "2015-07-27" ;
@@ -636,7 +636,7 @@ ogit.configuration:assetTag
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:assignedAt
+ogit._configuration:assignedAt
     a ogit.core:Attribute ;
     rdfs:label "assignedAt" ;
     dcterms:created "2015-07-27" ;
@@ -654,7 +654,7 @@ ogit.configuration:assignedAt
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:availability
+ogit._configuration:availability
     a ogit.core:Attribute ;
     rdfs:label "availability" ;
     dcterms:created "2015-07-27" ;
@@ -671,7 +671,7 @@ ogit.configuration:availability
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:businessCriticality
+ogit._configuration:businessCriticality
     a ogit.core:Attribute ;
     rdfs:label "businessCriticality" ;
     dcterms:created "2015-05-27" ;
@@ -688,7 +688,7 @@ ogit.configuration:businessCriticality
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:checkedInAt
+ogit._configuration:checkedInAt
     a ogit.core:Attribute ;
     rdfs:label "checkedInAt" ;
     dcterms:created "2015-05-27" ;
@@ -706,7 +706,7 @@ ogit.configuration:checkedInAt
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:checkedOutAt
+ogit._configuration:checkedOutAt
     a ogit.core:Attribute ;
     rdfs:label "checkedOutAt" ;
     dcterms:created "2015-05-27" ;
@@ -724,7 +724,7 @@ ogit.configuration:checkedOutAt
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:ciType
+ogit._configuration:ciType
     a ogit.core:Attribute ;
     rdfs:label "ciType" ;
     dcterms:created "2015-08-20" ;
@@ -741,7 +741,7 @@ ogit.configuration:ciType
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:class
+ogit._configuration:class
     a ogit.core:Attribute ;
     rdfs:label "class" ;
     dcterms:created "2015-07-27" ;
@@ -758,7 +758,7 @@ ogit.configuration:class
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:confidentiality
+ogit._configuration:confidentiality
     a ogit.core:Attribute ;
     rdfs:label "confidentiality" ;
     dcterms:created "2015-07-27" ;
@@ -775,7 +775,7 @@ ogit.configuration:confidentiality
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:contact
+ogit._configuration:contact
     a ogit.core:Attribute ;
     rdfs:label "contact" ;
     dcterms:created "2015-07-27" ;
@@ -792,7 +792,7 @@ ogit.configuration:contact
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:deliveredAt
+ogit._configuration:deliveredAt
     a ogit.core:Attribute ;
     rdfs:label "deliveredAt" ;
     dcterms:created "2015-07-27" ;
@@ -810,7 +810,7 @@ ogit.configuration:deliveredAt
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:enumValues
+ogit._configuration:enumValues
     a ogit.core:Attribute ;
     rdfs:label "enumValues" ;
     dcterms:created "2015-05-21" ;
@@ -827,7 +827,7 @@ ogit.configuration:enumValues
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:externalId
+ogit._configuration:externalId
     a ogit.core:Attribute ;
     rdfs:label "id" ;
     dcterms:created "2015-07-27" ;
@@ -844,7 +844,7 @@ ogit.configuration:externalId
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:faultCount
+ogit._configuration:faultCount
     a ogit.core:Attribute ;
     rdfs:label "faultCount" ;
     dcterms:created "2015-07-27" ;
@@ -861,7 +861,7 @@ ogit.configuration:faultCount
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:installStatus
+ogit._configuration:installStatus
     a ogit.core:Attribute ;
     rdfs:label "installStatus" ;
     dcterms:created "2015-07-27" ;
@@ -879,7 +879,7 @@ ogit.configuration:installStatus
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:installedAt
+ogit._configuration:installedAt
     a ogit.core:Attribute ;
     rdfs:label "installedAt" ;
     dcterms:created "2015-07-27" ;
@@ -897,7 +897,7 @@ ogit.configuration:installedAt
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:integrity
+ogit._configuration:integrity
     a ogit.core:Attribute ;
     rdfs:label "integrity" ;
     dcterms:created "2015-07-27" ;
@@ -914,7 +914,7 @@ ogit.configuration:integrity
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:inventoryNumber
+ogit._configuration:inventoryNumber
     a ogit.core:Attribute ;
     rdfs:label "inventoryNumber" ;
     dcterms:created "2015-07-27" ;
@@ -932,7 +932,7 @@ ogit.configuration:inventoryNumber
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:invoiceNumber
+ogit._configuration:invoiceNumber
     a ogit.core:Attribute ;
     rdfs:label "invoiceNumber" ;
     dcterms:created "2015-07-27" ;
@@ -949,7 +949,7 @@ ogit.configuration:invoiceNumber
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:isCritical
+ogit._configuration:isCritical
     a ogit.core:Attribute ;
     rdfs:label "isCritical" ;
     dcterms:created "2015-07-27" ;
@@ -968,7 +968,7 @@ ogit.configuration:isCritical
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:isMutable
+ogit._configuration:isMutable
     a ogit.core:Attribute ;
     rdfs:label "isMutable" ;
     dcterms:created "2015-05-21" ;
@@ -985,7 +985,7 @@ ogit.configuration:isMutable
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:isSupported
+ogit._configuration:isSupported
     a ogit.core:Attribute ;
     rdfs:label "isSupported" ;
     dcterms:created "2015-07-27" ;
@@ -1003,7 +1003,7 @@ ogit.configuration:isSupported
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:lastScannedAt
+ogit._configuration:lastScannedAt
     a ogit.core:Attribute ;
     rdfs:label "lastScannedAt" ;
     dcterms:created "2015-07-27" ;
@@ -1021,7 +1021,7 @@ ogit.configuration:lastScannedAt
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:lastUpdatedBy
+ogit._configuration:lastUpdatedBy
     a ogit.core:Attribute ;
     rdfs:label "lastUpdatedBy" ;
     dcterms:created "2015-08-20" ;
@@ -1038,7 +1038,7 @@ ogit.configuration:lastUpdatedBy
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:leaseContract
+ogit._configuration:leaseContract
     a ogit.core:Attribute ;
     rdfs:label "leaseContract" ;
     dcterms:created "2015-07-27" ;
@@ -1055,7 +1055,7 @@ ogit.configuration:leaseContract
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:lengthOfReportingPeriod
+ogit._configuration:lengthOfReportingPeriod
     a ogit.core:Attribute ;
     rdfs:label "lengthOfReportingPeriod" ;
     dcterms:created "2015-05-21" ;
@@ -1072,7 +1072,7 @@ ogit.configuration:lengthOfReportingPeriod
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:modelNumber
+ogit._configuration:modelNumber
     a ogit.core:Attribute ;
     rdfs:label "modelNumber" ;
     dcterms:created "2015-07-27" ;
@@ -1089,7 +1089,7 @@ ogit.configuration:modelNumber
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:operationalStatus
+ogit._configuration:operationalStatus
     a ogit.core:Attribute ;
     rdfs:label "operationalStatus" ;
     dcterms:created "2015-07-27" ;
@@ -1107,7 +1107,7 @@ ogit.configuration:operationalStatus
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:orderedAt
+ogit._configuration:orderedAt
     a ogit.core:Attribute ;
     rdfs:label "orderedAt" ;
     dcterms:created "2015-07-27" ;
@@ -1125,7 +1125,7 @@ ogit.configuration:orderedAt
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:pendingChange
+ogit._configuration:pendingChange
     a ogit.core:Attribute ;
     rdfs:label "pendingChange" ;
     dcterms:created "2015-07-27" ;
@@ -1142,7 +1142,7 @@ ogit.configuration:pendingChange
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:productOrderNumber
+ogit._configuration:productOrderNumber
     a ogit.core:Attribute ;
     rdfs:label "productOrderNumber" ;
     dcterms:created "2015-07-27" ;
@@ -1159,7 +1159,7 @@ ogit.configuration:productOrderNumber
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:purchasedAt
+ogit._configuration:purchasedAt
     a ogit.core:Attribute ;
     rdfs:label "purchasedAt" ;
     dcterms:created "2015-07-27" ;
@@ -1177,7 +1177,7 @@ ogit.configuration:purchasedAt
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:securityClass
+ogit._configuration:securityClass
     a ogit.core:Attribute ;
     rdfs:label "securityClass" ;
     dcterms:created "2015-07-27" ;
@@ -1194,7 +1194,7 @@ ogit.configuration:securityClass
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:serviceContract
+ogit._configuration:serviceContract
     a ogit.core:Attribute ;
     rdfs:label "serviceContract" ;
     dcterms:created "2015-07-27" ;
@@ -1211,7 +1211,7 @@ ogit.configuration:serviceContract
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:shortDescription
+ogit._configuration:shortDescription
     a ogit.core:Attribute ;
     rdfs:label "shortDescription" ;
     dcterms:created "2015-07-27" ;
@@ -1228,7 +1228,7 @@ ogit.configuration:shortDescription
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:size
+ogit._configuration:size
     a ogit.core:Attribute ;
     rdfs:label "size" ;
     dcterms:created "2015-10-15" ;
@@ -1245,7 +1245,7 @@ ogit.configuration:size
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:sourceTable
+ogit._configuration:sourceTable
     a ogit.core:Attribute ;
     rdfs:label "sourceTable" ;
     dcterms:created "2015-08-20" ;
@@ -1262,7 +1262,7 @@ ogit.configuration:sourceTable
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:soxClass
+ogit._configuration:soxClass
     a ogit.core:Attribute ;
     rdfs:label "soxClass" ;
     dcterms:created "2015-07-27" ;
@@ -1279,7 +1279,7 @@ ogit.configuration:soxClass
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:subCategory
+ogit._configuration:subCategory
     a ogit.core:Attribute ;
     rdfs:label "subCategory" ;
     dcterms:created "2015-07-27" ;
@@ -1296,7 +1296,7 @@ ogit.configuration:subCategory
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:subType
+ogit._configuration:subType
     a ogit.core:Attribute ;
     rdfs:label "subType" ;
     dcterms:created "2015-07-27" ;
@@ -1313,7 +1313,7 @@ ogit.configuration:subType
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:updateCount
+ogit._configuration:updateCount
     a ogit.core:Attribute ;
     rdfs:label "updateCount" ;
     dcterms:created "2015-07-27" ;
@@ -1330,7 +1330,7 @@ ogit.configuration:updateCount
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:values
+ogit._configuration:values
     a ogit.core:Attribute ;
     rdfs:label "values" ;
     dcterms:created "2015-05-21" ;
@@ -1347,7 +1347,7 @@ ogit.configuration:values
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:vendor
+ogit._configuration:vendor
     a ogit.core:Attribute ;
     rdfs:label "vendor" ;
     dcterms:created "2015-07-27" ;
@@ -1367,7 +1367,7 @@ ogit.configuration:vendor
 #
 # Verbs
 #
-ogit.configuration:proves
+ogit._configuration:proves
     a ogit.core:Verb ;
     rdfs:label "proves" ;
     dcterms:created "2015-05-21" ;
@@ -1384,7 +1384,7 @@ ogit.configuration:proves
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.configuration:virtualizes
+ogit._configuration:virtualizes
     a ogit.core:Verb ;
     rdfs:label "virtualizes" ;
     dcterms:created "2015-07-27" ;

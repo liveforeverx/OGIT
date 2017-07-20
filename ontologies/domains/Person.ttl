@@ -1,12 +1,12 @@
-@prefix dcterms:     <http://purl.org/dc/terms/> .
-@prefix ogit:        <http://www.purl.org/ogit/> .
-@prefix ogit.core:   <http://www.purl.org/ogit/> .
-@prefix ogit.person: <http://www.purl.org/ogit/> .
-@prefix owl:         <http://www.w3.org/2002/07/owl#> .
-@prefix purl:        <http://www.purl.org/> .
-@prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh:          <http://www.w3.org/ns/shacl#> .
-@prefix vann:        <http://purl.org/vocab/vann/> .
+@prefix dcterms:      <http://purl.org/dc/terms/> .
+@prefix ogit:         <http://www.purl.org/ogit/> .
+@prefix ogit._person: <http://www.purl.org/ogit/> .
+@prefix ogit.core:    <http://www.purl.org/ogit/> .
+@prefix owl:          <http://www.w3.org/2002/07/owl#> .
+@prefix purl:         <http://www.purl.org/> .
+@prefix rdfs:         <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:           <http://www.w3.org/ns/shacl#> .
+@prefix vann:         <http://purl.org/vocab/vann/> .
 
 #
 # Ontology
@@ -18,13 +18,13 @@ ogit:person
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
-    vann:preferredNamespacePrefix "ogit.person" ;
+    vann:preferredNamespacePrefix "ogit._person" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
 #
-ogit.person:Person
+ogit._person:Person
     a ogit.core:Entity ;
     rdfs:label "Person" ;
     dcterms:created "2015-05-21" ;
@@ -56,136 +56,136 @@ ogit.person:Person
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.person:Person ;
+            sh:class ogit._person:Person ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.person:invites
+            sh:path ogit._person:invites
         ],
         [
-            sh:class ogit.person:Person ;
+            sh:class ogit._person:Person ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.person:dislikes
+            sh:path ogit._person:dislikes
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.person:firstName
+            sh:path ogit._person:firstName
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.person:lastName
+            sh:path ogit._person:lastName
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.person:middleName
+            sh:path ogit._person:middleName
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.person:alternativeName
+            sh:path ogit._person:alternativeName
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.person:officePhone
+            sh:path ogit._person:officePhone
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.person:otherPhone
+            sh:path ogit._person:otherPhone
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.person:fax
+            sh:path ogit._person:fax
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.person:notification
+            sh:path ogit._person:notification
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.person:position
+            sh:path ogit._person:position
         ],
         [
-            sh:class ogit.person:Person ;
+            sh:class ogit._person:Person ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.person:likes
+            sh:path ogit._person:likes
         ],
         [
-            sh:class ogit.person:Person ;
+            sh:class ogit._person:Person ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.person:invites
+            sh:path ogit._person:invites
         ],
         [
-            sh:class ogit.person:Person ;
+            sh:class ogit._person:Person ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.person:dislikes
+            sh:path ogit._person:dislikes
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.person:firstName
+            sh:path ogit._person:firstName
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.person:lastName
+            sh:path ogit._person:lastName
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.person:middleName
+            sh:path ogit._person:middleName
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.person:alternativeName
+            sh:path ogit._person:alternativeName
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.person:officePhone
+            sh:path ogit._person:officePhone
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.person:otherPhone
+            sh:path ogit._person:otherPhone
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.person:fax
+            sh:path ogit._person:fax
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.person:notification
+            sh:path ogit._person:notification
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.person:position
+            sh:path ogit._person:position
         ],
         [
-            sh:class ogit.person:Person ;
+            sh:class ogit._person:Person ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.person:likes
+            sh:path ogit._person:likes
         ] .
 
 #
 # Attributes
 #
-ogit.person:alternativeName
+ogit._person:alternativeName
     a ogit.core:Attribute ;
     rdfs:label "alternativeName" ;
     dcterms:created "2015-05-21" ;
@@ -202,7 +202,7 @@ ogit.person:alternativeName
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.person:fax
+ogit._person:fax
     a ogit.core:Attribute ;
     rdfs:label "fax" ;
     dcterms:created "2015-05-21" ;
@@ -219,7 +219,7 @@ ogit.person:fax
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.person:firstName
+ogit._person:firstName
     a ogit.core:Attribute ;
     rdfs:label "firstName" ;
     dcterms:created "2015-05-21" ;
@@ -236,7 +236,7 @@ ogit.person:firstName
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.person:lastName
+ogit._person:lastName
     a ogit.core:Attribute ;
     rdfs:label "lastName" ;
     dcterms:created "2015-05-21" ;
@@ -253,7 +253,7 @@ ogit.person:lastName
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.person:middleName
+ogit._person:middleName
     a ogit.core:Attribute ;
     rdfs:label "middleName" ;
     dcterms:created "2015-05-21" ;
@@ -270,7 +270,7 @@ ogit.person:middleName
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.person:notification
+ogit._person:notification
     a ogit.core:Attribute ;
     rdfs:label "notification" ;
     dcterms:created "2015-05-21" ;
@@ -287,7 +287,7 @@ ogit.person:notification
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.person:officePhone
+ogit._person:officePhone
     a ogit.core:Attribute ;
     rdfs:label "officePhone" ;
     dcterms:created "2015-05-21" ;
@@ -304,7 +304,7 @@ ogit.person:officePhone
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.person:otherPhone
+ogit._person:otherPhone
     a ogit.core:Attribute ;
     rdfs:label "otherPhone" ;
     dcterms:created "2015-05-21" ;
@@ -321,7 +321,7 @@ ogit.person:otherPhone
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.person:position
+ogit._person:position
     a ogit.core:Attribute ;
     rdfs:label "position" ;
     dcterms:created "2016-10-18" ;
@@ -341,7 +341,7 @@ ogit.person:position
 #
 # Verbs
 #
-ogit.person:dislikes
+ogit._person:dislikes
     a ogit.core:Verb ;
     rdfs:label "dislikes" ;
     dcterms:created "2015-09-15" ;
@@ -358,7 +358,7 @@ ogit.person:dislikes
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.person:invites
+ogit._person:invites
     a ogit.core:Verb ;
     rdfs:label "invites" ;
     dcterms:created "2015-09-15" ;
@@ -375,7 +375,7 @@ ogit.person:invites
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.person:likes
+ogit._person:likes
     a ogit.core:Verb ;
     rdfs:label "likes" ;
     dcterms:created "2015-09-15" ;

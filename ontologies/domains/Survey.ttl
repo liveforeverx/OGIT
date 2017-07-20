@@ -1,0 +1,170 @@
+@prefix dcterms:         <http://purl.org/dc/terms/> .
+@prefix ogit:            <http://www.purl.org/ogit/> .
+@prefix ogit.core:       <http://www.purl.org/ogit/> .
+@prefix ogit.foundation: <http://www.purl.org/ogit/> .
+@prefix ogit.survey:     <http://www.purl.org/ogit/Survey/> .
+@prefix owl:             <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:              <http://www.w3.org/ns/shacl#> .
+@prefix vann:            <http://purl.org/vocab/vann/> .
+
+#
+# Ontology
+#
+ogit:survey
+    a owl:Ontology ;
+    rdfs:label "OGIT Survey" ;
+    owl:imports ogit:foundation ;
+    owl:versionInfo "__OGIT_VERSION__" ;
+    dcterms:contributor "Fabian Meyer" ;
+    dcterms:creator "arago GmbH" ;
+    vann:preferredNamespacePrefix "ogit.survey" ;
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/Survey/" .
+
+#
+# Entities
+#
+ogit.survey:Iteration
+    a ogit.core:Entity ;
+    rdfs:label "SurveyIteration" ;
+    dcterms:created "2016-08-08" ;
+    dcterms:creator "Alexander Ryabtsev" ;
+    dcterms:description "Iteration of the same survey" ;
+    dcterms:modified "2016-08-08" ;
+    dcterms:valid "start=2016-08-08;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:any-attributes "true" ;
+    ogit.core:history
+        [
+            dcterms:creator "Arthur Shoba" ;
+            dcterms:date "2016-07-12" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2016-08-08" ;
+            dcterms:description "Attributes rework" ;
+            dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:date "2017-06-09" ;
+            dcterms:description "Renamed entity to Iteration and moved it from BusinessProcess to Survey NTO" ;
+            dcterms:identifier "3"
+        ] ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property
+        [
+            sh:class ogit.survey:Survey ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:belongs
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:startedAt
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:status
+        ] .
+
+ogit.survey:Reply
+    a ogit.core:Entity ;
+    rdfs:label "SurveyReply" ;
+    dcterms:created "2016-08-08" ;
+    dcterms:creator "Alexander Ryabtsev" ;
+    dcterms:description "User's reply on a survey" ;
+    dcterms:modified "2016-08-08" ;
+    dcterms:valid "start=2016-08-08;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:any-attributes "true" ;
+    ogit.core:history
+        [
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2016-08-08" ;
+            dcterms:description "Attributes rework" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:date "2017-06-09" ;
+            dcterms:description "Renamed entity to Reply, moved it from BusinessProcess to Survey NTO and replaced ogit/surveyQuestions with ogit/question" ;
+            dcterms:identifier "3"
+        ] ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property
+        [
+            sh:class ogit.survey:Iteration ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:belongs
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:comment
+        ] .
+
+ogit.survey:Survey
+    a ogit.core:Entity ;
+    rdfs:label "Survey" ;
+    dcterms:created "2016-07-12" ;
+    dcterms:creator "Arthur Shoba" ;
+    dcterms:description "List with questions" ;
+    dcterms:modified "2016-08-08" ;
+    dcterms:valid "start=2016-07-12;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:any-attributes "true" ;
+    ogit.core:history
+        [
+            dcterms:creator "Arthur Shoba" ;
+            dcterms:date "2016-07-12" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2016-08-08" ;
+            dcterms:description "Attributes rework" ;
+            dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:date "2017-06-09" ;
+            dcterms:description "Moved entity from BusinessProcess to Survey NTO and replaced ogit/surveyQuestions with ogit/question" ;
+            dcterms:identifier "3"
+        ] ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:title
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:category
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:description
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:type
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:status
+        ] .

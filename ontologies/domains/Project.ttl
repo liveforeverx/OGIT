@@ -1,0 +1,172 @@
+@prefix dcterms:         <http://purl.org/dc/terms/> .
+@prefix ogit:            <http://www.purl.org/ogit/> .
+@prefix ogit.core:       <http://www.purl.org/ogit/> .
+@prefix ogit.foundation: <http://www.purl.org/ogit/> .
+@prefix ogit.project:    <http://www.purl.org/ogit/Project/> .
+@prefix owl:             <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:              <http://www.w3.org/ns/shacl#> .
+@prefix vann:            <http://purl.org/vocab/vann/> .
+
+#
+# Ontology
+#
+ogit:projects
+    a owl:Ontology ;
+    rdfs:label "OGIT Project" ;
+    owl:imports ogit:foundation ;
+    owl:versionInfo "__OGIT_VERSION__" ;
+    dcterms:contributor "Fabian Meyer" ;
+    dcterms:creator "arago GmbH" ;
+    vann:preferredNamespacePrefix "ogit.project" ;
+    vann:preferredNamespaceUri "http://www.purl.org/ogit/Project/" .
+
+#
+# Entities
+#
+ogit.project:Milestone
+    a ogit.core:Entity ;
+    rdfs:label "Milestone" ;
+    dcterms:created "2016-07-12" ;
+    dcterms:creator "Arthur Shoba" ;
+    dcterms:description "An identity that represents an important event, achievement, ..." ;
+    dcterms:modified "2016-08-08" ;
+    dcterms:valid "start=2016-08-08;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:any-attributes "true" ;
+    ogit.core:history
+        [
+            dcterms:creator "Arthur Shoba" ;
+            dcterms:date "2016-07-12" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2016-08-08" ;
+            dcterms:description "Attributes rework" ;
+            dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:date "2017-06-09" ;
+            dcterms:description "Moved entity from BusinessProcess to Project NTO" ;
+            dcterms:identifier "3"
+        ] ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property
+        [
+            sh:class ogit.project:Project ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:belongs
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:title
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:category
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:status
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:plannedStartDate
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:plannedFinishDate
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:startedAt
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:finishedAt
+        ] .
+
+ogit.project:Project
+    a ogit.core:Entity ;
+    rdfs:label "Project" ;
+    dcterms:created "2016-07-12" ;
+    dcterms:creator "Arthur Shoba" ;
+    dcterms:description "An identity that represents a grouping of Person, Milestone objects." ;
+    dcterms:modified "2016-08-08" ;
+    dcterms:valid "start=2016-08-08;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:any-attributes "true" ;
+    ogit.core:history
+        [
+            dcterms:creator "Arthur Shoba" ;
+            dcterms:date "2016-07-12" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2016-08-08" ;
+            dcterms:description "Attributes rework" ;
+            dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:date "2017-06-09" ;
+            dcterms:description "Moved entity from BusinessProcess to Project NTO" ;
+            dcterms:identifier "3"
+        ] ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:title
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:category
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:placement
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:status
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:plannedStartDate
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:plannedFinishDate
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:startedAt
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:finishedAt
+        ] .

@@ -1,12 +1,12 @@
-@prefix dcterms:         <http://purl.org/dc/terms/> .
-@prefix ogit:            <http://www.purl.org/ogit/> .
-@prefix ogit.core:       <http://www.purl.org/ogit/> .
-@prefix ogit.foundation: <http://www.purl.org/ogit/> .
-@prefix ogit.person:     <http://www.purl.org/ogit/> .
-@prefix owl:             <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh:              <http://www.w3.org/ns/shacl#> .
-@prefix vann:            <http://purl.org/vocab/vann/> .
+@prefix dcterms:     <http://purl.org/dc/terms/> .
+@prefix ogit:        <http://www.purl.org/ogit/> .
+@prefix ogit.core:   <http://www.purl.org/ogit/> .
+@prefix ogit.person: <http://www.purl.org/ogit/> .
+@prefix owl:         <http://www.w3.org/2002/07/owl#> .
+@prefix purl:        <http://www.purl.org/> .
+@prefix rdfs:        <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:          <http://www.w3.org/ns/shacl#> .
+@prefix vann:        <http://purl.org/vocab/vann/> .
 
 #
 # Ontology
@@ -14,7 +14,7 @@
 ogit:person
     a owl:Ontology ;
     rdfs:label "OGIT Person" ;
-    owl:imports ogit:foundation ;
+    owl:imports purl:ogit ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -85,17 +85,7 @@ ogit.person:Person
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.foundation:title
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
             sh:path ogit.person:alternativeName
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:email
         ],
         [
             sh:maxCount 1 ;
@@ -110,7 +100,65 @@ ogit.person:Person
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.foundation:mobilePhone
+            sh:path ogit.person:fax
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:notification
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:position
+        ],
+        [
+            sh:class ogit.person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.person:likes
+        ],
+        [
+            sh:class ogit.person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.person:invites
+        ],
+        [
+            sh:class ogit.person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.person:dislikes
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:firstName
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:lastName
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:middleName
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:alternativeName
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:officePhone
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.person:otherPhone
         ],
         [
             sh:maxCount 1 ;
@@ -125,52 +173,13 @@ ogit.person:Person
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit.foundation:webPage
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sourceId
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:status
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
             sh:path ogit.person:position
         ],
         [
             sh:class ogit.person:Person ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.foundation:reports
-        ],
-        [
-            sh:class ogit.person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
             sh:path ogit.person:likes
-        ],
-        [
-            sh:class ogit.person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
-        ],
-        [
-            sh:class ogit.person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:represents
-        ],
-        [
-            sh:class ogit.person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:communicatesWith
         ] .
 
 #

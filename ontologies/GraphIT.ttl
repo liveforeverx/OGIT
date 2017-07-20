@@ -11,6 +11,7 @@
 @prefix ogit.contract:          <http://www.purl.org/ogit/> .
 @prefix ogit.core:              <http://www.purl.org/ogit/> .
 @prefix ogit.cost:              <http://www.purl.org/ogit/Cost/> .
+@prefix ogit.course:            <http://www.purl.org/ogit/> .
 @prefix ogit.data:              <http://www.purl.org/ogit/> .
 @prefix ogit.dataProcessing:    <http://www.purl.org/ogit/DataProcessing/> .
 @prefix ogit.datacenter:        <http://www.purl.org/ogit/Datacenter/> .
@@ -39,10 +40,12 @@
 @prefix ogit.oslc-reqman:       <http://www.purl.org/ogit/OSLC-reqman/> .
 @prefix ogit.person:            <http://www.purl.org/ogit/> .
 @prefix ogit.price:             <http://www.purl.org/ogit/Price/> .
+@prefix ogit.project:           <http://www.purl.org/ogit/Project/> .
 @prefix ogit.rddl:              <http://www.purl.org/ogit/RDDL/> .
 @prefix ogit.serviceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
 @prefix ogit.software:          <http://www.purl.org/ogit/Software/> .
 @prefix ogit.statistics:        <http://www.purl.org/ogit/Statistics/> .
+@prefix ogit.survey:            <http://www.purl.org/ogit/Survey/> .
 @prefix ogit.task:              <http://www.purl.org/ogit/> .
 @prefix ogit.userMeta:          <http://www.purl.org/ogit/UserMeta/> .
 @prefix owl:                    <http://www.w3.org/2002/07/owl#> .
@@ -99,6 +102,7 @@ ogit.graphit:Node
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
+    ogit.core:parent "http://www.purl.org/ogit/Node" ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -513,6 +517,8 @@ ogit.graphit:indexed-attributes
 #
 # Other
 #
+<http://www.purl.org/ogit/Data/Log> ogit.core:parent "http://www.purl.org/ogit/Node" .
+
 ogit._forum:Notification ogit.core:parent ogit.graphit:Node .
 
 ogit.alerting:Alert ogit.core:parent ogit.graphit:Node .
@@ -590,10 +596,6 @@ ogit.businessProcess:ManualTask ogit.core:parent ogit.graphit:Node .
 
 ogit.businessProcess:MessageEvent ogit.core:parent ogit.graphit:Node .
 
-ogit.businessProcess:Milestone
-    ogit.graphit:indexed-attributes ogit.foundation:title ;
-    ogit.core:parent ogit.graphit:Node .
-
 ogit.businessProcess:MultipleEvent ogit.core:parent ogit.graphit:Node .
 
 ogit.businessProcess:NoneEvent ogit.core:parent ogit.graphit:Node .
@@ -604,10 +606,6 @@ ogit.businessProcess:ProcessLane ogit.core:parent ogit.graphit:Node .
 
 ogit.businessProcess:ProcessPool ogit.core:parent ogit.graphit:Node .
 
-ogit.businessProcess:Project
-    ogit.graphit:indexed-attributes ogit.foundation:title ;
-    ogit.core:parent ogit.graphit:Node .
-
 ogit.businessProcess:ReceiveTask ogit.core:parent ogit.graphit:Node .
 
 ogit.businessProcess:ScriptTask ogit.core:parent ogit.graphit:Node .
@@ -617,16 +615,6 @@ ogit.businessProcess:SendTask ogit.core:parent ogit.graphit:Node .
 ogit.businessProcess:ServiceTask ogit.core:parent ogit.graphit:Node .
 
 ogit.businessProcess:SignalEvent ogit.core:parent ogit.graphit:Node .
-
-ogit.businessProcess:Survey
-    ogit.graphit:indexed-attributes
-        ogit.foundation:description,
-        ogit.foundation:title ;
-    ogit.core:parent ogit.graphit:Node .
-
-ogit.businessProcess:SurveyIteration ogit.core:parent ogit.graphit:Node .
-
-ogit.businessProcess:SurveyReply ogit.core:parent ogit.graphit:Node .
 
 ogit.businessProcess:TerminationEvent ogit.core:parent ogit.graphit:Node .
 
@@ -665,6 +653,12 @@ ogit.cost:CostElement ogit.core:parent ogit.graphit:Node .
 ogit.cost:PlanningParameter ogit.core:parent ogit.graphit:Node .
 
 ogit.cost:PlanningTemplate ogit.core:parent ogit.graphit:Node .
+
+ogit.course:Course ogit.core:parent ogit.graphit:Node .
+
+ogit.course:Series ogit.core:parent ogit.graphit:Node .
+
+ogit.course:Status ogit.core:parent ogit.graphit:Node .
 
 ogit.data:CustomApplicationData ogit.core:parent ogit.graphit:Node .
 
@@ -1188,6 +1182,14 @@ ogit.price:Invoice ogit.core:parent ogit.graphit:Node .
 
 ogit.price:PriceSpecification ogit.core:parent ogit.graphit:Node .
 
+ogit.project:Milestone
+    ogit.graphit:indexed-attributes ogit.foundation:title ;
+    ogit.core:parent ogit.graphit:Node .
+
+ogit.project:Project
+    ogit.graphit:indexed-attributes ogit.foundation:title ;
+    ogit.core:parent ogit.graphit:Node .
+
 ogit.rddl:Namespace ogit.core:parent ogit.graphit:Node .
 
 ogit.rddl:Resource ogit.core:parent ogit.graphit:Node .
@@ -1236,6 +1238,16 @@ ogit.statistics:AutomationFamily
             sh:minCount 0 ;
             sh:path ogit.automation:marsNodeType
         ] .
+
+ogit.survey:Iteration ogit.core:parent ogit.graphit:Node .
+
+ogit.survey:Reply ogit.core:parent ogit.graphit:Node .
+
+ogit.survey:Survey
+    ogit.graphit:indexed-attributes
+        ogit.foundation:description,
+        ogit.foundation:title ;
+    ogit.core:parent ogit.graphit:Node .
 
 ogit.task:Question ogit.core:parent ogit.graphit:Node .
 

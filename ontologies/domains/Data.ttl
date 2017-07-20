@@ -49,6 +49,24 @@ ogit.data:CustomApplicationData
             sh:path ogit.foundation:uses
         ] .
 
+ogit.data:Log
+    a ogit.core:Entity ;
+    rdfs:label "Log" ;
+    dcterms:created "2017-06-14" ;
+    dcterms:creator "stravlos@arago.de" ;
+    dcterms:description "This entity defines a log. It used to store a sequence of log records" ;
+    dcterms:modified "2017-06-14" ;
+    dcterms:valid "start=2017-06-14;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "stravlos@arago.de" ;
+            dcterms:date "2017-06-14" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
 ogit.data:Timeseries
     a ogit.core:Entity ;
     rdfs:label "Timeseries" ;

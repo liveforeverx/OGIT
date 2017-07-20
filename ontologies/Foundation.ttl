@@ -564,6 +564,57 @@ ogit.foundation:phone
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
+ogit.foundation:placement
+    a ogit.core:Attribute ;
+    rdfs:label "placement" ;
+    dcterms:created "2016-08-08" ;
+    dcterms:creator "Alexander Ryabtsev" ;
+    dcterms:description "A place where the object is placed." ;
+    dcterms:modified "2016-08-08" ;
+    dcterms:valid "start=2016-08-08;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2016-08-08" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:plannedFinishDate
+    a ogit.core:Attribute ;
+    rdfs:label "plannedFinishDate" ;
+    dcterms:created "2016-08-08" ;
+    dcterms:creator "Alexander Ryabtsev" ;
+    dcterms:description "Defines the date when something will be finished." ;
+    dcterms:modified "2016-08-08" ;
+    dcterms:valid "start=2016-08-08;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2016-08-08" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:plannedStartDate
+    a ogit.core:Attribute ;
+    rdfs:label "plannedStartDate" ;
+    dcterms:created "2016-08-08" ;
+    dcterms:creator "Alexander Ryabtsev" ;
+    dcterms:description "Defines the date when something will be started." ;
+    dcterms:modified "2016-08-08" ;
+    dcterms:valid "start=2016-08-08;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2016-08-08" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
 ogit.foundation:postalCode
     a ogit.core:Attribute ;
     rdfs:label "postalCode" ;
@@ -1052,13 +1103,13 @@ ogit.foundation:approves
             dcterms:creator "bmoore@arago.de" ;
             dcterms:date "2015-12-03" ;
             dcterms:description "Edited edge Permission -> Forum/Group" ;
-            dcterms:identifier "2"
+            dcterms:identifier "3"
         ],
         [
             dcterms:creator "Spyridon Travlos" ;
             dcterms:date "2016-06-23" ;
             dcterms:description "connection added" ;
-            dcterms:identifier "3"
+            dcterms:identifier "4"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -1163,7 +1214,7 @@ ogit.foundation:availableIn
 ogit.foundation:belongs
     a ogit.core:Verb ;
     rdfs:label "belongs" ;
-    dcterms:created "2015-05-21" ;
+    dcterms:created "2017-06-09" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "Verb showing if one entity belongs to another." ;
     dcterms:modified "2016-08-08" ;
@@ -1253,6 +1304,18 @@ ogit.foundation:belongs
             dcterms:date "2016-10-26" ;
             dcterms:description "Added Organization -> Alert" ;
             dcterms:identifier "15"
+        ],
+        [
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:date "2017-06-09" ;
+            dcterms:description "Refactored names of Project/Survey related concepts" ;
+            dcterms:identifier "16"
+        ],
+        [
+            dcterms:creator "Ben Neal" ;
+            dcterms:date "2017-06-28" ;
+            dcterms:description "add connection Person -> Profile" ;
+            dcterms:identifier "17"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -1456,7 +1519,7 @@ ogit.foundation:consumes
     dcterms:created "2016-08-08" ;
     dcterms:creator "Alexander Ryabtsev" ;
     dcterms:description "This relationship indicates that one consumes result of work from another." ;
-    dcterms:modified "2016-08-08" ;
+    dcterms:modified "2017-06-09" ;
     dcterms:valid "start=2016-08-08;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
@@ -1471,6 +1534,12 @@ ogit.foundation:consumes
             dcterms:date "2017-02-06" ;
             dcterms:description "Add edge from person to milestone." ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:date "2017-06-09" ;
+            dcterms:description "Refactored names of Project/Survey related concepts" ;
+            dcterms:identifier "3"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -1480,7 +1549,7 @@ ogit.foundation:contains
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "This relationship indicates that something is part of something else. see also \"includes\"" ;
-    dcterms:modified "2016-07-12" ;
+    dcterms:modified "2017-04-19" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
@@ -1545,6 +1614,12 @@ ogit.foundation:contains
             dcterms:date "2017-04-05" ;
             dcterms:description "Added a connection from `ogit/Alert` -> `ogit/Contract`" ;
             dcterms:identifier "10"
+        ],
+        [
+            dcterms:creator "stravlos@arago.co" ;
+            dcterms:date "2017-04-19" ;
+            dcterms:description "Added a connection from `ogit/Series` -> `ogit/Course`" ;
+            dcterms:identifier "11"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -1770,7 +1845,7 @@ ogit.foundation:deployedTo
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-10-15" ;
             dcterms:description "added a new edge from a MARSNode to a MARSNode" ;
-            dcterms:identifier "1"
+            dcterms:identifier "2"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -1910,6 +1985,23 @@ ogit.foundation:governs
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
+ogit.foundation:hiddenBy
+    a ogit.core:Verb ;
+    rdfs:label "hiddenBy" ;
+    dcterms:created "2017-07-04" ;
+    dcterms:creator "Kristjan Liiva" ;
+    dcterms:description "An entity has been hidden by another Entity." ;
+    dcterms:modified "2017-07-04" ;
+    dcterms:valid "start=2017-07-04;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Kristjan Liiva" ;
+            dcterms:date "2017-07-04" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
 ogit.foundation:ignores
     a ogit.core:Verb ;
     rdfs:label "ignores" ;
@@ -2006,7 +2098,7 @@ ogit.foundation:locatedIn
 ogit.foundation:manages
     a ogit.core:Verb ;
     rdfs:label "manages" ;
-    dcterms:created "2015-05-21" ;
+    dcterms:created "2017-06-09" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "This relationship indicates that one entity manages some other." ;
     dcterms:modified "2017-03-28" ;
@@ -2048,6 +2140,12 @@ ogit.foundation:manages
             dcterms:date "2017-04-18" ;
             dcterms:description "Added edges `Person` -> `BusinessProcess/Project`, `Person` -> `BusinessProcess/Milestone`" ;
             dcterms:identifier "6"
+        ],
+        [
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:date "2017-06-09" ;
+            dcterms:description "Refactored names of Project/Survey related concepts" ;
+            dcterms:identifier "7"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -2203,7 +2301,7 @@ ogit.foundation:produces
     dcterms:created "2016-08-08" ;
     dcterms:creator "Alexander Ryabtsev" ;
     dcterms:description "This relationship indicates that one produces some work for another." ;
-    dcterms:modified "2016-08-08" ;
+    dcterms:modified "2017-06-09" ;
     dcterms:valid "start=2016-08-08;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
@@ -2218,6 +2316,12 @@ ogit.foundation:produces
             dcterms:date "2017-02-06" ;
             dcterms:description "Add edge from person to milestone." ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:date "2017-06-09" ;
+            dcterms:description "Refactored names of Project/Survey related concepts" ;
+            dcterms:identifier "3"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -2248,6 +2352,23 @@ ogit.foundation:provides
             dcterms:date "2015-10-15" ;
             dcterms:description "updated edge from ogit/Automation/MARSNode -> ogit/Automation/MARSNode added" ;
             dcterms:identifier "3"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:readBy
+    a ogit.core:Verb ;
+    rdfs:label "readBy" ;
+    dcterms:created "2017-07-04" ;
+    dcterms:creator "Kristjan Liiva" ;
+    dcterms:description "An entity has been read by another Entity." ;
+    dcterms:modified "2017-07-04" ;
+    dcterms:valid "start=2017-07-04;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Kristjan Liiva" ;
+            dcterms:date "2017-07-04" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -2315,7 +2436,7 @@ ogit.foundation:relates
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "General relationship indicating that one entity is related to another one." ;
-    dcterms:modified "2015-07-27" ;
+    dcterms:modified "2017-06-09" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
@@ -2353,25 +2474,37 @@ ogit.foundation:relates
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:date "2015-07-27" ;
             dcterms:description "added from ogit/ConfigurationItem to ogit/Device" ;
-            dcterms:identifier "5"
+            dcterms:identifier "6"
         ],
         [
             dcterms:creator "FCO" ;
             dcterms:date "2015-08-03" ;
             dcterms:description "added from ogit/Software/Application to ogit/License" ;
-            dcterms:identifier "6"
+            dcterms:identifier "7"
         ],
         [
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:date "2016-08-03" ;
             dcterms:description "added event-> event, event-> incident" ;
-            dcterms:identifier "7"
+            dcterms:identifier "8"
         ],
         [
             dcterms:creator "Alexander Ryabtsev" ;
             dcterms:date "2016-12-20" ;
             dcterms:description "added from ogit/Person to ogit/BusinessProcess/SurveyIteration" ;
-            dcterms:identifier "8"
+            dcterms:identifier "9"
+        ],
+        [
+            dcterms:creator "stravlos@arago.de" ;
+            dcterms:date "2017-04-20" ;
+            dcterms:description "connection added" ;
+            dcterms:identifier "10"
+        ],
+        [
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:date "2017-06-09" ;
+            dcterms:description "Refactored names of Project/Survey related concepts" ;
+            dcterms:identifier "11"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -2381,14 +2514,21 @@ ogit.foundation:repliedWith
     dcterms:created "2016-08-08" ;
     dcterms:creator "Alexander Ryabtsev" ;
     dcterms:description "This relationship indicates that user replied with something." ;
-    dcterms:modified "2016-08-08" ;
+    dcterms:modified "2017-06-09" ;
     dcterms:valid "start=2016-08-08;" ;
     ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
+    ogit.core:history
+        [
             dcterms:creator "Alexander Ryabtsev" ;
             dcterms:date "2016-08-08" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:date "2017-06-09" ;
+            dcterms:description "Refactored names of Project/Survey related concepts" ;
+            dcterms:identifier "2"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -2563,6 +2703,23 @@ ogit.foundation:runsOn
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
+ogit.foundation:seenBy
+    a ogit.core:Verb ;
+    rdfs:label "seenBy" ;
+    dcterms:created "2017-07-04" ;
+    dcterms:creator "Kristjan Liiva" ;
+    dcterms:description "An entity has been seen by another Entity." ;
+    dcterms:modified "2017-07-04" ;
+    dcterms:valid "start=2017-07-04;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Kristjan Liiva" ;
+            dcterms:date "2017-07-04" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
 ogit.foundation:sends
     a ogit.core:Verb ;
     rdfs:label "sends" ;
@@ -2584,6 +2741,12 @@ ogit.foundation:sends
             dcterms:date "2017-02-17" ;
             dcterms:description "add connection" ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2017-06-20" ;
+            dcterms:description "add connection from ogit.Software:Application to ogit:Notification" ;
+            dcterms:identifier "3"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -2639,7 +2802,7 @@ ogit.foundation:specifies
 ogit.foundation:supervises
     a ogit.core:Verb ;
     rdfs:label "supervises" ;
-    dcterms:created "2015-05-21" ;
+    dcterms:created "2017-06-09" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "Indicates if an entity supervises another entity. E.g. a Person supervises a Ticket or a Task." ;
     dcterms:modified "2015-05-21" ;
@@ -2657,6 +2820,12 @@ ogit.foundation:supervises
             dcterms:date "2016-06-23" ;
             dcterms:description "connection added" ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:date "2017-06-09" ;
+            dcterms:description "Refactored names of Project/Survey related concepts" ;
+            dcterms:identifier "3"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -2666,7 +2835,7 @@ ogit.foundation:supports
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "This relationship defines that one entity provides/supports another entity." ;
-    dcterms:modified "2015-05-21" ;
+    dcterms:modified "2017-06-09" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
@@ -2698,7 +2867,30 @@ ogit.foundation:supports
             dcterms:creator "Alexander Ryabtsev" ;
             dcterms:date "2017-02-06" ;
             dcterms:description "Add edge from Person to Milestone." ;
-            dcterms:identifier "4"
+            dcterms:identifier "5"
+        ],
+        [
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:date "2017-06-09" ;
+            dcterms:description "Refactored names of Project/Survey related concepts" ;
+            dcterms:identifier "6"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:tracks
+    a ogit.core:Verb ;
+    rdfs:label "tracks" ;
+    dcterms:created "2017-06-26" ;
+    dcterms:creator "vteremasov@klika-tech.com" ;
+    dcterms:description "This relationship defines that one entity tracks another entity." ;
+    dcterms:modified "2017-06-26" ;
+    dcterms:valid "start=2017-06-26;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "vteremasov@klika-tech.com" ;
+            dcterms:date "2017-06-26" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -2811,5 +3003,41 @@ ogit.foundation:validFor
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:worksOn
+    a ogit.core:Verb ;
+    rdfs:label "worksOn" ;
+    dcterms:created "2015-06-24" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Indicates if one entity is currently working on another entity." ;
+    dcterms:modified "2015-08-13" ;
+    dcterms:valid "start=2015-06-24;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-06-24" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "FCO" ;
+            dcterms:date "2015-08-12" ;
+            dcterms:description "connection fixed" ;
+            dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-08-13" ;
+            dcterms:description "connection added" ;
+            dcterms:identifier "3"
+        ],
+        [
+            dcterms:creator "stravlos@arago.de" ;
+            dcterms:date "2017-04-20" ;
+            dcterms:description "connection added" ;
+            dcterms:identifier "4"
         ] ;
     ogit.core:tech-contact "arago GmbH" .

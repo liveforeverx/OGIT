@@ -1,13 +1,12 @@
-@prefix dcterms:                 <http://purl.org/dc/terms/> .
-@prefix ogit:                    <http://www.purl.org/ogit/> .
-@prefix ogit._serviceManagement: <http://www.purl.org/ogit/> .
-@prefix ogit.core:               <http://www.purl.org/ogit/> .
-@prefix ogit.foundation:         <http://www.purl.org/ogit/> .
-@prefix ogit.serviceManagement:  <http://www.purl.org/ogit/ServiceManagement/> .
-@prefix owl:                     <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs:                    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh:                      <http://www.w3.org/ns/shacl#> .
-@prefix vann:                    <http://purl.org/vocab/vann/> .
+@prefix dcterms:                <http://purl.org/dc/terms/> .
+@prefix ogit:                   <http://www.purl.org/ogit/> .
+@prefix ogit.core:              <http://www.purl.org/ogit/> .
+@prefix ogit.foundation:        <http://www.purl.org/ogit/> .
+@prefix ogit.serviceManagement: <http://www.purl.org/ogit/ServiceManagement/> .
+@prefix owl:                    <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:                   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:                     <http://www.w3.org/ns/shacl#> .
+@prefix vann:                   <http://purl.org/vocab/vann/> .
 
 #
 # Ontology
@@ -134,7 +133,7 @@ ogit.serviceManagement:ApprovalTask
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:reason
+            sh:path ogit.foundation:reason
         ],
         [
             sh:maxCount 1 ;
@@ -223,12 +222,12 @@ ogit.serviceManagement:ChangeRequest
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:risk
+            sh:path ogit.foundation:risk
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:justification
+            sh:path ogit.foundation:justification
         ],
         [
             sh:maxCount 1 ;
@@ -248,22 +247,22 @@ ogit.serviceManagement:ChangeRequest
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:effort
+            sh:path ogit.foundation:effort
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:reportedAt
+            sh:path ogit.foundation:reportedAt
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:reviewedAt
+            sh:path ogit.foundation:reviewedAt
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:assignedGroup
+            sh:path ogit.foundation:assignedGroup
         ],
         [
             sh:maxCount 1 ;
@@ -489,7 +488,7 @@ ogit.serviceManagement:Incident
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:assignedGroup
+            sh:path ogit.foundation:assignedGroup
         ],
         [
             sh:maxCount 1 ;
@@ -499,7 +498,7 @@ ogit.serviceManagement:Incident
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:reportedAt
+            sh:path ogit.foundation:reportedAt
         ],
         [
             sh:class ogit.serviceManagement:Incident ;
@@ -562,7 +561,7 @@ ogit.serviceManagement:Offering
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:capacityAvailable
+            sh:path ogit.foundation:capacityAvailable
         ],
         [
             sh:maxCount 1 ;
@@ -597,7 +596,7 @@ ogit.serviceManagement:Offering
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:market
+            sh:path ogit.foundation:market
         ],
         [
             sh:class ogit.serviceManagement:Service ;
@@ -684,7 +683,7 @@ ogit.serviceManagement:Order
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:urgency
+            sh:path ogit.foundation:urgency
         ],
         [
             sh:maxCount 1 ;
@@ -704,7 +703,7 @@ ogit.serviceManagement:Order
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:closedAt
+            sh:path ogit.foundation:closedAt
         ],
         [
             sh:maxCount 1 ;
@@ -729,7 +728,7 @@ ogit.serviceManagement:Order
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:project
+            sh:path ogit.foundation:project
         ],
         [
             sh:maxCount 1 ;
@@ -817,7 +816,7 @@ ogit.serviceManagement:Problem
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:reportedAt
+            sh:path ogit.foundation:reportedAt
         ],
         [
             sh:maxCount 1 ;
@@ -1024,7 +1023,7 @@ ogit.serviceManagement:Service
             sh:class ogit.serviceManagement:Service ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:calls
+            sh:path ogit.foundation:calls
         ],
         [
             sh:class ogit.serviceManagement:Action ;
@@ -1175,7 +1174,7 @@ ogit.serviceManagement:SubTask
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:taskLog
+            sh:path ogit.foundation:taskLog
         ],
         [
             sh:maxCount 1 ;
@@ -1210,7 +1209,7 @@ ogit.serviceManagement:SubTask
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:effort
+            sh:path ogit.foundation:effort
         ],
         [
             sh:maxCount 1 ;
@@ -1230,7 +1229,7 @@ ogit.serviceManagement:SubTask
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:assignedGroup
+            sh:path ogit.foundation:assignedGroup
         ],
         [
             sh:maxCount 1 ;
@@ -1316,7 +1315,7 @@ ogit.serviceManagement:Ticket
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:project
+            sh:path ogit.foundation:project
         ],
         [
             sh:maxCount 1 ;
@@ -1326,7 +1325,7 @@ ogit.serviceManagement:Ticket
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:urgency
+            sh:path ogit.foundation:urgency
         ],
         [
             sh:maxCount 1 ;
@@ -1346,7 +1345,7 @@ ogit.serviceManagement:Ticket
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._serviceManagement:closedAt
+            sh:path ogit.foundation:closedAt
         ],
         [
             sh:maxCount 1 ;
@@ -1389,236 +1388,6 @@ ogit.serviceManagement:Ticket
 #
 # Attributes
 #
-ogit._serviceManagement:assignedGroup
-    a ogit.core:Attribute ;
-    rdfs:label "assignedGroup" ;
-    dcterms:created "2015-07-01" ;
-    dcterms:creator "Aymen Ayoub" ;
-    dcterms:description "Assigned Group to a Service Management process." ;
-    dcterms:modified "2015-07-01" ;
-    dcterms:valid "start=2015-07-01;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-07-01" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._serviceManagement:capacityAvailable
-    a ogit.core:Attribute ;
-    rdfs:label "capacityAvailable" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "If the flag is true, then service can be ordered by new instance. If the flag is false, the service cannot temporarily be ordered due to capacity reasons." ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._serviceManagement:closedAt
-    a ogit.core:Attribute ;
-    rdfs:label "closedAt" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description """Will defined the time when a ticket was closed.
-        The values must be combined date and time with time zone designator according to ISO 8601""" ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._serviceManagement:effort
-    a ogit.core:Attribute ;
-    rdfs:label "effort" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description """Defines how much time was spent on the actual work for a change, task, or similar entity.
-        The values is expected to be in format HH:MM, e.g. 1:00 for 1 hour effort.""" ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" ;
-    ogit.core:validation-parameter "^(\\d+:\\d\\d)$" ;
-    ogit.core:validation-type "regex" .
-
-ogit._serviceManagement:justification
-    a ogit.core:Attribute ;
-    rdfs:label "justification" ;
-    dcterms:created "2015-07-01" ;
-    dcterms:creator "Aymen Ayoub" ;
-    dcterms:description "Justification for a ChangeRequest" ;
-    dcterms:modified "2015-07-01" ;
-    dcterms:valid "start=2015-07-01;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-07-01" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._serviceManagement:market
-    a ogit.core:Attribute ;
-    rdfs:label "market" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "Indicates market, for which an entity may be applicable." ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._serviceManagement:project
-    a ogit.core:Attribute ;
-    rdfs:label "project" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "Project name, for which the entity is being used." ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._serviceManagement:reason
-    a ogit.core:Attribute ;
-    rdfs:label "reason" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "Describes the reason for a decision." ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._serviceManagement:reportedAt
-    a ogit.core:Attribute ;
-    rdfs:label "reportedAt" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description """Defineds the time when something was actually reported.
-        The values can combin date and time with time zone designator according to ISO 8601.
-        Reported time is used in incident management in the following manner: in most cases the reported time equals the time when the incident is created. In some cases, e.g. the incident is created after the helpdesk has already worked on some request before it was decided to create an incident, the reported time might differ from ticket creation/opening time.""" ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._serviceManagement:reviewedAt
-    a ogit.core:Attribute ;
-    rdfs:label "reviewedAt" ;
-    dcterms:created "2015-07-01" ;
-    dcterms:creator "Aymen Ayoub" ;
-    dcterms:description """Defines the time when something was actually reviewed.
-        The values can combin date and time with time zone designator according to ISO 8601.
-        Reviewed time is used in incident management.""" ;
-    dcterms:modified "2015-07-01" ;
-    dcterms:valid "start=2015-07-01;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-07-01" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._serviceManagement:risk
-    a ogit.core:Attribute ;
-    rdfs:label "risk" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "Used to store the result of a risk analysis." ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._serviceManagement:taskLog
-    a ogit.core:Attribute ;
-    rdfs:label "taskLog" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description """In cases where the log for a Task is maintained as a single string it will be stored in taskLog.
-        In all other case consider using ogit/Timeseries.""" ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._serviceManagement:urgency
-    a ogit.core:Attribute ;
-    rdfs:label "urgency" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "Contains the urgency which could be appliead to a ticket, incident etc." ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
 ogit.serviceManagement:allowedForNewBusiness
     a ogit.core:Attribute ;
     rdfs:label "allowedForNewBusiness" ;
@@ -2282,26 +2051,6 @@ ogit.serviceManagement:workAround
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "Defines a work around for a known problem until a permanent solution is defined." ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-#
-# Verbs
-#
-ogit._serviceManagement:calls
-    a ogit.core:Verb ;
-    rdfs:label "calls" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "Verb showing which entity calls which another entity." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;

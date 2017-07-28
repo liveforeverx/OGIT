@@ -1,6 +1,5 @@
 @prefix dcterms:         <http://purl.org/dc/terms/> .
 @prefix ogit:            <http://www.purl.org/ogit/> .
-@prefix ogit._network:   <http://www.purl.org/ogit/> .
 @prefix ogit.core:       <http://www.purl.org/ogit/> .
 @prefix ogit.foundation: <http://www.purl.org/ogit/> .
 @prefix ogit.network:    <http://www.purl.org/ogit/Network/> .
@@ -19,9 +18,7 @@ ogit:network
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
-    vann:preferredNamespacePrefix
-        "ogit._network",
-        "ogit.network" ;
+    vann:preferredNamespacePrefix "ogit.network" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit/Network/" .
 
 #
@@ -237,7 +234,7 @@ ogit.network:NetworkCard
             sh:class ogit.network:IDSIPS ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._network:extends
+            sh:path ogit.foundation:extends
         ],
         [
             sh:maxCount 1 ;
@@ -248,19 +245,19 @@ ogit.network:NetworkCard
             sh:class ogit.network:Switch ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._network:extends
+            sh:path ogit.foundation:extends
         ],
         [
             sh:class ogit.network:WifiAccessPoint ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._network:extends
+            sh:path ogit.foundation:extends
         ],
         [
             sh:class ogit.network:Slot ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._network:extends
+            sh:path ogit.foundation:extends
         ],
         [
             sh:class ogit.network:Port ;
@@ -272,13 +269,13 @@ ogit.network:NetworkCard
             sh:class ogit.network:Router ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._network:extends
+            sh:path ogit.foundation:extends
         ],
         [
             sh:class ogit.network:Loadbalancer ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._network:extends
+            sh:path ogit.foundation:extends
         ] .
 
 ogit.network:NetworkEnclosure
@@ -676,13 +673,13 @@ ogit.network:SimpleDevice
             sh:class ogit.network:Switch ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._network:extends
+            sh:path ogit.foundation:extends
         ],
         [
             sh:class ogit.network:Router ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._network:extends
+            sh:path ogit.foundation:extends
         ],
         [
             sh:class ogit.network:Port ;
@@ -704,19 +701,19 @@ ogit.network:SimpleDevice
             sh:class ogit.network:Loadbalancer ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._network:extends
+            sh:path ogit.foundation:extends
         ],
         [
             sh:class ogit.network:IDSIPS ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._network:extends
+            sh:path ogit.foundation:extends
         ],
         [
             sh:class ogit.network:WifiAccessPoint ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._network:extends
+            sh:path ogit.foundation:extends
         ] .
 
 ogit.network:Slot
@@ -863,23 +860,3 @@ ogit.network:WifiAccessPoint
             sh:minCount 0 ;
             sh:path ogit.foundation:id
         ] .
-
-#
-# Verbs
-#
-ogit._network:extends
-    a ogit.core:Verb ;
-    rdfs:label "extends" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "Indicates if one entity extends another one" ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .

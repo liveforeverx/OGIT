@@ -1,6 +1,6 @@
 @prefix dcterms:         <http://purl.org/dc/terms/> .
 @prefix ogit:            <http://www.purl.org/ogit/> .
-@prefix ogit._task:      <http://www.purl.org/ogit/> .
+@prefix ogit._process:   <http://www.purl.org/ogit/> .
 @prefix ogit.core:       <http://www.purl.org/ogit/> .
 @prefix ogit.foundation: <http://www.purl.org/ogit/> .
 @prefix owl:             <http://www.w3.org/2002/07/owl#> .
@@ -11,20 +11,45 @@
 #
 # Ontology
 #
-ogit:task
+ogit:process
     a owl:Ontology ;
-    rdfs:label "OGIT Task" ;
+    rdfs:label "OGIT Process" ;
     owl:imports ogit:foundation ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
-    vann:preferredNamespacePrefix "ogit._task" ;
+    vann:preferredNamespacePrefix "ogit._process" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit/" .
 
 #
 # Entities
 #
-ogit._task:Question
+ogit._process:Notification
+    a ogit.core:Entity ;
+    rdfs:label "Notification" ;
+    dcterms:created "2015-04-27" ;
+    dcterms:creator "cwalker@arago.de" ;
+    dcterms:description "A notification event" ;
+    dcterms:modified "2017-02-17" ;
+    dcterms:valid "start=2015-04-27;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history
+        [
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-04-27" ;
+            dcterms:description "Initial Creation" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "stravlos@arago.de" ;
+            dcterms:date "2017-02-17" ;
+            dcterms:description "Make description more general" ;
+            dcterms:identifier "2"
+        ] ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit._process:Question
     a ogit.core:Entity ;
     rdfs:label "Question" ;
     dcterms:created "2015-05-21" ;
@@ -58,12 +83,12 @@ ogit._task:Question
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._task:question
+            sh:path ogit._process:question
         ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._task:response
+            sh:path ogit._process:response
         ],
         [
             sh:maxCount 1 ;
@@ -71,12 +96,12 @@ ogit._task:Question
             sh:path ogit.foundation:capacity
         ] .
 
-ogit._task:Task
+ogit._process:Task
     a ogit.core:Entity ;
     rdfs:label "Task" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "A task is a unit of execution." ;
+    dcterms:description "A process is a unit of execution." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -119,15 +144,15 @@ ogit._task:Task
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._task:positionNumber
+            sh:path ogit._process:positionNumber
         ] .
 
-ogit._task:TaskList
+ogit._process:TaskList
     a ogit.core:Entity ;
     rdfs:label "TaskList" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "A task list consists of one or many tasks." ;
+    dcterms:description "A process list consists of one or many processs." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -146,7 +171,7 @@ ogit._task:TaskList
             sh:path ogit.foundation:name
         ],
         [
-            sh:class ogit._task:Task ;
+            sh:class ogit._process:Task ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:contains
@@ -155,7 +180,7 @@ ogit._task:TaskList
 #
 # Attributes
 #
-ogit._task:positionNumber
+ogit._process:positionNumber
     a ogit.core:Attribute ;
     rdfs:label "positionNumber" ;
     dcterms:created "2015-05-21" ;
@@ -172,7 +197,7 @@ ogit._task:positionNumber
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit._task:question
+ogit._process:question
     a ogit.core:Attribute ;
     rdfs:label "question" ;
     dcterms:created "2015-05-21" ;
@@ -189,7 +214,7 @@ ogit._task:question
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit._task:response
+ogit._process:response
     a ogit.core:Attribute ;
     rdfs:label "response" ;
     dcterms:created "2015-05-21" ;

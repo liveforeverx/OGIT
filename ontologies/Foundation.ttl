@@ -44,12 +44,80 @@ ogit.foundation:accessControl
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
+ogit.foundation:assignedGroup
+    a ogit.core:Attribute ;
+    rdfs:label "assignedGroup" ;
+    dcterms:created "2015-07-01" ;
+    dcterms:creator "Aymen Ayoub" ;
+    dcterms:description "Assigned Group to a Service Management process." ;
+    dcterms:modified "2015-07-01" ;
+    dcterms:valid "start=2015-07-01;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-07-01" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:brand
+    a ogit.core:Attribute ;
+    rdfs:label "brand" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Brand/Manufacturer of a component/device." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:buildingId
+    a ogit.core:Attribute ;
+    rdfs:label "buildingId" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "ID of a Building." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
 ogit.foundation:capacity
     a ogit.core:Attribute ;
     rdfs:label "capacity" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "General Capacity" ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:capacityAvailable
+    a ogit.core:Attribute ;
+    rdfs:label "capacityAvailable" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "If the flag is true, then service can be ordered by new instance. If the flag is false, the service cannot temporarily be ordered due to capacity reasons." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -84,6 +152,24 @@ ogit.foundation:changeLog
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "String value describing a changelog of an entity." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:closedAt
+    a ogit.core:Attribute ;
+    rdfs:label "closedAt" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description """Will defined the time when a ticket was closed.
+        The values must be combined date and time with time zone designator according to ISO 8601""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -262,6 +348,26 @@ ogit.foundation:description
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
+ogit.foundation:effort
+    a ogit.core:Attribute ;
+    rdfs:label "effort" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description """Defines how much time was spent on the actual work for a change, task, or similar entity.
+        The values is expected to be in format HH:MM, e.g. 1:00 for 1 hour effort.""" ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "^(\\d+:\\d\\d)$" ;
+    ogit.core:validation-type "regex" .
+
 ogit.foundation:email
     a ogit.core:Attribute ;
     rdfs:label "email" ;
@@ -426,6 +532,23 @@ ogit.foundation:instance
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
+ogit.foundation:ipAddress
+    a ogit.core:Attribute ;
+    rdfs:label "ipAddress" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Aymen Ayoub" ;
+    dcterms:description "The IP address of a component/hardware device." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-27;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-05-27" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
 ogit.foundation:isValid
     a ogit.core:Attribute ;
     rdfs:label "isValid" ;
@@ -438,6 +561,23 @@ ogit.foundation:isValid
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:justification
+    a ogit.core:Attribute ;
+    rdfs:label "justification" ;
+    dcterms:created "2015-07-01" ;
+    dcterms:creator "Aymen Ayoub" ;
+    dcterms:description "Justification for a ChangeRequest" ;
+    dcterms:modified "2015-07-01" ;
+    dcterms:valid "start=2015-07-01;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-07-01" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
@@ -460,12 +600,98 @@ ogit.foundation:lastUpdatedAt
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
+ogit.foundation:macAddress
+    a ogit.core:Attribute ;
+    rdfs:label "macAddress" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Aymen Ayoub" ;
+    dcterms:description "The mac address of a component." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-27;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-05-27" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:manufacturer
+    a ogit.core:Attribute ;
+    rdfs:label "model" ;
+    dcterms:created "2015-07-27" ;
+    dcterms:creator "Aymen Ayoub" ;
+    dcterms:description "Manufacturer of a device or component." ;
+    dcterms:modified "2015-07-27" ;
+    dcterms:valid "start=2015-07-27;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-07-27" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:market
+    a ogit.core:Attribute ;
+    rdfs:label "market" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Indicates market, for which an entity may be applicable." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:message
+    a ogit.core:Attribute ;
+    rdfs:label "message" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Contains a message." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
 ogit.foundation:mobilePhone
     a ogit.core:Attribute ;
     rdfs:label "mobilePhone" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "A mobile phone number." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:mode
+    a ogit.core:Attribute ;
+    rdfs:label "mode" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description """Contains the type of filter for the value contained in the entity "Attribute" and corresponding to one of the following strings:
+        eq, ne, lt, le, gt, ge, exists, notexists, string, notstring, regex, notregex""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -666,6 +892,23 @@ ogit.foundation:priority
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
+ogit.foundation:project
+    a ogit.core:Attribute ;
+    rdfs:label "project" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Project name, for which the entity is being used." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
 ogit.foundation:purchaseDate
     a ogit.core:Attribute ;
     rdfs:label "purchaseDate" ;
@@ -695,6 +938,95 @@ ogit.foundation:range
     ogit.core:history [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:reason
+    a ogit.core:Attribute ;
+    rdfs:label "reason" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Describes the reason for a decision." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:reportedAt
+    a ogit.core:Attribute ;
+    rdfs:label "reportedAt" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description """Defineds the time when something was actually reported.
+        The values can combin date and time with time zone designator according to ISO 8601.
+        Reported time is used in incident management in the following manner: in most cases the reported time equals the time when the incident is created. In some cases, e.g. the incident is created after the helpdesk has already worked on some request before it was decided to create an incident, the reported time might differ from ticket creation/opening time.""" ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:reviewedAt
+    a ogit.core:Attribute ;
+    rdfs:label "reviewedAt" ;
+    dcterms:created "2015-07-01" ;
+    dcterms:creator "Aymen Ayoub" ;
+    dcterms:description """Defines the time when something was actually reviewed.
+        The values can combin date and time with time zone designator according to ISO 8601.
+        Reviewed time is used in incident management.""" ;
+    dcterms:modified "2015-07-01" ;
+    dcterms:valid "start=2015-07-01;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-07-01" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:risk
+    a ogit.core:Attribute ;
+    rdfs:label "risk" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Used to store the result of a risk analysis." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:schedule
+    a ogit.core:Attribute ;
+    rdfs:label "schedule" ;
+    dcterms:created "2016-08-08" ;
+    dcterms:creator "Alexander Ryabtsev" ;
+    dcterms:description "Schedule represented by a string in cron format." ;
+    dcterms:modified "2016-08-08" ;
+    dcterms:valid "start=2016-08-08;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2016-08-08" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
@@ -828,6 +1160,41 @@ ogit.foundation:summary
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
+ogit.foundation:taskLog
+    a ogit.core:Attribute ;
+    rdfs:label "taskLog" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description """In cases where the log for a Task is maintained as a single string it will be stored in taskLog.
+        In all other case consider using ogit/Timeseries.""" ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:timestamp
+    a ogit.core:Attribute ;
+    rdfs:label "timestamp" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Contains the timestamp in milliseconds." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
 ogit.foundation:title
     a ogit.core:Attribute ;
     rdfs:label "title" ;
@@ -885,6 +1252,23 @@ ogit.foundation:unit
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "Unit of measurement of some value." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:urgency
+    a ogit.core:Attribute ;
+    rdfs:label "urgency" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Contains the urgency which could be appliead to a ticket, incident etc." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1015,9 +1399,43 @@ ogit.foundation:webPage
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
+ogit.foundation:weight
+    a ogit.core:Attribute ;
+    rdfs:label "weight" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Physical weight of an entity, e.g. device/component/rack" ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
 #
 # Verbs
 #
+ogit.foundation:accepts
+    a ogit.core:Verb ;
+    rdfs:label "accepts" ;
+    dcterms:created "2015-09-02" ;
+    dcterms:creator "bmoore@arago.de" ;
+    dcterms:description "Indicates if an entity accepts something else." ;
+    dcterms:modified "2015-09-02" ;
+    dcterms:valid "start=2015-09-02;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "bmoore@arago.de" ;
+            dcterms:date "2015-09-02" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
 ogit.foundation:affects
     a ogit.core:Verb ;
     rdfs:label "affects" ;
@@ -1194,6 +1612,23 @@ ogit.foundation:associates
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
+ogit.foundation:assumes
+    a ogit.core:Verb ;
+    rdfs:label "assumes" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "verb which allows to connect the planning parameters to a planning template" ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
 ogit.foundation:availableIn
     a ogit.core:Verb ;
     rdfs:label "availableIn" ;
@@ -1336,6 +1771,23 @@ ogit.foundation:bills
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
+ogit.foundation:calls
+    a ogit.core:Verb ;
+    rdfs:label "calls" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Verb showing which entity calls which another entity." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
 ogit.foundation:causes
     a ogit.core:Verb ;
     rdfs:label "causes" ;
@@ -1432,6 +1884,23 @@ ogit.foundation:concludes
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-06-18" ;
             dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:configures
+    a ogit.core:Verb ;
+    rdfs:label "configures" ;
+    dcterms:created "2015-04-27" ;
+    dcterms:creator "cwalker@arago.de" ;
+    dcterms:description "The `from` entity, contains configuration data for the to `entity`" ;
+    dcterms:modified "2015-04-27" ;
+    dcterms:valid "start=2015-04-27;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-04-27" ;
+            dcterms:description "intitial inception" ;
             dcterms:identifier "1"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
@@ -1623,6 +2092,24 @@ ogit.foundation:contains
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
+ogit.foundation:contributes
+    a ogit.core:Verb ;
+    rdfs:label "contributes" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description """Verb associates which entity contributes to another, for example could be used to express a distribution for the percentage
+        of a cost element, which contributes to another cost element.""" ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
 ogit.foundation:corresponds
     a ogit.core:Verb ;
     rdfs:label "corresponds" ;
@@ -1686,6 +2173,23 @@ ogit.foundation:corresponds
             dcterms:date "2016-08-09" ;
             dcterms:description "Added Event->AutomationIssue" ;
             dcterms:identifier "9"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:covers
+    a ogit.core:Verb ;
+    rdfs:label "covers" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Verb showing which entity covers another entity." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -1825,6 +2329,23 @@ ogit.foundation:defines
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
+ogit.foundation:dependsOn
+    a ogit.core:Verb ;
+    rdfs:label "dependsOn" ;
+    dcterms:created "2015-10-15" ;
+    dcterms:creator "Aymen Ayoub" ;
+    dcterms:description "This relationship indicates that some entity is depending on some other. E.g. machine hosts software." ;
+    dcterms:modified "2015-10-15" ;
+    dcterms:valid "start=2015-10-15;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-10-15" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
 ogit.foundation:deployedTo
     a ogit.core:Verb ;
     rdfs:label "deployedTo" ;
@@ -1872,6 +2393,54 @@ ogit.foundation:employs
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "Verb indicating if one entity employes another." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:endorses
+    a ogit.core:Verb ;
+    rdfs:label "endorses" ;
+    dcterms:created "2015-04-27" ;
+    dcterms:creator "cwalker@arago.de" ;
+    dcterms:description """This relationship indicates that one entity endorses some other. This is a recommendation or a
+        social `like`.""" ;
+    dcterms:modified "2015-04-27" ;
+    dcterms:valid "start=2015-04-27;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history
+        [
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-04-27" ;
+            dcterms:description "intitial inception" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "bmoore@arago.de" ;
+            dcterms:date "2015-11-13" ;
+            dcterms:description "Edit for KnowledgeItemHistory" ;
+            dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Ben Neal" ;
+            dcterms:date "2016-05-17" ;
+            dcterms:description "Added edge for `ogit/Forum/Profile` -> `ogit/Forum/Rating`" ;
+            dcterms:identifier "3"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:extends
+    a ogit.core:Verb ;
+    rdfs:label "extends" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Indicates if one entity extends another one" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1997,6 +2566,23 @@ ogit.foundation:hiddenBy
     ogit.core:history [
             dcterms:creator "Kristjan Liiva" ;
             dcterms:date "2017-07-04" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:hosts
+    a ogit.core:Verb ;
+    rdfs:label "hosts" ;
+    dcterms:created "2015-10-15" ;
+    dcterms:creator "Aymen Ayoub" ;
+    dcterms:description "verb which shows that an entity is hosted in another entity." ;
+    dcterms:modified "2015-10-15" ;
+    dcterms:valid "start=2015-10-15;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-10-15" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
@@ -2146,6 +2732,25 @@ ogit.foundation:manages
             dcterms:date "2017-06-09" ;
             dcterms:description "Refactored names of Project/Survey related concepts" ;
             dcterms:identifier "7"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:moderates
+    a ogit.core:Verb ;
+    rdfs:label "moderates" ;
+    dcterms:created "2015-04-23" ;
+    dcterms:creator "cwalker@arago.de" ;
+    dcterms:description """Moderation as a verb, in the context of a forum, is a supervisory role. It implies that the
+        entity takes a responsibility for the maintenance and upkeep of the connected entity.""" ;
+    dcterms:modified "2015-04-23" ;
+    dcterms:valid "start=2015-04-23;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:history [
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-04-23" ;
+            dcterms:description "Initial Creation" ;
+            dcterms:identifier "1"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -2799,6 +3404,37 @@ ogit.foundation:specifies
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
+ogit.foundation:subscribes
+    a ogit.core:Verb ;
+    rdfs:label "subscribes" ;
+    dcterms:created "2015-04-27" ;
+    dcterms:creator "cwalker@arago.de" ;
+    dcterms:description """A subscription by an entity to another. Implies that one entity is interested in something
+        the other can offer.""" ;
+    dcterms:modified "2015-04-27" ;
+    dcterms:valid "start=2015-04-27;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history
+        [
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-04-27" ;
+            dcterms:description "intitial inception" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-10-21" ;
+            dcterms:description "Adding Profile ->" ;
+            dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "bmoore@arago.de" ;
+            dcterms:date "2015-11-13" ;
+            dcterms:description "Edit for KnowledgeItemHistory" ;
+            dcterms:identifier "3"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
 ogit.foundation:supervises
     a ogit.core:Verb ;
     rdfs:label "supervises" ;
@@ -3002,6 +3638,25 @@ ogit.foundation:validFor
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:wins
+    a ogit.core:Verb ;
+    rdfs:label "wins" ;
+    dcterms:created "2015-04-23" ;
+    dcterms:creator "cwalker@arago.de" ;
+    dcterms:description """Associates the entity that has won something with the thing that was won. Despite the present
+        tense used in the verb, this almost always will refer to some that *was* won in the past.""" ;
+    dcterms:modified "2015-04-23" ;
+    dcterms:valid "start=2015-04-23;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:cardinality "many2many" ;
+    ogit.core:history [
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-04-23" ;
+            dcterms:description "Initial Creation" ;
             dcterms:identifier "1"
         ] ;
     ogit.core:tech-contact "arago GmbH" .

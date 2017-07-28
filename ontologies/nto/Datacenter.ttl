@@ -1,13 +1,12 @@
-@prefix dcterms:          <http://purl.org/dc/terms/> .
-@prefix ogit:             <http://www.purl.org/ogit/> .
-@prefix ogit._datacenter: <http://www.purl.org/ogit/> .
-@prefix ogit.core:        <http://www.purl.org/ogit/> .
-@prefix ogit.datacenter:  <http://www.purl.org/ogit/Datacenter/> .
-@prefix ogit.foundation:  <http://www.purl.org/ogit/> .
-@prefix owl:              <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs:             <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh:               <http://www.w3.org/ns/shacl#> .
-@prefix vann:             <http://purl.org/vocab/vann/> .
+@prefix dcterms:         <http://purl.org/dc/terms/> .
+@prefix ogit:            <http://www.purl.org/ogit/> .
+@prefix ogit.core:       <http://www.purl.org/ogit/> .
+@prefix ogit.datacenter: <http://www.purl.org/ogit/Datacenter/> .
+@prefix ogit.foundation: <http://www.purl.org/ogit/> .
+@prefix owl:             <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:              <http://www.w3.org/ns/shacl#> .
+@prefix vann:            <http://purl.org/vocab/vann/> .
 
 #
 # Ontology
@@ -19,9 +18,7 @@ ogit:datacenter
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
-    vann:preferredNamespacePrefix
-        "ogit._datacenter",
-        "ogit.datacenter" ;
+    vann:preferredNamespacePrefix "ogit.datacenter" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit/Datacenter/" .
 
 #
@@ -218,7 +215,7 @@ ogit.datacenter:Rack
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._datacenter:brand
+            sh:path ogit.foundation:brand
         ],
         [
             sh:maxCount 1 ;
@@ -248,7 +245,7 @@ ogit.datacenter:Rack
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._datacenter:weight
+            sh:path ogit.foundation:weight
         ],
         [
             sh:maxCount 1 ;
@@ -299,7 +296,7 @@ ogit.datacenter:Room
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._datacenter:buildingId
+            sh:path ogit.foundation:buildingId
         ],
         [
             sh:class ogit.datacenter:Sensor ;
@@ -410,7 +407,7 @@ ogit.datacenter:Server
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._datacenter:brand
+            sh:path ogit.foundation:brand
         ],
         [
             sh:maxCount 1 ;
@@ -459,7 +456,7 @@ ogit.datacenter:Storage
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
-            sh:path ogit._datacenter:brand
+            sh:path ogit.foundation:brand
         ],
         [
             sh:maxCount 1 ;
@@ -508,57 +505,6 @@ ogit.datacenter:UPS
 #
 # Attributes
 #
-ogit._datacenter:brand
-    a ogit.core:Attribute ;
-    rdfs:label "brand" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "Brand/Manufacturer of a component/device." ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._datacenter:buildingId
-    a ogit.core:Attribute ;
-    rdfs:label "buildingId" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "ID of a Building." ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._datacenter:weight
-    a ogit.core:Attribute ;
-    rdfs:label "weight" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "Physical weight of an entity, e.g. device/component/rack" ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
 ogit.datacenter:datacenterId
     a ogit.core:Attribute ;
     rdfs:label "datacenterId" ;

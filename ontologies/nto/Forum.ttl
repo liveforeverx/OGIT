@@ -1,6 +1,5 @@
 @prefix dcterms:         <http://purl.org/dc/terms/> .
 @prefix ogit:            <http://www.purl.org/ogit/> .
-@prefix ogit._forum:     <http://www.purl.org/ogit/> .
 @prefix ogit.core:       <http://www.purl.org/ogit/> .
 @prefix ogit.forum:      <http://www.purl.org/ogit/Forum/> .
 @prefix ogit.foundation: <http://www.purl.org/ogit/> .
@@ -19,39 +18,12 @@ ogit:forum
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
-    vann:preferredNamespacePrefix
-        "ogit._forum",
-        "ogit.forum" ;
+    vann:preferredNamespacePrefix "ogit.forum" ;
     vann:preferredNamespaceUri "http://www.purl.org/ogit/Forum/" .
 
 #
 # Entities
 #
-ogit._forum:Notification
-    a ogit.core:Entity ;
-    rdfs:label "Notification" ;
-    dcterms:created "2015-04-27" ;
-    dcterms:creator "cwalker@arago.de" ;
-    dcterms:description "A notification event" ;
-    dcterms:modified "2017-02-17" ;
-    dcterms:valid "start=2015-04-27;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history
-        [
-            dcterms:creator "cwalker@arago.de" ;
-            dcterms:date "2015-04-27" ;
-            dcterms:description "Initial Creation" ;
-            dcterms:identifier "1"
-        ],
-        [
-            dcterms:creator "stravlos@arago.de" ;
-            dcterms:date "2017-02-17" ;
-            dcterms:description "Make description more general" ;
-            dcterms:identifier "2"
-        ] ;
-    ogit.core:scope "NTO" ;
-    ogit.core:tech-contact "arago GmbH" .
-
 ogit.forum:Award
     a ogit.core:Entity ;
     rdfs:label "Award" ;
@@ -129,7 +101,7 @@ ogit.forum:Configuration
             sh:class ogit.forum:Profile ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._forum:configures
+            sh:path ogit.foundation:configures
         ] .
 
 ogit.forum:FeedEntry
@@ -539,12 +511,6 @@ ogit.forum:Profile
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._forum:Notification ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:owns
-        ],
-        [
             sh:class ogit.forum:Profile ;
             sh:description "" ;
             sh:minCount 0 ;
@@ -554,7 +520,7 @@ ogit.forum:Profile
             sh:class ogit.forum:Topic ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._forum:subscribes
+            sh:path ogit.foundation:subscribes
         ],
         [
             sh:class ogit.forum:Invite ;
@@ -572,7 +538,7 @@ ogit.forum:Profile
             sh:class ogit.forum:Rating ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._forum:endorses
+            sh:path ogit.foundation:endorses
         ],
         [
             sh:class ogit.forum:Permission ;
@@ -584,13 +550,13 @@ ogit.forum:Profile
             sh:class ogit.forum:Post ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._forum:endorses
+            sh:path ogit.foundation:endorses
         ],
         [
             sh:class ogit.forum:KnowledgeBundle ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._forum:endorses
+            sh:path ogit.foundation:endorses
         ],
         [
             sh:class ogit.forum:Rating ;
@@ -602,7 +568,7 @@ ogit.forum:Profile
             sh:class ogit.forum:Invite ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._forum:accepts
+            sh:path ogit.foundation:accepts
         ],
         [
             sh:class ogit.forum:Topic ;
@@ -614,7 +580,7 @@ ogit.forum:Profile
             sh:class ogit.forum:Award ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._forum:wins
+            sh:path ogit.foundation:wins
         ],
         [
             sh:class ogit.forum:Invite ;
@@ -626,13 +592,13 @@ ogit.forum:Profile
             sh:class ogit.forum:KnowledgeItemHistory ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._forum:subscribes
+            sh:path ogit.foundation:subscribes
         ],
         [
             sh:class ogit.forum:KnowledgeItemHistory ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._forum:endorses
+            sh:path ogit.foundation:endorses
         ],
         [
             sh:class ogit.forum:Group ;
@@ -650,7 +616,7 @@ ogit.forum:Profile
             sh:class ogit.forum:FeedEntry ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._forum:subscribes
+            sh:path ogit.foundation:subscribes
         ],
         [
             sh:class ogit.forum:KnowledgeBundle ;
@@ -678,7 +644,7 @@ ogit.forum:Profile
             sh:class ogit.forum:Reply ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._forum:endorses
+            sh:path ogit.foundation:endorses
         ],
         [
             sh:class ogit.forum:Rating ;
@@ -696,13 +662,13 @@ ogit.forum:Profile
             sh:class ogit.forum:Post ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._forum:subscribes
+            sh:path ogit.foundation:subscribes
         ],
         [
             sh:class ogit.forum:Topic ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._forum:moderates
+            sh:path ogit.foundation:moderates
         ],
         [
             sh:class ogit.forum:KnowledgeBundle ;
@@ -714,13 +680,13 @@ ogit.forum:Profile
             sh:class ogit.forum:KnowledgeBundle ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._forum:subscribes
+            sh:path ogit.foundation:subscribes
         ],
         [
             sh:class ogit.forum:KnowledgeBundle ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._forum:moderates
+            sh:path ogit.foundation:moderates
         ],
         [
             sh:class ogit.forum:Topic ;
@@ -732,7 +698,7 @@ ogit.forum:Profile
             sh:class ogit.forum:Profile ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit._forum:subscribes
+            sh:path ogit.foundation:subscribes
         ],
         [
             sh:class ogit.forum:KnowledgeBundle ;
@@ -1060,140 +1026,6 @@ ogit.forum:username
 #
 # Verbs
 #
-ogit._forum:accepts
-    a ogit.core:Verb ;
-    rdfs:label "accepts" ;
-    dcterms:created "2015-09-02" ;
-    dcterms:creator "bmoore@arago.de" ;
-    dcterms:description "Indicates if an entity accepts something else." ;
-    dcterms:modified "2015-09-02" ;
-    dcterms:valid "start=2015-09-02;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "bmoore@arago.de" ;
-            dcterms:date "2015-09-02" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._forum:configures
-    a ogit.core:Verb ;
-    rdfs:label "configures" ;
-    dcterms:created "2015-04-27" ;
-    dcterms:creator "cwalker@arago.de" ;
-    dcterms:description "The `from` entity, contains configuration data for the to `entity`" ;
-    dcterms:modified "2015-04-27" ;
-    dcterms:valid "start=2015-04-27;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "cwalker@arago.de" ;
-            dcterms:date "2015-04-27" ;
-            dcterms:description "intitial inception" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._forum:endorses
-    a ogit.core:Verb ;
-    rdfs:label "endorses" ;
-    dcterms:created "2015-04-27" ;
-    dcterms:creator "cwalker@arago.de" ;
-    dcterms:description """This relationship indicates that one entity endorses some other. This is a recommendation or a
-        social `like`.""" ;
-    dcterms:modified "2015-04-27" ;
-    dcterms:valid "start=2015-04-27;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history
-        [
-            dcterms:creator "cwalker@arago.de" ;
-            dcterms:date "2015-04-27" ;
-            dcterms:description "intitial inception" ;
-            dcterms:identifier "1"
-        ],
-        [
-            dcterms:creator "bmoore@arago.de" ;
-            dcterms:date "2015-11-13" ;
-            dcterms:description "Edit for KnowledgeItemHistory" ;
-            dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "Ben Neal" ;
-            dcterms:date "2016-05-17" ;
-            dcterms:description "Added edge for `ogit/Forum/Profile` -> `ogit/Forum/Rating`" ;
-            dcterms:identifier "3"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._forum:moderates
-    a ogit.core:Verb ;
-    rdfs:label "moderates" ;
-    dcterms:created "2015-04-23" ;
-    dcterms:creator "cwalker@arago.de" ;
-    dcterms:description """Moderation as a verb, in the context of a forum, is a supervisory role. It implies that the
-        entity takes a responsibility for the maintenance and upkeep of the connected entity.""" ;
-    dcterms:modified "2015-04-23" ;
-    dcterms:valid "start=2015-04-23;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:cardinality "many2many" ;
-    ogit.core:history [
-            dcterms:creator "cwalker@arago.de" ;
-            dcterms:date "2015-04-23" ;
-            dcterms:description "Initial Creation" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._forum:subscribes
-    a ogit.core:Verb ;
-    rdfs:label "subscribes" ;
-    dcterms:created "2015-04-27" ;
-    dcterms:creator "cwalker@arago.de" ;
-    dcterms:description """A subscription by an entity to another. Implies that one entity is interested in something
-        the other can offer.""" ;
-    dcterms:modified "2015-04-27" ;
-    dcterms:valid "start=2015-04-27;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history
-        [
-            dcterms:creator "cwalker@arago.de" ;
-            dcterms:date "2015-04-27" ;
-            dcterms:description "intitial inception" ;
-            dcterms:identifier "1"
-        ],
-        [
-            dcterms:creator "cwalker@arago.de" ;
-            dcterms:date "2015-10-21" ;
-            dcterms:description "Adding Profile ->" ;
-            dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "bmoore@arago.de" ;
-            dcterms:date "2015-11-13" ;
-            dcterms:description "Edit for KnowledgeItemHistory" ;
-            dcterms:identifier "3"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._forum:wins
-    a ogit.core:Verb ;
-    rdfs:label "wins" ;
-    dcterms:created "2015-04-23" ;
-    dcterms:creator "cwalker@arago.de" ;
-    dcterms:description """Associates the entity that has won something with the thing that was won. Despite the present
-        tense used in the verb, this almost always will refer to some that *was* won in the past.""" ;
-    dcterms:modified "2015-04-23" ;
-    dcterms:valid "start=2015-04-23;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:cardinality "many2many" ;
-    ogit.core:history [
-            dcterms:creator "cwalker@arago.de" ;
-            dcterms:date "2015-04-23" ;
-            dcterms:description "Initial Creation" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
 ogit.forum:downloads
     a ogit.core:Verb ;
     rdfs:label "downloads" ;

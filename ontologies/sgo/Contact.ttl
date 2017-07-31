@@ -1,6 +1,8 @@
 @prefix dcterms:         <http://purl.org/dc/terms/> .
 @prefix ogit:            <http://www.purl.org/ogit/> .
 @prefix ogit._contact:   <http://www.purl.org/ogit/> .
+@prefix ogit._location:  <http://www.purl.org/ogit/> .
+@prefix ogit._person:    <http://www.purl.org/ogit/> .
 @prefix ogit.core:       <http://www.purl.org/ogit/> .
 @prefix ogit.foundation: <http://www.purl.org/ogit/> .
 @prefix ogit.graphit:    <http://www.purl.org/ogit/> .
@@ -17,7 +19,9 @@ ogit:contacts
     rdfs:label "OGIT Contact" ;
     owl:imports
         ogit:foundation,
-        ogit:graphit ;
+        ogit:graphit,
+        ogit:location,
+        ogit:person ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -45,7 +49,14 @@ ogit._contact:Email
     ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
-    sh:property [
+    sh:property
+        [
+            sh:class ogit._person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:connects
+        ],
+        [
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.foundation:status
@@ -72,6 +83,12 @@ ogit._contact:Vcard
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
+        [
+            sh:class ogit._location:Location ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:locatedIn
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;

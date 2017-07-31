@@ -1,13 +1,22 @@
-@prefix dcterms:            <http://purl.org/dc/terms/> .
-@prefix ogit:               <http://www.purl.org/ogit/> .
-@prefix ogit._organization: <http://www.purl.org/ogit/> .
-@prefix ogit.core:          <http://www.purl.org/ogit/> .
-@prefix ogit.foundation:    <http://www.purl.org/ogit/> .
-@prefix ogit.graphit:       <http://www.purl.org/ogit/> .
-@prefix owl:                <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs:               <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh:                 <http://www.w3.org/ns/shacl#> .
-@prefix vann:               <http://purl.org/vocab/vann/> .
+@prefix dcterms:             <http://purl.org/dc/terms/> .
+@prefix ogit:                <http://www.purl.org/ogit/> .
+@prefix ogit._alerting:      <http://www.purl.org/ogit/> .
+@prefix ogit._asset:         <http://www.purl.org/ogit/> .
+@prefix ogit._catalog:       <http://www.purl.org/ogit/> .
+@prefix ogit._configuration: <http://www.purl.org/ogit/> .
+@prefix ogit._contract:      <http://www.purl.org/ogit/> .
+@prefix ogit._data:          <http://www.purl.org/ogit/> .
+@prefix ogit._device:        <http://www.purl.org/ogit/> .
+@prefix ogit._license:       <http://www.purl.org/ogit/> .
+@prefix ogit._organization:  <http://www.purl.org/ogit/> .
+@prefix ogit._person:        <http://www.purl.org/ogit/> .
+@prefix ogit.core:           <http://www.purl.org/ogit/> .
+@prefix ogit.foundation:     <http://www.purl.org/ogit/> .
+@prefix ogit.graphit:        <http://www.purl.org/ogit/> .
+@prefix owl:                 <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:                <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:                  <http://www.w3.org/ns/shacl#> .
+@prefix vann:                <http://purl.org/vocab/vann/> .
 
 #
 # Ontology
@@ -16,8 +25,17 @@ ogit:organization
     a owl:Ontology ;
     rdfs:label "OGIT Organization" ;
     owl:imports
+        ogit:alerting,
+        ogit:assets,
+        ogit:catalog,
+        ogit:configuration,
+        ogit:contract,
+        ogit:data,
+        ogit:device,
         ogit:foundation,
-        ogit:graphit ;
+        ogit:graphit,
+        ogit:license,
+        ogit:person ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -67,6 +85,102 @@ ogit._organization:Organization
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
+        [
+            sh:class ogit._alerting:Alert ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:belongs
+        ],
+        [
+            sh:class ogit._catalog:Catalog ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:generates
+        ],
+        [
+            sh:class ogit._configuration:ConfigurationItem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:approves
+        ],
+        [
+            sh:class ogit._license:License ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:uses
+        ],
+        [
+            sh:class ogit._configuration:ConfigurationItem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:manages
+        ],
+        [
+            sh:class ogit._configuration:ConfigurationItem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:creates
+        ],
+        [
+            sh:class ogit._configuration:ConfigurationItem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:provides
+        ],
+        [
+            sh:class ogit._configuration:ConfigurationItem ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:supports
+        ],
+        [
+            sh:class ogit._asset:Asset ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:owns
+        ],
+        [
+            sh:class ogit._device:Device ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:manages
+        ],
+        [
+            sh:class ogit._data:Timeseries ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:generates
+        ],
+        [
+            sh:class ogit._contract:Contract ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:concludes
+        ],
+        [
+            sh:class ogit._person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:employs
+        ],
+        [
+            sh:class ogit._person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:represents
+        ],
+        [
+            sh:class ogit._person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:employs
+        ],
+        [
+            sh:class ogit._person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:represents
+        ],
         [
             sh:class ogit.graphit:Node ;
             sh:description "" ;

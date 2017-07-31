@@ -1,5 +1,7 @@
 @prefix dcterms:         <http://purl.org/dc/terms/> .
 @prefix ogit:            <http://www.purl.org/ogit/> .
+@prefix ogit._data:      <http://www.purl.org/ogit/> .
+@prefix ogit._person:    <http://www.purl.org/ogit/> .
 @prefix ogit._process:   <http://www.purl.org/ogit/> .
 @prefix ogit.core:       <http://www.purl.org/ogit/> .
 @prefix ogit.foundation: <http://www.purl.org/ogit/> .
@@ -16,8 +18,10 @@ ogit:process
     a owl:Ontology ;
     rdfs:label "OGIT Process" ;
     owl:imports
+        ogit:data,
         ogit:foundation,
-        ogit:graphit ;
+        ogit:graphit,
+        ogit:person ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -51,7 +55,26 @@ ogit._process:Notification
         ] ;
     ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "NTO" ;
-    ogit.core:tech-contact "arago GmbH" .
+    ogit.core:tech-contact "arago GmbH" ;
+    sh:property
+        [
+            sh:class ogit._person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:hiddenBy
+        ],
+        [
+            sh:class ogit._person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:readBy
+        ],
+        [
+            sh:class ogit._person:Person ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:seenBy
+        ] .
 
 ogit._process:Question
     a ogit.core:Entity ;
@@ -80,6 +103,12 @@ ogit._process:Question
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
+        [
+            sh:class ogit._data:Timeseries ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:generates
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;
@@ -129,6 +158,12 @@ ogit._process:Task
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
+            sh:class ogit._data:Timeseries ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:generates
+        ],
+        [
             sh:maxCount 1 ;
             sh:minCount 0 ;
             sh:path ogit.foundation:id
@@ -174,6 +209,12 @@ ogit._process:TaskList
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
+        [
+            sh:class ogit._data:Timeseries ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:generates
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;

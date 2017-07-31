@@ -3,6 +3,7 @@
 @prefix ogit._alerting:  <http://www.purl.org/ogit/> .
 @prefix ogit.core:       <http://www.purl.org/ogit/> .
 @prefix ogit.foundation: <http://www.purl.org/ogit/> .
+@prefix ogit.graphit:    <http://www.purl.org/ogit/> .
 @prefix owl:             <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:            <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh:              <http://www.w3.org/ns/shacl#> .
@@ -48,7 +49,7 @@ ogit._alerting:Alert
             dcterms:description "make attributes optional" ;
             dcterms:identifier "2"
         ] ;
-    ogit.core:parent ogit:Node ;
+    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

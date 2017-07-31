@@ -14,7 +14,9 @@
 ogit:media
     a owl:Ontology ;
     rdfs:label "OGIT Media" ;
-    owl:imports ogit:foundation ;
+    owl:imports
+        ogit:foundation,
+        ogit:graphit ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -58,6 +60,7 @@ ogit._media:Comment
             dcterms:description "added ogit/creater as optional." ;
             dcterms:identifier "4"
         ] ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -105,6 +108,7 @@ ogit._media:Hyperlink
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -134,6 +138,7 @@ ogit._media:Note
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

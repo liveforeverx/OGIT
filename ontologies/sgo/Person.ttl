@@ -14,7 +14,9 @@
 ogit:person
     a owl:Ontology ;
     rdfs:label "OGIT Person" ;
-    owl:imports ogit:foundation ;
+    owl:imports
+        ogit:foundation,
+        ogit:graphit ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -52,9 +54,33 @@ ogit._person:Person
             dcterms:description "added optional attribute ogit/middleName, ogit/officePhone, ogit/otherPhone, ogit/mobilePhone, ogit/fax, ogit/webPage, ogit/notification, ogit/status" ;
             dcterms:identifier "3"
         ] ;
+    ogit:indexed-attributes
+        ogit._person:alternativeName,
+        ogit.foundation:email,
+        ogit._person:firstName,
+        ogit._person:lastName ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
+        [
+            sh:class ogit:Node ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit:_owns
+        ],
+        [
+            sh:class ogit:Node ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit:_created
+        ],
+        [
+            sh:class ogit:Node ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit:_deleted
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;

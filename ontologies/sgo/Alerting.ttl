@@ -14,7 +14,9 @@
 ogit:alerting
     a owl:Ontology ;
     rdfs:label "OGIT Alerting" ;
-    owl:imports ogit:foundation ;
+    owl:imports
+        ogit:foundation,
+        ogit:graphit ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -46,6 +48,7 @@ ogit._alerting:Alert
             dcterms:description "make attributes optional" ;
             dcterms:identifier "2"
         ] ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

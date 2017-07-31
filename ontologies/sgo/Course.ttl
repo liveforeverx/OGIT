@@ -14,7 +14,9 @@
 ogit:course
     a owl:Ontology ;
     rdfs:label "OGIT Course" ;
-    owl:imports ogit:foundation ;
+    owl:imports
+        ogit:foundation,
+        ogit:graphit ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -39,6 +41,7 @@ ogit._course:Course
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -83,6 +86,7 @@ ogit._course:Series
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -128,6 +132,7 @@ ogit._course:Status
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

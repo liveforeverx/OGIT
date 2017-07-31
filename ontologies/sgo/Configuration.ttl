@@ -14,7 +14,9 @@
 ogit:configuration
     a owl:Ontology ;
     rdfs:label "OGIT Configuration" ;
-    owl:imports ogit:foundation ;
+    owl:imports
+        ogit:foundation,
+        ogit:graphit ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -65,6 +67,7 @@ ogit._configuration:Attachment
             dcterms:description "add accessControl attribute." ;
             dcterms:identifier "5"
         ] ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -175,6 +178,7 @@ ogit._configuration:ConfigurationItem
             dcterms:description "updated" ;
             dcterms:identifier "6"
         ] ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -507,6 +511,7 @@ ogit._configuration:Parameter
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -579,6 +584,7 @@ ogit._configuration:ParameterType
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

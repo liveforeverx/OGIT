@@ -14,7 +14,9 @@
 ogit:contacts
     a owl:Ontology ;
     rdfs:label "OGIT Contact" ;
-    owl:imports ogit:foundation ;
+    owl:imports
+        ogit:foundation,
+        ogit:graphit ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -39,6 +41,7 @@ ogit._contact:Email
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
@@ -64,6 +67,7 @@ ogit._contact:Vcard
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

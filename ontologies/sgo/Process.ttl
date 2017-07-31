@@ -14,7 +14,9 @@
 ogit:process
     a owl:Ontology ;
     rdfs:label "OGIT Process" ;
-    owl:imports ogit:foundation ;
+    owl:imports
+        ogit:foundation,
+        ogit:graphit ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -46,6 +48,7 @@ ogit._process:Notification
             dcterms:description "Make description more general" ;
             dcterms:identifier "2"
         ] ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -72,6 +75,7 @@ ogit._process:Question
             dcterms:description "Added new attribute `capacity`" ;
             dcterms:identifier "2"
         ] ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -118,6 +122,8 @@ ogit._process:Task
             dcterms:description "add attribute ogit/positionNumber" ;
             dcterms:identifier "2"
         ] ;
+    ogit:indexed-attributes ogit.foundation:name ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -162,6 +168,8 @@ ogit._process:TaskList
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
+    ogit:indexed-attributes ogit.foundation:name ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

@@ -14,7 +14,9 @@
 ogit:license
     a owl:Ontology ;
     rdfs:label "OGIT License" ;
-    owl:imports ogit:foundation ;
+    owl:imports
+        ogit:foundation,
+        ogit:graphit ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -52,6 +54,7 @@ ogit._license:License
             dcterms:description "add attribute deadlie" ;
             dcterms:identifier "3"
         ] ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -129,6 +132,7 @@ ogit._license:LicenseRequest
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -169,6 +173,7 @@ ogit._license:LicenseToken
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
+    ogit.core:parent ogit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

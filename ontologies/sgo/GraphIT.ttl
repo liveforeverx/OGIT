@@ -14,7 +14,9 @@
 ogit:graphit
     a owl:Ontology ;
     rdfs:label "OGIT GraphIT" ;
-    owl:imports purl:ogit ;
+    owl:imports
+        purl:ogit,
+        ogit:graphit ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;

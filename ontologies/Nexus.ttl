@@ -22,6 +22,7 @@
 @prefix ogit.businessProcess:   <http://www.purl.org/ogit/BusinessProcess/> .
 @prefix ogit.core:              <http://www.purl.org/ogit/> .
 @prefix ogit.cost:              <http://www.purl.org/ogit/Cost/> .
+@prefix ogit.data:              <http://www.purl.org/ogit/Data/> .
 @prefix ogit.dataProcessing:    <http://www.purl.org/ogit/DataProcessing/> .
 @prefix ogit.datacenter:        <http://www.purl.org/ogit/Datacenter/> .
 @prefix ogit.forum:             <http://www.purl.org/ogit/Forum/> .
@@ -114,8 +115,6 @@ ogit:nexus
 #
 # Other
 #
-<http://www.purl.org/ogit/Data/Log> ogit.core:parent "http://www.purl.org/ogit/Node" .
-
 ogit._alerting:Alert sh:property
     [
         sh:class ogit._contract:Contract ;
@@ -3049,6 +3048,8 @@ ogit.cost:PlanningTemplate
             sh:path ogit.foundation:plans
         ] .
 
+ogit.data:Log ogit.core:parent ogit.graphit:Node .
+
 ogit.dataProcessing:Program
     ogit.graphit:indexed-attributes
         ogit.foundation:description,
@@ -3328,8 +3329,6 @@ ogit.forum:Tag
         ] .
 
 ogit.forum:Topic ogit.core:parent ogit.graphit:Node .
-
-ogit.graphit:Node ogit.core:parent "http://www.purl.org/ogit/Node" .
 
 ogit.knowledge:AcquisitionSession
     ogit.core:parent ogit.graphit:Node ;

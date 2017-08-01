@@ -54,6 +54,7 @@ ogit:nexus
     a owl:Ontology ;
     rdfs:label "OGIT Nexus" ;
     owl:imports
+        ogit:_data,
         ogit:alerting,
         ogit:assets,
         ogit:automation,
@@ -1093,6 +1094,12 @@ ogit.automation:MARSNode
         ogit.automation:marsNodeFormalRepresentation,
         ogit.foundation:name ;
     sh:property
+        [
+            sh:class ogit.data:Log ;
+            sh:description "" ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:generates
+        ],
         [
             sh:class ogit.businessProcess:BusinessProcess ;
             sh:description "" ;

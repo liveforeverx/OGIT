@@ -34,6 +34,7 @@ ogit:contacts
 ogit._contact:Email
     a ogit.core:Entity ;
     rdfs:label "Email" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2016-01-22" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "Any type of email adress." ;
@@ -46,7 +47,6 @@ ogit._contact:Email
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -65,6 +65,7 @@ ogit._contact:Email
 ogit._contact:Vcard
     a ogit.core:Entity ;
     rdfs:label "Vcard" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description """vCard is a specification developed by the IETF for the description of people and organisations. Recently, vCard has been
@@ -79,7 +80,6 @@ ogit._contact:Vcard
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

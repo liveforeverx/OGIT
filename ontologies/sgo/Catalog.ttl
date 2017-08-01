@@ -32,6 +32,7 @@ ogit:catalog
 ogit._catalog:Catalog
     a ogit.core:Entity ;
     rdfs:label "Catalog" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "Any kind of catalog which could be offered by an Organization (e.g. corresponding to a vendor). Might contain products, services, books, etc." ;
@@ -44,7 +45,6 @@ ogit._catalog:Catalog
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -89,6 +89,7 @@ ogit._catalog:Catalog
 ogit._catalog:CatalogItem
     a ogit.core:Entity ;
     rdfs:label "CatalogItem" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "An entry within a Catalog. the semantics of Item is more general than that of http://purl.org/goodrelations/v1#ProductOrService" ;
@@ -101,7 +102,6 @@ ogit._catalog:CatalogItem
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

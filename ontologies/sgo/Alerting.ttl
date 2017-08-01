@@ -38,6 +38,7 @@ ogit:alerting
 ogit._alerting:Alert
     a ogit.core:Entity ;
     rdfs:label "Alert" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2016-10-26" ;
     dcterms:creator "stravlos@arago.de" ;
     dcterms:description "Alerts are used to notify users if certain events happen." ;
@@ -57,7 +58,6 @@ ogit._alerting:Alert
             dcterms:description "make attributes optional" ;
             dcterms:identifier "2"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

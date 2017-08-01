@@ -46,6 +46,7 @@ ogit:configuration
 ogit._configuration:Attachment
     a ogit.core:Entity ;
     rdfs:label "Attachment" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description """This entity defines a file attachment that an IT service, issue, task or a ticket might have. The attachment itself is
@@ -84,7 +85,6 @@ ogit._configuration:Attachment
             dcterms:description "add accessControl attribute." ;
             dcterms:identifier "5"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -182,6 +182,7 @@ ogit._configuration:Attachment
 ogit._configuration:ConfigurationItem
     a ogit.core:Entity ;
     rdfs:label "ConfigurationItem" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-06-11" ;
     dcterms:creator "Aymen Ayoub" ;
     dcterms:description "A configuration item." ;
@@ -225,7 +226,6 @@ ogit._configuration:ConfigurationItem
             dcterms:description "updated" ;
             dcterms:identifier "6"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -570,6 +570,7 @@ ogit._configuration:ConfigurationItem
 ogit._configuration:Parameter
     a ogit.core:Entity ;
     rdfs:label "Parameter" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "Defines a parameter of an entity, for example: service, action, ticket, sla, etc." ;
@@ -582,7 +583,6 @@ ogit._configuration:Parameter
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -648,6 +648,7 @@ ogit._configuration:Parameter
 ogit._configuration:ParameterType
     a ogit.core:Entity ;
     rdfs:label "ParameterType" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description """Allows to define more details about the values of a Parameter the Parameter will be linked to a ParameterType
@@ -661,7 +662,6 @@ ogit._configuration:ParameterType
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

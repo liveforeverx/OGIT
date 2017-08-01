@@ -31,6 +31,7 @@ ogit:ontology
 ogit._ontology:OntologyAttribute
     a ogit.core:Entity ;
     rdfs:label "OntologyAttribute" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "represents any Attribute definition from OGIT" ;
@@ -44,7 +45,6 @@ ogit._ontology:OntologyAttribute
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -117,6 +117,7 @@ ogit._ontology:OntologyAttribute
 ogit._ontology:OntologyEntity
     a ogit.core:Entity ;
     rdfs:label "OntologyEntity" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description """represents any Entity definition from OGIT
@@ -131,7 +132,6 @@ ogit._ontology:OntologyEntity
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -220,6 +220,7 @@ ogit._ontology:OntologyEntity
 ogit._ontology:OntologyVerb
     a ogit.core:Entity ;
     rdfs:label "OntologyVerb" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "represents any Verb definition from OGIT" ;
@@ -233,7 +234,6 @@ ogit._ontology:OntologyVerb
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -301,6 +301,7 @@ ogit._ontology:OntologyVerb
 ogit._ontology:Schema
     a ogit.core:Entity ;
     rdfs:label "Schema" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "Any type of schema, could be defined in XSD, YAML, etc." ;
@@ -313,7 +314,6 @@ ogit._ontology:Schema
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

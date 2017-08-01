@@ -32,6 +32,7 @@ ogit:identity
 ogit._identity:Account
     a ogit.core:Entity ;
     rdfs:label "Account" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "A account can be e.g. an facebook-account." ;
@@ -44,7 +45,6 @@ ogit._identity:Account
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

@@ -48,6 +48,7 @@ ogit:organization
 ogit._organization:Organization
     a ogit.core:Entity ;
     rdfs:label "Organization" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description """An identity that represents an organization, company, or some other grouping of Person objects.
@@ -81,7 +82,6 @@ ogit._organization:Organization
     ogit.graphit:indexed-attributes
         ogit.foundation:description,
         ogit.foundation:name ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -358,6 +358,7 @@ ogit._organization:Organization
 ogit._organization:Policy
     a ogit.core:Entity ;
     rdfs:label "Policy" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "A policy is a deliberate system of principles to guide decisions and achieve rational outcomes. It is connected and applied to Organizations" ;
@@ -370,7 +371,6 @@ ogit._organization:Policy
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
@@ -382,6 +382,7 @@ ogit._organization:Policy
 ogit._organization:Role
     a ogit.core:Entity ;
     rdfs:label "Role" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "In contrast to ogit/Organization, which is mainly a collection of persons and/or other organziations, ogit/Role defines behavior of an actor along with necessary privileges." ;
@@ -395,7 +396,6 @@ ogit._organization:Role
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

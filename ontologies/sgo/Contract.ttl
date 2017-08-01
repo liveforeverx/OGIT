@@ -36,6 +36,7 @@ ogit:contract
 ogit._contract:Contract
     a ogit.core:Entity ;
     rdfs:label "Contract" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "General definition of a contract. Usually used for IT service related contracts but at this level of detail it is not restricted to those." ;
@@ -61,7 +62,6 @@ ogit._contract:Contract
             dcterms:description "add attribute ogit/validTo" ;
             dcterms:identifier "3"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -133,6 +133,7 @@ ogit._contract:Contract
 ogit._contract:Penalty
     a ogit.core:Entity ;
     rdfs:label "Penalty" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "Defines the penalty that has to be paid in certain circumstances" ;
@@ -145,7 +146,6 @@ ogit._contract:Penalty
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [

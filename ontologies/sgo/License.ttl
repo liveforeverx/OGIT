@@ -34,6 +34,7 @@ ogit:license
 ogit._license:License
     a ogit.core:Entity ;
     rdfs:label "License" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "This entity type allows to store license information or actual licenses." ;
@@ -59,7 +60,6 @@ ogit._license:License
             dcterms:description "add attribute deadlie" ;
             dcterms:identifier "3"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -129,6 +129,7 @@ ogit._license:License
 ogit._license:LicenseRequest
     a ogit.core:Entity ;
     rdfs:label "LicenseRequest" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description """This allows clients to place a request for a license.
@@ -143,7 +144,6 @@ ogit._license:LicenseRequest
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -171,6 +171,7 @@ ogit._license:LicenseRequest
 ogit._license:LicenseToken
     a ogit.core:Entity ;
     rdfs:label "LicenseToken" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description """This serves as a placeholder for pre-approved license request it will be subsituted by a real license throughout the licence request process.
@@ -184,7 +185,6 @@ ogit._license:LicenseToken
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

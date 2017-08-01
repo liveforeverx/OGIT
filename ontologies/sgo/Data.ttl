@@ -30,6 +30,7 @@ ogit:data
 ogit._data:CustomApplicationData
     a ogit.core:Entity ;
     rdfs:label "CustomApplicationData" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description """Entity to store custom application data, a storage place not connected to any other entity and therefore isolated from
@@ -43,7 +44,6 @@ ogit._data:CustomApplicationData
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
@@ -74,6 +74,7 @@ ogit._data:Log
 ogit._data:Timeseries
     a ogit.core:Entity ;
     rdfs:label "Timeseries" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "A time series is a sequence of data points, measured typically at successive points in time spaced at uniform time intervals." ;
@@ -90,7 +91,6 @@ ogit._data:Timeseries
         ogit.foundation:description,
         ogit.foundation:instance,
         ogit.foundation:name ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

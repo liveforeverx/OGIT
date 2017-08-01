@@ -179,7 +179,7 @@ ogit.core:Entity
         [
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path ogit.core:parent
+            sh:path rdfs:subClassOf
         ],
         [
             sh:maxCount 1 ;
@@ -287,10 +287,6 @@ ogit.core:deleter
 ogit.core:hide
     a ogit.core:Attribute ;
     rdfs:label "hide" .
-
-ogit.core:parent
-    a ogit.core:Attribute ;
-    rdfs:label "parent" .
 
 ogit.core:scope
     a ogit.core:Attribute ;

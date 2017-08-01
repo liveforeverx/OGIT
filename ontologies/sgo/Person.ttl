@@ -56,6 +56,7 @@ ogit:person
 ogit._person:Person
     a ogit.core:Entity ;
     rdfs:label "Person" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "A Person represents a human identity." ;
@@ -86,7 +87,6 @@ ogit._person:Person
         ogit.foundation:email,
         ogit._person:firstName,
         ogit._person:lastName ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

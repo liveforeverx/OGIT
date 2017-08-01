@@ -32,6 +32,7 @@ ogit:location
 ogit._location:Location
     a ogit.core:Entity ;
     rdfs:label "Location" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description """A place where some some service is offered or requested. In many cases this will be related to a an address of an
@@ -45,7 +46,6 @@ ogit._location:Location
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -75,6 +75,7 @@ ogit._location:Location
 ogit._location:Region
     a ogit.core:Entity ;
     rdfs:label "Region" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "A region is always something that has a certain geographic extension (a country, a county,  ) whereas ogit/Location usually refers to specific place usually having an address" ;
@@ -87,7 +88,6 @@ ogit._location:Region
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

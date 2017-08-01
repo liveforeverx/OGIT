@@ -30,6 +30,7 @@ ogit:course
 ogit._course:Course
     a ogit.core:Entity ;
     rdfs:label "Course" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2017-04-19" ;
     dcterms:creator "stravlos@arago.de" ;
     dcterms:description "Any kind of course" ;
@@ -42,7 +43,6 @@ ogit._course:Course
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -75,6 +75,7 @@ ogit._course:Course
 ogit._course:Series
     a ogit.core:Entity ;
     rdfs:label "Series" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2017-04-19" ;
     dcterms:creator "stravlos@arago.de" ;
     dcterms:description "Any kind of series" ;
@@ -87,7 +88,6 @@ ogit._course:Series
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
@@ -121,6 +121,7 @@ ogit._course:Series
 ogit._course:Status
     a ogit.core:Entity ;
     rdfs:label "Status" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2017-04-19" ;
     dcterms:creator "stravlos@arago.de" ;
     dcterms:description "Any kind of status" ;
@@ -133,7 +134,6 @@ ogit._course:Status
             dcterms:description "initial" ;
             dcterms:identifier "1"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

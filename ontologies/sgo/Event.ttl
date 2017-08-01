@@ -34,6 +34,7 @@ ogit:event
 ogit._event:Event
     a ogit.core:Entity ;
     rdfs:label "Event" ;
+    rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "This entity defines any type of event records, e.g. ITSM/produced by event management systems, Business Process etc." ;
@@ -53,7 +54,6 @@ ogit._event:Event
             dcterms:description "Added Attributes: ogit/summary, ogit/impact, ogit/priority, ogit/certainty, ogit/firstOccurredAt, ogit/lastOccurredAt, ogit/openedAt, ogit/lastUpdatedAt, ogit/lastClearedAt, ogit/expiresAt, ogit/occurenceCount,  ogit/ServiceManagement/reportedSource, ogit/type, ogit/category, ogit/instance, ogit/resource, ogit/maintenanceState, ogit/acknowledgeState, ogit/isRoot" ;
             dcterms:identifier "2"
         ] ;
-    ogit.core:parent ogit.graphit:Node ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property

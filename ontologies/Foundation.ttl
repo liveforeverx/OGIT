@@ -926,6 +926,23 @@ ogit.foundation:purchaseDate
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
+ogit.foundation:question
+    a ogit.core:Attribute ;
+    rdfs:label "question" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Contains a question." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
 ogit.foundation:range
     a ogit.core:Attribute ;
     rdfs:label "range" ;
@@ -1478,23 +1495,6 @@ ogit.foundation:affects
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
-ogit.foundation:alerts
-    a ogit.core:Verb ;
-    rdfs:label "alerts" ;
-    dcterms:created "2016-10-26" ;
-    dcterms:creator "stravlos@arago.co" ;
-    dcterms:description "Verb showing if one entity alerts another." ;
-    dcterms:modified "2016-10-26" ;
-    dcterms:valid "start=2016-10-26;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "stravlos@arago.co" ;
-            dcterms:date "2016-10-26" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
 ogit.foundation:approves
     a ogit.core:Verb ;
     rdfs:label "approves" ;
@@ -1618,23 +1618,6 @@ ogit.foundation:assumes
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "verb which allows to connect the planning parameters to a planning template" ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit.foundation:availableIn
-    a ogit.core:Verb ;
-    rdfs:label "availableIn" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "Indicates that something can be found from somewhere." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -2636,48 +2619,6 @@ ogit.foundation:leads
             dcterms:date "2015-10-22" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit.foundation:locatedIn
-    a ogit.core:Verb ;
-    rdfs:label "locatedIn" ;
-    dcterms:created "2015-05-21" ;
-    dcterms:creator "Peter Larem" ;
-    dcterms:description "indicate that something has its place somewhere" ;
-    dcterms:modified "2015-05-21" ;
-    dcterms:valid "start=2015-05-21;" ;
-    ogit.core:admin-contact "arago GmbH" ;
-    ogit.core:history
-        [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-05-12" ;
-            dcterms:description "updated" ;
-            dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-07-06" ;
-            dcterms:description "updated" ;
-            dcterms:identifier "3"
-        ],
-        [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-07-15" ;
-            dcterms:description "updated" ;
-            dcterms:identifier "4"
-        ],
-        [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-07-20" ;
-            dcterms:description "updated" ;
-            dcterms:identifier "5"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 

@@ -77,7 +77,7 @@ ogit._alerting:Alert
             sh:class ogit._person:Person ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.foundation:alerts
+            sh:path ogit._alerting:alerts
         ],
         [
             sh:class ogit._event:Event ;
@@ -110,3 +110,23 @@ ogit._alerting:Alert
             sh:minCount 0 ;
             sh:path ogit.foundation:value
         ] .
+
+#
+# Verbs
+#
+ogit._alerting:alerts
+    a ogit.core:Verb ;
+    rdfs:label "alerts" ;
+    dcterms:created "2016-10-26" ;
+    dcterms:creator "stravlos@arago.co" ;
+    dcterms:description "Verb showing if one entity alerts another." ;
+    dcterms:modified "2016-10-26" ;
+    dcterms:valid "start=2016-10-26;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "stravlos@arago.co" ;
+            dcterms:date "2016-10-26" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .

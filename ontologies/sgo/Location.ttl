@@ -69,7 +69,7 @@ ogit._location:Location
             sh:class ogit._location:Region ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.foundation:locatedIn
+            sh:path ogit._location:locatedIn
         ] .
 
 ogit._location:Region
@@ -101,3 +101,65 @@ ogit._location:Region
             sh:minCount 0 ;
             sh:path ogit.foundation:description
         ] .
+
+#
+# Verbs
+#
+ogit._location:availableIn
+    a ogit.core:Verb ;
+    rdfs:label "availableIn" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Indicates that something can be found from somewhere." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit._location:locatedIn
+    a ogit.core:Verb ;
+    rdfs:label "locatedIn" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "indicate that something has its place somewhere" ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-05-12" ;
+            dcterms:description "updated" ;
+            dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-07-06" ;
+            dcterms:description "updated" ;
+            dcterms:identifier "3"
+        ],
+        [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-07-15" ;
+            dcterms:description "updated" ;
+            dcterms:identifier "4"
+        ],
+        [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-07-20" ;
+            dcterms:description "updated" ;
+            dcterms:identifier "5"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .

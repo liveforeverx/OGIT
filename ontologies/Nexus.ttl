@@ -1045,7 +1045,7 @@ ogit._serviceManagement:ChangeRequest
             sh:class ogit._location:Location ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.foundation:locatedIn
+            sh:path ogit._location:locatedIn
         ],
         [
             sh:class ogit._location:Location ;
@@ -1115,7 +1115,7 @@ ogit._serviceManagement:Incident
             sh:class ogit._location:Location ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.foundation:locatedIn
+            sh:path ogit._location:locatedIn
         ] .
 
 ogit._serviceManagement:Offering
@@ -1143,13 +1143,13 @@ ogit._serviceManagement:Offering
             sh:class ogit._location:Location ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.foundation:locatedIn
+            sh:path ogit._location:locatedIn
         ],
         [
             sh:class ogit._location:Region ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.foundation:availableIn
+            sh:path ogit._location:availableIn
         ] .
 
 ogit._serviceManagement:Order
@@ -1316,7 +1316,7 @@ ogit._serviceManagement:SubTask
             sh:class ogit._location:Location ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.foundation:locatedIn
+            sh:path ogit._location:locatedIn
         ] .
 
 ogit._serviceManagement:Ticket
@@ -1631,13 +1631,13 @@ ogit.automation:MARSNode
             sh:class ogit._location:Region ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.foundation:locatedIn
+            sh:path ogit._location:locatedIn
         ],
         [
             sh:class ogit._location:Location ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.foundation:locatedIn
+            sh:path ogit._location:locatedIn
         ],
         [
             sh:class ogit._person:Person ;
@@ -3016,7 +3016,7 @@ ogit.datacenter:Datacenter
             sh:class ogit._location:Location ;
             sh:description "" ;
             sh:minCount 0 ;
-            sh:path ogit.foundation:locatedIn
+            sh:path ogit._location:locatedIn
         ] .
 
 ogit.datacenter:PowerDistributionUnit ogit.core:parent ogit.graphit:Node .
@@ -3763,13 +3763,7 @@ ogit.survey:Iteration
             sh:path ogit.foundation:belongs
         ] .
 
-ogit.survey:Reply
-    ogit.core:parent ogit.graphit:Node ;
-    sh:property [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._process:question
-        ] .
+ogit.survey:Reply ogit.core:parent ogit.graphit:Node .
 
 ogit.survey:Survey
     ogit.graphit:indexed-attributes
@@ -3782,11 +3776,6 @@ ogit.survey:Survey
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit.foundation:belongs
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._process:question
         ],
         [
             sh:class ogit.project:Milestone ;

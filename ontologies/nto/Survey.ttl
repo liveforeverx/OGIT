@@ -100,6 +100,11 @@ ogit.survey:Reply
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:question
+        ],
+        [
             sh:class ogit.survey:Iteration ;
             sh:description "" ;
             sh:minCount 0 ;
@@ -143,6 +148,11 @@ ogit.survey:Survey
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:question
+        ],
         [
             sh:maxCount 1 ;
             sh:minCount 0 ;

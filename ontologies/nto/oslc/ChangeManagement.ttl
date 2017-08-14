@@ -28,7 +28,6 @@ ogit.oslc-cm:ChangeRequest
     rdfs:label "ChangeRequest" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "The CM Change Request resource" ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -50,7 +49,6 @@ ogit.oslc-cm:affectsPlanItem
     rdfs:label "affectsPlanItem" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Change request affects a plan item. It is likely that the target resource will be an oslc_cm:ChangeRequest but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -71,7 +69,6 @@ ogit.oslc-cm:affectsRequirement
     rdfs:label "affectsRequirement" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Change request affecting a Requirement. It is likely that the target resource will be an oslc_rm:Requirement but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -92,7 +89,6 @@ ogit.oslc-cm:approved
     rdfs:label "approved" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Whether or not the Change Request has been approved." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -113,7 +109,6 @@ ogit.oslc-cm:closeDate
     rdfs:label "closeDate" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "The date at which no further activity or work is intended to be conducted." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -134,7 +129,6 @@ ogit.oslc-cm:closed
     rdfs:label "closed" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Whether or not the Change Request is completely done, no further fixes or fix verification is needed." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -155,7 +149,6 @@ ogit.oslc-cm:fixed
     rdfs:label "fixed" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Whether or not the Change Request has been fixed." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -176,7 +169,6 @@ ogit.oslc-cm:inprogress
     rdfs:label "inprogress" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Whether or not the Change Request in a state indicating that active work is occurring." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -197,7 +189,6 @@ ogit.oslc-cm:reviewed
     rdfs:label "reviewed" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Whether or not the Change Request has been reviewed." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -218,7 +209,6 @@ ogit.oslc-cm:status
     rdfs:label "status" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Used to indicate the status of the change request based on values defined by the service provider. Most often a read-only property. Some possible values may include: 'Submitted', 'Done', 'InProgress', etc." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -239,7 +229,6 @@ ogit.oslc-cm:tracksChangeSet
     rdfs:label "tracksChangeSet" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Tracks SCM change set resource. It is likely that the target resource will be an oslc_scm:ChangeSet but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -260,7 +249,6 @@ ogit.oslc-cm:tracksRequirement
     rdfs:label "tracksRequirement" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Tracks the associated Requirement or Requirement ChangeSet resources. It is likely that the target resource will be an oslc_rm:Requirement but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -281,7 +269,6 @@ ogit.oslc-cm:verified
     rdfs:label "verified" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Whether or not the resolution or fix of the Change Request has been verified." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -305,7 +292,6 @@ ogit.oslc-cm:affectedByDefect
     rdfs:label "affectedByDefect" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Change request is affected by a reported defect. It is likely that the target resource will be an oslc_cm:ChangeRequest but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -325,7 +311,6 @@ ogit.oslc-cm:affectsTestResult
     rdfs:label "affectsTestResult" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Associated QM resource that is affected by this Change Request. It is likely that the target resource will be an oslc_qm:TestResult but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -345,7 +330,6 @@ ogit.oslc-cm:blocksTestExecutionRecord
     rdfs:label "blocksTestExecutionRecord" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Associated QM resource that is blocked by this Change Request. It is likely that the target resource will be an oslc_qm:TestExecutionRecord but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -365,7 +349,6 @@ ogit.oslc-cm:implementsRequirement
     rdfs:label "implementsRequirement" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Implements associated Requirement. It is likely that the target resource will be an oslc_rm:Requirement but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -385,7 +368,6 @@ ogit.oslc-cm:relatedChangeRequest
     rdfs:label "relatedChangeRequest" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "This relationship is loosely coupled and has no specific meaning. It is likely that the target resource will be an oslc_cm:ChangeRequest but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -405,7 +387,6 @@ ogit.oslc-cm:relatedTestCase
     rdfs:label "relatedTestCase" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Related QM test case resource. It is likely that the target resource will be an oslc_qm:TestCase but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -425,7 +406,6 @@ ogit.oslc-cm:relatedTestExecutionRecord
     rdfs:label "relatedTestExecutionRecord" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Related to a QM test execution resource. It is likely that the target resource will be an oslc_qm:TestExecutionRecord but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -445,7 +425,6 @@ ogit.oslc-cm:relatedTestPlan
     rdfs:label "relatedTestPlan" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Related QM test plan resource. It is likely that the target resource will be an oslc_qm:TestPlan but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -465,7 +444,6 @@ ogit.oslc-cm:relatedTestScript
     rdfs:label "relatedTestScript" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Related QM test script resource. It is likely that the target resource will be an oslc_qm:TestScript but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -485,7 +463,6 @@ ogit.oslc-cm:testedByTestCase
     rdfs:label "testedByTestCase" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Test case by which this change request is tested. It is likely that the target resource will be an oslc_qm:TestCase but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;

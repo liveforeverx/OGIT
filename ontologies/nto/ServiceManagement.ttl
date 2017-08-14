@@ -29,7 +29,6 @@ ogit.serviceManagement:Action
     rdfs:label "Action" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Defines Actions on it Services. A Service is connected to the available Actions by the \"supports\" relationship." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -75,7 +74,6 @@ ogit.serviceManagement:ApprovalTask
     rdfs:label "ApprovalTask" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "This entity type defines approval tasks for a ticket. Used for example at ogit/ServiceManagement/ChangeRequest." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -144,7 +142,6 @@ ogit.serviceManagement:ChangeRequest
     rdfs:label "ChangeRequest" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "This entity type defines a change request ticket" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -352,7 +349,6 @@ ogit.serviceManagement:Incident
     rdfs:label "Incident" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "This entity type defines an incident ticket." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -522,7 +518,6 @@ ogit.serviceManagement:Offering
     rdfs:label "Offering" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "This is a concrete offering from a vendor including one or more combined services from a catalog/collection/offering book." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -608,7 +603,6 @@ ogit.serviceManagement:Order
     rdfs:label "Order" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Defines an order." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -763,7 +757,6 @@ ogit.serviceManagement:Problem
     rdfs:label "Problem" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "This entity type defines a problem ticket." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -884,7 +877,6 @@ ogit.serviceManagement:Report
     rdfs:label "Report" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Reporting about IT service delivery" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -924,7 +916,6 @@ ogit.serviceManagement:SLA
     rdfs:label "SLA" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "A service level agreement." ;
     dcterms:modified "2015-08-11" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -997,7 +988,6 @@ ogit.serviceManagement:Service
     rdfs:label "Service" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "A technology service item, which combined or not with other technology services can constitute a service offering (ogit/ServiceManagement/Offering)." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1091,8 +1081,6 @@ ogit.serviceManagement:SubTask
     rdfs:label "SubTask" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """This entity type defines sub-tasks for a ticket. Mostly used for ChangeRequest.
-        Comman alternative names with same meaning are: task, activity, work order.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1257,7 +1245,6 @@ ogit.serviceManagement:Ticket
     rdfs:label "Ticket" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "This entity defines any type of tickets. For specific behaviour of tickets, please check specific entities (e.g. ogit/ServiceManagement/Incident)." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1391,7 +1378,6 @@ ogit.serviceManagement:allowedForNewBusiness
     rdfs:label "allowedForNewBusiness" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "If the value of this flag is true, the service could be offered in a store to new users for order. If flag is false, the service will only be available to users with already existing instances/entities of a specific service." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1408,7 +1394,6 @@ ogit.serviceManagement:approvalStatus
     rdfs:label "approvalStatus" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Status of an ApprovalTask containing one of the following values: New|PendingApproval|Approved|Rejected|Cancelled|Closed." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1427,7 +1412,6 @@ ogit.serviceManagement:changeStatus
     rdfs:label "changeStatus" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Defines the status of a change record within the service management." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1459,7 +1443,6 @@ ogit.serviceManagement:customer
     rdfs:label "customer" ;
     dcterms:created "2015-07-03" ;
     dcterms:creator "Aymen Ayoub" ;
-    dcterms:description "The customer related to a Service Management process." ;
     dcterms:modified "2015-07-03" ;
     dcterms:valid "start=2015-07-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1476,7 +1459,6 @@ ogit.serviceManagement:elapsedTime
     rdfs:label "elapsedTime" ;
     dcterms:created "2015-06-08" ;
     dcterms:creator "Aymen Ayoub" ;
-    dcterms:description "Time between start time and now (minus pause duration)." ;
     dcterms:modified "2015-06-08" ;
     dcterms:valid "start=2015-06-08;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1493,7 +1475,6 @@ ogit.serviceManagement:eventMessage
     rdfs:label "eventMessage" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Defines the event message/summary/logstring." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1510,8 +1491,6 @@ ogit.serviceManagement:eventNodeId
     rdfs:label "eventNodeId" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """Identifies the source of an event, i.e. identifies the monitoring endpoint which caused the event creation.
-        This could be an artifical identifier or some "natural" ID like hostname or IP address.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1528,7 +1507,6 @@ ogit.serviceManagement:externalTicketId
     rdfs:label "externalTicketId" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "If a ticket was imported/duplicated from another system this attribute will define the ticket ID from the source system." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1545,7 +1523,6 @@ ogit.serviceManagement:externalTicketSource
     rdfs:label "externalTicketSource" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "If a ticket was imported/duplicated from another system this will contain a string indentifying the source system." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1562,7 +1539,6 @@ ogit.serviceManagement:fallbackPlan
     rdfs:label "fallbackPlan" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Defines instructions of how to revert in case a change fails." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1579,7 +1555,6 @@ ogit.serviceManagement:granularity
     rdfs:label "granularity" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Smallest value increment of a Parameter" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1596,7 +1571,6 @@ ogit.serviceManagement:implementationPlan
     rdfs:label "implementationPlan" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Used to define detail implementation instructions." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1613,7 +1587,6 @@ ogit.serviceManagement:incidentStatus
     rdfs:label "incidentStatus" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Defines the status of an incident record/ticket." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1639,7 +1612,6 @@ ogit.serviceManagement:isRequired
     rdfs:label "isRequired" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "True if the value has to be specified for the Service to be provisioned. False otherwise." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1656,7 +1628,6 @@ ogit.serviceManagement:leftTime
     rdfs:label "leftTime" ;
     dcterms:created "2015-06-08" ;
     dcterms:creator "Aymen Ayoub" ;
-    dcterms:description "Time remaining until SLA breach." ;
     dcterms:modified "2015-06-08" ;
     dcterms:valid "start=2015-06-08;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1673,7 +1644,6 @@ ogit.serviceManagement:licenseTokenStatus
     rdfs:label "licenseTokenStatus" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "The list of valid status values a license token can have" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1692,7 +1662,6 @@ ogit.serviceManagement:problemStatus
     rdfs:label "problemStatus" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "defines the status of a problem record" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1711,7 +1680,6 @@ ogit.serviceManagement:reportedSource
     rdfs:label "reportedSource" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Can be used to define how a ticket was communicated. It could define some kind of communication channel (\"ServiceDesk\", \"Email\") or, e.g. for Incident records, it might define that the ticket was produced automatically from an event management system." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1728,7 +1696,6 @@ ogit.serviceManagement:requirementId
     rdfs:label "requirementId" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "IDs of the corresponding requirements that lead to the entity creation." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1745,7 +1712,6 @@ ogit.serviceManagement:resolutionCode
     rdfs:label "resolutionCode" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Optional resolution code that may be provied during an incident or problem along with the solution description." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1762,8 +1728,6 @@ ogit.serviceManagement:resolvedAt
     rdfs:label "resolvedAt" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """Datetime indicating when a ticket was resolved. Can be used for incident or problem tickets when it is necessary to distinguish between the ticket resolving and ticket closure (closedAt).
-        The values must be combined date and time with time zone designator according to ISO 8601""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1780,7 +1744,6 @@ ogit.serviceManagement:resolvedInTime
     rdfs:label "resolvedAt" ;
     dcterms:created "2015-08-11" ;
     dcterms:creator "Philipp Pelchmann" ;
-    dcterms:description "Information about a ticket being solved in the time excepted." ;
     dcterms:modified "2015-08-11" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1797,7 +1760,6 @@ ogit.serviceManagement:rootCause
     rdfs:label "rootCause" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Root cause for example of a problem ticket." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1814,8 +1776,6 @@ ogit.serviceManagement:scheduledFinishAt
     rdfs:label "scheduledFinishAt" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """Defines a point in time when the work on a change is planned/scheduled to be finished. This date time is usually defined during change planning and/or approval.
-        The values must be combined date and time with time zone designator according to ISO 8601""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1832,8 +1792,6 @@ ogit.serviceManagement:scheduledStartAt
     rdfs:label "scheduledStartAt" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """Defines a point in time when the work on a change is planned/scheduled to start. This date time is usually defined during change planning and/or approval. This datetime is set by change coordinater (e.g it  is planned to be done at 7:30PM)
-        The values must be combined date and time with time zone designator according to ISO 8601.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1850,7 +1808,6 @@ ogit.serviceManagement:slaStage
     rdfs:label "slaStage" ;
     dcterms:created "2015-06-08" ;
     dcterms:creator "Aymen Ayoub" ;
-    dcterms:description "Stage of an SLA." ;
     dcterms:modified "2015-06-08" ;
     dcterms:valid "start=2015-06-08;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1874,8 +1831,6 @@ ogit.serviceManagement:solution
     rdfs:label "solution" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """Solution description, for example that is usually provided during incident resolving.
-        This field is also use for problem tickets. There is defines the permanent solution desription for a problem.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1892,7 +1847,6 @@ ogit.serviceManagement:sourceStatus
     rdfs:label "sourceStatus" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "It can be used to define application specific status values, which are not allowed by a normalized status, e.g. incidentStatus, changeStatus etc." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1918,8 +1872,6 @@ ogit.serviceManagement:targetFinishAt
     rdfs:label "targetFinishAt" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """Defines a point in time when the work on a change should be finished. This date time is defined by the requester.
-        The values must be combined date and time with time zone designator according to ISO 8601""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1936,8 +1888,6 @@ ogit.serviceManagement:targetStartAt
     rdfs:label "targetStartAt" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """Defines a point in time when the work on a change should start. This date time is defined by the requester.
-        The values must be combined date and time with time zone designator according to ISO 8601""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1954,7 +1904,6 @@ ogit.serviceManagement:task
     rdfs:label "task" ;
     dcterms:created "2015-07-06" ;
     dcterms:creator "Aymen Ayoub" ;
-    dcterms:description "A task related to a Service Management process." ;
     dcterms:modified "2015-07-06" ;
     dcterms:valid "start=2015-07-06;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1971,7 +1920,6 @@ ogit.serviceManagement:taskName
     rdfs:label "taskName" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Contains the task name. It some cases it might be equal to taskID or to some short description (summary) of the task." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1988,7 +1936,6 @@ ogit.serviceManagement:taskStatus
     rdfs:label "taskStatus" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Defines the status of a task." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -2014,7 +1961,6 @@ ogit.serviceManagement:testPlan
     rdfs:label "testPlan" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Contains a test plan used in change management to define how a successful change implementation can be verified." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -2031,7 +1977,6 @@ ogit.serviceManagement:ticketId
     rdfs:label "ticketId" ;
     dcterms:created "2015-05-26" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "ID of the ticket in the source system, e.g. the ID of the ticket in BMC." ;
     dcterms:modified "2015-05-26" ;
     dcterms:valid "start=2015-05-26;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -2048,7 +1993,6 @@ ogit.serviceManagement:workAround
     rdfs:label "workAround" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Defines a work around for a known problem until a permanent solution is defined." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;

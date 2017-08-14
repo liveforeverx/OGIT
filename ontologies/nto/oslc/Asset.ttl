@@ -28,7 +28,6 @@ ogit.oslc-asset:Artifact
     rdfs:label "Artifact" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "The Artifact fragment" ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -47,7 +46,6 @@ ogit.oslc-asset:Asset
     rdfs:label "Asset" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "The Asset resource" ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -69,7 +67,6 @@ ogit.oslc-asset:artifact
     rdfs:label "artifact" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "The multi valued list of artifacts." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -89,7 +86,6 @@ ogit.oslc-asset:artifactFactory
     rdfs:label "artifactFactory" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Resource URI used to post new artifacts to the asset." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -109,7 +105,6 @@ ogit.oslc-asset:categorization
     rdfs:label "categorization" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "A categorization to classify an asset. The category schema values are defined by the service provider. This specification does not define the resource for this property, however it should contain a dcterms:title property." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -129,7 +124,6 @@ ogit.oslc-asset:content
     rdfs:label "content" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "The media resource reference URI (the artifact bytes)." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -149,7 +143,6 @@ ogit.oslc-asset:guid
     rdfs:label "guid" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "An identifier for the asset. Assigned by the service provider when a resource is created. Different versions of the same asset will share the same identifier." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -169,7 +162,6 @@ ogit.oslc-asset:identifier
     rdfs:label "identifier" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "A unique identifier for a resource. Assigned by the service provider when a resource is created." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -189,7 +181,6 @@ ogit.oslc-asset:manufacturer
     rdfs:label "manufacturer" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "The name of the asset manufacturer." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -209,7 +200,6 @@ ogit.oslc-asset:model
     rdfs:label "model" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "The value of the asset model." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -229,7 +219,6 @@ ogit.oslc-asset:relationshipType
     rdfs:label "relationshipType" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "The type of this relationship from the perspective of the oslc_asset:relatedAsset resource based on values defined by the service provider. This specification does not define the resource for this property, however it should contain a dcterms:title property." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -249,7 +238,6 @@ ogit.oslc-asset:serialNumber
     rdfs:label "serialNumber" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "The serial number assigned by the asset manufacturer." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -269,7 +257,6 @@ ogit.oslc-asset:size
     rdfs:label "size" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "The size of the artifact media resource in bytes." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -289,7 +276,6 @@ ogit.oslc-asset:state
     rdfs:label "state" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Used to indicate the state of the asset based on values defined by the service provider. This specification does not define the resource for this property, however it should contain a dcterms:title property." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -309,7 +295,6 @@ ogit.oslc-asset:tag
     rdfs:label "tag" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Specifies the asset tag value for an Asset. Asset tags are typically human readable labels. For hardware assets, these tags are durable, securely attached to equipment, and may also be readable by barcode and/or RFID." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -329,7 +314,6 @@ ogit.oslc-asset:version
     rdfs:label "version" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "The version of the asset. Possible values may include '1.0', '2.0', etc." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;

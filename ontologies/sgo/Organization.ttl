@@ -51,11 +51,6 @@ ogit._organization:Organization
     rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """An identity that represents an organization, company, or some other grouping of Person objects.
-        Entities of this type should be created with a predefined ID. Those IDs should be named like a domain name, i.e.
-        a concatention of some strings separated with a dot. if organization data is created from a LDAP then a mapping
-        like "cn=John Doe,dc=example,dc=com" => "john_doe.example.com" should be employed.
-        The ogit/function attribute should be used to tell what kind of grouping an entity of type Organization is: company, department, group, ...""" ;
     dcterms:modified "2015-07-27" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -361,7 +356,6 @@ ogit._organization:Policy
     rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "A policy is a deliberate system of principles to guide decisions and achieve rational outcomes. It is connected and applied to Organizations" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -385,7 +379,6 @@ ogit._organization:Role
     rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "In contrast to ogit/Organization, which is mainly a collection of persons and/or other organziations, ogit/Role defines behavior of an actor along with necessary privileges." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -429,7 +422,6 @@ ogit._organization:businessCategory
     rdfs:label "businessCategory" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Philipp Pelchmann" ;
-    dcterms:description "The category of a business." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-07-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -446,7 +438,6 @@ ogit._organization:city
     rdfs:label "city" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Philipp Pelchmann" ;
-    dcterms:description "Name of a city." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-07-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -463,7 +454,6 @@ ogit._organization:country
     rdfs:label "country" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Philipp Pelchmann" ;
-    dcterms:description "Name of a country." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-07-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -483,7 +473,6 @@ ogit._organization:competes
     rdfs:label "competes" ;
     dcterms:created "2015-09-18" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "This relationship defines that one entity competes another entity." ;
     dcterms:modified "2015-09-18" ;
     dcterms:valid "start=2015-09-18;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -500,7 +489,6 @@ ogit._organization:deliversTo
     rdfs:label "deliversTo" ;
     dcterms:created "2015-10-22" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "This relationship defines that one entity delivers sth. to another entity." ;
     dcterms:modified "2015-10-22" ;
     dcterms:valid "start=2015-10-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -517,7 +505,6 @@ ogit._organization:sellsTo
     rdfs:label "sellsTo" ;
     dcterms:created "2015-10-22" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "This relationship defines that one entity sells sth. to another entity." ;
     dcterms:modified "2015-10-22" ;
     dcterms:valid "start=2015-10-22;" ;
     ogit.core:admin-contact "arago GmbH" ;

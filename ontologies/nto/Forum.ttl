@@ -29,7 +29,6 @@ ogit.forum:Award
     rdfs:label "Award" ;
     dcterms:created "2015-04-23" ;
     dcterms:creator "cwalker@arago.de" ;
-    dcterms:description "Something which is won. A 'badge of merit' or an achievement, etc..." ;
     dcterms:modified "2015-04-23" ;
     dcterms:valid "start=2015-04-23;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -59,10 +58,6 @@ ogit.forum:Banner
     rdfs:label "Banner" ;
     dcterms:created "2015-04-27" ;
     dcterms:creator "cwalker@arago.de" ;
-    dcterms:description """Standout content, i.e. a header, hero-unit or part of a carousel.
-        Examples:
-        http://getbootstrap.com/examples/carousel/ (a carousel of banners)
-        http://getbootstrap.com/examples/jumbotron/ (the content at the top is a banner)""" ;
     dcterms:modified "2015-04-27" ;
     dcterms:valid "start=2015-04-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -85,7 +80,6 @@ ogit.forum:Configuration
     rdfs:label "Configuration" ;
     dcterms:created "2015-04-23" ;
     dcterms:creator "cwalker@arago.de" ;
-    dcterms:description "Configuration Data. No Schema - all free attributes" ;
     dcterms:modified "2015-04-23" ;
     dcterms:valid "start=2015-04-23;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -109,8 +103,6 @@ ogit.forum:FeedEntry
     rdfs:label "FeedEntry" ;
     dcterms:created "2015-04-27" ;
     dcterms:creator "cwalker@arago.de" ;
-    dcterms:description """A single entry in a newsfeed or other stream of items. Unlikely to contain many attributes of
-        its own, more likely to link users with items describing the event.""" ;
     dcterms:modified "2015-04-27" ;
     dcterms:valid "start=2015-04-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -134,7 +126,6 @@ ogit.forum:Group
     rdfs:label "Group" ;
     dcterms:created "2015-12-03" ;
     dcterms:creator "bmoore@arago.de" ;
-    dcterms:description "A Node to associate a profile to a particular group" ;
     dcterms:modified "2015-12-03" ;
     dcterms:valid "start=2015-12-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -183,7 +174,6 @@ ogit.forum:Invite
     rdfs:label "Invite" ;
     dcterms:created "2015-09-02" ;
     dcterms:creator "bmoore@arago.de" ;
-    dcterms:description "Invite is used to request participation with a node" ;
     dcterms:modified "2015-09-02" ;
     dcterms:valid "start=2015-09-02;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -231,7 +221,6 @@ ogit.forum:KnowledgeBundle
     rdfs:label "KnowledgeBundle" ;
     dcterms:created "2015-04-27" ;
     dcterms:creator "cwalker@arago.de" ;
-    dcterms:description "A grouping of `ogit/Automation/KnowledgeItem`s into a package." ;
     dcterms:modified "2015-04-27" ;
     dcterms:valid "start=2015-04-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -296,7 +285,6 @@ ogit.forum:KnowledgeItemHistory
     rdfs:label "KnowledgeItemHistory" ;
     dcterms:created "2015-04-27" ;
     dcterms:creator "bmmore@arago.de" ;
-    dcterms:description "A data container of `ogit/Automation/KnowledgeItem`s changes." ;
     dcterms:modified "2015-04-27" ;
     dcterms:valid "start=2015-11-13;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -399,7 +387,6 @@ ogit.forum:Permission
     rdfs:label "Permission" ;
     dcterms:created "2015-09-04" ;
     dcterms:creator "bmoore@arago.de" ;
-    dcterms:description "Permission is used to approve a Nodes interaction with another Node" ;
     dcterms:modified "2015-09-04" ;
     dcterms:valid "start=2015-09-04;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -430,7 +417,6 @@ ogit.forum:Post
     rdfs:label "Post" ;
     dcterms:created "2015-04-27" ;
     dcterms:creator "cwalker@arago.de" ;
-    dcterms:description "A Post is an online publication. Could be a blog post, or a posting on a forum/messageboard." ;
     dcterms:modified "2015-04-27" ;
     dcterms:valid "start=2015-04-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -496,8 +482,6 @@ ogit.forum:Profile
     rdfs:label "Profile" ;
     dcterms:created "2015-04-27" ;
     dcterms:creator "cwalker@arago.de" ;
-    dcterms:description """A User's persona within a forum. Linked to an `ogit/Identity` but separate, the Profile is
-        the root node for most operations with a Forum.""" ;
     dcterms:modified "2015-04-27" ;
     dcterms:valid "start=2015-04-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -712,7 +696,6 @@ ogit.forum:Rating
     rdfs:label "Rating" ;
     dcterms:created "2015-08-12" ;
     dcterms:creator "bneal@arago.de" ;
-    dcterms:description "Rating is used to rank nodes based on an arbitrary integer `value`" ;
     dcterms:modified "2015-08-12" ;
     dcterms:valid "start=2015-08-12;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -760,7 +743,6 @@ ogit.forum:Reply
     rdfs:label "Reply" ;
     dcterms:created "2015-04-27" ;
     dcterms:creator "cwalker@arago.de" ;
-    dcterms:description "A response to a some other entity" ;
     dcterms:modified "2015-04-27" ;
     dcterms:valid "start=2015-04-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -844,7 +826,6 @@ ogit.forum:Role
     rdfs:label "Role" ;
     dcterms:created "2015-12-03" ;
     dcterms:creator "bmoore@arago.de" ;
-    dcterms:description "A Node to associate a profile with a particular Role within a Group" ;
     dcterms:modified "2015-12-03" ;
     dcterms:valid "start=2015-12-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -868,15 +849,6 @@ ogit.forum:ShortId
     rdfs:label "ShortId" ;
     dcterms:created "2015-04-23" ;
     dcterms:creator "cwalker@arago.de" ;
-    dcterms:description """A Reference to another Entity, used to track access via a specific channel/referrer.
-        For example in TabTab, a Post has many shortIds which relate to different sharing
-        methods, e.g. one for Twitter, one for Yammer, one for Email, etc... TabTab uses them
-        as 'short urls' in the App and redirect the user to the correct content after tracking
-        the access by the channel (`ogit/function`) attribute. The `ogit/function` attribute
-        is used for this as the function of this shortId is to track a specific channel of
-        inbound traffic. The ShortId can be used without this channel/referrer data, albeit
-        to more limited use.
-        The `ogit/id` attribute in this instance would be a short URL safe string.""" ;
     dcterms:modified "2015-04-23" ;
     dcterms:valid "start=2015-04-23;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -917,8 +889,6 @@ ogit.forum:Tag
     rdfs:label "Tag" ;
     dcterms:created "2015-04-27" ;
     dcterms:creator "cwalker@arago.de" ;
-    dcterms:description """A Tag used to categorise content. The required `key` attribute should be used
-        as the unique identifier, and the `name` considered a display name.""" ;
     dcterms:modified "2015-04-27" ;
     dcterms:valid "start=2015-04-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -960,9 +930,6 @@ ogit.forum:Topic
     rdfs:label "Topic" ;
     dcterms:created "2015-04-27" ;
     dcterms:creator "cwalker@arago.de" ;
-    dcterms:description """A Topic is a SubForum with a specific topic associated. Use to divide forums into
-        sub-forums. However the entity is general enough to be used for anything that has
-        a given subject.""" ;
     dcterms:modified "2015-04-27" ;
     dcterms:valid "start=2015-04-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1011,7 +978,6 @@ ogit.forum:username
     rdfs:label "username" ;
     dcterms:created "2015-03-26" ;
     dcterms:creator "Chris Walker" ;
-    dcterms:description "A unique username for a member of a Forum" ;
     dcterms:modified "2015-03-26" ;
     dcterms:valid "start=2015-04-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1031,7 +997,6 @@ ogit.forum:downloads
     rdfs:label "downloads" ;
     dcterms:created "2016-02-25" ;
     dcterms:creator "bneal@arago.de" ;
-    dcterms:description "This verb represents that a \"User\" has downloaded a given Bundle" ;
     dcterms:modified "2016-02-25" ;
     dcterms:valid "start=2016-02-25;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1048,7 +1013,6 @@ ogit.forum:features
     rdfs:label "features" ;
     dcterms:created "2016-02-25" ;
     dcterms:creator "bneal@arago.de" ;
-    dcterms:description "This verb represents which KnowledgeBundles are featured (\"choosen\") for a given Group" ;
     dcterms:modified "2016-02-25" ;
     dcterms:valid "start=2016-02-25;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1065,9 +1029,6 @@ ogit.forum:mentions
     rdfs:label "mentions" ;
     dcterms:created "2015-04-27" ;
     dcterms:creator "cwalker@arago.de" ;
-    dcterms:description """This verb was envisaged to represent the *Social Media* menaing of the word mention (or
-        the Twitter-ism *at-mention*). However it simple represents that one entity mentions another,
-        for example cross-references in documentation would also be a valid use-case.""" ;
     dcterms:modified "2017-05-24" ;
     dcterms:valid "start=2015-04-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1091,7 +1052,6 @@ ogit.forum:rates
     rdfs:label "rates" ;
     dcterms:created "2015-08-12" ;
     dcterms:creator "bneal@arago.de" ;
-    dcterms:description "This verb represents the `Rating` between two nodes" ;
     dcterms:modified "2016-03-24" ;
     dcterms:valid "start=2015-08-12;" ;
     ogit.core:admin-contact "arago GmbH" ;

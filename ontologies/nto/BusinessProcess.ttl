@@ -29,7 +29,6 @@ ogit.businessProcess:BusinessProcess
     rdfs:label "BusinessProcess" ;
     dcterms:created "2015-07-24" ;
     dcterms:creator "Aymen Ayoub" ;
-    dcterms:description "Entity of a business process." ;
     dcterms:modified "2015-07-24" ;
     dcterms:valid "start=2015-07-24;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -58,7 +57,6 @@ ogit.businessProcess:BusinessRuleTask
     rdfs:label "BusinessRuleTask" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Entity to store another task type: the business rule. This task type is used solely to apply business rules." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -207,7 +205,6 @@ ogit.businessProcess:CancelEvent
     rdfs:label "CancelEvent" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Entity to store a cancel event. You can use the cancel event only in the context of the transactions." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -253,12 +250,6 @@ ogit.businessProcess:CompensationEvent
     rdfs:label "CompensationEvent" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """Entity to store a compensation event. We execute tasks in our processes that sometimes have to be canceled later under certain circumstances.
-        Typical examples are:
-        Booking a train or airline ticket
-        Reserving a rental car
-        Charging a credit card
-        Commissioning a service provider""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -304,9 +295,6 @@ ogit.businessProcess:ConditionalEvent
     rdfs:label "ConditionalEvent" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """Entity to store a condition event, which will determine wether a process should start or continue. Anything can be a condition, and
-        conditions are independent of processes, which is why the condition (like the timer event) can only exist as a catching
-        event. A process cannot therefore conditional event trigger a conditional event.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -352,7 +340,6 @@ ogit.businessProcess:DataObject
     rdfs:label "DataObject" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Entity to store a Data Object. Data Objects are considered Artifacts because they do not have any direct effect on the Sequence Flow or Message Flow of the Process, but they do provide information about what activities require to be performed and/or what they produce." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -376,7 +363,6 @@ ogit.businessProcess:DataStore
     rdfs:label "DataStore" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "A DataStore is a place where the process can read or write data, e.g., a database or filing cabinet. It persists beyond the lifetime of the process instance." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -407,13 +393,6 @@ ogit.businessProcess:ErrorEvent
     rdfs:label "ErrorEvent" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """Entitiy to store potential process errors as a step toward
-        eliminating them, or as part of modeling escalation processes. In BPMN, error events are represented by a flash symbol.
-        The BPMN specification does not specify what an error may be, the modeler has to decide that.
-        An error is a serious event in BPMN, so if catching, it can be modeled only as an attached intermediate event.
-        This means that an error during task execution must be handled in a specific way: As a throwing event, it can be modeled
-        only at the end of a process path so that the participant knows the process has failed. The parent process should likewise
-        recognize the failure.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -459,8 +438,6 @@ ogit.businessProcess:EscalationEvent
     rdfs:label "EscalationEvent" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """Entity to store an escalation event in BPMN 2.0. Mainly, it shows communication between parent and sub-processes.
-        We discuss it in here TODO with the help of an example.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -506,17 +483,6 @@ ogit.businessProcess:EventBasedGateway
     rdfs:label "EventBasedGateway" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """The event-based Gateway allows you to make a decision based on events. Each outgoing sequence flow of the gateway needs
-        to be connected to an intermediate catching event. When process execution reaches an event-based Gateway, the gateway
-        acts like a wait state: execution is suspended. In addition, for each outgoing sequence flow, an event subscription is
-        created.
-        Note the sequence flows running out of an event-based Gateway are different than ordinary sequence flows. These sequence
-        flows are never actually "executed". On the contrary, they allow the process engine to determine which events an execution
-        arriving at an event-based Gateway needs to subscribe to. The following restrictions apply:
-        An event-based Gateway must have two or more outgoing sequence flows.
-        An event-based Gateway may only be connected to elements of the type intermediateCatchEvent. (Receive Tasks after an
-        event-based Gateway are not supported by the engine yet.)
-        An intermediateCatchEvent connected to an event-based Gateway must have a single incoming sequence flow.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -557,9 +523,6 @@ ogit.businessProcess:ExclusiveGateway
     rdfs:label "ExclusiveGateway" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """An exclusive gateway (also called the XOR gateway or, in more technical terms, the exclusive data-based gateway), is used to model a decision in the process. When the execution arrives at this gateway, all outgoing sequence flows are evaluated in the order in which they have been defined. The sequence flow which condition evaluates to 'true' (or which doesn't have a condition set, conceptually having a 'true' value defined on the sequence flow) is selected for continuing the process.
-        Note that only one sequence flow is selected when using the exclusive gateway. In case multiple sequence flow have a condition that evaluates to 'true', the first one defined in the XML (and only that one!) is selected for continuing the process.
-        If no sequence flow can be selected (no condition evaluates to 'true') this will result in a runtime exception unless you have a default flow defined. One default flow can be set on the gateway itself in case no other condition matches - like an 'else' in programming languages.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -600,20 +563,6 @@ ogit.businessProcess:InclusiveGateway
     rdfs:label "InclusiveGateway" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """The Inclusive Gateway can be seen as a combination of an exclusive and a parallel gateway.
-        Like an exclusive gateway you can define conditions on outgoing sequence flows and the inclusive gateway will evaluate them.
-        However, the main difference is that the inclusive gateway can receive more than one sequence flow, like a parallel gateway.
-        The functionality of the inclusive gateway is based on the incoming and outgoing sequence flow:
-        fork: all outgoing sequence flow conditions are evaluated and for the sequence flow conditions that evaluate to 'true' the
-        flows are followed in parallel, creating one concurrent execution for each sequence flow.
-        join: all concurrent executions arriving at the inclusive gateway wait at the gateway until an execution has arrived for
-        each of the incoming sequence flows that have a process token. This is an important difference to the parallel gateway.
-        So in other words, the inclusive gateway will only wait for the incoming sequence flows that will be executed. After the
-        join, the process continues past the joining inclusive gateway.
-        Note that an inclusive gateway can have both fork and join behavior, if there are multiple incoming and outgoing sequence
-        flows for the same inclusive gateway. In that case, the gateway will first join all incoming sequence flows that have a
-        process token, before splitting into multiple concurrent paths of executions for the outgoing sequence flows that have a
-        condition that evaluates to 'true'.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -659,7 +608,6 @@ ogit.businessProcess:InstantiatedReceiveTask
     rdfs:label "InstantiatedReceiveTask" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Entity to store an instantiated received task. If a receive task is to instantiate a process, that is, the receive tasks replaces the message start event, this is shown by a small event symbol in the top left corner." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -808,7 +756,6 @@ ogit.businessProcess:LinkEvent
     rdfs:label "LinkEvent" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "The link event is a special case. It has no significance related to content, but it facilitates the diagram-creation process." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -854,7 +801,6 @@ ogit.businessProcess:ManualTask
     rdfs:label "ManualTask" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Tasks executed by a human beeing that do not affect the completion of a task assigned by the process engine. All the task from our various pizza processes are manual types. Other examples: File a document in a folder; Clarify an incorrect invoice by phone; Talk with customers at the counter." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1003,9 +949,6 @@ ogit.businessProcess:MessageEvent
     rdfs:label "MessageEvent" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """Entity to store an instantiated message event. Sooner or later, most processes require communication, which can be represented in BPMN by means of the message event.
-        In terms of BPMN2 modelling it can bel recognized as a small envelope. The meaning of "message" in BPMN is not restricted to letters, e-mails, or calls.
-        Any action that refers to a specific addressee and represents or contains information for the addressee is a message.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1051,7 +994,6 @@ ogit.businessProcess:MultipleEvent
     rdfs:label "MultipleEvent" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "We can use the multiple event to summarize several events with a single symbol." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1097,7 +1039,6 @@ ogit.businessProcess:NoneEvent
     rdfs:label "NoneEvent" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "A NoneEvent is an event without any catching or throwing activity, which could be used for a waiting mechanism in BPMN2." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1143,18 +1084,6 @@ ogit.businessProcess:ParallelGateway
     rdfs:label "ParallelGateway" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """Gateways can be used to model concurrency in a process. The most straightforward gateway to introduce concurrency
-        in a process model is the Parallel Gateway, which allows forking into multiple paths of execution or joining multiple
-        incoming paths of execution.
-        The functionality of the parallel gateway is based on the incoming and outgoing sequence flow(s):
-        fork: all outgoing sequence flows are followed in parallel, creating one concurrent execution for each sequence flow.
-        join: all concurrent executions arriving at the parallel gateway wait at the gateway until an execution has arrived
-        for each of the incoming sequence flows. Then the process continues past the joining gateway.
-        Note that a parallel gateway can have both fork and join behaviors, if there are multiple incoming and outgoing
-        sequence flows for the same parallel gateway. In that case, the gateway will first join all incoming sequence flows,
-        before splitting into multiple concurrent paths of executions.
-        An important difference with other gateway types is that the parallel gateway does not evaluate conditions. If conditions
-        are defined on the sequence flow connected with the parallel gateway, they are simply ignored.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1200,7 +1129,6 @@ ogit.businessProcess:ProcessLane
     rdfs:label "ProcessLane" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Entity to represent a ProcessLane of a business process. There must be one or more Lanes within a Pool. If there is only one Lane, then that Lane shares the name of the Pool and only the Pool name is displayed. If there is more than one Lane, then each Lane has to have its own name and all names are displayed." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1253,7 +1181,6 @@ ogit.businessProcess:ProcessPool
     rdfs:label "ProcessPool" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "A Pool represents a Participant in a Process. It is also acts as a swimlane and a graphical container for partitioning a set of activities from other Pools, usually in the context of B2B situations." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1312,7 +1239,6 @@ ogit.businessProcess:ReceiveTask
     rdfs:label "ReceiveTask" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Receiving a message can be modeled as a separate task. This task type is an alternative to the catching message event." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1461,7 +1387,6 @@ ogit.businessProcess:ScriptTask
     rdfs:label "ScriptTask" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "A script that can be run when the a task is performed. If a script is not included, then the task will act equivalent to a not yet defined Task with \"nothing to do\"." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1610,7 +1535,6 @@ ogit.businessProcess:SendTask
     rdfs:label "SendTask" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "The Send Tasks from BPMN2 are technical, and the process engine executes them. Therefore, they mainly are used for calling web services asynchronously through message queues." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1759,7 +1683,6 @@ ogit.businessProcess:ServiceTask
     rdfs:label "ServiceTask" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Service tasks are those done by software. These are program functions applied automatically as a process executes. BPMN normally assumes that this function is provided as web service, though it can be another implementation. The service task is a component of process-oriented implementation integration, which explains why it is so similar in concept to Service-OrientedArchitecture (SOA). Typical examples from the world of implementation integration are: The credit rating provided by a rating agency, obtained as XML through HTTP during a credit check." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1908,11 +1831,6 @@ ogit.businessProcess:SignalEvent
     rdfs:label "SignalEvent" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """Signals are similar to messages, which is why you can model them in BPMN as events just as you can with messages.
-        The symbol for a signal is a triangle. The essential difference between a signal and a message is that that latter
-        is always addressed to a specific recipient. (An e-mail contains the e-mail address of the recipient, a call starts
-        with dialing the telephone number, and so on.) In contrast, a signal is more like a newspaper advertisement or a television
-        commercial. It is relatively undirected. Anyone who receives the signal and wants to react may do so.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -1958,7 +1876,6 @@ ogit.businessProcess:TerminationEvent
     rdfs:label "TerminationEvent" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Entity to represent a termination event, which indicates the termination of a process." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -2004,7 +1921,6 @@ ogit.businessProcess:TimerEvent
     rdfs:label "TimerEvent" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "TimerEvent indicates the time, duration or periodical intervall of an event." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -2050,7 +1966,6 @@ ogit.businessProcess:UndefinedTask
     rdfs:label "UndefinedTask" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "A Task is an atomic activity that is included within a Process. A undifined Task should be used if the type of a task is not clear yet." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -2199,9 +2114,6 @@ ogit.businessProcess:UserTask
     rdfs:label "UserTask" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """User tasks are executed by people just like the manual tasks, but they are assigned by a process engine, which may, for example, place these tasks in each user's task list.
-        After the human finishes a task, the engine expects confirmation, usually including data input or a button click. User tasks are part of the Human Workflow Management.
-        Typical task examples from the world of Human Workflow Management are: Check an invoice; Approve an application for vacation; Process a support request.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -2353,7 +2265,6 @@ ogit.businessProcess:businessProcessEventType
     rdfs:label "businessProcessEventType" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Defines the type of a business process event which should take one of the following values: Start, End, Intermediate." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -2372,7 +2283,6 @@ ogit.businessProcess:gatewayFunctionality
     rdfs:label "gatewayFunctionality" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Defines the functionality of the gateway within a BusinessProcess." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;

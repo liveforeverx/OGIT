@@ -37,7 +37,6 @@ ogit._process:Notification
     rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-04-27" ;
     dcterms:creator "cwalker@arago.de" ;
-    dcterms:description "A notification event" ;
     dcterms:modified "2017-02-17" ;
     dcterms:valid "start=2015-04-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -82,8 +81,6 @@ ogit._process:Question
     rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """This structure allows an automation engine to create data requests for existing Issues which should be filled by human user.
-        Additionaly could be used to create new Issue from some form.""" ;
     dcterms:modified "2016-07-12" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -136,7 +133,6 @@ ogit._process:Task
     rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "A process is a unit of execution." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -195,7 +191,6 @@ ogit._process:TaskList
     rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "A process list consists of one or many processs." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -235,7 +230,6 @@ ogit._process:positionNumber
     rdfs:label "positionNumber" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "An integer, which displays a position of numbering." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -252,7 +246,6 @@ ogit._process:response
     rdfs:label "response" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description "Contains the response for a question." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;

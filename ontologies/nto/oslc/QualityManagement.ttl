@@ -28,7 +28,6 @@ ogit.oslc-qm:TestCase
     rdfs:label "TestCase" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "The QM Test Case resource" ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -47,7 +46,6 @@ ogit.oslc-qm:TestExecutionRecord
     rdfs:label "TestExecutionRecord" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "The QM Test Execution Record resource" ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -66,7 +64,6 @@ ogit.oslc-qm:TestPlan
     rdfs:label "TestPlan" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "The QM Test Plan resource" ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -85,7 +82,6 @@ ogit.oslc-qm:TestResult
     rdfs:label "TestResult" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "The QM Test Result resource" ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -104,7 +100,6 @@ ogit.oslc-qm:TestScript
     rdfs:label "TestScript" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "The QM Test Script resource" ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -126,7 +121,6 @@ ogit.oslc-qm:affectedByChangeRequest
     rdfs:label "affectedByChangeRequest" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Change request that affects the Test Result. It is likely that the target resource will be an oslc_cm:ChangeRequest but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -146,7 +140,6 @@ ogit.oslc-qm:blockedByChangeRequest
     rdfs:label "blockedByChangeRequest" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Change Request that prevents execution of the Test Execution Record. It is likely that the target resource will be an oslc_cm:ChangeRequest but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -166,7 +159,6 @@ ogit.oslc-qm:executesTestScript
     rdfs:label "executesTestScript" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Test Script executed to produce the Test Result. It is likely that the target resource will be an oslc_qm:TestScript but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -186,7 +178,6 @@ ogit.oslc-qm:executionInstructions
     rdfs:label "executionInstructions" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Instructions for executing the test script. Note that the value of Occurs is undefined. The resource shape document provided by the QM service provider may be consulted for its value." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -206,7 +197,6 @@ ogit.oslc-qm:producedByTestExecutionRecord
     rdfs:label "producedByTestExecutionRecord" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Test Execution Record that the Test Result was produced by. It is likely that the target resource will be an oslc_qm:TestExecutionRecord but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -226,7 +216,6 @@ ogit.oslc-qm:relatedChangeRequest
     rdfs:label "relatedChangeRequest" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "A related change request. It is likely that the target resource will be an oslc_cm:ChangeRequest but that is not necessarily the case. " ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -246,7 +235,6 @@ ogit.oslc-qm:reportsOnTestCase
     rdfs:label "reportsOnTestCase" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Test Case that the Test Result reports on. It is likely that the target resource will be an oslc_qm:TestCase but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -266,7 +254,6 @@ ogit.oslc-qm:reportsOnTestPlan
     rdfs:label "reportsOnTestPlan" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Test Plan that the Test Execution Record reports on. It is likely that the target resource will be an oslc_qm:TestPlan but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -286,7 +273,6 @@ ogit.oslc-qm:runsOnTestEnvironment
     rdfs:label "runsOnTestEnvironment" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Indicates the environment details of the test case for this execution record." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -306,7 +292,6 @@ ogit.oslc-qm:runsTestCase
     rdfs:label "runsTestCase" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Test Case run by the Test Execution Record. It is likely that the target resource will be an oslc_qm:TestCase but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -326,7 +311,6 @@ ogit.oslc-qm:testsChangeRequest
     rdfs:label "testsChangeRequest" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Change Request tested by the Test Case. It is likely that the target resource will be an oslc_cm:ChangeRequest but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -346,7 +330,6 @@ ogit.oslc-qm:usesTestCase
     rdfs:label "usesTestCase" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Test Case used by the Test Plan. It is likely that the target resource will be an oslc_qm:TestCase but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -366,7 +349,6 @@ ogit.oslc-qm:usesTestScript
     rdfs:label "usesTestScript" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Test Script used by the Test Case. It is likely that the target resource will be an oslc_qm:TestScript but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -386,7 +368,6 @@ ogit.oslc-qm:validatesRequirement
     rdfs:label "validatesRequirement" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Requirement that is validated by the Test Case. It is likely that the target resource will be an oslc_rm:Requirement but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -406,7 +387,6 @@ ogit.oslc-qm:validatesRequirementCollection
     rdfs:label "validatesRequirementCollection" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
-    dcterms:description "Requirement Collection that is validated by the Test Plan. It is likely that the target resource will be an oslc_rm:RequirementCollection but that is not necessarily the case." ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;

@@ -1553,7 +1553,7 @@ ogit.foundation:assignedTo
             dcterms:description """Added Connection for `ogit/Forum/Tag` -> `ogit/Forum/KnowledgeBundle`
 Added Connection for `ogit/Forum/Tag` -> `ogit/Forum/Post`
 Added Connection for `ogit/Forum/Tag` -> `ogit/Automation/KnowledgeItem`
-""";
+""" ;
             dcterms:identifier "2"
         ],
         [
@@ -2081,7 +2081,7 @@ ogit.foundation:contributes
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description """Verb associates which entity contributes to another, for example could be used to express a distribution for the percentage
-of a cost element, which contributes to another cost element.""";
+of a cost element, which contributes to another cost element.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -2207,29 +2207,25 @@ Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/Topic`
         [
             dcterms:creator "" ;
             dcterms:date "2015-06-09" ;
-            dcterms:description """Added Connection for `ogit/Forum/Profile` -> `ogit/Automation/AutomationIssue`
-""" ;
+            dcterms:description "Added Connection for `ogit/Forum/Profile` -> `ogit/Automation/AutomationIssue`" ;
             dcterms:identifier "3"
         ],
         [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-07-24" ;
-            dcterms:description """Added Connection for `/ogit/Organization` -> `/ogit/ConfigurationItem`
-""" ;
+            dcterms:description "Added Connection for `/ogit/Organization` -> `/ogit/ConfigurationItem`" ;
             dcterms:identifier "4"
         ],
         [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-07-27" ;
-            dcterms:description """Added Connection for `/ogit/Person` -> `/ogit/ConfigurationItem`
-""" ;
+            dcterms:description "Added Connection for `/ogit/Person` -> `/ogit/ConfigurationItem`" ;
             dcterms:identifier "5"
         ],
         [
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:date "2015-08-11" ;
-            dcterms:description """Added Connections for `Connector` -> `ConfigurationItem`, `ChangeRequest`,`Incident`
-""" ;
+            dcterms:description "Added Connections for `Connector` -> `ConfigurationItem`, `ChangeRequest`,`Incident`" ;
             dcterms:identifier "6"
         ],
         [
@@ -2309,6 +2305,24 @@ ogit.foundation:defines
             dcterms:date "2017-03-23" ;
             dcterms:description "add connections for Knowledge:AcuqisitionSession's" ;
             dcterms:identifier "3"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:demands
+    a ogit.core:Verb ;
+    rdfs:label "demands" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Verb indicating if an entity demands another entity." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "true" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -2600,6 +2614,23 @@ ogit.foundation:implements
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "Defines that an entity provides the implementation for another entity." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit.foundation:installs
+    a ogit.core:Verb ;
+    rdfs:label "installs" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Indicates which entities are installed by other entities." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -3340,7 +3371,7 @@ ogit.foundation:specifies
             dcterms:date "2015-06-01" ;
             dcterms:description """Adding connection from `ogit/Forum/ShortId` -> `ogit/Forum/Post`
 Adding connection from `ogit/Forum/ShortId` -> `ogit/Automation/KnowledgeItem`
-""";
+""" ;
             dcterms:identifier "2"
         ],
         [
@@ -3607,42 +3638,6 @@ tense used in the verb, this almost always will refer to some that *was* won in 
             dcterms:identifier "1"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
-
-ogit:demands
-	a ogit:Verb;
-	rdfs:label "demands";
-	dcterms:description "Verb indicating if an entity demands another entity.";
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:hide "true";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		] .
-
-ogit:installs
-	a ogit:Verb;
-	rdfs:label "installs";
-	dcterms:description "Indicates which entities are installed by other entities.";
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:history [
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]	.
 
 ogit.foundation:worksOn
     a ogit.core:Verb ;

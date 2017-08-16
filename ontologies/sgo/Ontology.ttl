@@ -227,50 +227,13 @@ whenever there is a Schema describing/restricting the entity's content there wil
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit._ontology:index
-        ] ,
+        ],
         [
             sh:class ogit._ontology:OntologyAttribute ;
             sh:description "" ;
             sh:minCount 0 ;
             sh:path ogit._ontology:opts
-        ]  .
-
-ogit:opts
-	a  ogit:Verb;
-	rdfs:label "opts";
-	dcterms:description "Indicates if one entity opts having a second one (non mandatory dependency)";
-	dcterms:valid "start=2015-05-21;";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:hide "true";
-	ogit:history [
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		]	.
-
-ogit._ontology:index
-	a  ogit:Verb;
-	rdfs:label "index";
-	dcterms:description "Indicates if one entity have indexed attributes (only use within ontology itself).";
-	dcterms:creator "Peter Larem";
-	dcterms:created "2015-05-21";
-	dcterms:modified "2015-05-21";
-  dcterms:valid "start=2015-05-21;";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:hide "true";
-	ogit:history
-		[
-			dcterms:identifier "1";
-			dcterms:date "2015-05-21";
-			dcterms:description "initial";
-			dcterms:creator "Peter Larem";
-		] .
+        ] .
 
 ogit._ontology:OntologyVerb
     a ogit.core:Entity ;
@@ -721,6 +684,45 @@ ogit._ontology:ontologyValidationType
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
     dcterms:description "the \"validation-type\" attribute as defined in OGIT yaml files" ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "true" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+#
+# Verbs
+#
+ogit._ontology:index
+    a ogit.core:Verb ;
+    rdfs:label "index" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Indicates if one entity have indexed attributes (only use within ontology itself)." ;
+    dcterms:modified "2015-05-21" ;
+    dcterms:valid "start=2015-05-21;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:hide "true" ;
+    ogit.core:history [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ] ;
+    ogit.core:tech-contact "arago GmbH" .
+
+ogit._ontology:opts
+    a ogit.core:Verb ;
+    rdfs:label "opts" ;
+    dcterms:created "2015-05-21" ;
+    dcterms:creator "Peter Larem" ;
+    dcterms:description "Indicates if one entity opts having a second one (non mandatory dependency)" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;

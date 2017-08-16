@@ -43,6 +43,7 @@ ogit._media:Comment
     rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "Defines comments for a ticket, issue or another type of entity. Also known as WorkLog, ChangeLog or HistoryEntry." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -138,6 +139,7 @@ ogit._media:Hyperlink
     rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-06-09" ;
     dcterms:creator "cwalker@arago.de" ;
+    dcterms:description "A representation of an (optionally) titled Hyperlink to some media. No protocol restrictions imposed." ;
     dcterms:modified "2015-06-09" ;
     dcterms:valid "start=2015-06-09;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -168,6 +170,7 @@ ogit._media:Note
     rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-04-29" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "Any type of note." ;
     dcterms:modified "2013-04-29" ;
     dcterms:valid "start=2015-04-29;" ;
     ogit.core:admin-contact "arago GmbH" ;

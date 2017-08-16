@@ -29,6 +29,7 @@ ogit.price:Invoice
     rdfs:label "Invoice" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "Models any type of invoice" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -67,6 +68,7 @@ ogit.price:PriceSpecification
     rdfs:label "PriceSpecification" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "Models a price specification for any type of IT service, component or task" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -87,6 +89,7 @@ ogit.price:discreteValue
     rdfs:label "discreteValue" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "Concrete value for the pricing element." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -103,6 +106,7 @@ ogit.price:factor
     rdfs:label "factor" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "Value of the factor." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -119,6 +123,7 @@ ogit.price:factorTarget
     rdfs:label "factorTarget" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "Where to apply the factor (Node/Tree/Attribute)." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -135,6 +140,7 @@ ogit.price:priceAmount
     rdfs:label "priceAmount" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "Amount to pay for example for an invoice." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -151,6 +157,7 @@ ogit.price:priceTimeUnit
     rdfs:label "priceTimeUnit" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "Unit price of the service per time unit (attribute timeUnitSeconds)." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -167,6 +174,7 @@ ogit.price:targetAttribute
     rdfs:label "targetAttribute" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "Attribute to which the factor will be applied to (If target == Attribute)" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -183,6 +191,9 @@ ogit.price:timeUnitSeconds
     rdfs:label "timeUnitSeconds" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description """Time unit (in seconds) that price applies to. A time unit of 0 for a quantity means a one-time fee is charged. A time 
+unit of 0 for an activity means the price is charged for every instance of the activity. All pricing elements of an 
+attribute pricing must have the same time unit. The time unit is irrelevant for factor pricing elements.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;

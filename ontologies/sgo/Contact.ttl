@@ -37,6 +37,7 @@ ogit._contact:Email
     rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2016-01-22" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "Any type of email adress." ;
     dcterms:modified "2016-01-22" ;
     dcterms:valid "start=2016-01-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -67,6 +68,9 @@ ogit._contact:Vcard
     rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description """vCard is a specification developed by the IETF for the description of people and organisations. Recently, vCard has been 
+significantly updated to Version 4 as documented in [RFC6350]. Typically, vCard objects are encoded in its own defined 
+text-based syntax or XML renderings.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -119,6 +123,7 @@ ogit._contact:addressLocality
     rdfs:label "addressLocality" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "The locality belonging to an address. For example, Frankfurt am Main" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;

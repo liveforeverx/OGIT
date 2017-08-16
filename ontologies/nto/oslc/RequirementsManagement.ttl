@@ -28,6 +28,8 @@ ogit.oslc-reqman:Requirement
     rdfs:label "Requirement" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
+    dcterms:description """Statement of
+            need.""" ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -46,6 +48,8 @@ ogit.oslc-reqman:RequirementCollection
     rdfs:label "RequirementCollection" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
+    dcterms:description """Collection of requirements. A
+            collection uses zero or more requirements.""" ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -67,6 +71,9 @@ ogit.oslc-reqman:affectedBy
     rdfs:label "affectedBy" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
+    dcterms:description """Expresses an affects relationship
+            between entities. For example, a defect may be said to affect a
+            requirement.""" ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -86,6 +93,9 @@ ogit.oslc-reqman:elaboratedBy
     rdfs:label "elaboratedBy" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
+    dcterms:description """Expresses an elaboration relationship
+            between entities. For example, a model element can elaborate a
+            requirement.""" ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -105,6 +115,8 @@ ogit.oslc-reqman:implementedBy
     rdfs:label "implementedBy" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
+    dcterms:description """Expresses an implementation
+            relationship between entities.""" ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -124,6 +136,9 @@ ogit.oslc-reqman:specifiedBy
     rdfs:label "specifiedBy" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
+    dcterms:description """Expresses a specification relationship
+            between entities. For example, a model element can specifiy a
+            requirement.""" ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -143,6 +158,10 @@ ogit.oslc-reqman:trackedBy
     rdfs:label "trackedBy" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
+    dcterms:description """Expresses a tracking relationship
+            between entities. For example, a change request may be said to track a
+            requirement, in that it governs the changes to a requirement according to some
+            process machinery.""" ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -162,6 +181,9 @@ ogit.oslc-reqman:uses
     rdfs:label "uses" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
+    dcterms:description """Expresses a use relationship between
+            entities. For example, a requirement collection may use a
+            requirement.""" ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -181,6 +203,9 @@ ogit.oslc-reqman:validatedBy
     rdfs:label "validatedBy" ;
     dcterms:created "2016-09-22" ;
     dcterms:creator "OGIT Importer" ;
+    dcterms:description """Expresses a validation relationship
+            between entities. For example, a test plan may be said to validated a requirement
+            collection.""" ;
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;

@@ -29,6 +29,7 @@ ogit.datacenter:Building
     rdfs:label "Building" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "A physical Building within a location" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -74,6 +75,7 @@ ogit.datacenter:Cooling
     rdfs:label "Cooling" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "A physical Cooling Unit used for data centers and computer rooms" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -112,6 +114,7 @@ ogit.datacenter:Datacenter
     rdfs:label "Datacenter" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "Represents a datacenter" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -140,6 +143,7 @@ ogit.datacenter:PowerDistributionUnit
     rdfs:label "PowerDistributionUnit" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "A PDU is a physical device for connecting datacenter devices with power sources" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -173,6 +177,7 @@ ogit.datacenter:Rack
     rdfs:label "Rack" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "A physical rack housing datacenter equipment" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -253,6 +258,7 @@ ogit.datacenter:Room
     rdfs:label "Room" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "A physical Room within a Building" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -310,6 +316,7 @@ ogit.datacenter:Section
     rdfs:label "Section" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "A physical/logical Section within a Room" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -350,6 +357,7 @@ ogit.datacenter:Sensor
     rdfs:label "Sensor" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "A sensor is a device that measures a physical quantity and converts it into a 'signal' which can be read by an observer or by an instrument." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -378,6 +386,7 @@ ogit.datacenter:Server
     rdfs:label "Server" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "A physical/logical Server" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -426,6 +435,7 @@ ogit.datacenter:Storage
     rdfs:label "Storage" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "A physical/logical Storage Unit" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -474,6 +484,7 @@ ogit.datacenter:UPS
     rdfs:label "UPS" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "A physical UPS device (Uninterruptible power supply)" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -499,6 +510,7 @@ ogit.datacenter:datacenterId
     rdfs:label "datacenterId" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "ID of a Datacenter" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -515,6 +527,7 @@ ogit.datacenter:moveProductionDate
     rdfs:label "moveProductionDate" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "Date when an device is moved to production use." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -531,6 +544,7 @@ ogit.datacenter:rackId
     rdfs:label "rackId" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "ID of a rack within a datacenter." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -547,6 +561,7 @@ ogit.datacenter:rackUnit
     rdfs:label "rackUnit" ;
     dcterms:created "1970-01-01" ;
     dcterms:creator "Aymen Ayoub" ;
+    dcterms:description "The name of the RackUnit within a datacenter." ;
     dcterms:modified "2015-10-15" ;
     dcterms:valid "start=2015-10-15;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -563,6 +578,7 @@ ogit.datacenter:roomId
     rdfs:label "roomId" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "ID of a Room in a Datacenter." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -579,6 +595,7 @@ ogit.datacenter:sectionId
     rdfs:label "sectionId" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "ID of a datacenter section." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;

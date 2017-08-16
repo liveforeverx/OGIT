@@ -26,10 +26,11 @@ ogit:survey
 #
 ogit.survey:Iteration
     a ogit.core:Entity ;
-    rdfs:label "SurveyIteration" ;
+    rdfs:label "Iteration" ;
     dcterms:created "2016-08-08" ;
     dcterms:creator "Alexander Ryabtsev" ;
-    dcterms:modified "2016-08-08" ;
+    dcterms:description "Iteration of the same survey" ;
+    dcterms:modified "2017-06-09" ;
     dcterms:valid "start=2016-08-08;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:any-attributes "true" ;
@@ -74,10 +75,11 @@ ogit.survey:Iteration
 
 ogit.survey:Reply
     a ogit.core:Entity ;
-    rdfs:label "SurveyReply" ;
+    rdfs:label "Reply" ;
     dcterms:created "2016-08-08" ;
     dcterms:creator "Alexander Ryabtsev" ;
-    dcterms:modified "2016-08-08" ;
+    dcterms:description "User's reply on a survey" ;
+    dcterms:modified "2017-06-09" ;
     dcterms:valid "start=2016-08-08;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:any-attributes "true" ;
@@ -92,7 +94,7 @@ ogit.survey:Reply
             dcterms:creator "Fabian Meyer" ;
             dcterms:date "2017-06-09" ;
             dcterms:description "Renamed entity to Reply, moved it from BusinessProcess to Survey NTO and replaced ogit/surveyQuestions with ogit/question" ;
-            dcterms:identifier "3"
+            dcterms:identifier "2"
         ] ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
@@ -119,7 +121,8 @@ ogit.survey:Survey
     rdfs:label "Survey" ;
     dcterms:created "2016-07-12" ;
     dcterms:creator "Arthur Shoba" ;
-    dcterms:modified "2016-08-08" ;
+    dcterms:description "List with questions" ;
+    dcterms:modified "2017-06-09" ;
     dcterms:valid "start=2016-07-12;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:any-attributes "true" ;

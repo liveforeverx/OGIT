@@ -29,6 +29,8 @@ ogit.dataProcessing:Program
     rdfs:label "DataProcessingProgram" ;
     dcterms:created "2017-02-28" ;
     dcterms:creator "Oday Jubran" ;
+    dcterms:description """The program is used for creating data streams,
+		and applying transformations to them.""" ;
     dcterms:modified "2017-02-28" ;
     dcterms:valid "start=2017-02-28;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -95,6 +97,7 @@ ogit.dataProcessing:internalJobId
     rdfs:label "DataProcessingInternalJobId" ;
     dcterms:created "2017-02-28" ;
     dcterms:creator "Oday Jubran" ;
+    dcterms:description "The job id of the running program" ;
     dcterms:modified "2017-02-28" ;
     dcterms:valid "start=2017-02-28;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -111,6 +114,7 @@ ogit.dataProcessing:outputType
     rdfs:label "DataProcessingOutputType" ;
     dcterms:created "2017-02-27" ;
     dcterms:creator "Oday Jubran" ;
+    dcterms:description "The type of the output data stream" ;
     dcterms:modified "2017-02-27" ;
     dcterms:valid "start=2017-02-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -127,6 +131,7 @@ ogit.dataProcessing:parameters
     rdfs:label "DataProcessingParameters" ;
     dcterms:created "2017-02-27" ;
     dcterms:creator "Oday Jubran" ;
+    dcterms:description "The query parameters" ;
     dcterms:modified "2017-02-27" ;
     dcterms:valid "start=2017-02-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -143,6 +148,7 @@ ogit.dataProcessing:query
     rdfs:label "DataProcessingQuery" ;
     dcterms:created "2017-02-27" ;
     dcterms:creator "Oday Jubran" ;
+    dcterms:description "The query of the input data stream" ;
     dcterms:modified "2017-02-27" ;
     dcterms:valid "start=2017-02-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -159,6 +165,7 @@ ogit.dataProcessing:queryType
     rdfs:label "DataProcessingQueryType" ;
     dcterms:created "2017-02-27" ;
     dcterms:creator "Oday Jubran" ;
+    dcterms:description "Type of the query of the input data stream" ;
     dcterms:modified "2017-02-27" ;
     dcterms:valid "start=2017-02-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -175,6 +182,7 @@ ogit.dataProcessing:state
     rdfs:label "DataProcessingState" ;
     dcterms:created "2017-02-28" ;
     dcterms:creator "Oday Jubran" ;
+    dcterms:description "The state of the program: idle, started, stopped" ;
     dcterms:modified "2017-02-28" ;
     dcterms:valid "start=2017-02-28;" ;
     ogit.core:admin-contact "arago GmbH" ;

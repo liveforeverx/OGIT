@@ -24,9 +24,8 @@ ogit:knowledge
 # Entities
 #
 ogit.knowledge:AcquisitionSession
-    a rdfs:Class ;
+    a ogit.core:Entity ;
     rdfs:label "AcquisitionSession" ;
-    rdfs:subClassOf ogit.core:Entity ;
     dcterms:created "2017-03-14" ;
     dcterms:creator "cwalker@arago.de" ;
     dcterms:description "Entity to describe a Knowledge Acquisition Session, linking to Conversation, Structured Task Steps and the Knowledge" ;
@@ -47,6 +46,7 @@ ogit.knowledge:Step
     rdfs:label "Step" ;
     dcterms:created "2017-03-14" ;
     dcterms:creator "cwalker@arago.de" ;
+    dcterms:description "this is the description of a single - hopefully atomic - step in (potentially multi-step) process" ;
     dcterms:modified "2017-03-14" ;
     dcterms:valid "start=2017-03-14;" ;
     ogit.core:admin-contact "arago GmbH" ;

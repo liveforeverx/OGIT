@@ -37,6 +37,7 @@ ogit._event:Event
     rdfs:subClassOf ogit.graphit:Node ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "This entity defines any type of event records, e.g. ITSM/produced by event management systems, Business Process etc." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -198,6 +199,7 @@ ogit._event:acknowledgeState
     rdfs:label "acknowledgeState" ;
     dcterms:created "2016-08-03" ;
     dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines the state of acknowledgement." ;
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -214,6 +216,7 @@ ogit._event:certainty
     rdfs:label "certainty" ;
     dcterms:created "2016-08-03" ;
     dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines the certainty of an event" ;
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -230,6 +233,7 @@ ogit._event:expiresAt
     rdfs:label "expiresAt" ;
     dcterms:created "2016-08-03" ;
     dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines the date something expires." ;
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -246,6 +250,7 @@ ogit._event:firstOccurredAt
     rdfs:label "firstOccurredAt" ;
     dcterms:created "2016-08-03" ;
     dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines the date of first occurrence of an event" ;
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -262,6 +267,7 @@ ogit._event:isRoot
     rdfs:label "isRoot" ;
     dcterms:created "2016-08-03" ;
     dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines if an event is root." ;
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -278,6 +284,7 @@ ogit._event:lastClearedAt
     rdfs:label "lastClearedAt" ;
     dcterms:created "2016-08-03" ;
     dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines the date an event has been cleared." ;
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -294,6 +301,7 @@ ogit._event:lastOccurredAt
     rdfs:label "lastOccurredAt" ;
     dcterms:created "2016-08-03" ;
     dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines the date of last occurrence of an event" ;
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -310,6 +318,7 @@ ogit._event:maintenanceState
     rdfs:label "maintenanceState" ;
     dcterms:created "2016-08-03" ;
     dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines the state of maintenance." ;
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -326,6 +335,7 @@ ogit._event:occurenceCount
     rdfs:label "occurenceCount" ;
     dcterms:created "2016-08-03" ;
     dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines the number an event occured." ;
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -342,6 +352,7 @@ ogit._event:resource
     rdfs:label "resource" ;
     dcterms:created "2016-08-03" ;
     dcterms:creator "Philipp Pelchmann" ;
+    dcterms:description "Defines the name of an resource on an instance e.g. disk or database." ;
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -358,6 +369,7 @@ ogit._event:severity
     rdfs:label "severity" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "Stores a severity. E.g. Some event management systems might store a severity field." ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;

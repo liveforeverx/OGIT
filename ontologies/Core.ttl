@@ -112,6 +112,7 @@ ogit.core:Entity
         rdfs:Class ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
+    dcterms:description "Represents the class of all Entities"@en ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
@@ -308,11 +309,13 @@ ogit.core:validation-type
 #
 ogit.core:any-attributes
     a ogit.core:Verb ;
-    rdfs:label "any-attributes" .
+    rdfs:label "any-attributes" ;
+    dcterms:description "The list of any Attributes for an Entity"@en .
 
 ogit.core:history
     a ogit.core:Verb ;
-    rdfs:label "history" .
+    rdfs:label "history" ;
+    dcterms:description "This represents the change history of an Entity, Attribute or Verb"@en .
 
 #
 # Other
@@ -321,5 +324,5 @@ ogit.core:original
     a owl:AnnotationProperty ;
     rdfs:label "original" ;
     dcterms:description """In a vocabulary imported into OGIT, an ogit.core:original reference can be added to elements to
-        refer to the original URI of the element. It is less strict than owl:sameAs, but unlike rdfs:seeAlso, it should
-        always refer to a URI.""" .
+refer to the original URI of the element. It is less strict than owl:sameAs, but unlike rdfs:seeAlso, it should
+always refer to a URI.""" .

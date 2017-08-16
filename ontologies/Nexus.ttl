@@ -590,6 +590,12 @@ ogit._person:Person sh:property
         sh:path ogit.foundation:supervises
     ],
     [
+        sh:class ogit.software:Application ;
+        sh:description "" ;
+        sh:minCount 0 ;
+        sh:path ogit.foundation:installs
+    ],
+    [
         sh:class ogit.serviceManagement:ChangeRequest ;
         sh:description "" ;
         sh:minCount 0 ;

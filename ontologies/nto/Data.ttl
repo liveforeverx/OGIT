@@ -5,7 +5,6 @@
 @prefix owl:       <http://www.w3.org/2002/07/owl#> .
 @prefix purl:      <http://www.purl.org/> .
 @prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh:        <http://www.w3.org/ns/shacl#> .
 @prefix vann:      <http://purl.org/vocab/vann/> .
 
 #
@@ -29,6 +28,7 @@ ogit.data:Log
     rdfs:label "Log" ;
     dcterms:created "2017-06-14" ;
     dcterms:creator "stravlos@arago.de" ;
+    dcterms:description "This entity defines a log. It used to store a sequence of log records" ;
     dcterms:modified "2017-06-14" ;
     dcterms:valid "start=2017-06-14;" ;
     ogit.core:admin-contact "arago GmbH" ;

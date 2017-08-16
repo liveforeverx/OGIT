@@ -43,30 +43,25 @@ ogit.software:Application
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.software:SoftwareComponent ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.software:SoftwareComponent
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:name ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:name
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:url
+            sh:path ogit.foundation:url ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:version
+            sh:path ogit.foundation:version ;
+            sh:maxCount 1
         ] .
 
 ogit.software:Connector
@@ -95,14 +90,12 @@ ogit.software:Connector
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:connectorId
+            sh:path ogit.foundation:connectorId ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ] .
 
 ogit.software:Data
@@ -123,9 +116,8 @@ ogit.software:Data
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:type
+            sh:path ogit.foundation:type ;
+            sh:maxCount 1
         ] .
 
 ogit.software:SoftwareComponent
@@ -147,21 +139,16 @@ ogit.software:SoftwareComponent
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.software:SoftwareComponent ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:connects
+            sh:path ogit.foundation:connects ;
+            sh:class ogit.software:SoftwareComponent
         ],
         [
-            sh:class ogit.software:SoftwareComponent ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.software:SoftwareComponent
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.software:SoftwareConnection
@@ -183,19 +170,14 @@ ogit.software:SoftwareConnection
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.software:Data ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:transfers
+            sh:path ogit.foundation:transfers ;
+            sh:class ogit.software:Data
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:type
+            sh:path ogit.foundation:type ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.software:SoftwareComponent ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.software:SoftwareComponent
         ] .

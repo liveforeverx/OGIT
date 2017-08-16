@@ -15,8 +15,8 @@ ogit:graphit
     a owl:Ontology ;
     rdfs:label "OGIT GraphIT" ;
     owl:imports
-        purl:ogit,
-        ogit:graphit ;
+        ogit:graphit,
+        purl:ogit ;
     owl:versionInfo "__OGIT_VERSION__" ;
     dcterms:contributor "Fabian Meyer" ;
     dcterms:creator "arago GmbH" ;
@@ -49,74 +49,74 @@ top level of the SGO.""" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit.graphit:_content ;
             sh:minCount 1 ;
-            sh:path ogit.graphit:_id
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.graphit:_created-on ;
             sh:minCount 1 ;
-            sh:path ogit.graphit:_type
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.graphit:_creator ;
             sh:minCount 1 ;
-            sh:path ogit.graphit:_owner
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.graphit:_deleted-on ;
             sh:minCount 1 ;
-            sh:path ogit.graphit:_modified-on
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.graphit:_edge_id ;
             sh:minCount 1 ;
-            sh:path ogit.graphit:_modified-by
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.graphit:_graphtype ;
             sh:minCount 1 ;
-            sh:path ogit.graphit:_graphtype
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.graphit:_id ;
             sh:minCount 1 ;
-            sh:path ogit.graphit:_is-deleted
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.graphit:_is-deleted ;
             sh:minCount 1 ;
-            sh:path ogit.graphit:_deleted-on
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.graphit:_modified-by ;
             sh:minCount 1 ;
-            sh:path ogit.graphit:_creator
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.graphit:_modified-on ;
             sh:minCount 1 ;
-            sh:path ogit.graphit:_created-on
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.graphit:_owner ;
             sh:minCount 1 ;
-            sh:path ogit.graphit:_version
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.graphit:_tags ;
             sh:minCount 1 ;
-            sh:path ogit.graphit:_content
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.graphit:_type ;
             sh:minCount 1 ;
-            sh:path ogit.graphit:_tags
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.graphit:_version ;
             sh:minCount 1 ;
-            sh:path ogit.graphit:_edge_id
+            sh:maxCount 1
         ] .
 
 #

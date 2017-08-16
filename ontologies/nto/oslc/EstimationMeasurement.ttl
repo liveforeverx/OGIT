@@ -63,10 +63,8 @@ ogit.oslc-ems:BaselineList
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:class ogit.oslc-ems:Baseline ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:memberBaseline
+            sh:path ogit.oslc-ems:memberBaseline ;
+            sh:class ogit.oslc-ems:Baseline
         ] .
 
 ogit.oslc-ems:CdfPoint
@@ -125,10 +123,8 @@ The cumulative probability values are given by one or more
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:class ogit.oslc-ems:CdfPoint ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:cdfPoint
+            sh:path ogit.oslc-ems:cdfPoint ;
+            sh:class ogit.oslc-ems:CdfPoint
         ] .
 
 ogit.oslc-ems:Dimension
@@ -282,22 +278,16 @@ ogit.oslc-ems:Estimate
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.oslc-ems:MeasureDistribution ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:predicts
+            sh:path ogit.oslc-ems:predicts ;
+            sh:class ogit.oslc-ems:MeasureDistribution
         ],
         [
-            sh:class ogit.oslc-ems:FactDistributionTable ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:predictsTable
+            sh:path ogit.oslc-ems:predictsTable ;
+            sh:class ogit.oslc-ems:FactDistributionTable
         ],
         [
-            sh:class ogit.oslc-ems:WorkBreakdownStructure ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:predictsWbs
+            sh:path ogit.oslc-ems:predictsWbs ;
+            sh:class ogit.oslc-ems:WorkBreakdownStructure
         ] .
 
 ogit.oslc-ems:EstimateList
@@ -575,10 +565,8 @@ exactly one standard dimension value.</p>""" ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:class ogit.oslc-ems:Mapping ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:mapping
+            sh:path ogit.oslc-ems:mapping ;
+            sh:class ogit.oslc-ems:Mapping
         ] .
 
 ogit.oslc-ems:Mapping
@@ -605,10 +593,8 @@ value defined in some vocabulary.
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:class ogit.oslc-ems:DimensionMember ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:to
+            sh:path ogit.oslc-ems:to ;
+            sh:class ogit.oslc-ems:DimensionMember
         ] .
 
 ogit.oslc-ems:Measure
@@ -639,10 +625,8 @@ The numeric value of an observation, e.g. 12 or 10, is given by the property
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:class ogit.oslc-ems:UnitOfMeasure ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:unitOfMeasure
+            sh:path ogit.oslc-ems:unitOfMeasure ;
+            sh:class ogit.oslc-ems:UnitOfMeasure
         ] .
 
 ogit.oslc-ems:MeasureCell
@@ -782,10 +766,8 @@ ogit.oslc-ems:MeasurementList
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:class ogit.oslc-ems:Measurement ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:memberMeasurement
+            sh:path ogit.oslc-ems:memberMeasurement ;
+            sh:class ogit.oslc-ems:Measurement
         ] .
 
 ogit.oslc-ems:Metric
@@ -977,10 +959,8 @@ In practice, a project is often a time-bounded work effort that produces a uniqu
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:class ogit.oslc-ems:Baseline ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:currentBaseline
+            sh:path ogit.oslc-ems:currentBaseline ;
+            sh:class ogit.oslc-ems:Baseline
         ] .
 
 ogit.oslc-ems:ProjectList
@@ -1002,10 +982,8 @@ ogit.oslc-ems:ProjectList
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:class ogit.oslc-ems:Project ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:memberProject
+            sh:path ogit.oslc-ems:memberProject ;
+            sh:class ogit.oslc-ems:Project
         ] .
 
 ogit.oslc-ems:Quantile
@@ -1074,10 +1052,8 @@ The cumulative probability values are given by one or more
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:class ogit.oslc-ems:Quantile ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:quantile
+            sh:path ogit.oslc-ems:quantile ;
+            sh:class ogit.oslc-ems:Quantile
         ] .
 
 ogit.oslc-ems:ReliabilityMetric
@@ -1130,28 +1106,20 @@ These assumptions are used as inputs to estimates.""" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.oslc-ems:WorkBreakdownStructure ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:assumesWbs
+            sh:path ogit.oslc-ems:assumes ;
+            sh:class ogit.oslc-ems:MeasureDistribution
         ],
         [
-            sh:class ogit.oslc-ems:FactDistributionTable ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:assumesTable
+            sh:path ogit.oslc-ems:assumesTable ;
+            sh:class ogit.oslc-ems:FactDistributionTable
         ],
         [
-            sh:class ogit.oslc-ems:Scenario ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:extendsScenario
+            sh:path ogit.oslc-ems:assumesWbs ;
+            sh:class ogit.oslc-ems:WorkBreakdownStructure
         ],
         [
-            sh:class ogit.oslc-ems:MeasureDistribution ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:assumes
+            sh:path ogit.oslc-ems:extendsScenario ;
+            sh:class ogit.oslc-ems:Scenario
         ] .
 
 ogit.oslc-ems:ScenarioList
@@ -1173,10 +1141,8 @@ ogit.oslc-ems:ScenarioList
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:class ogit.oslc-ems:Scenario ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:memberScenario
+            sh:path ogit.oslc-ems:memberScenario ;
+            sh:class ogit.oslc-ems:Scenario
         ] .
 
 ogit.oslc-ems:Service
@@ -1201,34 +1167,24 @@ Each instance of an service has a set of resource containers that contain resour
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.oslc-ems:MeasurementList ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:measurementList
+            sh:path ogit.oslc-ems:baselineList ;
+            sh:class ogit.oslc-ems:BaselineList
         ],
         [
-            sh:class ogit.oslc-ems:ScenarioList ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:scenarioList
+            sh:path ogit.oslc-ems:estimateList ;
+            sh:class ogit.oslc-ems:EstimateList
         ],
         [
-            sh:class ogit.oslc-ems:ProjectList ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:projectList
+            sh:path ogit.oslc-ems:measurementList ;
+            sh:class ogit.oslc-ems:MeasurementList
         ],
         [
-            sh:class ogit.oslc-ems:BaselineList ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:baselineList
+            sh:path ogit.oslc-ems:projectList ;
+            sh:class ogit.oslc-ems:ProjectList
         ],
         [
-            sh:class ogit.oslc-ems:EstimateList ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:estimateList
+            sh:path ogit.oslc-ems:scenarioList ;
+            sh:class ogit.oslc-ems:ScenarioList
         ] .
 
 ogit.oslc-ems:SizeMetric
@@ -1406,10 +1362,8 @@ The included or linked WBS content MUST be in the specified format.</p>""" ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:class ogit.oslc-ems:WbsFormat ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.oslc-ems:wbsFormat
+            sh:path ogit.oslc-ems:wbsFormat ;
+            sh:class ogit.oslc-ems:WbsFormat
         ] .
 
 #

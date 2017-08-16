@@ -84,290 +84,207 @@ ogit._person:Person
         ] ;
     ogit.graphit:indexed-attributes
         ogit._person:alternativeName,
-        ogit.foundation:email,
         ogit._person:firstName,
-        ogit._person:lastName ;
+        ogit._person:lastName,
+        ogit.foundation:email ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._contract:Contract ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:approves
+            sh:path ogit._location:locatedIn ;
+            sh:class ogit._location:Location
         ],
         [
-            sh:class ogit._data:Timeseries ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:tracks
+            sh:path ogit._person:alternativeName ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._course:Status ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:worksOn
+            sh:path ogit._person:dislikes ;
+            sh:class ogit._person:Person
         ],
         [
-            sh:class ogit._license:License ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit._person:fax ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._contract:Contract ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:supervises
+            sh:path ogit._person:firstName ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._configuration:ConfigurationItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:supports
+            sh:path ogit._person:invites ;
+            sh:class ogit._person:Person
         ],
         [
-            sh:class ogit._configuration:ConfigurationItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:creates
+            sh:path ogit._person:lastName ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._configuration:ConfigurationItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:updates
+            sh:path ogit._person:likes ;
+            sh:class ogit._person:Person
         ],
         [
-            sh:class ogit._license:LicenseRequest ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:requests
+            sh:path ogit._person:middleName ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._contract:Contract ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:concludes
+            sh:path ogit._person:notification ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._device:Device ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:manages
+            sh:path ogit._person:officePhone ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._alerting:Alert ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:creates
+            sh:path ogit._person:otherPhone ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._alerting:Alert ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:rejects
+            sh:path ogit._person:position ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._event:Event ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:owns
+            sh:path ogit.foundation:approves ;
+            sh:class ogit._contract:Contract
         ],
         [
-            sh:class ogit._media:Comment ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:ignores
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit._organization:Organization
         ],
         [
-            sh:class ogit._process:Notification ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:communicatesWith ;
+            sh:class ogit._person:Person
         ],
         [
-            sh:class ogit._process:Notification ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:receives
+            sh:path ogit.foundation:complies ;
+            sh:class ogit._organization:Role
         ],
         [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:represents
+            sh:path ogit.foundation:concludes ;
+            sh:class ogit._contract:Contract
         ],
         [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:manages
+            sh:path ogit.foundation:creates ;
+            sh:class ogit._alerting:Alert
         ],
         [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit.foundation:creates ;
+            sh:class ogit._configuration:ConfigurationItem
         ],
         [
-            sh:class ogit._organization:Role ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:complies
+            sh:path ogit.foundation:email ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:leads
+            sh:path ogit.foundation:follows ;
+            sh:class ogit._person:Person
         ],
         [
-            sh:class ogit._contact:Vcard ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:owns
+            sh:path ogit.foundation:ignores ;
+            sh:class ogit._media:Comment
         ],
         [
-            sh:class ogit._location:Location ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit._location:locatedIn
+            sh:path ogit.foundation:leads ;
+            sh:class ogit._organization:Organization
         ],
         [
-            sh:class ogit.graphit:Node ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.graphit:_owns
+            sh:path ogit.foundation:manages ;
+            sh:class ogit._device:Device
         ],
         [
-            sh:class ogit.graphit:Node ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.graphit:_created
+            sh:path ogit.foundation:manages ;
+            sh:class ogit._organization:Organization
         ],
         [
-            sh:class ogit.graphit:Node ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.graphit:_deleted
+            sh:path ogit.foundation:mobilePhone ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:email
+            sh:path ogit.foundation:owns ;
+            sh:class ogit._contact:Vcard
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:mobilePhone
+            sh:path ogit.foundation:owns ;
+            sh:class ogit._event:Event
         ],
         [
-            sh:class ogit._person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:reports
+            sh:path ogit.foundation:receives ;
+            sh:class ogit._process:Notification
         ],
         [
-            sh:class ogit._person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:rejects ;
+            sh:class ogit._alerting:Alert
         ],
         [
-            sh:class ogit._person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:represents
+            sh:path ogit.foundation:reports ;
+            sh:class ogit._person:Person
         ],
         [
-            sh:class ogit._person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:communicatesWith
+            sh:path ogit.foundation:represents ;
+            sh:class ogit._organization:Organization
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:title
+            sh:path ogit.foundation:represents ;
+            sh:class ogit._person:Person
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:webPage
+            sh:path ogit.foundation:requests ;
+            sh:class ogit._license:LicenseRequest
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sourceId
+            sh:path ogit.foundation:sends ;
+            sh:class ogit._process:Notification
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:status
+            sh:path ogit.foundation:sourceId ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit._person:invites
+            sh:path ogit.foundation:status ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit._person:dislikes
+            sh:path ogit.foundation:supervises ;
+            sh:class ogit._contract:Contract
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._person:firstName
+            sh:path ogit.foundation:supports ;
+            sh:class ogit._configuration:ConfigurationItem
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._person:lastName
+            sh:path ogit.foundation:title ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._person:middleName
+            sh:path ogit.foundation:tracks ;
+            sh:class ogit._data:Timeseries
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._person:officePhone
+            sh:path ogit.foundation:updates ;
+            sh:class ogit._configuration:ConfigurationItem
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._person:otherPhone
+            sh:path ogit.foundation:uses ;
+            sh:class ogit._license:License
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._person:position
+            sh:path ogit.foundation:webPage ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit._person:likes
+            sh:path ogit.foundation:worksOn ;
+            sh:class ogit._course:Status
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._person:alternativeName
+            sh:path ogit.graphit:_created ;
+            sh:class ogit.graphit:Node
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._person:fax
+            sh:path ogit.graphit:_deleted ;
+            sh:class ogit.graphit:Node
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._person:notification
+            sh:path ogit.graphit:_owns ;
+            sh:class ogit.graphit:Node
         ] .
 
 #

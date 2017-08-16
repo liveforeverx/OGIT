@@ -44,14 +44,14 @@ ogit.userMeta:Filter
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:content ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:name
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:name ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:content
+            sh:maxCount 1
         ] .
 
 ogit.userMeta:Game
@@ -73,10 +73,8 @@ ogit.userMeta:Game
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:class ogit.userMeta:Question ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.userMeta:asks
+            sh:path ogit.userMeta:asks ;
+            sh:class ogit.userMeta:Question
         ] .
 
 ogit.userMeta:Question

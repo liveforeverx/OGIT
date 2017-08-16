@@ -58,22 +58,16 @@ ogit._process:Notification
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:hiddenBy
+            sh:path ogit.foundation:hiddenBy ;
+            sh:class ogit._person:Person
         ],
         [
-            sh:class ogit._person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:readBy
+            sh:path ogit.foundation:readBy ;
+            sh:class ogit._person:Person
         ],
         [
-            sh:class ogit._person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:seenBy
+            sh:path ogit.foundation:seenBy ;
+            sh:class ogit._person:Person
         ] .
 
 ogit._process:Question
@@ -89,45 +83,39 @@ Additionaly could be used to create new Issue from some form.""" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Arthur Shoba" ;
             dcterms:date "2016-07-12" ;
             dcterms:description "Added new attribute `capacity`" ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ] ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._data:Timeseries ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:generates
+            sh:path ogit._process:response ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:status
+            sh:path ogit.foundation:capacity ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:question
+            sh:path ogit.foundation:generates ;
+            sh:class ogit._data:Timeseries
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._process:response
+            sh:path ogit.foundation:question ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:capacity
+            sh:path ogit.foundation:status ;
+            sh:maxCount 1
         ] .
 
 ogit._process:Task
@@ -158,35 +146,28 @@ ogit._process:Task
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._data:Timeseries ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:generates
+            sh:path ogit._process:positionNumber ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:generates ;
+            sh:class ogit._data:Timeseries
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:status
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._process:positionNumber
+            sh:path ogit.foundation:status ;
+            sh:maxCount 1
         ] .
 
 ogit._process:TaskList
@@ -210,21 +191,17 @@ ogit._process:TaskList
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._data:Timeseries ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:generates
+            sh:path ogit.foundation:contains ;
+            sh:class ogit._process:Task
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:generates ;
+            sh:class ogit._data:Timeseries
+        ],
+        [
+            sh:path ogit.foundation:name ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:name
-        ],
-        [
-            sh:class ogit._process:Task ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:maxCount 1
         ] .
 
 #

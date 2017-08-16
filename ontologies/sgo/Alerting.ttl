@@ -62,53 +62,43 @@ ogit._alerting:Alert
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._contract:Contract ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit._alerting:alerts ;
+            sh:class ogit._person:Person
         ],
         [
-            sh:class ogit._license:License ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
-        ],
-        [
-            sh:class ogit._person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit._alerting:alerts
-        ],
-        [
-            sh:class ogit._event:Event ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:triggers
-        ],
-        [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:category ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:type
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:contains ;
+            sh:class ogit._contract:Contract
+        ],
+        [
+            sh:path ogit.foundation:contains ;
+            sh:class ogit._license:License
+        ],
+        [
+            sh:path ogit.foundation:creator ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:creator
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:function ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:triggers ;
+            sh:class ogit._event:Event
+        ],
+        [
+            sh:path ogit.foundation:type ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:category
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:function
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:value
+            sh:path ogit.foundation:value ;
+            sh:maxCount 1
         ] .
 
 #

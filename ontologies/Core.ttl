@@ -44,64 +44,60 @@ ogit.core:Attribute
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path dcterms:created ;
             sh:minCount 1 ;
-            sh:path rdfs:label
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path dcterms:creator ;
             sh:minCount 1 ;
-            sh:path dcterms:description
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path dcterms:description ;
             sh:minCount 1 ;
-            sh:path dcterms:valid
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path dcterms:modified ;
             sh:minCount 1 ;
-            sh:path dcterms:creator
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path dcterms:valid ;
             sh:minCount 1 ;
-            sh:path dcterms:created
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.core:admin-contact ;
             sh:minCount 1 ;
-            sh:path dcterms:modified
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.core:deleter ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:hide ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:tech-contact ;
             sh:minCount 1 ;
-            sh:path ogit.core:admin-contact
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.core:validation-parameter ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:validation-type ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path rdfs:label ;
             sh:minCount 1 ;
-            sh:path ogit.core:tech-contact
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.core:deleter
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.core:hide
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.core:validation-type
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.core:validation-parameter
+            sh:maxCount 1
         ] .
 
 ogit.core:Entity
@@ -127,69 +123,67 @@ ogit.core:Entity
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path dcterms:created ;
             sh:minCount 1 ;
-            sh:path rdfs:label
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path dcterms:creator ;
             sh:minCount 1 ;
-            sh:path ogit.core:scope
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path dcterms:description ;
             sh:minCount 1 ;
-            sh:path dcterms:description
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path dcterms:description ;
             sh:minCount 1 ;
-            sh:path dcterms:valid
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path dcterms:modified ;
             sh:minCount 1 ;
-            sh:path dcterms:creator
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path dcterms:valid ;
             sh:minCount 1 ;
-            sh:path dcterms:modified
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.core:admin-contact ;
             sh:minCount 1 ;
-            sh:path ogit.core:admin-contact
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.core:deleter ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:hide ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:scope ;
             sh:minCount 1 ;
-            sh:path ogit.core:tech-contact
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.core:tech-contact ;
             sh:minCount 1 ;
-            sh:path dcterms:description
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path rdfs:label ;
             sh:minCount 1 ;
-            sh:path dcterms:created
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path rdfs:subClassOf ;
             sh:minCount 1 ;
-            sh:path rdfs:subClassOf
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.core:deleter
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.core:hide
+            sh:maxCount 1
         ] .
 
 ogit.core:Verb
@@ -214,59 +208,56 @@ ogit.core:Verb
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path dcterms:created ;
             sh:minCount 1 ;
-            sh:path dcterms:description
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path dcterms:creator ;
             sh:minCount 1 ;
-            sh:path rdfs:label
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path dcterms:description ;
             sh:minCount 1 ;
-            sh:path dcterms:valid
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path dcterms:modified ;
             sh:minCount 1 ;
-            sh:path dcterms:creator
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path dcterms:valid ;
             sh:minCount 1 ;
-            sh:path dcterms:created
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.core:admin-contact ;
             sh:minCount 1 ;
-            sh:path dcterms:modified
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.core:cardinality ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:deleter ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:hide ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.core:tech-contact ;
             sh:minCount 1 ;
-            sh:path ogit.core:tech-contact
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path rdfs:label ;
             sh:minCount 1 ;
-            sh:path ogit.core:admin-contact
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.core:deleter
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.core:hide
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.core:cardinality
+            sh:maxCount 1
         ] .
 
 #

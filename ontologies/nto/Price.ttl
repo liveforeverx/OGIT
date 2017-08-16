@@ -43,24 +43,22 @@ ogit.price:Invoice
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:currency ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:currency
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.price:priceAmount ;
             sh:minCount 1 ;
-            sh:path ogit.price:priceAmount
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:maxCount 1
         ] .
 
 ogit.price:PriceSpecification

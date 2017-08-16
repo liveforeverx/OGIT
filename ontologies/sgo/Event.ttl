@@ -58,137 +58,110 @@ ogit._event:Event
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._configuration:ConfigurationItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:affects
+            sh:path ogit._event:acknowledgeState ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:affects
+            sh:path ogit._event:certainty ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._event:Event ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit._event:expiresAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._event:firstOccurredAt ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._event:isRoot ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._event:lastClearedAt ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._event:lastOccurredAt ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._event:maintenanceState ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._event:occurenceCount ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._event:resource ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._event:severity ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:affects ;
+            sh:class ogit._configuration:ConfigurationItem
+        ],
+        [
+            sh:path ogit.foundation:affects ;
+            sh:class ogit._person:Person
+        ],
+        [
+            sh:path ogit.foundation:category ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:id ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:name
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:impact ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:instance ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:lastUpdatedAt ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:name ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:id
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:status
+            sh:path ogit.foundation:openedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:priority ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._event:severity
+            sh:path ogit.foundation:relates ;
+            sh:class ogit._event:Event
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:summary
+            sh:path ogit.foundation:status ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:impact
+            sh:path ogit.foundation:summary ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:priority
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._event:certainty
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._event:firstOccurredAt
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._event:lastOccurredAt
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:openedAt
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:lastUpdatedAt
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._event:lastClearedAt
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._event:expiresAt
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._event:occurenceCount
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:type
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:category
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:instance
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._event:resource
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._event:maintenanceState
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._event:acknowledgeState
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._event:isRoot
+            sh:path ogit.foundation:type ;
+            sh:maxCount 1
         ] .
 
 #

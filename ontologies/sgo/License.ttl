@@ -64,66 +64,53 @@ ogit._license:License
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._data:Timeseries ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:generates
+            sh:path ogit._license:licenseKey ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._license:License ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:precedes
+            sh:path ogit._license:licenseType ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:createdAt ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:creator ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:deadline ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:expirationDate ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:generates ;
+            sh:class ogit._data:Timeseries
+        ],
+        [
+            sh:path ogit.foundation:id ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:id
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:validFrom
+            sh:path ogit.foundation:precedes ;
+            sh:class ogit._license:License
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:expirationDate
+            sh:path ogit.foundation:subject ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:subject
+            sh:path ogit.foundation:validFrom ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._license:licenseKey
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:createdAt
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._license:licenseType
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:creator
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:validTo
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:deadline
+            sh:path ogit.foundation:validTo ;
+            sh:maxCount 1
         ] .
 
 ogit._license:LicenseRequest
@@ -140,44 +127,40 @@ A request might contain a valid LicenseToken to indicate that this request is pr
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Miroslaw Glusiuk" ;
             dcterms:date "2017-08-14" ;
             dcterms:description "added ogit/subject" ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ] ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit._license:licenseRequestStatus ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:id ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:id
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:subject
+            sh:path ogit.foundation:subject ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:token
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._license:licenseRequestStatus
+            sh:path ogit.foundation:token ;
+            sh:maxCount 1
         ] .
 
 ogit._license:LicenseToken
@@ -201,40 +184,33 @@ This will created by a license admin and communicated to potential licence reque
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit._license:licenseType ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit._organization:Organization
+        ],
+        [
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:expirationDate ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:id ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:id
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:token ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:validFrom
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:expirationDate
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._license:licenseType
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:token
+            sh:path ogit.foundation:validFrom ;
+            sh:maxCount 1
         ] .
 
 #
@@ -268,16 +244,16 @@ ogit._license:licenseRequestStatus
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Miroslaw Glusiuk" ;
             dcterms:date "2017-08-10" ;
             dcterms:description "add more states" ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ] ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:validation-parameter "^(pending|send|approved|rejected|failed|received|cancelled)$" ;

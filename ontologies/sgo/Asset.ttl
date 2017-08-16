@@ -58,36 +58,26 @@ Knowledge, People, Information, Applications, Infrastructure, Financial Capital.
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit._location:locatedIn ;
+            sh:class ogit._location:Location
         ],
         [
-            sh:class ogit._contract:Contract ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit._organization:Organization
         ],
         [
-            sh:class ogit._device:Device ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:describes
+            sh:path ogit.foundation:contains ;
+            sh:class ogit._contract:Contract
         ],
         [
-            sh:class ogit._location:Location ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit._location:locatedIn
+            sh:path ogit.foundation:describes ;
+            sh:class ogit._device:Device
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ] .

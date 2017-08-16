@@ -44,49 +44,45 @@ ogit.dataProcessing:Program
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit.dataProcessing:internalJobId ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.dataProcessing:outputType ;
             sh:minCount 1 ;
-            sh:path ogit.dataProcessing:queryType
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.dataProcessing:parameters ;
             sh:minCount 1 ;
-            sh:path ogit.dataProcessing:query
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.dataProcessing:query ;
             sh:minCount 1 ;
-            sh:path ogit.dataProcessing:parameters
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.dataProcessing:queryType ;
             sh:minCount 1 ;
-            sh:path ogit.dataProcessing:outputType
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.dataProcessing:state ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:content ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:content
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.dataProcessing:internalJobId
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.dataProcessing:state
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ] .
 
 #

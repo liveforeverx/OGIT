@@ -51,15 +51,13 @@ ogit._contact:Email
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:connects
+            sh:path ogit.foundation:connects ;
+            sh:class ogit._person:Person
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:status ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:status
+            sh:maxCount 1
         ] .
 
 ogit._contact:Vcard
@@ -84,35 +82,28 @@ text-based syntax or XML renderings.""" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._location:Location ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit._location:locatedIn
+            sh:path ogit._contact:addressLocality ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:phone
+            sh:path ogit._location:locatedIn ;
+            sh:class ogit._location:Location
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:mobilePhone
+            sh:path ogit.foundation:mobilePhone ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:streetAddress
+            sh:path ogit.foundation:phone ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._contact:addressLocality
+            sh:path ogit.foundation:postalCode ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:postalCode
+            sh:path ogit.foundation:streetAddress ;
+            sh:maxCount 1
         ] .
 
 #

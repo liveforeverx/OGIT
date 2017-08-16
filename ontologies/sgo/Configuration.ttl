@@ -56,12 +56,6 @@ not saved in GraphIT, instead it contains an external url link for it.""" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-08-20" ;
             dcterms:description "updated" ;
@@ -72,6 +66,12 @@ not saved in GraphIT, instead it contains an external url link for it.""" ;
             dcterms:date "2015-09-01" ;
             dcterms:description "updated /ogit/id to be an optional attribute." ;
             dcterms:identifier "3"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ],
         [
             dcterms:creator "arago Technologies" ;
@@ -89,94 +89,72 @@ not saved in GraphIT, instead it contains an external url link for it.""" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._media:Comment ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit._configuration:lastUpdatedBy ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit._configuration:size ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._contract:Contract ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit._configuration:sourceTable ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit.foundation:accessControl ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._license:License ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit._contract:Contract
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit._license:License
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit._media:Comment
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:url
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit._organization:Organization
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:type
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit._person:Person
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:sourceTable
+            sh:path ogit.foundation:content ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:creator
+            sh:path ogit.foundation:createdAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:createdAt
+            sh:path ogit.foundation:creator ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:lastUpdatedBy
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:lastUpdatedAt
+            sh:path ogit.foundation:lastUpdatedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:content
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:size
+            sh:path ogit.foundation:type ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:accessControl
+            sh:path ogit.foundation:url ;
+            sh:maxCount 1
         ] .
 
 ogit._configuration:ConfigurationItem
@@ -203,12 +181,6 @@ ogit._configuration:ConfigurationItem
             dcterms:identifier "2"
         ],
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-08-17" ;
-            dcterms:description "updated" ;
-            dcterms:identifier "3"
-        ],
-        [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-08-21" ;
             dcterms:description "updated" ;
@@ -225,346 +197,276 @@ ogit._configuration:ConfigurationItem
             dcterms:date "2015-10-15" ;
             dcterms:description "updated" ;
             dcterms:identifier "6"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-08-17" ;
+            dcterms:description "updated" ;
+            dcterms:identifier "3"
         ] ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:corresponds
+            sh:path ogit._configuration:asset ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._device:Device ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit._configuration:assetTag ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:corresponds
+            sh:path ogit._configuration:assignedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._asset:Asset ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit._configuration:availability ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._configuration:ConfigurationItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:manages
+            sh:path ogit._configuration:businessCriticality ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._configuration:ConfigurationItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit._configuration:checkedInAt ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._configuration:ConfigurationItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:provides
+            sh:path ogit._configuration:checkedOutAt ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._configuration:ConfigurationItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:runsOn
+            sh:path ogit._configuration:ciType ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._configuration:class ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:confidentiality ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:contact ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:deliveredAt ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:externalId ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:faultCount ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:installStatus ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:installedAt ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:integrity ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:inventoryNumber ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:invoiceNumber ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:isCritical ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:isSupported ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:lastScannedAt ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:leaseContract ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:modelNumber ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:operationalStatus ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:orderedAt ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:pendingChange ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:productOrderNumber ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:purchasedAt ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:securityClass ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:serviceContract ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:shortDescription ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:soxClass ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:subCategory ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:subType ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:updateCount ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:vendor ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._configuration:virtualizes ;
+            sh:class ogit._configuration:ConfigurationItem
+        ],
+        [
+            sh:path ogit.foundation:category ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:comment ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:contains ;
+            sh:class ogit._configuration:ConfigurationItem
+        ],
+        [
+            sh:path ogit.foundation:content ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:corresponds ;
+            sh:class ogit._organization:Organization
+        ],
+        [
+            sh:path ogit.foundation:corresponds ;
+            sh:class ogit._person:Person
+        ],
+        [
+            sh:path ogit.foundation:createdAt ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:deployedTo ;
+            sh:class ogit._configuration:ConfigurationItem
+        ],
+        [
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:endOfWarranty ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:id ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:id
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:impact ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:externalId
+            sh:path ogit.foundation:lastUpdatedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:class
+            sh:path ogit.foundation:manages ;
+            sh:class ogit._configuration:ConfigurationItem
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:type
+            sh:path ogit.foundation:model ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:ciType
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:subType
+            sh:path ogit.foundation:priority ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:status
+            sh:path ogit.foundation:provides ;
+            sh:class ogit._configuration:ConfigurationItem
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:category
+            sh:path ogit.foundation:relates ;
+            sh:class ogit._asset:Asset
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:priority
+            sh:path ogit.foundation:relates ;
+            sh:class ogit._configuration:Attachment
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:impact
+            sh:path ogit.foundation:relates ;
+            sh:class ogit._configuration:ConfigurationItem
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:isCritical
+            sh:path ogit.foundation:relates ;
+            sh:class ogit._device:Device
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:isSupported
+            sh:path ogit.foundation:runsOn ;
+            sh:class ogit._configuration:ConfigurationItem
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:businessCriticality
+            sh:path ogit.foundation:startedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:version
+            sh:path ogit.foundation:status ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:inventoryNumber
+            sh:path ogit.foundation:type ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:invoiceNumber
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:productOrderNumber
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:leaseContract
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:asset
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:assetTag
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:pendingChange
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:faultCount
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:updateCount
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:lastUpdatedAt
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:createdAt
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:startedAt
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:installedAt
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:orderedAt
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:deliveredAt
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:purchasedAt
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:lastScannedAt
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:endOfWarranty
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:vendor
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:shortDescription
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:installStatus
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:operationalStatus
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:comment
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:subCategory
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:securityClass
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:soxClass
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:confidentiality
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:integrity
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:availability
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:contact
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:serviceContract
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:assignedAt
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:checkedInAt
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:checkedOutAt
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:content
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:model
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:modelNumber
-        ],
-        [
-            sh:class ogit._configuration:ConfigurationItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:virtualizes
-        ],
-        [
-            sh:class ogit._configuration:Attachment ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
-        ],
-        [
-            sh:class ogit._configuration:ConfigurationItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
-        ],
-        [
-            sh:class ogit._configuration:ConfigurationItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:deployedTo
+            sh:path ogit.foundation:version ;
+            sh:maxCount 1
         ] .
 
 ogit._configuration:Parameter
@@ -587,62 +489,49 @@ ogit._configuration:Parameter
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._catalog:CatalogItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:describes
+            sh:path ogit._configuration:isMutable ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._configuration:Parameter ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:reports
+            sh:path ogit._configuration:lengthOfReportingPeriod ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._configuration:proves ;
+            sh:class ogit._configuration:Parameter
+        ],
+        [
+            sh:path ogit._configuration:values ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:category ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:describes ;
+            sh:class ogit._catalog:CatalogItem
+        ],
+        [
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:name ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:name
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:isMutable
+            sh:path ogit.foundation:reports ;
+            sh:class ogit._configuration:Parameter
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:unit
+            sh:path ogit.foundation:unit ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:lengthOfReportingPeriod
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:values
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uri
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:category
-        ],
-        [
-            sh:class ogit._configuration:Parameter ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit._configuration:proves
+            sh:path ogit.foundation:uri ;
+            sh:maxCount 1
         ] .
 
 ogit._configuration:ParameterType
@@ -666,20 +555,18 @@ by the "uses" relationship. Each Parameter can have only one those connection.""
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit._configuration:enumValues ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:name
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path ogit._configuration:enumValues
+            sh:path ogit.foundation:corresponds ;
+            sh:class ogit._configuration:Parameter
         ],
         [
-            sh:class ogit._configuration:Parameter ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:corresponds
+            sh:path ogit.foundation:name ;
+            sh:minCount 1 ;
+            sh:maxCount 1
         ] .
 
 #

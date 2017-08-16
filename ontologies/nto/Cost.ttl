@@ -42,10 +42,8 @@ ogit.cost:Budget
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:class ogit.cost:CostElement ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:covers
+            sh:path ogit.foundation:covers ;
+            sh:class ogit.cost:CostElement
         ] .
 
 ogit.cost:CostDistribution
@@ -66,10 +64,8 @@ ogit.cost:CostDistribution
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:class ogit.cost:CostElement ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.cost:CostElement
         ] .
 
 ogit.cost:CostElement
@@ -90,10 +86,8 @@ ogit.cost:CostElement
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:class ogit.cost:CostDistribution ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contributes
+            sh:path ogit.foundation:contributes ;
+            sh:class ogit.cost:CostDistribution
         ] .
 
 ogit.cost:PlanningParameter
@@ -114,10 +108,8 @@ ogit.cost:PlanningParameter
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:class ogit.cost:PlanningTemplate ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:assumes
+            sh:path ogit.foundation:assumes ;
+            sh:class ogit.cost:PlanningTemplate
         ] .
 
 ogit.cost:PlanningTemplate
@@ -139,14 +131,10 @@ ogit.cost:PlanningTemplate
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.cost:PlanningTemplate ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.cost:PlanningTemplate
         ],
         [
-            sh:class ogit.cost:CostElement ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:plans
+            sh:path ogit.foundation:plans ;
+            sh:class ogit.cost:CostElement
         ] .

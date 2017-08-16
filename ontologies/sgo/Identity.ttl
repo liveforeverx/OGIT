@@ -49,34 +49,26 @@ ogit._identity:Account
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:connects
+            sh:path ogit.foundation:connects ;
+            sh:class ogit._person:Person
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:email ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:follows ;
+            sh:class ogit._identity:Account
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:email
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._identity:Account ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ] .

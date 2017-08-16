@@ -68,74 +68,57 @@ IssueCondition is processed first.""" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.automation:MARSNode ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.automation:deployStatus ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.automation:Item ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.automation:isDeployed ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.automation:MARSNode ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:worksOn
-        ],
-        [
-            sh:maxCount 1 ;
+            sh:path ogit.automation:issueFormalRepresentation ;
             sh:minCount 1 ;
-            sh:path ogit.automation:issueFormalRepresentation
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:status
+            sh:path ogit.automation:processingTimestamp ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:subject
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.automation:DynamicEngineData
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:processingTimestamp
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.automation:Item
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:modificationTime
+            sh:path ogit.foundation:creationTime ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:creationTime
+            sh:path ogit.foundation:generates ;
+            sh:class ogit.automation:History
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:isDeployed
+            sh:path ogit.foundation:modificationTime ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:deployStatus
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.automation:MARSNode
         ],
         [
-            sh:class ogit.automation:History ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:generates
+            sh:path ogit.foundation:status ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.automation:DynamicEngineData ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:subject ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:worksOn ;
+            sh:class ogit.automation:MARSNode
         ] .
 
 ogit.automation:DynamicEngineData
@@ -157,25 +140,20 @@ ogit.automation:DynamicEngineData
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.automation:DynamicEngineData ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.automation:DynamicEngineData
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:creationTime
+            sh:path ogit.foundation:creationTime ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:modificationTime
+            sh:path ogit.foundation:modificationTime ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ] .
 
 ogit.automation:History
@@ -197,34 +175,34 @@ ogit.automation:History
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit.automation:affectedNodeId ;
             sh:minCount 1 ;
-            sh:path ogit.automation:knowledgeItemId
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.automation:command ;
             sh:minCount 1 ;
-            sh:path ogit.automation:affectedNodeId
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.automation:knowledgeItemId ;
             sh:minCount 1 ;
-            sh:path ogit.automation:command
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.automation:logLevel ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:message
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:message ;
             sh:minCount 1 ;
-            sh:path ogit.automation:logLevel
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:timestamp ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:timestamp
+            sh:maxCount 1
         ] .
 
 ogit.automation:Item
@@ -247,21 +225,17 @@ which would activate the automation Trigger.""" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.automation:Item ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.automation:Item
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.automation:KnowledgeItemAttribute
+        ],
+        [
+            sh:path ogit.foundation:name ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:name
-        ],
-        [
-            sh:class ogit.automation:KnowledgeItemAttribute ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:maxCount 1
         ] .
 
 ogit.automation:KnowledgeItem
@@ -280,6 +254,12 @@ In that case, the KnowledgeItem executes operations, which serves the exploitati
     ogit.core:any-attributes "true" ;
     ogit.core:history
         [
+            dcterms:creator "Markus Napp" ;
+            dcterms:date "2016-04-18" ;
+            dcterms:description "added indexes for creator/modifier/owner" ;
+            dcterms:identifier "3"
+        ],
+        [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
@@ -290,99 +270,75 @@ In that case, the KnowledgeItem executes operations, which serves the exploitati
             dcterms:date "2016-01-25" ;
             dcterms:description "add attributes isDeployed and deployStatus" ;
             dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "Markus Napp" ;
-            dcterms:date "2016-04-18" ;
-            dcterms:description "added indexes for creator/modifier/owner" ;
-            dcterms:identifier "3"
         ] ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.automation:MARSNodeTemplate ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.automation:deployStatus ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.automation:Trigger ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
-        ],
-        [
-            sh:class ogit.automation:AutomationIssue ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:worksOn
-        ],
-        [
-            sh:maxCount 1 ;
+            sh:path ogit.automation:deployToEngine ;
             sh:minCount 1 ;
-            sh:path ogit.automation:knowledgeItemFormalRepresentation
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.automation:isDeployed ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.automation:knowledgeItemFormalRepresentation ;
             sh:minCount 1 ;
-            sh:path ogit.automation:deployToEngine
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:modificationTime
+            sh:path ogit.automation:knowledgeItemTier ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:isValid
+            sh:path ogit.foundation:accessControl ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:knowledgeItemTier
+            sh:path ogit.foundation:changeLog ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:creationTime
+            sh:path ogit.foundation:connects ;
+            sh:class ogit.automation:KnowledgeItem
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.automation:Trigger
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:creationTime ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:changeLog
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:accessControl
+            sh:path ogit.foundation:isValid ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:isDeployed
+            sh:path ogit.foundation:modificationTime ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:deployStatus
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.automation:KnowledgeItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:connects
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.automation:MARSNodeTemplate
+        ],
+        [
+            sh:path ogit.foundation:worksOn ;
+            sh:class ogit.automation:AutomationIssue
         ] .
 
 ogit.automation:KnowledgeItemAttribute
@@ -404,19 +360,18 @@ ogit.automation:KnowledgeItemAttribute
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:mode ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:name ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:value
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:mode
+            sh:path ogit.foundation:value ;
+            sh:minCount 1 ;
+            sh:maxCount 1
         ] .
 
 ogit.automation:MAID
@@ -458,9 +413,9 @@ to the monitoring systems becomes possible.""" ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:maxCount 1 ;
+            sh:path ogit.automation:maidFormalRepresentation ;
             sh:minCount 1 ;
-            sh:path ogit.automation:maidFormalRepresentation
+            sh:maxCount 1
         ] .
 
 ogit.automation:MARSModel
@@ -486,20 +441,16 @@ to any MARSNode being part of that model.""" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.automation:MARSNode
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.automation:MARSNode ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ] .
 
 ogit.automation:MARSModelTemplate
@@ -522,20 +473,17 @@ service offering.""" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.automation:MARSNodeTemplate
+        ],
+        [
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:name ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:name
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
-        ],
-        [
-            sh:class ogit.automation:MARSNodeTemplate ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:maxCount 1
         ] .
 
 ogit.automation:MARSNode
@@ -553,12 +501,6 @@ describe the business view of the IT environment.""" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-07-24" ;
             dcterms:description "updated" ;
@@ -571,22 +513,10 @@ describe the business view of the IT environment.""" ;
             dcterms:identifier "3"
         ],
         [
-            dcterms:creator "Philipp Pelchmann" ;
-            dcterms:date "2015-07-27" ;
-            dcterms:description "added os informaiton" ;
-            dcterms:identifier "4"
-        ],
-        [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-08-19" ;
             dcterms:description "added buildType and serialNumber" ;
             dcterms:identifier "5"
-        ],
-        [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-10-07" ;
-            dcterms:description "add attributes modificationTime and creationTime" ;
-            dcterms:identifier "6"
         ],
         [
             dcterms:creator "Aymen Ayoub" ;
@@ -599,6 +529,18 @@ describe the business view of the IT environment.""" ;
             dcterms:date "2015-10-16" ;
             dcterms:description "added a new attribute rackUnit" ;
             dcterms:identifier "8"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-10-07" ;
+            dcterms:description "add attributes modificationTime and creationTime" ;
+            dcterms:identifier "6"
         ],
         [
             dcterms:creator "Peter Larem" ;
@@ -629,470 +571,375 @@ describe the business view of the IT environment.""" ;
             dcterms:date "2017-05-11" ;
             dcterms:description "added a new attribute lifecycle" ;
             dcterms:identifier "13"
+        ],
+        [
+            dcterms:creator "Philipp Pelchmann" ;
+            dcterms:date "2015-07-27" ;
+            dcterms:description "added os informaiton" ;
+            dcterms:identifier "4"
         ] ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.automation:MARSNode ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:affects
+            sh:path ogit.automation:additionalMacAddress ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.automation:MARSNodeTemplate ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.automation:adminUrl ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.automation:MARSNode ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:provides
+            sh:path ogit.automation:appInfrastructureType ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.automation:MARSNode ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:dependsOn
+            sh:path ogit.automation:appInstanceType ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.automation:MARSNode ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:runsOn
+            sh:path ogit.automation:appServer ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.automation:MARSNode ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:deployedTo
+            sh:path ogit.automation:basicConfigId ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.automation:DynamicEngineData ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.automation:brand ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.automation:MARSNode ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.automation:buildName ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:marsNodeFormalRepresentation
+            sh:path ogit.automation:buildType ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:marsNodeType
+            sh:path ogit.automation:companyName ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.automation:contextPath ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:serialNumber
+            sh:path ogit.automation:cpuCoreCount ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:macAddress
+            sh:path ogit.automation:cpuCount ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:ipAddress
+            sh:path ogit.automation:cpuManufacturer ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:manufacturer
+            sh:path ogit.automation:cpuModel ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:endOfWarranty
+            sh:path ogit.automation:cpuSpeed ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:software
+            sh:path ogit.automation:cpuType ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:softwareKey
+            sh:path ogit.automation:dataClassification ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:adminUrl
+            sh:path ogit.automation:dataPrivacy ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:tcpPort
+            sh:path ogit.automation:databaseSchema ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:licenseAvailability
+            sh:path ogit.automation:databaseServer ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:licenseName
+            sh:path ogit.automation:deployStatus ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:installPath
+            sh:path ogit.automation:diskCount ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:serviceStatus
+            sh:path ogit.automation:diskSpace ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:serviceType
+            sh:path ogit.automation:domain ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:serviceName
+            sh:path ogit.automation:exchangeRate ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:dataClassification
+            sh:path ogit.automation:firewallStatus ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:dataPrivacy
+            sh:path ogit.automation:firmwareVersion ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:portNumber
+            sh:path ogit.automation:fqdn ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:serialNumber
+            sh:path ogit.automation:host ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:portNumberListener
+            sh:path ogit.automation:installCount ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:servletName
+            sh:path ogit.automation:installPath ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:servletClass
+            sh:path ogit.automation:isDeployed ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:contextPath
+            sh:path ogit.automation:licenseAvailability ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:appServer
+            sh:path ogit.automation:licenseName ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:host
+            sh:path ogit.automation:licenseType ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:objectIdentifier
+            sh:path ogit.automation:lifecycle ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:memory
+            sh:path ogit.automation:marsNodeFormalRepresentation ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:domain
+            sh:path ogit.automation:marsNodeType ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:exchangeRate
+            sh:path ogit.automation:memory ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:firewallStatus
+            sh:path ogit.automation:middlewareType ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:additionalMacAddress
+            sh:path ogit.automation:moveToProductionAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:osManufacturer
+            sh:path ogit.automation:objectIdentifier ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:serviceId
+            sh:path ogit.automation:osKey ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:appInstanceType
+            sh:path ogit.automation:osLicense ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:appInfrastructureType
+            sh:path ogit.automation:osManufacturer ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:buildName
+            sh:path ogit.automation:osName ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:buildType
+            sh:path ogit.automation:osServicePack ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:licenseType
+            sh:path ogit.automation:osVersion ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:webServer
+            sh:path ogit.automation:patchNumber ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:osKey
+            sh:path ogit.automation:portNumber ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:osName
+            sh:path ogit.automation:portNumberListener ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:osLicense
+            sh:path ogit.automation:projectName ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:osVersion
+            sh:path ogit.automation:serialNumber ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:osServicePack
+            sh:path ogit.automation:serviceId ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:moveToProductionAt
+            sh:path ogit.automation:serviceName ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:diskSpace
+            sh:path ogit.automation:serviceStatus ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:cpuModel
+            sh:path ogit.automation:serviceType ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:cpuManufacturer
+            sh:path ogit.automation:servletClass ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:cpuCoreCount
+            sh:path ogit.automation:servletName ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:cpuType
+            sh:path ogit.automation:software ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:cpuSpeed
+            sh:path ogit.automation:softwareKey ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:cpuCount
+            sh:path ogit.automation:systemClass ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:diskCount
+            sh:path ogit.automation:systemType ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:firmwareVersion
+            sh:path ogit.automation:tcpPort ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:virtualSystemType
+            sh:path ogit.automation:virtualMachineName ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:virtualMachineName
+            sh:path ogit.automation:virtualSystemName ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:brand
+            sh:path ogit.automation:virtualSystemType ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:fqdn
+            sh:path ogit.automation:webServer ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:installCount
+            sh:path ogit.foundation:affects ;
+            sh:class ogit.automation:MARSNode
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:basicConfigId
+            sh:path ogit.foundation:connectorId ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:virtualSystemName
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.automation:DynamicEngineData
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:middlewareType
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.automation:MARSNode
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:databaseSchema
+            sh:path ogit.foundation:creationTime ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:databaseServer
+            sh:path ogit.foundation:dependsOn ;
+            sh:class ogit.automation:MARSNode
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:systemType
+            sh:path ogit.foundation:deployedTo ;
+            sh:class ogit.automation:MARSNode
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:systemClass
+            sh:path ogit.foundation:endOfWarranty ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:patchNumber
+            sh:path ogit.foundation:hosts ;
+            sh:class ogit.automation:MARSNode
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:modificationTime
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:creationTime
+            sh:path ogit.foundation:ipAddress ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:connectorId
+            sh:path ogit.foundation:macAddress ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:manufacturer ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:companyName
+            sh:path ogit.foundation:modificationTime ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:projectName
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:isDeployed
+            sh:path ogit.foundation:provides ;
+            sh:class ogit.automation:MARSNode
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:deployStatus
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.automation:KnowledgeItem
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:lifecycle
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.automation:MARSNode
         ],
         [
-            sh:class ogit.automation:MARSNode ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.automation:MARSNodeTemplate
         ],
         [
-            sh:class ogit.automation:KnowledgeItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.foundation:runsOn ;
+            sh:class ogit.automation:MARSNode
         ],
         [
-            sh:class ogit.automation:MARSNode ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:hosts
+            sh:path ogit.foundation:serialNumber ;
+            sh:maxCount 1
         ] .
 
 ogit.automation:MARSNodeTemplate
@@ -1115,31 +962,25 @@ service offering and to enable definition of cost elements (ogit/Cost/CostElemen
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit.automation:marsNodeFormalRepresentation ;
             sh:minCount 1 ;
-            sh:path ogit.automation:marsNodeFormalRepresentation
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.automation:marsNodeType
+            sh:path ogit.automation:marsNodeType ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:status
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.automation:MARSNode
         ],
         [
-            sh:class ogit.automation:MARSNodeTemplate ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.automation:MARSNodeTemplate
         ],
         [
-            sh:class ogit.automation:MARSNode ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.foundation:status ;
+            sh:maxCount 1
         ] .
 
 ogit.automation:Trigger
@@ -1161,15 +1002,13 @@ ogit.automation:Trigger
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.automation:Item
         ],
         [
-            sh:class ogit.automation:Item ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:description ;
+            sh:minCount 1 ;
+            sh:maxCount 1
         ] .
 
 #

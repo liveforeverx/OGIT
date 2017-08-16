@@ -49,69 +49,65 @@ ogit._ontology:OntologyAttribute
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyAdminContact ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyId
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyCreated ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyDescription
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyCreator ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyName
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyDeleter ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._ontology:ontologyDescription ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyValidFrom
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyHide ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._ontology:ontologyId ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyCreator
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyModified ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyCreated
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyName ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyModified
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyTechContact ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyAdminContact
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyValidFrom ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyTechContact
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._ontology:ontologyDeleter
+            sh:path ogit._ontology:ontologyValidationParameter ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._ontology:ontologyHide
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._ontology:ontologyValidationType
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._ontology:ontologyValidationParameter
+            sh:path ogit._ontology:ontologyValidationType ;
+            sh:maxCount 1
         ] .
 
 ogit._ontology:OntologyEntity
@@ -136,103 +132,92 @@ whenever there is a Schema describing/restricting the entity's content there wil
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:index ;
+            sh:class ogit._ontology:OntologyAttribute
+        ],
+        [
+            sh:path ogit._ontology:ontologyAdminContact ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyScope
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyCreated ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyId
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyCreator ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:description
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyDeleter ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._ontology:ontologyDescription ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyName
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyHide ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._ontology:ontologyId ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyValidFrom
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyModified ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyCreator
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyName ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyModified
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyParent ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyAdminContact
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyScope ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyTechContact
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyTechContact ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyDescription
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyValidFrom ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyCreated
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyValidUntil ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._ontology:opts ;
+            sh:class ogit._ontology:OntologyAttribute
+        ],
+        [
+            sh:path ogit.foundation:demands ;
+            sh:class ogit._ontology:OntologyAttribute
+        ],
+        [
+            sh:path ogit.foundation:description ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyParent
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._ontology:ontologyDeleter
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._ontology:ontologyHide
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._ontology:ontologyValidUntil
-        ],
-        [
-            sh:class ogit._ontology:Schema ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
-        ],
-        [
-            sh:class ogit._ontology:OntologyAttribute ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:demands
-        ],
-        [
-            sh:class ogit._ontology:OntologyAttribute ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit._ontology:index
-        ],
-        [
-            sh:class ogit._ontology:OntologyAttribute ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit._ontology:opts
+            sh:path ogit.foundation:uses ;
+            sh:class ogit._ontology:Schema
         ] .
 
 ogit._ontology:OntologyVerb
@@ -256,64 +241,61 @@ ogit._ontology:OntologyVerb
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyAdminContact ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyId
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyCardinality ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._ontology:ontologyCreated ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyDescription
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyCreator ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyName
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyDeleter ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._ontology:ontologyDescription ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyValidFrom
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyHide ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._ontology:ontologyId ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyCreator
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyModified ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyCreated
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyName ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyModified
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyTechContact ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyAdminContact
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit._ontology:ontologyValidFrom ;
             sh:minCount 1 ;
-            sh:path ogit._ontology:ontologyTechContact
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._ontology:ontologyDeleter
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._ontology:ontologyHide
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._ontology:ontologyCardinality
+            sh:maxCount 1
         ] .
 
 ogit._ontology:Schema
@@ -336,19 +318,17 @@ ogit._ontology:Schema
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:content ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:content
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uri
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:uri ;
+            sh:maxCount 1
         ] .
 
 #

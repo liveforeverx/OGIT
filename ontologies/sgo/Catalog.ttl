@@ -49,41 +49,33 @@ ogit._catalog:Catalog
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._location:Region ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:validFor
+            sh:path ogit.foundation:contains ;
+            sh:class ogit._catalog:CatalogItem
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:name ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:name
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:type ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:validFor ;
+            sh:class ogit._location:Region
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:version
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:type
-        ],
-        [
-            sh:class ogit._catalog:CatalogItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:version ;
+            sh:maxCount 1
         ] .
 
 ogit._catalog:CatalogItem
@@ -106,18 +98,15 @@ ogit._catalog:CatalogItem
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:name ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:name
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
-        ],
-        [
-            sh:class ogit._catalog:CatalogItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:requires
+            sh:path ogit.foundation:requires ;
+            sh:class ogit._catalog:CatalogItem
         ] .

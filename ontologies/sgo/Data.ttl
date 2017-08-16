@@ -47,10 +47,8 @@ the global ontology. The storage of data through this entity is discouraged due 
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:class ogit._data:CustomApplicationData ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit._data:CustomApplicationData
         ] .
 
 ogit._data:Timeseries
@@ -77,22 +75,18 @@ ogit._data:Timeseries
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:unit
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:instance ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:instance
+            sh:path ogit.foundation:unit ;
+            sh:maxCount 1
         ] .

@@ -36,16 +36,16 @@ ogit.survey:Iteration
     ogit.core:any-attributes "true" ;
     ogit.core:history
         [
-            dcterms:creator "Arthur Shoba" ;
-            dcterms:date "2016-07-12" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Alexander Ryabtsev" ;
             dcterms:date "2016-08-08" ;
             dcterms:description "Attributes rework" ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Arthur Shoba" ;
+            dcterms:date "2016-07-12" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ],
         [
             dcterms:creator "Fabian Meyer" ;
@@ -57,20 +57,16 @@ ogit.survey:Iteration
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.survey:Survey ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit.survey:Survey
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:startedAt
+            sh:path ogit.foundation:startedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:status
+            sh:path ogit.foundation:status ;
+            sh:maxCount 1
         ] .
 
 ogit.survey:Reply
@@ -100,20 +96,16 @@ ogit.survey:Reply
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:question
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit.survey:Iteration
         ],
         [
-            sh:class ogit.survey:Iteration ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit.foundation:comment ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:comment
+            sh:path ogit.foundation:question ;
+            sh:maxCount 1
         ] .
 
 ogit.survey:Survey
@@ -128,16 +120,16 @@ ogit.survey:Survey
     ogit.core:any-attributes "true" ;
     ogit.core:history
         [
-            dcterms:creator "Arthur Shoba" ;
-            dcterms:date "2016-07-12" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Alexander Ryabtsev" ;
             dcterms:date "2016-08-08" ;
             dcterms:description "Attributes rework" ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Arthur Shoba" ;
+            dcterms:date "2016-07-12" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ],
         [
             dcterms:creator "Fabian Meyer" ;
@@ -149,37 +141,30 @@ ogit.survey:Survey
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:question
+            sh:path ogit.foundation:category ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:schedule
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:title
+            sh:path ogit.foundation:question ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:category
+            sh:path ogit.foundation:schedule ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:status ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:type
+            sh:path ogit.foundation:title ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:status
+            sh:path ogit.foundation:type ;
+            sh:maxCount 1
         ] .

@@ -49,12 +49,6 @@ ogit._media:Comment
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-08-20" ;
             dcterms:description "updated Attribute ogit/id and ogit/content added." ;
@@ -68,6 +62,12 @@ ogit._media:Comment
         ],
         [
             dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
             dcterms:date "2015-10-16" ;
             dcterms:description "added ogit/creater as optional." ;
             dcterms:identifier "4"
@@ -76,61 +76,44 @@ ogit._media:Comment
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._license:License ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:connects
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit._event:Event
         ],
         [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:connects
+            sh:path ogit.foundation:connects ;
+            sh:class ogit._contract:Contract
         ],
         [
-            sh:class ogit._contract:Contract ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:connects
+            sh:path ogit.foundation:connects ;
+            sh:class ogit._license:License
         ],
         [
-            sh:class ogit._event:Event ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit.foundation:connects ;
+            sh:class ogit._media:Comment
         ],
         [
-            sh:class ogit._person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:connects
+            sh:path ogit.foundation:connects ;
+            sh:class ogit._media:Hyperlink
         ],
         [
-            sh:class ogit._media:Comment ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:connects
+            sh:path ogit.foundation:connects ;
+            sh:class ogit._organization:Organization
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:connects ;
+            sh:class ogit._person:Person
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:content
+            sh:path ogit.foundation:content ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:creator
+            sh:path ogit.foundation:creator ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._media:Hyperlink ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:connects
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit._media:Hyperlink
@@ -154,14 +137,13 @@ ogit._media:Hyperlink
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path ogit.foundation:url
+            sh:path ogit.foundation:title ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:title
+            sh:path ogit.foundation:url ;
+            sh:minCount 1 ;
+            sh:maxCount 1
         ] .
 
 ogit._media:Note
@@ -184,12 +166,10 @@ ogit._media:Note
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:content ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:content
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ] .

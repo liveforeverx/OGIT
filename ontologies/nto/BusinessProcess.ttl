@@ -43,14 +43,12 @@ ogit.businessProcess:BusinessProcess
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ] .
 
 ogit.businessProcess:BusinessRuleTask
@@ -72,134 +70,92 @@ ogit.businessProcess:BusinessRuleTask
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:InstantiatedReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:InstantiatedReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:BusinessRuleTask
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:InstantiatedReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:ScriptTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ManualTask
         ],
         [
-            sh:class ogit.businessProcess:ScriptTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:SendTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ScriptTask
         ],
         [
-            sh:class ogit.businessProcess:ReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:SendTask
         ],
         [
-            sh:class ogit.businessProcess:UndefinedTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ServiceTask
         ],
         [
-            sh:class ogit.businessProcess:ReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:UndefinedTask
         ],
         [
-            sh:class ogit.businessProcess:ServiceTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:UserTask
         ],
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:BusinessRuleTask
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:InstantiatedReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:UndefinedTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ManualTask
         ],
         [
-            sh:class ogit.businessProcess:ManualTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:ServiceTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ScriptTask
         ],
         [
-            sh:class ogit.businessProcess:BusinessRuleTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:SendTask
         ],
         [
-            sh:class ogit.businessProcess:UserTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ServiceTask
         ],
         [
-            sh:class ogit.businessProcess:UserTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:UndefinedTask
         ],
         [
-            sh:class ogit.businessProcess:SendTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:UserTask
         ],
         [
-            sh:class ogit.businessProcess:ManualTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
         ],
         [
-            sh:class ogit.businessProcess:BusinessRuleTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:CancelEvent
@@ -221,31 +177,25 @@ ogit.businessProcess:CancelEvent
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
-        ],
-        [
-            sh:maxCount 1 ;
+            sh:path ogit.businessProcess:businessProcessEventType ;
             sh:minCount 1 ;
-            sh:path ogit.businessProcess:businessProcessEventType
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
+        ],
+        [
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:CompensationEvent
@@ -277,31 +227,25 @@ Commissioning a service provider""" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit.businessProcess:businessProcessEventType ;
             sh:minCount 1 ;
-            sh:path ogit.businessProcess:businessProcessEventType
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:ConditionalEvent
@@ -325,31 +269,25 @@ event. A process cannot therefore conditional event trigger a conditional event.
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit.businessProcess:businessProcessEventType ;
             sh:minCount 1 ;
-            sh:path ogit.businessProcess:businessProcessEventType
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:DataObject
@@ -370,10 +308,8 @@ ogit.businessProcess:DataObject
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:DataStore
@@ -395,16 +331,12 @@ ogit.businessProcess:DataStore
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
         ],
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:ErrorEvent
@@ -432,31 +364,25 @@ recognize the failure.""" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
-        ],
-        [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
-        ],
-        [
-            sh:maxCount 1 ;
+            sh:path ogit.businessProcess:businessProcessEventType ;
             sh:minCount 1 ;
-            sh:path ogit.businessProcess:businessProcessEventType
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
+        ],
+        [
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:EscalationEvent
@@ -479,31 +405,25 @@ We discuss it in here TODO with the help of an example.""" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
-        ],
-        [
-            sh:maxCount 1 ;
+            sh:path ogit.businessProcess:businessProcessEventType ;
             sh:minCount 1 ;
-            sh:path ogit.businessProcess:businessProcessEventType
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
+        ],
+        [
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:EventBasedGateway
@@ -539,26 +459,20 @@ An intermediateCatchEvent connected to an event-based Gateway must have a single
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:ExclusiveGateway
@@ -582,26 +496,20 @@ If no sequence flow can be selected (no condition evaluates to 'true') this will
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:InclusiveGateway
@@ -640,31 +548,25 @@ condition that evaluates to 'true'.""" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
-        ],
-        [
-            sh:maxCount 1 ;
+            sh:path ogit.businessProcess:gatewayFunctionality ;
             sh:minCount 1 ;
-            sh:path ogit.businessProcess:gatewayFunctionality
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
+        ],
+        [
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:InstantiatedReceiveTask
@@ -686,134 +588,92 @@ ogit.businessProcess:InstantiatedReceiveTask
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:UserTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:BusinessRuleTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:BusinessRuleTask
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:InstantiatedReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:ScriptTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ManualTask
         ],
         [
-            sh:class ogit.businessProcess:ServiceTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:ManualTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ScriptTask
         ],
         [
-            sh:class ogit.businessProcess:UndefinedTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:SendTask
         ],
         [
-            sh:class ogit.businessProcess:UserTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ServiceTask
         ],
         [
-            sh:class ogit.businessProcess:InstantiatedReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:UndefinedTask
         ],
         [
-            sh:class ogit.businessProcess:SendTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:UserTask
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:BusinessRuleTask
         ],
         [
-            sh:class ogit.businessProcess:UndefinedTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:InstantiatedReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:ServiceTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ManualTask
         ],
         [
-            sh:class ogit.businessProcess:ReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:ScriptTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ScriptTask
         ],
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:SendTask
         ],
         [
-            sh:class ogit.businessProcess:ManualTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ServiceTask
         ],
         [
-            sh:class ogit.businessProcess:BusinessRuleTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:UndefinedTask
         ],
         [
-            sh:class ogit.businessProcess:InstantiatedReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:UserTask
         ],
         [
-            sh:class ogit.businessProcess:ReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
         ],
         [
-            sh:class ogit.businessProcess:SendTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:LinkEvent
@@ -835,31 +695,25 @@ ogit.businessProcess:LinkEvent
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit.businessProcess:businessProcessEventType ;
             sh:minCount 1 ;
-            sh:path ogit.businessProcess:businessProcessEventType
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
         ],
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:ManualTask
@@ -881,134 +735,92 @@ ogit.businessProcess:ManualTask
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:UserTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:UndefinedTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:BusinessRuleTask
         ],
         [
-            sh:class ogit.businessProcess:ServiceTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:InstantiatedReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ManualTask
         ],
         [
-            sh:class ogit.businessProcess:ReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:ScriptTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ScriptTask
         ],
         [
-            sh:class ogit.businessProcess:ReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:SendTask
         ],
         [
-            sh:class ogit.businessProcess:SendTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ServiceTask
         ],
         [
-            sh:class ogit.businessProcess:UndefinedTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:UndefinedTask
         ],
         [
-            sh:class ogit.businessProcess:ServiceTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:UserTask
         ],
         [
-            sh:class ogit.businessProcess:BusinessRuleTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:BusinessRuleTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:BusinessRuleTask
         ],
         [
-            sh:class ogit.businessProcess:InstantiatedReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:InstantiatedReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ManualTask
         ],
         [
-            sh:class ogit.businessProcess:SendTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ReceiveTask
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ScriptTask
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:SendTask
         ],
         [
-            sh:class ogit.businessProcess:InstantiatedReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ServiceTask
         ],
         [
-            sh:class ogit.businessProcess:ScriptTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:UndefinedTask
         ],
         [
-            sh:class ogit.businessProcess:ManualTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:UserTask
         ],
         [
-            sh:class ogit.businessProcess:UserTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
         ],
         [
-            sh:class ogit.businessProcess:ManualTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:MessageEvent
@@ -1032,31 +844,25 @@ Any action that refers to a specific addressee and represents or contains inform
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
-        ],
-        [
-            sh:maxCount 1 ;
+            sh:path ogit.businessProcess:businessProcessEventType ;
             sh:minCount 1 ;
-            sh:path ogit.businessProcess:businessProcessEventType
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
+        ],
+        [
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:MultipleEvent
@@ -1078,31 +884,25 @@ ogit.businessProcess:MultipleEvent
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
-        ],
-        [
-            sh:maxCount 1 ;
+            sh:path ogit.businessProcess:businessProcessEventType ;
             sh:minCount 1 ;
-            sh:path ogit.businessProcess:businessProcessEventType
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
+        ],
+        [
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:NoneEvent
@@ -1124,31 +924,25 @@ ogit.businessProcess:NoneEvent
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
-        ],
-        [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
-        ],
-        [
-            sh:maxCount 1 ;
+            sh:path ogit.businessProcess:businessProcessEventType ;
             sh:minCount 1 ;
-            sh:path ogit.businessProcess:businessProcessEventType
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
+        ],
+        [
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:ParallelGateway
@@ -1185,31 +979,25 @@ are defined on the sequence flow connected with the parallel gateway, they are s
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit.businessProcess:gatewayFunctionality ;
             sh:minCount 1 ;
-            sh:path ogit.businessProcess:gatewayFunctionality
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:ProcessLane
@@ -1231,38 +1019,28 @@ ogit.businessProcess:ProcessLane
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:ProcessLane ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ProcessLane
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ProcessPool
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
         ],
         [
-            sh:class ogit.businessProcess:ProcessPool ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:ProcessPool
@@ -1284,44 +1062,32 @@ ogit.businessProcess:ProcessPool
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:ProcessLane ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.businessProcess:ProcessLane
         ],
         [
-            sh:class ogit.businessProcess:ProcessPool ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ProcessLane
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ProcessPool
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
         ],
         [
-            sh:class ogit.businessProcess:ProcessLane ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:ReceiveTask
@@ -1343,134 +1109,92 @@ ogit.businessProcess:ReceiveTask
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:SendTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:ServiceTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:BusinessRuleTask
         ],
         [
-            sh:class ogit.businessProcess:ManualTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:InstantiatedReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:ScriptTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ManualTask
         ],
         [
-            sh:class ogit.businessProcess:UndefinedTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:ScriptTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ScriptTask
         ],
         [
-            sh:class ogit.businessProcess:ServiceTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:SendTask
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ServiceTask
         ],
         [
-            sh:class ogit.businessProcess:ReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:UndefinedTask
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:UserTask
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:ManualTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:BusinessRuleTask
         ],
         [
-            sh:class ogit.businessProcess:UndefinedTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:InstantiatedReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:ReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ManualTask
         ],
         [
-            sh:class ogit.businessProcess:UserTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ScriptTask
         ],
         [
-            sh:class ogit.businessProcess:InstantiatedReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:SendTask
         ],
         [
-            sh:class ogit.businessProcess:BusinessRuleTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ServiceTask
         ],
         [
-            sh:class ogit.businessProcess:UserTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:UndefinedTask
         ],
         [
-            sh:class ogit.businessProcess:InstantiatedReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:UserTask
         ],
         [
-            sh:class ogit.businessProcess:BusinessRuleTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
         ],
         [
-            sh:class ogit.businessProcess:SendTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:ScriptTask
@@ -1492,134 +1216,92 @@ ogit.businessProcess:ScriptTask
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:InstantiatedReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:UserTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:BusinessRuleTask
         ],
         [
-            sh:class ogit.businessProcess:UndefinedTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:InstantiatedReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:ManualTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ManualTask
         ],
         [
-            sh:class ogit.businessProcess:ManualTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:UndefinedTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ScriptTask
         ],
         [
-            sh:class ogit.businessProcess:UserTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:SendTask
         ],
         [
-            sh:class ogit.businessProcess:InstantiatedReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ServiceTask
         ],
         [
-            sh:class ogit.businessProcess:ReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:UndefinedTask
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:UserTask
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:ServiceTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:BusinessRuleTask
         ],
         [
-            sh:class ogit.businessProcess:ScriptTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:InstantiatedReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:BusinessRuleTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ManualTask
         ],
         [
-            sh:class ogit.businessProcess:ServiceTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:ReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ScriptTask
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:SendTask
         ],
         [
-            sh:class ogit.businessProcess:SendTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ServiceTask
         ],
         [
-            sh:class ogit.businessProcess:SendTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:UndefinedTask
         ],
         [
-            sh:class ogit.businessProcess:BusinessRuleTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:UserTask
         ],
         [
-            sh:class ogit.businessProcess:ScriptTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
         ],
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:SendTask
@@ -1641,134 +1323,92 @@ ogit.businessProcess:SendTask
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:ScriptTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:UserTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:BusinessRuleTask
         ],
         [
-            sh:class ogit.businessProcess:BusinessRuleTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:InstantiatedReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:UndefinedTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ManualTask
         ],
         [
-            sh:class ogit.businessProcess:ManualTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:InstantiatedReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ScriptTask
         ],
         [
-            sh:class ogit.businessProcess:UserTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:SendTask
         ],
         [
-            sh:class ogit.businessProcess:BusinessRuleTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ServiceTask
         ],
         [
-            sh:class ogit.businessProcess:UndefinedTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:UndefinedTask
         ],
         [
-            sh:class ogit.businessProcess:SendTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:UserTask
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:BusinessRuleTask
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:InstantiatedReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:InstantiatedReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ManualTask
         ],
         [
-            sh:class ogit.businessProcess:SendTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:ManualTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ScriptTask
         ],
         [
-            sh:class ogit.businessProcess:ReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:SendTask
         ],
         [
-            sh:class ogit.businessProcess:ServiceTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ServiceTask
         ],
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:UndefinedTask
         ],
         [
-            sh:class ogit.businessProcess:ReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:UserTask
         ],
         [
-            sh:class ogit.businessProcess:ScriptTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
         ],
         [
-            sh:class ogit.businessProcess:ServiceTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:ServiceTask
@@ -1790,134 +1430,92 @@ ogit.businessProcess:ServiceTask
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:ServiceTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:ServiceTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:BusinessRuleTask
         ],
         [
-            sh:class ogit.businessProcess:ScriptTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:InstantiatedReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:BusinessRuleTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ManualTask
         ],
         [
-            sh:class ogit.businessProcess:InstantiatedReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:BusinessRuleTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ScriptTask
         ],
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:SendTask
         ],
         [
-            sh:class ogit.businessProcess:ReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ServiceTask
         ],
         [
-            sh:class ogit.businessProcess:ScriptTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:UndefinedTask
         ],
         [
-            sh:class ogit.businessProcess:UserTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:UserTask
         ],
         [
-            sh:class ogit.businessProcess:UndefinedTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:SendTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:BusinessRuleTask
         ],
         [
-            sh:class ogit.businessProcess:ReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:InstantiatedReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:SendTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ManualTask
         ],
         [
-            sh:class ogit.businessProcess:UndefinedTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:ManualTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ScriptTask
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:SendTask
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ServiceTask
         ],
         [
-            sh:class ogit.businessProcess:ManualTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:UndefinedTask
         ],
         [
-            sh:class ogit.businessProcess:UserTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:UserTask
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
         ],
         [
-            sh:class ogit.businessProcess:InstantiatedReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:SignalEvent
@@ -1943,31 +1541,25 @@ commercial. It is relatively undirected. Anyone who receives the signal and want
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit.businessProcess:businessProcessEventType ;
             sh:minCount 1 ;
-            sh:path ogit.businessProcess:businessProcessEventType
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:TerminationEvent
@@ -1989,31 +1581,25 @@ ogit.businessProcess:TerminationEvent
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
-        ],
-        [
-            sh:maxCount 1 ;
+            sh:path ogit.businessProcess:businessProcessEventType ;
             sh:minCount 1 ;
-            sh:path ogit.businessProcess:businessProcessEventType
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
+        ],
+        [
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:TimerEvent
@@ -2035,31 +1621,25 @@ ogit.businessProcess:TimerEvent
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
-        ],
-        [
-            sh:maxCount 1 ;
+            sh:path ogit.businessProcess:businessProcessEventType ;
             sh:minCount 1 ;
-            sh:path ogit.businessProcess:businessProcessEventType
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
+        ],
+        [
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:UndefinedTask
@@ -2081,134 +1661,92 @@ ogit.businessProcess:UndefinedTask
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:ManualTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:ServiceTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:BusinessRuleTask
         ],
         [
-            sh:class ogit.businessProcess:UndefinedTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:InstantiatedReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:SendTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ManualTask
         ],
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:UndefinedTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ScriptTask
         ],
         [
-            sh:class ogit.businessProcess:ReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:SendTask
         ],
         [
-            sh:class ogit.businessProcess:ServiceTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ServiceTask
         ],
         [
-            sh:class ogit.businessProcess:InstantiatedReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:UndefinedTask
         ],
         [
-            sh:class ogit.businessProcess:ManualTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:UserTask
         ],
         [
-            sh:class ogit.businessProcess:UserTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:InstantiatedReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:BusinessRuleTask
         ],
         [
-            sh:class ogit.businessProcess:ScriptTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:InstantiatedReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:SendTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ManualTask
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ReceiveTask
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ScriptTask
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:SendTask
         ],
         [
-            sh:class ogit.businessProcess:BusinessRuleTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ServiceTask
         ],
         [
-            sh:class ogit.businessProcess:ScriptTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:UndefinedTask
         ],
         [
-            sh:class ogit.businessProcess:ReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:UserTask
         ],
         [
-            sh:class ogit.businessProcess:BusinessRuleTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
         ],
         [
-            sh:class ogit.businessProcess:UserTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 ogit.businessProcess:UserTask
@@ -2232,134 +1770,92 @@ Typical task examples from the world of Human Workflow Management are: Check an 
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.businessProcess:DataStore ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:UserTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:BusinessRuleTask
         ],
         [
-            sh:class ogit.businessProcess:ReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:InstantiatedReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:UserTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ManualTask
         ],
         [
-            sh:class ogit.businessProcess:SendTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:BusinessRuleTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ScriptTask
         ],
         [
-            sh:class ogit.businessProcess:ServiceTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:SendTask
         ],
         [
-            sh:class ogit.businessProcess:UndefinedTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:ServiceTask
         ],
         [
-            sh:class ogit.businessProcess:ScriptTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:UndefinedTask
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:follows ;
+            sh:class ogit.businessProcess:UserTask
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.businessProcess:ManualTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:BusinessRuleTask
         ],
         [
-            sh:class ogit.businessProcess:SendTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:InstantiatedReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:ManualTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ManualTask
         ],
         [
-            sh:class ogit.businessProcess:UndefinedTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ReceiveTask
         ],
         [
-            sh:class ogit.businessProcess:ScriptTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ScriptTask
         ],
         [
-            sh:class ogit.businessProcess:DataObject ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:SendTask
         ],
         [
-            sh:class ogit.businessProcess:ReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:ServiceTask
         ],
         [
-            sh:class ogit.businessProcess:InstantiatedReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:follows
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:UndefinedTask
         ],
         [
-            sh:class ogit.businessProcess:ServiceTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:sends ;
+            sh:class ogit.businessProcess:UserTask
         ],
         [
-            sh:class ogit.businessProcess:BusinessRuleTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataObject
         ],
         [
-            sh:class ogit.businessProcess:InstantiatedReceiveTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sends
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.businessProcess:DataStore
         ] .
 
 #

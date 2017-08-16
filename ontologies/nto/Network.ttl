@@ -43,15 +43,12 @@ ogit.network:AccessControlList
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.network:NetworkSetting ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:complies
+            sh:path ogit.foundation:complies ;
+            sh:class ogit.network:NetworkSetting
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.network:FCHBA
@@ -72,9 +69,8 @@ ogit.network:FCHBA
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.network:IDSIPS
@@ -95,9 +91,8 @@ ogit.network:IDSIPS
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.network:IPAddress
@@ -119,21 +114,16 @@ ogit.network:IPAddress
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.network:Subnet ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit.network:Subnet
         ],
         [
-            sh:class ogit.network:NetworkInterface ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.network:NetworkInterface
         ] .
 
 ogit.network:Loadbalancer
@@ -154,9 +144,8 @@ ogit.network:Loadbalancer
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.network:MACAddress
@@ -177,9 +166,8 @@ ogit.network:MACAddress
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.network:NIC
@@ -201,15 +189,12 @@ ogit.network:NIC
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.network:MACAddress ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.network:MACAddress
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.network:NetworkCard
@@ -231,51 +216,36 @@ ogit.network:NetworkCard
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.network:IDSIPS ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:extends
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.network:Port
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:extends ;
+            sh:class ogit.network:IDSIPS
         ],
         [
-            sh:class ogit.network:Switch ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:extends
+            sh:path ogit.foundation:extends ;
+            sh:class ogit.network:Loadbalancer
         ],
         [
-            sh:class ogit.network:WifiAccessPoint ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:extends
+            sh:path ogit.foundation:extends ;
+            sh:class ogit.network:Router
         ],
         [
-            sh:class ogit.network:Slot ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:extends
+            sh:path ogit.foundation:extends ;
+            sh:class ogit.network:Slot
         ],
         [
-            sh:class ogit.network:Port ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:extends ;
+            sh:class ogit.network:Switch
         ],
         [
-            sh:class ogit.network:Router ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:extends
+            sh:path ogit.foundation:extends ;
+            sh:class ogit.network:WifiAccessPoint
         ],
         [
-            sh:class ogit.network:Loadbalancer ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:extends
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.network:NetworkEnclosure
@@ -297,15 +267,12 @@ ogit.network:NetworkEnclosure
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.network:Shelf
         ],
         [
-            sh:class ogit.network:Shelf ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.network:NetworkEndpoint
@@ -327,21 +294,16 @@ ogit.network:NetworkEndpoint
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.network:FCHBA ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.network:FCHBA
         ],
         [
-            sh:class ogit.network:NetworkInterface ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.network:NetworkInterface
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.network:NetworkFabric
@@ -363,21 +325,16 @@ ogit.network:NetworkFabric
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.network:NetworkCard
         ],
         [
-            sh:class ogit.network:SimpleDevice ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.network:SimpleDevice
         ],
         [
-            sh:class ogit.network:NetworkCard ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.network:NetworkFilter
@@ -399,15 +356,12 @@ ogit.network:NetworkFilter
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:complies ;
+            sh:class ogit.network:NetworkSetting
         ],
         [
-            sh:class ogit.network:NetworkSetting ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:complies
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.network:NetworkInterface
@@ -429,15 +383,12 @@ ogit.network:NetworkInterface
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.network:NetworkSetting ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:complies
+            sh:path ogit.foundation:complies ;
+            sh:class ogit.network:NetworkSetting
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.network:NetworkLink
@@ -459,15 +410,12 @@ ogit.network:NetworkLink
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:connects ;
+            sh:class ogit.network:NetworkInterface
         ],
         [
-            sh:class ogit.network:NetworkInterface ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:connects
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.network:NetworkSetting
@@ -488,9 +436,8 @@ ogit.network:NetworkSetting
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.network:Port
@@ -512,38 +459,28 @@ ogit.network:Port
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.network:VLAN ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit.network:VLAN
         ],
         [
-            sh:class ogit.network:NIC ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:connects
+            sh:path ogit.foundation:connects ;
+            sh:class ogit.network:FCHBA
         ],
         [
-            sh:class ogit.network:NetworkInterface ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.foundation:connects ;
+            sh:class ogit.network:NIC
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.network:FCHBA ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:connects
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.network:NetworkInterface
         ] .
 
 ogit.network:PortChannel
@@ -565,26 +502,20 @@ ogit.network:PortChannel
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.network:NetworkInterface ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit.network:Port
         ],
         [
-            sh:class ogit.network:Port ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.network:NetworkInterface
         ] .
 
 ogit.network:Router
@@ -606,14 +537,12 @@ ogit.network:Router
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ] .
 
 ogit.network:Shelf
@@ -635,20 +564,16 @@ ogit.network:Shelf
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.network:Slot ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.network:Slot
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ] .
 
 ogit.network:SimpleDevice
@@ -670,50 +595,36 @@ ogit.network:SimpleDevice
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.network:Switch ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:extends
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.network:Port
         ],
         [
-            sh:class ogit.network:Router ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:extends
+            sh:path ogit.foundation:extends ;
+            sh:class ogit.network:IDSIPS
         ],
         [
-            sh:class ogit.network:Port ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:extends ;
+            sh:class ogit.network:Loadbalancer
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:extends ;
+            sh:class ogit.network:Router
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:extends ;
+            sh:class ogit.network:Switch
         ],
         [
-            sh:class ogit.network:Loadbalancer ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:extends
+            sh:path ogit.foundation:extends ;
+            sh:class ogit.network:WifiAccessPoint
         ],
         [
-            sh:class ogit.network:IDSIPS ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:extends
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.network:WifiAccessPoint ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:extends
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ] .
 
 ogit.network:Slot
@@ -735,14 +646,12 @@ ogit.network:Slot
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ] .
 
 ogit.network:Subnet
@@ -764,14 +673,12 @@ ogit.network:Subnet
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ] .
 
 ogit.network:Switch
@@ -793,14 +700,12 @@ ogit.network:Switch
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ] .
 
 ogit.network:VLAN
@@ -822,14 +727,12 @@ ogit.network:VLAN
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ] .
 
 ogit.network:WifiAccessPoint
@@ -851,12 +754,10 @@ ogit.network:WifiAccessPoint
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ] .

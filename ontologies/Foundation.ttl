@@ -1095,16 +1095,16 @@ The values must be combined date and time with time zone designator according to
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-07-06" ;
             dcterms:description "updated" ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -1464,12 +1464,6 @@ ogit.foundation:affects
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-06-12" ;
             dcterms:description "updated" ;
@@ -1486,6 +1480,12 @@ ogit.foundation:affects
             dcterms:date "2015-09-10" ;
             dcterms:description "updated" ;
             dcterms:identifier "4"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ],
         [
             dcterms:creator "Philipp Pelchmann" ;
@@ -1512,6 +1512,12 @@ ogit.foundation:approves
             dcterms:identifier "1"
         ],
         [
+            dcterms:creator "Spyridon Travlos" ;
+            dcterms:date "2016-06-23" ;
+            dcterms:description "connection added" ;
+            dcterms:identifier "4"
+        ],
+        [
             dcterms:creator "bmoore@arago.de" ;
             dcterms:date "2015-09-04" ;
             dcterms:description "Added edge Permission -> Organization, Profile" ;
@@ -1522,12 +1528,6 @@ ogit.foundation:approves
             dcterms:date "2015-12-03" ;
             dcterms:description "Edited edge Permission -> Forum/Group" ;
             dcterms:identifier "3"
-        ],
-        [
-            dcterms:creator "Spyridon Travlos" ;
-            dcterms:date "2016-06-23" ;
-            dcterms:description "connection added" ;
-            dcterms:identifier "4"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -1542,10 +1542,34 @@ ogit.foundation:assignedTo
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-07-27" ;
+            dcterms:description "Added Connection for `ogit/Automation/MARSNode` -> `ogit/Person`" ;
+            dcterms:identifier "3"
+        ],
+        [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-11-12" ;
+            dcterms:description "changed direction of ogit/Role to ogit/*Task" ;
+            dcterms:identifier "4"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-12-10" ;
+            dcterms:description "change entity name from ogit/ServiceManagement/ChangeTask to ogit/ServiceManagement/SubTask" ;
+            dcterms:identifier "6"
+        ],
+        [
+            dcterms:creator "bmoore@arago.de" ;
+            dcterms:date "2015-11-13" ;
+            dcterms:description "Added Connection for `ogit/Forum/Tag` -> `ogit/Forum/KnowledgeItemHistory`" ;
+            dcterms:identifier "5"
         ],
         [
             dcterms:creator "cwalker@arago.de" ;
@@ -1555,30 +1579,6 @@ Added Connection for `ogit/Forum/Tag` -> `ogit/Forum/Post`
 Added Connection for `ogit/Forum/Tag` -> `ogit/Automation/KnowledgeItem`
 """ ;
             dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-07-27" ;
-            dcterms:description "Added Connection for `ogit/Automation/MARSNode` -> `ogit/Person`" ;
-            dcterms:identifier "3"
-        ],
-        [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-11-12" ;
-            dcterms:description "changed direction of ogit/Role to ogit/*Task" ;
-            dcterms:identifier "4"
-        ],
-        [
-            dcterms:creator "bmoore@arago.de" ;
-            dcterms:date "2015-11-13" ;
-            dcterms:description "Added Connection for `ogit/Forum/Tag` -> `ogit/Forum/KnowledgeItemHistory`" ;
-            dcterms:identifier "5"
-        ],
-        [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-12-10" ;
-            dcterms:description "change entity name from ogit/ServiceManagement/ChangeTask to ogit/ServiceManagement/SubTask" ;
-            dcterms:identifier "6"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -1640,6 +1640,36 @@ ogit.foundation:belongs
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2016-08-08" ;
+            dcterms:description "Removed edges for `Person` -> `BusinessProcess/Project`, `Person` -> `BusinessProcess/Milestone`. Added edges for `BusinessProcess/Survey` -> `BusinessProcess/Milestone`, `BusinessProcess/Survey` -> `BusinessProcess/Project`, `BusinessProcess/Survey` -> `Organization`, `BusinessProcess/SurveyReply` -> `BusinessProcess/SurveyIteration`. Renamed `BusinessProcess/SurveyCycle` to `BusinessProcess/SurveyIteration`" ;
+            dcterms:identifier "14"
+        ],
+        [
+            dcterms:creator "Arthur Shoba" ;
+            dcterms:date "2016-07-12" ;
+            dcterms:description "Added edges for `Person` -> `BusinessProcess/Project`, `Person` -> `BusinessProcess/Milestone`, `BusinessProcess/Milestone` -> `BusinessProcess/Project`, `BusinessProcess/SurveyCycle` -> `BusinessProcess/Survey`, `BusinessProcess/Survey` -> `Person`, `BusinessProcess/SurveyCycle` -> `Person`" ;
+            dcterms:identifier "11"
+        ],
+        [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-08-20" ;
+            dcterms:description "added Link" ;
+            dcterms:identifier "3"
+        ],
+        [
+            dcterms:creator "Ben Neal" ;
+            dcterms:date "2017-06-28" ;
+            dcterms:description "add connection Person -> Profile" ;
+            dcterms:identifier "17"
+        ],
+        [
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:date "2017-06-09" ;
+            dcterms:description "Refactored names of Project/Survey related concepts" ;
+            dcterms:identifier "16"
+        ],
+        [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
@@ -1652,22 +1682,10 @@ ogit.foundation:belongs
             dcterms:identifier "2"
         ],
         [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-08-20" ;
-            dcterms:description "added Link" ;
-            dcterms:identifier "3"
-        ],
-        [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-09-03" ;
             dcterms:description "add connection Attachment -> License, Contract" ;
             dcterms:identifier "4"
-        ],
-        [
-            dcterms:creator "bmoore@arago.de" ;
-            dcterms:date "2015-09-04" ;
-            dcterms:description "add edge Profile -> Organization" ;
-            dcterms:identifier "5"
         ],
         [
             dcterms:creator "Peter Larem" ;
@@ -1682,12 +1700,6 @@ ogit.foundation:belongs
             dcterms:identifier "7"
         ],
         [
-            dcterms:creator "bmoore@arago.de" ;
-            dcterms:date "2015-09-04" ;
-            dcterms:description "Modify edge /Forum/Profile -> Organization, to /Forum/Profile -> /Forum/Group" ;
-            dcterms:identifier "8"
-        ],
-        [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-12-10" ;
             dcterms:description "change entity name from ogit/ServiceManagement/ChangeTask to ogit/ServiceManagement/SubTask" ;
@@ -1700,40 +1712,28 @@ ogit.foundation:belongs
             dcterms:identifier "10"
         ],
         [
-            dcterms:creator "Arthur Shoba" ;
-            dcterms:date "2016-07-12" ;
-            dcterms:description "Added edges for `Person` -> `BusinessProcess/Project`, `Person` -> `BusinessProcess/Milestone`, `BusinessProcess/Milestone` -> `BusinessProcess/Project`, `BusinessProcess/SurveyCycle` -> `BusinessProcess/Survey`, `BusinessProcess/Survey` -> `Person`, `BusinessProcess/SurveyCycle` -> `Person`" ;
-            dcterms:identifier "11"
-        ],
-        [
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:date "2016-08-03" ;
             dcterms:description "Added comment -> event" ;
             dcterms:identifier "13"
         ],
         [
-            dcterms:creator "Alexander Ryabtsev" ;
-            dcterms:date "2016-08-08" ;
-            dcterms:description "Removed edges for `Person` -> `BusinessProcess/Project`, `Person` -> `BusinessProcess/Milestone`. Added edges for `BusinessProcess/Survey` -> `BusinessProcess/Milestone`, `BusinessProcess/Survey` -> `BusinessProcess/Project`, `BusinessProcess/Survey` -> `Organization`, `BusinessProcess/SurveyReply` -> `BusinessProcess/SurveyIteration`. Renamed `BusinessProcess/SurveyCycle` to `BusinessProcess/SurveyIteration`" ;
-            dcterms:identifier "14"
+            dcterms:creator "bmoore@arago.de" ;
+            dcterms:date "2015-09-04" ;
+            dcterms:description "Modify edge /Forum/Profile -> Organization, to /Forum/Profile -> /Forum/Group" ;
+            dcterms:identifier "8"
+        ],
+        [
+            dcterms:creator "bmoore@arago.de" ;
+            dcterms:date "2015-09-04" ;
+            dcterms:description "add edge Profile -> Organization" ;
+            dcterms:identifier "5"
         ],
         [
             dcterms:creator "stravlos@arago.de" ;
             dcterms:date "2016-10-26" ;
             dcterms:description "Added Organization -> Alert" ;
             dcterms:identifier "15"
-        ],
-        [
-            dcterms:creator "Fabian Meyer" ;
-            dcterms:date "2017-06-09" ;
-            dcterms:description "Refactored names of Project/Survey related concepts" ;
-            dcterms:identifier "16"
-        ],
-        [
-            dcterms:creator "Ben Neal" ;
-            dcterms:date "2017-06-28" ;
-            dcterms:description "add connection Person -> Profile" ;
-            dcterms:identifier "17"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -1922,12 +1922,6 @@ ogit.foundation:connects
             dcterms:identifier "1"
         ],
         [
-            dcterms:creator "cwalker@arago.de" ;
-            dcterms:date "2015-06-09" ;
-            dcterms:description "Adding many connections for NTO/Forum" ;
-            dcterms:identifier "2"
-        ],
-        [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-09-15" ;
             dcterms:description "Adding connection for Account -> Person" ;
@@ -1938,12 +1932,6 @@ ogit.foundation:connects
             dcterms:date "2015-10-15" ;
             dcterms:description "Adding connection for Comment -> Contract, License" ;
             dcterms:identifier "4"
-        ],
-        [
-            dcterms:creator "bmoore@arago.de" ;
-            dcterms:date "2015-11-13" ;
-            dcterms:description "Adding many more connections for NTO/Forum (KnowledgeItemHistory)" ;
-            dcterms:identifier "5"
         ],
         [
             dcterms:creator "Peter Larem" ;
@@ -1962,6 +1950,18 @@ ogit.foundation:connects
             dcterms:date "2016-03-02" ;
             dcterms:description "Adding connection for Comment -> Person" ;
             dcterms:identifier "8"
+        ],
+        [
+            dcterms:creator "bmoore@arago.de" ;
+            dcterms:date "2015-11-13" ;
+            dcterms:description "Adding many more connections for NTO/Forum (KnowledgeItemHistory)" ;
+            dcterms:identifier "5"
+        ],
+        [
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-06-09" ;
+            dcterms:description "Adding many connections for NTO/Forum" ;
+            dcterms:identifier "2"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -2006,6 +2006,24 @@ ogit.foundation:contains
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-07-27" ;
+            dcterms:description "Added a connection from `ogit/ConfigurationItem` -> `ogit/ConfigurationItem`, Added a connection from `ogit/Automation/MARSNode` -> `/ogit/Network/NetworkInterface`" ;
+            dcterms:identifier "6"
+        ],
+        [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-10-15" ;
+            dcterms:description "Added a connection from `ogit/Automation/MARSNode` -> `ogit/Automation/MARSNode`" ;
+            dcterms:identifier "7"
+        ],
+        [
+            dcterms:creator "Miroslaw Glusiuk" ;
+            dcterms:date "2015-06-25" ;
+            dcterms:description "added DynamicEngineData" ;
+            dcterms:identifier "4"
+        ],
+        [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
@@ -2026,40 +2044,22 @@ Added a connection from `ogit/Forum/KnowledgeBundle` -> `ogit/Automation/Knowled
             dcterms:identifier "3"
         ],
         [
-            dcterms:creator "Miroslaw Glusiuk" ;
-            dcterms:date "2015-06-25" ;
-            dcterms:description "added DynamicEngineData" ;
-            dcterms:identifier "4"
-        ],
-        [
             dcterms:creator "cwalker@arago.de" ;
             dcterms:date "2015-07-06" ;
             dcterms:description "Added a connection from `ogit/Forum/KnowledgeBundle` -> `ogit/Automation/AutomationIssue" ;
             dcterms:identifier "5"
         ],
         [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-07-27" ;
-            dcterms:description "Added a connection from `ogit/ConfigurationItem` -> `ogit/ConfigurationItem`, Added a connection from `ogit/Automation/MARSNode` -> `/ogit/Network/NetworkInterface`" ;
-            dcterms:identifier "6"
-        ],
-        [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-10-15" ;
-            dcterms:description "Added a connection from `ogit/Automation/MARSNode` -> `ogit/Automation/MARSNode`" ;
-            dcterms:identifier "7"
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2017-03-23" ;
+            dcterms:description "add connection for Knowledge:AcuqisitionSession's" ;
+            dcterms:identifier "9"
         ],
         [
             dcterms:creator "stravlos@arago.co" ;
             dcterms:date "2016-10-26" ;
             dcterms:description "Added a connection from `ogit/Alert` -> `ogit/License`" ;
             dcterms:identifier "8"
-        ],
-        [
-            dcterms:creator "cwalker@arago.de" ;
-            dcterms:date "2017-03-23" ;
-            dcterms:description "add connection for Knowledge:AcuqisitionSession's" ;
-            dcterms:identifier "9"
         ],
         [
             dcterms:creator "stravlos@arago.co" ;
@@ -2104,18 +2104,6 @@ ogit.foundation:corresponds
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-26" ;
-            dcterms:description "change Issue to AutomationIssue" ;
-            dcterms:identifier "2"
-        ],
-        [
             dcterms:creator "" ;
             dcterms:date "2015-05-26" ;
             dcterms:description "change Issue to AutomationIssue" ;
@@ -2134,10 +2122,16 @@ ogit.foundation:corresponds
             dcterms:identifier "5"
         ],
         [
-            dcterms:creator "bmoore@arago.de" ;
-            dcterms:date "2015-09-04" ;
-            dcterms:description "Added edge Invite -> Topic" ;
-            dcterms:identifier "6"
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-26" ;
+            dcterms:description "change Issue to AutomationIssue" ;
+            dcterms:identifier "2"
         ],
         [
             dcterms:creator "Peter Larem" ;
@@ -2146,16 +2140,22 @@ ogit.foundation:corresponds
             dcterms:identifier "7"
         ],
         [
-            dcterms:creator "bmoore@arago.de" ;
-            dcterms:date "2016-04-04" ;
-            dcterms:description "Added edge Invite -> KnowledgeItemHistory|KnowledgeBundle" ;
-            dcterms:identifier "8"
-        ],
-        [
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:date "2016-08-09" ;
             dcterms:description "Added Event->AutomationIssue" ;
             dcterms:identifier "9"
+        ],
+        [
+            dcterms:creator "bmoore@arago.de" ;
+            dcterms:date "2015-09-04" ;
+            dcterms:description "Added edge Invite -> Topic" ;
+            dcterms:identifier "6"
+        ],
+        [
+            dcterms:creator "bmoore@arago.de" ;
+            dcterms:date "2016-04-04" ;
+            dcterms:description "Added edge Invite -> KnowledgeItemHistory|KnowledgeBundle" ;
+            dcterms:identifier "8"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -2187,28 +2187,22 @@ ogit.foundation:creates
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-19" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
-            dcterms:creator "cwalker@arago.de" ;
-            dcterms:date "2015-05-20" ;
-            dcterms:description """Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/KnowledgeBundle`
-Added Connection for `ogit/Forum/Profile` -> `ogit/Comment`
-Added Connection for `ogit/Forum/Profile` -> `ogit/Automation/KnowledgeItem`
-Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/Post`
-Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/Reply`
-Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/Topic`
-""" ;
-            dcterms:identifier "2"
-        ],
-        [
             dcterms:creator "" ;
             dcterms:date "2015-06-09" ;
             dcterms:description "Added Connection for `ogit/Forum/Profile` -> `ogit/Automation/AutomationIssue`" ;
             dcterms:identifier "3"
+        ],
+        [
+            dcterms:creator "Arthur Shoba" ;
+            dcterms:date "2016-07-12" ;
+            dcterms:description "Added edge for `ogit/Person` -> `ogit/BusinessProcess/Project`, `ogit/Person` -> `ogit/BusinessProcess/Milestone`" ;
+            dcterms:identifier "11"
+        ],
+        [
+            dcterms:creator "Arthur Shoba" ;
+            dcterms:date "2016-08-08" ;
+            dcterms:description "Removed edges for `ogit/Person` -> `ogit/BusinessProcess/Project`, `ogit/Person` -> `ogit/BusinessProcess/Milestone`" ;
+            dcterms:identifier "13"
         ],
         [
             dcterms:creator "Aymen Ayoub" ;
@@ -2223,10 +2217,34 @@ Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/Topic`
             dcterms:identifier "5"
         ],
         [
+            dcterms:creator "Ben Neal" ;
+            dcterms:date "2016-05-17" ;
+            dcterms:description "Added edge for `ogit/Forum/Profile` -> `ogit/Forum/Rating`" ;
+            dcterms:identifier "10"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-19" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2016-02-22" ;
+            dcterms:description "Added edge for `ogit/Organization` -> `ogit/Organization`" ;
+            dcterms:identifier "9"
+        ],
+        [
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:date "2015-08-11" ;
             dcterms:description "Added Connections for `Connector` -> `ConfigurationItem`, `ChangeRequest`,`Incident`" ;
             dcterms:identifier "6"
+        ],
+        [
+            dcterms:creator "Philipp Pelchmann" ;
+            dcterms:date "2016-08-03" ;
+            dcterms:description "Added connector -> event" ;
+            dcterms:identifier "12"
         ],
         [
             dcterms:creator "bmoore@arago.de" ;
@@ -2241,34 +2259,16 @@ Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/Topic`
             dcterms:identifier "8"
         ],
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2016-02-22" ;
-            dcterms:description "Added edge for `ogit/Organization` -> `ogit/Organization`" ;
-            dcterms:identifier "9"
-        ],
-        [
-            dcterms:creator "Ben Neal" ;
-            dcterms:date "2016-05-17" ;
-            dcterms:description "Added edge for `ogit/Forum/Profile` -> `ogit/Forum/Rating`" ;
-            dcterms:identifier "10"
-        ],
-        [
-            dcterms:creator "Arthur Shoba" ;
-            dcterms:date "2016-07-12" ;
-            dcterms:description "Added edge for `ogit/Person` -> `ogit/BusinessProcess/Project`, `ogit/Person` -> `ogit/BusinessProcess/Milestone`" ;
-            dcterms:identifier "11"
-        ],
-        [
-            dcterms:creator "Philipp Pelchmann" ;
-            dcterms:date "2016-08-03" ;
-            dcterms:description "Added connector -> event" ;
-            dcterms:identifier "12"
-        ],
-        [
-            dcterms:creator "Arthur Shoba" ;
-            dcterms:date "2016-08-08" ;
-            dcterms:description "Removed edges for `ogit/Person` -> `ogit/BusinessProcess/Project`, `ogit/Person` -> `ogit/BusinessProcess/Milestone`" ;
-            dcterms:identifier "13"
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-05-20" ;
+            dcterms:description """Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/KnowledgeBundle`
+Added Connection for `ogit/Forum/Profile` -> `ogit/Comment`
+Added Connection for `ogit/Forum/Profile` -> `ogit/Automation/KnowledgeItem`
+Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/Post`
+Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/Reply`
+Added Connection for `ogit/Forum/Profile` -> `ogit/Forum/Topic`
+""" ;
+            dcterms:identifier "2"
         ],
         [
             dcterms:creator "stravlos@arago.co" ;
@@ -2295,16 +2295,16 @@ ogit.foundation:defines
             dcterms:identifier "1"
         ],
         [
-            dcterms:creator "stravlos@arago.de" ;
-            dcterms:date "2015-10-14" ;
-            dcterms:description "add connection" ;
-            dcterms:identifier "2"
-        ],
-        [
             dcterms:creator "cwalker@arago.de" ;
             dcterms:date "2017-03-23" ;
             dcterms:description "add connections for Knowledge:AcuqisitionSession's" ;
             dcterms:identifier "3"
+        ],
+        [
+            dcterms:creator "stravlos@arago.de" ;
+            dcterms:date "2015-10-14" ;
+            dcterms:description "add connection" ;
+            dcterms:identifier "2"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -2413,10 +2413,10 @@ social `like`.""" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "cwalker@arago.de" ;
-            dcterms:date "2015-04-27" ;
-            dcterms:description "intitial inception" ;
-            dcterms:identifier "1"
+            dcterms:creator "Ben Neal" ;
+            dcterms:date "2016-05-17" ;
+            dcterms:description "Added edge for `ogit/Forum/Profile` -> `ogit/Forum/Rating`" ;
+            dcterms:identifier "3"
         ],
         [
             dcterms:creator "bmoore@arago.de" ;
@@ -2425,10 +2425,10 @@ social `like`.""" ;
             dcterms:identifier "2"
         ],
         [
-            dcterms:creator "Ben Neal" ;
-            dcterms:date "2016-05-17" ;
-            dcterms:description "Added edge for `ogit/Forum/Profile` -> `ogit/Forum/Rating`" ;
-            dcterms:identifier "3"
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-04-27" ;
+            dcterms:description "intitial inception" ;
+            dcterms:identifier "1"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -2460,6 +2460,12 @@ ogit.foundation:follows
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
+            dcterms:creator "Ben Neal" ;
+            dcterms:date "2016-11-01" ;
+            dcterms:description "add connection Account -> Account" ;
+            dcterms:identifier "3"
+        ],
+        [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
@@ -2470,12 +2476,6 @@ ogit.foundation:follows
             dcterms:date "2015-09-15" ;
             dcterms:description "add connection Person -> Person" ;
             dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "Ben Neal" ;
-            dcterms:date "2016-11-01" ;
-            dcterms:description "add connection Account -> Account" ;
-            dcterms:identifier "3"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -2490,6 +2490,18 @@ ogit.foundation:generates
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
+            dcterms:creator "FCO" ;
+            dcterms:date "2015-08-04" ;
+            dcterms:description "some connections addded" ;
+            dcterms:identifier "3"
+        ],
+        [
+            dcterms:creator "Kristjan Liiva" ;
+            dcterms:date "2017-07-19" ;
+            dcterms:description "connection added: MARSNode to Log" ;
+            dcterms:identifier "7"
+        ],
+        [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
@@ -2500,12 +2512,6 @@ ogit.foundation:generates
             dcterms:date "2015-05-26" ;
             dcterms:description "change Issue to AutomationIssue" ;
             dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "FCO" ;
-            dcterms:date "2015-08-04" ;
-            dcterms:description "some connections addded" ;
-            dcterms:identifier "3"
         ],
         [
             dcterms:creator "stravlos" ;
@@ -2524,12 +2530,6 @@ ogit.foundation:generates
             dcterms:date "2017-01-20" ;
             dcterms:description "connection added" ;
             dcterms:identifier "6"
-        ],
-        [
-            dcterms:creator "Kristjan Liiva" ;
-            dcterms:date "2017-07-19" ;
-            dcterms:description "connection added: MARSNode to Log" ;
-            dcterms:identifier "7"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -2544,16 +2544,16 @@ ogit.foundation:governs
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-07-15" ;
             dcterms:description "updated" ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -2670,16 +2670,10 @@ ogit.foundation:manages
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-07-27" ;
-            dcterms:description "updated" ;
-            dcterms:identifier "2"
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2016-08-08" ;
+            dcterms:description "Removed edges `Person` -> `BusinessProcess/Project`, `Person` -> `BusinessProcess/Milestone`" ;
+            dcterms:identifier "4"
         ],
         [
             dcterms:creator "Arthur Shoba" ;
@@ -2688,10 +2682,10 @@ ogit.foundation:manages
             dcterms:identifier "3"
         ],
         [
-            dcterms:creator "Alexander Ryabtsev" ;
-            dcterms:date "2016-08-08" ;
-            dcterms:description "Removed edges `Person` -> `BusinessProcess/Project`, `Person` -> `BusinessProcess/Milestone`" ;
-            dcterms:identifier "4"
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-07-27" ;
+            dcterms:description "updated" ;
+            dcterms:identifier "2"
         ],
         [
             dcterms:creator "Ben Neal" ;
@@ -2700,16 +2694,22 @@ ogit.foundation:manages
             dcterms:identifier "5"
         ],
         [
-            dcterms:creator "Vitaly Teremasov" ;
-            dcterms:date "2017-04-18" ;
-            dcterms:description "Added edges `Person` -> `BusinessProcess/Project`, `Person` -> `BusinessProcess/Milestone`" ;
-            dcterms:identifier "6"
-        ],
-        [
             dcterms:creator "Fabian Meyer" ;
             dcterms:date "2017-06-09" ;
             dcterms:description "Refactored names of Project/Survey related concepts" ;
             dcterms:identifier "7"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Vitaly Teremasov" ;
+            dcterms:date "2017-04-18" ;
+            dcterms:description "Added edges `Person` -> `BusinessProcess/Project`, `Person` -> `BusinessProcess/Milestone`" ;
+            dcterms:identifier "6"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -2743,12 +2743,6 @@ ogit.foundation:opens
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-06-11" ;
             dcterms:description "updated" ;
@@ -2765,6 +2759,12 @@ ogit.foundation:opens
             dcterms:date "2015-07-27" ;
             dcterms:description "updated" ;
             dcterms:identifier "4"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ],
         [
             dcterms:creator "Philipp Pelchmann" ;
@@ -2784,12 +2784,6 @@ ogit.foundation:owns
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
-        [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
         [
             dcterms:creator "" ;
             dcterms:date "2015-05-20" ;
@@ -2814,6 +2808,12 @@ Added Connection for `ogit/Forum/Group` -> `ogit/Forum/KnowledgeItemHistory`
 Added Connection for `ogit/Forum/Group` -> `ogit/Forum/Topic`
 """ ;
             dcterms:identifier "4"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ],
         [
             dcterms:creator "Philipp Pelchmann" ;
@@ -2859,16 +2859,16 @@ The application managing such dependency graphs is responsible to prevent cyclic
             dcterms:identifier "1"
         ],
         [
-            dcterms:creator "cwalker@arago.de" ;
-            dcterms:date "2015-10-21" ;
-            dcterms:description "Added allowed between `ogit/Forum/FeedEntry`s" ;
-            dcterms:identifier "2"
-        ],
-        [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-12-10" ;
             dcterms:description "change entity name from ogit/ServiceManagement/ChangeTask to ogit/ServiceManagement/SubTask" ;
             dcterms:identifier "3"
+        ],
+        [
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-10-21" ;
+            dcterms:description "Added allowed between `ogit/Forum/FeedEntry`s" ;
+            dcterms:identifier "2"
         ],
         [
             dcterms:creator "cwalker@arago.de" ;
@@ -3024,22 +3024,10 @@ ogit.foundation:relates
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-26" ;
-            dcterms:description "change Issue to AutomationIssue" ;
-            dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "cwalker@arago.de" ;
-            dcterms:date "2015-06-01" ;
-            dcterms:description "Added connection from `ogit/Forum/FeedEntry` to `ogit/Node` (the FeedEntry could relate to anything)." ;
-            dcterms:identifier "3"
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2016-12-20" ;
+            dcterms:description "added from ogit/Person to ogit/BusinessProcess/SurveyIteration" ;
+            dcterms:identifier "9"
         ],
         [
             dcterms:creator "Aymen Ayoub" ;
@@ -3054,16 +3042,34 @@ ogit.foundation:relates
             dcterms:identifier "5"
         ],
         [
-            dcterms:creator "Philipp Pelchmann" ;
-            dcterms:date "2015-07-27" ;
-            dcterms:description "added from ogit/ConfigurationItem to ogit/Device" ;
-            dcterms:identifier "6"
-        ],
-        [
             dcterms:creator "FCO" ;
             dcterms:date "2015-08-03" ;
             dcterms:description "added from ogit/Software/Application to ogit/License" ;
             dcterms:identifier "7"
+        ],
+        [
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:date "2017-06-09" ;
+            dcterms:description "Refactored names of Project/Survey related concepts" ;
+            dcterms:identifier "11"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-26" ;
+            dcterms:description "change Issue to AutomationIssue" ;
+            dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Philipp Pelchmann" ;
+            dcterms:date "2015-07-27" ;
+            dcterms:description "added from ogit/ConfigurationItem to ogit/Device" ;
+            dcterms:identifier "6"
         ],
         [
             dcterms:creator "Philipp Pelchmann" ;
@@ -3072,22 +3078,16 @@ ogit.foundation:relates
             dcterms:identifier "8"
         ],
         [
-            dcterms:creator "Alexander Ryabtsev" ;
-            dcterms:date "2016-12-20" ;
-            dcterms:description "added from ogit/Person to ogit/BusinessProcess/SurveyIteration" ;
-            dcterms:identifier "9"
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-06-01" ;
+            dcterms:description "Added connection from `ogit/Forum/FeedEntry` to `ogit/Node` (the FeedEntry could relate to anything)." ;
+            dcterms:identifier "3"
         ],
         [
             dcterms:creator "stravlos@arago.de" ;
             dcterms:date "2017-04-20" ;
             dcterms:description "connection added" ;
             dcterms:identifier "10"
-        ],
-        [
-            dcterms:creator "Fabian Meyer" ;
-            dcterms:date "2017-06-09" ;
-            dcterms:description "Refactored names of Project/Survey related concepts" ;
-            dcterms:identifier "11"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -3243,10 +3243,10 @@ conversation/fourm thread.""" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "cwalker@arago.de" ;
-            dcterms:date "2015-04-27" ;
-            dcterms:description "intitial inception" ;
-            dcterms:identifier "1"
+            dcterms:creator "Ben Neal" ;
+            dcterms:date "2016-05-17" ;
+            dcterms:description "Added edge for `ogit/Comment` -> `ogit/Forum/Rating`" ;
+            dcterms:identifier "3"
         ],
         [
             dcterms:creator "bmoore@arago.de" ;
@@ -3255,10 +3255,10 @@ conversation/fourm thread.""" ;
             dcterms:identifier "2"
         ],
         [
-            dcterms:creator "Ben Neal" ;
-            dcterms:date "2016-05-17" ;
-            dcterms:description "Added edge for `ogit/Comment` -> `ogit/Forum/Rating`" ;
-            dcterms:identifier "3"
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:date "2015-04-27" ;
+            dcterms:description "intitial inception" ;
+            dcterms:identifier "1"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -3314,6 +3314,12 @@ ogit.foundation:sends
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2017-06-20" ;
+            dcterms:description "add connection from ogit.Software:Application to ogit:Notification" ;
+            dcterms:identifier "3"
+        ],
+        [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
@@ -3324,12 +3330,6 @@ ogit.foundation:sends
             dcterms:date "2017-02-17" ;
             dcterms:description "add connection" ;
             dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "Alexander Ryabtsev" ;
-            dcterms:date "2017-06-20" ;
-            dcterms:description "add connection from ogit.Software:Application to ogit:Notification" ;
-            dcterms:identifier "3"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -3367,18 +3367,18 @@ ogit.foundation:specifies
             dcterms:identifier "1"
         ],
         [
+            dcterms:creator "bmoore@arago.de" ;
+            dcterms:date "2015-11-13" ;
+            dcterms:description "Added for KnowledgeItemHistory" ;
+            dcterms:identifier "3"
+        ],
+        [
             dcterms:creator "cwalker@arago.de" ;
             dcterms:date "2015-06-01" ;
             dcterms:description """Adding connection from `ogit/Forum/ShortId` -> `ogit/Forum/Post`
 Adding connection from `ogit/Forum/ShortId` -> `ogit/Automation/KnowledgeItem`
 """ ;
             dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "bmoore@arago.de" ;
-            dcterms:date "2015-11-13" ;
-            dcterms:description "Added for KnowledgeItemHistory" ;
-            dcterms:identifier "3"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -3394,6 +3394,12 @@ the other can offer.""" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
+            dcterms:creator "bmoore@arago.de" ;
+            dcterms:date "2015-11-13" ;
+            dcterms:description "Edit for KnowledgeItemHistory" ;
+            dcterms:identifier "3"
+        ],
+        [
             dcterms:creator "cwalker@arago.de" ;
             dcterms:date "2015-04-27" ;
             dcterms:description "intitial inception" ;
@@ -3404,12 +3410,6 @@ the other can offer.""" ;
             dcterms:date "2015-10-21" ;
             dcterms:description "Adding Profile ->" ;
             dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "bmoore@arago.de" ;
-            dcterms:date "2015-11-13" ;
-            dcterms:description "Edit for KnowledgeItemHistory" ;
-            dcterms:identifier "3"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -3424,6 +3424,12 @@ ogit.foundation:supervises
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:date "2017-06-09" ;
+            dcterms:description "Refactored names of Project/Survey related concepts" ;
+            dcterms:identifier "3"
+        ],
+        [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
@@ -3434,12 +3440,6 @@ ogit.foundation:supervises
             dcterms:date "2016-06-23" ;
             dcterms:description "connection added" ;
             dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "Fabian Meyer" ;
-            dcterms:date "2017-06-09" ;
-            dcterms:description "Refactored names of Project/Survey related concepts" ;
-            dcterms:identifier "3"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -3454,16 +3454,28 @@ ogit.foundation:supports
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:date "2017-02-06" ;
+            dcterms:description "Add edge from Person to Milestone." ;
+            dcterms:identifier "5"
         ],
         [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-07-27" ;
             dcterms:description "updated" ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:date "2017-06-09" ;
+            dcterms:description "Refactored names of Project/Survey related concepts" ;
+            dcterms:identifier "6"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ],
         [
             dcterms:creator "Peter Larem" ;
@@ -3476,18 +3488,6 @@ ogit.foundation:supports
             dcterms:date "2017-02-01" ;
             dcterms:description "add new connections Org -> Project and Person -> Project" ;
             dcterms:identifier "4"
-        ],
-        [
-            dcterms:creator "Alexander Ryabtsev" ;
-            dcterms:date "2017-02-06" ;
-            dcterms:description "Add edge from Person to Milestone." ;
-            dcterms:identifier "5"
-        ],
-        [
-            dcterms:creator "Fabian Meyer" ;
-            dcterms:date "2017-06-09" ;
-            dcterms:description "Refactored names of Project/Survey related concepts" ;
-            dcterms:identifier "6"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -3560,16 +3560,16 @@ ogit.foundation:updates
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-07-27" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-07-27" ;
             dcterms:description "updated" ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-07-27" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ],
         [
             dcterms:creator "Peter Larem" ;
@@ -3650,16 +3650,16 @@ ogit.foundation:worksOn
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-06-24" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "FCO" ;
             dcterms:date "2015-08-12" ;
             dcterms:description "connection fixed" ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-06-24" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ],
         [
             dcterms:creator "Peter Larem" ;

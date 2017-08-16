@@ -36,16 +36,16 @@ ogit.project:Milestone
     ogit.core:any-attributes "true" ;
     ogit.core:history
         [
-            dcterms:creator "Arthur Shoba" ;
-            dcterms:date "2016-07-12" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Alexander Ryabtsev" ;
             dcterms:date "2016-08-08" ;
             dcterms:description "Attributes rework" ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Arthur Shoba" ;
+            dcterms:date "2016-07-12" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ],
         [
             dcterms:creator "Fabian Meyer" ;
@@ -57,45 +57,36 @@ ogit.project:Milestone
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.project:Project ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit.project:Project
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:title
+            sh:path ogit.foundation:category ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:category
+            sh:path ogit.foundation:finishedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:status
+            sh:path ogit.foundation:plannedFinishDate ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:plannedStartDate
+            sh:path ogit.foundation:plannedStartDate ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:plannedFinishDate
+            sh:path ogit.foundation:startedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:startedAt
+            sh:path ogit.foundation:status ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:finishedAt
+            sh:path ogit.foundation:title ;
+            sh:maxCount 1
         ] .
 
 ogit.project:Project
@@ -110,16 +101,16 @@ ogit.project:Project
     ogit.core:any-attributes "true" ;
     ogit.core:history
         [
-            dcterms:creator "Arthur Shoba" ;
-            dcterms:date "2016-07-12" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Alexander Ryabtsev" ;
             dcterms:date "2016-08-08" ;
             dcterms:description "Attributes rework" ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Arthur Shoba" ;
+            dcterms:date "2016-07-12" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ],
         [
             dcterms:creator "Fabian Meyer" ;
@@ -131,42 +122,34 @@ ogit.project:Project
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:title
+            sh:path ogit.foundation:category ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:category
+            sh:path ogit.foundation:finishedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:placement
+            sh:path ogit.foundation:placement ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:status
+            sh:path ogit.foundation:plannedFinishDate ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:plannedStartDate
+            sh:path ogit.foundation:plannedStartDate ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:plannedFinishDate
+            sh:path ogit.foundation:startedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:startedAt
+            sh:path ogit.foundation:status ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:finishedAt
+            sh:path ogit.foundation:title ;
+            sh:maxCount 1
         ] .

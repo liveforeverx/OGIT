@@ -64,6 +64,12 @@ The ogit/function attribute should be used to tell what kind of grouping an enti
     ogit.core:any-attributes "true" ;
     ogit.core:history
         [
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-10-15" ;
+            dcterms:description "added optional attribute ogit/webPage" ;
+            dcterms:identifier "3"
+        ],
+        [
             dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
@@ -74,12 +80,6 @@ The ogit/function attribute should be used to tell what kind of grouping an enti
             dcterms:date "2015-07-27" ;
             dcterms:description "added optional attributes ogit/streetAddress, ogit/city, ogit/country, ogit/postalCode, ogit/businessCategory" ;
             dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-10-15" ;
-            dcterms:description "added optional attribute ogit/webPage" ;
-            dcterms:identifier "3"
         ] ;
     ogit.graphit:indexed-attributes
         ogit.foundation:description,
@@ -88,267 +88,189 @@ The ogit/function attribute should be used to tell what kind of grouping an enti
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit._alerting:Alert ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit._location:locatedIn ;
+            sh:class ogit._location:Location
         ],
         [
-            sh:class ogit._catalog:Catalog ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:generates
+            sh:path ogit._organization:businessCategory ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._configuration:ConfigurationItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:approves
+            sh:path ogit._organization:city ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._license:License ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit._organization:competes ;
+            sh:class ogit._organization:Organization
         ],
         [
-            sh:class ogit._configuration:ConfigurationItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:manages
+            sh:path ogit._organization:country ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._configuration:ConfigurationItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:creates
+            sh:path ogit._organization:deliversTo ;
+            sh:class ogit._organization:Organization
         ],
         [
-            sh:class ogit._configuration:ConfigurationItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:provides
+            sh:path ogit._organization:sellsTo ;
+            sh:class ogit._organization:Organization
         ],
         [
-            sh:class ogit._configuration:ConfigurationItem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:supports
+            sh:path ogit.foundation:approves ;
+            sh:class ogit._configuration:ConfigurationItem
         ],
         [
-            sh:class ogit._asset:Asset ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:owns
+            sh:path ogit.foundation:associates ;
+            sh:class ogit._organization:Role
         ],
         [
-            sh:class ogit._device:Device ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:manages
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit._alerting:Alert
         ],
         [
-            sh:class ogit._data:Timeseries ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:generates
+            sh:path ogit.foundation:communicatesWith ;
+            sh:class ogit._organization:Organization
         ],
         [
-            sh:class ogit._contract:Contract ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:concludes
+            sh:path ogit.foundation:complies ;
+            sh:class ogit._organization:Policy
         ],
         [
-            sh:class ogit._person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:represents
+            sh:path ogit.foundation:concludes ;
+            sh:class ogit._contract:Contract
         ],
         [
-            sh:class ogit._person:Person ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:employs
+            sh:path ogit.foundation:contains ;
+            sh:class ogit._organization:Organization
         ],
         [
-            sh:class ogit.graphit:Node ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.graphit:_deleted
+            sh:path ogit.foundation:creates ;
+            sh:class ogit._configuration:ConfigurationItem
         ],
         [
-            sh:class ogit.graphit:Node ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.graphit:_created
+            sh:path ogit.foundation:creates ;
+            sh:class ogit._organization:Organization
         ],
         [
-            sh:class ogit.graphit:Node ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.graphit:_owns
+            sh:path ogit.foundation:defines ;
+            sh:class ogit._organization:Role
         ],
         [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit._organization:sellsTo
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.foundation:email ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._organization:Role ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:associates
+            sh:path ogit.foundation:employs ;
+            sh:class ogit._person:Person
         ],
         [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit._organization:deliversTo
+            sh:path ogit.foundation:function ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:supports
+            sh:path ogit.foundation:generates ;
+            sh:class ogit._catalog:Catalog
         ],
         [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:generates ;
+            sh:class ogit._data:Timeseries
         ],
         [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:creates
+            sh:path ogit.foundation:governs ;
+            sh:class ogit._organization:Organization
         ],
         [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:leads
+            sh:path ogit.foundation:leads ;
+            sh:class ogit._organization:Organization
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:manages ;
+            sh:class ogit._configuration:ConfigurationItem
+        ],
+        [
+            sh:path ogit.foundation:manages ;
+            sh:class ogit._device:Device
+        ],
+        [
+            sh:path ogit.foundation:manages ;
+            sh:class ogit._organization:Organization
+        ],
+        [
+            sh:path ogit.foundation:name ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:name
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:owns ;
+            sh:class ogit._asset:Asset
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:function
+            sh:path ogit.foundation:phone ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:status
+            sh:path ogit.foundation:postalCode ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:email
+            sh:path ogit.foundation:provides ;
+            sh:class ogit._configuration:ConfigurationItem
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:streetAddress
+            sh:path ogit.foundation:relates ;
+            sh:class ogit._organization:Organization
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._organization:city
+            sh:path ogit.foundation:represents ;
+            sh:class ogit._organization:Organization
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._organization:country
+            sh:path ogit.foundation:represents ;
+            sh:class ogit._person:Person
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:postalCode
+            sh:path ogit.foundation:sourceId ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit._organization:businessCategory
+            sh:path ogit.foundation:status ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:webPage
+            sh:path ogit.foundation:streetAddress ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:sourceId
+            sh:path ogit.foundation:supports ;
+            sh:class ogit._configuration:ConfigurationItem
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:phone
+            sh:path ogit.foundation:supports ;
+            sh:class ogit._organization:Organization
         ],
         [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit._organization:competes
+            sh:path ogit.foundation:uses ;
+            sh:class ogit._license:License
         ],
         [
-            sh:class ogit._location:Location ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit._location:locatedIn
+            sh:path ogit.foundation:webPage ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:represents
+            sh:path ogit.graphit:_created ;
+            sh:class ogit.graphit:Node
         ],
         [
-            sh:class ogit._organization:Role ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:defines
+            sh:path ogit.graphit:_deleted ;
+            sh:class ogit.graphit:Node
         ],
         [
-            sh:class ogit._organization:Policy ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:complies
-        ],
-        [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:communicatesWith
-        ],
-        [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:governs
-        ],
-        [
-            sh:class ogit._organization:Organization ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:manages
+            sh:path ogit.graphit:_owns ;
+            sh:class ogit.graphit:Node
         ] .
 
 ogit._organization:Policy
@@ -370,9 +292,9 @@ ogit._organization:Policy
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:content ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:content
+            sh:maxCount 1
         ] .
 
 ogit._organization:Role
@@ -396,25 +318,21 @@ ogit._organization:Role
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:name ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:name
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:reports ;
+            sh:class ogit._organization:Role
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:status
-        ],
-        [
-            sh:class ogit._organization:Role ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:reports
+            sh:path ogit.foundation:status ;
+            sh:maxCount 1
         ] .
 
 #

@@ -43,31 +43,25 @@ ogit.serviceManagement:Action
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.serviceManagement:Action ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:requires
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:name ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:name
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:requires ;
+            sh:class ogit.serviceManagement:Action
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
-        ],
-        [
-            sh:class ogit.serviceManagement:Service ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:requires
+            sh:path ogit.foundation:requires ;
+            sh:class ogit.serviceManagement:Service
         ] .
 
 ogit.serviceManagement:ApprovalTask
@@ -81,61 +75,51 @@ ogit.serviceManagement:ApprovalTask
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Catarina Onofre" ;
             dcterms:date "2015-05-22" ;
             dcterms:description "Attribute name changed from subStatus to sourceStatus" ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ] ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.serviceManagement:ApprovalTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:precedes
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit.serviceManagement:ChangeRequest
         ],
         [
-            sh:class ogit.serviceManagement:ChangeRequest ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:lastUpdatedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:approvalStatus
+            sh:path ogit.foundation:precedes ;
+            sh:class ogit.serviceManagement:ApprovalTask
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:sourceStatus
+            sh:path ogit.foundation:reason ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:reason
+            sh:path ogit.serviceManagement:approvalStatus ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:lastUpdatedAt
+            sh:path ogit.serviceManagement:sourceStatus ;
+            sh:maxCount 1
         ] .
 
 ogit.serviceManagement:ChangeRequest
@@ -149,12 +133,6 @@ ogit.serviceManagement:ChangeRequest
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-07-01" ;
             dcterms:description "updated" ;
@@ -165,185 +143,148 @@ ogit.serviceManagement:ChangeRequest
             dcterms:date "2015-07-03" ;
             dcterms:description "updated" ;
             dcterms:identifier "3"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ] ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.serviceManagement:Order ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:causes
+            sh:path ogit.foundation:affects ;
+            sh:class ogit.serviceManagement:Service
         ],
         [
-            sh:class ogit.serviceManagement:Service ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:assignedTo
+            sh:path ogit.foundation:assignedGroup ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.serviceManagement:ChangeRequest ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:causes
+            sh:path ogit.foundation:assignedTo ;
+            sh:class ogit.serviceManagement:Service
         ],
         [
-            sh:class ogit.serviceManagement:Order ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.foundation:category ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.serviceManagement:ChangeRequest ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.foundation:causes ;
+            sh:class ogit.serviceManagement:ChangeRequest
         ],
         [
-            sh:class ogit.serviceManagement:Ticket ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:corresponds
+            sh:path ogit.foundation:causes ;
+            sh:class ogit.serviceManagement:Order
         ],
         [
-            sh:class ogit.serviceManagement:ChangeRequest ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uses
+            sh:path ogit.foundation:complies ;
+            sh:class ogit.serviceManagement:SLA
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:corresponds ;
+            sh:class ogit.serviceManagement:Ticket
+        ],
+        [
+            sh:path ogit.foundation:effort ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:finishedAt ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:id ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:id
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:risk
+            sh:path ogit.foundation:justification ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:justification
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.serviceManagement:ChangeRequest
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:category
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.serviceManagement:Incident
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:startedAt
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.serviceManagement:Order
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:finishedAt
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.serviceManagement:Problem
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:effort
+            sh:path ogit.foundation:reportedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:reportedAt
+            sh:path ogit.foundation:reviewedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:reviewedAt
+            sh:path ogit.foundation:risk ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:assignedGroup
+            sh:path ogit.foundation:startedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:changeStatus
+            sh:path ogit.foundation:uses ;
+            sh:class ogit.serviceManagement:ChangeRequest
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:targetStartAt
+            sh:path ogit.serviceManagement:changeStatus ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:targetFinishAt
+            sh:path ogit.serviceManagement:customer ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:scheduledStartAt
+            sh:path ogit.serviceManagement:fallbackPlan ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:scheduledFinishAt
+            sh:path ogit.serviceManagement:implementationPlan ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:sourceStatus
+            sh:path ogit.serviceManagement:resolutionCode ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:fallbackPlan
+            sh:path ogit.serviceManagement:scheduledFinishAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:testPlan
+            sh:path ogit.serviceManagement:scheduledStartAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:implementationPlan
+            sh:path ogit.serviceManagement:solution ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:solution
+            sh:path ogit.serviceManagement:sourceStatus ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:resolutionCode
+            sh:path ogit.serviceManagement:targetFinishAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:customer
+            sh:path ogit.serviceManagement:targetStartAt ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.serviceManagement:SLA ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:complies
-        ],
-        [
-            sh:class ogit.serviceManagement:Service ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:affects
-        ],
-        [
-            sh:class ogit.serviceManagement:Problem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
-        ],
-        [
-            sh:class ogit.serviceManagement:Incident ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.serviceManagement:testPlan ;
+            sh:maxCount 1
         ] .
 
 ogit.serviceManagement:Incident
@@ -356,18 +297,6 @@ ogit.serviceManagement:Incident
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
-        [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-22" ;
-            dcterms:description "change attribute subStatus to sourceStatus" ;
-            dcterms:identifier "2"
-        ],
         [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-06-12" ;
@@ -385,135 +314,113 @@ ogit.serviceManagement:Incident
             dcterms:date "2015-09-04" ;
             dcterms:description "attribute ogit/id moved to be optional" ;
             dcterms:identifier "5"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-22" ;
+            dcterms:description "change attribute subStatus to sourceStatus" ;
+            dcterms:identifier "2"
         ] ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.serviceManagement:Service ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:assignedTo
+            sh:path ogit.foundation:affects ;
+            sh:class ogit.serviceManagement:Service
         ],
         [
-            sh:class ogit.serviceManagement:ChangeRequest ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.foundation:assignedGroup ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.serviceManagement:Problem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.foundation:assignedTo ;
+            sh:class ogit.serviceManagement:Service
         ],
         [
-            sh:class ogit.serviceManagement:Order ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:causes
+            sh:path ogit.foundation:category ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.serviceManagement:ChangeRequest ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:causes
+            sh:path ogit.foundation:causes ;
+            sh:class ogit.serviceManagement:ChangeRequest
         ],
         [
-            sh:class ogit.serviceManagement:Incident ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.foundation:causes ;
+            sh:class ogit.serviceManagement:Incident
         ],
         [
-            sh:class ogit.serviceManagement:Ticket ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:corresponds
+            sh:path ogit.foundation:causes ;
+            sh:class ogit.serviceManagement:Order
         ],
         [
-            sh:class ogit.serviceManagement:Service ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:affects
+            sh:path ogit.foundation:causes ;
+            sh:class ogit.serviceManagement:Problem
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:complies ;
+            sh:class ogit.serviceManagement:SLA
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:incidentStatus
+            sh:path ogit.foundation:corresponds ;
+            sh:class ogit.serviceManagement:Ticket
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:solution
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:resolutionCode
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.serviceManagement:ChangeRequest
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:resolvedAt
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.serviceManagement:Incident
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:sourceStatus
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.serviceManagement:Problem
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:reportedSource
+            sh:path ogit.foundation:reportedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:customer
+            sh:path ogit.serviceManagement:customer ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:task
+            sh:path ogit.serviceManagement:incidentStatus ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:assignedGroup
+            sh:path ogit.serviceManagement:reportedSource ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:category
+            sh:path ogit.serviceManagement:resolutionCode ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:reportedAt
+            sh:path ogit.serviceManagement:resolvedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.serviceManagement:Incident ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:causes
+            sh:path ogit.serviceManagement:solution ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.serviceManagement:SLA ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:complies
+            sh:path ogit.serviceManagement:sourceStatus ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.serviceManagement:Problem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:causes
+            sh:path ogit.serviceManagement:task ;
+            sh:maxCount 1
         ] .
 
 ogit.serviceManagement:Offering
@@ -535,71 +442,58 @@ ogit.serviceManagement:Offering
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.serviceManagement:Order ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:capacityAvailable ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:category ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.serviceManagement:Order
+        ],
+        [
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.serviceManagement:Service
+        ],
+        [
+            sh:path ogit.foundation:currency ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:expirationDate ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:id ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:name
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:market ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:name ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:id
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:allowedForNewBusiness
+            sh:path ogit.foundation:serialNumber ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:capacityAvailable
+            sh:path ogit.foundation:validFrom ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:currency
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:serialNumber
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:validFrom
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:expirationDate
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:category
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:market
-        ],
-        [
-            sh:class ogit.serviceManagement:Service ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.serviceManagement:allowedForNewBusiness ;
+            sh:maxCount 1
         ] .
 
 ogit.serviceManagement:Order
@@ -628,133 +522,101 @@ ogit.serviceManagement:Order
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.serviceManagement:ChangeRequest ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:causes
+            sh:path ogit.foundation:causes ;
+            sh:class ogit.serviceManagement:ChangeRequest
         ],
         [
-            sh:class ogit.serviceManagement:Order ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.foundation:causes ;
+            sh:class ogit.serviceManagement:Order
         ],
         [
-            sh:class ogit.serviceManagement:Ticket ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:causes
+            sh:path ogit.foundation:causes ;
+            sh:class ogit.serviceManagement:Ticket
         ],
         [
-            sh:class ogit.serviceManagement:Ticket ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.foundation:closedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.serviceManagement:Service ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:corresponds
+            sh:path ogit.foundation:corresponds ;
+            sh:class ogit.serviceManagement:Service
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:createdAt ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:id ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:id
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:impact ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:sourceStatus
+            sh:path ogit.foundation:lastUpdatedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:impact
+            sh:path ogit.foundation:openedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:urgency
+            sh:path ogit.foundation:priority ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:priority
+            sh:path ogit.foundation:project ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:createdAt
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.serviceManagement:ChangeRequest
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:openedAt
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.serviceManagement:Incident
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:closedAt
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.serviceManagement:Order
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:lastUpdatedAt
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.serviceManagement:Problem
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:externalTicketSource
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.serviceManagement:Ticket
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:externalTicketId
+            sh:path ogit.foundation:summary ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:reportedSource
+            sh:path ogit.foundation:urgency ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:project
+            sh:path ogit.serviceManagement:externalTicketId ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:summary
+            sh:path ogit.serviceManagement:externalTicketSource ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.serviceManagement:Problem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.serviceManagement:reportedSource ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.serviceManagement:Incident ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
-        ],
-        [
-            sh:class ogit.serviceManagement:ChangeRequest ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
-        ],
-        [
-            sh:class ogit.serviceManagement:Order ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:causes
+            sh:path ogit.serviceManagement:sourceStatus ;
+            sh:maxCount 1
         ] .
 
 ogit.serviceManagement:Problem
@@ -768,114 +630,88 @@ ogit.serviceManagement:Problem
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-09-07" ;
             dcterms:description "updated problemStatus as optional attribute." ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ] ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.serviceManagement:Service ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:assignedTo
+            sh:path ogit.foundation:assignedTo ;
+            sh:class ogit.serviceManagement:Service
         ],
         [
-            sh:class ogit.serviceManagement:Ticket ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:corresponds
+            sh:path ogit.foundation:causes ;
+            sh:class ogit.serviceManagement:ChangeRequest
         ],
         [
-            sh:class ogit.serviceManagement:ChangeRequest ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.foundation:causes ;
+            sh:class ogit.serviceManagement:Problem
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:complies ;
+            sh:class ogit.serviceManagement:SLA
+        ],
+        [
+            sh:path ogit.foundation:corresponds ;
+            sh:class ogit.serviceManagement:Ticket
+        ],
+        [
+            sh:path ogit.foundation:id ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:id
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:problemStatus
+            sh:path ogit.foundation:opens ;
+            sh:class ogit.serviceManagement:Problem
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:reportedAt
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.serviceManagement:ChangeRequest
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:solution
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.serviceManagement:Incident
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:resolutionCode
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.serviceManagement:Order
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:rootCause
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.serviceManagement:Problem
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:workAround
+            sh:path ogit.foundation:reportedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.serviceManagement:Incident ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.serviceManagement:problemStatus ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.serviceManagement:Problem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.serviceManagement:resolutionCode ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.serviceManagement:Problem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:causes
+            sh:path ogit.serviceManagement:rootCause ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.serviceManagement:ChangeRequest ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:causes
+            sh:path ogit.serviceManagement:solution ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.serviceManagement:SLA ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:complies
-        ],
-        [
-            sh:class ogit.serviceManagement:Order ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
-        ],
-        [
-            sh:class ogit.serviceManagement:Problem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:opens
+            sh:path ogit.serviceManagement:workAround ;
+            sh:maxCount 1
         ] .
 
 ogit.serviceManagement:Report
@@ -897,25 +733,20 @@ ogit.serviceManagement:Report
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.serviceManagement:Service ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:creates
+            sh:path ogit.foundation:creates ;
+            sh:class ogit.serviceManagement:Service
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:version
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:version ;
+            sh:maxCount 1
         ] .
 
 ogit.serviceManagement:SLA
@@ -929,16 +760,16 @@ ogit.serviceManagement:SLA
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-06-08" ;
             dcterms:description "Added ogit/startAt ogit/ServiceManagement/scheduledFinishAt ogit/slaStage ogit/ServiceManagement/elapsedTime ogit/ServiceManagement/leftTime attributes to ogit/ServiceManagement/SLA" ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ],
         [
             dcterms:creator "Peter Larem" ;
@@ -956,39 +787,32 @@ ogit.serviceManagement:SLA
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:startedAt
+            sh:path ogit.foundation:startedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:scheduledFinishAt
+            sh:path ogit.serviceManagement:elapsedTime ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:leftTime
+            sh:path ogit.serviceManagement:leftTime ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:elapsedTime
+            sh:path ogit.serviceManagement:resolvedInTime ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:slaStage
+            sh:path ogit.serviceManagement:scheduledFinishAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:resolvedInTime
+            sh:path ogit.serviceManagement:slaStage ;
+            sh:maxCount 1
         ] .
 
 ogit.serviceManagement:Service
@@ -1002,87 +826,68 @@ ogit.serviceManagement:Service
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem#" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-09-01" ;
             dcterms:description "updated" ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Peter Larem#" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ] ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.serviceManagement:Service ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:calls
+            sh:path ogit.foundation:calls ;
+            sh:class ogit.serviceManagement:Service
         ],
         [
-            sh:class ogit.serviceManagement:Action ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:requires
+            sh:path ogit.foundation:complies ;
+            sh:class ogit.serviceManagement:SLA
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:generates ;
+            sh:class ogit.serviceManagement:Report
+        ],
+        [
+            sh:path ogit.foundation:id ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:id
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
+            sh:path ogit.foundation:opens ;
+            sh:class ogit.serviceManagement:Incident
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:uri
+            sh:path ogit.foundation:opens ;
+            sh:class ogit.serviceManagement:Ticket
         ],
         [
-            sh:class ogit.serviceManagement:SLA ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:complies
+            sh:path ogit.foundation:requires ;
+            sh:class ogit.serviceManagement:Action
         ],
         [
-            sh:class ogit.serviceManagement:Incident ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:opens
+            sh:path ogit.foundation:requires ;
+            sh:class ogit.serviceManagement:Service
         ],
         [
-            sh:class ogit.serviceManagement:Report ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:generates
+            sh:path ogit.foundation:supports ;
+            sh:class ogit.serviceManagement:Action
         ],
         [
-            sh:class ogit.serviceManagement:Action ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:supports
-        ],
-        [
-            sh:class ogit.serviceManagement:Service ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:requires
-        ],
-        [
-            sh:class ogit.serviceManagement:Ticket ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:opens
+            sh:path ogit.foundation:uri ;
+            sh:maxCount 1
         ] .
 
 ogit.serviceManagement:SubTask
@@ -1097,16 +902,16 @@ Comman alternative names with same meaning are: task, activity, work order.""" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Catarina Onofre" ;
             dcterms:date "2015-05-22" ;
             dcterms:description "Attribute name changed from subStatus to sourceStatus" ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ],
         [
             dcterms:creator "Peter Larem" ;
@@ -1124,130 +929,101 @@ Comman alternative names with same meaning are: task, activity, work order.""" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.serviceManagement:Order ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit.foundation:assignedGroup ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.serviceManagement:SubTask ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:precedes
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit.serviceManagement:ChangeRequest
         ],
         [
-            sh:class ogit.serviceManagement:ChangeRequest ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit.serviceManagement:Incident
         ],
         [
-            sh:class ogit.serviceManagement:Problem ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit.serviceManagement:Order
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit.serviceManagement:Problem
+        ],
+        [
+            sh:path ogit.foundation:belongs ;
+            sh:class ogit.serviceManagement:Ticket
+        ],
+        [
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:effort ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:finishedAt ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:id ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:id
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:taskStatus
+            sh:path ogit.foundation:lastUpdatedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:sourceStatus
+            sh:path ogit.foundation:name ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:precedes ;
+            sh:class ogit.serviceManagement:SubTask
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:taskLog
+            sh:path ogit.foundation:startedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:startedAt
+            sh:path ogit.foundation:taskLog ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:finishedAt
+            sh:path ogit.foundation:type ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:targetStartAt
+            sh:path ogit.serviceManagement:customer ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:targetFinishAt
+            sh:path ogit.serviceManagement:resolutionCode ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:scheduledStartAt
+            sh:path ogit.serviceManagement:scheduledFinishAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:scheduledFinishAt
+            sh:path ogit.serviceManagement:scheduledStartAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:effort
+            sh:path ogit.serviceManagement:sourceStatus ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:lastUpdatedAt
+            sh:path ogit.serviceManagement:targetFinishAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:resolutionCode
+            sh:path ogit.serviceManagement:targetStartAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:name
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:assignedGroup
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:customer
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:type
-        ],
-        [
-            sh:class ogit.serviceManagement:Incident ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
-        ],
-        [
-            sh:class ogit.serviceManagement:Ticket ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:belongs
+            sh:path ogit.serviceManagement:taskStatus ;
+            sh:maxCount 1
         ] .
 
 ogit.serviceManagement:Ticket
@@ -1261,10 +1037,10 @@ ogit.serviceManagement:Ticket
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:date "2015-06-11" ;
+            dcterms:description "deleted the optional attribute ogit/ServiceManagement/externalTicketSource" ;
+            dcterms:identifier "4"
         ],
         [
             dcterms:creator "Catarina Onofre" ;
@@ -1274,111 +1050,91 @@ ogit.serviceManagement:Ticket
         ],
         [
             dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
             dcterms:date "2015-05-26" ;
             dcterms:description "add new optional attribute ogit/ServiceManagement/ticketId" ;
             dcterms:identifier "3"
-        ],
-        [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-06-11" ;
-            dcterms:description "deleted the optional attribute ogit/ServiceManagement/externalTicketSource" ;
-            dcterms:identifier "4"
         ] ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.serviceManagement:Ticket ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:causes
+            sh:path ogit.foundation:assignedTo ;
+            sh:class ogit.serviceManagement:Service
         ],
         [
-            sh:maxCount 1 ;
+            sh:path ogit.foundation:causes ;
+            sh:class ogit.serviceManagement:Ticket
+        ],
+        [
+            sh:path ogit.foundation:closedAt ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:createdAt ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:description ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit.foundation:id ;
             sh:minCount 1 ;
-            sh:path ogit.foundation:id
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:summary
+            sh:path ogit.foundation:impact ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:description
+            sh:path ogit.foundation:lastUpdatedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:project
+            sh:path ogit.foundation:openedAt ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:impact
+            sh:path ogit.foundation:priority ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:urgency
+            sh:path ogit.foundation:project ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:priority
+            sh:path ogit.foundation:relates ;
+            sh:class ogit.serviceManagement:Ticket
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:createdAt
+            sh:path ogit.foundation:summary ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:openedAt
+            sh:path ogit.foundation:urgency ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:closedAt
+            sh:path ogit.serviceManagement:externalTicketId ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:lastUpdatedAt
+            sh:path ogit.serviceManagement:reportedSource ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:sourceStatus
+            sh:path ogit.serviceManagement:sourceStatus ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:externalTicketId
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:reportedSource
-        ],
-        [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.serviceManagement:ticketId
-        ],
-        [
-            sh:class ogit.serviceManagement:Service ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:assignedTo
-        ],
-        [
-            sh:class ogit.serviceManagement:Ticket ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:relates
+            sh:path ogit.serviceManagement:ticketId ;
+            sh:maxCount 1
         ] .
 
 #
@@ -1431,16 +1187,16 @@ ogit.serviceManagement:changeStatus
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-05-16" ;
             dcterms:description "added a new status Escalated in the validation" ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ],
         [
             dcterms:creator "Peter Larem" ;
@@ -1617,16 +1373,16 @@ ogit.serviceManagement:incidentStatus
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Aymen Ayoub" ;
             dcterms:date "2015-10-16" ;
             dcterms:description "added a new State Escalated in the Validation." ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ] ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:validation-parameter "^(New|Assigned|Pending|Resolved|Closed|Escalated)$" ;
@@ -1896,18 +1652,18 @@ ogit.serviceManagement:sourceStatus
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
-        ],
-        [
             dcterms:creator "Catarina Onofre" ;
             dcterms:date "2015-05-22" ;
             dcterms:description """Attribute name changed from subStatus to sourceStatus
 - Description edited
 """ ;
             dcterms:identifier "2"
+        ],
+        [
+            dcterms:creator "Peter Larem" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:description "initial" ;
+            dcterms:identifier "1"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 

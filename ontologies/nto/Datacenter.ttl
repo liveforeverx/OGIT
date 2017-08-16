@@ -43,31 +43,24 @@ ogit.datacenter:Building
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.datacenter:Room ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.datacenter:datacenterId ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.datacenter:Datacenter ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:capacity ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.datacenter:Datacenter
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:capacity
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.datacenter:Room
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.datacenter:datacenterId
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.datacenter:Cooling
@@ -89,24 +82,20 @@ ogit.datacenter:Cooling
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.datacenter:roomId ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.datacenter:roomId
+            sh:path ogit.foundation:capacity ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:capacity
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:powerConsumption
+            sh:path ogit.foundation:powerConsumption ;
+            sh:maxCount 1
         ] .
 
 ogit.datacenter:Datacenter
@@ -128,14 +117,12 @@ ogit.datacenter:Datacenter
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:capacity ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:capacity
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.datacenter:PowerDistributionUnit
@@ -157,19 +144,16 @@ ogit.datacenter:PowerDistributionUnit
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.datacenter:rackId ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.datacenter:rackId
+            sh:path ogit.foundation:capacity ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:capacity
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.datacenter:Rack
@@ -191,66 +175,52 @@ ogit.datacenter:Rack
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.datacenter:PowerDistributionUnit ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.datacenter:moveProductionDate ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.datacenter:Sensor ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.datacenter:roomId ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:brand ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:capacity
+            sh:path ogit.foundation:capacity ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:brand
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.datacenter:PowerDistributionUnit
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:model
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.datacenter:Sensor
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:purchaseDate
+            sh:path ogit.foundation:endOfWarranty ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.datacenter:moveProductionDate
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:endOfWarranty
+            sh:path ogit.foundation:model ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.datacenter:roomId
+            sh:path ogit.foundation:powerConsumption ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:weight
+            sh:path ogit.foundation:purchaseDate ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:powerConsumption
+            sh:path ogit.foundation:weight ;
+            sh:maxCount 1
         ] .
 
 ogit.datacenter:Room
@@ -272,43 +242,32 @@ ogit.datacenter:Room
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.datacenter:Section ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:buildingId ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.datacenter:Rack ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:capacity ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.datacenter:Cooling
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:capacity
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.datacenter:Rack
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:buildingId
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.datacenter:Section
         ],
         [
-            sh:class ogit.datacenter:Sensor ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.datacenter:Sensor
         ],
         [
-            sh:class ogit.datacenter:Cooling ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.datacenter:Section
@@ -330,26 +289,20 @@ ogit.datacenter:Section
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:class ogit.datacenter:Rack ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:capacity ;
+            sh:maxCount 1
         ],
         [
-            sh:class ogit.datacenter:Sensor ;
-            sh:description "" ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:contains
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.datacenter:Rack
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:contains ;
+            sh:class ogit.datacenter:Sensor
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:capacity
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.datacenter:Sensor
@@ -371,14 +324,12 @@ ogit.datacenter:Sensor
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.datacenter:sectionId ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.datacenter:sectionId
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 ogit.datacenter:Server
@@ -400,34 +351,28 @@ ogit.datacenter:Server
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.datacenter:moveProductionDate ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:brand
+            sh:path ogit.foundation:brand ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:model
+            sh:path ogit.foundation:endOfWarranty ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:purchaseDate
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.datacenter:moveProductionDate
+            sh:path ogit.foundation:model ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:endOfWarranty
+            sh:path ogit.foundation:purchaseDate ;
+            sh:maxCount 1
         ] .
 
 ogit.datacenter:Storage
@@ -449,34 +394,28 @@ ogit.datacenter:Storage
     ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.datacenter:moveProductionDate ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:brand
+            sh:path ogit.foundation:brand ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:model
+            sh:path ogit.foundation:endOfWarranty ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:purchaseDate
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.datacenter:moveProductionDate
+            sh:path ogit.foundation:model ;
+            sh:maxCount 1
         ],
         [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:endOfWarranty
+            sh:path ogit.foundation:purchaseDate ;
+            sh:maxCount 1
         ] .
 
 ogit.datacenter:UPS
@@ -497,9 +436,8 @@ ogit.datacenter:UPS
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     sh:property [
-            sh:maxCount 1 ;
-            sh:minCount 0 ;
-            sh:path ogit.foundation:id
+            sh:path ogit.foundation:id ;
+            sh:maxCount 1
         ] .
 
 #

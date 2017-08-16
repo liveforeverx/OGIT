@@ -143,6 +143,12 @@ A request might contain a valid LicenseToken to indicate that this request is pr
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Miroslaw Glusiuk" ;
+            dcterms:date "2017-08-14" ;
+            dcterms:description "added ogit/subject" ;
+            dcterms:identifier "2"
         ] ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
@@ -151,6 +157,11 @@ A request might contain a valid LicenseToken to indicate that this request is pr
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:path ogit.foundation:id
+        ],
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:path ogit.foundation:subject
         ],
         [
             sh:maxCount 1 ;
@@ -259,9 +270,15 @@ ogit._license:licenseRequestStatus
             dcterms:date "2015-05-21" ;
             dcterms:description "initial" ;
             dcterms:identifier "1"
+        ],
+        [
+            dcterms:creator "Miroslaw Glusiuk" ;
+            dcterms:date "2017-08-10" ;
+            dcterms:description "add more states" ;
+            dcterms:identifier "2"
         ] ;
     ogit.core:tech-contact "arago GmbH" ;
-    ogit.core:validation-parameter "^(pending|approved|rejected|failed|cancelled)$" ;
+    ogit.core:validation-parameter "^(pending|send|approved|rejected|failed|received|cancelled)$" ;
     ogit.core:validation-type "regex" .
 
 ogit._license:licenseType

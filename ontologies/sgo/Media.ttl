@@ -49,28 +49,28 @@ ogit._media:Comment
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-08-20" ;
-            dcterms:description "updated Attribute ogit/id and ogit/content added." ;
-            dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "Aymen Ayoub" ;
-            dcterms:date "2015-09-01" ;
-            dcterms:description "updated Attribute ogit/id to be optional." ;
-            dcterms:identifier "3"
-        ],
-        [
-            dcterms:creator "Peter Larem" ;
+            dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:creator "Peter Larem" ;
+            dcterms:description "initial"
         ],
         [
-            dcterms:creator "Peter Larem" ;
+            dcterms:identifier "2" ;
+            dcterms:date "2015-08-20" ;
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:description "updated Attribute ogit/id and ogit/content added."
+        ],
+        [
+            dcterms:identifier "3" ;
+            dcterms:date "2015-09-01" ;
+            dcterms:creator "Aymen Ayoub" ;
+            dcterms:description "updated Attribute ogit/id to be optional."
+        ],
+        [
+            dcterms:identifier "4" ;
             dcterms:date "2015-10-16" ;
-            dcterms:description "added ogit/creater as optional." ;
-            dcterms:identifier "4"
+            dcterms:creator "Peter Larem" ;
+            dcterms:description "added ogit/creater as optional."
         ] ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
@@ -128,10 +128,10 @@ ogit._media:Hyperlink
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:any-attributes "true" ;
     ogit.core:history [
-            dcterms:creator "cwalker@arago.de" ;
+            dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:description "initial"
         ] ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
@@ -157,10 +157,10 @@ ogit._media:Note
     dcterms:valid "start=2015-04-29;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:creator "Peter Larem" ;
+            dcterms:identifier "1" ;
             dcterms:date "2015-04-29" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:creator "Peter Larem" ;
+            dcterms:description "initial"
         ] ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;

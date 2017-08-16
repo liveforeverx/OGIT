@@ -43,16 +43,16 @@ ogit._process:Notification
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "cwalker@arago.de" ;
+            dcterms:identifier "1" ;
             dcterms:date "2015-04-27" ;
-            dcterms:description "Initial Creation" ;
-            dcterms:identifier "1"
+            dcterms:creator "cwalker@arago.de" ;
+            dcterms:description "Initial Creation"
         ],
         [
-            dcterms:creator "stravlos@arago.de" ;
+            dcterms:identifier "2" ;
             dcterms:date "2017-02-17" ;
-            dcterms:description "Make description more general" ;
-            dcterms:identifier "2"
+            dcterms:creator "stravlos@arago.de" ;
+            dcterms:description "Make description more general"
         ] ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
@@ -83,16 +83,16 @@ Additionaly could be used to create new Issue from some form.""" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Arthur Shoba" ;
-            dcterms:date "2016-07-12" ;
-            dcterms:description "Added new attribute `capacity`" ;
-            dcterms:identifier "2"
+            dcterms:identifier "1" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:creator "Peter Larem" ;
+            dcterms:description "initial"
         ],
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:identifier "2" ;
+            dcterms:date "2016-07-12" ;
+            dcterms:creator "Arthur Shoba" ;
+            dcterms:description "Added new attribute `capacity`"
         ] ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
@@ -130,16 +130,16 @@ ogit._process:Task
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
+            dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:creator "Peter Larem" ;
+            dcterms:description "initial"
         ],
         [
-            dcterms:creator "Peter Larem" ;
+            dcterms:identifier "2" ;
             dcterms:date "2015-09-10" ;
-            dcterms:description "add attribute ogit/positionNumber" ;
-            dcterms:identifier "2"
+            dcterms:creator "Peter Larem" ;
+            dcterms:description "add attribute ogit/positionNumber"
         ] ;
     ogit.graphit:indexed-attributes ogit.foundation:name ;
     ogit.core:scope "SGO" ;
@@ -181,10 +181,10 @@ ogit._process:TaskList
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:creator "Peter Larem" ;
+            dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:creator "Peter Larem" ;
+            dcterms:description "initial"
         ] ;
     ogit.graphit:indexed-attributes ogit.foundation:name ;
     ogit.core:scope "SGO" ;
@@ -217,10 +217,10 @@ ogit._process:positionNumber
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:creator "Peter Larem" ;
+            dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:creator "Peter Larem" ;
+            dcterms:description "initial"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -234,9 +234,9 @@ ogit._process:response
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:creator "Peter Larem" ;
+            dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:creator "Peter Larem" ;
+            dcterms:description "initial"
         ] ;
     ogit.core:tech-contact "arago GmbH" .

@@ -45,22 +45,22 @@ ogit._contract:Contract
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
+            dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:creator "Peter Larem" ;
+            dcterms:description "initial"
         ],
         [
-            dcterms:creator "stravlos@arago.co" ;
+            dcterms:identifier "2" ;
             dcterms:date "2016-12-19" ;
-            dcterms:description "add attribute ogit/deadline" ;
-            dcterms:identifier "2"
+            dcterms:creator "stravlos@arago.co" ;
+            dcterms:description "add attribute ogit/deadline"
         ],
         [
-            dcterms:creator "stravlos@arago.co" ;
+            dcterms:identifier "3" ;
             dcterms:date "2017-01-06" ;
-            dcterms:description "add attribute ogit/validTo" ;
-            dcterms:identifier "3"
+            dcterms:creator "stravlos@arago.co" ;
+            dcterms:description "add attribute ogit/validTo"
         ] ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
@@ -126,10 +126,10 @@ ogit._contract:Penalty
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:creator "Peter Larem" ;
+            dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:creator "Peter Larem" ;
+            dcterms:description "initial"
         ] ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;

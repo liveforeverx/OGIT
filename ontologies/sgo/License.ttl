@@ -43,22 +43,22 @@ ogit._license:License
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Peter Larem" ;
+            dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:creator "Peter Larem" ;
+            dcterms:description "initial"
         ],
         [
-            dcterms:creator "stravlos@arago.co" ;
+            dcterms:identifier "2" ;
             dcterms:date "2016-11-29" ;
-            dcterms:description "add attribute validTo" ;
-            dcterms:identifier "2"
+            dcterms:creator "stravlos@arago.co" ;
+            dcterms:description "add attribute validTo"
         ],
         [
-            dcterms:creator "stravlos@arago.co" ;
+            dcterms:identifier "3" ;
             dcterms:date "2016-12-19" ;
-            dcterms:description "add attribute deadlie" ;
-            dcterms:identifier "3"
+            dcterms:creator "stravlos@arago.co" ;
+            dcterms:description "add attribute deadlie"
         ] ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
@@ -127,16 +127,16 @@ A request might contain a valid LicenseToken to indicate that this request is pr
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Miroslaw Glusiuk" ;
-            dcterms:date "2017-08-14" ;
-            dcterms:description "added ogit/subject" ;
-            dcterms:identifier "2"
+            dcterms:identifier "1" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:creator "Peter Larem" ;
+            dcterms:description "initial"
         ],
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:identifier "2" ;
+            dcterms:date "2017-08-14" ;
+            dcterms:creator "Miroslaw Glusiuk" ;
+            dcterms:description "added ogit/subject"
         ] ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
@@ -175,10 +175,10 @@ This will created by a license admin and communicated to potential licence reque
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:creator "Peter Larem" ;
+            dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:creator "Peter Larem" ;
+            dcterms:description "initial"
         ] ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;
@@ -226,10 +226,10 @@ ogit._license:licenseKey
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:creator "Peter Larem" ;
+            dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:creator "Peter Larem" ;
+            dcterms:description "initial"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
 
@@ -244,16 +244,16 @@ ogit._license:licenseRequestStatus
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:creator "Miroslaw Glusiuk" ;
-            dcterms:date "2017-08-10" ;
-            dcterms:description "add more states" ;
-            dcterms:identifier "2"
+            dcterms:identifier "1" ;
+            dcterms:date "2015-05-21" ;
+            dcterms:creator "Peter Larem" ;
+            dcterms:description "initial"
         ],
         [
-            dcterms:creator "Peter Larem" ;
-            dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:identifier "2" ;
+            dcterms:date "2017-08-10" ;
+            dcterms:creator "Miroslaw Glusiuk" ;
+            dcterms:description "add more states"
         ] ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:validation-parameter "^(pending|send|approved|rejected|failed|received|cancelled)$" ;
@@ -269,9 +269,9 @@ ogit._license:licenseType
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:creator "Peter Larem" ;
+            dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:creator "Peter Larem" ;
+            dcterms:description "initial"
         ] ;
     ogit.core:tech-contact "arago GmbH" .

@@ -36,22 +36,22 @@ ogit.survey:Iteration
     ogit.core:any-attributes "true" ;
     ogit.core:history
         [
-            dcterms:creator "Alexander Ryabtsev" ;
-            dcterms:date "2016-08-08" ;
-            dcterms:description "Attributes rework" ;
-            dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "Arthur Shoba" ;
+            dcterms:identifier "1" ;
             dcterms:date "2016-07-12" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:creator "Arthur Shoba" ;
+            dcterms:description "initial"
         ],
         [
-            dcterms:creator "Fabian Meyer" ;
+            dcterms:identifier "2" ;
+            dcterms:date "2016-08-08" ;
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:description "Attributes rework"
+        ],
+        [
+            dcterms:identifier "3" ;
             dcterms:date "2017-06-09" ;
-            dcterms:description "Renamed entity to Iteration and moved it from BusinessProcess to Survey NTO" ;
-            dcterms:identifier "3"
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:description "Renamed entity to Iteration and moved it from BusinessProcess to Survey NTO"
         ] ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
@@ -81,16 +81,16 @@ ogit.survey:Reply
     ogit.core:any-attributes "true" ;
     ogit.core:history
         [
-            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:identifier "1" ;
             dcterms:date "2016-08-08" ;
-            dcterms:description "Attributes rework" ;
-            dcterms:identifier "1"
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:description "Attributes rework"
         ],
         [
-            dcterms:creator "Fabian Meyer" ;
+            dcterms:identifier "2" ;
             dcterms:date "2017-06-09" ;
-            dcterms:description "Renamed entity to Reply, moved it from BusinessProcess to Survey NTO and replaced ogit/surveyQuestions with ogit/question" ;
-            dcterms:identifier "2"
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:description "Renamed entity to Reply, moved it from BusinessProcess to Survey NTO and replaced ogit/surveyQuestions with ogit/question"
         ] ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
@@ -120,22 +120,22 @@ ogit.survey:Survey
     ogit.core:any-attributes "true" ;
     ogit.core:history
         [
-            dcterms:creator "Alexander Ryabtsev" ;
-            dcterms:date "2016-08-08" ;
-            dcterms:description "Attributes rework" ;
-            dcterms:identifier "2"
-        ],
-        [
-            dcterms:creator "Arthur Shoba" ;
+            dcterms:identifier "1" ;
             dcterms:date "2016-07-12" ;
-            dcterms:description "initial" ;
-            dcterms:identifier "1"
+            dcterms:creator "Arthur Shoba" ;
+            dcterms:description "initial"
         ],
         [
-            dcterms:creator "Fabian Meyer" ;
+            dcterms:identifier "2" ;
+            dcterms:date "2016-08-08" ;
+            dcterms:creator "Alexander Ryabtsev" ;
+            dcterms:description "Attributes rework"
+        ],
+        [
+            dcterms:identifier "3" ;
             dcterms:date "2017-06-09" ;
-            dcterms:description "Moved entity from BusinessProcess to Survey NTO and replaced ogit/surveyQuestions with ogit/question" ;
-            dcterms:identifier "3"
+            dcterms:creator "Fabian Meyer" ;
+            dcterms:description "Moved entity from BusinessProcess to Survey NTO and replaced ogit/surveyQuestions with ogit/question"
         ] ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;

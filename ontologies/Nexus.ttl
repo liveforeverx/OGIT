@@ -2697,6 +2697,10 @@ ogit.serviceManagement:SubTask
         [
             sh:path ogit.foundation:corresponds ;
             sh:class ogit._process:Task
+        ],
+        [
+            sh:path ogit.foundation:corresponds ;
+            sh:class ogit.automation:AutomationIssue
         ] .
 
 ogit.serviceManagement:Ticket

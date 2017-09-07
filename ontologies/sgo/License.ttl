@@ -73,7 +73,7 @@ ogit._license:License
         ],
         [
             sh:path ogit.foundation:belongs ;
-            sh:class ogit._organization:Organization
+            sh:class ogit._license:LicenseRequest
         ],
         [
             sh:path ogit.foundation:createdAt ;
@@ -140,6 +140,12 @@ A request might contain a valid LicenseToken to indicate that this request is pr
             dcterms:date "2017-08-14" ;
             dcterms:creator "Miroslaw Glusiuk" ;
             dcterms:description "added ogit/subject"
+        ],
+        [
+            dcterms:identifier "3" ;
+            dcterms:date "2017-09-06" ;
+            dcterms:creator "Oday Jubran" ;
+            dcterms:description "added optional attribute ogit/licenseId"
         ] ;
     ogit.core:scope "SGO" ;
     ogit.core:tech-contact "arago GmbH" ;

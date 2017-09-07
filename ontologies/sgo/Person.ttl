@@ -95,6 +95,10 @@ ogit._person:Person
             sh:class ogit._location:Location
         ],
         [
+            sh:path ogit.foundation:creates ;
+            sh:class ogit._data:Certificate
+        ],
+        [
             sh:path ogit._person:alternativeName ;
             sh:maxCount 1
         ],

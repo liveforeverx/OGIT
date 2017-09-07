@@ -97,7 +97,6 @@ ogit._license:License
         ],
         [
             sh:path ogit.foundation:id ;
-            sh:minCount 1 ;
             sh:maxCount 1
         ],
         [
@@ -168,6 +167,10 @@ A request might contain a valid LicenseToken to indicate that this request is pr
         ],
         [
             sh:path ogit.foundation:token ;
+            sh:maxCount 1
+        ],
+        [
+            sh:path ogit._license:licenseId ;
             sh:maxCount 1
         ] .
 
@@ -268,9 +271,15 @@ ogit._license:licenseRequestStatus
  			      dcterms:date "2017-08-24";
  			      dcterms:description "add missing closed state";
  			      dcterms:creator "Miroslaw Glusiuk";
-    		] ;
+    		],
+        [
+            dcterms:identifier "4";
+            dcterms:date "2017-09-06";
+            dcterms:description "add error state";
+            dcterms:creator "Oday Jubran";
+        ] ;
     ogit.core:tech-contact "arago GmbH" ;
-    ogit.core:validation-parameter "^(pending|send|approved|rejected|failed|received|cancelled|closed)$" ;
+    ogit.core:validation-parameter "^(pending|send|error|approved|rejected|failed|received|cancelled|closed)$";
     ogit.core:validation-type "regex" .
 
 ogit._license:licenseType
@@ -289,3 +298,20 @@ ogit._license:licenseType
             dcterms:description "initial"
         ] ;
     ogit.core:tech-contact "arago GmbH" .
+
+ogit._license:licenseId
+	a ogit.core:Attribute;
+	rdfs:label "licenseId";
+	dcterms:description "The id of the license to be used to fetch licenses.";
+	dcterms:valid "start=2017-09-06;";
+	dcterms:creator "Oday Jubran";
+	dcterms:created "2017-09-06";
+	dcterms:modified "2017-09-06";
+	ogit:admin-contact "arago GmbH";
+	ogit:tech-contact "arago GmbH";
+	ogit:history [
+			dcterms:identifier "1";
+			dcterms:date "2017-09-06";
+			dcterms:description "initial";
+			dcterms:creator "Oday Jubran"
+	] .

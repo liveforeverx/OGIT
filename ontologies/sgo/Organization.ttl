@@ -128,6 +128,10 @@ The ogit/function attribute should be used to tell what kind of grouping an enti
             sh:class ogit._alerting:Alert
         ],
         [
+            sh:path ogit.foundation:creates ;
+            sh:class ogit._data:Certificate
+        ],
+        [
             sh:path ogit.foundation:communicatesWith ;
             sh:class ogit._organization:Organization
         ],

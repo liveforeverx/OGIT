@@ -36,7 +36,7 @@ ogit.serviceManagement:Action
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -77,13 +77,13 @@ ogit.serviceManagement:ApprovalTask
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
         ],
         [
-            dcterms:identifier "2" ;
+            dcterms:identifier 2 ;
             dcterms:date "2015-05-22" ;
             dcterms:creator "Catarina Onofre" ;
             dcterms:description "Attribute name changed from subStatus to sourceStatus"
@@ -135,19 +135,19 @@ ogit.serviceManagement:ChangeRequest
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
         ],
         [
-            dcterms:identifier "2" ;
+            dcterms:identifier 2 ;
             dcterms:date "2015-07-01" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "updated"
         ],
         [
-            dcterms:identifier "3" ;
+            dcterms:identifier 3 ;
             dcterms:date "2015-07-03" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "updated"
@@ -300,31 +300,31 @@ ogit.serviceManagement:Incident
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
         ],
         [
-            dcterms:identifier "2" ;
+            dcterms:identifier 2 ;
             dcterms:date "2015-05-22" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "change attribute subStatus to sourceStatus"
         ],
         [
-            dcterms:identifier "3" ;
+            dcterms:identifier 3 ;
             dcterms:date "2015-06-12" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "attribute category added"
         ],
         [
-            dcterms:identifier "4" ;
+            dcterms:identifier 4 ;
             dcterms:date "2015-07-06" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "attribute assignedGroup added"
         ],
         [
-            dcterms:identifier "5" ;
+            dcterms:identifier 5 ;
             dcterms:date "2015-09-04" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "attribute ogit/id moved to be optional"
@@ -435,7 +435,7 @@ ogit.serviceManagement:Offering
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -509,13 +509,13 @@ ogit.serviceManagement:Order
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
         ],
         [
-            dcterms:identifier "2" ;
+            dcterms:identifier 2 ;
             dcterms:date "2015-05-22" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "change attribute subStatus to sourceStatus"
@@ -632,13 +632,13 @@ ogit.serviceManagement:Problem
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
         ],
         [
-            dcterms:identifier "2" ;
+            dcterms:identifier 2 ;
             dcterms:date "2015-09-07" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "updated problemStatus as optional attribute."
@@ -726,7 +726,7 @@ ogit.serviceManagement:Report
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -762,25 +762,25 @@ ogit.serviceManagement:SLA
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
         ],
         [
-            dcterms:identifier "2" ;
+            dcterms:identifier 2 ;
             dcterms:date "2015-06-08" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "Added ogit/startAt ogit/ServiceManagement/scheduledFinishAt ogit/slaStage ogit/ServiceManagement/elapsedTime ogit/ServiceManagement/leftTime attributes to ogit/ServiceManagement/SLA"
         ],
         [
-            dcterms:identifier "3" ;
+            dcterms:identifier 3 ;
             dcterms:date "2015-07-09" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "change attribute ogit/startAt to ogit/startedAt"
         ],
         [
-            dcterms:identifier "4" ;
+            dcterms:identifier 4 ;
             dcterms:date "2015-08-11" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "add resolvedInTime"
@@ -828,13 +828,13 @@ ogit.serviceManagement:Service
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem#" ;
             dcterms:description "initial"
         ],
         [
-            dcterms:identifier "2" ;
+            dcterms:identifier 2 ;
             dcterms:date "2015-09-01" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "updated"
@@ -904,25 +904,25 @@ Comman alternative names with same meaning are: task, activity, work order.""" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
         ],
         [
-            dcterms:identifier "2" ;
+            dcterms:identifier 2 ;
             dcterms:date "2015-05-22" ;
             dcterms:creator "Catarina Onofre" ;
             dcterms:description "Attribute name changed from subStatus to sourceStatus"
         ],
         [
-            dcterms:identifier "3" ;
+            dcterms:identifier 3 ;
             dcterms:date "2015-07-09" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "change attribute ogit/startAt to ogit/startedAt and ogit/finishAt to ogit/finishedAt"
         ],
         [
-            dcterms:identifier "4" ;
+            dcterms:identifier 4 ;
             dcterms:date "2015-12-10" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "change entity name to ogit/ServiceManagement/SubTask and add some attributes"
@@ -1039,25 +1039,25 @@ ogit.serviceManagement:Ticket
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
         ],
         [
-            dcterms:identifier "2" ;
+            dcterms:identifier 2 ;
             dcterms:date "2015-05-22" ;
             dcterms:creator "Catarina Onofre" ;
             dcterms:description "Attribute name changed from subStatus to sourceStatus"
         ],
         [
-            dcterms:identifier "3" ;
+            dcterms:identifier 3 ;
             dcterms:date "2015-05-26" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "add new optional attribute ogit/ServiceManagement/ticketId"
         ],
         [
-            dcterms:identifier "4" ;
+            dcterms:identifier 4 ;
             dcterms:date "2015-06-11" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "deleted the optional attribute ogit/ServiceManagement/externalTicketSource"
@@ -1151,7 +1151,7 @@ ogit.serviceManagement:allowedForNewBusiness
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1170,7 +1170,7 @@ ogit.serviceManagement:approvalStatus
     ogit.core:validation-parameter "^(New|PendingApproval|Approved|Rejected|Cancelled|Closed)$" ;
     ogit.core:validation-type "regex" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1190,19 +1190,19 @@ ogit.serviceManagement:changeStatus
     ogit.core:validation-type "regex" ;
     ogit.core:history
         [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
         ],
         [
-            dcterms:identifier "2" ;
+            dcterms:identifier 2 ;
             dcterms:date "2015-05-16" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "added a new status Escalated in the validation"
         ],
         [
-            dcterms:identifier "3" ;
+            dcterms:identifier 3 ;
             dcterms:date "2015-12-17" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "change validation parameter"
@@ -1219,7 +1219,7 @@ ogit.serviceManagement:customer
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-03" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1236,7 +1236,7 @@ ogit.serviceManagement:elapsedTime
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-06-08" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1253,7 +1253,7 @@ ogit.serviceManagement:eventMessage
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1271,7 +1271,7 @@ This could be an artifical identifier or some "natural" ID like hostname or IP a
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1288,7 +1288,7 @@ ogit.serviceManagement:externalTicketId
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1305,7 +1305,7 @@ ogit.serviceManagement:externalTicketSource
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1322,7 +1322,7 @@ ogit.serviceManagement:fallbackPlan
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1339,7 +1339,7 @@ ogit.serviceManagement:granularity
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1356,7 +1356,7 @@ ogit.serviceManagement:implementationPlan
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1376,13 +1376,13 @@ ogit.serviceManagement:incidentStatus
     ogit.core:validation-type "regex" ;
     ogit.core:history
         [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
         ],
         [
-            dcterms:identifier "2" ;
+            dcterms:identifier 2 ;
             dcterms:date "2015-10-16" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "added a new State Escalated in the Validation."
@@ -1399,7 +1399,7 @@ ogit.serviceManagement:isRequired
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1416,7 +1416,7 @@ ogit.serviceManagement:leftTime
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-06-08" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1435,7 +1435,7 @@ ogit.serviceManagement:licenseTokenStatus
     ogit.core:validation-parameter "^(open|used|disabled)$" ;
     ogit.core:validation-type "regex" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1454,7 +1454,7 @@ ogit.serviceManagement:problemStatus
     ogit.core:validation-parameter "^(New|Assigned|Pending|Resolved|Closed)$" ;
     ogit.core:validation-type "regex" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1471,7 +1471,7 @@ ogit.serviceManagement:reportedSource
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1488,7 +1488,7 @@ ogit.serviceManagement:requirementId
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1505,7 +1505,7 @@ ogit.serviceManagement:resolutionCode
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1523,7 +1523,7 @@ The values must be combined date and time with time zone designator according to
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1540,7 +1540,7 @@ ogit.serviceManagement:resolvedInTime
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-08-11" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
@@ -1557,7 +1557,7 @@ ogit.serviceManagement:rootCause
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1575,7 +1575,7 @@ The values must be combined date and time with time zone designator according to
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1593,7 +1593,7 @@ The values must be combined date and time with time zone designator according to
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1611,13 +1611,13 @@ ogit.serviceManagement:slaStage
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-06-08" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
         ],
         [
-            dcterms:identifier "2" ;
+            dcterms:identifier 2 ;
             dcterms:date "2015-09-01" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "validation deleted"
@@ -1635,7 +1635,7 @@ This field is also use for problem tickets. There is defines the permanent solut
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1653,13 +1653,13 @@ ogit.serviceManagement:sourceStatus
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
         ],
         [
-            dcterms:identifier "2" ;
+            dcterms:identifier 2 ;
             dcterms:date "2015-05-22" ;
             dcterms:creator "Catarina Onofre" ;
             dcterms:description """Attribute name changed from subStatus to sourceStatus
@@ -1679,7 +1679,7 @@ The values must be combined date and time with time zone designator according to
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1697,7 +1697,7 @@ The values must be combined date and time with time zone designator according to
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1714,7 +1714,7 @@ ogit.serviceManagement:task
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-06" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1731,7 +1731,7 @@ ogit.serviceManagement:taskName
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1751,13 +1751,13 @@ ogit.serviceManagement:taskStatus
     ogit.core:validation-type "regex" ;
     ogit.core:history
         [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
         ],
         [
-            dcterms:identifier "2" ;
+            dcterms:identifier 2 ;
             dcterms:date "2015-12-17" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "change validation parameter"
@@ -1774,7 +1774,7 @@ ogit.serviceManagement:testPlan
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1791,7 +1791,7 @@ ogit.serviceManagement:ticketId
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-26" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1808,7 +1808,7 @@ ogit.serviceManagement:workAround
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"

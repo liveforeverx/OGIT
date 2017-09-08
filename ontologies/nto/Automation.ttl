@@ -29,12 +29,12 @@ ogit.automation:AutomationIssue
     rdfs:label "AutomationIssue" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """Dynamic information exists within an automation engine in the form of Issues otherwise referred to as 
-Task or Situational Data. From the technical perspective an Issue is a number of attributes (Key/Value tuples) with 
-unique names. From the logical point of view Issues contain information about the change of states on a system. 
-Issues can be injected into an automation engine from external systems e.g. Monitoring or result from the execution of a Knowledge Item. 
-By comparing an Issue with the Issue Condition of a Knowledge Item an automation engine decides which Knowledge Items are are processed 
-in which order. If multiple Knowledge Items can be applied to an Issue the KI with the more precisely defined 
+    dcterms:description """Dynamic information exists within an automation engine in the form of Issues otherwise referred to as
+Task or Situational Data. From the technical perspective an Issue is a number of attributes (Key/Value tuples) with
+unique names. From the logical point of view Issues contain information about the change of states on a system.
+Issues can be injected into an automation engine from external systems e.g. Monitoring or result from the execution of a Knowledge Item.
+By comparing an Issue with the Issue Condition of a Knowledge Item an automation engine decides which Knowledge Items are are processed
+in which order. If multiple Knowledge Items can be applied to an Issue the KI with the more precisely defined
 IssueCondition is processed first.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
@@ -43,25 +43,25 @@ IssueCondition is processed first.""" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
         ],
         [
-            dcterms:identifier "2" ;
+            dcterms:identifier 2 ;
             dcterms:date "2015-05-26" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "change entity name"
         ],
         [
-            dcterms:identifier "3" ;
+            dcterms:identifier 3 ;
             dcterms:date "2015-10-07" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "add attributes modificationTime and creationTime"
         ],
         [
-            dcterms:identifier "4" ;
+            dcterms:identifier 4 ;
             dcterms:date "2016-01-25" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "add attributes isDeployed and deployStatus"
@@ -133,7 +133,7 @@ ogit.automation:DynamicEngineData
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-06-25" ;
             dcterms:creator "Miroslaw Glusiuk" ;
             dcterms:description "initial"
@@ -168,7 +168,7 @@ ogit.automation:History
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -210,7 +210,7 @@ ogit.automation:Item
     rdfs:label "Item" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """Item describing a condition for an automation issue (e.g. Request) that would correspond to a technical characteristic, 
+    dcterms:description """Item describing a condition for an automation issue (e.g. Request) that would correspond to a technical characteristic,
 which would activate the automation Trigger.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
@@ -218,7 +218,7 @@ which would activate the automation Trigger.""" ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -256,19 +256,19 @@ In that case, the KnowledgeItem executes operations, which serves the exploitati
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
         ],
         [
-            dcterms:identifier "2" ;
+            dcterms:identifier 2 ;
             dcterms:date "2016-01-25" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "add attributes isDeployed and deployStatus"
         ],
         [
-            dcterms:identifier "3" ;
+            dcterms:identifier 3 ;
             dcterms:date "2016-04-18" ;
             dcterms:creator "Markus Napp" ;
             dcterms:description "added indexes for creator/modifier/owner"
@@ -353,7 +353,7 @@ ogit.automation:KnowledgeItemAttribute
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -389,17 +389,17 @@ ogit.automation:MAID
 3. a set of condition->event mappings to apply to the timeseries or its normalizations
 
 
- These time series definitions can be parameterized for more flexibility. Usually each MAID should describe 
-exactly one raw timeseries. Depending of the type of monitoring or event management system connected to 
-the engine, the corresponding adapter may choose to either supply the raw timeseries itself or directly 
+ These time series definitions can be parameterized for more flexibility. Usually each MAID should describe
+exactly one raw timeseries. Depending of the type of monitoring or event management system connected to
+the engine, the corresponding adapter may choose to either supply the raw timeseries itself or directly
 create issues using the contained Event structures if it the raw data is not available.
 
 
 The abstract MAID definitions are then mapped to the MARS model within the engine using so-called "Binding Blocks".
 
 
-Thus MAID ensures that the arago Automation Engine is compatible to any monitoring system and can fully interact 
-with them. By formalizing the interface the information verification process and definition of required add-ons 
+Thus MAID ensures that the arago Automation Engine is compatible to any monitoring system and can fully interact
+with them. By formalizing the interface the information verification process and definition of required add-ons
 to the monitoring systems becomes possible.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
@@ -407,7 +407,7 @@ to the monitoring systems becomes possible.""" ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -423,10 +423,10 @@ ogit.automation:MARSModel
     rdfs:label "MARSModel" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """A collection of MARSNodes allows to address all MARS nodes belonging together in a certain way at once the relationship 
+    dcterms:description """A collection of MARSNodes allows to address all MARS nodes belonging together in a certain way at once the relationship
 from MARSModel to MARSNode is 'ogit/contains'.
-examples are: All MARS nodes describing the IT of one data center, or all MARS nodes associated with the same contract. 
-In such cases you would connect the other entity (data center, contract) with the MARSModel node instead creating links 
+examples are: All MARS nodes describing the IT of one data center, or all MARS nodes associated with the same contract.
+In such cases you would connect the other entity (data center, contract) with the MARSModel node instead creating links
 to any MARSNode being part of that model.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
@@ -434,7 +434,7 @@ to any MARSNode being part of that model.""" ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -458,7 +458,7 @@ ogit.automation:MARSModelTemplate
     rdfs:label "MARSModelTemplate" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """Represents a set of interconnected MARSNodes, which will be used to define a vendor implementation template of an ordered 
+    dcterms:description """Represents a set of interconnected MARSNodes, which will be used to define a vendor implementation template of an ordered
 service offering.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
@@ -466,7 +466,7 @@ service offering.""" ;
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -503,79 +503,79 @@ describe the business view of the IT environment.""" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
         ],
         [
-            dcterms:identifier "10" ;
+            dcterms:identifier 10 ;
             dcterms:date "2015-10-29" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "added a new attribute ogit/id"
         ],
         [
-            dcterms:identifier "11" ;
+            dcterms:identifier 11 ;
             dcterms:date "2015-11-02" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "added a new attribute ogit/Automation/companyName and ogit/Automation/projectName"
         ],
         [
-            dcterms:identifier "12" ;
+            dcterms:identifier 12 ;
             dcterms:date "2016-01-25" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "added a new attribute isDeployed and deployStatus"
         ],
         [
-            dcterms:identifier "13" ;
+            dcterms:identifier 13 ;
             dcterms:date "2017-05-11" ;
             dcterms:creator "Philipp Kählitz" ;
             dcterms:description "added a new attribute lifecycle"
         ],
         [
-            dcterms:identifier "2" ;
+            dcterms:identifier 2 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "updated"
         ],
         [
-            dcterms:identifier "3" ;
+            dcterms:identifier 3 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "updated"
         ],
         [
-            dcterms:identifier "4" ;
+            dcterms:identifier 4 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "added os informaiton"
         ],
         [
-            dcterms:identifier "5" ;
+            dcterms:identifier 5 ;
             dcterms:date "2015-08-19" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "added buildType and serialNumber"
         ],
         [
-            dcterms:identifier "6" ;
+            dcterms:identifier 6 ;
             dcterms:date "2015-10-07" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "add attributes modificationTime and creationTime"
         ],
         [
-            dcterms:identifier "7" ;
+            dcterms:identifier 7 ;
             dcterms:date "2015-10-15" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "deleted the governingConract attribute"
         ],
         [
-            dcterms:identifier "8" ;
+            dcterms:identifier 8 ;
             dcterms:date "2015-10-16" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "added a new attribute rackUnit"
         ],
         [
-            dcterms:identifier "9" ;
+            dcterms:identifier 9 ;
             dcterms:date "2015-10-26" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "added a new attribute ogit/connectorId"
@@ -947,7 +947,7 @@ ogit.automation:MARSNodeTemplate
     rdfs:label "MARSNodeTemplate" ;
     dcterms:created "2015-05-21" ;
     dcterms:creator "Peter Larem" ;
-    dcterms:description """Entity similar to MARSNode but used to create ogit/Automation/MARSTemplate's, which are used to define a vendor implementation template of an ordered 
+    dcterms:description """Entity similar to MARSNode but used to create ogit/Automation/MARSTemplate's, which are used to define a vendor implementation template of an ordered
 service offering and to enable definition of cost elements (ogit/Cost/CostElement) attached to it. Automation/MarsNode can not be reused for template reasons.""" ;
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
@@ -955,7 +955,7 @@ service offering and to enable definition of cost elements (ogit/Cost/CostElemen
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -995,7 +995,7 @@ ogit.automation:Trigger
     ogit.core:scope "NTO" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1025,7 +1025,7 @@ ogit.automation:additionalMacAddress
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1042,7 +1042,7 @@ ogit.automation:adminUrl
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1059,7 +1059,7 @@ ogit.automation:affectedNodeId
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1076,7 +1076,7 @@ ogit.automation:appInfrastructureType
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1093,7 +1093,7 @@ ogit.automation:appInstanceType
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1110,7 +1110,7 @@ ogit.automation:appServer
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1127,7 +1127,7 @@ ogit.automation:basicConfigId
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1144,7 +1144,7 @@ ogit.automation:brand
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1161,7 +1161,7 @@ ogit.automation:buildName
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1178,7 +1178,7 @@ ogit.automation:buildType
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-08-19" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1195,7 +1195,7 @@ ogit.automation:command
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1212,7 +1212,7 @@ ogit.automation:companyName
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-11-02" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1229,7 +1229,7 @@ ogit.automation:contextPath
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1246,7 +1246,7 @@ ogit.automation:cpuCoreCount
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1263,7 +1263,7 @@ ogit.automation:cpuCount
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1280,7 +1280,7 @@ ogit.automation:cpuManufacturer
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1297,7 +1297,7 @@ ogit.automation:cpuModel
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1314,7 +1314,7 @@ ogit.automation:cpuSpeed
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1331,7 +1331,7 @@ ogit.automation:cpuType
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1348,7 +1348,7 @@ ogit.automation:dataClassification
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1365,7 +1365,7 @@ ogit.automation:dataPrivacy
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1382,7 +1382,7 @@ ogit.automation:databaseSchema
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1399,7 +1399,7 @@ ogit.automation:databaseServer
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1416,7 +1416,7 @@ ogit.automation:deployStatus
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2016-01-25" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1433,7 +1433,7 @@ ogit.automation:deployToEngine
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1450,7 +1450,7 @@ ogit.automation:diskCount
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1467,7 +1467,7 @@ ogit.automation:diskSpace
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1484,7 +1484,7 @@ ogit.automation:domain
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayou" ;
             dcterms:description "initial"
@@ -1501,7 +1501,7 @@ ogit.automation:exchangeRate
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayou" ;
             dcterms:description "initial"
@@ -1518,7 +1518,7 @@ ogit.automation:firewallStatus
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1535,7 +1535,7 @@ ogit.automation:firmwareVersion
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1552,7 +1552,7 @@ ogit.automation:fqdn
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1569,7 +1569,7 @@ ogit.automation:governingContract
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1586,7 +1586,7 @@ ogit.automation:host
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1603,7 +1603,7 @@ ogit.automation:installCount
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1620,7 +1620,7 @@ ogit.automation:installPath
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1637,7 +1637,7 @@ ogit.automation:isDeployed
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2016-01-25" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1654,7 +1654,7 @@ ogit.automation:issueFormalRepresentation
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1671,7 +1671,7 @@ ogit.automation:knowledgeItemFormalRepresentation
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1688,7 +1688,7 @@ ogit.automation:knowledgeItemId
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1705,7 +1705,7 @@ ogit.automation:knowledgeItemTier
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1722,7 +1722,7 @@ ogit.automation:licenseAvailability
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1739,7 +1739,7 @@ ogit.automation:licenseName
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1756,7 +1756,7 @@ ogit.automation:licenseType
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1773,7 +1773,7 @@ ogit.automation:lifecycle
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2017-05-11" ;
             dcterms:creator "Philipp Kählitz" ;
             dcterms:description "initial"
@@ -1790,7 +1790,7 @@ ogit.automation:logLevel
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1807,7 +1807,7 @@ ogit.automation:maidFormalRepresentation
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1824,7 +1824,7 @@ ogit.automation:marsNodeFormalRepresentation
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1841,7 +1841,7 @@ ogit.automation:marsNodeType
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -1858,7 +1858,7 @@ ogit.automation:memory
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1875,7 +1875,7 @@ ogit.automation:middlewareType
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1893,7 +1893,7 @@ The values can combine date and time with time zone designator according to ISO 
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1910,7 +1910,7 @@ ogit.automation:objectIdentifier
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1927,7 +1927,7 @@ ogit.automation:osKey
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
@@ -1944,7 +1944,7 @@ ogit.automation:osLicense
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
@@ -1961,7 +1961,7 @@ ogit.automation:osManufacturer
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -1978,7 +1978,7 @@ ogit.automation:osName
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
@@ -1995,7 +1995,7 @@ ogit.automation:osServicePack
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
@@ -2012,7 +2012,7 @@ ogit.automation:osVersion
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
@@ -2029,7 +2029,7 @@ ogit.automation:patchNumber
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -2046,7 +2046,7 @@ ogit.automation:portNumber
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -2063,7 +2063,7 @@ ogit.automation:portNumberListener
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -2080,7 +2080,7 @@ ogit.automation:processingTimestamp
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -2097,7 +2097,7 @@ ogit.automation:projectName
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-11-02" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
@@ -2114,7 +2114,7 @@ ogit.automation:serialNumber
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -2131,7 +2131,7 @@ ogit.automation:serviceClass
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -2148,7 +2148,7 @@ ogit.automation:serviceId
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -2165,7 +2165,7 @@ ogit.automation:serviceName
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -2182,7 +2182,7 @@ ogit.automation:serviceStatus
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -2199,7 +2199,7 @@ ogit.automation:serviceType
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -2216,7 +2216,7 @@ ogit.automation:servletClass
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -2233,7 +2233,7 @@ ogit.automation:servletName
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -2250,7 +2250,7 @@ ogit.automation:software
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -2267,7 +2267,7 @@ ogit.automation:softwareKey
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -2284,7 +2284,7 @@ ogit.automation:systemClass
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -2301,7 +2301,7 @@ ogit.automation:systemType
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -2318,7 +2318,7 @@ ogit.automation:tcpPort
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -2335,7 +2335,7 @@ ogit.automation:virtualMachineName
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -2352,7 +2352,7 @@ ogit.automation:virtualSystemName
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -2369,7 +2369,7 @@ ogit.automation:virtualSystemType
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"
@@ -2386,7 +2386,7 @@ ogit.automation:webServer
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
-            dcterms:identifier "1" ;
+            dcterms:identifier 1 ;
             dcterms:date "2015-07-24" ;
             dcterms:creator "Aymen Ayoub" ;
             dcterms:description "initial"

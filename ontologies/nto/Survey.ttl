@@ -34,6 +34,8 @@ ogit.survey:Iteration
     dcterms:valid "start=2016-08-08;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:any-attributes "true" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
             dcterms:identifier "1" ;
@@ -53,8 +55,6 @@ ogit.survey:Iteration
             dcterms:creator "Fabian Meyer" ;
             dcterms:description "Renamed entity to Iteration and moved it from BusinessProcess to Survey NTO"
         ] ;
-    ogit.core:scope "NTO" ;
-    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:path ogit.foundation:belongs ;
@@ -79,6 +79,8 @@ ogit.survey:Reply
     dcterms:valid "start=2016-08-08;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:any-attributes "true" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
             dcterms:identifier "1" ;
@@ -92,8 +94,6 @@ ogit.survey:Reply
             dcterms:creator "Fabian Meyer" ;
             dcterms:description "Renamed entity to Reply, moved it from BusinessProcess to Survey NTO and replaced ogit/surveyQuestions with ogit/question"
         ] ;
-    ogit.core:scope "NTO" ;
-    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:path ogit.foundation:belongs ;
@@ -118,6 +118,8 @@ ogit.survey:Survey
     dcterms:valid "start=2016-07-12;" ;
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:any-attributes "true" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
             dcterms:identifier "1" ;
@@ -137,8 +139,6 @@ ogit.survey:Survey
             dcterms:creator "Fabian Meyer" ;
             dcterms:description "Moved entity from BusinessProcess to Survey NTO and replaced ogit/surveyQuestions with ogit/question"
         ] ;
-    ogit.core:scope "NTO" ;
-    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:path ogit.foundation:category ;

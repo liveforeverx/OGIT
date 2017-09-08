@@ -41,6 +41,8 @@ ogit._event:Event
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
             dcterms:identifier "1" ;
@@ -54,8 +56,6 @@ ogit._event:Event
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "Added Attributes: ogit/summary, ogit/impact, ogit/priority, ogit/certainty, ogit/firstOccurredAt, ogit/lastOccurredAt, ogit/openedAt, ogit/lastUpdatedAt, ogit/lastClearedAt, ogit/expiresAt, ogit/occurenceCount,  ogit/ServiceManagement/reportedSource, ogit/type, ogit/category, ogit/instance, ogit/resource, ogit/maintenanceState, ogit/acknowledgeState, ogit/isRoot"
         ] ;
-    ogit.core:scope "SGO" ;
-    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:path ogit._event:acknowledgeState ;
@@ -176,13 +176,13 @@ ogit._event:acknowledgeState
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-08-03" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._event:certainty
     a ogit.core:Attribute ;
@@ -193,13 +193,13 @@ ogit._event:certainty
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-08-03" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._event:expiresAt
     a ogit.core:Attribute ;
@@ -210,13 +210,13 @@ ogit._event:expiresAt
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-08-03" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._event:firstOccurredAt
     a ogit.core:Attribute ;
@@ -227,13 +227,13 @@ ogit._event:firstOccurredAt
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-08-03" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._event:isRoot
     a ogit.core:Attribute ;
@@ -244,13 +244,13 @@ ogit._event:isRoot
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-08-03" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._event:lastClearedAt
     a ogit.core:Attribute ;
@@ -261,13 +261,13 @@ ogit._event:lastClearedAt
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-08-03" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._event:lastOccurredAt
     a ogit.core:Attribute ;
@@ -278,13 +278,13 @@ ogit._event:lastOccurredAt
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-08-03" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._event:maintenanceState
     a ogit.core:Attribute ;
@@ -295,13 +295,13 @@ ogit._event:maintenanceState
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-08-03" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._event:occurenceCount
     a ogit.core:Attribute ;
@@ -312,13 +312,13 @@ ogit._event:occurenceCount
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-08-03" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._event:resource
     a ogit.core:Attribute ;
@@ -329,13 +329,13 @@ ogit._event:resource
     dcterms:modified "2016-08-03" ;
     dcterms:valid "start=2016-08-03;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-08-03" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._event:severity
     a ogit.core:Attribute ;
@@ -346,10 +346,10 @@ ogit._event:severity
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .

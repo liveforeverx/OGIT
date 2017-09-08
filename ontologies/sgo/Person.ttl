@@ -63,6 +63,13 @@ ogit._person:Person
     dcterms:modified "2015-07-27" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.graphit:indexed-attributes
+        ogit._person:alternativeName,
+        ogit._person:firstName,
+        ogit._person:lastName,
+        ogit.foundation:email ;
     ogit.core:history
         [
             dcterms:identifier "1" ;
@@ -82,21 +89,10 @@ ogit._person:Person
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "added optional attribute ogit/middleName, ogit/officePhone, ogit/otherPhone, ogit/mobilePhone, ogit/fax, ogit/webPage, ogit/notification, ogit/status"
         ] ;
-    ogit.graphit:indexed-attributes
-        ogit._person:alternativeName,
-        ogit._person:firstName,
-        ogit._person:lastName,
-        ogit.foundation:email ;
-    ogit.core:scope "SGO" ;
-    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:path ogit._location:locatedIn ;
             sh:class ogit._location:Location
-        ],
-        [
-            sh:path ogit.foundation:creates ;
-            sh:class ogit._data:Certificate
         ],
         [
             sh:path ogit._person:alternativeName ;
@@ -173,6 +169,10 @@ ogit._person:Person
         [
             sh:path ogit.foundation:creates ;
             sh:class ogit._configuration:ConfigurationItem
+        ],
+        [
+            sh:path ogit.foundation:creates ;
+            sh:class ogit._data:Certificate
         ],
         [
             sh:path ogit.foundation:email ;
@@ -303,13 +303,13 @@ ogit._person:alternativeName
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._person:fax
     a ogit.core:Attribute ;
@@ -320,13 +320,13 @@ ogit._person:fax
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-07-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._person:firstName
     a ogit.core:Attribute ;
@@ -337,13 +337,13 @@ ogit._person:firstName
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._person:lastName
     a ogit.core:Attribute ;
@@ -354,13 +354,13 @@ ogit._person:lastName
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._person:middleName
     a ogit.core:Attribute ;
@@ -371,13 +371,13 @@ ogit._person:middleName
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-07-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._person:notification
     a ogit.core:Attribute ;
@@ -388,13 +388,13 @@ ogit._person:notification
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-07-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._person:officePhone
     a ogit.core:Attribute ;
@@ -405,13 +405,13 @@ ogit._person:officePhone
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-07-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._person:otherPhone
     a ogit.core:Attribute ;
@@ -422,13 +422,13 @@ ogit._person:otherPhone
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-07-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2015-07-27" ;
             dcterms:creator "Philipp Pelchmann" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._person:position
     a ogit.core:Attribute ;
@@ -439,13 +439,13 @@ ogit._person:position
     dcterms:modified "2016-10-18" ;
     dcterms:valid "start=2016-10-18;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-10-18" ;
             dcterms:creator "Arthur Shoba" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 #
 # Verbs
@@ -459,13 +459,13 @@ ogit._person:dislikes
     dcterms:modified "2015-09-15" ;
     dcterms:valid "start=2015-09-15;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2015-09-15" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._person:invites
     a ogit.core:Verb ;
@@ -476,13 +476,13 @@ ogit._person:invites
     dcterms:modified "2015-09-15" ;
     dcterms:valid "start=2015-09-15;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2015-09-15" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._person:likes
     a ogit.core:Verb ;
@@ -493,10 +493,10 @@ ogit._person:likes
     dcterms:modified "2015-09-15" ;
     dcterms:valid "start=2015-09-15;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2015-09-15" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .

@@ -33,15 +33,15 @@ ogit.oslc-reqman:Requirement
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/rm#Requirement> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/rm#Requirement> ;
-    ogit.core:scope "NTO" ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-reqman:RequirementCollection
     a ogit.core:Entity ;
@@ -53,15 +53,15 @@ ogit.oslc-reqman:RequirementCollection
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/rm#RequirementCollection> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/rm#RequirementCollection> ;
-    ogit.core:scope "NTO" ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 #
 # Verbs
@@ -79,14 +79,14 @@ ogit.oslc-reqman:affectedBy
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/rm#affectedBy> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/rm#affectedBy> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-reqman:elaboratedBy
     a ogit.core:Verb ;
@@ -101,14 +101,14 @@ ogit.oslc-reqman:elaboratedBy
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/rm#elaboratedBy> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/rm#elaboratedBy> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-reqman:implementedBy
     a ogit.core:Verb ;
@@ -122,14 +122,14 @@ ogit.oslc-reqman:implementedBy
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/rm#implementedBy> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/rm#implementedBy> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-reqman:specifiedBy
     a ogit.core:Verb ;
@@ -144,14 +144,14 @@ ogit.oslc-reqman:specifiedBy
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/rm#specifiedBy> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/rm#specifiedBy> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-reqman:trackedBy
     a ogit.core:Verb ;
@@ -167,14 +167,14 @@ ogit.oslc-reqman:trackedBy
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/rm#trackedBy> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/rm#trackedBy> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-reqman:uses
     a ogit.core:Verb ;
@@ -189,14 +189,14 @@ ogit.oslc-reqman:uses
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/rm#uses> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/rm#uses> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-reqman:validatedBy
     a ogit.core:Verb ;
@@ -211,11 +211,11 @@ ogit.oslc-reqman:validatedBy
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/rm#validatedBy> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/rm#validatedBy> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .

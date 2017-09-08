@@ -32,15 +32,15 @@ ogit.oslc-cm:ChangeRequest
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/cm#ChangeRequest> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/cm#ChangeRequest> ;
-    ogit.core:scope "NTO" ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 #
 # Attributes
@@ -61,10 +61,10 @@ ogit.oslc-cm:affectsPlanItem
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
         ] ;
-    ogit:original <http://open-services.net/ns/cm#affectsPlanItem> ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:validation-parameter "" ;
-    ogit.core:validation-type "" .
+    ogit.core:validation-type "" ;
+    ogit:original <http://open-services.net/ns/cm#affectsPlanItem> .
 
 ogit.oslc-cm:affectsRequirement
     a ogit.core:Attribute ;
@@ -82,10 +82,10 @@ ogit.oslc-cm:affectsRequirement
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
         ] ;
-    ogit:original <http://open-services.net/ns/cm#affectsRequirement> ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:validation-parameter "" ;
-    ogit.core:validation-type "" .
+    ogit.core:validation-type "" ;
+    ogit:original <http://open-services.net/ns/cm#affectsRequirement> .
 
 ogit.oslc-cm:approved
     a ogit.core:Attribute ;
@@ -103,10 +103,10 @@ ogit.oslc-cm:approved
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
         ] ;
-    ogit:original <http://open-services.net/ns/cm#approved> ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:validation-parameter "" ;
-    ogit.core:validation-type "" .
+    ogit.core:validation-type "" ;
+    ogit:original <http://open-services.net/ns/cm#approved> .
 
 ogit.oslc-cm:closeDate
     a ogit.core:Attribute ;
@@ -124,10 +124,10 @@ ogit.oslc-cm:closeDate
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
         ] ;
-    ogit:original <http://open-services.net/ns/cm#closeDate> ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:validation-parameter "" ;
-    ogit.core:validation-type "" .
+    ogit.core:validation-type "" ;
+    ogit:original <http://open-services.net/ns/cm#closeDate> .
 
 ogit.oslc-cm:closed
     a ogit.core:Attribute ;
@@ -145,10 +145,10 @@ ogit.oslc-cm:closed
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
         ] ;
-    ogit:original <http://open-services.net/ns/cm#closed> ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:validation-parameter "" ;
-    ogit.core:validation-type "" .
+    ogit.core:validation-type "" ;
+    ogit:original <http://open-services.net/ns/cm#closed> .
 
 ogit.oslc-cm:fixed
     a ogit.core:Attribute ;
@@ -166,10 +166,10 @@ ogit.oslc-cm:fixed
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
         ] ;
-    ogit:original <http://open-services.net/ns/cm#fixed> ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:validation-parameter "" ;
-    ogit.core:validation-type "" .
+    ogit.core:validation-type "" ;
+    ogit:original <http://open-services.net/ns/cm#fixed> .
 
 ogit.oslc-cm:inprogress
     a ogit.core:Attribute ;
@@ -187,10 +187,10 @@ ogit.oslc-cm:inprogress
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
         ] ;
-    ogit:original <http://open-services.net/ns/cm#inprogress> ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:validation-parameter "" ;
-    ogit.core:validation-type "" .
+    ogit.core:validation-type "" ;
+    ogit:original <http://open-services.net/ns/cm#inprogress> .
 
 ogit.oslc-cm:reviewed
     a ogit.core:Attribute ;
@@ -208,10 +208,10 @@ ogit.oslc-cm:reviewed
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
         ] ;
-    ogit:original <http://open-services.net/ns/cm#reviewed> ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:validation-parameter "" ;
-    ogit.core:validation-type "" .
+    ogit.core:validation-type "" ;
+    ogit:original <http://open-services.net/ns/cm#reviewed> .
 
 ogit.oslc-cm:status
     a ogit.core:Attribute ;
@@ -229,10 +229,10 @@ ogit.oslc-cm:status
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
         ] ;
-    ogit:original <http://open-services.net/ns/cm#status> ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:validation-parameter "" ;
-    ogit.core:validation-type "" .
+    ogit.core:validation-type "" ;
+    ogit:original <http://open-services.net/ns/cm#status> .
 
 ogit.oslc-cm:tracksChangeSet
     a ogit.core:Attribute ;
@@ -250,10 +250,10 @@ ogit.oslc-cm:tracksChangeSet
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
         ] ;
-    ogit:original <http://open-services.net/ns/cm#tracksChangeSet> ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:validation-parameter "" ;
-    ogit.core:validation-type "" .
+    ogit.core:validation-type "" ;
+    ogit:original <http://open-services.net/ns/cm#tracksChangeSet> .
 
 ogit.oslc-cm:tracksRequirement
     a ogit.core:Attribute ;
@@ -271,10 +271,10 @@ ogit.oslc-cm:tracksRequirement
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
         ] ;
-    ogit:original <http://open-services.net/ns/cm#tracksRequirement> ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:validation-parameter "" ;
-    ogit.core:validation-type "" .
+    ogit.core:validation-type "" ;
+    ogit:original <http://open-services.net/ns/cm#tracksRequirement> .
 
 ogit.oslc-cm:verified
     a ogit.core:Attribute ;
@@ -292,10 +292,10 @@ ogit.oslc-cm:verified
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
         ] ;
-    ogit:original <http://open-services.net/ns/cm#verified> ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:validation-parameter "" ;
-    ogit.core:validation-type "" .
+    ogit.core:validation-type "" ;
+    ogit:original <http://open-services.net/ns/cm#verified> .
 
 #
 # Verbs
@@ -311,14 +311,14 @@ ogit.oslc-cm:affectedByDefect
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/cm#affectedByDefect> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/cm#affectedByDefect> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-cm:affectsTestResult
     a ogit.core:Verb ;
@@ -331,14 +331,14 @@ ogit.oslc-cm:affectsTestResult
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/cm#affectsTestResult> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/cm#affectsTestResult> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-cm:blocksTestExecutionRecord
     a ogit.core:Verb ;
@@ -351,14 +351,14 @@ ogit.oslc-cm:blocksTestExecutionRecord
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/cm#blocksTestExecutionRecord> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/cm#blocksTestExecutionRecord> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-cm:implementsRequirement
     a ogit.core:Verb ;
@@ -371,14 +371,14 @@ ogit.oslc-cm:implementsRequirement
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/cm#implementsRequirement> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/cm#implementsRequirement> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-cm:relatedChangeRequest
     a ogit.core:Verb ;
@@ -391,14 +391,14 @@ ogit.oslc-cm:relatedChangeRequest
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/cm#relatedChangeRequest> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/cm#relatedChangeRequest> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-cm:relatedTestCase
     a ogit.core:Verb ;
@@ -411,14 +411,14 @@ ogit.oslc-cm:relatedTestCase
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/cm#relatedTestCase> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/cm#relatedTestCase> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-cm:relatedTestExecutionRecord
     a ogit.core:Verb ;
@@ -431,14 +431,14 @@ ogit.oslc-cm:relatedTestExecutionRecord
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/cm#relatedTestExecutionRecord> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/cm#relatedTestExecutionRecord> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-cm:relatedTestPlan
     a ogit.core:Verb ;
@@ -451,14 +451,14 @@ ogit.oslc-cm:relatedTestPlan
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/cm#relatedTestPlan> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/cm#relatedTestPlan> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-cm:relatedTestScript
     a ogit.core:Verb ;
@@ -471,14 +471,14 @@ ogit.oslc-cm:relatedTestScript
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/cm#relatedTestScript> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/cm#relatedTestScript> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-cm:testedByTestCase
     a ogit.core:Verb ;
@@ -491,11 +491,11 @@ ogit.oslc-cm:testedByTestCase
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/cm#testedByTestCase> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/cm#testedByTestCase> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .

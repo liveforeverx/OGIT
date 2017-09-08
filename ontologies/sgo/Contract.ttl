@@ -43,6 +43,8 @@ ogit._contract:Contract
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
             dcterms:identifier "1" ;
@@ -62,8 +64,6 @@ ogit._contract:Contract
             dcterms:creator "stravlos@arago.co" ;
             dcterms:description "add attribute ogit/validTo"
         ] ;
-    ogit.core:scope "SGO" ;
-    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:path ogit.foundation:belongs ;
@@ -125,14 +125,14 @@ ogit._contract:Penalty
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
         ] ;
-    ogit.core:scope "SGO" ;
-    ogit.core:tech-contact "arago GmbH" ;
     sh:property [
             sh:path ogit.foundation:description ;
             sh:maxCount 1

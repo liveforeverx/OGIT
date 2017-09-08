@@ -41,6 +41,8 @@ ogit._license:License
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
             dcterms:identifier "1" ;
@@ -60,8 +62,6 @@ ogit._license:License
             dcterms:creator "stravlos@arago.co" ;
             dcterms:description "add attribute deadlie"
         ] ;
-    ogit.core:scope "SGO" ;
-    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:path ogit._license:licenseKey ;
@@ -128,6 +128,8 @@ A request might contain a valid LicenseToken to indicate that this request is pr
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
             dcterms:identifier "1" ;
@@ -147,9 +149,11 @@ A request might contain a valid LicenseToken to indicate that this request is pr
             dcterms:creator "Oday Jubran" ;
             dcterms:description "added optional attribute ogit/licenseId"
         ] ;
-    ogit.core:scope "SGO" ;
-    ogit.core:tech-contact "arago GmbH" ;
     sh:property
+        [
+            sh:path ogit._license:licenseId ;
+            sh:maxCount 1
+        ],
         [
             sh:path ogit._license:licenseRequestStatus ;
             sh:maxCount 1
@@ -174,10 +178,6 @@ A request might contain a valid LicenseToken to indicate that this request is pr
         [
             sh:path ogit.foundation:token ;
             sh:maxCount 1
-        ],
-        [
-            sh:path ogit._license:licenseId ;
-            sh:maxCount 1
         ] .
 
 ogit._license:LicenseToken
@@ -191,14 +191,14 @@ This will created by a license admin and communicated to potential licence reque
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
         ] ;
-    ogit.core:scope "SGO" ;
-    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:path ogit._license:licenseType ;
@@ -233,6 +233,23 @@ This will created by a license admin and communicated to potential licence reque
 #
 # Attributes
 #
+ogit._license:licenseId
+    a ogit.core:Attribute ;
+    rdfs:label "licenseId" ;
+    dcterms:created "2017-09-06" ;
+    dcterms:creator "Oday Jubran" ;
+    dcterms:description "The id of the license to be used to fetch licenses." ;
+    dcterms:modified "2017-09-06" ;
+    dcterms:valid "start=2017-09-06;" ;
+    ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:history [
+            dcterms:identifier "1" ;
+            dcterms:date "2017-09-06" ;
+            dcterms:creator "Oday Jubran" ;
+            dcterms:description "initial"
+        ] .
+
 ogit._license:licenseKey
     a ogit.core:Attribute ;
     rdfs:label "licenseKey" ;
@@ -242,13 +259,13 @@ ogit._license:licenseKey
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._license:licenseRequestStatus
     a ogit.core:Attribute ;
@@ -259,6 +276,9 @@ ogit._license:licenseRequestStatus
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.core:validation-parameter "^(pending|send|error|approved|rejected|failed|received|cancelled|closed)$" ;
+    ogit.core:validation-type "regex" ;
     ogit.core:history
         [
             dcterms:identifier "1" ;
@@ -273,20 +293,17 @@ ogit._license:licenseRequestStatus
             dcterms:description "add more states"
         ],
         [
-    			  dcterms:identifier "3";
- 			      dcterms:date "2017-08-24";
- 			      dcterms:description "add missing closed state";
- 			      dcterms:creator "Miroslaw Glusiuk";
-    		],
+            dcterms:identifier "3" ;
+            dcterms:date "2017-08-24" ;
+            dcterms:creator "Miroslaw Glusiuk" ;
+            dcterms:description "add missing closed state"
+        ],
         [
-            dcterms:identifier "4";
-            dcterms:date "2017-09-06";
-            dcterms:description "add error state";
-            dcterms:creator "Oday Jubran";
-        ] ;
-    ogit.core:tech-contact "arago GmbH" ;
-    ogit.core:validation-parameter "^(pending|send|error|approved|rejected|failed|received|cancelled|closed)$";
-    ogit.core:validation-type "regex" .
+            dcterms:identifier "4" ;
+            dcterms:date "2017-09-06" ;
+            dcterms:creator "Oday Jubran" ;
+            dcterms:description "add error state"
+        ] .
 
 ogit._license:licenseType
     a ogit.core:Attribute ;
@@ -297,27 +314,10 @@ ogit._license:licenseType
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
-
-ogit._license:licenseId
-	a ogit.core:Attribute;
-	rdfs:label "licenseId";
-	dcterms:description "The id of the license to be used to fetch licenses.";
-	dcterms:valid "start=2017-09-06;";
-	dcterms:creator "Oday Jubran";
-	dcterms:created "2017-09-06";
-	dcterms:modified "2017-09-06";
-	ogit:admin-contact "arago GmbH";
-	ogit:tech-contact "arago GmbH";
-	ogit:history [
-			dcterms:identifier "1";
-			dcterms:date "2017-09-06";
-			dcterms:description "initial";
-			dcterms:creator "Oday Jubran"
-	] .
+        ] .

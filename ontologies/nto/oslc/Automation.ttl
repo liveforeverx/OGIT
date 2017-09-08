@@ -32,15 +32,15 @@ ogit.oslc-auto:AutomationPlan
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/auto#AutomationPlan> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/auto#AutomationPlan> ;
-    ogit.core:scope "NTO" ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-auto:AutomationRequest
     a ogit.core:Entity ;
@@ -51,15 +51,15 @@ ogit.oslc-auto:AutomationRequest
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/auto#AutomationRequest> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/auto#AutomationRequest> ;
-    ogit.core:scope "NTO" ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-auto:AutomationResult
     a ogit.core:Entity ;
@@ -70,15 +70,15 @@ ogit.oslc-auto:AutomationResult
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/auto#AutomationResult> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/auto#AutomationResult> ;
-    ogit.core:scope "NTO" ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-auto:ParameterInstance
     a ogit.core:Entity ;
@@ -89,15 +89,15 @@ ogit.oslc-auto:ParameterInstance
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/auto#ParameterInstance> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/auto#ParameterInstance> ;
-    ogit.core:scope "NTO" ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-auto:TeardownAction
     a ogit.core:Entity ;
@@ -108,15 +108,15 @@ ogit.oslc-auto:TeardownAction
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/auto#TeardownAction> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/auto#TeardownAction> ;
-    ogit.core:scope "NTO" ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 #
 # Attributes
@@ -137,10 +137,10 @@ ogit.oslc-auto:progress
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
         ] ;
-    ogit:original <http://open-services.net/ns/auto#progress> ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:validation-parameter "" ;
-    ogit.core:validation-type "" .
+    ogit.core:validation-type "" ;
+    ogit:original <http://open-services.net/ns/auto#progress> .
 
 #
 # Verbs
@@ -156,14 +156,14 @@ ogit.oslc-auto:desiredState
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/auto#desiredState> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/auto#desiredState> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-auto:executesAutomationPlan
     a ogit.core:Verb ;
@@ -176,14 +176,14 @@ ogit.oslc-auto:executesAutomationPlan
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/auto#executesAutomationPlan> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/auto#executesAutomationPlan> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-auto:hasContribution
     a ogit.core:Verb ;
@@ -196,14 +196,14 @@ ogit.oslc-auto:hasContribution
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/auto#hasContribution> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/auto#hasContribution> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-auto:inputParameter
     a ogit.core:Verb ;
@@ -216,14 +216,14 @@ ogit.oslc-auto:inputParameter
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/auto#inputParameter> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/auto#inputParameter> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-auto:outputParameter
     a ogit.core:Verb ;
@@ -236,14 +236,14 @@ ogit.oslc-auto:outputParameter
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/auto#outputParameter> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/auto#outputParameter> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-auto:parameterDefinition
     a ogit.core:Verb ;
@@ -256,14 +256,14 @@ ogit.oslc-auto:parameterDefinition
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/auto#parameterDefinition> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/auto#parameterDefinition> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-auto:producedByAutomationRequest
     a ogit.core:Verb ;
@@ -276,14 +276,14 @@ ogit.oslc-auto:producedByAutomationRequest
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/auto#producedByAutomationRequest> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/auto#producedByAutomationRequest> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-auto:reportsOnAutomationPlan
     a ogit.core:Verb ;
@@ -296,14 +296,14 @@ ogit.oslc-auto:reportsOnAutomationPlan
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/auto#reportsOnAutomationPlan> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/auto#reportsOnAutomationPlan> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-auto:state
     a ogit.core:Verb ;
@@ -316,14 +316,14 @@ ogit.oslc-auto:state
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/auto#state> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/auto#state> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-auto:usesExecutionEnvironment
     a ogit.core:Verb ;
@@ -336,14 +336,14 @@ ogit.oslc-auto:usesExecutionEnvironment
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/auto#usesExecutionEnvironment> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/auto#usesExecutionEnvironment> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-auto:verdict
     a ogit.core:Verb ;
@@ -356,11 +356,11 @@ ogit.oslc-auto:verdict
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/auto#verdict> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/auto#verdict> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .

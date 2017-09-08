@@ -32,15 +32,15 @@ ogit.rddl:Namespace
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://www.rddl.org/Namespace> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://www.rddl.org/Namespace> ;
-    ogit.core:scope "NTO" ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.rddl:Resource
     a ogit.core:Entity ;
@@ -51,15 +51,15 @@ ogit.rddl:Resource
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://www.rddl.org/Resource> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://www.rddl.org/Resource> ;
-    ogit.core:scope "NTO" ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 #
 # Attributes
@@ -80,10 +80,10 @@ ogit.rddl:purpose
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
         ] ;
-    ogit:original <http://www.rddl.org/purpose> ;
     ogit.core:tech-contact "arago GmbH" ;
     ogit.core:validation-parameter "" ;
-    ogit.core:validation-type "" .
+    ogit.core:validation-type "" ;
+    ogit:original <http://www.rddl.org/purpose> .
 
 #
 # Verbs
@@ -99,14 +99,14 @@ ogit.rddl:id
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://www.rddl.org/id> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://www.rddl.org/id> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.rddl:nature
     a ogit.core:Verb ;
@@ -119,14 +119,14 @@ ogit.rddl:nature
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://www.rddl.org/nature> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://www.rddl.org/nature> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.rddl:resource
     a ogit.core:Verb ;
@@ -139,11 +139,11 @@ ogit.rddl:resource
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://www.rddl.org/resource> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://www.rddl.org/resource> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .

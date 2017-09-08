@@ -32,15 +32,15 @@ ogit.oslc-asset:Artifact
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/asset#Artifact> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/asset#Artifact> ;
-    ogit.core:scope "NTO" ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-asset:Asset
     a ogit.core:Entity ;
@@ -51,15 +51,15 @@ ogit.oslc-asset:Asset
     dcterms:modified "2016-09-22" ;
     dcterms:valid "start=2016-09-22;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/asset#Asset> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/asset#Asset> ;
-    ogit.core:scope "NTO" ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 #
 # Verbs
@@ -75,14 +75,14 @@ ogit.oslc-asset:artifact
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/asset#artifact> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/asset#artifact> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-asset:artifactFactory
     a ogit.core:Verb ;
@@ -95,14 +95,14 @@ ogit.oslc-asset:artifactFactory
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/asset#artifactFactory> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/asset#artifactFactory> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-asset:categorization
     a ogit.core:Verb ;
@@ -115,14 +115,14 @@ ogit.oslc-asset:categorization
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/asset#categorization> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/asset#categorization> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-asset:content
     a ogit.core:Verb ;
@@ -135,14 +135,14 @@ ogit.oslc-asset:content
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/asset#content> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/asset#content> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-asset:guid
     a ogit.core:Verb ;
@@ -155,14 +155,14 @@ ogit.oslc-asset:guid
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/asset#guid> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/asset#guid> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-asset:identifier
     a ogit.core:Verb ;
@@ -175,14 +175,14 @@ ogit.oslc-asset:identifier
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/asset#identifier> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/asset#identifier> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-asset:manufacturer
     a ogit.core:Verb ;
@@ -195,14 +195,14 @@ ogit.oslc-asset:manufacturer
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/asset#manufacturer> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/asset#manufacturer> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-asset:model
     a ogit.core:Verb ;
@@ -215,14 +215,14 @@ ogit.oslc-asset:model
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/asset#model> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/asset#model> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-asset:relationshipType
     a ogit.core:Verb ;
@@ -235,14 +235,14 @@ ogit.oslc-asset:relationshipType
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/asset#relationshipType> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/asset#relationshipType> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-asset:serialNumber
     a ogit.core:Verb ;
@@ -255,14 +255,14 @@ ogit.oslc-asset:serialNumber
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/asset#serialNumber> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/asset#serialNumber> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-asset:size
     a ogit.core:Verb ;
@@ -275,14 +275,14 @@ ogit.oslc-asset:size
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/asset#size> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/asset#size> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-asset:state
     a ogit.core:Verb ;
@@ -295,14 +295,14 @@ ogit.oslc-asset:state
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/asset#state> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/asset#state> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-asset:tag
     a ogit.core:Verb ;
@@ -315,14 +315,14 @@ ogit.oslc-asset:tag
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/asset#tag> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/asset#tag> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit.oslc-asset:version
     a ogit.core:Verb ;
@@ -335,11 +335,11 @@ ogit.oslc-asset:version
     ogit.core:admin-contact "arago GmbH" ;
     ogit.core:cardinality "many2many" ;
     ogit.core:hide "false" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit:original <http://open-services.net/ns/asset#version> ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2016-09-22" ;
             dcterms:creator "OGIT Importer" ;
             dcterms:description "initial"
-        ] ;
-    ogit:original <http://open-services.net/ns/asset#version> ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .

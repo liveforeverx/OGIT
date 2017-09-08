@@ -41,6 +41,8 @@ ogit._process:Notification
     dcterms:modified "2017-02-17" ;
     dcterms:valid "start=2015-04-27;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "NTO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
             dcterms:identifier "1" ;
@@ -54,8 +56,6 @@ ogit._process:Notification
             dcterms:creator "stravlos@arago.de" ;
             dcterms:description "Make description more general"
         ] ;
-    ogit.core:scope "NTO" ;
-    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:path ogit.foundation:hiddenBy ;
@@ -81,6 +81,8 @@ Additionaly could be used to create new Issue from some form.""" ;
     dcterms:modified "2016-07-12" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history
         [
             dcterms:identifier "1" ;
@@ -94,8 +96,6 @@ Additionaly could be used to create new Issue from some form.""" ;
             dcterms:creator "Arthur Shoba" ;
             dcterms:description "Added new attribute `capacity`"
         ] ;
-    ogit.core:scope "SGO" ;
-    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:path ogit._process:response ;
@@ -128,6 +128,9 @@ ogit._process:Task
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.graphit:indexed-attributes ogit.foundation:name ;
     ogit.core:history
         [
             dcterms:identifier "1" ;
@@ -141,9 +144,6 @@ ogit._process:Task
             dcterms:creator "Peter Larem" ;
             dcterms:description "add attribute ogit/positionNumber"
         ] ;
-    ogit.graphit:indexed-attributes ogit.foundation:name ;
-    ogit.core:scope "SGO" ;
-    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:path ogit._process:positionNumber ;
@@ -180,15 +180,15 @@ ogit._process:TaskList
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:scope "SGO" ;
+    ogit.core:tech-contact "arago GmbH" ;
+    ogit.graphit:indexed-attributes ogit.foundation:name ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
         ] ;
-    ogit.graphit:indexed-attributes ogit.foundation:name ;
-    ogit.core:scope "SGO" ;
-    ogit.core:tech-contact "arago GmbH" ;
     sh:property
         [
             sh:path ogit.foundation:contains ;
@@ -216,13 +216,13 @@ ogit._process:positionNumber
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .
 
 ogit._process:response
     a ogit.core:Attribute ;
@@ -233,10 +233,10 @@ ogit._process:response
     dcterms:modified "2015-05-21" ;
     dcterms:valid "start=2015-05-21;" ;
     ogit.core:admin-contact "arago GmbH" ;
+    ogit.core:tech-contact "arago GmbH" ;
     ogit.core:history [
             dcterms:identifier "1" ;
             dcterms:date "2015-05-21" ;
             dcterms:creator "Peter Larem" ;
             dcterms:description "initial"
-        ] ;
-    ogit.core:tech-contact "arago GmbH" .
+        ] .

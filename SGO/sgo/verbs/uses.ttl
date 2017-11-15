@@ -19,7 +19,7 @@ ogit:uses
 	dcterms:valid "start=2015-05-21;";
 	dcterms:creator "Peter Larem";
 	dcterms:created "2015-05-21";
-	dcterms:modified "2017-11-15";
+	dcterms:modified "2017-11-27";
 	ogit:admin-contact "arago GmbH";
 	ogit:tech-contact "arago GmbH";
 	ogit:history (
@@ -39,6 +39,12 @@ ogit:uses
 			dcterms:identifier "3";
 			dcterms:date "2017-11-15";
 			dcterms:description "Connect Person -> ServiceInstance -> KnowledgePool";
+			dcterms:creator "druss@arago.de";
+		]
+		[
+			dcterms:identifier "4";
+			dcterms:date "2017-11-27";
+			dcterms:description "Connect KnowledgePool -> Bundle";
 			dcterms:creator "druss@arago.de";
 		]
 	);
@@ -750,6 +756,10 @@ ogit:uses
 		[
 			ogit:from ogit.OSLC-crtv:ServiceInstance;
 			ogit:to ogit.Automation:KnowledgePool;
+		]
+		[
+			ogit:from ogit.Automation:KnowledgePool;
+			ogit:to ogit.Automation:KnowledgeBundle;
 		]
 		[
 			ogit:from ogit.Automation:KnowledgePool;
